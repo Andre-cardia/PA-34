@@ -1,5 +1,5 @@
 <!-- bmad:context -->
-<!-- Verificado em 2026-10-05 contra arquivos locais. SHA indisponível: repositório Git criado sem commits. Gerenciado por bmad-project-context; edições dentro deste bloco são substituídas no refresh. -->
+<!-- Verificado em 2026-10-05 contra arquivos locais. Repositório Andre-cardia/PA-34, verificado contra c0dfa51. Gerenciado por bmad-project-context; edições dentro deste bloco são substituídas no refresh. -->
 
 ## PA-34
 
