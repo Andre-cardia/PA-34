@@ -1,0 +1,721 @@
+# Diff real entre snapshot lido pelos revisores e estado após os patches. NÃO representa diferença histórica desde NO_VCS.
+diff --git aantes/work-modulo-3d/scripts/verify-browser-acceptance.mjs bdepois/work-modulo-3d/scripts/verify-browser-acceptance.mjs
+index bd0ee77..3279430 100644
+--- aantes/work-modulo-3d/scripts/verify-browser-acceptance.mjs
++++ bdepois/work-modulo-3d/scripts/verify-browser-acceptance.mjs
+@@ -1,5 +1,6 @@
+ // Verificação independente via Chrome DevTools; não modifica a aplicação.
+-import { writeFileSync, mkdirSync } from 'node:fs'
++import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
++const catalog = JSON.parse(readFileSync(new URL('../src/data/componentes_3d.json', import.meta.url), 'utf8'))
+ const port = process.env.CDP_PORT || '9228'
+ const base = process.env.APP_URL || 'http://127.0.0.1:4173'
+ const output = process.env.REVIEW_OUTPUT || './test-artifacts/browser-acceptance'
+@@ -129,6 +130,7 @@ try {
+   const exploded=await sceneSnapshot()
+   summary.explosion={moved:exploded.parts.filter((p,i)=>p.matrix.some((v,j)=>Math.abs(v-assembled.parts[i].matrix[j])>.01)).length,clipped:exploded.parts.filter(p=>p.visible&&p.clipped).map(p=>p.componentId)}
+   if(!summary.explosion.moved)throw new Error('Explosão não deslocou peças')
++  if(summary.explosion.clipped.length)throw new Error('Explosão recortada: '+summary.explosion.clipped.join(', '))
+   await clickText('FECHAR TUDO')
+   await settle()
+   const restored=await sceneSnapshot()
+@@ -151,6 +153,7 @@ try {
+     viewport.clippedComponents=[...new Set(scene.parts.filter(p=>p.visible&&p.clipped).map(p=>p.componentId))]
+     summary.viewports.push(viewport)
+     await capture(`viewport-${width}`)
++    if(viewport.clippedComponents.length)throw new Error(`Viewport ${width} recortado: ${viewport.clippedComponents.join(', ')}`)
+   }
+   await call('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]})
+   await call('Page.navigate',{url:`${base}/modelo-3d?nointro=1`})
+@@ -169,6 +172,16 @@ try {
+   await call('Page.navigate',{url:`${base}/modelo-3d?nointro=1`})
+   await waitFor("document.body.innerText.includes('FALHA AO CARREGAR A MALHA')")
+   summary.assetFailure=await evaluate("({canvas:!!document.querySelector('canvas'),message:document.body.innerText.includes('FALHA AO CARREGAR A MALHA'),componentControls:document.querySelectorAll('button').length})")
++  const lastComponent=catalog.camadas.at(-1).componentes.at(-1)
++  const fallbackPoint=await evaluate(`(()=>{const b=[...document.querySelectorAll('section button')].find(b=>b.querySelector('span')?.textContent===${JSON.stringify(lastComponent.nome)});if(!b)throw new Error('Último componente ausente no fallback');b.scrollIntoView({block:'center',behavior:'instant'});return true})()`)
++  await settle()
++  const point=await evaluate(`(()=>{const b=[...document.querySelectorAll('section button')].find(b=>b.querySelector('span')?.textContent===${JSON.stringify(lastComponent.nome)});const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;return {x,y,reachable:x>=0&&x<innerWidth&&y>=0&&y<innerHeight&&b.contains(document.elementFromPoint(x,y)),scrolled:[...document.querySelectorAll('*')].some(e=>e.scrollTop>0)}})()`)
++  if(!fallbackPoint||!point.reachable||!point.scrolled)throw new Error('Último componente não alcançável por rolagem: '+JSON.stringify(point))
++  await call('Input.dispatchMouseEvent',{type:'mouseMoved',x:point.x,y:point.y})
++  await call('Input.dispatchMouseEvent',{type:'mousePressed',x:point.x,y:point.y,button:'left',clickCount:1})
++  await call('Input.dispatchMouseEvent',{type:'mouseReleased',x:point.x,y:point.y,button:'left',clickCount:1})
++  await waitFor(`document.querySelector('#drawer-title')?.textContent===${JSON.stringify(lastComponent.nome)}`)
++  summary.assetFailure.lastComponent={id:lastComponent.id,selected:true,...point}
+   await capture('falha-ativo')
+   await call('Network.setBlockedURLs',{urls:[]})
+   summary.unexpectedExceptions=exceptions.filter(e=>!e.expectedAssetFailure||!/Could not load|Failed to fetch|pa34-camadas\\.glb/.test(e.exception?.description??''))
+diff --git aantes/work-modulo-3d/scripts/verify-browser-camera.mjs bdepois/work-modulo-3d/scripts/verify-browser-camera.mjs
+index 3bced82..07201ec 100644
+--- aantes/work-modulo-3d/scripts/verify-browser-camera.mjs
++++ bdepois/work-modulo-3d/scripts/verify-browser-camera.mjs
+@@ -5,17 +5,20 @@ const output=process.env.REVIEW_OUTPUT||'./test-artifacts/browser-camera'
+ mkdirSync(output,{recursive:true})
+ const target=await fetch(`http://127.0.0.1:${port}/json/new?about:blank`,{method:'PUT'}).then(r=>r.json())
+ const ws=new WebSocket(target.webSocketDebuggerUrl),pending=new Map(),errors=[]
+-let sequence=0,delayAsset=false
+-ws.onmessage=event=>{const m=JSON.parse(event.data);if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.exception?.description);if(m.method==='Fetch.requestPaused'){const requestId=m.params.requestId;setTimeout(()=>call('Fetch.continueRequest',{requestId}).catch(e=>errors.push(String(e))),delayAsset?5500:0)}if(m.id&&pending.has(m.id)){const p=pending.get(m.id);pending.delete(m.id);clearTimeout(p.timer);m.error?p.reject(new Error(JSON.stringify(m.error))):p.resolve(m.result)}}
++let sequence=0,delayAsset=false,holdAsset=false
++const heldRequests=[]
++let assetPaused=null
++ws.onmessage=event=>{const m=JSON.parse(event.data);if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.exception?.description);if(m.method==='Fetch.requestPaused'){const requestId=m.params.requestId;if(holdAsset){heldRequests.push(requestId);assetPaused?.()}else setTimeout(()=>call('Fetch.continueRequest',{requestId}).catch(e=>errors.push(String(e))),delayAsset?5500:0)}if(m.id&&pending.has(m.id)){const p=pending.get(m.id);pending.delete(m.id);clearTimeout(p.timer);m.error?p.reject(new Error(JSON.stringify(m.error))):p.resolve(m.result)}}
+ await new Promise((resolve,reject)=>{ws.onopen=resolve;ws.onerror=reject})
+ function call(method,params={}){return new Promise((resolve,reject)=>{const id=++sequence,timer=setTimeout(()=>{pending.delete(id);reject(new Error('Tempo excedido '+method))},35000);pending.set(id,{resolve,reject,timer});ws.send(JSON.stringify({id,method,params}))})}
+ async function evaluate(expression){const r=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value}
+ async function waitFor(expression,ms=25000){return evaluate(`new Promise((resolve,reject)=>{const end=performance.now()+${ms};function check(){if(${expression})return resolve(true);if(performance.now()>end)return reject(new Error('Estado não atingido'));requestAnimationFrame(check)}check()})`)}
+ async function settle(ms){return evaluate(`new Promise(resolve=>{const end=performance.now()+${ms};function check(){performance.now()>end?resolve(true):requestAnimationFrame(check)}check()})`)}
+ async function ready(){await waitFor("document.querySelector('canvas')&&performance.getEntriesByType('resource').some(e=>e.name.includes('@react-three_fiber.js'))");await evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const fiber=await import(url);return new Promise((resolve,reject)=>{const end=performance.now()+25000;function check(){const root=fiber._roots.get(document.querySelector('canvas'));let meshes=0;root?.store.getState().scene.traverse(o=>{if(o.userData.componenteId)meshes++});if(meshes)return resolve(true);if(performance.now()>end)return reject(new Error('Malhas não carregaram'));requestAnimationFrame(check)}check()})})()`)}
+-async function state(component='motor_esquerdo'){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const s=(await import(url))._roots.get(document.querySelector('canvas')).store.getState();s.scene.updateMatrixWorld(true);let bounds=null;s.scene.traverse(o=>{if(!o.isMesh||o.userData.componenteId!==${JSON.stringify(component)})return;o.geometry.computeBoundingBox();const b=o.geometry.boundingBox.clone().applyMatrix4(o.matrixWorld);if(bounds)bounds.union(b);else bounds=b});return {frame:s.gl.info.render.frame,radius:s.camera.position.distanceTo(s.controls.target),target:s.controls.target.toArray(),componentCenter:bounds?.getCenter(s.camera.position.clone()).toArray(),focusDistance:bounds?s.controls.target.distanceTo(bounds.getCenter(s.camera.position.clone())):null}})()`)}
++async function state(component='motor_esquerdo'){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const s=(await import(url))._roots.get(document.querySelector('canvas')).store.getState();s.scene.updateMatrixWorld(true);let bounds=null;s.scene.traverse(o=>{if(!o.isMesh||o.userData.componenteId!==${JSON.stringify(component)})return;o.geometry.computeBoundingBox();const b=o.geometry.boundingBox.clone().applyMatrix4(o.matrixWorld);if(bounds)bounds.union(b);else bounds=b});return {position:s.camera.position.toArray(),frame:s.gl.info.render.frame,radius:s.camera.position.distanceTo(s.controls.target),target:s.controls.target.toArray(),componentCenter:bounds?.getCenter(s.camera.position.clone()).toArray(),focusDistance:bounds?s.controls.target.distanceTo(bounds.getCenter(s.camera.position.clone())):null}})()`)}
+ async function autoOff(){await evaluate("(()=>{const b=document.querySelector('button[aria-label=\"AUTO-ROT\"]');if(b?.getAttribute('aria-pressed')==='true')b.click()})()")}
+ async function clickLabel(label){const ok=await evaluate(`(()=>{const b=[...document.querySelectorAll('button')].find(b=>b.getAttribute('aria-label')===${JSON.stringify(label)});if(!b)return false;b.click();return true})()`);if(!ok)throw new Error('Controle ausente '+label)}
++async function materials(){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const s=(await import(url))._roots.get(document.querySelector('canvas')).store.getState();const rows=[];s.scene.traverse(o=>{if(o.isMesh&&o.userData.componenteId)rows.push({id:o.uuid,layer:o.userData.camada,opacity:(Array.isArray(o.material)?o.material:[o.material]).map(m=>m.opacity)})});return rows})()`)}
+ const report={cases:[],errors}
+ async function test(name,fn){try{const data=await fn();report.cases.push({name,passed:true,...data})}catch(e){report.cases.push({name,passed:false,error:String(e)})}}
+ try{
+@@ -29,16 +32,51 @@ try{
+   if(!Number.isFinite(s.focusDistance)||s.focusDistance>.08)throw new Error(JSON.stringify(s));return s
+  })
+  await test('parâmetros e isolamento ao limpar seleção',async()=>{
++  if(!await evaluate("document.body.innerText.includes('SAIR DO ISOLADO')"))throw new Error('Pré-condição de isolamento ausente')
++  await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('SAIR DO ISOLADO')).click()")
++  await settle(300);const baseline=await materials()
++  await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('ISOLAR COMPONENTE')).click()")
++  await settle(300);const isolated=await materials()
++  if(!isolated.some((row,i)=>row.layer!=='motores'&&row.opacity.some((v,j)=>v<baseline[i].opacity[j]*.1)))throw new Error('Isolamento não reduziu opacidades reais')
+   const closed=await evaluate("(()=>{const b=document.querySelector('button[aria-label=\"Fechar painel\"]');if(!b)return false;b.click();return true})()")
+   if(!closed)throw new Error('Ficha esperada ausente')
+   // O Drawer sai com spring, não com duração fixa de 400 ms.
+   await waitFor("!document.querySelector('[role=dialog]')",3000)
++  const restored=await materials(),originals=new Map(baseline.map(row=>[row.id,row]))
++  if(restored.length!==baseline.length||restored.some(row=>{const prior=originals.get(row.id);return !prior||row.opacity.length!==prior.opacity.length||row.opacity.some((v,i)=>!Number.isFinite(v)||Math.abs(v-prior.opacity[i])>.003)}))throw new Error('Fechar drawer não restaurou opacidades reais')
+   const value=await evaluate("({query:location.search,dialog:!!document.querySelector('[role=dialog]')})")
++  value.restoredMaterials=restored.length
+   if(!value.query.includes('force3d=1')||!value.query.includes('nointro=1')||value.query.includes('camada=')||value.dialog)throw new Error(JSON.stringify(value));return value
+  })
++ await test('preset durante GLB bloqueado cancela foco antigo',async()=>{
++  holdAsset=true
++  let timer
++  const paused=new Promise((resolve,reject)=>{assetPaused=resolve;timer=setTimeout(()=>reject(new Error('GLB não interceptado')),12000)})
++  try{
++   await call('Fetch.enable',{patterns:[{urlPattern:'*pa34-camadas.glb*',requestStage:'Request'}]})
++   await call('Page.navigate',{url:`${base}/modelo-3d?camada=motores&c=motor_esquerdo&nointro=1`})
++   await paused;clearTimeout(timer)
++   await waitFor("document.querySelector('button[aria-label=\"Vista FRONTAL\"]')&&document.querySelector('#drawer-title')")
++   await autoOff();await clickLabel('Vista FRONTAL');await settle(2200)
++   const before=await state()
++   if(before.componentCenter!==undefined&&before.componentCenter!==null)throw new Error('Malha carregou antes do preset')
++   holdAsset=false;for(const requestId of heldRequests.splice(0))await call('Fetch.continueRequest',{requestId})
++   await ready()
++   const samples=[]
++   for(let i=0;i<12;i++){await settle(250);const current=await state();samples.push(current);if(!Number.isFinite(current.focusDistance)||current.focusDistance<.15||(i>=8&&(current.position[0]-current.target[0]<current.radius*.9||Math.abs(current.position[2]-current.target[2])>current.radius*.1)))throw new Error('Foco antigo assumiu após preset: '+JSON.stringify({before,current}))}
++   return {intercepted:true,before,samples}
++  }finally{clearTimeout(timer);assetPaused=null;holdAsset=false;for(const requestId of heldRequests.splice(0))await call('Fetch.continueRequest',{requestId});await call('Fetch.disable')}
++ })
+  await call('Fetch.disable');delayAsset=false
+  await call('Page.navigate',{url:`${base}/modelo-3d?nointro=1`})
+  await ready();await autoOff();await settle(3300)
++ await test('preset real sem seleção',async()=>{
++  if(await evaluate("!!document.querySelector('[role=dialog]')"))throw new Error('Pré-condição sem seleção ausente')
++  await clickLabel('Vista FRONTAL');await settle(2200);const frontal=await state()
++  if(!Number.isFinite(frontal.radius)||frontal.position[0]-frontal.target[0]<frontal.radius*.9||Math.abs(frontal.position[2]-frontal.target[2])>frontal.radius*.1)throw new Error('Preset sem seleção não moveu câmera: '+JSON.stringify(frontal))
++  await clickLabel('Vista 3/4');await settle(2200)
++  return {frontal}
++ })
+  await test('labels desligados/religados em canvas parado',async()=>{
+   const condition="[...document.querySelectorAll('div.whitespace-nowrap')].some(e=>e.className.includes('bg-abyss')&&e.textContent.length>10)"
+   await clickLabel('RÓTULOS');await waitFor(condition,2500)
+diff --git aantes/work-modulo-3d/scripts/verify-browser-selection.mjs bdepois/work-modulo-3d/scripts/verify-browser-selection.mjs
+index 5cb9d5b..abb4898 100644
+--- aantes/work-modulo-3d/scripts/verify-browser-selection.mjs
++++ bdepois/work-modulo-3d/scripts/verify-browser-selection.mjs
+@@ -11,7 +11,7 @@ await new Promise((resolve,reject)=>{ws.onopen=resolve;ws.onerror=reject})
+ function call(method,params={}){return new Promise((resolve,reject)=>{const key=++id;const timer=setTimeout(()=>{pending.delete(key);reject(new Error('Tempo excedido '+method))},30000);pending.set(key,{resolve,reject,timer});ws.send(JSON.stringify({id:key,method,params}))})}
+ async function evaluate(expression){const r=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value}
+ async function waitFor(expression){return evaluate(`new Promise((resolve,reject)=>{const end=performance.now()+20000;function check(){if(${expression})return resolve(true);if(performance.now()>end)return reject(new Error('Estado não atingido'));requestAnimationFrame(check)}check()})`)}
+-async function settle(){return evaluate('new Promise(resolve=>{const end=performance.now()+600;function step(){performance.now()>end?resolve(true):requestAnimationFrame(step)}step()})')}
++async function settle(ms=600){return evaluate(`new Promise(resolve=>{const end=performance.now()+${ms};function step(){performance.now()>end?resolve(true):requestAnimationFrame(step)}step()})`)}
+ async function geometry(component){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));if(!url)return null;const r=(await import(url))._roots.get(document.querySelector('canvas'));if(!r)return null;const state=r.store.getState();let meshes=0,highlighted=0;const materials=[];state.scene.traverse(o=>{if(!o.isMesh||o.userData.componenteId!==${JSON.stringify(component)})return;meshes++;for(const m of Array.isArray(o.material)?o.material:[o.material]){materials.push({type:m.type,opacity:m.opacity,emissiveIntensity:m.emissiveIntensity,base:m.userData.baseEmissiveIntensity});if(m.emissiveIntensity-(m.userData.baseEmissiveIntensity??0)>.53)highlighted++}});return {meshes,highlighted,materials,camera:state.camera.position.toArray()}})()`)}
+ async function isolationSnapshot(){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const state=(await import(url))._roots.get(document.querySelector('canvas')).store.getState();const rows=[];state.scene.traverse(o=>{if(!o.isMesh||!o.userData.componenteId)return;let visible=true;for(let p=o;p;p=p.parent)visible=visible&&p.visible;rows.push({id:o.uuid,layer:o.userData.camada,visible,opacity:(Array.isArray(o.material)?o.material:[o.material]).map(m=>m.opacity)})});return rows})()`)}
+ function assertIsolation(before,after,layer){
+@@ -28,7 +28,10 @@ function assertIsolation(before,after,layer){
+   if(!target||!dimmed)throw new Error('Ensaio sem geometria alvo/contexto')
+   return {target,dimmed,meshCount:after.length}
+ }
+-const report={components:[],layers:[],errors}
++async function focusConverged(component){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const fiber=await import(url);return new Promise((resolve,reject)=>{const end=performance.now()+15000;let stableSince=null,last=null;function check(){const s=fiber._roots.get(document.querySelector('canvas'))?.store.getState();let bounds=null;s?.scene.updateMatrixWorld(true);s?.scene.traverse(o=>{if(!o.isMesh||o.userData.componenteId!==${JSON.stringify(component)})return;if(!o.geometry.boundingBox)o.geometry.computeBoundingBox();const b=o.geometry.boundingBox.clone().applyMatrix4(o.matrixWorld);if(bounds)bounds.union(b);else bounds=b});const center=bounds?.getCenter(s.camera.position.clone()),distance=center&&s.controls?.target.distanceTo(center);last={focusDistance:distance,componentCenter:center?.toArray(),target:s?.controls?.target.toArray()};if(Number.isFinite(distance)&&distance<.08){stableSince??=performance.now();if(performance.now()-stableSince>300)return resolve(last)}else stableSince=null;if(performance.now()>end)return reject(new Error('Foco não convergiu: '+JSON.stringify(last)));requestAnimationFrame(check)}check()})})()`)}
++async function clickText(text){const ok=await evaluate(`(()=>{const b=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()===${JSON.stringify(text)});if(!b)return false;b.click();return true})()`);if(!ok)throw new Error('Botão ausente: '+text)}
++async function clickLabel(label){const ok=await evaluate(`(()=>{const b=[...document.querySelectorAll('button')].find(b=>b.getAttribute('aria-label')===${JSON.stringify(label)});if(!b)return false;b.click();return true})()`);if(!ok)throw new Error('Controle ausente: '+label)}
++const report={components:[],layers:[],pointerRegressions:[],errors}
+ try{
+   await call('Page.enable');await call('Runtime.enable')
+   await call('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false})
+@@ -42,9 +45,9 @@ try{
+       const component=layer.componentes[i]
+       if(i){const click=await evaluate(`(()=>{const b=[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.trim()===${JSON.stringify(component.nome)});if(!b)return false;b.click();return true})()`);if(!click)throw new Error('Navegação ausente: '+component.id)}
+       await waitFor(`document.querySelector('#drawer-title')?.textContent===${JSON.stringify(component.nome)}`)
+-      await settle()
++      const focus=await focusConverged(component.id)
+       const state=await geometry(component.id)
+-      report.components.push({id:component.id,layer:layer.id,...state})
++      report.components.push({id:component.id,layer:layer.id,...state,...focus})
+       if(!state?.meshes||!state.highlighted)throw new Error('Seleção sem geometria destacada: '+component.id)
+     }
+     const initiallyIsolated=await evaluate("document.body.innerText.includes('SAIR DO ISOLADO')")
+@@ -73,14 +76,53 @@ try{
+   if(report.invalidQuery.dialog)throw new Error('Query inválida abriu ficha incorreta')
+   await waitFor("!document.querySelector('[role=status]') && performance.getEntriesByType('resource').some(e=>e.name.includes('pa34-camadas.glb'))")
+   await settle()
+-  const pick=await evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const canvas=document.querySelector('canvas');const state=(await import(url))._roots.get(canvas).store.getState();const rect=canvas.getBoundingClientRect();state.scene.updateMatrixWorld(true);for(const y of [0,-.1,.1,-.2,.2])for(const x of [-.3,-.1,0,.1,.3]){state.raycaster.setFromCamera({x,y},state.camera);const hit=state.raycaster.intersectObject(state.scene,true).find(h=>{if(!h.object.userData.componenteId)return false;let o=h.object;while(o){if(!o.visible)return false;o=o.parent}return true});const cx=rect.left+(x+1)*rect.width/2,cy=rect.top+(1-y)*rect.height/2;if(hit&&document.elementFromPoint(cx,cy)===canvas)return {component:hit.object.userData.componenteId,x:cx,y:cy}}return null})()`)
++  await evaluate("(()=>{const b=document.querySelector('button[aria-label=\"AUTO-ROT\"]');if(b?.getAttribute('aria-pressed')==='true')b.click()})()")
++  async function pointerRegression(name,requiredLayer=null){
++  await call('Input.dispatchMouseEvent',{type:'mouseMoved',x:1,y:1})
++  const pick=await evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const canvas=document.querySelector('canvas');const state=(await import(url))._roots.get(canvas).store.getState();const rect=canvas.getBoundingClientRect();state.scene.updateMatrixWorld(true);for(const y of [0,-.1,.1,-.2,.2,-.3,.3,-.4,.4,-.5,.5])for(const x of [0,-.1,.1,-.2,.2,-.3,.3,-.4,.4,-.5,.5,-.6,.6]){state.raycaster.setFromCamera({x,y},state.camera);const hit=state.raycaster.intersectObject(state.scene,true).find(h=>{if(!h.object.userData.componenteId)return false;let o=h.object;while(o){if(!o.visible)return false;o=o.parent}return true});const cx=rect.left+(x+1)*rect.width/2,cy=rect.top+(1-y)*rect.height/2;if(hit&&(!${JSON.stringify(requiredLayer)}||hit.object.userData.camada===${JSON.stringify(requiredLayer)})&&document.elementFromPoint(cx,cy)===canvas)return {component:hit.object.userData.componenteId,mesh:hit.object.uuid,matrix:hit.object.matrixWorld.toArray(),x:cx,y:cy}}return null})()`)
+   if(!pick)throw new Error('Nenhuma peça visível disponível para clique de ponteiro')
+   await call('Input.dispatchMouseEvent',{type:'mouseMoved',x:pick.x,y:pick.y})
++  const hoverName=catalog.camadas.flatMap(l=>l.componentes).find(c=>c.id===pick.component).nome
++  await waitFor(`[...document.querySelectorAll('div.whitespace-nowrap')].some(e=>e.className.includes('bg-abyss')&&e.textContent.trim()===${JSON.stringify(hoverName)})`)
+   await call('Input.dispatchMouseEvent',{type:'mousePressed',x:pick.x,y:pick.y,button:'left',clickCount:1})
+   await call('Input.dispatchMouseEvent',{type:'mouseReleased',x:pick.x,y:pick.y,button:'left',clickCount:1})
+   const pickedName=catalog.camadas.flatMap(l=>l.componentes).find(c=>c.id===pick.component).nome
+   await waitFor(`document.querySelector('#drawer-title')?.textContent===${JSON.stringify(pickedName)}`)
+-  report.pointerSelection={component:pick.component,title:pickedName}
++  const focus=await focusConverged(pick.component)
++  report.pointerRegressions.push({name,component:pick.component,title:pickedName,hover:true,...focus})
++  return pick
++  }
++  async function closeSelection(){await clickLabel('Fechar painel');await waitFor("!document.querySelector('[role=dialog]')");await settle(2400)}
++  await pointerRegression('initial');await closeSelection()
++  const exteriorLabel=await evaluate("[...document.querySelectorAll('button[aria-label]')].map(b=>b.getAttribute('aria-label')).find(s=>s.startsWith('Remover camada ')&&s.includes('EXTERIOR'))")
++  if(!exteriorLabel)throw new Error('Controle exterior ausente')
++  await clickLabel(exteriorLabel);await settle();await clickLabel(exteriorLabel.replace('Remover','Adicionar'));await settle()
++  await pointerRegression('hide/show','exterior');await closeSelection()
++  await clickLabel('RAIO-X');await settle();await clickLabel('RAIO-X');await settle()
++  await pointerRegression('xray on/off','exterior');await closeSelection()
++  // Isolate a different layer so exterior raycasting is explicitly disabled then restored.
++  await call('Page.navigate',{url:`${base}/modelo-3d?camada=motores&c=motor_esquerdo&nointro=1`})
++  await waitFor("document.querySelector('#drawer-title')&&document.querySelector('canvas')")
++  await focusConverged('motor_esquerdo')
++  await waitFor("document.body.innerText.includes('SAIR DO ISOLADO')")
++  await clickText('SAIR DO ISOLADO (ESC)');await settle();await closeSelection()
++  await pointerRegression('isolate/restore','exterior');await closeSelection()
++  // Select a moving engine through its real drawer control as explosion begins.
++  // A projected pointer coordinate is unsuitable here: the mesh moves before mouse dispatch.
++  await call('Page.navigate',{url:`${base}/modelo-3d?camada=motores&c=motor_esquerdo&nointro=1`})
++  await waitFor("document.querySelector('#drawer-title')&&document.querySelector('canvas')")
++  await focusConverged('motor_esquerdo')
++  const moving=catalog.camadas.find(l=>l.id==='motores').componentes.find(c=>c.id==='motor_direito')
++  await evaluate(`(()=>{const explode=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='EXPLODIR TUDO');const select=[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.trim()===${JSON.stringify(moving.nome)});if(!explode||!select)throw new Error('Controles de explosão/seleção ausentes');explode.click();select.click()})()`)
++  await waitFor(`document.querySelector('#drawer-title')?.textContent===${JSON.stringify(moving.nome)}`)
++  async function movingPose(){return evaluate(`(async()=>{const url=performance.getEntriesByType('resource').map(e=>e.name).find(u=>u.includes('@react-three_fiber.js'));const s=(await import(url))._roots.get(document.querySelector('canvas')).store.getState();s.scene.updateMatrixWorld(true);let pose=null;s.scene.traverse(o=>{if(!pose&&o.isMesh&&o.userData.componenteId===${JSON.stringify(moving.id)})pose={mesh:o.uuid,matrix:o.matrixWorld.toArray()}});return pose})()`)}
++  const during=await movingPose()
++  await focusConverged(moving.id);await settle(2500)
++  const after=await movingPose()
++  const movedAfterSelection=during&&after&&during.mesh===after.mesh&&after.matrix.some((v,i)=>Math.abs(v-during.matrix[i])>.01)
++  if(!movedAfterSelection)throw new Error('Componente não se deslocou após seleção durante explosão')
++  report.explosionFocus={component:moving.id,movedAfterSelection,...await focusConverged(moving.id)}
++  if(report.components.length!==68)throw new Error('Cobertura de foco incompleta: '+report.components.length)
+   console.log(JSON.stringify({components:report.components.length,layers:report.layers,invalidQuery:report.invalidQuery,errors},null,2))
+   if(errors.length)process.exitCode=1
+ }catch(error){report.failure=String(error);console.error(error);process.exitCode=1}
+diff --git aantes/work-modulo-3d/scripts/verify-camera-focus.mjs bdepois/work-modulo-3d/scripts/verify-camera-focus.mjs
+index 3333596..41c6088 100644
+--- aantes/work-modulo-3d/scripts/verify-camera-focus.mjs
++++ bdepois/work-modulo-3d/scripts/verify-camera-focus.mjs
+@@ -17,9 +17,9 @@ const raf = fn => { scheduled.set(++serial, fn); return serial }
+ const cancel = id => scheduled.delete(id)
+ const step = () => { const pending = [...scheduled.values()]; scheduled.clear(); for (const fn of pending) fn() }
+ const motion = { tween: false, generation: 0 }, goal = { current: null }
+-const run = new Function('useEffect', 'focusRequest', 'anchorsRef', 'mkGoal', 'requestAnimationFrame', 'cancelAnimationFrame', 'anchorBounds', 'THREE', 'camera', 'motion', 'goal', js)
+-const invoke = () => run(fn => { cleanup = fn() }, { compId: 'bateria' }, anchorsRef, () => calls++, raf, cancel,
+-  () => new THREE.Box3(new THREE.Vector3(-1, -1, -1), new THREE.Vector3(1, 1, 1)), THREE, { fov: 34, aspect: 1.5 }, motion, goal)
++const run = new Function('useEffect', 'focusRequest', 'anchorsRef', 'mkGoal', 'requestAnimationFrame', 'cancelAnimationFrame', 'anchorBounds', 'THREE', 'camera', 'motion', 'goal', 'viewRequest', js)
++const invoke = (viewRequest = null, focusRequest = { compId: 'bateria', key: 1 }) => run(fn => { cleanup = fn() }, focusRequest, anchorsRef, () => calls++, raf, cancel,
++  () => new THREE.Box3(new THREE.Vector3(-1, -1, -1), new THREE.Vector3(1, 1, 1)), THREE, { fov: 34, aspect: 1.5 }, motion, goal, viewRequest)
+ 
+ invoke()
+ for (let i = 0; i < 300; i++) step()
+@@ -39,4 +39,63 @@ invoke(); step(); motion.generation++; anchorsRef.current.set('bateria', {}); st
+ assert.equal(calls, 1, 'Gesto/preset deve cancelar foco ainda pendente')
+ assert.equal(scheduled.size, 0)
+ cleanup()
+-console.log('Foco validado: âncora após 300 frames; cancelamento no cleanup e gesto/preset (ensaio isolado, não navegador).')
++// Um preset mais novo também vence quando o effect reinicia por readiness.
++const presetGoal={preset:true}
++goal.current=presetGoal;motion.tween=true
++invoke({key:2});step()
++assert.equal(goal.current,presetGoal,'Readiness não pode reaplicar foco antigo sobre preset novo')
++invoke({key:3},null);step()
++assert.equal(goal.current,presetGoal,'Effect sem seleção não pode cancelar preset')
++assert.equal(calls,1)
++assert.equal(scheduled.size,0)
++// Executar também o callback real do tween com uma âncora em movimento.
++const frameStart=text.indexOf('  useFrame((_, dt) => {')
++const frameEnd=text.indexOf('\n\n  return null',frameStart)
++assert.ok(frameStart>=0&&frameEnd>frameStart)
++const frameJs=ts.transpileModule(text.slice(frameStart,frameEnd),{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText
++let frame, center=new THREE.Vector3()
++const camera={position:new THREE.Vector3(0,0,5)}
++const controls={target:new THREE.Vector3(),update(){}}
++new Function('useFrame','goal','controls','anchorBounds','THREE','easeOutExpo','camera','invalidate','autoRotateActive','motion',frameJs)(
++  fn=>{frame=fn},goal,controls,()=>new THREE.Box3(center.clone().addScalar(-.5),center.clone().addScalar(.5)),THREE,
++  t=>t>=1?1:1-Math.pow(2,-10*t),camera,()=>{},false,motion)
++const makeGoal=()=>({startPos:camera.position.clone(),endPos:new THREE.Vector3(0,0,5),startTgt:controls.target.clone(),endTgt:new THREE.Vector3(),t:0,dur:1,follow:{},stableFor:0})
++goal.current=makeGoal()
++for(let i=0;i<180;i++){center.set(4*(1-Math.exp(-8*i/60)),0,0);frame(null,1/60)}
++assert.ok(controls.target.distanceTo(center)<.001,'Tween deve convergir à âncora movida pela explosão')
++assert.equal(goal.current,null,'Tween deve encerrar após a peça estabilizar')
++goal.current=makeGoal();frame(null,1/60)
++goal.current=null;motion.tween=false
++const cancelledTarget=controls.target.clone(),cancelledPosition=camera.position.clone()
++center.set(9,0,0);frame(null,1/60)
++assert.ok(controls.target.equals(cancelledTarget)&&camera.position.equals(cancelledPosition),'Cancelamento deve impedir acompanhamento posterior')
++// Hidratação e ação locais reais: uma requisição, sem cair no ramo inválido.
++const page=readFileSync(new URL('../src/pages/Modelo3D.tsx',import.meta.url),'utf8')
++const urlStart=page.indexOf('  useEffect(() => {',page.indexOf('// ---- deep-link'))
++const urlEnd=page.indexOf('\n  // A URL',urlStart)
++assert.ok(urlStart>=0&&urlEnd>urlStart)
++const urlJs=ts.transpileModule(page.slice(urlStart,urlEnd),{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText
++let params=new URLSearchParams('camada=motores&c=motor_esquerdo'), selected=null, focus=null, isolated=null, requests=0, visibility={motores:true}
++const deepLink={current:null},cameraRequestSequence={current:0}
++const setSelected=v=>{selected=typeof v==='function'?v(selected):v}
++const setFocus=v=>{focus=typeof v==='function'?v(focus):v;requests++}
++const setIsolate=v=>{isolated=typeof v==='function'?v(isolated):v}
++const setVisible=v=>{visibility=typeof v==='function'?v(visibility):v}
++const hydrate=new Function('useEffect','searchParams','isLayerId','compExiste','deepLink','setIsolate','setVisible','setSelected','setFocusRequest','cameraRequestSequence',urlJs)
++const hydrateNow=()=>hydrate(fn=>fn(),params,id=>id==='motores',(layer,id)=>layer==='motores'&&id.startsWith('motor_'),deepLink,setIsolate,setVisible,setSelected,setFocus,cameraRequestSequence)
++hydrateNow()
++assert.equal(selected?.comp,'motor_esquerdo','Query válida não pode cair no cleanup inválido')
++assert.equal(focus?.compId,'motor_esquerdo');assert.equal(isolated,'motores');assert.equal(requests,1)
++hydrateNow();assert.equal(requests,1,'Rehidratação da mesma query não deve duplicar foco')
++const actionStart=page.indexOf('  const selectComponent = useCallback(')
++const actionEnd=page.indexOf('\n\n  const clearSelection',actionStart)
++assert.ok(actionStart>=0&&actionEnd>actionStart)
++const actionJs=ts.transpileModule(page.slice(actionStart,actionEnd),{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText
++const select=new Function('useCallback','deepLink','setVisible','setSelected','setSearchParams','setIsolate','setFocusRequest','cameraRequestSequence',actionJs+'; return selectComponent')(
++  fn=>fn,deepLink,setVisible,setSelected,fn=>{params=fn(params)},setIsolate,setFocus,cameraRequestSequence)
++select('motores','motor_esquerdo');hydrateNow();assert.equal(requests,2,'Reseleção deve focar uma vez')
++select('motores','motor_direito');hydrateNow();assert.equal(requests,3,'Nova seleção local deve focar uma vez')
++assert.equal(selected?.comp,'motor_direito')
++params=new URLSearchParams();hydrateNow()
++assert.equal(selected,null);assert.equal(focus,null);assert.equal(isolated,null)
++console.log('Foco validado: âncora tardia, cancelamento, explosão e seleção/deep-link sem duplicação (ensaio isolado, não navegador).')
+diff --git aantes/work-modulo-3d/scripts/verify-layer-diff.mjs bdepois/work-modulo-3d/scripts/verify-layer-diff.mjs
+index e44f9d3..3385e19 100644
+--- aantes/work-modulo-3d/scripts/verify-layer-diff.mjs
++++ bdepois/work-modulo-3d/scripts/verify-layer-diff.mjs
+@@ -6,7 +6,58 @@ function load(path) {
+   const bytes=readFileSync(path), size=bytes.readUInt32LE(12)
+   return { json:JSON.parse(bytes.subarray(20,20+size)), bin:bytes.subarray(28+size) }
+ }
++const identity=()=>[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]
++function multiply(a,b) {
++  return Array.from({length:16},(_,i)=>[0,1,2,3].reduce((sum,k)=>sum+a[k*4+i%4]*b[Math.floor(i/4)*4+k],0))
++}
++function localMatrix(n) {
++  if(n.matrix) return n.matrix
++  const [x,y,z,w]=n.rotation??[0,0,0,1], s=n.scale??[1,1,1], t=n.translation??[0,0,0]
++  return [(1-2*(y*y+z*z))*s[0],2*(x*y+z*w)*s[0],2*(x*z-y*w)*s[0],0,
++    2*(x*y-z*w)*s[1],(1-2*(x*x+z*z))*s[1],2*(y*z+x*w)*s[1],0,
++    2*(x*z+y*w)*s[2],2*(y*z-x*w)*s[2],(1-2*(x*x+y*y))*s[2],0,...t,1]
++}
+ function fingerprint({json:g,bin}) {
++  const world=new Map()
++  const visit=(i,parent)=>{
++    assert.ok(g.nodes[i]&&!world.has(i),'Hierarquia inválida ou nó duplicado')
++    const matrix=multiply(parent,localMatrix(g.nodes[i])); world.set(i,matrix)
++    for(const child of g.nodes[i].children??[]) visit(child,matrix)
++  }
++  const scene=g.scenes?.[g.scene??0]
++  assert.ok(scene,'Cena padrão ausente')
++  for(const i of scene.nodes??[]) visit(i,identity())
++  const image=i=>{
++    const source=g.images?.[i]; assert.ok(source,'Imagem inválida')
++    const {bufferView,uri,...metadata}=source
++    if(bufferView===undefined) return {...metadata,uri}
++    const v=g.bufferViews[bufferView], start=v.byteOffset??0
++    assert.ok(v.buffer===0&&start>=0&&start+v.byteLength<=bin.length,'Imagem fora do buffer')
++    return {...metadata,bytes:bin.subarray(start,start+v.byteLength).toString('hex')}
++  }
++  const texture=i=>{
++    const source=g.textures?.[i]; assert.ok(source,'Textura inválida')
++    const {source:sourceIndex,sampler,extensions,...metadata}=source
++    const resolved={...metadata,sampler:sampler===undefined?{}:g.samplers[sampler]}
++    if(sourceIndex!==undefined) resolved.image=image(sourceIndex)
++    if(extensions) resolved.extensions=Object.fromEntries(Object.entries(extensions).map(([key,value])=>{
++      const {source,...rest}=value
++      return [key,source===undefined?value:{...rest,image:image(source)}]
++    }))
++    return resolved
++  }
++  // Resolve referências em TextureInfo, inclusive nas extensões de materiais.
++  const material=value=>{
++    if(!value||typeof value!=='object') return value
++    if(Array.isArray(value)) return value.map(material)
++    return Object.fromEntries(Object.entries(value).map(([key,item])=>{
++      if(key.endsWith('Texture')&&item&&Number.isInteger(item.index)) {
++        const {index,...info}=item
++        return [key,{...info,texture:texture(index)}]
++      }
++      return [key,material(item)]
++    }))
++  }
+   const accessor = i => {
+     const a=g.accessors[i], v=g.bufferViews[a.bufferView]
+     const width={SCALAR:1,VEC2:2,VEC3:3,VEC4:4}[a.type]*{5121:1,5123:2,5125:4,5126:4}[a.componentType]
+@@ -19,20 +70,17 @@ function fingerprint({json:g,bin}) {
+     }
+     return [a.count,a.type,a.componentType,values]
+   }
+-  return new Map(g.nodes.filter(n=>n.mesh!==undefined).map(n=>[n.name,{
++  return new Map(g.nodes.flatMap((n,i)=>n.mesh===undefined?[]:[[n.name,{
+     componentId:n.extras.componentId,layerId:n.extras.layerId,extras:n.extras,
+-    translation:n.translation,rotation:n.rotation,scale:n.scale,matrix:n.matrix,
++    reachable:world.has(i),matrix:world.get(i)??localMatrix(n),
+     primitives:g.meshes[n.mesh].primitives.map(p=>({
+-      material:g.materials[p.material],indices:accessor(p.indices),
++      material:material(g.materials[p.material]),indices:accessor(p.indices),
+       // UVs de materiais sem textura não participam da aparência; bisect do Blender
+       // pode preencher esses atributos não usados de maneira diferente ao regenerar.
+       attributes:Object.fromEntries(Object.entries(p.attributes).filter(([k])=>!k.startsWith('TEXCOORD')||JSON.stringify(g.materials[p.material]).includes('Texture"')).map(([k,v])=>[k,accessor(v)])),
+     })),
+-  }]))
++  }]]))
+ }
+-const [before,after,...allowed]=process.argv.slice(2)
+-assert.ok(before&&after,'Fornecer GLBs anterior e atual')
+-const a=fingerprint(load(before)),b=fingerprint(load(after))
+ // Reexportação pode variar UVs em ~3e-8; tolerância numérica explícita, não visual.
+ const epsilon=1e-6
+ function equal(a,b) {
+@@ -42,12 +90,65 @@ function equal(a,b) {
+   const keys=Object.keys(a)
+   return keys.length===Object.keys(b).length&&keys.every(k=>Object.hasOwn(b,k)&&equal(a[k],b[k]))
+ }
+-const changed=[]
+-for(const name of new Set([...a.keys(),...b.keys()])) {
+-  if(!equal(a.get(name),b.get(name))) {
+-    const n=b.get(name)??a.get(name)
+-    changed.push({name,componentId:n.componentId,layerId:n.layerId})
+-    assert.ok(allowed.includes(n.componentId),`Alteração fora do escopo: ${name}`)
++function compare(a,b,allowed=[]) {
++  const changed=[]
++  for(const name of new Set([...a.keys(),...b.keys()])) {
++    if(!equal(a.get(name),b.get(name))) {
++      const n=b.get(name)??a.get(name)
++      changed.push({name,componentId:n.componentId,layerId:n.layerId})
++      assert.ok(allowed.includes(n.componentId),`Alteração fora do escopo: ${name}`)
++    }
+   }
++  return {beforeNodes:a.size,afterNodes:b.size,changed}
++}
++function selfTest() {
++  const fixture={json:{scene:0,scenes:[{nodes:[0]}],nodes:[{children:[1]},
++    {name:'peça',mesh:0,extras:{componentId:'teste',layerId:'camada'}}],
++    meshes:[{primitives:[{material:0,indices:0,attributes:{POSITION:1,TEXCOORD_0:2}}]}],
++    materials:[{pbrMetallicRoughness:{baseColorTexture:{index:0}}}],
++    textures:[{source:0,sampler:0}],samplers:[{magFilter:9729}],
++    images:[{bufferView:3,mimeType:'image/png'}],
++    bufferViews:[{buffer:0,byteOffset:0,byteLength:6},{buffer:0,byteOffset:8,byteLength:36},
++      {buffer:0,byteOffset:44,byteLength:24},{buffer:0,byteOffset:68,byteLength:4}],
++    accessors:[{bufferView:0,count:3,type:'SCALAR',componentType:5123},
++      {bufferView:1,count:3,type:'VEC3',componentType:5126},
++      {bufferView:2,count:3,type:'VEC2',componentType:5126}]},bin:Buffer.alloc(72)}
++  const clone=()=>({json:structuredClone(fixture.json),bin:Buffer.from(fixture.bin)})
++  const baseline=fingerprint(fixture)
++  const negatives=[
++    ['Imagem embarcada alterada',f=>{f.bin[68]=1}],
++    ['Sampler alterado',f=>{f.json.samplers[0].magFilter=9728}],
++    ['Ancestral movido',f=>{f.json.nodes[0].translation=[1,0,0]}],
++    ['Ancestral rotacionado',f=>{f.json.nodes[0].rotation=[0,0,1,0]}],
++    ['Ancestral escalado',f=>{f.json.nodes[0].scale=[2,1,1]}],
++    ['Ancestral com matriz movido',f=>{f.json.nodes[0].matrix=identity();f.json.nodes[0].matrix[12]=1}],
++    ['Nó removido da cena',f=>{f.json.scenes[0].nodes=[]}],
++    ['Descendente removido',f=>{f.json.nodes[0].children=[]}],
++    ['Cena padrão alterada',f=>{f.json.scenes.push({nodes:[]});f.json.scene=1}],
++    ['UV texturizado alterado',f=>{f.bin.writeFloatLE(0.25,44)}],
++    ['Fora da tolerância',f=>{f.json.nodes[0].translation=[2e-6,0,0]}],
++  ]
++  for(const [label,mutate] of negatives) {
++    const f=clone();mutate(f)
++    assert.throws(()=>compare(baseline,fingerprint(f)),/Alteração fora do escopo/,label)
++    assert.equal(compare(baseline,fingerprint(f),['teste']).changed.length,1,label)
++  }
++  const near=clone();near.json.nodes[0].translation=[5e-7,0,0]
++  assert.equal(compare(baseline,fingerprint(near)).changed.length,0,'Tolerância 1e-6')
++  const untextured=clone();delete untextured.json.materials[0].pbrMetallicRoughness.baseColorTexture
++  const oldUntextured=fingerprint(untextured);untextured.bin.writeFloatLE(0.25,44)
++  assert.equal(compare(oldUntextured,fingerprint(untextured)).changed.length,0,'UV sem textura ignorado')
++  const relocated=clone();relocated.json.images.unshift({uri:'não usada'});relocated.json.textures[0].source=1
++  relocated.json.samplers.unshift({});relocated.json.textures[0].sampler=1
++  relocated.json.textures.unshift({});relocated.json.materials[0].pbrMetallicRoughness.baseColorTexture.index=1
++  assert.equal(compare(baseline,fingerprint(relocated)).changed.length,0,'Índices de dependências resolvidos')
++  const equivalent=clone();equivalent.json.nodes[0].matrix=identity()
++  assert.equal(compare(baseline,fingerprint(equivalent)).changed.length,0,'Matriz identidade equivalente')
++  console.log('Autotestes layer-diff:',JSON.stringify({negativeCases:negatives.length,positiveCases:4}))
++}
++if(process.argv.includes('--self-test')) selfTest()
++else {
++  const [before,after,...allowed]=process.argv.slice(2)
++  assert.ok(before&&after,'Fornecer GLBs anterior e atual')
++  console.log('Comparação geométrica/material:',JSON.stringify(compare(fingerprint(load(before)),fingerprint(load(after)),allowed)))
+ }
+-console.log('Comparação geométrica/material:',JSON.stringify({beforeNodes:a.size,afterNodes:b.size,changed}))
+diff --git aantes/work-modulo-3d/scripts/verify-model.mjs bdepois/work-modulo-3d/scripts/verify-model.mjs
+index 4117f11..ba7ec7a 100644
+--- aantes/work-modulo-3d/scripts/verify-model.mjs
++++ bdepois/work-modulo-3d/scripts/verify-model.mjs
+@@ -56,7 +56,7 @@ export function validate(gltf, map, binary=bin) {
+   }
+   for(const view of gltf.bufferViews) {
+     assert.equal(view.buffer,0)
+-    assert.ok((view.byteOffset??0)>=0&&view.byteLength>0&&(view.byteOffset??0)+view.byteLength<=binary.length,'bufferView fora do binário')
++    assert.ok(Number.isSafeInteger(view.byteOffset??0)&&Number.isSafeInteger(view.byteLength)&&(view.byteOffset??0)>=0&&view.byteLength>0&&(view.byteOffset??0)+view.byteLength<=gltf.buffers[0].byteLength,'bufferView fora do binário')
+   }
+   const materials=gltf.materials??[]
+   assert.ok(materials.length>=8,'Materiais insuficientes')
+@@ -100,11 +100,23 @@ export function validate(gltf, map, binary=bin) {
+       assert.equal(p.mode??4,4,'Somente triângulos')
+       assert.ok(materials[p.material],'Material inválido')
+       const pos=gltf.accessors[p.attributes.POSITION]
+-      assert.ok(pos&&pos.count>2&&pos.componentType===5126&&pos.type==='VEC3','Posições inválidas')
+-      assert.ok(finite3(pos.min)&&finite3(pos.max)&&pos.max.some((v,i)=>v>pos.min[i]),'Limites vazios')
+-      const view=gltf.bufferViews[pos.bufferView]; const offset=(view.byteOffset??0)+(pos.byteOffset??0); const stride=view.byteStride??12
+-      assert.ok(offset+(pos.count-1)*stride+12<=(view.byteOffset??0)+view.byteLength,'Accessor fora dos limites')
+-      for(let i=0;i<pos.count;i++) for(let j=0;j<3;j++) assert.ok(Number.isFinite(binary.readFloatLE(offset+i*stride+j*4)),'Vértice não finito')
++      assert.ok(pos&&Number.isSafeInteger(pos.count)&&pos.count>2&&pos.componentType===5126&&pos.type==='VEC3'&&!pos.normalized&&!pos.sparse,'Posições inválidas')
++      assert.ok(finite3(pos.min)&&finite3(pos.max)&&pos.max.every((v,i)=>v>=pos.min[i])&&pos.max.some((v,i)=>v>pos.min[i]),'Limites vazios')
++      assert.ok(validIndex(pos.bufferView,gltf.bufferViews),'Buffer de posições inválido')
++      const view=gltf.bufferViews[pos.bufferView], localOffset=pos.byteOffset??0
++      const offset=(view.byteOffset??0)+localOffset, stride=view.byteStride??12
++      assert.ok(Number.isSafeInteger(localOffset)&&localOffset>=0&&localOffset%4===0&&offset%4===0,'Offset de posições inválido')
++      assert.ok(Number.isSafeInteger(stride)&&stride>=12&&stride<=252&&stride%4===0,'Stride de posições inválido')
++      assert.ok(localOffset+(pos.count-1)*stride+12<=view.byteLength,'Accessor fora dos limites')
++      const actualMin=[Infinity,Infinity,Infinity], actualMax=[-Infinity,-Infinity,-Infinity]
++      for(let i=0;i<pos.count;i++) for(let j=0;j<3;j++) {
++        const value=binary.readFloatLE(offset+i*stride+j*4)
++        assert.ok(Number.isFinite(value),'Vértice não finito')
++        actualMin[j]=Math.min(actualMin[j],value); actualMax[j]=Math.max(actualMax[j],value)
++      }
++      // Tolerância absoluta/relativa para limites JSON arredondados de FLOAT32.
++      const close=(a,b)=>Math.abs(a-b)<=1e-6*Math.max(1,Math.abs(a),Math.abs(b))
++      assert.ok(actualMin.every((v,i)=>close(v,pos.min[i]))&&actualMax.every((v,i)=>close(v,pos.max[i])),'Limites POSITION divergentes dos vértices')
+       const indices=gltf.accessors[p.indices]
+       assert.ok(indices&&Number.isInteger(indices.count)&&indices.count>0&&indices.count%3===0,'Índices inválidos')
+       assert.ok(indices.type==='SCALAR'&&[5121,5123,5125].includes(indices.componentType)&&!indices.normalized&&!indices.sparse,'Formato de índices inválido')
+@@ -128,7 +140,22 @@ export function validate(gltf, map, binary=bin) {
+ assert.equal(manifest.sha256,createHash('sha256').update(raw).digest('hex'),'Integridade SHA-256')
+ assert.equal(manifest.metrics.bytes,raw.length,'Tamanho manifesto')
+ const metrics=validate(doc,manifest)
++const firstPosition=d=>d.accessors[d.meshes[0].primitives[0].attributes.POSITION]
+ const mutations=[
++  ['POSITION count fracionário',d=>{firstPosition(d).count-=0.5}],
++  ['POSITION count negativo',d=>{firstPosition(d).count=-3}],
++  ['POSITION offset negativo',d=>{firstPosition(d).byteOffset=-4}],
++  ['POSITION offset fracionário',d=>{firstPosition(d).byteOffset=0.5}],
++  ['POSITION offset desalinhado',d=>{firstPosition(d).byteOffset=2}],
++  ['POSITION buffer desalinhado',d=>{d.bufferViews[firstPosition(d).bufferView].byteOffset+=2}],
++  ['POSITION buffer ausente',d=>{firstPosition(d).bufferView=d.bufferViews.length}],
++  ['POSITION fora da view',d=>{const p=firstPosition(d);d.bufferViews[p.bufferView].byteLength=(p.byteOffset??0)+(p.count-1)*12+8}],
++  ['POSITION stride curto',d=>{d.bufferViews[firstPosition(d).bufferView].byteStride=8}],
++  ['POSITION stride desalinhado',d=>{d.bufferViews[firstPosition(d).bufferView].byteStride=13}],
++  ['POSITION min incorreto',d=>{firstPosition(d).min[0]-=1}],
++  ['POSITION max incorreto',d=>{firstPosition(d).max[0]+=1}],
++  ['POSITION limites invertidos',d=>{firstPosition(d).min[0]=firstPosition(d).max[0]+1}],
++  ['POSITION sparse não suportado',d=>{firstPosition(d).sparse={count:1}}],
+   ['ID desconhecido',d=>{d.nodes.find(n=>n.mesh!==undefined).extras.componentId='inexistente'}],
+   ['Camada incorreta',d=>{d.nodes.find(n=>n.mesh!==undefined).extras.layerId='inexistente'}],
+   ['Âncora inválida',d=>{d.nodes.find(n=>n.mesh!==undefined).extras.anchor=[null,0,0]}],
+diff --git aantes/work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx bdepois/work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx
+index 909af69..561d3e9 100644
+--- aantes/work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx
++++ bdepois/work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx
+@@ -64,6 +64,8 @@ interface CameraGoal {
+   endTgt: THREE.Vector3
+   t: number
+   dur: number
++  follow?: AnchorEntry
++  stableFor: number
+ }
+ 
+ function CameraRig({
+@@ -85,7 +87,7 @@ function CameraRig({
+   const invalidate = useThree((s) => s.invalidate)
+ 
+   const mkGoal = useCallback(
+-    (endPos: THREE.Vector3, endTgt: THREE.Vector3, dur = 1) => {
++    (endPos: THREE.Vector3, endTgt: THREE.Vector3, dur = 1, follow?: AnchorEntry) => {
+       if (!controls) return
+       motion.tween = true
+       goal.current = {
+@@ -95,12 +97,22 @@ function CameraRig({
+         endTgt,
+         t: 0,
+         dur,
++        follow,
++        stableFor: 0,
+       }
+       invalidate()
+     },
+     [camera, controls, invalidate, motion],
+   )
+ 
++  // Limpar seleção cancela seu foco, mas um novo preset sem seleção não o cancela.
++  useEffect(() => {
++    if (focusRequest) return
++    goal.current = null
++    motion.tween = false
++    motion.generation++
++  }, [focusRequest, motion])
++
+   // preset de vista
+   useEffect(() => {
+     if (!viewRequest) return
+@@ -112,9 +124,11 @@ function CameraRig({
+   // O GLB pode carregar depois do deep-link em redes lentas; aguarda a âncora.
+   // A troca de seleção/desmontagem cancela a espera, sem prazo de frames arbitrário.
+   useEffect(() => {
++    // Dependências podem remontar quando OrbitControls fica pronto após o GLB.
++    // Um foco antigo nunca deve substituir um preset solicitado mais recentemente.
++    if (!focusRequest || (viewRequest && viewRequest.key > focusRequest.key)) return
+     goal.current = null
+     motion.tween = false
+-    if (!focusRequest) return
+     const generation = ++motion.generation
+     let rafId = 0
+     const focusWhenReady = () => {
+@@ -138,11 +152,11 @@ function CameraRig({
+       const angle = Math.min(THREE.MathUtils.degToRad(pc.fov) / 2, Math.atan(Math.tan(THREE.MathUtils.degToRad(pc.fov) / 2) * pc.aspect))
+       const dist = Math.max(1.5, bounds.getBoundingSphere(new THREE.Sphere()).radius / Math.sin(angle) * 1.15)
+       const endPos = anchor.clone().add(dir.multiplyScalar(dist)).add(new THREE.Vector3(0, 0.55, 0))
+-      mkGoal(endPos, anchor, 1)
++      mkGoal(endPos, anchor, 1, entry)
+     }
+     rafId = requestAnimationFrame(focusWhenReady)
+     return () => cancelAnimationFrame(rafId)
+-  }, [focusRequest, anchorsRef, mkGoal, motion])
++  }, [focusRequest, viewRequest, anchorsRef, mkGoal, motion])
+ 
+   // interação do usuário cancela tween em andamento
+   useEffect(() => {
+@@ -159,12 +173,24 @@ function CameraRig({
+   useFrame((_, dt) => {
+     const g = goal.current
+     if (g && controls) {
++      // A explosão ainda pode mover a peça enquanto o foco interpola.
++      // Só acompanhar durante este goal: gesto/preset limpa/substitui a referência.
++      if (g.follow) {
++        const bounds = anchorBounds(g.follow)
++        if (!bounds.isEmpty()) {
++          const center = bounds.getCenter(new THREE.Vector3())
++          const delta = center.clone().sub(g.endTgt)
++          g.stableFor = delta.lengthSq() < 1e-8 ? g.stableFor + dt : 0
++          g.endPos.add(delta)
++          g.endTgt.copy(center)
++        }
++      }
+       g.t = Math.min(1, g.t + dt / g.dur)
+       const e = easeOutExpo(g.t)
+       camera.position.lerpVectors(g.startPos, g.endPos, e)
+       controls.target.lerpVectors(g.startTgt, g.endTgt, e)
+       controls.update()
+-      if (g.t >= 1) { goal.current = null; motion.tween = false }
++      if (g.t >= 1 && (!g.follow || g.stableFor >= .15)) { goal.current = null; motion.tween = false }
+       invalidate()
+     }
+     // auto-rotação: mantém o frameloop demand vivo enquanto ativa
+diff --git aantes/work-modulo-3d/src/components/modelo3d/glb.tsx bdepois/work-modulo-3d/src/components/modelo3d/glb.tsx
+index 2c8f7e3..3d80a41 100644
+--- aantes/work-modulo-3d/src/components/modelo3d/glb.tsx
++++ bdepois/work-modulo-3d/src/components/modelo3d/glb.tsx
+@@ -40,7 +40,7 @@ export function GlbPart({ mesh, camada, noRay }: { mesh: GlbMesh; camada: LayerI
+   }, [reg, mesh, camada])
+   return <mesh ref={ref} geometry={mesh.geometry} material={mesh.material} position={mesh.position}
+     quaternion={mesh.quaternion} scale={mesh.scale} dispose={null}
+-    userData={{ componenteId: mesh.comp, camada }} raycast={noRay ? () => null : undefined}
++    userData={{ componenteId: mesh.comp, camada }} raycast={noRay ? () => null : THREE.Mesh.prototype.raycast}
+     onPointerOver={e => hov(e, mesh.comp, camada)} onPointerOut={e => hov(e, null, null)}
+     onClick={e => sel(e, camada, mesh.comp)} />
+ }
+diff --git aantes/work-modulo-3d/src/pages/Modelo3D.tsx bdepois/work-modulo-3d/src/pages/Modelo3D.tsx
+index d204e82..9aa8200 100644
+--- aantes/work-modulo-3d/src/pages/Modelo3D.tsx
++++ bdepois/work-modulo-3d/src/pages/Modelo3D.tsx
+@@ -79,6 +79,8 @@ export default function Modelo3D() {
+ 
+   const staticReason = useMemo(detectStaticReason, [])
+   const deepLink = useRef<{ camada: LayerId; comp: string } | null>(null)
++  // Ordena foco/preset também quando Canvas/OrbitControls ainda estão carregando.
++  const cameraRequestSequence = useRef(0)
+ 
+   // ---- deep-link (?camada=<id>&c=<componenteId>) ----
+   // Reage também a mudanças de query na mesma montagem (busca e histórico).
+@@ -86,13 +88,15 @@ export default function Modelo3D() {
+     const camada = searchParams.get('camada')
+     const comp = searchParams.get('c')
+     if (isLayerId(camada) && comp && compExiste(camada, comp)) {
++      const changed = deepLink.current?.camada !== camada || deepLink.current?.comp !== comp
+       deepLink.current = { camada, comp }
+       setIsolate(camada)
+       setVisible((v) => (v[camada] ? v : { ...v, [camada]: true }))
+       setSelected((current) => (current?.camada === camada && current.comp === comp ? current : { camada, comp }))
+-      // focus move após a montagem rápida (0.6s, §9)
+-      const t = window.setTimeout(() => setFocusRequest({ compId: comp, key: Date.now() }), 900)
+-      return () => window.clearTimeout(t)
++      // Uma requisição por mudança externa; a âncora é aguardada pelo CameraRig.
++      // Ações locais já solicitaram foco, inclusive ao selecionar novamente o mesmo ID.
++      if (changed) setFocusRequest({ compId: comp, key: ++cameraRequestSequence.current })
++      return
+     }
+     const previousLayer = deepLink.current?.camada
+     deepLink.current = null
+@@ -124,6 +128,7 @@ export default function Modelo3D() {
+   }, [])
+ 
+   const selectComponent = useCallback((camada: LayerId, comp: string) => {
++    deepLink.current = { camada, comp }
+     setVisible((v) => (v[camada] ? v : { ...v, [camada]: true }))
+     setSelected({ camada, comp })
+     setSearchParams(previous => {
+@@ -132,7 +137,7 @@ export default function Modelo3D() {
+       return next
+     }, { replace: true })
+     setIsolate(camada)
+-    setFocusRequest((f) => ({ compId: comp, key: (f?.key ?? 0) + 1 }))
++    setFocusRequest({ compId: comp, key: ++cameraRequestSequence.current })
+   }, [setSearchParams])
+ 
+   const clearSelection = useCallback(() => {
+@@ -170,12 +175,12 @@ export default function Modelo3D() {
+     const preset = VIEW_PRESETS.find((v) => v.id === id)
+     if (!preset) return
+     setActiveView(id)
+-    setViewRequest((r) => ({ preset, key: (r?.key ?? 0) + 1 }))
++    setViewRequest({ preset, key: ++cameraRequestSequence.current })
+   }, [])
+ 
+   const resetCamera = useCallback(() => {
+     setActiveView(null)
+-    setViewRequest((r) => ({ preset: DEFAULT_VIEW, key: (r?.key ?? 0) + 1 }))
++    setViewRequest({ preset: DEFAULT_VIEW, key: ++cameraRequestSequence.current })
+   }, [])
+ 
+   // ---- atalhos de teclado (1–9, E, X, R, ESC — §6/§10) ----
+@@ -271,11 +276,13 @@ export default function Modelo3D() {
+         <div className="relative min-w-0 flex-1">
+           <ModelErrorBoundary
+             fallback={
+-              <StaticFallback
+-                reason="FALHA AO CARREGAR A MALHA"
+-                selectedId={selected?.comp ?? null}
+-                onSelectComponent={selectComponent}
+-              />
++              <div className="absolute inset-0 overflow-y-auto" data-testid="asset-error-fallback">
++                <StaticFallback
++                  reason="FALHA AO CARREGAR A MALHA"
++                  selectedId={selected?.comp ?? null}
++                  onSelectComponent={selectComponent}
++                />
++              </div>
+             }
+           >
+             <Suspense

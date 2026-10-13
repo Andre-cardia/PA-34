@@ -1,0 +1,546 @@
+{
+  "aeronave": "Piper PA-34-200 Seneca I",
+  "referencia": "Piper Seneca Information Manual PA-34-200 (P/N 761 506, 1972), Seção Description — Airplane and Systems",
+  "notas_uso": "Camadas pensadas para visualização 3D por remoção sucessiva: exterior -> estrutura -> sistemas. Localizações usam referências da aeronave (asa esquerda/direita, nariz, nacele, fuselagem, empenagem, cabine).",
+  "camadas": [
+    {
+      "id": "exterior",
+      "nome": "Exterior (carenagem, fuselagem, asa, empenagem)",
+      "descricao": "Revestimento externo da aeronave: fuselagem semimonocoque de alumínio, asas, empenagem e carenagens. Todo em liga de alumínio aeronáutico tratado termicamente, com aço na montagem dos motores e trem de pouso e fibra de vidro no nariz e pontas de asa.",
+      "componentes": [
+        {
+          "id": "fuselagem_externa",
+          "nome": "Fuselagem (revestimento externo)",
+          "localizacao": "fuselagem",
+          "funcao": "Revestimento semimonocoque de liga de alumínio que forma a cabine e a estrutura externa da célula.",
+          "detalhes_operacionais": "Estrutura convencional semimonocoque; porta dianteira no lado DIREITO e porta traseira no lado ESQUERDO (porta traseira grande de carga opcional). Célula projetada e testada para fator de carga limite positivo de 3,8 G; manobras acrobáticas proibidas."
+        },
+        {
+          "id": "asa_externa_esq_dir",
+          "nome": "Asas esquerda e direita (revestimento e perfil)",
+          "localizacao": "asa esquerda e asa direita",
+          "funcao": "Superfície sustentadora; abriga tanques integrais, flaps e ailerons. Perfil laminar NACA 652-415; área alar 208,7 ft²; envergadura 38,88 ft.",
+          "detalhes_operacionais": "Cada asa contém dois tanques de alumínio interligados (24,5 gal cada) abastecidos por uma única boca no tanque externo, bem fora da nacele. Walkway no dorso da asa direita para embarque."
+        },
+        {
+          "id": "empenagem_externa",
+          "nome": "Empenagem (estabilizador vertical, leme e stabilator)",
+          "localizacao": "empenagem",
+          "funcao": "Estabilidade e controle direcional e longitudinal: estabilizador vertical com leme e stabilator horizontal inteiriço com tab anti-servo.",
+          "detalhes_operacionais": "O leme tem tab de compensação para aliviar força de pedal em voo mono-motor. O stabilator possui tab anti-servo que se move no mesmo sentido com curso ampliado, melhorando estabilidade longitudinal e servindo de trim."
+        },
+        {
+          "id": "naceles_carenagens",
+          "nome": "Naceles e capôs (cowlings) dos motores",
+          "localizacao": "nacela esquerda e nacela direita",
+          "funcao": "Carenam os motores e o trem principal recolhido; painéis laterais com dobradiças superiores facilitam inspeção.",
+          "detalhes_operacionais": "Cowlings em balanço fixados nos firewalls; entradas de ar de admissão no lado externo inferior; cowl flaps na parte inferior; saídas de escapamento tipo crossover com muffler-heater (aquece cabine e desembaçador). Espelho convexo na nacele esquerda para conferir o trem dianteiro."
+        },
+        {
+          "id": "para_brisa_janelas",
+          "nome": "Para-brisa, janelas e janela de tempestade",
+          "localizacao": "cabine (dianteira)",
+          "funcao": "Vedação e visibilidade da cabine; janela de tempestade (storm window) abríível no lado do piloto.",
+          "detalhes_operacionais": "A janela de tempestade pode ser aberta em voo até 150 MPH — afeta a pressão estática de cabine (referência ao usar fonte estática alternada). Para-brisa com painel elétrico anti-gelo opcional."
+        },
+        {
+          "id": "portas_bagageiros",
+          "nome": "Portas e compartimentos de bagagem",
+          "localizacao": "nariz e fuselagem traseira",
+          "funcao": "Dois compartimentos de bagagem separados: dianteiro (no nariz) e traseiro (atrás dos bancos).",
+          "detalhes_operacionais": "Bagageiro dianteiro: 100 lb máx., 15,3 ft³, porta 24x21 pol.; traseiro: 100 lb máx., 20 ft³. O acesso à bomba hidráulica do trem e à bateria é pelo bagageiro do nariz."
+        },
+        {
+          "id": "pontas_asa_nariz_fibra",
+          "nome": "Pontas de asa e cone de nariz (fibra de vidro)",
+          "localizacao": "pontas de asa e nariz",
+          "funcao": "Carenagens não estruturais de fibra de vidro: pontas de asa (com luzes de navegação/posição) e nariz dianteiro.",
+          "detalhes_operacionais": "Componentes em fibra conforme manual (nose and wing tips). Luzes de posição nas pontas; reconhecimento/pouso conforme configuração instalada."
+        }
+      ]
+    },
+    {
+      "id": "estrutura",
+      "nome": "Estrutura (longarinas, caixão da asa, semimonocoque)",
+      "descricao": "Estrutura primária da célula: longarina principal da asa a ~40% da corda, longarina traseira, caixão central (spar box) na fuselagem, caixilhos e revestimento semimonocoque.",
+      "componentes": [
+        {
+          "id": "longarina_principal",
+          "nome": "Longarina principal da asa",
+          "localizacao": "asa esquerda e asa direita (~40% da corda)",
+          "funcao": "Absorve as cargas de flexão da asa (bending).",
+          "detalhes_operacionais": "Localizada aproximadamente a 40% da corda a partir do bordo de ataque; as extremidades (butt ends) são parafusadas ao caixão central na fuselagem."
+        },
+        {
+          "id": "caixao_central_asa",
+          "nome": "Caixão central de travessia da asa (spar box carry-through)",
+          "localizacao": "fuselagem central (sob o piso da cabine)",
+          "funcao": "Estrutura integral da fuselagem que recebe as longarinas das duas asas, transmitindo as cargas de voo.",
+          "detalhes_operacionais": "Parte integral da estrutura da fuselagem; há ainda fixações dianteira e traseira na longarina traseira e em uma longarina dianteira auxiliar."
+        },
+        {
+          "id": "longarina_traseira",
+          "nome": "Longarina traseira da asa",
+          "localizacao": "asa esquerda e asa direita (bordo de fuga)",
+          "funcao": "Suporte dos flaps e ailerons; auxilia nas cargas de torção e arrasto.",
+          "detalhes_operacionais": "Serve de trilho/apoio aos flaps fendidos e aos ailerons com articulação diferencial."
+        },
+        {
+          "id": "semimonocoque_caixilhos",
+          "nome": "Caixilhos, longarinas e revestimento da fuselagem",
+          "localizacao": "fuselagem",
+          "funcao": "Estrutura semimonocoque: caixilhos (frames) e revestimento de alumínio rebitado suportam as cargas da célula.",
+          "detalhes_operacionais": "Liga de alumínio tratada termicamente e protegida contra corrosão; aço empregado nos berços dos motores e no trem de pouso."
+        },
+        {
+          "id": "bercos_motor",
+          "nome": "Berços dos motores (engine mounts)",
+          "localizacao": "nacela esquerda e nacela direita (firewall)",
+          "funcao": "Estruturas de tubos de aço que fixam os motores aos firewalls, com montantes dynafocal antivibração.",
+          "detalhes_operacionais": "Configuração dynafocal reduz transmissão de vibração à célula; firewalls separam os compartimentos dos motores da estrutura."
+        },
+        {
+          "id": "estrutura_empenagem",
+          "nome": "Estrutura da empenagem",
+          "localizacao": "empenagem",
+          "funcao": "Estrutura do estabilizador vertical, leme e stabilator.",
+          "detalhes_operacionais": "Stabilator inteiriço articulado (slab type), com tab anti-servo de função dupla (estabilidade + trim longitudinal)."
+        }
+      ]
+    },
+    {
+      "id": "motores",
+      "nome": "Motores, naceles, hélices e escapamentos",
+      "descricao": "Dois motores Lycoming de 4 cilindros opostos, injeção de combustível, aspiração natural, 200 HP a 2700 RPM cada, contra-rotativos: ESQUERDO IO-360-C1E6 (rotação horária vista da cabine) e DIREITO LIO-360-C1E6 (anti-horária) — elimina o motor crítico.",
+      "componentes": [
+        {
+          "id": "motor_esquerdo",
+          "nome": "Motor esquerdo Lycoming IO-360-C1E6",
+          "localizacao": "nacela esquerda",
+          "funcao": "Motor de 4 cilindros horizontalmente opostos, refrigerado a ar, injeção direta, 200 HP a 2700 RPM; rotação horária (visto da cabine).",
+          "detalhes_operacionais": "Deslocamento 361 pol³, taxa de compressão 8,7:1, diâmetro x curso 5,125 x 4,375 pol., peso seco ~350 lb. Injeção Bendix RSA-5 com servo-regulador; combustível mínimo 100/130 octanas; óleo 8 qt por motor. Sem limite de tempo para potência máxima (2700 RPM)."
+        },
+        {
+          "id": "motor_direito",
+          "nome": "Motor direito Lycoming LIO-360-C1E6",
+          "localizacao": "nacela direita",
+          "funcao": "Versão de rotação oposta (L = left-hand rotation): gira anti-horário visto da cabine, balanceando o torque e eliminando o motor crítico.",
+          "detalhes_operacionais": "Mesmas especificações do IO-360-C1E6 (200 HP a 2700 RPM). A contra-rotação iguala as esteiras de hélice e elimina o fator motor crítico em mono-motor."
+        },
+        {
+          "id": "helice_esquerda",
+          "nome": "Hélice esquerda Hartzell bipá + spinner",
+          "localizacao": "nacela esquerda (dianteira)",
+          "funcao": "Hélice de velocidade constante, passo variável e embandeiramento total (full feathering), modelo HC-C2YK-2()E/C7666A-0, 2 pás, diâmetro 76 pol. (máx.) / 74 pol. (mín.).",
+          "detalhes_operacionais": "Pressão de óleo do governador leva a hélice a passo fino/alta RPM; nitrogênio no domo leva a passo grosso/embandeiramento (e evita overspeed). Embandeiramento em ~6 s; trava centrífuga impede feather abaixo de 800 RPM. Evitar operação contínua 2200-2400 RPM (modelos sem amortecedor)."
+        },
+        {
+          "id": "helice_direita",
+          "nome": "Hélice direita Hartzell bipá + spinner",
+          "localizacao": "nacela direita (dianteira)",
+          "funcao": "Hélice de velocidade constante, embandeiramento total, modelo HC-C2YK-2()LE/JC7666A-0 (rotação oposta), 2 pás, 76 pol.",
+          "detalhes_operacionais": "Governador em cada motor mantém a RPM selecionada; perda da carga de ar/nitrogênio do domo pode causar overspeed (procedimento: fechar manete, reduzir para 105 MPH, baixar RPM e reengatar o governador gradualmente)."
+        },
+        {
+          "id": "sistema_injecao",
+          "nome": "Sistema de injeção Bendix RSA-5 (divisor de fluxo e bicos)",
+          "localizacao": "topo de cada motor",
+          "funcao": "Mede o consumo de ar do motor e usa o fluxo de ar para controlar o fluxo de combustível; divisor de fluxo com 4 linhas para os cilindros e bicos air-bleed de fluxo contínuo.",
+          "detalhes_operacionais": "Reduz risco de gelo de admissão e dá melhor distribuição que carburador; divisor com válvula de corte por mola. CHT mais uniformes e menos vapor lock (partidas quentes facilitadas)."
+        },
+        {
+          "id": "escapamento_crossover",
+          "nome": "Escapamentos tipo crossover com muffler-heater",
+          "localizacao": "naceles (lado externo)",
+          "funcao": "Conduzem os gases de escape para fora das naceles; muffler-heater fornece ar quente para cabine e desembaçador.",
+          "detalhes_operacionais": "O tubo crossover também aquece o ar alternativo de admissão. Trocador de calor no coletor de escape: inspeções periódicas são críticas (risco de monóxido de carbono na cabine)."
+        },
+        {
+          "id": "admissao_ar_alternativo",
+          "nome": "Admissão de ar com filtro e válvula de ar alternativo",
+          "localizacao": "parte inferior externa de cada cowling",
+          "funcao": "Ar de admissão entra por scoop no lado externo inferior do capô, passa por filtro e vai ao servo-regulador; válvula manual admite ar alternativo aquecido (sem filtro) se o filtro obstruir.",
+          "detalhes_operacionais": "Ar alternativo aquecido pelo tubo de escape crossover — proteção contra gelo de indução (neve/chuva congelante). Não usar em solo (ar não filtrado); fonte primária sempre para decolagem."
+        },
+        {
+          "id": "radiador_oleo",
+          "nome": "Radiador de óleo (oil cooler, 2)",
+          "localizacao": "face dianteira de cada firewall",
+          "funcao": "Arrefece o óleo de cada motor; ar captado por scoops laterais do capô e descartado na parte inferior.",
+          "detalhes_operacionais": "Temperatura de óleo normal 75-245 °F; gerenciar com cowl flaps e mistura. Capacidade de óleo 8 qt por motor."
+        },
+        {
+          "id": "cowl_flaps_comp",
+          "nome": "Cowl flaps (4 superfícies, 2 por nacele)",
+          "localizacao": "parte inferior das naceles",
+          "funcao": "Controlam o fluxo de ar de refrigeração dos motores; acionamento manual por alavancas abaixo do quadrante (aberto/intermediário/fechado).",
+          "detalhes_operacionais": "Abertos em solo/subida; fechados ou em trail em cruzeiro conforme CHT (máx. 475 °F). A trava da alavanca deve ser pressionada a cada mudança de posição."
+        },
+        {
+          "id": "governadores_magnetos",
+          "nome": "Governadores de hélice, magnetos e velas",
+          "localizacao": "cada motor",
+          "funcao": "Governador fornece óleo em pressões variadas pelo eixo da hélice para manter a RPM selecionada; magnetos duplos fornecem ignição redundante.",
+          "detalhes_operacionais": "Checagem de magnetos no run-up; chaves L/R/BOTH no painel esquerdo. O governador é quem executa o feather quando a manete passa pelo detent de baixa RPM."
+        }
+      ]
+    },
+    {
+      "id": "combustivel",
+      "nome": "Sistema de combustível (4 tanques, bombas, seletoras, crossfeed)",
+      "descricao": "Quatro tanques de alumínio (dois de 24,5 gal em cada asa, interligados), 98 gal totais / 93 gal utilizáveis; bombas mecânicas nos motores + bombas elétricas de backup; seleção por lado com crossfeed.",
+      "componentes": [
+        {
+          "id": "tanque_principal_esq",
+          "nome": "Tanque interno (inboard) da asa esquerda",
+          "localizacao": "asa esquerda (interno, junto à nacele)",
+          "funcao": "Tanque de alumínio de 24,5 gal que alimenta diretamente o motor esquerdo; recebe combustível do tanque externo por interligação.",
+          "detalhes_operacionais": "Interligado ao tanque externo: conforme o combustível do interno é consumido, o do externo flui para dentro. Par de tanques da asa = 49 gal totais, 46,5 utilizáveis (2,5 não utilizáveis por lado)."
+        },
+        {
+          "id": "tanque_auxiliar_esq",
+          "nome": "Tanque externo (outboard) da asa esquerda",
+          "localizacao": "asa esquerda (externo)",
+          "funcao": "Tanque de alumínio de 24,5 gal; abriga a única boca de abastecimento da asa e transfere combustível ao tanque interno.",
+          "detalhes_operacionais": "Abastecimento por único ponto no tanque externo (bem fora da nacele); respiro na tampa + interligação de ventilação entre os tanques + linha de overflow no topo do pescoço de enchimento."
+        },
+        {
+          "id": "tanque_principal_dir",
+          "nome": "Tanque interno (inboard) da asa direita",
+          "localizacao": "asa direita (interno, junto à nacele)",
+          "funcao": "Tanque de alumínio de 24,5 gal que alimenta o motor direito.",
+          "detalhes_operacionais": "Mesma lógica da asa esquerda: par interligado de 49 gal; sensor de quantidade em cada tanque, somados em um único indicador por asa no painel."
+        },
+        {
+          "id": "tanque_auxiliar_dir",
+          "nome": "Tanque externo (outboard) da asa direita",
+          "localizacao": "asa direita (externo)",
+          "funcao": "Tanque de alumínio de 24,5 gal com a boca de abastecimento da asa direita.",
+          "detalhes_operacionais": "Combustível mínimo 100/130 octanas (verde claro). Drenos rápidos: 2 por asa (um por tanque) sob a asa."
+        },
+        {
+          "id": "bombas_mecanicas",
+          "nome": "Bombas de combustível acionadas pelo motor (2)",
+          "localizacao": "cada motor",
+          "funcao": "Meio primário de suprimento de combustível de cada motor (bomba de diafragma, possível graças à baixa pressão de entrada do sistema RSA-5).",
+          "detalhes_operacionais": "Pressão de combustível normal 14-35 PSI; falha da bomba mecânica é coberta pela bomba elétrica correspondente."
+        },
+        {
+          "id": "bombas_eletricas",
+          "nome": "Bombas elétricas de combustível (2)",
+          "localizacao": "face traseira de cada firewall",
+          "funcao": "Backup da bomba mecânica; usadas na partida, decolagem, pouso e troca de tanque/crossfeed.",
+          "detalhes_operacionais": "Interruptores no painel à esquerda do piloto. Acima de 500 ft AGL podem ser desligadas uma de cada vez monitorando a pressão no verde; religar para descida/pouso."
+        },
+        {
+          "id": "seletoras_valvulas",
+          "nome": "Válvulas seletoras de combustível (2)",
+          "localizacao": "console central entre os bancos (comando) / linhas de cada asa (válvulas)",
+          "funcao": "Alavancas ON/OFF/CROSSFEED direcionam o combustível de cada asa ao respectivo motor ou cruzado (crossfeed).",
+          "detalhes_operacionais": "Crossfeed usado para balancear peso e estender alcance mono-motor. Proibido decolar em crossfeed ou operar ambas as seletoras em crossfeed. Antes do pouso mono-motor, voltar a seletora ao lado do motor bom."
+        },
+        {
+          "id": "gascolators_drenos",
+          "nome": "Gascolators (filtros) e drenos rápidos",
+          "localizacao": "lado interno das naceles (gascolators); sob as asas e ventre (drenos)",
+          "funcao": "Filtram o combustível entre a válvula seletora e a bomba elétrica; drenos permitem purgar água/sedimento no pré-voo.",
+          "detalhes_operacionais": "Drenos rápidos: 2 gascolators (naceles, lado interno, à frente e abaixo do bordo de ataque), 4 de tanques (2 sob cada asa) e 2 de linha crossfeed (ventre, oposto ao bordo de fuga do flap direito)."
+        },
+        {
+          "id": "linhas_crossfeed",
+          "nome": "Linhas de crossfeed",
+          "localizacao": "fuselagem (interligando as duas asas)",
+          "funcao": "Interligam os dois sistemas laterais, permitindo que um motor use combustível da asa oposta.",
+          "detalhes_operacionais": "Uso documentado para alcance mono-motor e balanceamento; checar drenos de crossfeed no pré-voo."
+        },
+        {
+          "id": "sensores_quantidade",
+          "nome": "Sensores de quantidade de combustível (4)",
+          "localizacao": "um em cada tanque",
+          "funcao": "Transmitem eletricamente a quantidade; os dois sensores de cada asa somam-se em um único indicador por lado.",
+          "detalhes_operacionais": "Cada indicador lê o total do par de tanques da asa (49 gal cheios). Instrumento indica corretamente em atitudes de voo normais; 2,5 gal por lado não são utilizáveis."
+        }
+      ]
+    },
+    {
+      "id": "eletrico",
+      "nome": "Sistema elétrico (bateria, 2 alternadores, barramentos, disjuntores)",
+      "descricao": "Sistema de 12 V (barramento regulado em 14,0 V) com dois alternadores de 60 A (um por motor) e bateria de 12 V / 35 Ah no nariz. Dimensionado para equipamento IFR noturno completo.",
+      "componentes": [
+        {
+          "id": "bateria",
+          "nome": "Bateria 12 V / 35 Ah",
+          "localizacao": "nariz (acesso pelo bagageiro dianteiro)",
+          "funcao": "Fonte para partida, energia com motores parados e reserva caso os dois alternadores falhem.",
+          "detalhes_operacionais": "Mantida carregada pelos alternadores; se descarregada, remover para carga em solo. Com dupla falha de alternadores, desligar tudo que não for essencial — a autonomia depende da carga e do estado da bateria."
+        },
+        {
+          "id": "alternadores",
+          "nome": "Alternadores 60 A (2)",
+          "localizacao": "um em cada motor",
+          "funcao": "Geram a energia elétrica principal em voo; produzem saída nominal já em baixa rotação.",
+          "detalhes_operacionais": "Monitorados por amperímetros individuais (loadmeters): zero = alternador fora de linha; ~60 A = sobrecarga (desligar cargas). Em mono-motor, não sobrecarregar o alternador restante."
+        },
+        {
+          "id": "reguladores_ov",
+          "nome": "Reguladores de voltagem e relés de sobretensão (2+2)",
+          "localizacao": "anteparo estação 49,5 (lado dianteiro)",
+          "funcao": "Dois reguladores de estado sólido mantêm o barramento em 14,0 V com divisão de carga; relé de sobretensão tira o alternador de linha se a saída exceder 14,0 V.",
+          "detalhes_operacionais": "Ao atuar o relé de OV, acende luz vermelha no painel esquerdo — única função da luz (não acende para outras falhas de alternador)."
+        },
+        {
+          "id": "reles_partida_master",
+          "nome": "Relés de partida (starter solenoids) e circuito master",
+          "localizacao": "compartimento dianteiro / painel",
+          "funcao": "Solenoides acionam os motores de arranque; chave master conecta a bateria ao barramento.",
+          "detalhes_operacionais": "Master OFF ao conectar/desconectar fonte externa (12-14 V, plugue opcional no lado esquerdo inferior do nariz) para evitar faísca; master ON para partir com GPU."
+        },
+        {
+          "id": "barramento_disjuntores",
+          "nome": "Barramento e painel de disjuntores",
+          "localizacao": "disjuntores no canto inferior direito do painel",
+          "funcao": "Distribui energia aos circuitos; disjuntores protegem equipamentos e a fiação contra sobrecorrente.",
+          "detalhes_operacionais": "Disjuntor desarmado pode ser rearmado pressionando (após alguns minutos); não é possível desarmá-lo manualmente. Espaço para disjuntores adicionais de equipamentos extras."
+        },
+        {
+          "id": "amperimetros_comp",
+          "nome": "Amperímetros duplos (loadmeters)",
+          "localizacao": "painel inferior (centro-direita)",
+          "funcao": "Mostram a corrente produzida por cada alternador.",
+          "detalhes_operacionais": "Com tudo desligado (exceto master), a soma das leituras indica carga da bateria + instrumentação; soma alta persistente sugere bateria descarregada — investigar em solo."
+        },
+        {
+          "id": "motor_bomba_trem",
+          "nome": "Motor elétrico da bomba hidráulica do trem",
+          "localizacao": "nariz (conjunto bomba/reservatório, acesso pelo bagageiro)",
+          "funcao": "Bomba eletro-hidráulica reversível que recolhe e estende o trem de pouso; chaves de fim de curso desligam o motor nos limites.",
+          "detalhes_operacionais": "Ciclo normal de 6-7 segundos. O interruptor de segurança (squat switch) da perna principal esquerda impede operação da bomba em solo; só fecha o circuito quando o oleo estende mais de 8 pol. na decolagem."
+        }
+      ]
+    },
+    {
+      "id": "vacuo_pitot",
+      "nome": "Sistema de vácuo e pitot-estático",
+      "descricao": "Duas bombas de vácuo (uma por motor) alimentam os giros (horizonte e giro direcional); tubo de pitot sob a asa esquerda e duas tomadas estáticas laterais alimentam velocímetro, altímetro e variômetro.",
+      "componentes": [
+        {
+          "id": "bombas_vacuo",
+          "nome": "Bombas de vácuo (2)",
+          "localizacao": "uma em cada motor",
+          "funcao": "Geram a sucção que aciona horizonte artificial e giro direcional (ar aspirado da cabine através de filtro e instrumentos até a nacele).",
+          "detalhes_operacionais": "Redundância real: se um lado falhar, válvula de retenção fecha automaticamente e uma bomba supre até dois jogos de giros até 12.500 ft; acima disso, manter RPM elevada."
+        },
+        {
+          "id": "reguladores_vacuo",
+          "nome": "Reguladores de vácuo (2)",
+          "localizacao": "face traseira direita de cada firewall",
+          "funcao": "Mantêm a sucção em 5,0 ± 0,1 inHg a 2000 RPM, protegendo os instrumentos.",
+          "detalhes_operacionais": "Sucção abaixo de 4,5 inHg indica fluxo insuficiente e possíveis indicações erradas dos giros."
+        },
+        {
+          "id": "valvula_retencao_filtros",
+          "nome": "Válvula de retenção e filtros de vácuo",
+          "localizacao": "atrás do painel (cantos superiores do anteparo do bagageiro)",
+          "funcao": "A válvula de retenção isola o lado falhado; filtros protegem os giros de contaminação (2 filtros com duplo jogo de instrumentos).",
+          "detalhes_operacionais": "Filtros devem ser limpos regularmente; com falha isolada, botão vermelho aparece no mostrador do indicador de sucção."
+        },
+        {
+          "id": "tubo_pitot",
+          "nome": "Tubo de pitot (mastro)",
+          "localizacao": "ventre da asa esquerda",
+          "funcao": "Capta a pressão total para o velocímetro.",
+          "detalhes_operacionais": "Mastro de alumínio com aquecimento elétrico opcional (pitot heat) contra gelo/chuva pesada; dreno de umidade na linha no painel lateral dianteiro esquerdo inferior. Cobrir em solo (capa de pitot)."
+        },
+        {
+          "id": "tomadas_estaticas",
+          "nome": "Tomadas estáticas (2) e linhas",
+          "localizacao": "laterais da fuselagem traseira (uma de cada lado)",
+          "funcao": "Captam pressão estática para altímetro, variômetro e velocímetro; interligadas internamente para compensar derrapagem/escorregamento.",
+          "detalhes_operacionais": "Não são aquecidas (experiência mostra baixa tendência a gelo). Manter furos livres de sujeira, insetos e polimento."
+        },
+        {
+          "id": "estatica_alternada_comp",
+          "nome": "Fonte estática alternada e dreno",
+          "localizacao": "abaixo do painel, à direita do quadrante",
+          "funcao": "Válvula seleciona pressão de cabine como estática de emergência; o ponto baixo da linha atua como dreno de umidade.",
+          "detalhes_operacionais": "Com fonte alternada, altímetro/VSI/ASI podem ler ligeiramente diferente (efeitos de ventilação, janela de tempestade até 150 MPH e velocidade)."
+        },
+        {
+          "id": "indicador_succao_comp",
+          "nome": "Indicador de sucção (vacuum gauge)",
+          "localizacao": "painel, à esquerda da coluna de comando direita",
+          "funcao": "Mostra a sucção do sistema e abriga os dois botões vermelhos de falha (um por lado).",
+          "detalhes_operacionais": "Verificar na partida e no run-up: 5,0 ± 0,1 inHg; monitorar em voo IFR noturno junto aos amperímetros."
+        }
+      ]
+    },
+    {
+      "id": "trem_pouso",
+      "nome": "Trem de pouso (eletro-hidráulico, retrátil)",
+      "descricao": "Triciclo retrátil acionado por bomba eletro-hidráulica reversível; principais recolhem para dentro (em direção à linha de centro) e o dianteiro para frente. Sistema de queda livre por gravidade em emergência.",
+      "componentes": [
+        {
+          "id": "bomba_hidraulica_trem",
+          "nome": "Bomba hidráulica elétrica reversível + reservatório",
+          "localizacao": "nariz (acesso por painel no bagageiro dianteiro)",
+          "funcao": "Fornece pressão hidráulica nos dois sentidos para retrair e estender o trem; reservatório integrado à bomba.",
+          "detalhes_operacionais": "O trem é mantido RECOLHIDO por pressão hidráulica: vazamento ou alívio da pressão faz o trem estender por gravidade (fail-safe). Chaves de fim de curso cortam o motor nos limites; ciclo 6-7 s."
+        },
+        {
+          "id": "perna_dianteira",
+          "nome": "Perna do trem dianteiro (nose gear)",
+          "localizacao": "nariz (retrai para frente)",
+          "funcao": "Suporta o nariz; roda 6.00-6 (6 lonas, 31 psi); esterçável pelos pedais de leme.",
+          "detalhes_operacionais": "Esterçamento por pedais em arco de 42°; ao retrair, a articulação de esterçamento desengata (alivia cargas nos pedais) e a roda se centraliza no poço. Mola centralizadora evita shimmy. Corrente de ar ajuda a baixar/travar na extensão."
+        },
+        {
+          "id": "pernas_principais",
+          "nome": "Pernas principais (2)",
+          "localizacao": "naceles (recolhem para dentro, em direção à linha de centro)",
+          "funcao": "Suportam o peso principal; rodas 6.00-6 (8 lonas, 50 psi); amortecedores oleo-pneumáticos (struts air-oil).",
+          "detalhes_operacionais": "Ganchos de downlock com molas mantêm o travamento até liberação hidráulica; molas e cargas aerodinâmicas auxiliam a extensão de emergência. Perna esquerda abriga o squat switch de segurança."
+        },
+        {
+          "id": "freios",
+          "nome": "Freios de disco (2) + cilindro de manete e estacionamento",
+          "localizacao": "rodas principais; manete abaixo/atrás do lado esquerdo do painel",
+          "funcao": "Freios de disco simples com duplo pistão em cada roda principal; pedais de ponta no lado esquerdo (direito opcional) e manete para freio de estacionamento.",
+          "detalhes_operacionais": "Reservatório hidráulico de freios INDEPENDENTE do do trem, atrás de painel no topo traseiro do bagageiro do nariz. Estacionar: puxar manete e pressionar o botão; soltar puxando sem tocar o botão."
+        },
+        {
+          "id": "portas_pocos",
+          "nome": "Portas e poços do trem",
+          "localizacao": "naceles e nariz (ventre)",
+          "funcao": "Cobrem os poços com o trem recolhido, reduzindo arrasto.",
+          "detalhes_operacionais": "Com o trem recolhido, as rodas principais dobram para a linha de centro e o dianteiro para frente; portas se fecham ao final do ciclo (6-7 s)."
+        },
+        {
+          "id": "sistema_emergencia",
+          "nome": "Extensão de emergência por queda livre",
+          "localizacao": "comando no centro do painel (manípulo com guarda)",
+          "funcao": "Ao puxar o comando, alivia a pressão hidráulica que segura o trem recolhido; gravidade, molas e carga aerodinâmica baixam e travam as três pernas.",
+          "detalhes_operacionais": "Procedimento: velocidade ≤ 100 MPH, seletor em GEAR DOWN LOCKED, puxar o comando, conferir 3 verdes + espelho. Manter o comando estendido até inspeção em macacos. Guarda previne acionamento inadvertido."
+        },
+        {
+          "id": "indicacao_aviso_trem",
+          "nome": "Indicação e avisos do trem (3 verdes, vermelha, buzina, espelho)",
+          "localizacao": "painel (centro-direita) e nacele esquerda (espelho)",
+          "funcao": "3 luzes verdes = baixado e travado; luz vermelha = em trânsito/condição insegura; buzina = trem recolhido com MP < 14 inHg ou seletor UP em solo; espelho convexo confirma o dianteiro.",
+          "detalhes_operacionais": "Luzes esmaecem com nav lights ON (atenção de dia). Testar a buzina na aproximação; voar com ela inoperante não é recomendável (risco de gear-up). Lâmpadas testáveis puxando as lentes."
+        },
+        {
+          "id": "squat_switch",
+          "nome": "Interruptor de segurança (squat switch)",
+          "localizacao": "perna principal esquerda",
+          "funcao": "Impede que a bomba hidráulica recolha o trem em solo, mesmo com seletor em UP.",
+          "detalhes_operacionais": "Na decolagem, quando o oleo estende mais de 8 polegadas, o interruptor fecha o circuito e libera a retração ao selecionar UP."
+        }
+      ]
+    },
+    {
+      "id": "controles_voo",
+      "nome": "Controles de voo (ailerons, flaps, stabilator, leme, compensadores, cabos)",
+      "descricao": "Comandos duplos de série, circuito por cabos e polias; flaps fendidos manuais; stabilator inteiriço com tab anti-servo; ailerons diferenciais interligados por molas ao leme.",
+      "componentes": [
+        {
+          "id": "ailerons",
+          "nome": "Ailerons (2)",
+          "localizacao": "bordo de fuga externo de cada asa",
+          "funcao": "Controle de rolamento; articulação com ação diferencial.",
+          "detalhes_operacionais": "Interligados por molas ao leme (interconexão leve) — reduz o yaw adverso e a coordenação exigida em curvas normais."
+        },
+        {
+          "id": "flaps_superficies",
+          "nome": "Flaps fendidos (slotted, 2)",
+          "localizacao": "bordo de fuga interno de cada asa",
+          "funcao": "Aumentam sustentação e controle da trajetória de planeio; acionamento manual mecânico.",
+          "detalhes_operacionais": "Posições 0/10/25/40° com velocidades máx. 160/140/125 MPH. Balanceados aerodinamicamente (forças leves) e carregados por mola ao recolhido; trava over-center mantém recolhido (serve de degrau no lado direito)."
+        },
+        {
+          "id": "stabilator_tab",
+          "nome": "Stabilator com tab anti-servo",
+          "localizacao": "empenagem horizontal",
+          "funcao": "Superfície horizontal inteiriça de controle de arfagem; tab anti-servo melhora estabilidade e atua como trim longitudinal.",
+          "detalhes_operacionais": "O tab se move no mesmo sentido do stabilator com curso ampliado; compensação por comando no túnel do console central entre os bancos (trim elétrico opcional)."
+        },
+        {
+          "id": "leme_tab",
+          "nome": "Leme com tab de compensação",
+          "localizacao": "empenagem vertical",
+          "funcao": "Controle direcional; tab de trim alivia força de pedal, sobretudo em voo mono-motor.",
+          "detalhes_operacionais": "Essencial no mono-motor: compensar para o lado do motor operante; combinado à interconexão aileron-leme, dá controle dócil em curvas."
+        },
+        {
+          "id": "cabos_polias",
+          "nome": "Cabos, polias e comando duplo",
+          "localizacao": "da cabine às superfícies (asas e empenagem)",
+          "funcao": "Transmitem os comandos dos dois jogos de manches e pedais às superfícies.",
+          "detalhes_operacionais": "Duplo comando de série; inspecionar tensão, corrosão e pontos de atrito nas inspeções periódicas."
+        },
+        {
+          "id": "compensadores_comp",
+          "nome": "Comandos de compensação (trim) e compensação elétrica",
+          "localizacao": "console central e painel",
+          "funcao": "Trim do stabilator (roda no console), trim de leme e de aileron; compensação elétrica de arfagem opcional com chave no painel.",
+          "detalhes_operacionais": "Pré-voo do trim elétrico: disjuntor armado, acionar para frente/trás, override manual e verificação de desengate; se falhar, desligar pela chave do painel."
+        }
+      ]
+    },
+    {
+      "id": "avionics_cabine",
+      "nome": "Aviónicos e cabine (painel, rádios, assentos)",
+      "descricao": "Painel amplo com espaço para dois jogos completos de instrumentos de voo + instrumentos de motor + aviónicos; cabine para até 7 ocupantes com dois compartimentos de bagagem.",
+      "componentes": [
+        {
+          "id": "painel_instrumentos",
+          "nome": "Painel de instrumentos",
+          "localizacao": "cabine (dianteira)",
+          "funcao": "Agrupa instrumentos de voo e aviónicos na parte superior; instrumentos de motor, piloto automático, instrumentos elétricos e disjuntores na parte inferior.",
+          "detalhes_operacionais": "Instrumentos dos motores esquerdo e direito separados pelo eixo do manche (lado esquerdo). Iluminação por post lights brancos (opcional) e floodlights vermelhos. Visibilidade sobre o nariz é boa apesar do painel amplo."
+        },
+        {
+          "id": "seis_pack_piloto",
+          "nome": "Six-pack do piloto (ASI, horizonte, altímetro, turn, giro, VSI)",
+          "localizacao": "painel esquerdo (superior)",
+          "funcao": "Conjunto clássico de instrumentos primários de voo IFR do piloto.",
+          "detalhes_operacionais": "Horizonte e giro a vácuo; turn and bank elétrico; ASI/altímetro/VSI pitot-estáticos. Bússola magnética no topo central do para-brisa."
+        },
+        {
+          "id": "radios_coluna",
+          "nome": "Coluna de rádios (2 NAV/COM, ADF, DME, transponder, áudio)",
+          "localizacao": "centro do painel",
+          "funcao": "Comunicação VHF, navegação VOR/LOC/GS, ADF/NDB, DME, transponder e seleção de áudio; luzes de marker beacon.",
+          "detalhes_operacionais": "Configuração típica de época (King ou Narco): 2 transceptores NAV/COM, receptor ADF, DME, transponder modo A/C e painel de áudio. Piloto automático AltiMatic IIIB-1 opcional com omni-coupler."
+        },
+        {
+          "id": "assentos",
+          "nome": "Assentos (até 7)",
+          "localizacao": "cabine",
+          "funcao": "Configuração de até sete lugares: 2 dianteiros, 2 centrais e banco traseiro para 3.",
+          "detalhes_operacionais": "Bancos centrais e traseiros removíveis para carga; cintos e ombreiras nos dianteiros. Pesar e balancear conforme seção de Weight & Balance (CG 87,9-94,6 pol. a 4200 lb)."
+        },
+        {
+          "id": "aquecimento_ventilacao",
+          "nome": "Aquecimento, ventilação e desembaçamento",
+          "localizacao": "cabine / naceles (trocador de calor)",
+          "funcao": "Calor de cabine e desembaçador por trocador no coletor de escapamento; aquecedor de combustão Janitrol opcional; saídas de ar fresco individuais.",
+          "detalhes_operacionais": "Controles de temperatura/ar fresco no painel; no Janitrol, chave HEATER inicia combustão (ignição automática, sem priming). Atenção ao risco de CO com vazamento de escapamento."
+        },
+        {
+          "id": "antenas",
+          "nome": "Antenas (COM, VOR/LOC, ADF, DME, transponder, marker)",
+          "localizacao": "dorso e ventre da fuselagem; empenagem",
+          "funcao": "Antenas dos rádios instalados: COM no dorso, VOR/LOC em V na empenagem, ADF com sense e loop, DME e transponder no ventre, marker no ventre.",
+          "detalhes_operacionais": "Inspecionar fixação e cablagem; antena de marker beacon alinhada para leitura dos fan markers na final ILS."
+        },
+        {
+          "id": "iluminacao_interna",
+          "nome": "Iluminação interna e luzes de painel",
+          "localizacao": "cabine e painel",
+          "funcao": "Post lights brancos (opcional) e floodlights vermelhos para leitura noturna dos instrumentos; luzes de cabine.",
+          "detalhes_operacionais": "Chave de luz do painel no interruptor dedicado; luzes do trem esmaecem com nav lights ON (circuito de dimmer noturno)."
+        }
+      ]
+    }
+  ]
+}

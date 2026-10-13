@@ -1,0 +1,26 @@
+# Dependências e artefatos de build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
+# Saídas locais de roteiros CDP (evidências curadas ficam em _bmad-output/)
+/test-artifacts/
+work-modulo-3d/test-artifacts/
+
+# Backups do Blender e do sistema
+*.blend1
+.DS_Store
+
+# Arquivos históricos locais (não versionar)
+/Kimi_Agent_PA-34 3D Interativo.zip
+/19f78e29-c062-8c2d-8000-0f1fbaa16259/
+
+# Segredos
+.env
+.env.*
+!.env.example

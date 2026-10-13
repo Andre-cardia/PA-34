@@ -1,0 +1,79 @@
+{
+  "metodo": "comparação por severidade e regra ESLint; localizações variam com o redesenho",
+  "arquivos": [
+    {
+      "arquivo": "app/src/components/cockpit/panel-data.ts",
+      "antes": {
+        "erros": 0,
+        "avisos": 0,
+        "regras": {}
+      },
+      "depois": {
+        "erros": 0,
+        "avisos": 0,
+        "regras": {}
+      },
+      "novos": []
+    },
+    {
+      "arquivo": "app/src/components/cockpit/artwork.tsx",
+      "antes": {
+        "erros": 4,
+        "avisos": 0,
+        "regras": {
+          "2:react-refresh/only-export-components": 3,
+          "2:react-hooks/set-state-in-effect": 1
+        }
+      },
+      "depois": {
+        "erros": 4,
+        "avisos": 0,
+        "regras": {
+          "2:react-refresh/only-export-components": 3,
+          "2:react-hooks/set-state-in-effect": 1
+        }
+      },
+      "novos": []
+    },
+    {
+      "arquivo": "app/src/components/cockpit/CockpitPanel.tsx",
+      "antes": {
+        "erros": 2,
+        "avisos": 0,
+        "regras": {
+          "2:react-hooks/refs": 2
+        }
+      },
+      "depois": {
+        "erros": 2,
+        "avisos": 0,
+        "regras": {
+          "2:react-hooks/refs": 2
+        }
+      },
+      "novos": []
+    },
+    {
+      "arquivo": "app/src/pages/Cockpit.tsx",
+      "antes": {
+        "erros": 1,
+        "avisos": 1,
+        "regras": {
+          "2:react-hooks/set-state-in-effect": 1,
+          "1:sem-regra": 1
+        }
+      },
+      "depois": {
+        "erros": 1,
+        "avisos": 1,
+        "regras": {
+          "2:react-hooks/set-state-in-effect": 1,
+          "1:sem-regra": 1
+        }
+      },
+      "novos": []
+    }
+  ],
+  "novosProblemas": [],
+  "resultado": "nenhum problema novo nos arquivos alterados"
+}

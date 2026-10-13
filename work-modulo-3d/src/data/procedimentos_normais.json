@@ -1,0 +1,542 @@
+[
+  {
+    "id": "10.1",
+    "nome": "Inspeção Pré-Voo (Preflight Check)",
+    "secao_sop": "10.1",
+    "objetivo": "Verificar a aeronave, seus documentos e sistemas antes do voo. Nesta fase os checklists são lidos e executados (filosofia \"Read and Do\").",
+    "checklist": [
+      {
+        "grupo": "CABIN",
+        "itens": [
+          { "item": "DOCUMENTS & MAINTENANCE STATUS", "acao": "CHECK" },
+          { "item": "GEAR LEVER", "acao": "DOWN" },
+          { "item": "PARKING BRAKE", "acao": "SET" },
+          { "item": "MASTER RÁDIOS / EQUIPAMENTOS", "acao": "OFF" },
+          { "item": "CIRCUIT BREAKERS", "acao": "CHECK IN" },
+          { "item": "IGNITION SWITCH", "acao": "OFF" },
+          { "item": "MASTER BATTERY", "acao": "ON" },
+          { "item": "LANDING GEAR LIGHTS", "acao": "3 GREEN NO RED LIGHT" },
+          { "item": "FUEL QUANTITY", "acao": "CHECK" },
+          { "item": "MASTER BATTERY", "acao": "OFF" },
+          { "item": "THROTTLE IN IDLE / PROPELLER FULL FORWARD / MIXTURE", "acao": "CUT-OFF" },
+          { "item": "ALTERNATE AIR", "acao": "OFF" },
+          { "item": "COWL FLAPS", "acao": "OPEN" },
+          { "item": "FLAPS", "acao": "FULL" },
+          { "item": "FUEL SHUTOFF VALVE", "acao": "OPEN" },
+          { "item": "PITOT AND STATIC SYSTEMS", "acao": "DRAIN" },
+          { "item": "FIRE EXTINGUISHER", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "CABIN (NIGHT PRE FLIGHT) — itens adicionais em voos noturnos",
+        "itens": [
+          { "item": "BEACON / STROBE LIGHT", "acao": "TEST" },
+          { "item": "NAV LIGHT", "acao": "TEST" },
+          { "item": "LANDING/TAXI LIGHT", "acao": "TEST" },
+          { "item": "INTERIOR LIGHTS", "acao": "TEST" },
+          { "item": "FLASH LIGHT & EXTRA BATTERYS", "acao": "TEST & CHECKED" }
+        ]
+      },
+      {
+        "grupo": "Documentos Obrigatórios (AIRCRAFT)",
+        "itens": [
+          { "item": "CERTIFICADO DE MATRÍCULA", "acao": "CHECK" },
+          { "item": "CERTIFICADO DE AERONAVEGABILIDADE", "acao": "CHECK" },
+          { "item": "LICENÇA DE ESTAÇÃO", "acao": "VALID" },
+          { "item": "TAXA FISTEL", "acao": "VALID" },
+          { "item": "SEGURA RETA", "acao": "VALID" },
+          { "item": "PESO E BALANCEAMENTO", "acao": "ON BOARD" },
+          { "item": "CVA", "acao": "VALID" },
+          { "item": "MAPA DOS COMPONENTES", "acao": "VALID" },
+          { "item": "DIÁRIO DE BORDO", "acao": "CHECK" },
+          { "item": "CHECKLIST", "acao": "ON BOARD" },
+          { "item": "PUBLICAÇÕES AERONÁUTICAS", "acao": "ON BOARD" },
+          { "item": "MANUAL DA AERONAVE", "acao": "ON BOARD" }
+        ]
+      },
+      {
+        "grupo": "RIGHT WING (inspeção externa)",
+        "itens": [
+          { "item": "FLAP", "acao": "CHECK" },
+          { "item": "AILERON", "acao": "CHECK" },
+          { "item": "WING TIP", "acao": "CHECK" },
+          { "item": "LEADING EDGE", "acao": "CHECK" },
+          { "item": "FUEL TANK QTY VISUAL", "acao": "CHECK" },
+          { "item": "MAIN WHEEL TIRE", "acao": "CHECK" },
+          { "item": "BRAKE", "acao": "CHECK" },
+          { "item": "ENGINE NACELLE", "acao": "CHECK" },
+          { "item": "RIGHT ENGINE OIL QTY", "acao": "CHECK (6.0 QTS, REFUEL)" },
+          { "item": "RIGHT PROPELLER", "acao": "CHECK" },
+          { "item": "COWL FLAPS", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "NOSE",
+        "itens": [
+          { "item": "NOSE WHEEL STRUT", "acao": "CHECK" },
+          { "item": "NOSE WHEEL TIRE", "acao": "CHECK" },
+          { "item": "LANDING LIGHT", "acao": "CHECK" },
+          { "item": "FORWARD BAGGAGE", "acao": "CHECK" },
+          { "item": "FORWARD DOOR", "acao": "LOCKED" },
+          { "item": "WINDSHIELD", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "LEFT WING",
+        "itens": [
+          { "item": "ENGINE NACELLE", "acao": "CHECK" },
+          { "item": "RIGHT ENGINE OIL QTY", "acao": "CHECK (6.0 QTS, REFUEL)" },
+          { "item": "LEFT PROPELLER", "acao": "CHECK" },
+          { "item": "COWL FLAPS", "acao": "CHECK" },
+          { "item": "MAIN WHEEL TIRE", "acao": "CHECK" },
+          { "item": "BRAKE", "acao": "CHECK" },
+          { "item": "LEADING EDGE", "acao": "CHECK" },
+          { "item": "PITOT TUBE", "acao": "CHECK" },
+          { "item": "STALL WARNING", "acao": "CHECK" },
+          { "item": "FUEL TANK QTY VISUAL", "acao": "CHECK" },
+          { "item": "WING TIP", "acao": "CHECK" },
+          { "item": "AILERON", "acao": "CHECK" },
+          { "item": "FLAP", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "FUSELAGE",
+        "itens": [
+          { "item": "REAR DOOR", "acao": "LOCKED" },
+          { "item": "LEFT ESTATIC", "acao": "CHECK" },
+          { "item": "DORSAL FIN", "acao": "CHECK" },
+          { "item": "RIGHT ESTATIC", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "EMPENNAGE",
+        "itens": [
+          { "item": "CONTROL SURFACES", "acao": "CHECK" },
+          { "item": "FLASHING BEACON", "acao": "CHECK" },
+          { "item": "ANTENNAS", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "DRAINS AND OIL",
+        "itens": [
+          { "item": "LEFT WING DRAIN VALVE", "acao": "DRAIN & CHECK" },
+          { "item": "RIGHT WING DRAIN VALVE", "acao": "DRAIN & CHECK" },
+          { "item": "FUEL STRAINER DRAIN KNOB", "acao": "PULL OUT" }
+        ]
+      }
+    ],
+    "notas": [
+      "Verificar se a documentação da aeronave está em dia e completa; verificar o Livro de Reportes (RTA – Relatório Técnico da Aeronave) e o total de horas disponíveis para a próxima intervenção, informando ao instrutor/escola quaisquer discrepâncias.",
+      "Nesta fase colocar os flaps em 40° para melhor inspeção dos pontos de fixação durante o Pre-flight Inspection.",
+      "Em voos noturnos, acrescentar os itens do verso do pre-flight checklist CABIN (NIGHT PRE FLIGHT).",
+      "Asa direita — verificar: trilho e fixação do flap; fixação do aileron e seu curso de comando; estado da ponta de asa e luzes; indícios de avaria no bordo de ataque; visualmente a quantidade de combustível (usar o medidor padrão); fixação da carenagem do motor; indício de vazamento de fluido de freio e espessura das pastilhas; estado da hélice, bordo de ataque e pontas das pás; fixação do spinner; entradas de ar desobstruídas; quantidade mínima de óleo 6,0 US quarts (VFL) — completar abaixo disso. Aguardar 10 minutos após o corte do motor para verificar a quantidade de óleo.",
+      "Nariz — verificar: seção do nariz quanto a danos; condições do amortecedor do trem do nariz e sua extensão, vazamentos de óleo do amortecedor e shimmy damper; lâmpada e resistência do farol intactas; bagageiro e nível de fluido hidráulico, após certificar que a porta está realmente travada e trancada com a chave; para-brisa limpo e sem rachaduras.",
+      "Asa esquerda — verificar: fixação da carenagem do motor; quantidade mínima de óleo 6,0 US quarts (VFL); estado da hélice, bordo de ataque e pontas das pás; fixação do spinner; entradas de ar desobstruídas; indício de vazamento de fluido de freio; indício de avaria no bordo de ataque; quantidade de combustível (medidor padrão); tubo de pitot desobstruído e capa retirada; tomada de ar do sistema de estol desobstruída; suspiro do tanque de combustível desobstruído; estado da ponta de asa e luzes; fixação do aileron e seu curso; trilho e fixação do flap.",
+      "WARNING: o entupimento do suspiro do tanque de combustível pode levar a baixa pressão no sistema de alimentação, causando a falha do motor.",
+      "CAUTION: o entupimento do tubo de pitot leva a indicações errôneas do velocímetro, podendo causar má interpretação e levar ao estol inadvertido ou perda de consciência situacional, especialmente em condições IMC.",
+      "Empenagem — verificar: fixações das superfícies de comando, folgas, frenos, antenas, avarias ou outros danos visíveis; carretel do compensador; hastes de comando do profundor e compensador de leme.",
+      "Drenagem — verificar coloração do combustível azul, contaminação por água ou sujeira; havendo dúvidas, drenar até certificar-se da ausência de resíduos. Drenar primeiramente as asas e após o filtro de combustível.",
+      "WARNING: a não execução do procedimento de drenagem pode levar ao acúmulo de sujeira ou água na linha de combustível, bem como o baixo nível de óleo prejudica a lubrificação. Ambas as situações podem levar à falha do motor."
+    ]
+  },
+  {
+    "id": "10.2",
+    "nome": "Antes da Partida do Motor",
+    "secao_sop": "10.2",
+    "objetivo": "Preparar a cabine e a aeronave para o acionamento. A partir deste momento os checklists passam a ser feitos após a execução dos procedimentos (filosofia \"Do and Read\").",
+    "checklist": [
+      {
+        "grupo": "BEFORE START (até a linha)",
+        "itens": [
+          { "item": "PREFLIGHT", "acao": "COMPLETED" },
+          { "item": "BLOCKS", "acao": "REMOVED" },
+          { "item": "ALTIMETER", "acao": "REMOVED" },
+          { "item": "SEAT BELTS", "acao": "FASTENED" },
+          { "item": "CIRCUIT BREAKERS", "acao": "CHECKED" },
+          { "item": "FUEL SELECTOR", "acao": "BOHT (BOTH)" },
+          { "item": "MIXTURE", "acao": "CUT-OFF" },
+          { "item": "CLEARENCE", "acao": "OBTAIN" },
+          { "item": "----- WHEN CLEAR FOR START -----", "acao": "(linha tracejada — aguardar autorização)" }
+        ]
+      }
+    ],
+    "notas": [
+      "Após o término do Pre-flight Checklist, o aluno deve: confirmar visualmente a retirada de calços, amarras e capas (walk around); entrar na aeronave; ajustar assento e cintos; ajustar o headset; ajustar o altímetro (altitude do aeródromo); executar o Before Start Checklist.",
+      "Anunciar: \"Before Start Checklist Down to the line\" (até a linha tracejada).",
+      "Após este checklist: ligar o Master e um rádio VHF, copiar o ATIS ou obter informação meteorológica com o órgão ATS (Torre ou Rádio AFIS), solicitar a autorização de tráfego, aguardar para cópia e cotejamento; após, preparar a cabine: ajustar altímetros, selecionar rádios/navegação/transponder e carta de saída, preencher o takeoff data card.",
+      "Em alguns aeródromos o controle de solo autoriza o acionamento antes da cópia da autorização; o procedimento pode ser executado, porém há chance de corte posterior do motor pela não aprovação do plano de voo.",
+      "O Takeoff Data Card é preenchido com dados do ATIS, peso e balanceamento e autorização de tráfego; os dados devem ser sempre conferidos pelo instrutor. Campos: Date; AIRPORT (código ICAO, ex. SBFL); POB (pessoas a bordo); EOBT (hora UTC do acionamento); ATIS (letra e horário, ou frequência AFIS); WIND, VIS, CLOUDS, QNH e TEMP; Approach (procedimento em operação, carta IAC reservada para eventual retorno); RWY; T.O. Fuel (litros); Endurance (considerar consumo de 80 l/h — VFL); C R A F T (Clearance, Route, Altitude, Frequency do APP, Transponder); T.Off Power (indicação no manifold antes do acionamento); Min. RPM 2400 (abaixo disso, rejeitar a decolagem); T.O Weight; MTOW 1905 kg; V1 = VR (padrão VFL, não inferior a VMC); VR 105 mph para todos os pesos; Vyse 105 mph; ELEV; ACC. ALT. (elevação do aeroporto + acceleration height padrão de 400 ft AGL; devido ao relevo pode ser aumentada até no máximo 1000 ft, preservando o regime de potência máxima)."
+    ]
+  },
+  {
+    "id": "10.3",
+    "nome": "Quando Autorizado o Acionamento",
+    "secao_sop": "10.3",
+    "objetivo": "Acionar os motores com segurança após autorização do ATC, executando o Before Start Checklist abaixo da linha.",
+    "checklist": [
+      {
+        "grupo": "BEFORE START (abaixo da linha — WHEN CLEAR FOR START)",
+        "itens": [
+          { "item": "ELECTRICAL EQUIPMENT & RADIO MASTER", "acao": "OFF" },
+          { "item": "PARKING BRAKE", "acao": "SET" },
+          { "item": "PROPELLER", "acao": "FULL FORWARD" },
+          { "item": "MIXTURE", "acao": "RICH" },
+          { "item": "THROTTLE", "acao": "OPEN ½ INCH" },
+          { "item": "MASTER SWITCH & ALTERNATORS", "acao": "ON" },
+          { "item": "FUEL PUMPS", "acao": "FUEL FLOW INDICATION – THAN OFF" },
+          { "item": "MIXTURE", "acao": "CUT-OFF" },
+          { "item": "ANTI COLISION – FIN", "acao": "ON" },
+          { "item": "PROPELLER AREA", "acao": "CLEAR" },
+          { "item": "MAGNETOS", "acao": "ON" },
+          { "item": "IGNITION SWITCH", "acao": "START" }
+        ]
+      }
+    ],
+    "notas": [
+      "Primeiro acionamento do dia: 1) manete de potência ¼ do curso; 2) após ligar a bomba de combustível, levar a manete de mistura toda à frente verificando indicação do fuel flow até estabilizar e retornar a manete até a posição fechado, desligando o Fuel Pumps; 3) informar ao CM2 motor 1 (ESQ) ou motor 2 (DIR), acionar o starter do referido motor; assim que o motor funcionar, levar a manete de mistura toda à frente; 4) ajustar o motor para 1000 RPM.",
+      "Acionamento com menos de 30 minutos de motor parado: 1) manete de potência ¼ do curso; 2) bomba de combustível ON por 2 segundos e OFF; 3) acionar o starter; assim que o motor girar, levar a manete de mistura toda à frente; 4) ajustar o motor para 1000 RPM.",
+      "Acionamento com mais de 30 minutos de motor parado: proceder conforme o primeiro acionamento do dia.",
+      "Suspeita de motor afogado: 1) manete de potência todo o curso à frente; 2) manete de mistura em cut-off; 3) bomba de combustível OFF; 4) acionar o starter; assim que o motor funcionar, recuar a manete de potência e levar a manete de mistura toda à frente; 5) ajustar o motor para 1000 RPM.",
+      "Partida com fonte externa (12 V): 1) MASTER OFF; 2) introduzir a tomada de fonte externa no soquete localizado na fuselagem à frente; 3) MASTER ON; 4) procedimento de acionamento normal; 5) após o acionamento, MASTER OFF e remover a tomada externa; 6) MASTER ON e checar carga positiva nos alternadores.",
+      "Ciclo de partida: dar partida por 10 segundos, seguido de resfriamento de 20 segundos; o ciclo pode ser repetido mais 2 vezes, seguido de resfriamento de 10 minutos antes de reiniciar. Repetir os procedimentos mais uma vez; se o motor ainda não der partida, iniciar investigação da causa. O ciclo deve ser estritamente seguido para aumentar a vida útil do motor de arranque.",
+      "CAUTION: imediatamente após a partida, observar a indicação de pressão de óleo; caso não ocorra em 30 segundos, o motor deve ser cortado.",
+      "Após a partida, estabilizar o motor em 1000 RPM (em dias frios pode ser necessário manter 1200 a 1500 RPM por 1 minuto antes de reduzir para 1000 RPM); verificar instrumentos de motor, AVIONICS MASTER e equipamentos eletrônicos (VHF, transponder em STBY, ADF para referência de posição, elapsed time). Anotar a hora UTC do acionamento; a partir desta fase os checklists são Do and Read."
+    ]
+  },
+  {
+    "id": "10.4",
+    "nome": "Antes do Taxi",
+    "secao_sop": "10.4",
+    "objetivo": "Checar instrumentos, sistemas e controles após a partida e preparar a aeronave para o taxi.",
+    "checklist": [
+      {
+        "grupo": "BEFORE TAXI",
+        "itens": [
+          { "item": "ENGINE INSTRUMENTS", "acao": "CHECKED" },
+          { "item": "AMMETERS", "acao": "CHECKED" },
+          { "item": "RADIO MASTER & ELECTRICAL EQUIPMENTS", "acao": "ON & SET" },
+          { "item": "TRANSPONDER", "acao": "SET & STANDBY" },
+          { "item": "NAVIGATION LIGHTS", "acao": "AS REQUIRED" },
+          { "item": "CROSS FEED * FIRST FLIGHT OF THE DAY", "acao": "CHECK 60s THAN ON" },
+          { "item": "FLAPS", "acao": "SET FOR TAKE OFF" },
+          { "item": "ELEVATOR TRIM & RUDDER TRIM", "acao": "SET FOR TAKE OFF" },
+          { "item": "FLIGHT CONTROLS", "acao": "CHECK" },
+          { "item": "FUEL SELECTOR", "acao": "ON" },
+          { "item": "DEPARTURE BRIEFING", "acao": "COMPLETE" }
+        ]
+      }
+    ],
+    "notas": [
+      "Ao verificar os instrumentos de motor, atenção especial à pressão de óleo: se não indicar em 30 segundos, cortar o motor imediatamente. A temperatura do óleo demora de 1 a 3 minutos para indicar, especialmente na primeira partida do dia e em dias frios.",
+      "Após a partida, observar o amperímetro com indicação positiva e a luz no painel de alerta apagada.",
+      "AVIONICS MASTER, rádio, transponder e demais equipamentos como requerido. ELEVATOR TRIM ajustado na marca branca.",
+      "Cross feed checado apenas no primeiro voo do dia: levar as seletoras até OFF por até 60 s — o motor vai apagar — e então para X FEED, reacendendo o motor (a seletora pode ser checada individualmente); evitar movimentos diretos de X FEED para ON para não danificar os pontos de parada.",
+      "Verificar os controles de voo em sua extensão total em todas as direções: ELEVATORS e AILERONS. O RUDDER será checado posteriormente durante o taxi.",
+      "Usar as Navigation Lights em voos noturnos ou em dias de baixa visibilidade.",
+      "O Departure Briefing é uma verificação da configuração do painel da aeronave com o detalhamento da carta SID, caso voo IFR (cabeçalho, TA, frequências TWR/APP/ACC, perfil lateral, RMK com gradiente mínimo de subida e razão mínima em ft/min considerando subida monomotor, alternativa, MSA do perfil).",
+      "Solicitar ao ATC autorização de taxi, informar POB, autonomia e alternativa do plano e cotejar a autorização; acionar o farol de taxi e taxiar até o ponto de espera, verificando controle do trem do nariz, freios e instrumentos TURN & BANK, HEADING INDICATOR e BÚSSOLA com pequenas curvas de teste. Ao atingir a posição, executar o BEFORE TAKEOFF Checklist até a linha WHEN CLEAR FOR TAKE OFF.",
+      "Taxi: para quebrar a inércia é requerida maior potência — gerenciar a velocidade e evitar a parada total, economizando freios e combustível; ao deixar a aeronave parada, manter 1000 RPM; durante o taxi não é obrigatório manter 1000 RPM (reduzir potência para desacelerar); taxiar apenas com os pedais direcionais, usando freios só para desaceleração (após reduzir potência) ou curvas fechadas; não usar freios com motor aplicado (desgaste das pastilhas e superaquecimento do conjunto — primeiro reduzir para IDLE e depois aplicar freios); reduzir potência em curvas fechadas; evitar curvas fechadas para diminuir desgaste de pneus e esforço no trem; para curvas maiores que 90° pode-se aplicar potência assimétrica (lado de fora da curva). Não taxiar apoiado nos freios."
+    ]
+  },
+  {
+    "id": "10.5",
+    "nome": "Antes da Decolagem",
+    "secao_sop": "10.5",
+    "objetivo": "No ponto de espera, efetuar o check do grupo motopropulsor e os briefings de decolagem (operacional e de emergência).",
+    "checklist": [
+      {
+        "grupo": "Check do grupo motopropulsor",
+        "itens": [
+          { "item": "EMBANDEIRAMENTO", "acao": "1500 RPM — manete de PROPELLER na faixa de embandeiramento, queda máx. de 500 RPM" },
+          { "item": "GOVERNADOR", "acao": "2000 RPM — recuar manete de PROPELLER até queda de 200 RPM; aplicar ~1 pol. de THROTTLE e verificar RPM estável" },
+          { "item": "MAGNETOS", "acao": "2000 RPM — queda máxima 175 RPM; diferença 50 RPM; normal 100 RPM" }
+        ]
+      },
+      {
+        "grupo": "BEFORE TAKEOFF (até a linha)",
+        "itens": [
+          { "item": "THROTTLE", "acao": "2000 RPM" },
+          { "item": "PROPELLER", "acao": "FEATHERING 500 RPM Máx drop & FULL FORWARD" },
+          { "item": "MIXTURE", "acao": "CHECK & RICH" },
+          { "item": "MAGNETOS", "acao": "CHECK & ON" },
+          { "item": "ALTERNATES AIR", "acao": "CHECK" },
+          { "item": "ENGINE INSTRUMENTS", "acao": "CHECK" },
+          { "item": "AMMETER", "acao": "CHECK" },
+          { "item": "SUCTION", "acao": "CHECK" },
+          { "item": "FUEL FLOW", "acao": "CHECK" },
+          { "item": "IDLE RPM", "acao": "CHECK AND 1000 RPM" },
+          { "item": "FLIGHT INSTRUMENTS", "acao": "CHECK" },
+          { "item": "FUEL QUANTITY", "acao": "CHECK" },
+          { "item": "FUEL SELECTORS", "acao": "BOTH" },
+          { "item": "DOORS", "acao": "LOCKED" },
+          { "item": "TAKE OFF BRIEFING", "acao": "REVIEW" },
+          { "item": "----- WHEN CLEAR FOR TAKEOFF -----", "acao": "(linha tracejada — aguardar autorização)" }
+        ]
+      }
+    ],
+    "notas": [
+      "Suspeita de chumbo nas velas: 1) potência FULL e após 2000 RPM com magnetos em Ambos; 2) empobrecer a mistura até o pico de RPM; 3) aguardar 30 segundos; 4) novo check de magnetos com mistura rica; 5) se não resolver, repetir o procedimento; 6) persistindo, voltar ao estacionamento e contatar a escola.",
+      "Ao checar a ALTERNATE AIR pode ocorrer pequena queda de RPM (ar quente da nacele entrando após o filtro); se a RPM aumentar, é indício de filtro de ar obstruído — não decolar, acionar a manutenção.",
+      "ENGINE INSTRUMENTS (OIL PRESS e OIL TEMP) devem indicar faixa verde; AMMETER com carga positiva e luz ALT apagada; SUCTION na faixa verde (mín. 4,5 pol. Hg); FUEL FLOW com indicação de consumo; motor reduzido para IDLE RPM verificada entre 700 e 800 RPM, restabelecendo 1000 RPM em seguida.",
+      "FLIGHT INSTRUMENTS verificados e ajustados: ATTITUDE INDICATOR com o símbolo na linha do horizonte nivelada; HEADING INDICATOR alinhado com a bússola; ALTÍMETRO indicando a altitude da pista; VOR sintonizado na radial de saída (IFR); ausência de bandeiras (flags) nos demais instrumentos. FUEL QUANTITY verificada e FUEL CROSS FEED na posição ON.",
+      "Briefings após o check: 1º Briefing Operacional (tipo de saída VFR ou IFR, revisão da carta SID, decolagem normal ou curta — atento à posição dos flaps): decolagem normal Flap 0°; pista curta ou molhada Flap 10°; pista não pavimentada Flap 10°.",
+      "2º Briefing de Emergência: realizar o briefing da coluna da direita do Take Off Data Card — definir se, ocorrendo pane após a V1/VR, será pouso em frente ou prosseguir a decolagem. Definição de decolagem sem pouso em frente (briefing situacional): pista molhada; comprimento de pista disponível para Dep. menor que 1500 m; vento de cauda até 5 kt; pavimento saibro (terra) ou grama; trem de pouso recolhido.",
+      "Exemplo de Take Off Data Card: 'Antes da V1 igual a VR de 105 mph, se ocorrer falha do motor, fogo, perda da reta, obstáculos na pista ou mínimos não atingidos, abortaremos a decolagem, o callout será \"REJECT\", brakes / power off; e caso após a VR e antes de recolher o trem, pousaremos em frente (baixando o nariz, checando o trem embaixo, redução gradativa, flare, pouso e brakes)'. Após a V1/VR sem pouso em frente: callout \"GO\", rotação, \"FLAPS e LANDING GEAR UP\", pé morto motor morto, identificado, redução, embandeiramento e corte, buscando manter razão de subida e acelerar para a blue line. Subindo até 1000 ft AGL, após Emergency Checklist, seguindo o perfil de subida IFR (ou circuito de tráfego caso VMC). Caso as circunstâncias permitam (MEMORY ITEMS): ① Mixture Rich ② Fuel Boost Pump On ③ Fuel Selector Crossfeed ④ Magnetos On ⑤ Alternate Air Open; caso negativo, efetuar o embandeiramento.",
+      "Se possível, retornar para a pista com curva contra o vento (informando para que lado será a curva e considerando pouso na pista auxiliar ou principal). ATC: \"PAN PAN, PAN PAN, PAN PAN\" (urgência) informando intenções de retorno ou, em caso de fogo ou pouso fora da pista, \"MAYDAY, MAYDAY, MAYDAY\" (socorro), conforme ICA 100-12 Anexo A, item 15.207.7.",
+      "A V1/VR deve ser reportada 5 mph antes de atingi-la; a subida monomotor dá-se até 1.000 ft sobre o terreno em operação VFR ou, caso IFR, até a altitude de início do procedimento; o trem de pouso deve ser reportado quando travado em cima pelo CM2 após a decolagem.",
+      "O briefing de emergência pode sofrer variações — usar o que melhor convier à ocasião. Em caso de pane real: comandos e comunicação com o instrutor; checklist com o aluno."
+    ]
+  },
+  {
+    "id": "10.6",
+    "nome": "Quando Autorizado a Decolagem",
+    "secao_sop": "10.6",
+    "objetivo": "Completar o Before Takeoff Checklist abaixo da linha e executar a decolagem conforme o tipo briefado.",
+    "checklist": [
+      {
+        "grupo": "BEFORE TAKEOFF (abaixo da linha — WHEN CLEAR FOR TAKEOFF)",
+        "itens": [
+          { "item": "MIXTURE", "acao": "RICH" },
+          { "item": "PROPELLER", "acao": "FULL FORWARD" },
+          { "item": "TRANSPONDER", "acao": "ON & ALT" },
+          { "item": "RWY INCURSION LIGHTS", "acao": "ON" },
+          { "item": "FUEL PUMPS", "acao": "ON" }
+        ]
+      }
+    ],
+    "notas": [
+      "CAUTION: nunca ingressar na pista de decolagem sem a total certeza da instrução da Torre de Controle; em caso de dúvida, confirmar a autorização recebida. Alto risco de Runway Incursion.",
+      "Em todas as decolagens, durante a corrida verificar: mínimos atingidos (2350 RPM) e máximo (2700 RPM) nos motores — callout \"THRUST SET\"; instrumentos de motor na faixa verde; 40 MPH \"AIR SPEED ALIVE\" (indicação correta de velocidade); configuração de decolagem padrão (VFL) Flaps Up (0°) com V1/VR Flaps UP = 105 MPH; utilizar torque estático mínimo de 20 pol.; regime de decolagem potência total, não ultrapassando 2700 RPM.",
+      "a) Decolagem normal (Flap 0°): iniciar a rolagem, completar para potência total; ajuste fino e reporte \"THRUST SET\"; \"AIRSPEED ALIVE\", V1/Vr 105 MPH; altímetro e climb +, \"POSITIVE RATE of CLIMB\"; quando não existir pista disponível em frente, recolher o trem; 400 ft AGL, 120 MPH, redução de potência 25 pol. e hélice 2500 RPM — \"After Takeoff Checklist\".",
+      "b) Decolagem em pista curta ou molhada (Flap 10°): torque estático de potência total; \"THRUST SET\"; \"AIRSPEED ALIVE\", V1/Vr 105 MPH; \"POSITIVE RATE of CLIMB\"; recolher o trem; 400 ft AGL, 120 MPH, Flaps Up, redução de potência 25 pol. e hélice 2500 RPM — \"After Takeoff Checklist\".",
+      "c) Decolagem em pista não pavimentada (Flap 10°): torque estático não aplicável; iniciar rolagem completando lentamente para potência total; \"THRUST SET\"; manter o manche levemente cabrado; \"AIRSPEED ALIVE\", V1/Vr 105 MPH; \"POSITIVE RATE of CLIMB\"; recolher o trem; 400 ft AGL, 120 MPH, Flaps Up, redução de potência 25 pol. e hélice 2500 RPM — \"After Takeoff Checklist\"."
+    ]
+  },
+  {
+    "id": "10.6b",
+    "nome": "Após a Decolagem",
+    "secao_sop": "10.6 (Após a Decolagem)",
+    "objetivo": "Ao atingir 400 ft AGL, configurar a aeronave para subida. Executado pelo aluno conforme filosofia \"Do and Read\".",
+    "checklist": [
+      {
+        "grupo": "AFTER TAKEOFF",
+        "itens": [
+          { "item": "LANDING GEAR", "acao": "UP" },
+          { "item": "FLAPS", "acao": "UP" },
+          { "item": "THROTTLE & PROPELLER", "acao": "25 Inches & 2500 RPM" },
+          { "item": "LANDING LIGHT", "acao": "OFF" },
+          { "item": "FUEL PUMPS", "acao": "OFF" },
+          { "item": "ENGINE INTRUMENTS", "acao": "CHECK" }
+        ]
+      }
+    ],
+    "notas": [
+      "Durante a movimentação da aeronave, sempre priorizar o voo e procedimentos operacionais; somente após, as comunicações com os órgãos de controle e o checklist."
+    ]
+  },
+  {
+    "id": "10.7",
+    "nome": "Subida",
+    "secao_sop": "10.7",
+    "objetivo": "Conduzir a subida com potência e velocidade padronizadas, cumprindo os callouts de MSA e altitude de transição.",
+    "checklist": [],
+    "notas": [
+      "Redução para 25 polegadas de manifold pressure / 2500 RPM, adotando VI de 120 MPH ou razão de 500 ft/min. Atento ao manifold, que decresce com a altitude — é necessário acrescentar potência durante a subida.",
+      "Ao cruzar a MSA anunciar \"MSA xxxx ft\" / \"ALTIMETERS xxxx hPa\"; ao cruzar a TA anunciar \"TRANSITION ALTITUDE — ALTIMETERS RESET ONE ZERO ONE THREE\"."
+    ]
+  },
+  {
+    "id": "10.8",
+    "nome": "Cruzeiro",
+    "secao_sop": "10.8",
+    "objetivo": "Nivelar no FL/altitude pretendida, ajustar potência, mistura e monitorar os motores em cruzeiro.",
+    "checklist": [
+      {
+        "grupo": "CRUISE",
+        "itens": [
+          { "item": "THROTTLE & PROPELLERS", "acao": "AS REQUIRED & 2400 RPM" },
+          { "item": "MIXTURE", "acao": "ADJUST" },
+          { "item": "COWL FLAPS", "acao": "AS REQUIRED" },
+          { "item": "ALTIMETER", "acao": "SET" }
+        ]
+      }
+    ],
+    "notas": [
+      "1000 pés antes de atingir o FL desejado anunciar \"1000ft TO LEVEL OFF\" e 100 pés antes de nivelar anunciar \"100ft TO LEVEL\".",
+      "Ajuste de mistura recomendado acima de 3000 ft, limitando 1650 °F de EGT: empobrecer até atingir o \"pico\" de EGT; após, enriquecer a mistura até o EGT cair 25 °F.",
+      "A temperatura da cabeça do cilindro (CHT) deve ficar abaixo de 400 °F.",
+      "Com os dados obtidos, preencher o LANDING DATA CARD no campo previsto para monitoramento durante o voo."
+    ]
+  },
+  {
+    "id": "10.9",
+    "nome": "Descida",
+    "secao_sop": "10.9",
+    "objetivo": "Planejar e executar a descida, transferir controles para obtenção das condições de chegada, preencher o Landing Data Card e efetuar o briefing de aproximação.",
+    "checklist": [
+      {
+        "grupo": "DESCENT",
+        "itens": [
+          { "item": "MIXTURE", "acao": "ADJUST" },
+          { "item": "COWL FLAPS", "acao": "AS REQUIRED" },
+          { "item": "APPROACH BRIEFING", "acao": "COMPLETE" }
+        ]
+      }
+    ],
+    "notas": [
+      "10 minutos ou distância pré-definida antes da descida, o CM1 passa os controles e a comunicação ao CM2 — \"YOUR CONTROLS AND COMMUNICATION\"; o CM2 assume e responde \"I HAVE CONTROLS AND COMMUNICATION\". O CM1 obtém as condições meteorológicas de chegada (ATIS ou AFIS) e preenche o Landing Data Card.",
+      "VAPP é calculada com base na Vref. Correção do vento para VAPP: o maior entre 1/3 da intensidade do vento ou o total da rajada; correção mínima +05 kt; correção máxima +20 kt; com vento calmo, Vapp = Vref + 05 kt. Exemplo: SBFL 14010G25KT — correção = total da rajada (25 − 10 = 15 kt), Vapp = Vref + 15 kt. Componente máxima de vento de través = 13 kt.",
+      "Velocidades de operação do Seneca com vento calmo: Flap UP — VR 105 / VREF 105 / VAPP 110 MPH; Flap 10° — VR 105 / VREF 105 / VAPP 110 MPH; Flap 25° — VR 105 / VREF 105 / VAPP 110 MPH; Flap 40° — VR NA / VREF 90 / VAPP 95 MPH.",
+      "Visual Descent Point (VDP): recomendado para todos os procedimentos de não precisão sem trajetória de planeio (VOR, NDB, LOC DME e RNAV APCH). Define o limite a partir do qual a aeronave pode prosseguir em descida mantendo ângulo de 3° até o pouso; sem contato visual, manter a MDA até o MAPT e arremeter conforme o perfil da carta. VDP = \"Altura da MDA\" ÷ 300. A altura do VDP é a mesma da MDA; o VDP não pode ser após o MAPT. Exemplos (altura MDA → distância da cabeceira): 300 ft → 1,0 NM; 400 ft → 1,3 NM; 450 ft → 1,5 NM; 500 ft → 1,7 NM; 600 ft → 2,0 NM; 700 ft → 2,3 NM. Em localidades onde o MAPT não está representado na carta, é necessário calcular o VDP.",
+      "Landing Data Card: AIRPORT (código ICAO); FL/OAT (nível de cruzeiro e temperatura externa); CRZ Power (manifold em pol., conforme Power Setting Table); FF lts/h (fuel flow após ajuste de mistura em cruzeiro); ATIS; WIND, VIS, CLOUDS, QNH e TEMP; Trans. Lev. (TA + 500 ft com ajustes acima de 1013 hPa; TA + 1000 ft com ajustes abaixo de 1013 hPa); Approach (tipo de aproximação — VFR ou procedimento IFR com identificação da carta, ex.: VOR DME Z 36 do Bacacheri); RMK (inoperâncias de auxílios, interdições etc.); MDA/DA; VDP; Remnant Fuel (combustível remanescente no destino); Hold Time (tempo máximo de espera descontando alternativa + 45 minutos); GA T.Off (potência de arremetida — converter o QNH de hPa para inHg a observar no manifold); Land. Weight; Vapp.",
+      "Briefing de aproximação (APPROACH BRIEFING): ponto ideal de descida (TOD); leitura da carta (caso IFR); ingresso no circuito de tráfego (caso VFR); procedimento e autonomia em caso de arremetida. Itens (conforme Programa de Treinamento IFR VoeFloripa, pág. 39): 1) METARs de destino e alternativa e cópia do ATIS; 2) combustível de espera sobre o destino; 3) leitura da carta, iniciando pela localidade; 4) tipo de procedimento (ILS, VOR ou NDB); 5) frequência do auxílio e OM/MM — identificá-las; 6) MSA no setor de entrada, tipo de entrada; 7) \"inbound course\" do ILS ou da órbita do VOR/NDB e/ou da aproximação final; 8) altitude de bloqueio do marcador externo; 9) DA (Decision Altitude) — ILS; 10) MDA (Minimum Descend Altitude) — VOR/NDB; 11) tempo até o MAPT; 12) procedimento de arremetida; 13) leitura do Landing Data Card.",
+      "Após o APPROACH BRIEFING, o CM1 assume os controles e a comunicação — \"I HAVE CONTROLS AND COMMUNICATION\". Nas descidas, limitar a razão em 500 ft/min e evitar redução excessiva dos motores.",
+      "MSA – Minimum Safe Altitude: na descida, o CM1 realiza o callout \"MSA xxxx ft\" / \"CROSS CHECK ALTIMETERS xxxx hPa\" e o CM2 confirma. O callout lembra que, caso ocorra aviso de \"TERRAIN\" no TAWS do GNS sem contato visual com o solo, deve-se arremeter imediatamente e selecionar a pág. TERRAIN no GNS. O Seneca I da VoeFloripa é equipado com GNS com alerta TAWS: \"TERRAIN ADVISORY\" (impacto potencial em ~60 segundos); \"TERRAIN AHEAD\" piscando (impacto potencial em ~30 segundos) e \"OBSTACLE AHEAD\" para obstáculo constante no database. PDA (Premature Descent Alerting): alerta de descida prematura quando a aeronave está significativamente abaixo do ângulo normal de aproximação; inicia a 15 NM do aeroporto de destino e termina a 0,5 NM do limiar da pista ou abaixo de 125 ft AGL a 1,0 NM do limiar."
+    ]
+  },
+  {
+    "id": "10.10",
+    "nome": "Aproximação",
+    "secao_sop": "10.10",
+    "objetivo": "Configurar rádios/instrumentos e revisar o pouso e a arremetida antes do bloqueio ou do circuito de tráfego.",
+    "checklist": [
+      {
+        "grupo": "APPROACH",
+        "itens": [
+          { "item": "NAV. RADIOS", "acao": "SET" },
+          { "item": "RWY IN USE", "acao": "CHECKED" },
+          { "item": "MISSED APPROACH", "acao": "REVIEW" },
+          { "item": "ALTIMETER", "acao": "SET" },
+          { "item": "SEAT BELTS", "acao": "FASTEN" }
+        ]
+      }
+    ],
+    "notas": [
+      "10 NM antes do bloqueio/circuito de tráfego, efetuar o checklist de aproximação, ajustar rádios/NAV e instrumentos — briefing de pouso.",
+      "O briefing de pouso consiste em passar como será a aproximação para o pouso, qual o flap a ser selecionado e a Vref.",
+      "Executar o procedimento \"SET RADIOS FOR APPROACH\" contemplando todos os itens necessários ao procedimento em uso.",
+      "Exemplo (Florianópolis, pista 14, ILS Z): pista em uso; ingresso no circuito de tráfego; tipo de aproximação (flight patterns); flap de pouso; Vref e Vapp; arremetida; ajustar no OBS o curso da final; frequência do ILS 110.30 no rádio de navegação; identificar ambos os auxílios; confirmar ajuste dos altímetros em QNH.",
+      "Confirmar pista em uso e procedimento de arremetida, mesmo em condições VMC."
+    ]
+  },
+  {
+    "id": "10.11",
+    "nome": "Landing (Pouso)",
+    "secao_sop": "10.11",
+    "objetivo": "Configurar a aeronave para o pouso e realizar a verificação final (landing checklist e GUMPS).",
+    "checklist": [
+      {
+        "grupo": "LANDING",
+        "itens": [
+          { "item": "LANDING GEAR", "acao": "DOWN 3 GREEN LIGHTS" },
+          { "item": "MIXTURE", "acao": "RICH" },
+          { "item": "PROPELLER", "acao": "FULL FORWARD" },
+          { "item": "FUEL PUMPS", "acao": "ON" },
+          { "item": "LANDING LIGHT", "acao": "ON" },
+          { "item": "FLAPS", "acao": "SET" },
+          { "item": "BRAKES", "acao": "CHECK" }
+        ]
+      },
+      {
+        "grupo": "GUMPS (checklist mental — IFR após o callout \"FIVE HUNDRED\"; VFR após \"FIVE HUNDRED STABILIZED\")",
+        "itens": [
+          { "item": "G — GAS (combustível)", "acao": "Seletora / Fuel Quantity" },
+          { "item": "U — UNDERCARRIAGE", "acao": "Trem de pouso baixado e travado" },
+          { "item": "M — MIXTURE", "acao": "Rica ou ajustada para altitude" },
+          { "item": "P — PROPELLER", "acao": "FULL RPM – passo mínimo" },
+          { "item": "S — SEAT BELTS/SWITCHES", "acao": "Cintos e switches (farol, bomba etc.)" }
+        ]
+      }
+    ],
+    "notas": [
+      "Velocidades de aproximação: Flap UP 105 MPH; Flap 10° 105 MPH; Flap 25° 105 MPH; Flap 40° 90 MPH.",
+      "Pouso com Flap 40° somente Short Field Landing (pouso curto).",
+      "Com pouso garantido, a manete de passo deve ser posicionada toda à frente para proporcionar força máxima em caso de arremetida.",
+      "O checklist deve ser iniciado na metade da perna do vento em voo visual; nos FLIGHT PATTERNS observa-se o momento do checklist para os diferentes tipos de aproximação.",
+      "Em tráfego visual, na perna do vento após o travess da cabeceira, afastar 30 s para a perna base — reduzir 1 s para cada 1 kt de componente de cauda.",
+      "Aeronave complexa (definição FAA): possui trem de pouso retrátil, controle de passo e flaps."
+    ]
+  },
+  {
+    "id": "10.12",
+    "nome": "Arremetida – Go Around – Missed Approach",
+    "secao_sop": "10.12",
+    "objetivo": "Descontinuar a aproximação com segurança quando os parâmetros da SAFETY WINDOW não forem atendidos ou a pista estiver interditada.",
+    "checklist": [
+      {
+        "grupo": "Ações da arremetida (na sequência)",
+        "itens": [
+          { "item": "PROPELLER / MIXTURE", "acao": "FULL FORWARD" },
+          { "item": "Potência ajustada", "acao": "callout \"THRUST SET\"" },
+          { "item": "Flaps", "acao": "callout \"FLAP'S UP\"" },
+          { "item": "Razão positiva", "acao": "callout \"POSITIVE RATE, LANDING GEAR UP\"" },
+          { "item": "Velocidade", "acao": "Vyse 105 mph" },
+          { "item": "COWL FLAPS", "acao": "AS REQUIRED" },
+          { "item": "Nivelamento", "acao": "400 pés AGL (VFR) ou 400 pés acima da DA/MDA (IFR)" },
+          { "item": "Rádios", "acao": "callout \"SET RADIOS FOR MISSED APPROACH\"" },
+          { "item": "Checklist", "acao": "\"AFTER TAKE OFF CHECK LIST\"" }
+        ]
+      }
+    ],
+    "notas": [
+      "Condições para arremeter: SAFETY WINDOW ou pista interditada; no MAPT, \"RUNWAY NOT IN SIGHT\"; necessário inclinar o avião mais que 20° para centrá-lo com o eixo da pista abaixo de 300 pés; a 200 pés estiver fora dos limites laterais da pista; razão de descida maior que 1000 ft/min a 200 pés; não circular para pouso abaixo de 500 pés.",
+      "Callout: \"GO AROUND\" ou \"NOT STABILIZED GO AROUND\"."
+    ]
+  },
+  {
+    "id": "10.13",
+    "nome": "Flight Patterns",
+    "secao_sop": "10.13",
+    "objetivo": "Padronizar os perfis de circuito de tráfego e aproximações (figuras publicadas nas páginas 120–121 do SOP).",
+    "checklist": [],
+    "notas": [
+      "O capítulo apresenta os perfis em formato de figuras (flight patterns) sem transcrição textual no SOP; nos flight patterns observa-se o momento de realização do checklist para os diferentes tipos de aproximação."
+    ]
+  },
+  {
+    "id": "10.14",
+    "nome": "Após o Pouso",
+    "secao_sop": "10.14",
+    "objetivo": "Restaurar a configuração de solo após o pouso, em momento de baixa carga de trabalho e após a liberação da pista.",
+    "checklist": [
+      {
+        "grupo": "AFTER LANDING",
+        "itens": [
+          { "item": "FLAPS", "acao": "UP" },
+          { "item": "COWL FLAPS", "acao": "OPEN" },
+          { "item": "FUEL PUMP", "acao": "OFF" },
+          { "item": "RWY INCURSION LIGHT", "acao": "OFF" },
+          { "item": "TRANSPONDER", "acao": "STBY" },
+          { "item": "ANTI COLISION – WING (Strobe light)", "acao": "OFF" }
+        ]
+      }
+    ],
+    "notas": [
+      "Executar em momento de baixa carga de trabalho, após a liberação da pista. Ex.: ao livrar a pista no aeroporto Hercílio Luz pela taxiway \"A\", após o cotejamento da instrução de taxi."
+    ]
+  },
+  {
+    "id": "10.15",
+    "nome": "Corte dos Motores",
+    "secao_sop": "10.15",
+    "objetivo": "Desligar os motores e os sistemas com a aeronave estacionada em local seguro (filosofia \"Read and Do\").",
+    "checklist": [
+      {
+        "grupo": "SHUTDOWN",
+        "itens": [
+          { "item": "PARKING BRAKE", "acao": "SET" },
+          { "item": "THROTTLE", "acao": "1000 RPM" },
+          { "item": "ELETRICAL EQUIPMENTS & RADIO MASTER", "acao": "OFF" },
+          { "item": "MIXTURE", "acao": "CUT OFF" },
+          { "item": "MAGNETOS", "acao": "OFF" },
+          { "item": "ALL LIGHT AND PUMPS", "acao": "OFF" },
+          { "item": "MASTER SWITCH", "acao": "OFF" }
+        ]
+      }
+    ],
+    "notas": [
+      "Ao término, anotar o horário UTC do corte dos motores, manobrar o avião para a posição de estacionamento e colocar os calços.",
+      "Nos casos em que haja menos de ½ tanque ou que seja o último voo do dia, solicitar o abastecimento. Aeronave em pernoite com tanque cheio evita evaporação excessiva, acúmulo de gases, condensação e acúmulo de água nos tanques."
+    ]
+  }
+]

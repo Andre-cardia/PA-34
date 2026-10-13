@@ -1,0 +1,46 @@
+name: Setup work-modulo-3d
+description: Node (versão do .nvmrc), cache npm e npm ci em work-modulo-3d. Opcionalmente instala o Chromium do Playwright.
+inputs:
+  browsers:
+    description: "true para instalar o Chromium do Playwright (com cache)"
+    required: false
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+        cache-dependency-path: work-modulo-3d/package-lock.json
+
+    - name: Install dependencies
+      shell: bash
+      run: npm --prefix work-modulo-3d ci
+
+    - name: Resolve Playwright version
+      if: inputs.browsers == 'true'
+      id: pw
+      shell: bash
+      run: echo "version=$(node -p "require('./work-modulo-3d/node_modules/@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+    - name: Cache Playwright browsers
+      if: inputs.browsers == 'true'
+      id: pw-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
+    - name: Install Chromium (with system deps)
+      if: inputs.browsers == 'true' && steps.pw-cache.outputs.cache-hit != 'true'
+      shell: bash
+      working-directory: work-modulo-3d
+      run: npx playwright install --with-deps chromium
+
+    - name: Install Chromium system deps only (cache hit)
+      if: inputs.browsers == 'true' && steps.pw-cache.outputs.cache-hit == 'true'
+      shell: bash
+      working-directory: work-modulo-3d
+      run: npx playwright install-deps chromium

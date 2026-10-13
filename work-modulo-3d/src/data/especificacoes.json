@@ -1,0 +1,115 @@
+{
+  "aeronave": {
+    "modelo": "Piper PA34-200 Seneca I",
+    "fabricante": "Piper",
+    "descricao": "Aeronave bimotora, monoplano, equipada com trem de pouso retrátil, inteiramente metálica.",
+    "capacidade_maxima_ocupantes": 6
+  },
+  "motores": {
+    "fabricante": "Lycoming",
+    "modelo_motor_esquerdo": "IO-360-C1E6",
+    "modelo_motor_direito": "LIO-360-C1E6",
+    "tipo": "Aspirado, motor direito contra-rotativo, 4 cilindros opostos horizontalmente, alimentação injetada, transmissão direta, refrigeração a ar.",
+    "potencia": "200 HP a 2700 RPM",
+    "rotacao_maxima_rpm": 2700,
+    "pressao_admissao": "25,5 pol. Hg",
+    "consumo_horario": "72,5 litros/hora – 19,2 US gal/hora (MSL)"
+  },
+  "tacometro": {
+    "faixa_verde_operacao_normal": "500–2200 RPM",
+    "faixa_vermelha_operacao_com_cautela": "2200–2400 RPM",
+    "linha_vermelha_limite_maximo": "2700 RPM"
+  },
+  "helice": {
+    "fabricantes": "Hartzell HC-C2YK-2E e HC-C2YK-2CG",
+    "tipo": "Velocidade constante",
+    "numero_de_pas": 2,
+    "diametro_maximo_pol": 76,
+    "diametro_minimo_pol": 74
+  },
+  "combustivel": {
+    "capacidade_total": "370,4 litros (98 US gal)",
+    "capacidade_por_tanque": "185,2 litros (49 US gal)",
+    "utilizavel_total": "351,5 litros (93 US gal)",
+    "nao_utilizavel": "18,9 litros (5 US gal)",
+    "tipo": "AVGAS 100/130 LL Azul",
+    "consumo_65_pct_potencia": "69,2 litros/h (18,3 gph)",
+    "pressao_combustivel": {
+      "faixa_verde": "14–35 PSI",
+      "linha_vermelha_minima": "14 PSI",
+      "linha_vermelha_maxima": "35 PSI"
+    },
+    "nota": "Os tanques devem ser verificados visualmente antes de cada voo, utilizando-se a pipeta graduada (fuelstick)."
+  },
+  "lubrificacao": {
+    "capacidade_total_oleo": "8 US quarts (7,5 litros)",
+    "quantidade_minima_operacional": "6 US quarts (VFL)",
+    "tipo_de_oleo": "SAE 50 W100 (utilizado pela VFL)",
+    "temperatura_maxima_oleo": "245 °F",
+    "pressao_minima_oleo": "25 PSI",
+    "pressao_maxima_oleo": "90 PSI"
+  },
+  "temperatura_oleo": {
+    "faixa_verde_operacao_normal": "75–245 °F",
+    "faixa_vermelha_limite_maximo": "245 °F"
+  },
+  "pressao_oleo": {
+    "faixa_verde": "60–90 PSI",
+    "faixa_amarela": "25–60 PSI",
+    "faixa_vermelha_superior": "90 PSI",
+    "faixa_vermelha_inferior": "25 PSI"
+  },
+  "temperatura_cilindro": {
+    "faixa_verde": "200–475 °F",
+    "linha_vermelha": "475 °F"
+  },
+  "pesos": {
+    "peso_basico_vazio": "1190 kgf (2625 libras)",
+    "carga_util_maxima": "714 kgf (1575 libras)",
+    "peso_maximo_decolagem": "1905 kgf (4200 libras)",
+    "peso_maximo_pouso": "1814 kgf (4000 libras)",
+    "peso_maximo_bagageiro_traseiro": "45 kgf (100 libras)",
+    "peso_maximo_bagageiro_nariz": "45 kgf (100 libras)",
+    "nota_reducao_peso": "Realizando decolagem com peso máximo, é necessário reduzir 90 kg de peso para o pouso. 90 kg = 125 litros (33 gal) de Avgas = 01h:36min de voo.",
+    "nota": "Para dados precisos de cada aeronave, consulte a ficha de peso e balanceamento específico, constante nos documentos da mesma."
+  },
+  "fator_carga": {
+    "flaps_up": "+3,8 g / -0,0 g",
+    "flaps_down": "+3,8 g / -0,0 g"
+  },
+  "cargas_especificas": {
+    "carga_alar": "20,1 lbs/sq ft",
+    "carga_de_potencia_peso_x_potencia": "10,5 lbs/HP"
+  },
+  "marcas_do_velocimetro": {
+    "linha_radial_vermelha_VNE_mph": 217,
+    "linha_radial_vermelha_VMC_mph": 80,
+    "linha_radial_azul_VYSE_mph": 105,
+    "arco_amarelo_operacao_em_ar_calmo": "190 a 217 MPH",
+    "arco_verde_operacao_normal": "76 a 190 MPH",
+    "arco_branco_operacao_com_flap": "69 a 125 MPH"
+  },
+  "velocidades_operacionais": {
+    "VNE_velocidade_nunca_exceder_mph": 217,
+    "velocidade_maxima_de_cruzeiro_mph": 190,
+    "velocidade_de_cruzeiro_75_pct_MSL_mph": 173,
+    "cruzeiro_75_pct_a_6000ft_mph": 187,
+    "cruzeiro_otimo_65_pct_a_9000ft_mph": 185,
+    "VA_velocidade_de_manobra_peso_minimo_2743lbs_1244kg_mph": 133,
+    "VA_velocidade_de_manobra_peso_maximo_4200lbs_1905kg_mph": 146,
+    "penetracao_em_ar_turbulento_mph": 130,
+    "VLE_trem_baixado_e_VLO_down_mph": 150,
+    "VLO_up_mph": 125,
+    "velocidade_maxima_com_flap_10_mph": 125,
+    "melhor_razao_de_subida_VY_mph": 105,
+    "melhor_angulo_de_subida_VX_mph": 90,
+    "subida_em_rota_mph": 120,
+    "velocidade_de_subida_monomotor_VYSE_mph": 105,
+    "VMC_velocidade_minima_de_controle_mph": 80,
+    "VMC_durante_instrucao_mph": 90,
+    "estol_power_off_trem_e_flap_recolhidos_mph": 76,
+    "estol_power_off_trem_e_flap_estendidos_mph": 69,
+    "VR_rotacao_padrao_VFL_todos_os_pesos_mph": 105,
+    "V1_padrao_VFL": "V1 = VR (não inferior a VMC)"
+  }
+}

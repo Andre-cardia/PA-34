@@ -1,0 +1,26 @@
+{
+  "export-map.mjs": {
+    "bytes": 2028,
+    "sha256": "8b33bafd159af5ff868a3d2dd08a7a9fe6f96de3f83d639b30efc8b2249a4e37"
+  },
+  "../../src/components/cockpit/panel-data.ts": {
+    "bytes": 19663,
+    "sha256": "b0a7f867d044ea94d0f090ee9359aeb493bab9d1bd8e71cfcfde8a79346b6a2c"
+  },
+  "../../src/components/cockpit/artwork.tsx": {
+    "bytes": 66503,
+    "sha256": "582373a81b9494eb9f21d70695c2a70fb237a1d4128f72decad3063ce77b8058"
+  },
+  "panel-map.json": {
+    "bytes": 14972,
+    "sha256": "61993a7f56e9f14d072a3bc45dd7c5821437a06473a7a8853007496b07b85b4e"
+  },
+  "masters/serigrafia-dia.svg": {
+    "bytes": 191357,
+    "sha256": "0b1e637591c38777ba650e42a2aada4a43115910fb273fc1ecffd1c7a89d453e"
+  },
+  "masters/serigrafia-noite.svg": {
+    "bytes": 192320,
+    "sha256": "d911b862d7946c04d4fe36e5d9b7f27aa8d9397eda9143313733a293d191068a"
+  }
+}

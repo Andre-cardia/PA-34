@@ -1,0 +1,629 @@
+
+> my-app@0.0.0 lint
+> eslint .
+
+
+app/src/components/Navbar.tsx
+  74:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/Navbar.tsx:74:5
+  72 |
+  73 |   useEffect(() => {
+> 74 |     setDrawerOpen(false)
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  75 |     setMoreOpen(false)
+  76 |   }, [location.pathname])
+  77 |  react-hooks/set-state-in-effect
+
+app/src/components/cockpit/CockpitPanel.tsx
+  361:12  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/cockpit/CockpitPanel.tsx:361:12
+  359 |   return (
+  360 |     <div
+> 361 |       ref={pz.ref}
+      |            ^^^^^^ Cannot access ref value during render
+  362 |       className="blueprint-grid-dense relative h-full w-full touch-none overflow-hidden bg-abyss select-none"
+  363 |       style={{ cursor: 'none' }}
+  364 |       role="group"                                 react-hooks/refs
+  366:11  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/cockpit/CockpitPanel.tsx:366:11
+  364 |       role="group"
+  365 |       aria-label="Painel vetorial interativo do PA-34-200 Seneca I — 56 instrumentos"
+> 366 |       {...pz.handlers}
+      |           ^^^^^^^^^^^ Cannot access ref value during render
+  367 |       onMouseMove={(e) => {
+  368 |         if (!finePointer.current) return
+  369 |         cursorX.set(e.clientX)  react-hooks/refs
+
+app/src/components/cockpit/artwork.tsx
+    37:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-refresh/only-export-components
+    67:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-refresh/only-export-components
+    99:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/cockpit/artwork.tsx:99:7
+   97 |   useEffect(() => {
+   98 |     if (!active) {
+>  99 |       setV(to)
+      |       ^^^^ Avoid calling setState() directly within an effect
+  100 |       return
+  101 |     }
+  102 |     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {  react-hooks/set-state-in-effect
+  1640:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-refresh/only-export-components
+
+app/src/components/cockpit/usePanZoom.ts
+  25:3  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/cockpit/usePanZoom.ts:25:3
+  23 |   const raf = useRef(0)
+  24 |   const reduced = useRef(false)
+> 25 |   viewRef.current = view
+     |   ^^^^^^^^^^^^^^^ Cannot update ref during render
+  26 |   sizeRef.current = size
+  27 |
+  28 |   const base = size.w > 0 ? Math.min(size.w / VB_W, size.h / VB_H) : 0  react-hooks/refs
+  26:3  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/cockpit/usePanZoom.ts:26:3
+  24 |   const reduced = useRef(false)
+  25 |   viewRef.current = view
+> 26 |   sizeRef.current = size
+     |   ^^^^^^^^^^^^^^^ Cannot update ref during render
+  27 |
+  28 |   const base = size.w > 0 ? Math.min(size.w / VB_W, size.h / VB_H) : 0
+  29 |                          react-hooks/refs
+
+app/src/components/home/HeroCanvas.tsx
+  20:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/home/HeroCanvas.tsx:20:5
+  18 |
+  19 |   useEffect(() => {
+> 20 |     setReduced(window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  21 |     const el = wrap.current
+  22 |     if (!el) return
+  23 |     const obs = new IntersectionObserver(([entry]) => setActive(entry.isIntersecting), { threshold: 0.05 })  react-hooks/set-state-in-effect
+
+app/src/components/home/SenecaModel.tsx
+  225:12  error  Error: Cannot modify local variables after render completes
+
+This argument is a function which may reassign or mutate `mats` after render, which can cause inconsistent behavior on subsequent renders. Consider using state instead.
+
+app/src/components/home/SenecaModel.tsx:225:12
+  223 |   }, [])
+  224 |
+> 225 |   useFrame((state, delta) => {
+      |            ^^^^^^^^^^^^^^^^^^^
+> 226 |     const r = root.current
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 227 |     if (!r) return
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 258 |     mats.engineHot.emissiveIntensity += ((hoveredEngine ? 0.55 : 0) - mats.engineHot.emissiveIntensity) * 0.15
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 259 |   })
+      | ^^^^ This function may (indirectly) reassign or modify `mats` after render
+  260 |
+  261 |   const engineOver = (side: 'esq' | 'dir') => (e: ThreeEvent<PointerEvent>) => {
+  262 |     e.stopPropagation()
+
+app/src/components/home/SenecaModel.tsx:258:5
+  256 |
+  257 |     // emissive do motor em hover
+> 258 |     mats.engineHot.emissiveIntensity += ((hoveredEngine ? 0.55 : 0) - mats.engineHot.emissiveIntensity) * 0.15
+      |     ^^^^^^^^^^^^^^ This modifies `mats`
+  259 |   })
+  260 |
+  261 |   const engineOver = (side: 'esq' | 'dir') => (e: ThreeEvent<PointerEvent>) => {  react-hooks/immutability
+  258:5   error  Error: This value cannot be modified
+
+Modifying a value previously passed as an argument to a hook is not allowed. Consider moving the modification before calling the hook.
+
+app/src/components/home/SenecaModel.tsx:258:5
+  256 |
+  257 |     // emissive do motor em hover
+> 258 |     mats.engineHot.emissiveIntensity += ((hoveredEngine ? 0.55 : 0) - mats.engineHot.emissiveIntensity) * 0.15
+      |     ^^^^^^^^^^^^^^ `mats` cannot be modified
+  259 |   })
+  260 |
+  261 |   const engineOver = (side: 'esq' | 'dir') => (e: ThreeEvent<PointerEvent>) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/immutability
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+  274:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/home/SenecaModel.tsx:274:5
+  272 |
+  273 |   const setLayer = (id: LayerId) => (g: THREE.Group | null) => {
+> 274 |     layerRefs.current[id] = g
+      |     ^^^^^^^^^ Passing a ref to a function may read its value during render
+  275 |   }
+  276 |
+  277 |   return (                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/refs
+
+app/src/components/modelo3d/SenecaTechModel.tsx
+  255:3   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:255:3
+  253 |   // props acessíveis no loop sem re-subscrever
+  254 |   const propsRef = useRef(props)
+> 255 |   propsRef.current = props
+      |   ^^^^^^^^^^^^^^^^ Cannot update ref during render
+  256 |   const matsRef = useRef(mats)
+  257 |   matsRef.current = mats
+  258 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/refs
+  257:3   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:257:3
+  255 |   propsRef.current = props
+  256 |   const matsRef = useRef(mats)
+> 257 |   matsRef.current = mats
+      |   ^^^^^^^^^^^^^^^ Cannot update ref during render
+  258 |
+  259 |   const layerGroups = useRef<Partial<Record<LayerId, THREE.Group | null>>>({})
+  260 |   const spreadXGroups = useRef<{ esq: THREE.Group | null; dir: THREE.Group | null }>({ esq: null, dir: null })                                                                                                                                                                                                                                                                                                                                                               react-hooks/refs
+  280:19  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:280:19
+  278 |   })
+  279 |   // presença inicial: 0 (tudo nasce "fora" e voa para dentro na montagem)
+> 280 |   if (Object.keys(anim.current.presence).length === 0) {
+      |                   ^^^^^^^^^^^^^^^^^^^^^ Passing a ref to a function may read its value during render
+  281 |     for (const id of LAYER_ORDER) anim.current.presence[id] = introDur <= 0 ? (visible[id] ? 1 : 0) : 0
+  282 |   }
+  283 |                                                                                                                                                                                                                                                                                                                                       react-hooks/refs
+  281:35  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:281:35
+  279 |   // presença inicial: 0 (tudo nasce "fora" e voa para dentro na montagem)
+  280 |   if (Object.keys(anim.current.presence).length === 0) {
+> 281 |     for (const id of LAYER_ORDER) anim.current.presence[id] = introDur <= 0 ? (visible[id] ? 1 : 0) : 0
+      |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot update ref during render
+  282 |   }
+  283 |
+  284 |   // registro de âncoras (posições-mundo dos componentes p/ rótulos e câmera)                                                                                                                                                                                                                                                                       react-hooks/refs
+  285:15  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:285:15
+  283 |
+  284 |   // registro de âncoras (posições-mundo dos componentes p/ rótulos e câmera)
+> 285 |   const reg = useRef((compId: string, camada: LayerId, obj: THREE.Object3D | null) => {
+      |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 286 |     if (!obj) return
+      | ^^^^^^^^^^^^^^^^^^^^
+> 287 |     const map = anchorsRef.current
+      …
+      | ^^^^^^^^^^^^^^^^^^^^
+> 303 |     })
+      | ^^^^^^^^^^^^^^^^^^^^
+> 304 |   }).current
+      | ^^^^^^^^^^^^^ Cannot access ref value during render
+  305 |
+  306 |   const hov = useRef((e: ThreeEvent<PointerEvent>, compId: string | null, camada: LayerId | null) => {
+  307 |     e.stopPropagation()                             react-hooks/refs
+  306:15  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:306:15
+  304 |   }).current
+  305 |
+> 306 |   const hov = useRef((e: ThreeEvent<PointerEvent>, compId: string | null, camada: LayerId | null) => {
+      |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 307 |     e.stopPropagation()
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 308 |     if (compId && !propsRef.current.visible[camada as LayerId]) return
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 309 |     propsRef.current.onHover(compId, camada)
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 310 |   }).current
+      | ^^^^^^^^^^^^^ Cannot access ref value during render
+  311 |
+  312 |   const sel = useRef((e: ThreeEvent<MouseEvent>, camada: LayerId, compId: string) => {
+  313 |     e.stopPropagation()  react-hooks/refs
+  312:15  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:312:15
+  310 |   }).current
+  311 |
+> 312 |   const sel = useRef((e: ThreeEvent<MouseEvent>, camada: LayerId, compId: string) => {
+      |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 313 |     e.stopPropagation()
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 314 |     if (!propsRef.current.visible[camada]) return
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 315 |     propsRef.current.onSelect(camada, compId)
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 316 |   }).current
+      | ^^^^^^^^^^^^^ Cannot access ref value during render
+  317 |
+  318 |   // -------------------------------------------------------------------------
+  319 |   // Loop principal (demand): tweens + materiais + rótulos                           react-hooks/refs
+  510:35  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/components/modelo3d/SenecaTechModel.tsx:510:35
+  508 |
+  509 |   return (
+> 510 |     <ModelPartCtx.Provider value={handlers}>
+      |                                   ^^^^^^^^ Cannot access ref value during render
+  511 |       <group>
+  512 |       {/* ================= 1 · EXTERIOR (GLB — célula real) ================= */}
+  513 |       <group ref={(g) => { layerGroups.current.exterior = g }}>                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/refs
+
+app/src/components/modelo3d/glb.tsx
+  179:65  error  Unnecessary escape character: \[                                                                                                no-useless-escape
+  195:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  220:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  263:14  error  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file                      react-refresh/only-export-components
+
+app/src/components/ui-custom/ChecklistCard.tsx
+  30:16  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/ui-custom/ChecklistCard.tsx:30:16
+  28 |     try {
+  29 |       const raw = localStorage.getItem(storageKey(faseId))
+> 30 |       if (raw) setChecked(JSON.parse(raw) as Record<string, boolean>)
+     |                ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  31 |     } catch {
+  32 |       /* storage indisponível */
+  33 |     }  react-hooks/set-state-in-effect
+
+app/src/components/ui-custom/SearchPalette.tsx
+   69:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-refresh/only-export-components
+  115:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/ui-custom/SearchPalette.tsx:115:7
+  113 |   useEffect(() => {
+  114 |     if (open) {
+> 115 |       setQuery('')
+      |       ^^^^^^^^ Avoid calling setState() directly within an effect
+  116 |       setActive(0)
+  117 |     }
+  118 |   }, [open])                                                                                                                  react-hooks/set-state-in-effect
+  135:19  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/ui-custom/SearchPalette.tsx:135:19
+  133 |   const flat = useMemo(() => GRUPO_ORDER.flatMap((g) => results.get(g) ?? []), [results])
+  134 |
+> 135 |   useEffect(() => setActive(0), [flat.length])
+      |                   ^^^^^^^^^ Avoid calling setState() directly within an effect
+  136 |
+  137 |   const go = useCallback(
+  138 |     (item: SearchItem) => {  react-hooks/set-state-in-effect
+  210:23  error  Error: Cannot reassign variable after render completes
+
+Reassigning `rowIndex` after render has completed can cause inconsistent behavior on subsequent renders. Consider using state instead.
+
+app/src/components/ui-custom/SearchPalette.tsx:210:23
+  208 |                     <p className="px-3 pb-1 pt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-faint">{g}</p>
+  209 |                     {items.map((item) => {
+> 210 |                       rowIndex += 1
+      |                       ^^^^^^^^ Cannot reassign `rowIndex` after render completes
+  211 |                       const idx = rowIndex
+  212 |                       return (
+  213 |                         <button                                                                                                                                                                                                                                                                                                                                                                                                  react-hooks/immutability
+
+app/src/components/ui/badge.tsx
+  46:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+app/src/components/ui/button-group.tsx
+  82:3  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+app/src/components/ui/button.tsx
+  62:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+app/src/components/ui/carousel.tsx
+  96:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/components/ui/carousel.tsx:96:5
+  94 |   React.useEffect(() => {
+  95 |     if (!api) return
+> 96 |     onSelect(api)
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  97 |     api.on("reInit", onSelect)
+  98 |     api.on("select", onSelect)
+  99 |  react-hooks/set-state-in-effect
+
+app/src/components/ui/form.tsx
+  159:3  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+app/src/components/ui/navigation-menu.tsx
+  167:3  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+app/src/components/ui/sidebar.tsx
+  611:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+app/src/components/ui/sidebar.tsx:611:26
+  609 |   // Random width between 50 to 90%.
+  610 |   const width = React.useMemo(() => {
+> 611 |     return `${Math.floor(Math.random() * 40) + 50}%`
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  612 |   }, [])
+  613 |
+  614 |   return (  react-hooks/purity
+  725:3   error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-refresh/only-export-components
+
+app/src/components/ui/toggle.tsx
+  45:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+app/src/hooks/use-mobile.ts
+  14:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/hooks/use-mobile.ts:14:5
+  12 |     }
+  13 |     mql.addEventListener("change", onChange)
+> 14 |     setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |     return () => mql.removeEventListener("change", onChange)
+  16 |   }, [])
+  17 |  react-hooks/set-state-in-effect
+
+app/src/hooks/useCountUp.ts
+  14:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/hooks/useCountUp.ts:14:7
+  12 |     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  13 |     if (reduced) {
+> 14 |       setValue(target)
+     |       ^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |       return
+  16 |     }
+  17 |     let t0: number | null = null  react-hooks/set-state-in-effect
+
+app/src/hooks/useScramble.ts
+  15:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/hooks/useScramble.ts:15:7
+  13 |     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  14 |     if (!enabled || reduced) {
+> 15 |       setOutput(text)
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |       return
+  17 |     }
+  18 |     let raf = 0  react-hooks/set-state-in-effect
+
+app/src/pages/Cockpit.tsx
+  70:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/pages/Cockpit.tsx:70:7
+  68 |     const id = resolveInstrumentId(searchParams.get('i'))
+  69 |     if (id) {
+> 70 |       setInteracted(true)
+     |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  71 |       setSelectedId((cur) => (cur === id ? cur : id))
+  72 |     }
+  73 |     // eslint-disable-next-line react-hooks/exhaustive-deps  react-hooks/set-state-in-effect
+  73:5  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/exhaustive-deps')
+
+app/src/pages/Modelo3D.tsx
+   79:32  error  Error: Expected the first argument to be an inline function expression
+
+Expected the first argument to be an inline function expression.
+
+app/src/pages/Modelo3D.tsx:79:32
+  77 |   const [introDone, setIntroDone] = useState(false)
+  78 |
+> 79 |   const staticReason = useMemo(detectStaticReason, [])
+     |                                ^^^^^^^^^^^^^^^^^^ Expected the first argument to be an inline function expression
+  80 |   const deepLink = useRef<{ camada: LayerId; comp: string } | null>(null)
+  81 |
+  82 |   // ---- deep-link inicial (?camada=<id>&c=<componenteId>) ----                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                react-hooks/use-memo
+   88:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+app/src/pages/Modelo3D.tsx:88:7
+  86 |     if (isLayerId(camada) && comp && compExiste(camada, comp)) {
+  87 |       deepLink.current = { camada, comp }
+> 88 |       setVisible((v) => ({ ...v, [camada]: true }))
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  89 |       setSelected({ camada, comp })
+  90 |       // focus move após a montagem rápida (0.6s, §9)
+  91 |       const t = window.setTimeout(() => setFocusRequest({ compId: comp, key: Date.now() }), 900)  react-hooks/set-state-in-effect
+  199:20  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+app/src/pages/Modelo3D.tsx:199:20
+  197 |   // intro: duração da "montagem de prancheta" (montagem rápida 0.6s com deep-link, §9)
+  198 |   // ?nointro=1 desativa (validação automatizada / dispositivos com rAF estrangulado)
+> 199 |   const introDur = deepLink.current ? 0.6 : new URLSearchParams(window.location.search).has('nointro') ? 0 : 1.4
+      |                    ^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  200 |   useEffect(() => {
+  201 |     const t = window.setTimeout(() => setIntroDone(true), deepLink.current ? 900 : 2100)
+  202 |     return () => window.clearTimeout(t)                                                                                                                                                                                                                                                       react-hooks/refs
+
+✖ 55 problems (54 errors, 1 warning)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

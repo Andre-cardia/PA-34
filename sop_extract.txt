@@ -1,0 +1,5083 @@
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PIPER PA34-200 SENECA I 
+STANDARD OPERATION PROCEDURES - SOP 
+ 
+VoeFloripa – Escola de Aviação Civil 
+ 
+2023   
+ 
+
+===== PAGE 2 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+2 
+CONTROLE DE REVISÕES 
+Revisão 
+Páginas 
+Revisadas 
+Descrição 
+Data 
+Assinatura 
+1 
+1-66 
+DESENVOLVIMENTO CAP 1 A 3 
+01/10/12 
+MAICO 
+2 
+1 -106 
+FORMATAÇAO E INSERÇÃO CAP 4 A 
+7 
+06/01/12 
+BIANCO 
+   3 
+1 -106 
+REVISÃO E CONVERSÃO VEL. P /MPH 
+08/01/12 
+BIANCO 
+4 
+ 
+VERSÃO ORIGINAL 
+27/03/2013 
+ 
+5 
+ 
+REVISÃO PROCEDIMENTOS DE 
+REACIONAMENTO DE ACORDO COM 
+MANUAL DA PIPER 10.1 
+09/05/2016 
+PINHO 
+6 
+1-158 
+REVISÃO GERAL 
+19/09/2019 
+MAICO 
+7 
+ 
+ACRESCENTADO ANEXO 01 
+06/07/2021 
+BEVILAQUA 
+8 
+85 
+AJUSTADO CICLO DE PARTIDA DO 
+MOTOR 
+30/08/2021 
+BEVILAQUA 
+9 
+89 
+AJUSTADO PROC. DE CHECK DE 
+MOTOR 
+21/09/2021 
+BEVILAQUA 
+10 
+90 
+PROCEDIMENTOS DE TÁXI 
+15/12/2021 
+EDUARDO 
+ORTIZ 
+11 
+72 
+Atualizado Documentos obrigatórios 
+07/06/2022 
+SAGAS 
+12 
+166-167 
+Current Track 
+15/11/2023 
+MAFRA 
+13 
+TODAS 
+REVISÃO GERAL 
+20/10/2024 
+FALCETTA 
+ 
+ 
+ 
+
+===== PAGE 3 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 4 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+4 
+Sumário 
+ 
+01- INTRODUÇÃO ............................................................................................ 8 
+02- INFORMAÇÕES DE UTILIZAÇÃO DESTE MANUAL ...................................... 9 
+03- USO DO CHECKLIST .................................................................................. 10 
+04- STANDARD CALLOUTS ............................................................................. 11 
+05- GENERALIDADES ..................................................................................... 21 
+5.1- ESPECIFICAÇÕES E LIMITAÇÕES .......................................................... 22 
+06- PERFORMANCE ....................................................................................... 25 
+07- PLANEJAMENTO DE VOO ........................................................................ 38 
+08- SISTEMAS AVANÇADOS ........................................................................... 42 
+8.1- Sistema de combustível ..................................................................... 42 
+8.2- Sistema Elétrico .................................................................................. 45 
+8.3- Sistema de Vácuo ............................................................................... 47 
+8.4- Sincronizador de Hélices .................................................................... 49 
+8.5- Trem de pouso retrátil ....................................................................... 50 
+8.6- Bagageiro do Nariz ............................................................................. 55 
+8.7- Sistema de Aquecimento, Ventilação e Desembaciamento .............. 56 
+09- REGRAS E POLITICA DE SEGURANÇA DA VOEFLORIPA ............................ 62 
+10- PROCEDIMENTOS NORMAIS ................................................................... 75 
+10.1- INSPEÇÃO PRÉ-VOO (PREFLIGHT CHECK) ......................................... 75 
+10.2- ANTES DA PARTIDA DO MOTOR ....................................................... 84 
+10.3- QUANDO AUTORIZADO O ACIONAMENTO ...................................... 88 
+10.4- ANTES DO TAXI ................................................................................. 91 
+
+===== PAGE 5 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+5 
+10.5- ANTES DA DECOLAGEM .................................................................... 95 
+10.6- QUANDO AUTORIZADO A DECOLAGEM ......................................... 100 
+10.6- APÓS A DECOLAGEM ...................................................................... 102 
+10.7- SUBIDA ........................................................................................... 103 
+10.8- CRUZEIRO ....................................................................................... 103 
+10.9- DESCIDA ......................................................................................... 105 
+10.10- APROXIMAÇÃO ............................................................................. 116 
+10.11- LANDING ...................................................................................... 117 
+10.12- ARREMETIDA - GO AROUND – MISSED APPROACH ..................... 119 
+10.13- FLIGHT PATTERN´S ....................................................................... 120 
+10.14- APÓS O POUSO ............................................................................. 122 
+10.15- CORTE DOS MOTORES .................................................................. 122 
+11- TÉCNICAS DE PILOTAGEM MULTIMOTOR ............................................. 124 
+11.1- VOO ASSIMÉTRICO (MONOMOTOR) .............................................. 124 
+11.2- IDENTIFICAÇÃO DO MOTOR INOPERANTE ..................................... 127 
+11.3- EMBANDEIRAMENTO ..................................................................... 129 
+11.4- MOTOR CRÍTICO ............................................................................. 131 
+11.5- TETO DE SERVIÇO MONOMOTOR .................................................. 133 
+11.6- CURVAS MONOMOTOR ................................................................. 134 
+11.7- TRÁFEGO VISUAL MONOMOTOR ................................................... 134 
+11.8- PROCEDIMENTO IFR MONOMOTOR .............................................. 135 
+12- PROCEDIMENTOS DE EMERGÊNCIA ...................................................... 137 
+12.1- IDENTIFICAÇÃO DO MOTOR EM PANE ........................................... 137 
+
+===== PAGE 6 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+6 
+12.2- CORTE DO MOTOR  - (Embandeiramento) ..................................... 138 
+12.3- PARTIDA DO MOTOR EM VOO ....................................................... 140 
+12.4- CONTROLE DE COMBUSTÍVEL - OPERAÇÃO MONOMOTOR .......... 141 
+12.5- FALHA DO MOTOR NA DECOLAGEM .............................................. 142 
+12.6- FALHA DO MOTOR NA DECOLAGEM (APÓS A V1/VR OU ACIMA) . 145 
+12.7- POUSO MONOMOTOR ................................................................... 149 
+12.8- ARREMETIDA MONOMOTOR ......................................................... 150 
+12.9- BAIXAMENTO DO TREM DE POUSO EM EMERGÊNCIA .................. 151 
+12.10- ALARMES DO TREM DE POUSO .................................................... 151 
+12.11- POUSO COM TREM DE POUSO RECOLHIDO ................................. 152 
+12.12- FALHA NO SISTEMA ELÉTRICO ...................................................... 152 
+12.13- FALHA NO SISTEMA A VÁCUO ...................................................... 155 
+12.14- FOGO NO MOTOR ........................................................................ 156 
+12.15- RECUPERAÇÃO DE PARAFUSO - SPINS ......................................... 156 
+12.16- FALHA DO MOTOR SOB FORMAÇÃO DE GELO ............................. 157 
+12.17- FALHA DO ALTERNADOR SOB FORMAÇÃO DE GELO ................... 157 
+12.18- FALHA DO MOTOR COM PORTA REMOVIDA ............................... 158 
+12.19- DISPARO DE HÉLICE ...................................................................... 158 
+12.20- VOO SOB CONDIÇÕES DE GELO (Special Operation) .................... 159 
+12.21- DESCIDA DE EMERGÊNCIA ........................................................... 160 
+13- ANEXOS ................................................................................................. 162 
+13.1- REGRAS DE OPERAÇÃO .................................................................. 162 
+14- CURRENT TRACK .................................................................................... 166 
+
+===== PAGE 7 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+7 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 8 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+8 
+01- INTRODUÇÃO 
+ 
+ 
+O objetivo geral deste Manual de Treinamento denominado FLIGHT 
+STANDARDS MANUAL é assegurar a proficiência e o bom desempenho dos 
+alunos na execução do treinamento Multimotor. 
+ 
+A VoeFloripa (VFL) opera o PA34-200 SENECA I visando o treinamento 
+de multimotor e IFR, ampliando a grade curricular dos cursos oferecidos e 
+aplica-se aos Alunos e Instrutores naquilo que couber. 
+ 
+Este Manual está organizado de tal forma a facilitar o estudo e 
+padronização da escola, além de prover o conhecimento necessário para uma 
+operação segura de aeronaves multimotoras de pequeno porte. 
+Elaborado em consonância com a NSMA 58-61 (RBHA 141) – Requisitos para 
+concessão de licenças de pilotos, sendo de responsabilidade dos Instrutores 
+mantê-lo atualizado e fazer cumpri-lo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 9 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+9 
+02- INFORMAÇÕES DE UTILIZAÇÃO DESTE MANUAL 
+ 
+ 
+Este manual descreve os procedimentos a serem adotados na 
+operação das aeronaves da escola e os vários procedimentos normais, 
+anormais e de emergências a serem seguidos pelos alunos e instrutores da 
+VoeFloripa. Estes procedimentos visam padronizar as operações e maximizar 
+a utilização dos recursos da tripulação.  
+ 
+Os procedimentos normais assumem que todos os sistemas operam 
+normalmente. Irregularidades dos sistemas requerem considerações 
+especiais e a necessidade de consultar o Checklist ou procedimento anormal 
+ou de emergência apropriado. Também a lista de equipamentos mínimos para 
+o voo deve ser observada. 
+Nota: Texto informativo importante sobre a operação normal de um sistema. 
+ 
+CAUTION! (CAUTELA) Informação relevante cuja não 
+observância pode resultar em dano à aeronave, seus sistemas 
+ou as pessoas envolvidas. 
+ 
+V 
+WARNING! (ADVERTÊNCIA) Informações que se não seguidas, 
+causarão dano à aeronave, seus sistemas ou as pessoas 
+envolvidas. 
+ 
+ 
+Este manual quando utilizado em conjunto com o “Pilot’s Operating 
+Handbook” provêm às informações necessárias para a operação segura da 
+aeronave. Todavia, os manuais e recomendações não substituem o bom 
+julgamento do piloto. Emergências combinadas, recursos disponíveis, 
+meteorologia desfavorável, proximidade com o terreno ou situações em que 
+estejam em risco vidas ou propriedades podem requerer o desvio dos 
+procedimentos aqui contidos.  
+
+===== PAGE 10 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+10 
+ 
+A leitura dos manuais e publicações, bem como das legislações e 
+regulamentações necessárias ao voo é responsabilidade do piloto, seja ele 
+aprendiz ou não. O piloto sempre atualizado é a melhor garantia de um voo 
+seguro. 
+03- USO DO CHECKLIST 
+ 
+O pedido e a leitura do Checklist deve seguir uma padronização de 
+forma que para a operação com piloto solo (single pilot) os Checklists sejam 
+executados seguindo-se as filosofias Read and Do (ler e conferir) nas fases 
+antes do acionamento de motor e após o corte do mesmo; e Do and Read 
+(conferir e ler) enquanto o motor estiver acionado e a ACFT estiver em 
+operação, importante ressaltar que os itens do Checklist não substituem o 
+pleno conhecimento dos procedimentos normais previstos no AFM (Airplane 
+Flight Manual) da aeronave, estes previstos na seção II “Procedures”, os 
+Checklist´s visam verificar que os itens essenciais não sejam esquecidos.  
+ 
+Todos os itens dos Checklists deverão ser mandatoriamente 
+efetuados e cotejados em voz alta na língua inglesa, visando à padronização 
+dos procedimentos assim como coordenação de cabine entre os tripulantes 
+envolvidos. Ao final de cada Checklist deve ser exclamado o nome do mesmo 
+seguido de “CHECKLIST COMPLETE”. 
+ 
+As linhas tracejadas (- - - - - - -) visam estabelecer uma pausa no 
+cheque para realização de tarefa ou aguardo de autorização do ATC. Ex.: 
+quando realizando o procedimento para partida, existe uma pausa para 
+aguardar a autorização de acionamento pelo ATC. O Checklist nestes casos 
+deve ser lido até a linha tracejada, exclamando-se ao chegar à linha “BEFORE 
+START CHECKLIST TO THE LINE”. Quando o acionamento for autorizado, 
+segue-se a leitura exclamando-se “BEFORE START CHECKLIST BELOW THE 
+LINE” e quando o Checklist for concluído “BEFORE START CHECKLIST 
+COMPLETE”, mesmo aplica-se aos Checklist´s de emergência. 
+
+===== PAGE 11 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+11 
+04- STANDARD CALLOUTS 
+ 
+ 
+Os standards callouts são falas em voz alta padronizadas que deverão 
+ser usadas nas operações normais e de emergência da aeronave. 
+ 
+ 
+O objetivo do standard callout é assegurar que todos os membros de 
+uma tripulação estejam atentos à altitude e posição da aeronave e, também, 
+em relação às indicações de seus instrumentos. Todos os tripulantes 
+envolvidos na operação deverão acompanhar atentamente todas as fases do 
+voo, alertando para os desvios operacionais e eventuais falhas. 
+ 
+Membros da tripulação; 
+ 
+CM1 (Crew Member 1): Piloto ocupando o assento da Esquerda. 
+CM2 (Crew Member 2): Piloto ocupando o assento da Direita (Instrutor). 
+ 
+ 
+Em todas as aproximações IFR os callouts deverão ser realizados até a 
+DA/MDA, mesmo em condições VMC; 
+ 
+ 
+Nas aproximações VFR, deverá ser efetuado na aproximação final o 
+callout de 500ft AGL “FIVE HUNDRED STABILIZED”. 
+ 
+ 
+O CM1 confirmará a indicação/condição em seus instrumentos, dando 
+ciência do callout efetuado.  Na eventualidade do CM2 não realizar algum 
+callout requerido, o CM1 deverá fazê-lo. 
+ 
+ 
+Sempre que um tripulante fizer modificações na posição de um 
+switch, controle ou frequência, tal ação deverá ser informada para se certificar 
+que o outro tripulante ficou ciente da ação executada.   
+ 
+Exemplo:  Troca de frequência de rádios de navegação e ou comunicação, 
+seleção de radiais, troca de switch no painel de áudio etc. 
+ 
+
+===== PAGE 12 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+12 
+ 
+Sempre que o CM1 comandar uma ação o CM2 deverá repetir de volta 
+a palavra de comando após a ação executada e confirmada. 
+Exemplo: 
+ 
+CM1: quando comandar o trem em cima “LANDING GEAR UP”, o CM2 verifica 
+se o trem está em cima e responde o callout “LANDING GEAR UP”  
+ 
+Para todo “callout” realizado é compulsório uma resposta. 
+ 
+ 
+Todas as discrepâncias deverão ser reportadas pelo CM2 de uma 
+forma clara e concisa conforme descrito abaixo; 
+ 
+4-1 - CALLOUTS DE DESVIOS: 
+ 
+ 
+Os Callouts de desvio estão relacionados à estabilização da aeronave 
+na subida, cruzeiro, descida e aproximação. 
+ 
+- “ALTITUDE” mais ou a menos da 200pés do nível ou altitude estabelecida; 
+ 
+- “SPEED” / “VELOCIDADE” quando houver variações significativas de 
+velocidade, proximidade da VNE 217MPH ou nas aproximações Vapp -5KT ou 
++20KT; 
+ 
+- “BANK” / “INCLINAÇÃO” quando a inclinação for superior a 45⁰ VMC ou 
+30⁰ IMC; 
+ 
+- “LOCALIZER” quando o avião estiver se deslocando demasiadamente do 
+eixo do LOC ou CDI do GPS superiores a 1 DOT; 
+ 
+- “GLIDE  SLOPE” quando  houver  variações  significativas  na  rampa  do  GS 
+superiores a 1 DOT; 
+ 
+Durante as aproximações a tripulação deverá ficar atento aos limites da 
+SAFETY WINDOW (janela de segurança). 
+ 
+ 
+
+===== PAGE 13 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+13 
+4-2 - Definições da SAFETY WINDOW 
+ 
+*  Aproximação VMC: 
+ 
+- Estabilizado a 500ft AGL, com o “LANDING CHECKLIST COMPLETE”. 
+ 
+- O CM1 realizara o callout “500ft STABILIZED” o CM2 confirma “STABILIZED” 
+ou “500ft NOT STABILIZED GO AROUND” 
+Parâmetros de aproximação não estabilizada: 
+- Se necessário inclinar o avião mais que 20° p/ centra-lo com a pista, abaixo 
+de 300 pés. 
+- A 200 pés estiver fora dos limites laterais da pista. 
+- Razão de descida maior que 1000 ft/min pés. 
+- Não circular parar pouso abaixo de 500 pés. 
+- Callout: “NOT STABILIZED GO AROUND” 
+* Aproximação IMC: 
+- Estabilizado a 1000 ft AGL, com “LANDING CHECKLIST COMPLETE”. 
+- O CM1 realizara o callout “1000ft STABILIZED” o CM2 confirma “STABILIZED” 
+ou “1000ft NOT STABILIZED GO AROUND”. 
+ 
+Aproximações que não estejam enquadradas como estabilizadas 
+devem ser descontinuadas e o procedimento de aproximação perdida deve 
+ser iniciado. 
+ 
+ 
+
+===== PAGE 14 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+14 
+Parâmetros de aproximação estabilizada: 
+- IAS entre Vapp e Vapp+20KT 
+- Razão de descida não superior a 1000 fpm 
+- Aeronave totalmente configurada para o pouso 
+- Desvios de localizer, glide slope e VOR / GNS deviation bar (CDI) não 
+superiores a 1 DOT. 
+- Manutenção da trajetória de aproximação exigindo apenas mínimas 
+correções de pitch e heading. 
+- Motores com potência selecionada para a configuração e trajetória. 
+- “LANDING CHECKLIST COMPLETE”. 
+- Callout “1000ft STABILIZED” 
+* Em caso de um callout “NOT STABILIZED”, deverá ser iniciada uma 
+arremetida. 
+* Tomada a decisão de pousar ou arremeter, o CM1 com a confirmação do 
+CM2 deverá efetuar o callout “LANDING” ou “GO-AROUND”. 
+4-3 - Callout Minimum Safe Altitude “MSA” 
+ 
+ 
+O Callout “MSA" deve ser  efetuado  tanto  na subida quanto na 
+descida em todos os voos em condições VMC ou IMC. 
+4-4 - Antes de atingir o FL ou restrições de altitudes nas subidas, descidas e 
+Vetorações. 
+ 
+ 
+Quando em subidas, descidas ou vetoração radar, 100 pés antes de 
+atingir o nível proposto o CM1 anuncia “100ft TO ALTITUDE ou LEVEL” o CM2 
+confirma “CHECK” e ao atingir “ALTITUDE OFF” ou “LEVEL OFF” 
+
+===== PAGE 15 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+15 
+4-5 - Callout de “V1 / VR” 
+ 
+ 
+O Callout da “V1/ROTATE” será efetuado 5 KT antes da V1/VR de 
+forma que as ações para a rejeição de decolagem sejam iniciadas na V1/VR. 
+4-6 - Callout de “ACCELERATION ALTITUDE” (Altitude de aceleração) 
+ 
+ 
+Ao atingir a altitude de aceleração 400´AGL, o CM1 anuncia 
+“ACCELERATION ALTITUDE”, nesta fase da decolagem será realizado os itens 
+de after takeoff checklist. 
+4-7 - Callout de AJUSTE DE ALTIMETROS 
+ 
+ 
+Os ajustes dos altímetros deverão ser efetuados sempre 
+conjuntamente. O CM1 ao ajustar o seu altímetro, informará ao CM2, que 
+ajustará o seu altímetro simultaneamente. Neste exato momento o CM1 e 
+CM2 realizarão o Crosscheck dos altímetros. 
+ 
+Durante a subida, o ajuste será efetuado ao passar a TA (Altitude de 
+Transição). Durante a descida, o ajuste será efetuado no nível de transição, ou 
+de acordo com as cartas de chegada padrão por instrumento (STAR), ou 
+quando autorizado/solicitado pelo ATC. 
+Exemplo: 
+CM1: “TRANSITION ALTITUDE” “ALTIMETERS RESET ONE ZERO ONE THREE” 
+CM2: “ONE ZERO ONE THREE SET” 
+ 
+ 
+ 
+
+===== PAGE 16 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+16 
+4-8 - STANDARD CALLOUTS – IFR e VFR 
+ 
+O CM1 e CM2 fará o callout apropriado baseado nas indicações dos 
+instrumentos ou ao observar condições apresentadas na tabela de STANDARD 
+CALLOUTS abaixo: 
+Fase 
+Condição/Situação 
+Callout 
+Acionamento dos 
+motores 
+Área dos motores 
+“CLEAR” 
+Táxi 
+Check de freios 
+“Check Brakes” 
+“Brakes Checked” 
+Alinhamento 
+Na cabeceira para a 
+decolagem 
+“RWY xx heading 
+xxx⁰” 
+ 
+ 
+ 
+ 
+ 
+Decolagem 
+Iniciando a decolagem 
+“TAKEOFF” 
+Potencia ajustada 
+“Thrust Set” 
+Indicação do velocímetro 
+“AIRSPEED ALIVE” 
+Na V1/VR 
+“V1” /”ROTATE” 
+Ind. de altímetro/ Climb e 
+recolhimento do trem de 
+pouso 
+“POSITIVE RATE OF 
+CLIMB” 
+“LANDING GEAR UP” 
+Na altitude de aceleração 
+“ACCELARATION 
+ALTITUDE” 
+Recolhimento de Flaps, 
+ajuste de potência e hélice 
+“FLAPS UP” 
+“THROTTLE & 
+PROPELLERS SET” 
+ 
+
+===== PAGE 17 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+17 
+ 
+Fase 
+Condição/Situação 
+Callout 
+ 
+ 
+ 
+ 
+Subida 
+ 
+ 
+ 
+Ao cruzar a MSA 
+“MSA xxxx ft” 
+ALTÍMETERS xxxx hPa” 
+ 
+Ao cruzar a TA e ajuste de 
+altímetros 
+“TRANSITION ALTITUDE” 
+“ALTIMETERS RESET ONE 
+ZERO ONE THREE” 
+100ft para a restrição  
+“100ft TO ALTITUDE” 
+1000ft para o FL previsto 
+“1000ft TO LEVEL OFF” 
+100ft para o nivelamento 
+“100ft TO LEVEL” 
+ 
+ 
+Cruzeiro 
+Ao atingir a restrição 
+“ALTITUDE OFF” 
+Ao atingir o FL 
+“LEVEL OFF” 
+Ajuste de potência e hélice 
+“THROTTLE & 
+PROPELLERS SET” 
+Antes da descida  
+“APPROACH BRIEFING” 
+ 
+ 
+ 
+Descida 
+Ao cruzar o Nível de 
+Transição 
+“TRANSITION LEVEL 
+ALTIMETERS xxxx hPa” 
+Ao cruzar a MSA  
+“MSA xxxx ft” “CROSS 
+CHECK ALTIMETERS xxxx 
+hPa” 
+100ft para a restrição 
+“100ft TO ALTITUDE” 
+Em aproximação VFR 500ft   
+AGL         
+“500ft STABILIZED” 
+
+===== PAGE 18 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+18 
+ 
+Aproximação NDB/VOR – Standard Callouts 
+Condição 
+Callout 
+A 10 NM do bloqueio 
+“SET RADIOS FOR APPROACH 
+NDB/VOR” 
+Movimento do CDI do VOR 
+“CDI ALIVE” 
+No bloqueio da estação 
+“NDB/VOR xxxx ft TIME” 
+1000ft AGL GUMPS 
+“ONE THOUSAND STABILIZED” 
+100ft acima da MDA  
+“ONE HUNDRED TO MINIMUMS” 
+MDA  
+“MINIMUMS” 
+Pista avistada       
+“RUNWAY IN SIGHT, LANDING” 
+Não avistou a pista na VDP/MAPT 
+“RUNWAY NOT IN SIGHT GO 
+AROUND” 
+Após iniciada a arremetida, com a 
+aeronave configurada 400ft acima 
+da MDA 
+“SET RADIOS FOR MISSED 
+APPROACH” 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 19 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+19 
+ 
+Aproximação ILS – Standard Callouts 
+Condição 
+Callout 
+Início do arco DME ou Vetoração 
+radar 
+“SET RADIOS FOR APPROACH ILS” 
+1ᵒ movimento do CDI, quando em 
+curva de procedimento ou proa de 
+interceptação 
+ 
+“LOCALIZER ALIVE” 
+ 
+1ᵒmovimento do glide slope, 
+quando estabilizado no curso do 
+localizador 
+ 
+“GLIDE SLOPE ALIVE” 
+Passando o FAF 
+“FINAL APPROACH FIX xxxx ft” 
+1000ft AGL   GUMPS 
+“ONE THOUSAND STABILIZED” 
+               500ft acima da AGL      
+“FIVE HUNDRED” 
+100ft acima da DA  
+“ONE HUNDRED TO MINIMUMS” 
+DA  
+“MINIMUMS” 
+Pista avistada 
+“RUNWAY IN SIGHT, LANDING” 
+Não avistou a pista na DA 
+“RUNWAY NOT IN SIGHT GO 
+AROUND” 
+Após iniciada a arremetida, com a 
+aeronave configurada 400ft acima 
+da DA 
+“SET RADIOS FOR MISSED 
+APPROACH” 
+ 
+
+===== PAGE 20 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+20 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 21 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+21 
+05- GENERALIDADES 
+Este capítulo contém a descrição da aeronave Piper P34-200 (Seneca I) 
+ 
+        
+ 
+
+===== PAGE 22 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+22 
+5.1- ESPECIFICAÇÕES E LIMITAÇÕES 
+ 
+O Piper 34-200 SENECA I é uma aeronave bimotora, monoplano, 
+equipada com trem de pouso retrátil, inteiramente metálica para um máximo 
+de seis ocupantes. 
+ 
+• 
+Motores 
+Fabricante............................................................................................Lycoming               
+Modelo dos Motores.......................................... Motor esquerdo IO-360-C1E6 
+                                                                                      Motor direto LIO-360-C1E6 
+ 
+Tipo do Motor.......................................Aspirado, motor direito contra rotativo 
+                                                                     4 Cilindros opostos horizontalmente, 
+                                                                     alimentação injetada, transmissão 
+                                                                     direta, refrigeração a ar. 
+ 
+Potência..............................................................................200 HP a 2700 RPM 
+Rotação Máxima................................................................................2700 RPM 
+Pressão de admição........................................................................25,5 pol. HG 
+Consumo horário..............................72.5 Litros/hora – 19.2 US GAL/hora MSL 
+ 
+• 
+Tacômetro 
+Faixa Verde (operação normal) ...................................................500-2200 RPM 
+Faixa Vermelha (operação com cautela) ...................................2200-2400 RPM 
+Linha Vermelha (limite máximo) ........................................................2700 RPM 
+ 
+• 
+Hélice 
+Fabricantes................................................Hartzell HC-C2YK-2E e HC-C2YK-2CG 
+Tipo de hélice...................................................................Velocidade constante 
+Número de Pás...............................................................................................02 
+Diâmetro..............................................Máx. 76 polegadas - Mín. 74 polegadas 
+ 
+
+===== PAGE 23 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+23 
+• 
+Combustível 
+Capacidade total.................................................Total 370.4 Litros (98 U.S. Gal) 
+Capacidade de cada tanque........................................185.2 Litros (49 U.S. Gal) 
+Combustível utilizável total.........................................351.5 Litros (93 U.S. Gal) 
+Não utilizável...................................................................18.9 Litros (5 U.S. Gal) 
+Gasolina com Octanagem............................................AVGAS 100 / 130 LL Azul 
+Consumo de combustível – 65% de pot........................69.2 Litros/h (18.3 gph) 
+ 
+◦ Pressão de combustível 
+ 
+Faixa Verde....................................................................................14 PSI-35 PSI 
+Linha Vermelha (mínima).........................................................................14 PSI 
+Linha Vermelha (Máxima)........................................................................35 PSI 
+ 
+ Nota:  Os tanques devem ser verificados visualmente antes de cada voo, 
+utilizando-se a pipeta graduada (fuelstick). 
+ 
+• 
+Lubrificação 
+Capacidade total.........................................................8 U.S. Quarts (7.5 Litros) 
+Quantidade mínima operacional...........................................(6 US Quarts VFL) 
+Tipo de óleo...................................................SAE 50 W100 (utilizado pela VFL) 
+Máxima Temperatura do óleo..................................................................245⁰C 
+Mínima pressão do óleo ........................................................................... 25 PSI 
+Máxima pressão do óleo .......................................................................... 90 PSI 
+ 
+• 
+Temperatura do óleo 
+Faixa Verde (operação normal)  ........................................................ 75⁰-245⁰F 
+Faixa Vermelha (limite máximo)  .............................................................. 245⁰F 
+ 
+• 
+Pressão do óleo 
+Faixa Verde .......................................................................................... 60-90 PSI 
+Faixa Amare ................................................................................... 25 PSI-60 PSI 
+Faixa Vermelha Superior .......................................................................... 90 PSI 
+Faixa Vermelha Inferior ............................................................................ 25 PSI 
+
+===== PAGE 24 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+24 
+• 
+Temperatura de cilindro 
+Faixa Verde .................................................................................... 200⁰ - 475⁰ F 
+Linha Vermelha ....................................................................................... 475⁰ F 
+ 
+• 
+Pesos 
+Peso Básico Vazio ........................................................... 1190 Kgf. (2625 libras) 
+Carga Útil Máxima ........................................................... 714 Kgf. (1575 libras) 
+Peso Máximo (Decolagem) ............................................ 1905 Kgf. (4200 libras) 
+Peso Máximo (Pouso) .................................................... 1814 Kgf. (4000 libras) 
+ 
+• 
+Realizando decolagem com peso máximo, é necessário reduzir 90 Kg 
+de peso para o pouso. 
+• 
+90 Kg = 125 litros (33 gal) de Avgas = 01h : 36min de voo. 
+ 
+Peso Máximo no bagageiro traseiro ................................... 45 Kgf. (100 libras) 
+Peso Máximo no bagageiro do nariz .................................. 45 Kgf. (100 libras) 
+ 
+Nota: Para dados precisos de cada aeronave, consulte a ficha de peso e 
+balanceamento específico, constante nos documentos da mesma. 
+ 
+• 
+Fator Carga 
+Flaps Up.........................................................................................+3.8g    -0.0g 
+Flaps Down....................................................................................+3.8g    -0.0g 
+ 
+• 
+Cargas Específicas 
+Carga Alar.....................................................................................20.1 lbs/sq ft 
+Carga de Potência (peso x potência) ...............................................10.5 lbs/HP 
+ 
+ 
+
+===== PAGE 25 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+25 
+• 
+Velocidades 
+                                           
+- 
+Linha Radial Vermelha (VNE) .......................................................217 MPH 
+-  
+Linha Radial Vermelha (VMC) ........................................................80 MPH 
+-  
+Linha Radial Azul (VYSE)................................................................105 MPH 
+-  
+Arco Amarelo (Operação em ar Calmo) ....................190 MPH A 217 MPH 
+-        Arco Verde (Operação Normal) ..................................76 MPH A 190 MPH  
+- 
+Arco Branco (Operação com Flap) ..............................69 MPH A 125 MPH 
+ 
+ 
+ 
+ 
+06- PERFORMANCE 
+ 
+• 
+Velocidade Nunca Exceder (VNE)........................................217 MPH 
+• 
+Velocidade Máxima de Cruzeiro.........................................190 MPH 
+• 
+Velocidade de Cruzeiro 75% MSL........................................173 MPH 
+75% a 6.000ft...............................................187 MPH 
+Cruzeiro Ótimo (65% a 9.000 ft) ...................185 MPH 
+• 
+Velocidade de Manobra 
+Peso Mínimo – 2.743 lbs (1.244 Kg) ....................................133 MPH 
+Peso Máximo – 4.200 lbs (1.905 Kg) ...................................146 MPH 
+• 
+Penetração em Ar Turbulento............................................130 MPH 
+• 
+Velocidade Máxima Trem de Pouso 
+Extender VLE e VLO Down..................................................150 MPH 
+Recolher VLO Up e Down....................................................125 MPH 
+• 
+Velocidade máxima com Flap 10⁰.......................................125 MPH 
+• 
+Velocidade de Subida 
+Melhor Razão de Subida.....................................................105 MPH 
+Melhor Ângulo de Subida.....................................................90 MPH 
+Subida em Rota..................................................................120 MPH 
+• 
+Velocidade de Subida Monomotor.....................................105 MPH 
+• 
+Velocidade Mínima de Controle (VMC).................................80 MPH 
+                Durante a Instrução VMC = …..............................................90 MPH 
+• 
+Velocidades de Estol – Power Off 
+Trem e Flap recolhidos.........................................................76 MPH 
+              Trem e Flap estendidos.........................................................69 MPH 
+
+===== PAGE 26 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+26 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Alcance 
+ 
+Máximo alcance 65% pot. a 9000ft.......................................700 NM 
+ 
+75% pot.  a 6000ft................................................................770 NM 
+ 
+• 
+Distâncias para Decolagem 
+       Distância de Decolagem - Flap 25⁰, 4200 lbs....................229 metros 
+                                                         Com obstáculo 50ft.....................348 metros 
+ 
+• 
+Distância de Pouso 
+Configuração Normal – Flap 40⁰......................................229 metros 
+                                                          Com obstáculo 50ft....................408 metros 
+• 
+Teto Operacional................................................................18.000 ft 
+• 
+Teto Operacional Monomotor 
+Absoluto...............................................................................5.000 ft 
+Serviço(50ftm) .....................................................................3.650 ft 
+ 
+ 
+
+===== PAGE 27 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+27 
+Performance de decolagem, cruzeiro e pouso normal e monomotor:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 28 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+28 
+ 
+
+===== PAGE 29 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+29 
+ 
+
+===== PAGE 30 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+30 
+ 
+
+===== PAGE 31 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+31 
+ 
+
+===== PAGE 32 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+32 
+ 
+
+===== PAGE 33 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+33 
+ 
+6.2 Velocidades 
+Abreviaturas de velocidade: 
+ 
+- 
+V1 – Velocidade de decisão 
+- 
+V2 – Velocidade de decolagem e subida 
+- 
+Vc (CAS) – Velocidade calibrada 
+- 
+Nós Vc – Velocidade calibrada em nós 
+- 
+V solo (GS) – Velocidade em relação ao solo 
+- 
+VI (IAS) – Velocidade indicada 
+- 
+Nós Vi (KIAS) - Velocidade indicada em nós                                                
+- 
+M – Número Mach 
+- 
+Va (TAS) – Velocidade aerodinâmica ou Verdadeira 
+- 
+VA – Velocidade de Manobra 
+- 
+VAPP – Velocidade de Aproximação 
+- 
+VFE – Velocidade Máxima com flaps estendidos 
+- 
+VLE – Velocidade Máxima com trem de pouso abaixado 
+- 
+VLO – Velocidade Máxima de operação do trem de pouso 
+- 
+VLOF - Velocidade de saída do solo 
+- 
+V 50 – Velocidade a 15m (50 pés) de Altura 
+- 
+VNE – Velocidade nunca exceder 
+- 
+Vmo/Mmo – Velocidade máxima operacional/Mach máximo  
+ 
+operacional 
+- 
+VMC – Velocidade mínima de controle 
+- 
+VMCA - Velocidade mínima na qual um avião multimotor é 
+ 
+direcionalmente controlável com o motor crítico inoperante 
+- 
+VMCG – Velocidade mínima de controle no solo 
+- 
+VMU – Velocidade mínima com manche livre 
+- 
+VNO – Velocidade Máxima estrutural de cruzeiro 
+- 
+VR – Velocidade de Rotação 
+- 
+VREf – Velocidade de referência ou velocidade para pouso 
+- 
+VSSO – Velocidade de Saída do Solo 
+- 
+VS – Velocidade de Estol 
+- 
+VSO – Velocidade de Estol em configuração de aterragem 
+- 
+VSSE – Velocidade com um motor intencionalmente inoperante 
+
+===== PAGE 34 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+34 
+- 
+Vx – Velocidade de melhor ângulo de subida 
+- 
+Vy – Velocidade de melhor razão de subida 
+- 
+Vyse - Velocidade de melhor razão de subida monomotor 
+- 
+Vxse - Velocidade de melhor ângulo de subida monomotor 
+- 
+Vcruz – Velocidade de cruzamento de cabeceira a 15m (50 pés) 
+ 
+na aterragem 
+ 
+• V1: Velocidade de decisão. É a velocidade na qual se ocorrer a falha do 
+motor, o piloto poderá optar em continuar ou parar a aeronave dentro dos 
+limites da pista.  
+• V2 (Velocidade de Decolagem e Subida) - É a velocidade a ser atingida a 35 
+pés sobre a pista, e deve ser igual ou maior 120% da velocidade de estol na 
+configuração de decolagem e 110% da velocidade mínima de controle no ar 
+VMCA. 
+• VC/CAS (velocidade aerodinâmica calibrada) – É a velocidade indicada, 
+corrigida quanto ao erro de posição e do instrumento. A velocidade 
+aerodinâmica calibrada é igual à velocidade aerodinâmica verdadeira na 
+atmosfera padrão ao nível do mar. 
+• VI/IAS (velocidade aerodinâmica indicada) – É a velocidade lida no 
+instrumento, corrigida quanto a erros do instrumento. Os valores de IAS deste 
+Manual consideram nulo o erro de instrumento. 
+• M (número de Mach) – É a razão entre a velocidade aerodinâmica 
+verdadeira e a velocidade do som. 
+• Va/TAS (Velocidade Verdadeira) – É a velocidade relativa à atmosfera calma, 
+ou seja, é a Vc corrigida quanto à altitude, temperatura e efeitos de 
+compressibilidade. 
+• VA (Velocidade de Manobra) – É a maior velocidade na qual aplicação total 
+dos controles aerodinâmicos disponíveis não exceda a resistência estrutural 
+do avião. 
+
+===== PAGE 35 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+35 
+• VFE (Velocidade Máxima com flaps Estendidos) – É a máxima velocidade na 
+qual o avião pode voar, com determinada posição de flap estendido. 
+• VLE (Velocidade Máxima com Trem de Pouso Baixado) – É a máxima 
+velocidade na qual o avião pode voar seguramente com o trem de pouso 
+abaixado. 
+• VLO (Velocidade Máxima de Operação do Trem de Pouso) – É a máxima 
+velocidade na qual o trem de pouso pode ser seguramente recolhido e 
+baixado, Up /Down. 
+• VLOF – É a velocidade no exato momento em que o avião deixa o solo. Ela é 
+intimamente relacionada com a VR e será ditada por esta. Com todos os 
+motores funcionando, a VLOF não poderá ser inferior a 110% da VMU e com 
+um motor inoperante 105% da VMU. O limite superior a VLOF é a velocidade 
+máxima do pneu. 
+• V50 (Velocidade a 50 pés de Altura) – É a velocidade a ser atingida a 15 m 
+(50 pés) de altura acima da pista e mantida durante a trajetória de voo na 
+decolagem, enquanto livra os obstáculos. 
+• VNE (Velocidade que não Deve Ser Excedida) / MNE (Número de Mach que 
+não Deve Ser Excedido) – É o limite de velocidade ou velocidade Mach que 
+nunca de ser excedida. 
+• Vmo/Mmo – É o limite de velocidade operacional que não pode ser, 
+deliberadamente, excedida em operações normais do voo. V são expressas 
+em nós e M em número de Mach. 
+• VMC (Velocidade Mínima de Controle) – É a mínima de voo na qual o avião 
+é controlável direcionalmente, conforme requerido pela legislação. As 
+condições de homologação do avião consideram um motor inoperante e 
+girando em molinete, não mais do que 5⁰ de inclinação lateral para o lado do 
+motor em operação; potência de decolagem no motor em operação, trem de 
+pouso recolhido, flaps em posição de decolagem, e o centro de gravidade mais 
+traseiro possível. 
+
+===== PAGE 36 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+36 
+• VMCA (Velocidade Mínima de Controle no Ar) – É a menor velocidade na 
+qual o controle direcional pode ser recuperado e mantido em voo, após a 
+parada do motor crítico. Nesse caso. É possível empregar uma inclinação 
+lateral de até 5⁰. A inclinação lateral de 5⁰ no sentido dos motores operando 
+permite reduzir a VMCA, porém uma curva aumentará o fator de carga e, 
+portanto o peso aparente, logo, a inclinação só deve ser empregada em caso 
+de absoluta necessidade. 
+• VMCG (Velocidade Mínima de Controle no Solo) – É a menor velocidade 
+calibrada na qual é possível retomar o controle do avião apenas com o uso 
+dos recursos aerodinâmicos (leme de direção), após o motor crítico ter 
+falhado subitamente, enquanto o outro continua em potência de decolagem. 
+• VMU (Velocidade Mínima com Manche Livre) - Velocidade na qual ou acima 
+da qual o avião poderá deixar o solo e continuar a decolagem com segurança. 
+• VNO (Velocidade Máxima Estrutural de Cruzeiro) – É a velocidade que não 
+deve ser excedida, a não ser em atmosfera calma, mesmo assim com cautela. 
+• VR (Velocidade de Rotação) – É a velocidade na qual o piloto inicia a 
+mudança de atitude de arfagem do avião, com intenção de decolar. 
+• Vref: Velocidade de Referência ou velocidade para pouso. É a velocidade a 
+ser mantida na final, na configuração de pouso e corresponde a 1.3 da 
+velocidade de estol. 
+• VSSO (Velocidade de Saída no Solo) – É a velocidade na qual a aeronave 
+deixa de fazer contato com a pista, na decolagem. 
+• Vs: Velocidade de estol. É a velocidade na qual o avião não pode criar 
+sustentação suficiente para sustentar seu peso em voo. O estol depende 
+apenas de ângulo de ataque, não de velocidade. Devido à correlação com a 
+velocidade existente, no entanto, uma “velocidade de estol” é utilizada na 
+prática. 
+
+===== PAGE 37 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+37 
+• VSO (Velocidade de Estol em Configuração de Aterragem) – É a mínima 
+velocidade constante de voo na qual o avião, em configuração de aterragem, 
+ainda é controlável. 
+• Vsse: Abaixo dessa velocidade, não se deve cortar um motor para fins de 
+treinamento de piloto. Leva em conta um tempo de reação do piloto e a perda 
+de velocidade decorrente do tempo de intervenção nos comandos. 
+• Vx: Velocidade que proporciona melhor ângulo de subida. Nesta velocidade, 
+a aeronave atingirá uma maior altitude, num espaço horizontal menor. Em 
+teoria será utilizada após decolagens para livrar obstáculos próximos à pista, 
+operando com os dois motores. 
+• Vy: Velocidade que proporciona melhor razão de subida. Nesta velocidade, 
+a aeronave atingirá uma maior altitude no menor intervalo de tempo, 
+operando com os dois motores. 
+• Vyse: Velocidade de melhor razão de subida com um motor inoperante (s.e. 
+– single engine). É também conhecida como Blue Line, pois é indicada com 
+uma linha azul no velocímetro do avião. Nesta velocidade, a aeronave atingirá 
+uma maior altitude num especo de tempo menor. A Blue Line, entretanto, é 
+determinada em voos de ensaio pelo fabricante ao nível do mar, condição ISA, 
+configuração lisa, portanto o valor pintado no velocímetro reflete uma 
+condição quase sempre diferente da atual. 
+• Vxse: Velocidade que proporciona melhor ângulo de subida com um motor 
+inoperante (s.e. single engine). Nesta velocidade, a aeronave atingirá uma 
+maior altitude, num espaço horizontal menor.  
+Na ocorrência de uma pane, logo após a decolagem, além de todos os 
+problemas associados com a perda do motor, o piloto ainda precisa livrar 
+obstáculos à frente. Esta velocidade lhe dá a melhor chance para se livrar 
+desta condição. Vxse permite, sobre boas condições atmosféricas, a 
+habilidade de controlar a aeronave e obter o melhor desempenho do motor 
+remanescente. O piloto deve apenas manter Vxse até estar livre de obstáculos 
+e então baixar o nariz para acelerar a aeronave. 
+
+===== PAGE 38 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+38 
+• Vcruz (Velocidade de Cruzamento) – É a velocidade em que a aeronave 
+deve cruzar a cabeceira da pista a uma altura de 15 m (50 pés) acima do 
+solo, na aterragem. 
+ 
+07- PLANEJAMENTO DE VOO 
+ 
+O Planejamento de todo voo deve constar de: 
+• 
+Notans e informações dos aeroportos de Partida, Destino e 
+Alternativa 
+• 
+Briefing Meteorológico 
+• 
+Manifesto de Peso e Balanceamento 
+• 
+Planejamento de Navegação conforme NAVIGATION PLAN, com o 
+cálculo de estimados para as posições na navegação.  
+• 
+Cartas de Navegação, preferencialmente organizadas na ordem de 
+utilização.  
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 39 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+39 
+Para realizar os cálculos de peso e balanceamento; 
+ 
+
+===== PAGE 40 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+40 
+Para cálculo de estimados de navegação utilizar o NAVIGATION PLAN; 
+ 
+ 
+
+===== PAGE 41 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+41 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 42 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+42 
+08- SISTEMAS AVANÇADOS 
+8.1- Sistema de combustível 
+ 
+A aeronave PA34-200 está equipada com 2 tanques em cada asa, 
+interconectados e com capacidade de 24,5 galões cada, totalizando 49 galões 
+(185.2 lts) em cada asa, combustível utilizável total 93 galões (351.5 lts) e não 
+utilizável 5 galões (18.9 lts). 
+ 
+O abastecimento é realizado por um único bocal que fica próximo a 
+ponta da asa. 
+ 
+A bomba de combustível primária é operada pelo próprio motor, as 
+bombas elétricas servem com back-up em caso de falha das bombas 
+principais. As Bombas elétricas devem ser utilizadas durante procedimentos 
+de decolagem e pouso para garantir pressão de combustível durante estes 
+momentos críticos do voo. 
+ 
+CROSSFEED 
+ 
+O Crossfeed é um sistema único e encontrado somente em aeronaves 
+multimotoras.  Usando o crossfeed o piloto pode alimentar o motor esquerdo 
+com combustível do tanque direito e vice-versa. O teste de crossfeed no solo 
+não consiste de apenas colocar a alavanca em crossfeed.   
+Para fazer um 
+teste completo deve-se colocar em posição OFF e quando começar a falhar o 
+motor passar para X FEED, assim certifica-se que o sistema está funcionando 
+perfeitamente. 
+NUNCA OPERAR O AVIÃO COM AMBOS SELETORAS EM X FEED. 
+NÃO EFETUAR DECOLAGENS COM A SELETORA EM X FEED. 
+
+===== PAGE 43 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+43 
+ 
+ 
+
+===== PAGE 44 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+44 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 45 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+45 
+8.2- Sistema Elétrico 
+ 
+O Sistema Elétrico é capaz de prover energia suficiente para um voo 
+IFR noturno. Está equipado com dois alternadores com capacidade de 60 
+amperes cada, instalados um em cada motor. 
+ 
+Amperímetros demonstram o funcionamento de cada alternador. 
+Durante o voo é importante que se observe a quantidade de carga que está 
+sendo exigida dos alternadores. Não deve se efetuar decolagens com 
+marcação de 50 ampers ou acima. 
+ 
+Uma bateria de 35 amperes-hora de 12 volts prove corrente para o 
+acionamento e manutenção do sistema elétrico enquanto os alternadores não 
+estiverem operando. A bateria é recarregada pelos alternadores. Fica 
+localizada no nariz do avião e pode ser acessada através do bagageiro do nariz. 
+ 
+Dois reguladores de voltagem controlam a corrente elétrica no 
+sistema, mantendo está sempre em constantes 14 volts, prevenindo danos 
+aos equipamentos. Um mal funcionamento dos reguladores de voltagem será 
+anunciado através de um luz vermelha no painel – Overvoltage light.   
+ 
+Um conjunto de Circuit Breakers protege os equipamentos elétricos, 
+eles não podem ser desativados manualmente. Estão localizados no lado 
+direito do painel. 
+ 
+A maior parte dos switches elétricos está concentrada em um console 
+na lateral esquerda da cabine, facilitando a operação do sistema. Ver página 
+72. 
+ 
+ 
+ 
+
+===== PAGE 46 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+46 
+          
+
+===== PAGE 47 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+47 
+8.3- Sistema de Vácuo 
+ 
+ É composto por duas bombas de vácuo montadas uma em cada 
+motor, possui filtros e reguladores de pressão.  
+ 
+O giro direcional e horizonte artificial são operados através do ar 
+sugado da cabine, passando por filtros e pelos instrumentos e pela bomba de 
+vácuo dos motores. Os reguladores mantém a pressão em 5.0 pol. Hg a 2000 
+RPM.  
+ 
+Uma indicação menor que 4.5 Pol. Hg indica baixo fluxo de ar e os 
+instrumentos podem dar indicações incorretas.  
+ 
+Uma única bomba de vácuo é capaz de operar instrumentos duplos 
+de giro direcional e horizonte artificial até 12.000 ft, acima desta altitude é 
+necessário altas RPM´s para se conseguir manter uma pressão adequada. 
+ 
+A pressão pode ser monitorada através do instrumento de Suction 
+que está instalado no lado direito do painel, o qual indicará a falha de uma 
+bomba individualmente através de um pino laranja caso acorra.  
+ 
+ 
+ 
+
+===== PAGE 48 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+48 
+ 
+ 
+ 
+
+===== PAGE 49 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+49 
+8.4- Sincronizador de Hélices 
+ 
+O sistema de sincronização de hélice consiste em tirar a ressonância 
+que fica quando duas hélices não estão exatamente na mesma RPM.  Para 
+acionar o sistema, primeiro devemos ajustar a RPM dos dois motores o mais 
+próximo possível, (O Seneca I da VoeFloripa não possui sincronizador). 
+ 
+Então se liga o sistema e ele faz o ajuste fino para que haja redução 
+no ruído causado pelas hélices não sincronizadas. 
+ 
+Hélice de Velocidade Constante 
+ 
+Hélices de passo fixo são projetadas para ter a maior eficiência em 
+uma determinada velocidade e RPM.  Este tipo de hélice fornecerá a melhor 
+eficiência apenas numa baixa gama de velocidade, no entanto, se sair dessa 
+gama de velocidade a eficiência cairá drasticamente.  Para se tiver uma 
+melhor eficiência em várias velocidades e RPM´s, criou-se um sistema que 
+permite a mudança do passo da hélice em voo. A esse sistema, denominou-se 
+Hélice de Velocidade Constante. 
+ 
+O responsável pela mudança do passo da hélice é o governador.  
+Através de óleo ou sistema de contrapesos, ou ambos, ele muda o passo 
+conforme o piloto comanda através da manete do passo.  O piloto irá diminuir 
+o passo (aumentar as RPM´s) levando a manete do passo à frente, e 
+aumentará o passo (diminuir as RPM´s) levando a manete do passo para trás. 
+ 
+Antes de continuar o estudo com o sistema, primeiro vamos entender 
+como funciona uma hélice. A hélice é uma asa em rotação, que ao girar, 
+produz sustentação assim como a asa, mas ela gera tração. O passo da hélice 
+seria o equivalente ao ângulo de ataque da asa.  Logo, quando se tem um 
+passo pequeno, tem-se um pequeno ângulo de ataque em relação à hélice e 
+o fluxo de ar (concluímos que ela gera pouco arrasto, porém pouca 
+sustentação). Conforme, aumentamos o passo, também aumentamos seu 
+ângulo de ataque, que por consequência aumentará a sustentação (tração), 
+mas ao mesmo tempo aumentará significativamente o arrasto (acarretando 
+na diminuição de RPM´s). Podemos concluir que o passo mínimo permite a 
+
+===== PAGE 50 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+50 
+hélice girar mais rápido, e com o aumento gradual do passo diminuímos suas 
+RPM´s. Mas para que queremos aumentar o passo e diminuir as RPM´s?  
+ 
+Quanto mais alto a aeronave voar, menor vai ser a densidade do ar. 
+Para que o motor funcione com mais eficiência, deve-se aumentar o passo 
+para que a hélice consiga pegar a maior quantidade de moléculas de ar a sua 
+frente e transforme isso em tração.  Com isso o motor funciona com menor 
+RPM, porém com mesma eficiência. 
+ 
+Porque então não decolamos com um passo maior na decolagem, já 
+que se ganha em eficiência?  A essa pergunta respondemos usando o exemplo 
+da asa comentado anteriormente. Na decolagem, a maior eficiência ocorre 
+quando o motor trabalha na maior quantidade de RPM´s possíveis, já que se 
+aumentando o passo aumenta-se o arrasto, então numericamente, vale-se 
+mais a pena decolar com menor passo e mais RPM, do que com maior passo 
+e maior arrasto (menos RPM). 
+ 
+Uma aeronave equipada com uma hélice de velocidade constante tem 
+melhor desempenho que uma de passo constante.  Isto é por que uma hélice 
+de velocidade constante uma aeronave pode desenvolver sua potência 
+máxima (linha vermelha no tacômetro) sem estar em movimento.  Uma 
+aeronave de passo fixo, por outro lado, tem que ganhar velocidade 
+aerodinâmica para que a RPM atinja seu máximo.  Na aeronave de hélice de 
+velocidade constante, tão breve quanto for aplicado potência máxima, a RPM 
+deve atingir em torno de 40 RPM a menos que a máxima permitida (linha 
+vermelha). 
+8.5- Trem de pouso retrátil 
+ 
+Os benefícios primários de retrair o trem de pouso é aumentar a 
+desempenho de subida e velocidade de cruzeiro maior devido à diminuição 
+do arrasto. O sistema de trem de pouso retrátil pode ser hidráulico e elétrico 
+ou uma combinação de ambos. 
+ 
+Os sistemas de alerta do trem de pouso são fornecidos no próprio 
+painel da aeronave e indicam se o trem está em trânsito, em cima ou baixados 
+
+===== PAGE 51 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+51 
+e travados. O próprio sistema possui uma alternativa para baixar o trem de 
+pouso de outra forma, que podem ser por gravidade ou acumuladores de 
+pressão pneumática. Para saber essas informações e as próprias limitações 
+dos sistemas deve-se ler o Manual da Aeronave. 
+a) Controle e indicadores de posições 
+ 
+Os indicadores de posição do trem de pouso variam conforme os 
+diferentes modelos de aeronaves.  Porém em todas as aeronaves se utiliza um 
+grupo de luzes para essas indicações. 
+ 
+Ao lado do manete de potência existem três luzes, que quando o trem 
+de pouso está baixado e travado ficam verdes. Se o trem de pouso está em 
+trânsito ou em cima e travado, as luzes ficam apagadas. 
+ 
+No entanto, existe uma luz próxima das Caution Lights de luz 
+vermelha que quando acesa o trem de pouso está em trânsito. 
+ 
+Se por ventura a luz permanecer vermelha por mais que o tempo  
+normal  de recolhimento (6 a 10 segundos) indica que uma das pernas  não  
+foi  recolhida,  ou abaixada  normalmente.  
+b) Dispositivos de segurança do trem de pouso 
+ 
+A maioria dos trens de pouso retrátil possui um dispositivo sonoro que 
+quando a aeronave não se encontra com o trem de pouso baixado e travado 
+e atingir certa condição, pode ser velocidade, posição do flap ou posição do 
+manete de potência o dispositivo imite um som. Por exemplo, quando não se 
+está com o trem de  pouso  baixado  e  travado  e  as  manetes  estão  reduzidas,  
+este  aviso sonoro será emitido. 
+ 
+Outro dispositivo de segurança, é  que  no  sistema  de  trem  de  pouso  
+muitas aeronaves  possuem  microswitches  que  percebem  o  peso  da  
+aeronave.  Se este microswitch perceber que há peso no trem de pouso (ou 
+seja, está no solo), ele não permite um levantamento do trem de pouso 
+inadvertidamente.  
+
+===== PAGE 52 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+52 
+c) Inspeção Pré-Voo 
+ 
+Devido a  sua  complexidade,  os  trens  de  pouso retráteis  demanda  
+uma inspeção  mais  apurada do trem  de pouso.  Inicia-se observando dentro 
+da cabine que o trem de pouso está na posição baixado GEAR DOWN. O piloto 
+liga a bateria e verifica que as três luzes estão funcionando. A inspeção 
+externa consiste da checagem individual de cada componente  do  sistema. O 
+trem de pouso, a roda e as áreas adjacentes devem estar limpas e livre de 
+barro ou algo que possa impedir seu  funcionamento. Danos nas portas de 
+recolhimento do trem de pouso podem indicar possíveis problemas quanto à 
+operação do sistema.    
+ 
+Os  amortecedores devem estar  propriamente  “inflados”  e os  
+pistões  limpos.  Os mecanismos de  travamento  e destravamento  devem ser 
+checados  quanto  a  seu  estado. As linhas hidráulicas devem ser observadas 
+quanto a possíveis vazamentos. 
+d) Uso em voo 
+ 
+Normalmente o trem de pouso deve ser recolhido após a saída do solo 
+na altitude que, se houvesse uma falha do motor não fosse possível retornar 
+para a pista.  Entretanto, esse procedimento não se aplica a todas as 
+situações. O recolhimento deve ser planejado, levando-se em conta o 
+tamanho da pista, gradiente de subida e obstáculos na subida. A retração 
+prematura do trem de pouso deve ser evitada. Só se inicia o processo de 
+recolhimento após indicação de climb positivo, já que a aeronave pode 
+retornar para a pista devido à turbulência ou rajada de vento. 
+  
+Assim como na decolagem, no pouso deve-se ter o devido cuidado e 
+SEMPRE ser usado o Checklist. Na perna do vento o piloto deve ter o hábito 
+de executar todo o Landing Checklist. Isto serve para duas finalidades, 
+assegurar que o trem está baixado e garante que terá tempo hábil do piloto 
+verificar que o trem de pouso está realmente baixado e travado através de 
+suas luzes. Os pilotos não acostumados ao trem de pouso retrátil devem ficar 
+atentos aos principais erros que causam acidentes envolvendo trem de pouso: 
+
+===== PAGE 53 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+53 
+- 
+Esquecer-se de baixar o trem de pouso; 
+- 
+Inadvertidamente recolher o trem de pouso; 
+- 
+Abaixar o trem, mas não verificar as indicações; 
+- 
+Não saber operar o trem de pouso de emergência; 
+- 
+Recolher o trem muito cedo após a decolagem; 
+- 
+Abaixar o trem muito tarde no pouso. 
+ 
+        e) Velocidades 
+ 
+Nos manuais dos fabricantes das aeronaves iremos encontrar dois 
+tipos de velocidades com referência ao trem de pouso, a VLO e VLE. 
+ 
+- VLE é a velocidade máxima  na  qual  o  avião  pode  voar  com 
+segurança  com o trem de pouso baixado. (150MPH) 
+ 
+- VLO é a velocidade máxima que o trem de pouso pode ser recolhido  
+e baixado. Como o trem de pouso de nariz é recolhido para frente, a 
+velocidade não deve estar acima das 125 MPH para não sobrecarregar o 
+sistema hidráulico e a velocidade máxima para ser baixado é 150MPH. 
+                    
+ 
+ 
+ 
+
+===== PAGE 54 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+54 
+PA34-200  VLE-150 MPH  VLO- UP125 MPH DOWN 150 MPH 
+
+===== PAGE 55 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+55 
+8.6- Bagageiro do Nariz 
+O compartimento do bagageiro do nariz é comum em aeronaves 
+multimotoras. Muitos pilotos por negligência não verificam a porta se está 
+devidamente fechado e trancada, podendo ocorrer a abertura em voo 
+principalmente na decolagem, a mesma pode quebre-se e desprender da 
+aeronave. Por isso este é um item importantíssimo na inspeção pré-voo, é 
+necessário verificar o mecanismo de fechamento e travamento da porta e 
+após trancar com a Chave. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 56 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+56 
+8.7- Sistema de Aquecimento, Ventilação e Desembaciamento 
+a) Standard muff-heater system 
+Este sistema de aquecimento e ventilação foi projetado para oferecer o 
+máximo de conforto para pilotos e passageiros, com vários controles de 
+temperatura  e de ar externo no painel de instrumentos e individuais tomadas 
+de ar controladas pelos ocupantes. 
+O ar da cabine e calor do desembaçador é fornecido por um permutador 
+de calor montado no coletor de escapamento de cada motor. O ar entra 
+através de um orifício no bordo de ataque da asa e conduzido através do ducto 
+de aquecimento, onde é aquecido pelo coletor de escapamento. Uma válvula 
+localizada na lateral em frente da parede de fogo do motor envia uma parte 
+do ar diretamente para as saídas no para-brisa quando é selecionado na 
+posição DEFROST no painel de controle, e envia o restante do ar para a caixa 
+de controle de temperatura de ar externo, que regula a temperatura do ar a 
+ser introduzido no interior da cabine. O ar externo para o interior da cabine é 
+tomada em meio entradas localizadas no bordo de ataque de cada asa. O ar é 
+forçado para dentro da caixa de controle de temperatura, onde é misturado 
+com o ar aquecido a partir do permutador de calor (tal como selecionado) e 
+em seguida, para o interior da cabine. 
+O calor da cabine e controles do desembaçador estão localizados no lado 
+direito do painel de instrumentos. 
+O desembaçador é equipado com um ventilador para o uso durante o 
+funcionamento no solo para desembaciar o para-brisa. O ventilador é 
+energizado quando a alavanca de controle mecânico DEFROST é colocado na 
+posição "full on" ou "hi"; O ventilador pode ser desligado durante o voo, 
+movendo a alavanca de controle para um pouco antes da posição "full on" ou 
+"hi" aproximadamente uma polegada. Quando o controle do calor da cabine 
+e do desembaçador estão na posição "OFF", o ar aquecido a partir do 
+permutador de calor é despejado para fora do avião. Se o desembaçador é 
+desejado ao máximo, a posição HEAT para o interior da cabine não deve ser 
+selecionada. Uma saída próximo aos pés de cada ocupante permite um fluxo 
+
+===== PAGE 57 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+57 
+de ar de ventilação ou aquecido conforme selecionado pelo controle no painel 
+de instrumentos. 
+ 
+No teto da cabine, acima das poltronas existem, também, saídas de ar 
+de ventilação, que podem ser reguladas individualmente pelos ocupantes de 
+cada poltrona. A este sistema está incorporado um ventilador para fornecer 
+ar fresco durante operação no solo. Este ventilador é controlado através de 
+um interruptor de três posições (“OFF”. "LOW". "MED", ou "HIGH"), localizado 
+no painel superior. 
+ 
+ 
+ 
+b) JANITROL 
+Sistema opcional de aquecimento, ventilação e desembaciamento. 
+ 
+Um opcional aquecedor a combustão (Janitrol) instalado na cauda do 
+avião, atrás do bagageiro traseiro,  fornece ar adicional para o aquecimento 
+da cabine e desembaçador do para-brisa. O aquecedor a combustão pode ser 
+usado para complementar o (Standard muff-heater system), o Seneca I da 
+VoeFloripa não possui este equipamento. 
+
+===== PAGE 58 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+58 
+ 
+A operação do aquecedor é comandada por meio de um interruptor 
+de três posições ("FAN”, "HEAT" e "OFF"), localizado no pedestal de comando, 
+entre as poltronas do piloto e do copiloto. O fluxo e a temperatura do ar são 
+regulados por duas alavancas existentes no pedestal de comando.  
+A 
+alavanca da direita regula a entrada de ar e a da esquerda, a temperatura da 
+cabine. A temperatura da cabine e a circulação do ar podem ser controladas, 
+combinando-se as posições das alavancas. Os passageiros também dispõem 
+de saídas de ar quente individuais, ajustáveis. 
+ 
+Para o aquecimento da cabine, a alavanca de entrada de ar, localizada 
+no pedestal de comando, deve estar parcial ou totalmente aberta, com o 
+interruptor de três posições em "HEAT". Essa posição simultaneamente inicia 
+o fluxo de combustível e acende o aquecedor; e, durante a operação no solo, 
+põe em movimento o FAN (ventilador cilíndrico), que é parte integrante do 
+aquecedor. Sendo de efeito instantâneo e sem necessidade de injeção, o 
+aquecimento da cabine pode ser percebido dentro de poucos segundos. 
+ 
+Quando o ar da cabine atinge a temperatura selecionada pela 
+alavanca de controle a ignição do aquecedor funciona ciclicamente, de modo 
+a manter a temperatura selecionada. Dois interruptores de segurança, 
+acionados pela válvula de admissão e localizados atrás do aquecedor, 
+impedem a operação do ventilador e do aquecedor, quando a alavanca de 
+entrada de ar está na posição "FECHADO". Um micro interruptor, que atua 
+quando no recolhimento do trem de pouso, desliga automaticamente o FAN 
+(ventilador cilíndrico), de modo que, durante o voo, o ar da cabine circule 
+somente devido à pressão de impacto exercida pelo ar EXTERNO. 
+ 
+Com o avião no solo, quando não se necessita de ar quente, estando 
+o interruptor na posição "FAN", o ventilador conduz o ar através de um ducto 
+sob o piso, para ventilação da cabine e desembaciamento dos para-brisas. 
+Sempre que o aquecedor for utilizado para o aquecimento ou ventilação da 
+cabine, o ar é, automaticamente, conduzido em direção aos para-brisas, para 
+desembaciamento dos mesmos. 
+ 
+O fluxo de ar para desembaciamento pode ser aumentado pela 
+ativação do ventilador do (Standard muff-heater system) sistema de 
+
+===== PAGE 59 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+59 
+desembaciamento padrão. O ventilador de ar de desembaciamento é ativado 
+pela alavanca do DEFROST em HI que está localizado no lado direito do painel 
+de instrumentos do avião. 
+ 
+Para introduzir ar fresco na cabine, durante o voo, a entrada de ar 
+deve ser aberta e o aquecedor, desligado. O ar externo entra no sistema e 
+pode ser regulado individualmente nas saídas de ar existentes no piso.  
+ 
+Um termostato localizado na extremidade dianteira externa da 
+camisa do ducto de suspiro do aquecedor, funciona como dispositivo de 
+segurança para desativar o aquecedor, caso ocorra um mau funcionamento 
+no sistema. Tão logo o termostato desative o aquecedor, a Iuz indicadora de 
+superaquecimento, instalada no pedestal de comando ascenderá, Um botão 
+vermelho para reativação do aquecedor pode ser alcançado através do painel 
+de acesso da caverna, painel traseiro de fechamento do bagageiro.  
+Para 
+evitar que o termostato seja ativado em condições normais, ao ser desligado 
+o aquecedor durante operações no solo, coloque o interruptor na posição 
+"FAN" durante 2 minutos, mantendo aberta a entrada de ar, antes de desligar 
+o interruptor. Em voo, deixe a entrada de ar aberta, mantendo ao mesmo por 
+um mínimo de quinze segundos, após desligar o interruptor do sistema de 
+ventilação, aquecimento e desembaciamento. 
+ 
+O aquecedor utiliza combustível do sistema de combustível do avião. 
+Uma bomba elétrica de combustível instalada no próprio Janitrol retira 
+combustível do tanque DIREITO a uma razão de, aproximadamente, 1/2 US 
+Gal/h. se a seletora do motor direito for fechada o aquecedor fica inoperante. 
+O combustível utilizado na operação do aquecedor deve ser levado em 
+consideração, quando do planejamento do voo. 
+ 
+ 
+ 
+
+===== PAGE 60 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+60 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 61 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+61 
+ 
+ 
+
+===== PAGE 62 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+62 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 63 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+63 
+09- REGRAS E POLÍTICA DE SEGURANÇA DA VOEFLORIPA 
+ 
+9.1- APRESENTAÇÃO PARA OS VOOS. 
+ 
+A apresentação para o voo deve se dar na sede da escola, com 1 
+(uma) hora de antecedência. 
+ 
+Durante este tempo será realizado o Briefing para o voo. Verificado o 
+planejamento para o voo, cartas e meteorologia. 
+   
+9.2- MÍNIMOS METEOROLÓGICOS, VOOS DE INSTRUÇÃO  
+ 
+Os voos de instrução somente ocorrerão se os mínimos 
+meteorológicos do tempo presente (METAR) e da previsão meteorológica 
+(TAF) para a localidade do voo forem iguais ou superiores aos mínimos 
+meteorológicos previstos pela regulamentação para o tipo de voo (VFR ou 
+IFR). 
+ 
+Sem reportes ou previsão de chuva forte, nevoeiro, névoa ou outro 
+fator que restrinja a visibilidade ou ocasione mudança brusca na 
+meteorologia, como presença de CB´s ou outros.  
+ 
+A componente máxima de vento de cauda será de 5kt para todas as 
+operações. 
+ 
+Será de responsabilidade do instrutor a verificação da condição 
+meteorológica de forma a garantir que nenhuma condição de meteorologia 
+adversa esteja presente ou prevista para o voo local ou para a rota de 
+navegação e seu destino.  
+ 
+9.3- PROCEDIMENTOS DE ACIONAMENTO & TAXI 
+ 
+O uso do CHECKLIST é OBRIGATÓRIO. Durante a inspeção externa, 
+assegure-se de que a área ao redor da aeronave esteja livre de detritos e 
+obstruções e que a área da hélice esteja livre antes do acionamento do motor 
+de partida. Durante a noite maior cuidado deve ser tomado devido à 
+
+===== PAGE 64 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+64 
+dificuldade natural de visualização noturna. As luzes de anticolisão e 
+navegação deverão ser ligadas antes da partida do motor. 
+ 
+As rotas de taxi deverão ser seguidas à risca, utilizando-se as linhas 
+indicativas amarelas, sempre atentando para o entorno da aeronave. 
+ 
+Desvios, se necessários para manter afastamento seguro de outras 
+aeronaves, deverão ser efetuados com muita cautela. 
+ 
+A velocidade de taxi deve ser apropriada ao entorno, de forma que 
+uma eventual falha nos freios, não venha a ocasionar um abalroamento.  
+ 
+Não é permitido taxi com velocidade superior a 15kt. 
+* Deve se taxiar com muita cautela na entrada dos estacionamentos, e em 
+caso de dúvidas, o motor deve ser cortado e a aeronave manobrada com o 
+garfo. 
+V 
+WARNING!  Reboque com trator é proibido. 
+ 
+ 
+9.4- POUSO NÃO PLANEJADO DENTRO E FORA DE AERÓDROMO 
+ 
+Na eventualidade de um pouso não planejado, em aeródromos não 
+previstos para o voo, certifique-se de que a aeronave esteja segura e 
+amarrada antes de buscar assistência.  
+ 
+Caso o pouso não planejado seja ocasionado por uma pane ou 
+emergência, a aeronave deverá permanecer em solo até que tenha sido 
+reparada e verificada por mecânico autorizado pela escola e o voo autorizado 
+pela Coordenação de Instrução Prática. 
+ 
+É obrigatório aos pilotos contato imediato com a Coordenação de 
+Instrução Prática nos telefones contidos na pasta da aeronave. É 
+recomendado aos Instrutores e Alunos, acrescentarem nas agendas de seus 
+celulares os telefones de contato da escola e os telefones de plantão. Para 
+
+===== PAGE 65 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+65 
+continuação do voo, a Coordenação de Instrução Prática deverá ser 
+consultada para liberação. 
+Técnicas para pouso de Emergência: 
+ 
+A prioridade em qualquer pouso de emergência é evitar o impacto 
+vertical, pois este é o mais grave, responsável pela maior parte das fatalidades 
+em acidentes aeronáuticos, principalmente com aeronaves de baixa 
+velocidade. O impacto vertical é um movimento acelerado contínuo contra o 
+terreno, e desaceleração é praticamente instantânea sendo na maioria das 
+vezes fatal. Para evitar o impacto vertical mantenha aeronave voando até o 
+toque no solo ou água, jamais a deixe estolar e atingir o solo de nariz para o 
+chão ou com grande razão de descida. A velocidade mínima de voo das 
+aeronaves leves é bem baixa o que traz mais segurança para um pouso de 
+emergência. Lembre-se que até o toque no solo, o avião deve estar voando e 
+não caindo. 
+ 
+9.5- DISCREPÂNCIAS E AÇÕES CORRETIVAS DE MANUTENÇÃO 
+ 
+Discrepâncias e mau funcionamento de equipamentos na aeronave 
+deverão ser reportados no Relatório Técnico da Aeronave (RTA) e diretamente 
+à Coordenação de Instrução Prática pelos meios de comunicação aplicáveis. 
+ 
+Voos não serão permitidos com aeronaves contendo discrepâncias, a 
+não ser que: 
+* tenha sido reparada e liberada por um mecânico autorizado pela escola; 
+* o equipamento com mau funcionamento não seja essencial e tenha sido 
+devidamente rotulado inoperativo (INOP) por mecânico autorizado. 
+ 
+Todo serviço de manutenção deverá ser autorizado pela Coordenação 
+de Instrução Prática da Escola. 
+ 
+ 
+
+===== PAGE 66 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+66 
+ 
+9.6- SEGURANÇA DA AERONAVE 
+ 
+As Aeronaves deverão sempre ser afixadas às áreas de amarração, 
+utilizando-se no mínimo 3 estais deixando-se folga mínima nas amarras, de 
+forma a garantir a integridade da aeronave durante a ocorrência de 
+intempéries. 
+ 
+Deverá ser deixado um espaço mínimo de 1,5m (um metro e meio) 
+entre partes de aeronaves estacionadas ao redor. 
+ 
+Calços deverão sempre ser utilizados. Devem ser os últimos itens a 
+serem retirados antes do voo, e os primeiros a serem colocados assim que a 
+aeronave estiver na posição de estacionamento. É obrigatório que a aeronave 
+esteja calçada para o abastecimento. 
+ 
+O Freio de Estacionamento deve sempre ser aplicado para a realização 
+da inspeção externa, abastecimento, e partida de motores. 
+ 
+As Travas de controles de voo  deverão ser colocadas após cada  voo, 
+caso não haja trava a bordo da aeronave, o cinto de segurança deverá ser 
+utilizado para prender o manche. 
+ 
+Equipamentos de segurança, como capas de para-brisas, de Pitot, 
+capas da nacele do motor (estas somente 20 min após o corte), deverão ser 
+instaladas sempre que a aeronave for ficar parada por mais de uma hora. Ou 
+quando o piloto julgar necessário por motivo de fenômenos atmosféricos, 
+poeira de equipamentos de limpeza do aeroporto (cortador de grama, 
+varredor etc.), entre outros. 
+ 
+A Trava de Hélice deverá ser utilizada sempre que a aeronave for 
+permanecer desacompanhada ou nos pernoites. Fora de base, deverá ser 
+dada especial atenção a este procedimento. 
+ 
+9.7- MANOBRAS NO AERÓDROMO BASE (SBFL) 
+ 
+O Aeroporto Hercílio Luz é bastante movimentado, com operações de 
+Aeronaves Comerciais, Jatos Executivos, taxi-aéreo, e aviação geral. 
+
+===== PAGE 67 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+67 
+ 
+Ao caminhar no pátio, próximo à aeronave ou em direção a esta, 
+sempre tome a devida precaução evitando aproximar-se de aeronaves em 
+movimento ou com motor ou luz anticolisão acionados.  
+A atenção durante os procedimentos de inspeção externa, abastecimento, 
+movimentação em reboque manual da aeronave deve ser redobrada.  
+ 
+Principalmente com a movimentação de veículos e outras aeronaves, 
+no entorno. 
+ 
+Nas operações de taxi e voo, é necessária cautela e especial atenção 
+com as rajadas de ar (Jet Blast) dos motores de aeronaves maiores, pois 
+podem ocasionar perda de controle direcional, tanto no solo quanto em 
+operações de pouso e decolagem. Para tal, devem ser seguidas as instruções 
+do ATC e dos fiscais de pátio, sempre exercendo bom julgamento da situação 
+e informando a ambos, caso a instrução coloque em risco a operação. 
+ 
+Em operações de pouso e decolagem, é de extrema importância a 
+observação de esteira de turbulência (waketurbulence) de aeronaves de 
+maior porte. O  encontro com a esteira de um 737 ou um A320 pode causar 
+perda de controle da aeronave podendo não ser possível a recuperação do 
+controle a baixa altura. Recomenda-se a leitura da literatura aplicável para 
+exercer bom julgamento durante as operações.  
+ 
+Em caso de dúvidas, espere o tempo máximo antes de iniciar uma 
+decolagem ou aproximação seguindo uma aeronave maior. 
+  
+9.8- ABASTECIMENTO, COMBUSTÍVEL RESERVA PARA VOOS LOCAIS 
+ 
+        E NAVEGAÇÕES 
+ 
+Para o abastecimento de aeronaves, deverá ser contatada a BR 
+Aviation (preferencialmente) ou a Shell Aviation e o combustível solicitado 
+será o AvGas 100LL especifico para motores aeronáuticos a gasolina. 
+ 
+Durante o abastecimento, a aeronave deverá estar calçada e 
+desenergizada, sendo de responsabilidade dos pilotos, a abertura dos tanques 
+e a orientação do profissional de abastecimento quanto à quantidade a ser 
+
+===== PAGE 68 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+68 
+abastecida bem como o correto posicionamento para abastecimento. A 
+aeronave será aterrada pelo operador da companhia de abastecimento bem 
+como todo o manuseio de mangueiras e bocais de abastecimento.  
+ 
+O piloto posteriormente deverá assegurar o correto fechamento das 
+tampas dos tanques. 
+ 
+Após o abastecimento e tempo para acomodação do combustível, é 
+obrigatório a realização do procedimento de drenagem de combustível. 
+* Nenhum abastecimento deverá ser realizado sob chuva forte ou em 
+condições meteorológicas adversas. Sob chuvisco, caberá o bom julgamento 
+e a garantia de proteção por cobertura do bocal de abastecimento impedindo 
+a entrada de água nos tanques.  
+** Nenhum tipo de transmissão por rádio frequência (celulares, HTs, etc), 
+fontes de ignição ou possíveis causadores de fagulhas podem ser utilizados 
+durante o abastecimento. 
+ 
+A Autonomia mínima para os voos será de duas (02) horas ou o que 
+for maior dos abaixo citados; 
+- Voo Local VFR - o tempo de voo da lição + uma (01) hora; 
+- Voo Local IFR – tempo de voo da lição + alternativa + 45 minutos; 
+- Navegação VFR Diurno – tempo de voo + alternativa + 30 minutos; 
+- Navegação IFR Diurno – Tempo de voo + alternativa + 45 minutos; 
+ 
+9.9- PREVENÇÃO DE COLISÃO, EM SOLO E EM VOO 
+ 
+No solo, aderência as autorizações do ATC, cheque de área antes da 
+movimentação da aeronave, luzes de anti-colisão e concentração na operação 
+são procedimentos que devem ser adotados para minimizar o risco de colisão. 
+A execução dos checklists deverá ser obrigatoriamente com a aeronave 
+parada e freada. No período noturno, maior cautela deve ser tomada devido 
+
+===== PAGE 69 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+69 
+à dificuldade natural de percepção do movimento no escuro.  Especial 
+atenção deve ser dada às luzes. 
+ 
+Em voo a mesma política deve ser utilizada acrescida de cheques de 
+área antes de efetuar curvas, mudanças de altitude e ingressos em circuitos 
+de tráfego. O piloto deve atentar sempre para a comunicação devendo 
+transmitir sua posição, principalmente quando fora da cobertura radar ou em 
+áreas de coordenação de tráfego, nesta última, utilizando a frequência 123,45 
+e a da Rádio AFIS quando aplicável. 
+** Para evitar incursões de pista (entrada inadvertida em pista em uso) é 
+necessário ter certeza através de cotejamento da instrução da torre e 
+verificação das áreas de aproximação e da própria pista em si, antes de 
+ingressar em uma pista em uso. 
+ 
+9.10- ÁREAS DE INSTRUÇÃO 
+ 
+As áreas de instrução devem ser respeitadas e utilizadas para o 
+treinamento, pois são fruto de acordo operacional com o DTCEA-FL. Caso 
+necessário o treinamento fora destas, coordenar com o ATC. 
+ 
+Todas as áreas de instrução pela topografia natural são propensas a 
+turbulência orográfica quando ocorrerem ventos fortes. Para tanto deve-se: 
+√  Evitar aproximar-se dos morros; 
+√  Afastar-se das áreas a sotavento das elevações; 
+√  Ficar atento a formação de nuvens lenticulares e nuvens de grande 
+desenvolvimento vertical com formação convectivo-orográfica; 
+√  Atentar aos praticantes de  voo  livre que utilizam as mais diversas áreas na 
+região de Florianópolis para alçar seus voos. 
+ 
+É comum, em determinadas condições de vento e térmicas, grande 
+incidência de Urubus na região. 
+
+===== PAGE 70 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+70 
+ 
+Também é grande a operação de ultraleves, muitas vezes sem 
+comunicação, nas áreas litorâneas, principalmente no verão.  
+ 
+9.11- POLÍTICA ANTIDROGAS, MEDICAMENTOS E FATORES  
+   
+ 
+          HUMANOS 
+ 
+Por lei federal, é proibido o FUMO abordo de aeronaves, 
+independentemente da categoria. O risco de fogo abordo por esse tipo de 
+prática é imenso. 
+ 
+É proibido apresentar-se para o voo ou estar abordo das aeronaves da 
+escola havendo ingerido bebida alcoólica num período inferior a 8 (oito) horas 
+do horário de apresentação (RBHA 91.17) ou, mesmo cumprido esse período, 
+estando ainda sob seus efeitos. A escola recomenda não ingestão de álcool 
+num período de 12 (doze) horas antecedentes ao horário de apresentação, 
+pois mesmo passado o efeito do álcool, resquícios de cansaço, e desgaste do 
+organismo, podem causar dificuldades de atenção e redução do tempo de 
+resposta a estímulos. 
+ 
+É proibida a ingestão de bebidas alcoólicas em local público, vestindo 
+o uniforme da escola. 
+ 
+É proibido o voo sob o efeito de medicamentos, sem supervisão 
+médica. 
+ 
+É proibido o uso de drogas ilícitas de qualquer gênero. 
+ 
+É importante que os fatores causadores de fadiga sejam amplamente 
+observados e que se tenha em mente que estes podem representar risco para 
+a operação com segurança das aeronaves, devendo o próprio piloto  realizar 
+uma auto crítica sobre seu estado de fadiga antes de cada  voo. Como exemplo 
+alguns fatores devem ser observados: 
+√  Estresse por sobrecarga de funções; 
+√  Cansaço por falta de sono; 
+
+===== PAGE 71 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+71 
+√  Perda de concentração ou demais sintomas relacionados a doenças; 
+√  Fraqueza por má alimentação; 
+√ Pressões do tempo, correria (tenho que decolar logo, pois tenho 
+compromisso...) 
+√  Necessidades fisiológicas não atendidas (bexiga cheia, dor de barriga); 
+√  Frio ou Calor excessivo. 
+√ Entre outros... 
+ 
+Também atitudes perigosas devem ser percebidas, sendo o piloto o 
+principal responsável pelo reconhecimento destas, em si próprio. 
+√  Invulnerabilidade -  quando parece que algo errado nunca vai acontecer 
+conosco... 
+√  Anti-autoridade  -  "essa regra é só pro pessoal que está começando, não  
+pra mim" 
+√  Macho - Esse vento não é nada, deixa comigo que vou mostrar pra eles... 
+√  Impulsividade  -  Motor tossiu! Vou pousar aqui mesmo!!! (sem olhar em 
+volta; o campo está logo ao lado e o motor nem parado realmente está) 
+√  Resignação - Não tem mais o que fazer... se quebrar, quebrou... 
+ 
+O processo de tomada de decisão deve utilizar uma lógica crítica 
+podendo ser delineado resumidamente utilizando-se como referência a regra 
+abaixo, mas não sendo está a única maneira, devendo sempre ficar a critério 
+do piloto em comando o melhor processo para o momento utilizando sempre 
+todos os recursos disponíveis. 
+5 passos básicos que podem auxiliar no processo decisório: 
+1.  Reconheça uma mudança de cenário ou na situação. 
+
+===== PAGE 72 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+72 
+2.  Defina o Problema 
+3.  Escolha uma linha de Ação 
+4.  Implemente sua Decisão 
+5.  Verifique que sua ação está produzindo o efeito desejado; Caso contrário, 
+reinicie o processo. 
+ 
+ 9.12- USO DOS EQUIPAMENTOS DE PROTEÇÃO INDIVIDUAL, 
+ 
+FLORIPA AIRPORT E SECURITY 
+ 
+Todo o voo deve iniciar na sala de briefing e o piloto será responsável 
+por verificar todos os equipamentos de proteção individual (EPI) necessários 
+ao voo, como os abafadores de som para os ouvidos e sapatos fechados que 
+são de uso obrigatório. Sem estes, é proibido o acesso ao pátio do aeroporto.  
+ O instrutor sempre acompanhará o aluno até o avião, retornando com 
+ele ao final do voo, mesmo em voo solo. Os funcionários da Floripa Airport 
+dispõe de identificação dos instrutores cadastrados e autorizados a acessar as 
+aeronaves da escola. 
+Muita atenção com bagagens desacompanhadas ou com abordagens 
+de terceiros, com solicitações estranhas (carregar bagagem dos outros, 
+conhecer a aeronave, etc). É possível que uma pessoa mal intencionada haja 
+com muita cordialidade para infiltrar-se no aeroporto ou agir com algum tipo 
+de má fé contra a segurança das operações. Ao perceber alguma 
+movimentação estranha, comente com o colega e reporte imediatamente à 
+autoridade aeroportuária. 
+ 
+9.13- AUTORIZAÇÕES ESPECIAIS DE VOO E RELATORIOS DE  
+ 
+ 
+          PREVENÇÃO 
+ 
+Todo voo que fuja das características normais de operação, devem ser 
+previamente autorizados pela direção da escola. Sempre que houver dúvida 
+quanto ao tipo de operação a Coordenação de Ensino Prático deve ser 
+consultada. 
+
+===== PAGE 73 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+73 
+ 
+O Relatório de Prevenção de Acidentes (RELPREV) é uma das melhores 
+ferramentas para manter elevada a segurança operacional.  
+Devendo ser 
+feito, com a maior riqueza de detalhes possível, de forma que o evento possa 
+ser avaliado e providências possam ser tomadas para que a situação não 
+venha a ocorrer novamente. A escola recomenda a utilização desta 
+ferramenta. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 74 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+74 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 75 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+75 
+10- PROCEDIMENTOS NORMAIS 
+QUADRO DE MISSÕES SE ENCONTRA NO GUIA DE MANOBRAS IFR 
+10.1- INSPEÇÃO PRÉ-VOO (PREFLIGHT CHECK) 
+Nota: Nesta fase os Checklists devem ser lidos e executados (filosofia 
+“Read and Do)” 
+ 
+CABIN 
+DOCUMENTS & MAINTENANCE STATUS                                                   CHECK 
+GEAR LEVER                                                                                                         DOWN 
+PARKING BRAKE                                                                                                      SET 
+MASTER RÁDIOS / EQUIPAMENTOS                                                                 OFF 
+CIRCUIT BREAKERS                                                                                     CHECK IN 
+IGNITION SWITCH                                                                                                   OFF 
+MASTER BATTERY                                                                                                    ON 
+LANDING GEAR LIGHTS                                                 3 GREEN NO RED LIGHT 
+FUEL QUANTITY                                                                                                CHECK 
+MASTER BATERY                                                                                                    OFF 
+THROTTLE IN IDLE / PROPELLER FULL FORWARD / MIXTURE   CUT-OFF 
+ALTERNATE AIR                                                                                                      OFF 
+COWL FLAPES                                                                                                       OPEN 
+FLAPS                                                                                                                        FULL 
+FUEL SHUTOFF VALVE                                                                                       OPEN 
+PITOT AND STATIC SYSTEMS                                                                         DRAIN 
+FIRE EXTINGUISHER                                                                                         CHECK 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 76 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+76 
+ 
+Sempre verificar se a documentação da aeronave está em dia e completa. 
+Documentos Obrigatórios: 
+  
+ 
+ 
+ 
+ 
+Verificar o Livro de Reportes (RTA – Relatório Técnico da Aeronave), e total de 
+horas disponíveis para a próxima intervenção, informar ao instrutor/escola 
+quaisquer discrepâncias. 
+•     Nesta fase deve-se colocar os Flaps em 40⁰, para uma melhor inspeção 
+dos pontos de fixação do mesmo durante o Pre-flight Inspection. 
+Nota: Em voos noturnos, devem ser acrescentados na verificação os itens 
+abaixo que estão no verso do pre-flight checklist CABIN (NIGHT PRE FLIGHT) 
+ 
+BEACON / STROBE LIGH                                                                                     TEST 
+NAV LIGHT                                                                                                               TEST 
+LANDING/TAXI LIGHT                                                                                         TEST 
+INTERIOR LIGHTS                                                                                                 TEST 
+FLASH LIGHT & EXTRA BATTERYS                                         TEST & CHECKED 
+ 
+ 
+CERTIFICADO DE MATRÍCULA
+CHECK
+CERTIFICADO DE AERONAVEGABILIDADE
+CHECK
+LICENÇA DE ESTAÇÃO
+VALID
+TAXA FISTEL
+VALID
+SEGURA RETA
+VALID
+PESO E BALANCEAMENTO
+ON BOARD
+CVA
+VALID
+MAPA DOS COMPONENTES
+VALID
+DIÁRIO DE BORDO
+CHECK
+CHECKLIST
+ON BOARD
+PUBLICAÇÕES AERONÁUTICAS
+ON BOARD
+MANUAL DA AERONAVE
+ON BOARD
+AIRCRAFT
+
+===== PAGE 77 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+77 
+ 
+ 
+ 
+
+===== PAGE 78 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+78 
+ 
+ 
+ 
+ 
+Os itens da inspeção Externa devem ser realizados conforme a 
+sequência da ilustração acima:  
+RIGH WING 
+FLAP                                                                                                                       CHECK 
+AILERON                                                                                                               CHECK  
+WING TIP                                                                                                              CHECK 
+LEADING EDGE                                                                                                   CHECK 
+FUEL TANK QTY VISUAL                                                                                 CHECK 
+MAIN WHEEL TIRE                                                                                            CHECK 
+BRAKE                                                                                                                   CHECK 
+ENGINE NACELLE                                                                                              CHECK 
+RIGHT ENGINE OIL QTY                                              CHECK (6.0 QTS, REFUEL) 
+
+===== PAGE 79 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+79 
+RIGHT PROPELLER                                                                                            CHECK 
+COWL FLAPS                                                                                                        CHECK 
+Verificar: 
+• 
+Trilho e fixação do flap 
+• 
+Fixação do aileron e seu curso de comando 
+• 
+Estado da ponta de asa e luzes 
+• 
+Algum indício de avaria no bordo de ataque 
+• 
+Visualmente a quantidade de combustível (usar o medidor padrão) 
+• 
+Fixação da carenagem do motor  
+• 
+Algum indício de vazamento de fluído de freio e espessura das pastilhas 
+• 
+Estado da hélice, bordo de ataque e pontas das pás 
+• 
+Fixação do spinner 
+• 
+Entradas de ar desobstruídas  
+• 
+Quantidade mínima de óleo 6.0 us quarts (vfl). Completar abaixo disso. 
+Nota: aguardar 10 minutos após o corte do motor para verificar quantidade de óleo. 
+ 
+ 
+NOSE 
+NOSE WHEEL STRUT                                                                                        CHECK 
+NOSE WHEEL TIRE                                                                                            CHECK 
+LANDING LIGHT                                                                                                 CHECK 
+FORWARD BAGGAGE                                                                                        CHECK 
+FORWARD DOOR                                                                                             LOCKED 
+WINDSHIELD                                                                                                       CHECK 
+
+===== PAGE 80 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+80 
+ 
+Verificar: 
+• 
+Seção do nariz quando a danos 
+• 
+Condições do amortecedor do trem do nariz e sua extensão, vazamentos 
+de óleo, do amortecedor e shimmy dumper 
+• 
+Se a lâmpada e resistência do farol estão intactos 
+• 
+Bagageiro, nível de fluido hidráulico após certificar que a porta está 
+realmente travada e trancada com a chave 
+•     Para-brisa deve estar limpo e sem rachaduras. 
+ 
+LEFT WING 
+ENGINE NACELLE                                                                                              CHECK 
+RIGHT ENGINE OIL QTY                                              CHECK (6.0 QTS, REFUEL) 
+LEFT PROPELLER                                                                                              CHECK 
+COWL FLAPS                                                                                                       CHECK 
+MAIN WHEEL TIRE                                                                                           CHECK 
+BRAKE                                                                                                                   CHECK 
+LEADING EDGE                                                                                                   CHECK 
+PITOT TUBE                                                                                                         CHECK 
+STALL WARNING                                                                                               CHECK 
+FUEL TANK QTY VISUAL                                                                                 CHECK 
+WING TIP                                                                                                              CHECK 
+AILERON                                                                                                               CHECK  
+FLAP                                                                                                                       CHECK 
+ 
+V 
+WARNING! O entupimento do suspiro do tanque de 
+combustível pode levar a uma baixa pressão no sistema 
+de alimentação causando a falha do motor. 
+ 
+
+===== PAGE 81 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+81 
+ 
+Verificar: 
+• 
+Fixação da carenagem do motor  
+• 
+Quantidade mínima de óleo 6.0 us quarts (vfl). Completar abaixo disso. 
+• 
+Estado da hélice, bordo de ataque e pontas das pás 
+• 
+Fixação do spinner 
+• 
+Entradas de ar desobstruídas  
+• 
+Algum indício de vazamento de fluído de freio 
+• 
+Algum indício de avaria no bordo de ataque 
+• 
+Visualmente a quantidade de combustível (usar o medidor padrão) 
+• 
+Tubo de pitot desobstruído e capa retirada 
+• 
+Tomada de ar do sistema de estol desobstruída 
+• 
+Suspiro do tanque de combustível desobstruído 
+• 
+Estado da ponta de asa e luzes 
+• 
+Fixação do aileron e seu curso de comando 
+• 
+Trilho e fixação do flap 
+ 
+FUSELAGE 
+REAR DOOR 
+              LOCKED 
+LEFT ESTATIC 
+                 CHECK 
+DORSAL FIN 
+                 CHECK 
+RIGHT ESTATIC 
+                 CHECK 
+
+===== PAGE 82 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+82 
+ 
+ 
+CAUTION! O entupimento do tubo de pitot leva a 
+indicações errôneas do velocímetro podendo causar má 
+interpretação e levar ao estol inadvertido ou perda de 
+consciência situacional, especialmente em condições 
+IMC. 
+ 
+ 
+EMPENNAGE 
+CONTROL SURFACES 
+                 CHECK 
+FLASHING BEACON 
+                 CHECK 
+ANTENNAS 
+                 CHECK 
+ 
+Verificar: 
+• 
+Atentar às fixações das superfícies de comando, folgas, frenos, antenas, 
+avarias ou outros danos visíveis. 
+• 
+Carretel do compensador 
+• 
+Hastes de comando do profundor e compensador de leme 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 83 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+83 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DRAINS AND OIL 
+LEFT WING DRAIN VALVE                                                           DRAIN & CHECK 
+RIGHT WING DRAIN VALVE                                                        DRAIN & CHECK 
+FUEL STRAINER DRAIN KNOB                                                               PULL OUT 
+ 
+Verificar: 
+• 
+Coloração do combustível azul, contaminação por água ou sujeira e 
+havendo dúvidas sobre contaminação, efetuar drenagem até estar certo 
+de que não há resquícios de água ou sujeira.  
+• 
+Drenar primeiramente as asas e após o filtro de combustível. 
+
+===== PAGE 84 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+84 
+ 
+V 
+WARNING! A não execução do procedimento de 
+drenagem pode levar ao acúmulo de sujeira ou água na 
+linha de combustível, bem como o baixo nível de óleo 
+prejudica a lubrificação. Ambas as situações podem levar 
+a falha do motor. 
+ 
+10.2- ANTES DA PARTIDA DO MOTOR 
+Nota: A partir deste momento os Checklists devem ser feitos após a 
+execução dos procedimentos normais previstos (filosofia “Do and Read”) 
+ 
+Após o término do Pre-flight Checklist, o aluno deve: 
+• 
+Confirmar visualmente a retirada de calços, amarras e capas – Walk 
+Around. 
+• 
+Entrar na aeronave; 
+• 
+Ajustar o assento e cintos de segurança; 
+• 
+Ajustar o Headset; (Fones) 
+• 
+Ajustar altímetro – altitude do aeródromo; 
+• 
+Executar o Before Start Checklist. 
+ 
+Anunciar; “Before Start Checklist Down to the line” (até a linha tracejada)  
+ 
+ 
+ 
+
+===== PAGE 85 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+85 
+BEFORE START 
+PREFLIGHT                                                                                               COMPLETED 
+BLOCKS                                                                                                           REMOVED 
+ALTIMETER                                                                                                   REMOVED 
+SEAT BELTS                                                                                                 FASTENED 
+CIRCUIT BREAKERS                                                                                    CHECKED 
+FUEL SELECTOR                                                                                                   BOHT 
+MIXTURE                                                                                                           CUT-OFF 
+CLEARENCE                                                                                                       OBTAIN 
+   ---------------------------- WHEN CLEAR FOR START -------------------------- 
+ 
+ 
+Após a realização deste Checklist, ligar o Master e um rádio VHF, 
+copiar a informação ATIS ou obter a informação meteorológica com o órgão 
+ATS. (Torre ou Rádio AFIS), Solicitar a autorização de trafego, aguardando para 
+a cópia e cotejamento da mesma, após deverá efetuar a preparação da 
+cabine, ajustar altímetros, selecionar rádios/navegação/transponder e 
+selecionar carta de saída, preencher o takeoff data cards. 
+Obs.: Em alguns aeródromos, por vezes o controle de solo autoriza o 
+acionamento antes da cópia da autorização. Este procedimento pode ser 
+executado, porem a chance de corte posterior do motor pela não aprovação 
+do plano de voo. 
+Exemplo de preenchimento de TAKEOFF DATA CARD: 
+ 
+Deve-se utilizar dados do ATIS, Peso e Balanceamento e Autorização 
+de tráfego para o preenchimento do Take-Off-Data. Os dados ali contidos 
+deverão ser sempre conferidos pelo Instrutor. 
+ 
+ 
+ 
+
+===== PAGE 86 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+86 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Informações Preliminares: 
+Date – Data do voo; 
+AIRPORT – código ICAO de 4 letras (ex. SBFL); 
+POB – Número de pessoas a bordo incluindo a tripulação; 
+EOBT – Hora UTC do acionamento; 
+ATIS  -  a) - Caso o aeroporto possuir, anote a letra alfabética da informação   
+                     atual e o horário em que foi elaborada.   
+              b) - Caso o aeroporto não possuir ATIS, anote a frequência do serviço 
+                     AFIS da localidade. 
+ 
+WIND, VIS, CLOUDS, QNH e TEMP – Cópia do ATIS ou informação do serviço 
+AFIS; 
+Approach – Procedimento em operação no momento da cópia, o qual a 
+carta IAC referida deverá ser reservado para caso o retorno seja necessário. 
+
+===== PAGE 87 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+87 
+RWY – Pista em uso para a qual o Takeoff foi elaborado, incluindo 
+particularidades (L, R, interseção, etc...); 
+T.O. Fuel – Takeoff Fuel – Combustível total na decolagem em Litros; 
+Endurance – Autonomia disponível conforme o T.O. Fuel, considerar 
+consumo de 80 lts/h (VFL); 
+C R A F T - C-Clearance R-Route  A-Altitude F-Frequency do APP T- 
+Transponder 
+T.Off Power – Takeoff  Power – Potência utilizada para decolagem conforme 
+pressão atmosférica atual, anotar a indicação no manifoud antes do 
+acionamento. 
+Min. RPM – RPM mínima 2400 a ser atingida durante a decolagem, abaixo 
+dessa rpm rejeite a decolagem; 
+T.O Weight – Takeoff Weight - Peso de decolagem obtido através do cálculo 
+de peso e balanceamento; 
+MTOW – Peso máximo de decolagem 1905kg; 
+V1 -  Velocidade de decisão não inferior a VMC, padrão (VFL)  V1  =  VR ; 
+VR – Velocidade de Rotação 105mph para todos os pesos, padrão (VFL); 
+Vyse – Velocidade de melhor razão de subida monomotor constante para 
+todos os pesos, 105mph; 
+ELEV– Altitude da pista em uso, informação contida na carta ADC ou SID 
+prevista; 
+ACC. ALT. -  Acceleration Altitude – é o 2ᵒsegmento de decolagem, altitude 
+de início de recolhimento de flaps e ajuste de potência de subida. Consiste 
+em somar a elevação do aeroporto mais a Acceleration Height (padrão 400 ft 
+AGL); 
+
+===== PAGE 88 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+88 
+ 
+ 
+ 
+ 
+No entanto, devido às peculiaridades referentes ao relevo, esta 
+altitude poderá ser aumentada até no máximo 1000ft assim preservando o 
+regime de potência máxima do motor. 
+ 
+10.3- QUANDO AUTORIZADO O ACIONAMENTO 
+Anunciar e executar o “Before Start Checklist Below the Line”; 
+   --------------------------- WHEN CLEAR FOR START --------------------------- 
+ELECTRICAL EQUIPMENT & RADIO MASTER                                                 OFF 
+PARKING BRAKE                                                                                                      SET 
+PROPELLER                                                                                       FULL FORWARD  
+MIXTURE                                                                                                                  RICH 
+THROTTLE                                                                                              OPEN ½ INCH 
+MASTER SWITCH & ALTERNATORS                                                                    ON 
+FULL PUMPS                                            FUEL FLOW INDICATION – THAN OFF 
+MIXTURE                                                                                                           CUT-OFF 
+ANTI COLISION – FIN                                                                                                ON 
+PROPELLER AREA                                                                                              CLEAR 
+MAGNETOS                                                                                                                  ON 
+IGNITION SWITCH                                                                                              START 
+ 
+
+===== PAGE 89 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+89 
+Primeiro Acionamento do Dia: 
+1. Manete de potência ¼ do curso 
+2. Após ligar a bomba de combustível levar a manete de mistura toda a 
+frente verificando indicação do fuel flow até estabilizar e retornar a 
+manete até a posição fechado desligando o Fuel Pumps 
+3. Informar ao CM2, motor 1 (ESQ) ou motor 2 (DIR), acionar o starter 
+do referido motor, assim que o motor funcionar levar a manete de 
+mistura toda a frente  
+4. Ajustar o motor para 1000 RPM. 
+Acionamento com menos de 30 minutos de motor parado: 
+       1. Manete de potência ¼ do curso 
+       2. Bomba de combustível ON por 2 segundos e OFF 
+        3. Acionar o starter, assim que o motor girar levar a manete de mistura 
+toda a frente  
+        4. Ajustar o motor para 1000 RPM. 
+Acionamento com mais de 30 minutos de motor parado: 
+1. Proceder conforme o primeiro acionamento do dia. 
+Em caso de suspeita de motor afogado: 
+1. 
+Manete de potência todo curso a frente 
+2. 
+Manete de mistura em cut-off 
+3. 
+Bomba de combustível OFF 
+
+===== PAGE 90 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+90 
+4. 
+Acionar o starter, assim que o motor funcionar recuar a manete 
+de potência e levar a manete de mistura toda a frente  
+5. 
+Ajustar o motor para 1000 RPM. 
+Partida com fonte externa (12 V) 
+1. 
+Interruptor Geral (MASTER)  OFF 
+2. 
+Tomada de fonte externa introduza no soquete localizado na 
+fuselagem a frente. 
+3. 
+Interruptor Geral (MASTER) ON 
+4. 
+Procedimento de acionamento normal 
+5. 
+Após o acionamento do motor interruptor Geral (MASTER) OFF e 
+remova a tomada externa  
+6. 
+Interruptor Geral (MASTER) ON checar carga positiva nos 
+alternadores. 
+ 
+Nota: Dê partida no motor por 10 segundos, seguido por um período de 
+resfriamento de 20 segundos.   
+Este ciclo pode ser repetido mais duas vezes (2x), seguido por um período 
+de resfriamento de 10 minutos antes de reiniciar.   
+Repita os procedimentos de acionamento acima mais uma vez. Se o motor 
+ainda não der partida, uma investigação para determinar a causa deve ser 
+iniciada. Este tempo de ciclo de trabalho deve ser estritamente seguido 
+para aumentar a vida útil do motor de arranque 
+
+===== PAGE 91 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+91 
+ 
+CAUTION! Imediatamente após a partida do motor, deverá 
+ser observada a indicação de pressão de óleo. Caso não 
+ocorra em 30 segundos, o motor deverá ser cortado. 
+ 
+ 
+Após a partida, estabilizar o motor em 1000 RPM (em dias frios, pode 
+ser necessário manter o motor em RPM maior 1200 a 1500 por 1 minuto 
+antes de reduzir para 1000 RPM) verificar os instrumentos de motor, o 
+AVIONICS MASTER, os equipamentos eletrônicos (VHF, Transponder em 
+STBY, ADF para referência de posição Elapsed Time). Anotar a Hora UTC 
+do acionamento, a partir desta fase os Checklist´s devem ser executados 
+Do and Read, executar os procedimentos e após anunciar o Checklist 
+apropriado. 
+ 
+10.4- ANTES DO TAXI 
+• 
+Ao se verificar os instrumentos de motor, dar atenção especial para a 
+indicação de pressão de óleo, caso não ocorra em 30 segundos, o motor 
+deve ser cortado imediatamente. 
+• 
+A temperatura do óleo, demora de 1 a 3 minutos para indicar, 
+especialmente na primeira partida do dia e em dias frios. 
+• 
+Após a partida, observar o amperímetro com indicação positiva e a luz 
+no painel de alerta apagada. 
+• 
+O AVIONICS MASTER, o Rádio e o Transponder e demais equipamentos 
+como requerido. 
+• 
+O ELEVATOR TRIM deve ser ajustado na marca branca. 
+• 
+O Cross feed deverá ser checado apenas no primeiro voo do dia, levando 
+as seletoras até a posição OFF até 60s o motor vai apagar então levar 
+para X Feed reascendendo o motor (a seletora poderá ser checada 
+
+===== PAGE 92 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+92 
+individualmente), evitar movimentos diretos de X Feed para ON para 
+não danificar os pontos de parada. 
+• 
+Verificar os controles de voo em sua extensão total em todas as direções 
+ELEVATORS e AILERONS. O RUDDER será checado posteriormente 
+durante o taxi. 
+Nota: Usar a Navigation Lights em Voos Noturnos, ou em dias de baixa 
+visibilidade. 
+Após executar os itens, anunciar e ler o “Before Taxi Checklist”; 
+BEFORE TAXI 
+ENGINE INSTRUMENTS                                                                              CHECKED 
+AMMETERS                                                                                                     CHECKED 
+RADIO MASTER & ELECTRICAL EQUIPMENTS                                   ON & SET 
+TRANSPONDER                                                                                 SET & STANDBY 
+NAVIGATION LIGHTS                                                                           AS REQUIRED 
+CROSS FEED * FIRST FLIGHT OF THE DAY                                           CHECK 60s THAN ON 
+FLAPS                                                                                             SET FOR TAKE OFF 
+ELEVATOR TRIM & RUDDER TRIM                                       SET FOR TAKE OFF 
+FLIGHT CONTROLS                                                                                            CHECK 
+FUEL SELECTOR                                                                                                         ON 
+DEPARTURE BRIEFING                                                                            COMPLETE 
+ 
+Nota: O Departure Briefing é uma verificação da configuração do painel da 
+aeronave com o detalhamento da carta SID caso voo IFR. 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 93 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+93 
+Exemplo de BRIEFING da SID 
+SID EDMAL 1A transição DARNU decolagem da RWY 14 de SBFL. 
+         
+ 
+Cabeçalho: Carta SID de Florianópolis/ Hercílio Luz da Cabeceira 14 EDMAL 1A 
+de 12 outubro de 2017. A altitude de transição TA é de 7.000ft, frequências 
+TWR, APP e ACC setadas;  
+Perfil lateral: O perfil da saída após a decolagem da RWY 14 é interceptar a 
+RDL 140ᵒ do VOR FLN Frequência 113.40 checada, até 10DME posição EDMAL, 
+após curva a esquerda para cumprir o arco DME de 10NM até a RDL 059ᵒ, após 
+curva a direita interceptando a RDL 049ᵒ até ASBUS que está a 11DME de FLN 
+com restrição de altitude até 5000pés, após prosseguimos para o fixo de 
+transição DARNU.  
+RMK: ① Autorizado ACFT Cat. A, ② Gradiente MNM de subida é de 3.7% 
+até EDMAL considerando vel. de subida monomotor 105mph = 91kt a razão 
+mín. é de 336ftm e após 3.3% razão mín. de 300ftm, a ACFT cumpri o mínimo 
+de R/S ③ MNM IFR BLW MNM - Teto não requerido VIS 600M, INS da AIP-
+
+===== PAGE 94 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+94 
+MAP- a nossa alternativa SBNF está a menos de 01:00 monomotor e acima 
+dos mínimos meteorológicos para pouso. 
+MSA: MSA no perfil previsto de subida, até EDMAL e ASBUS é de 3500ft e após 
+15NM prosseguindo para DARNU a MSA é 4000ft.  
+  
+Solicitar ao ATC a autorização de taxi e informar POB, Autonomia e 
+Alternativa do plano proposto e cotejar a autorização, após acionar o farol de 
+taxi (taxi light) e iniciar o taxi até o ponto de espera. Durante o taxi, verificar 
+controle do trem do nariz, freios e funcionamento correto dos instrumentos 
+TURN & BANK, HEADING INDICATOR e BÚSSOLA efetuando pequenas curvas 
+para teste. Ao atingir a posição, executar o BEFORE TAKEOFF Checklist até a 
+linha do WHEN CLEAR FOR TAKE OFF. 
+OBS: 
+• Para quebrar a inércia e iniciar o taxi é requerida maior potência, portanto 
+é importante gerenciar a velocidade do taxi e evitar a parada total da 
+aeronave, economizando assim freios e combustível. 
+• Ao deixar a aeronave parada manter 1000RPM de potência. 
+• Durante o táxi não é obrigatório manter 1000RPM, devendo a potência ser 
+reduzida caso seja necessário desacelerar a aeronave. 
+• O táxi deverá ser realizado apenas com os pedais direcionais, sendo os 
+freios utilizados apenas para desaceleração (após reduzir a potência) ou 
+para realizar curvas fechadas. 
+• Não se deve utilizar os freios durante o táxi com motor aplicado, causando 
+desgaste excessivo dos freios (e redução da vida útil das pastilhas) e 
+superaquecimento do conjunto de freios (o que pode levar à falha). Logo, 
+primeiramente deve-se reduzir a potência para a marcha lenta (Idle) e após 
+aplicar-se os freios. 
+• Ao realizar curvas fechadas reduzir a potência para evitar o uso excessivo 
+de freios. 
+• Evitar curvas fechadas para diminuir o desgaste dos pneus, diminuir o 
+esforço sobre o trem de pouso e não perder energia. 
+• Para reduzir esforços nos freios pode-se aplicar uso de potência 
+assimétrica (lado de fora da curva) para curvas maiores do que 90°. 
+
+===== PAGE 95 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+95 
+Nota: Não taxiar apoiado nos freios! Estes devem ser usados somente para 
+curvas fechadas (30⁰) ou para redução momentânea de velocidade. Para 
+reduzir velocidade primeiro reduzir motor e após utilizar freios. 
+10.5- ANTES DA DECOLAGEM 
+ANTES DA DECOLAGEM:  Ponto de espera; 
+Efetuar o check do grupo motopropulsor conforme especificado abaixo: 
+• 
+EMBANDEIRAMENTO: 1500 RPM = Aplicar manete de PROPELLER na 
+faixa de embandeiramento e visualizar queda máx. de 500 RPM. 
+• 
+GOVERNADOR: 2000 RPM = Retroceder manete de PROPELLER até 
+visualizar queda de 200 RPM. Após, deve-se aplicar cerca de 1 pol. de 
+THROTTLE e verificar funcionamento do governador mantendo RPM 
+estável. 
+• 
+MAGNETOS: 2000 RPM = Queda máxima: 175 RPM  
+Diferença:             50 RPM   
+Normal:               100 RPM 
+ 
+• 
+Caso tenha suspeita de chumbo nas velas, efetuar o seguinte 
+procedimento: 
+1. Potência FULL e após em 2000 RPM com magnetos em Ambos 
+2. Empobrecer a mistura até o Pico de RPM 
+3. Aguardar 30 segundos 
+4. Efetuar novo check de magnetos com mistura Rica 
+5. Se caso não resolver, executar este procedimento novamente 
+6. Se o problema persistir, voltar para o estacionamento e contatar 
+a escola 
+
+===== PAGE 96 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+96 
+ 
+Ao checar a ALTERNATES AIR poderá acorrer uma pequena queda de 
+RPM devido ao ar quente da nacele do motor entrar diretamente após o filtro 
+de ar, caso a rpm aumente é indício de filtro de ar obstruído (não decolar, 
+acionar a manutenção). 
+- ENGINE INSTRUMENTS (OIL PRESS e OIL TEMP) deverão indicar faixa verde. 
+- AMMETER indicando carga positiva com a luz (ALT) no painel de alerta 
+apagada. 
+- SUCTION deverá estar na faixa verde min 4.5 Pol.hg. 
+- FUEL FLOW verificar indicação de consumo e após o motor deve ser reduzido 
+para IDLE RPM verificada entre 700 a 800 RPM, restabelecendo 1000 RPM em 
+seguida. 
+- FLIGHT INSTRUMENTS os instrumentos de voo devem ser verificados e 
+ajustados, ATTITUDE INDICATOR com símbolo da aeronave na linha do 
+horizonte que deverá estar nivelada, HEADING INDICATOR alinhado com a 
+bússola, ALTÍMETRO indicando altitude da pista, VOR sintonizado na radial de 
+saída (IFR), e ausência de bandeiras (flags) nos demais instrumentos. 
+- FUEL QUANTITY verificar a quantidade de combustível e a válvula FUEL 
+CROSS FEED na posição ON. 
+ 
+Após executar os itens, anunciar e ler o “Before Takeoff Checklist 
+Down to the line”; 
+ 
+BEFORE TAKEOFF 
+THROTTLE                                                                                                    2000 RPM 
+PROPELLER                        FEATHERING 500 RPM Máx drop & FULL FORWARD 
+MIXTURE                                                                                               CHECK & RICH 
+MAGNETOS                                                                                               CHECK & ON 
+ALTERNATES AIR                                                                                              CHECK 
+ENGINE INSTRUMENTS                                                                                   CHECK 
+AMMETER                                                                                                            CHECK 
+SUCTION                                                                                                               CHECK 
+FUEL FLOW                                                                                                         CHECK 
+IDLE RPM                                                                              CHECK AND 1000 RPM 
+FLIGHT INSTRUMENTS                                                                                   CHECK 
+
+===== PAGE 97 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+97 
+FUEL QUANTITY                                                                                                CHECK 
+FUEL SELECTORS                                                                                                BOTH 
+DOORS                                                                                                                LOCKED 
+TAKE OFF BRIEFING                                                                                      REVIEW 
+     -------------------------WHEN CLEAR FOR TAKEOFF-------------------------- 
+ 
+- TAKE OFF BRIEFING 
+ 
+Após o check do grupo motopropulsor e a leitura do Before Takeoff 
+Checklist, executar os Briefing´s: 1⁰ o Briefing Operacional é o que será 
+executado e, 2⁰ o Briefing de Emergência é o que poderá ser executado em 
+caso de emergência.  
+Briefing Operacional: Consiste em relatar o tipo de saída a ser realizada se 
+VFR ou IFR e revisar a leitura da carta SID, decolagem normal ou curta. 
+(Atento a posição dos flaps). 
+• 
+Decolagem Normal (Flap 0ᵒ) 
+• 
+Decolagem com pista curta ou molhada (Flap 10ᵒ) 
+• 
+Decolagem com pista não pavimentada (Flap 10ᵒ)  
+Briefing de Emergência: Realizar o Brifieng da coluna da direita do Take Off 
+Data Card. (Deverá ser definido neste momento se ocorrer uma pane após a 
+V1/VR, será com pouso em frente ou prosseguir a decolagem). 
+Definição de decolagem sem pouso em frente; (Briefing situacional) 
+ - Pista molhada; 
+- Comprimento da pista disponível para Dep. menor que 1500 metros; 
+- Vento de cauda até 5kt; 
+- Tipo do pavimento, Saibro (Terra) ou Grama; 
+- Trem de pouso recolhido. 
+
+===== PAGE 98 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+98 
+ 
+Exemplo de TAKE OFF DATA CARD; 
+ 
+ “O Takeoff power. é de 28.50 inHg e Min RPM de 2400 rpm, T.O Weight é 
+de 1615 kg. 
+“Antes da V1 igual a VR de 105 mph, se ocorrer falha do motor, fogo, perda 
+da reta, obstáculos na pista, ou mínimos não atingidos, abortaremos a 
+decolagem, o callout será “REJECT”, brakes / power off e caso após a VR e 
+antes de recolher o trem de pouso, pousaremos em frente (baixando o nariz, 
+checando o trem em baixo, redução gradativa, flare, pouso e brakes. 
+(Após a V1/VR sem pouso em frente) 
+“Após a V1/VR o callout será “GO”, rotação, “FLAPS e LANDING GEAR UP”, pé 
+morto motor morto, identificado, redução, embandeiramento e corte, 
+buscando manter razão de subida e acelerar para a blue line ”.  
+
+===== PAGE 99 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+99 
+Subindo até 1000´ AGL, após Emergency Checklist, seguindo o perfil de subida 
+IFR” (ou circuito de tráfego caso VMC)  
+ Caso as circunstâncias permitirem, (MEMORY ITENS) ①Mixture Rich ②Fuel 
+Boost Pump On ③Fuel Selector Crossfeed ④Magnetos On ⑤Alternate Air 
+Open, caso negativo, efetuar o embandeiramento. 
+Se possível retornar para a pista, com curva contra o vento, (Informando para 
+que lado será a curvar e considerar possibilidade de pouso na pista auxiliar ou 
+principal). 
+Ex: “Pane após a decolagem a curva será pela Esquerda retornando para a 
+pista 21”  
+ – ATC – “PAN PAN, PAN PAN, PAN PAN”... (Urgência) informar intenções de 
+retorno ou em caso de fogo ou pouso fora da pista “MAYDAY, MAYDAY, 
+MAYDAY”... (Socorro). (Conforme ICA 100-12 Anexo A, item 15.207.7) 
+ 
+Ø A V1/VR deverá ser reportada 05 mph antes de atingi-la; 
+Ø A subida monomotor dar-se-á até 1.000ft sobre o terreno 
+em caso de operação VFR ou caso IFR até a altitude de início 
+do procedimento. 
+Ø O trem de pouso deverá ser reportado quando travado em 
+cima pelo CM2 após a decolagem. 
+ 
+Lembre-se que o briefing de emergência pode sofrer variações, neste 
+caso, use o que melhor convêm à ocasião. Em caso de pane real, “Comandos 
+e comunicação com o instrutor Checklist com o aluno”. 
+ 
+
+===== PAGE 100 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+100 
+10.6- QUANDO AUTORIZADO A DECOLAGEM 
+ 
+CAUTION! Nunca ingressar na pista de decolagem sem a 
+total certeza da instrução da Torre de Controle, em caso 
+de dúvida confirmar a autorização recebida. “Alto Risco de 
+Runway Incursion.” 
+ 
+ 
+Após executar os itens, anunciar e ler o “Before Takeoff Checklist 
+Below to the line”; 
+    -------------------------WHEN CLEAR FOR TAKEOFF-------------------------- 
+MIXTURE                                                                                                                  RICH 
+PROPELLER                                                                                       FULL FORWARD 
+TRANSPONDER                                                                                             ON & ALT 
+RWY INCURSION LIGHTS                                                                                        ON 
+FUEL PUMPS                                                                                                               ON 
+ 
+Em todas as decolagens, durante a corrida verificar: 
+• 
+Mínimos atingidos (2350 RPM) Máximo (2700 RPM) nos motores 
+Callout "THRUST SET" 
+• 
+Instrumentos de motor na faixa verde 
+• 
+40 MPH  "AIR SPEED ALIVE" (indicação correta de velocidade) 
+• 
+Configuração de decolagem padrão (VFL), Flaps Up (0⁰) com V1/VR  
+Flaps UP= 105 MPH  
+Utilizar torque estático mínimo de 20 pol. 
+O regime de decolagem potência total, não devendo ultrapassar 2700 RPM. 
+a) 
+Decolagem normal: (Flap 0°) 
+• 
+Iniciar a rolagem, completar para potência total; 
+
+===== PAGE 101 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+101 
+• 
+Ajuste fino e reporte de potência ajustada; “THRUST SET” 
+• 
+“AIRSPEED ALIVE”, V1/Vr 105 MPH; 
+• 
+Altímetro e Climb +; “POSITIVE RATE off CLIMB” 
+• 
+Quando não existir pista disponível em frente, Recolher o 
+ 
+ 
+trem; 
+• 
+400 ft AGL, 120 MPH redução de potência 25 pol. e hélice 
+2500 rpm “After Takeoff Checklist”. 
+ 
+b) 
+Decolagem em pista curta ou molhada: (Flap 10°) 
+• 
+Torque estático de potência total; 
+• 
+Ajuste fino e reporte de potência ajustada; “THRUST SET” 
+• 
+“AIRSPEED ALIVE”, V1/Vr 105MPH; 
+• 
+Altímetro e Climb +; “POSITIVE RATE off CLIMB” 
+• 
+Recolher o trem 
+• 
+400 ft AGL, 120 MPH, Flaps Up, redução de potência 25 pol. 
+e hélice 2500 rpm “After Takeoff Checklist”. 
+c) 
+Decolagem em pista não pavimentada: (Flap 10°) 
+• 
+Torque estático não aplicável 
+• 
+Iniciar rolagem completando lentamente para potência total 
+• 
+Ajuste fino e reporte de potência ajustada; “THRUST SET” 
+• 
+Manter o manche levemente cabrado; 
+
+===== PAGE 102 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+102 
+• 
+“AIRSPEED ALIVE”, V1/Vr 105MPH; 
+• 
+Altímetro e Climb +; “POSITIVE RATE off CLIMB” 
+• 
+Recolher o trem 
+• 
+400 ft AGL, 120 MPH, Flaps Up, redução de potência 25 pol. 
+e hélice 2500 rpm “After Takeoff Checklist”. 
+10.6- APÓS A DECOLAGEM 
+ 
+Após a decolagem, atingindo 400ft AGL, o After Takeoff Checklist 
+deverá ser realizado pelo aluno, de acordo com a filosofia "Do and Read". 
+Após executar os itens, anunciar a leitura do “After Takeoff Checklist”; 
+AFTER TAKEOFF 
+LANDING GEAR                                                                                                           UP  
+FLAPS                                                                                                                             UP 
+THROTTLE & PROPELLER                                                25 Inches & 2500 RPM  
+LANDING  LIGHT                                                                                                      OFF 
+FUEL PUMPS                                                                                                              OFF 
+ENGINE INTRUMENTS                                                                                     CHECK 
+ 
+
+===== PAGE 103 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+103 
+Nota: Durante a movimentação da aeronave, sempre priorizar o voo e 
+procedimentos operacionais; somente após as comunicações com os Órgãos 
+de Controle e o Checklist. 
+10.7- SUBIDA 
+ 
+Redução para 25 polegadas de manifold pressure / 2500 RPM e 
+adotando a VI de 120 MPH ou razão de 500ft/min; (Atento ao manifold que 
+decresce com a altitude, é necessário acrescentar potência durante a subida). 
+ 
+Ao cruzar a MSA anunciar “MSA xxxx ft” ALTÍMETERS xxxx hPa” e ao 
+cruzar a TA anunciar “TRANSITION ALTITUDE ALTIMETERS RESET ONE ZERO 
+ONE THREE” 
+10.8- CRUZEIRO 
+1000 pés antes de atingir o FL desejado anunciar “1000ft TO LEVEL OFF” e 
+100 pés antes de nivelar anunciar “100ft TO LEVEL”. 
+• 
+Ajuste de Mistura recomendado acima de 3000 ft, limitando 1650°F 
+de EGT. 
+• 
+Empobrecer até atingir o “PICO” de EGT, após enriquecer a mistura, 
+até o EGT cair 25⁰ F.  
+
+===== PAGE 104 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+104 
+• 
+A temperatura da Cabeça do Cilindro (CHT) deve ficar abaixo dos 
+400⁰ F. 
+ 
+• 
+Com os dados obtidos e para o monitoramento durante o voo, 
+preencha o LANDING DATA CARD no campo previsto com os 
+seguintes dados; 
+ 
+ 
+Exemplo; 
+ 
+
+===== PAGE 105 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+105 
+Após executar os itens, anunciar a leitura do “Cruise Checklist”; 
+ 
+CRUISE 
+THROTTLE & PROPELLERS                                     AS REQUIRED & 2400 RPM 
+MIXTURE                                                                                                             ADJUST 
+COWN FLAPS                                                                                         AS REQUIRED 
+ALTIMETER                                                                                                               SET 
+ 
+10.9- DESCIDA 
+ 
+10 minutos ou distância pré-definida antes da descida, o CM1 passa 
+os controles e a comunicação ao CM2, “YOUR CONTROLS AND 
+COMMUNICATION” o CM2 assume os comandos e a comunicação e responde 
+“I HAVE CONTROLS AND COMMUNICATION”. 
+ 
+O CM1 obtêm as condições meteorológicas de chegada, ATIS ou 
+informação AFIS e preenche o Langing Data Card. 
+Para o preenchimento do Landing Data Card é importante considerar; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 106 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+106 
+• 
+Velocidade de Aproximação VAPP 
+ 
+A VAPP é calculada com base na Vref (velocidade de referência para 
+pouso)  
+Componente de Vento 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CORREÇÃO DO VENTO PARA VAPP  
+- O maior entre 1/3 da intensidade do vento ou total da rajada;  
+- Correção mínima de vento  + 05kt  
+- Correção máxima do vento  + 20kt  
+- Com vento calmo, considerar Vapp = Vref + 05kt  
+
+===== PAGE 107 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+107 
+Exemplo:  
+SBFL ....14010G25KT..   
+A correção será o total da rajada, sendo 25 – 10 = 15kt  
+Portanto a Vapp = Vref + 15kt  
+                  Componente máxima de Vento de Través = 13 Kt 
+Velocidades de Operação do Seneca com vento calmo. 
+ 
+ 
+ 
+ 
+Flap 
+VR 
+VREF 
+VAPP 
+UP 
+105 MPH  
+105 MPH  
+110 MPH  
+10º 
+105 MPH  
+105 MPH  
+110 MPH  
+25º 
+105 MPH  
+105 MPH  
+110 MPH  
+40º 
+NA 
+  90 MPH  
+   95 MPH  
+ 
+• 
+Visual Descent Point (VDP)  
+ 
+Recomenda-se o processo para criação do VDP estabelecido para 
+todos os procedimentos de não precisão sem trajetória de planeio.  
+Exemplo;  VOR, NDB, LOC DME e RNAV APCH. 
+ 
+Adota-se o VDP como padrão de segurança em aproximações de não 
+precisão. O objetivo é proporcionar um ponto que, defina o limite o qual uma 
+aeronave pode prosseguir em descida de modo a manter um ângulo de 3⁰ até 
+o pouso. A partir deste ponto, se não houver contato visual, deve ser mantida 
+a MDA, a aproximação deverá ser descontinuada e ao atingir o MAPT – 
+
+===== PAGE 108 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+108 
+(Missed approach altitude point) a arremetida deverá obedecer ao perfil da 
+carta.  
+É recomendado que a aeronave execute uma trajetória de descida 
+constante nas finais, e enquanto a aeronave estiver nesta rampa constante, 
+a MDA será atingida no VDP. Nesta situação, se não houver contato visual 
+com a pista, a aeronave deve manter a altitude (MDA), até atingir o MAPT 
+quando a arremetida será iniciada.  
+ 
+O VDP define o ponto limite para que a aproximação prossiga 
+estabilizada. Dessa forma, recomenda-se criar o VDP inclusive para 
+aproximações visuais, auxiliando a definição da trajetória correta de descida.  
+ 
+VDP= “Altura da MDA” ÷ 300 
+ 
+NOTAS:  
+- A altura do VDP é a mesma da MDA;  
+- O VDP não pode ser após o MAPT.  
+ 
+
+===== PAGE 109 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+109 
+ 
+Abaixo alguns exemplos de distâncias do VDP em relação à cabeceira 
+da pista em função da altura da MDA: 
+ 
+ 
+Height da MDA 
+ 
+300 
+ 
+400 
+ 
+450 
+ 
+500 
+ 
+600 
+ 
+700 
+ 
+VDP Distância, NM 
+ 
+1.0 
+ 
+1.3 
+ 
+1.5 
+ 
+1.7 
+ 
+2.0 
+ 
+2.3 
+ 
+ 
+Em localidades que o MAPT não está representado na carta de 
+aproximação, se faz necessário calcular o VDP. 
+Exemplo de preenchimento de LANDING DATA CARD: 
+ 
+
+===== PAGE 110 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+110 
+AIRPORT – Código ICAO de 4 letras do aeroporto de destino (ex. SBBI); 
+FL/OAT – Nível de cruzeiro e  Indicação da temperatura externa; 
+CRZ Power – Manifoud Press em Pol. Conforme tabela de potência (Power 
+Setting Table); 
+FF lts/h – Fluxo de combustível em lts por hora, verificar indicação no Fuel 
+Flow após o ajuste de mistura em voo de cruzeiro; 
+ATIS - a) - Caso o aeroporto possuir, anote a letra alfabética da informação 
+                     atual e o horário em que foi elaborada. 
+b) - Caso o aeroporto não possuir ATIS, anote a frequência do serviço 
+                     AFIS da localidade. 
+WIND, VIS, CLOUDS, QNH e TEMP – Cópia do ATIS ou informação do serviço 
+AFIS; 
+Trans. Lev. – Nível de Transição: TA + 500ft ajustes acima de 1013hPa e TA + 
+1000ft ajustes abaixo de 1013hPa 
+Approach – O tipo de aproximação a ser realizado se visual (VFR) se IFR 
+coloque o tipo de procedimento instrumento (NDB,VOR,ILS e RNAV com a 
+identificação da carta Ex: (VOR DME Z 36) do Bacacheri; 
+ 
+RMK - Deve ser indicada qualquer informação a respeito de 
+inoperância de auxílios, interdições etc..; 
+ 
+MDA / DA– Altitude Mínima de Descida ou Altitude de decisão da IAC; 
+VDP– Distância em relação a cabeceira da pista em função da altura da MDA; 
+Remnant Fuel – Combustível remanescente no destino; 
+Hold Time – Tempo máximo de espera descontando o tempo para a 
+alternativa + 45 minutos; 
+
+===== PAGE 111 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+111 
+GA T.Off – Go Around Take Off – Potencia utilizada na arremetida, converter 
+o ajuste QNH em Hectopascal para Polegadas de Mercurio inHg a ser 
+observado no manifoud durante a arremetida ; 
+Land. Weight – Peso calculado de Pouso; 
+Vapp – Velocidade de Aproximação; 
+Após preencher o LANDING DATA CARD, separar as cartas de chegada, 
+aproximação e ajustar o painel de instrumentos; 
+• 
+Efetuar o briefing de aproximação, que consiste em: 
+ü Ponto ideal de descida - TOD 
+ü Leitura da carta (caso IFR); 
+ü Como será realizado o ingresso no circuito de tráfego (caso VFR); 
+ü Em caso de arremetida, qual será o procedimento e qual a 
+autonomia ainda disponível.  
+BRIEFING DE APROXIMAÇÃO  (APPROACH BRIEFING) 
+Exemplo de briefing´s de aproximação, consultar o PROGRAMA DE 
+TREINAMENTO IFR da VoeFloripa pag. 39, constante conforme abaixo. 
+ 
+1. 
+  Metares de destino e alternativa e cópia da informação ATIS; 
+2. 
+  Combustível de espera sobre o destino; 
+3. 
+  Leitura da carta, iniciando pela localidade; 
+4. 
+  Tipo de procedimento: ILS, VOR ou NDB; 
+5. 
+  Frequência do auxílio e OM/MM. Identifica-las; 
+6. 
+  M.S.A. no setor de entrada, tipo de entrada; 
+7. 
+  “Inbound couser” do ILS ou da órbita do VOR/NDB e/ou “Inbound          
+couser” da aproximação final VOR/NDB; 
+
+===== PAGE 112 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+112 
+8. 
+  Altitude de bloqueio do marcador externo; 
+9. 
+  D.A. (Decision Altitude) – ILS; 
+10. 
+  M.D.A. (Minimum Descend Altitude) – VOR/NDB; 
+11. 
+  Tempo até o M.A.P.T (Missend Approach Altitude Point); 
+12. 
+  Procedimento de Arremetida; 
+13. 
+  Leitura do Landing Data Card. 
+ 
+ 
+Após o APPROACH BRIEFING o  CM1 assume os controles e a 
+comunicação da aeronave solicitando ao CM2, “I HAVE CONTROLS AND 
+COMMUNICATION”. 
+ 
+Nas descidas buscar limitar a razão em 500 ft/min e evitar redução 
+excessiva dos motores. Anunciar a leitura do “Descent Checklist”. 
+ 
+ 
+DESCENT 
+MIXTURE                                                                                                             ADJUST 
+COWN FLAPS                                                                                         AS REQUIRED 
+APPROACH BRIEFING                                                                              COMPLETE 
+ 
+ 
+MSA – Minimum Safe Altitude  
+ 
+Durante a descida na MSA, o CM1 realiza o callout “MSA xxxx 
+ft”/“CROSS CHECK ALTIMETERS xxxx hPa e o CM2 confirma “MSA xxxx ft”/ 
+ALTIMETERS xxxx hPa . 
+
+===== PAGE 113 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+113 
+ 
+Este callout tem o objetivo de lembrar os pilotos que, caso ocorra 
+aviso de “TERRAIN” no TAWS (Terrain Awareness and Warning System) do GNS 
+(Global Navigation System) sem ter contato visual com o solo, deverão 
+imediatamente arremeter e selecionar a pag. TERRAIN no GNS para evitar as 
+elevações ou obstáculos. 
+  
+A aeronave Seneca I da 
+VoeFloripa esta equipada com 
+um GNS que possui o Alerta 
+TAWS. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Aviso de "TERRAIN ADVISORY" - Impacto potencial estimado em 
+aproximadamente 60 segundos. 
+ 
+
+===== PAGE 114 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+114 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Aviso de alerta "TERRAIN AHEAD" (piscando) - Impacto potencial 
+estimado em aproximadamente 30 segundos. Da mesma forma, também é 
+fornecido o alerta "OBSTACLE AHEAD" caso seja um obstáculo constante no 
+data base do TAWS do GNS. 
+Premature Descent Alerting (PDA) 
+
+===== PAGE 115 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+115 
+ 
+O sistema TERRAIN emite um Alerta de Descida Prematura (PDA) 
+quando o sistema detecta que a aeronave está significativamente abaixo do 
+ângulo normal de aproximação de uma pista. O PDA começa quando a 
+aeronave está a 15 NM do aeroporto de destino. O PDA termina quando a 
+aeronave está a 0,5 NM do limiar da pista ou está abaixo de uma altitude de 
+125 pés AGL enquanto estiver a 1,0 NM do limiar. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+             
+ 
+
+===== PAGE 116 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+116 
+10.10- APROXIMAÇÃO 
+- 10 NM antes do bloqueio/circuito de tráfego o Checklist de aproximação 
+deverá ser efetuado, ajustar Rádios/Nav e instrumentos – Briefing de pouso. 
+- O Briefing de pouso consiste em passar como será a aproximação para o 
+pouso, qual o flap a ser selecionado e a Vref. 
+ 
+Durante esta fase deverá ser executado o procedimento de ajuste dos 
+rádios de navegação para a aproximação “SET RADIOS FOR APPROACH”, a 
+sequência deverá contemplar todos os itens necessários para o procedimento 
+em uso.  
+Exemplo: Florianópolis, pista em uso 14, procedimento ILS Z. 
+• 
+Pista em uso 
+• 
+Ingresso no circuito de tráfego 
+• 
+Tipo de aproximação (FLIGHT PATTERNS) 
+• 
+Flap de Pouso 
+• 
+Velocidade de Aproximação Vref e Vapp 
+• 
+Arremetida 
+• 
+Ajustar no OBS o curso da Final 
+• 
+No rádio de navegação ajustar a frequência do ILS 110.30 
+• 
+Identificar ambos os auxílios 
+• 
+Confirmar o ajuste dos altímetros em QNH 
+ 
+Confirmar pista em uso e o procedimento de arremetida, mesmo em 
+condições VMC. Anunciar a leitura do “Approach Checklist”. 
+ 
+APPROACH 
+NAV. RADIOS                                                                                                             SET 
+RWY IN USE                                                                                                    CHECKED 
+MISSED APPROACH                                                                                        REVIEW 
+ALTIMETER                                                                                                               SET 
+SEAT BELTS                                                                                                       FASTEN 
+
+===== PAGE 117 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+117 
+10.11- LANDING 
+Velocidade de aproximação: 
+Flap UP 
+105 MPH  
+10° 
+105 MPH  
+25° 
+105 MPH  
+40° 
+90 MPH  
+ 
+• 
+Pouso com Flap 40ᵒ somente Short Field Landing (pouso curto). 
+• 
+Com pouso garantido, a manete de passo deve se posicionada toda a 
+frente para proporcionar força máxima em caso de arremetida. 
+ 
+Este Checklist deve ser iniciado na metade da perna do vento quando 
+em voo visual.  Nos FLIGHT PATTERNS, pode-se observar o momento da 
+realização do Checklist para os diferentes tipos de aproximação.  
+OBS.:  Quando efetuando tráfego visual, na perna do vento após o traves da 
+cabeceira, afastar 30s para a perna base reduzir 01 seg p/ cada 01 kt de 
+componente de cauda. Anunciar a leitura do “Landing Checklist”. 
+LANDING 
+LANDING GEAR                                                                 DOWN 3 GREEN LIGHTS 
+MIXTURE                                                                                                                  RICH 
+PROPELLER                                                                                       FULL FORWARD 
+FUEL PUMPS                                                                                                                ON 
+LANDING LIGHT                                                                                                         ON 
+FLAPS                                                                                                                           SET 
+BRAKES                                                                                                                 CHECK 
+ 
+
+===== PAGE 118 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+118 
+ 
+Desenvolvendo uma padronização de segurança de voo, que poderá 
+ser utilizada para qualquer “aeronave complexa*”, existe um checklist mental 
+que pode ser incorporado a operação. É o chamado G U M P S, o qual deverá 
+ser realizado em aproximações IFR após o Callout  “FIVE HUNDRED” e 
+aproximações VFR após o Callout “FIVE HUNDRED STABILIZED”. 
+ 
+G 
+GAS (combustível) 
+Seletora / Fuel Quantity 
+U 
+UNDERCARRIAGE 
+Trem de pouso baixado e travado 
+M 
+MIXTURE 
+Rica ou ajustada para altitude 
+P 
+PROPELLER 
+FULL RPM – passo mínimo 
+S 
+SEAT BELS/SWITCHES 
+Cintos e Swiches (farol, bomba etc..) 
+ 
+• 
+Nota: Uma aeronave complexa (Complex Aircraft) é definida pelo 
+FAA a aeronave que possui as seguintes características: 
+• 
+Trem de pouso retrátil / Controle de Passo / Flaps 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 119 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+119 
+10.12- ARREMETIDA - GO AROUND – MISSED APPROACH 
+Condição; 
+SAFETY WINDOW ou pista interditada 
+ 
+- No MAPT, “RUNWAY NOT IN SIGHT” 
+ 
+- Necessário inclinar o avião mais que 20⁰ p/ centrá-lo com o eixo da 
+ 
+   pista, abaixo de 300 pés;  
+ 
+- A 200 pés estiver fora dos limites laterais da pista 
+ 
+- Razão de descida maior que 1000 ft/min a 200 pés 
+ 
+- Não circular para pouso abaixo de 500 pés 
+ 
+Call Out: 
+“GO AROUND” ou “NOT STABILIZED GO AROUND” 
+Ações; 
+ 
+- PROPELLER / MIXTURE FULL FORWARD 
+ 
+- “THRUST SET” 
+ 
+- “FLAP´S UP” 
+ 
+- “POSITIVE RATE, LANDING GEAR UP” 
+ 
+- Vyse 105 mph 
+ 
+- COWL FLAPS, AS REQUIRED 
+ 
+- 400 pés AGL (VFR) ou  400 pés acima da DA / MDA (IFR) 
+ 
+- “SET RADIOS FOR MISSED APPROACH” 
+ 
+- “AFTER TAKE OFF CHECK LIST” 
+
+===== PAGE 120 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+120 
+10.13- FLIGHT PATTERN´S 
+ 
+ 
+
+===== PAGE 121 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+121 
+ 
+ 
+ 
+
+===== PAGE 122 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+122 
+10.14- APÓS O POUSO 
+ 
+Após o pouso: Deve ser executado em momento de baixa carga de 
+trabalho, após a liberação da pista. Ex.: Ao livrar a pista no aeroporto Hercílio 
+Luz pela taxiway “A” após o cotejamento da instrução de taxi. Anunciar a 
+leitura do “After Landing Checklist”. 
+AFTER LANDING 
+FLAPS                                                                                                                             UP 
+COWL PLAPS                                                                                                          OPEN 
+FUELL PUMP                                                                                                              OFF 
+RWY INCURSION LIGHT                                                                                         OFF 
+TRANSPONDER                                                                                                      STBY 
+ANTI COLISION – WING (Strobe light)                                                                   OFF 
+ 
+10.15- CORTE DOS MOTORES 
+ 
+O Shutdown deve ser executado com a aeronave estacionada em local 
+seguro e pode ser feito utilizando-se a filosofia “Read and Do”. Anunciar a 
+leitura do “Shutdown Checklist”. 
+SHUTDOWN 
+PARKING BRAKE                                                                                                      SET 
+THROTTLE                                                                                                     1000 RPM 
+ELETRICAL EQUIPMENTS & RADIO MASTER                                                 OFF 
+MIXTURE                                                                                                           CUT OFF 
+MAGNETOS                                                                                                                OFF 
+ALL LIGHT AND PUMPS                                                                                         OFF                        
+MASTER SWITCH                                                                                                     OFF 
+ 
+ 
+Ao termino deste, deve-se anotar o horário UTC do corte dos motores 
+e manobrar o avião para a posição de estacionamento e colocar os calços.  
+ 
+Nos casos em que haja menos de ½ tanque ou que seja o último voo 
+do dia, deve-se solicitar o abastecimento. Aeronave em pernoite com tanque 
+cheio, evita evaporação excessiva, acumulo de gases, condensação e acumulo 
+de água nos tanques. 
+
+===== PAGE 123 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+123 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 124 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+124 
+11- TÉCNICAS DE PILOTAGEM MULTIMOTOR 
+ 
+Este capitulo é dedicado aos fatores de operação associados ao voo 
+de aeronaves multimoras leves. É considerado uma aeronave multimotora 
+leve aquele em  que  seu  peso  é  inferior  a  6000  Lbs  (2675  Kg),  e  para  fins  
+de convenção.  No caso de dúvida quanto  a  operação  da  aeronave  o  Manual  
+de  Voo  da  mesma  terá autoridade máxima sobre como se operar a aeronave 
+corretamente. 
+ 
+A diferença básica entre uma aeronave multimotora e um 
+monomotor é o risco em potencial no caso de uma falha de motor. Na ocasião 
+de uma falha de um motor, as 2 maiores penalidades que ocorrem é a perda 
+de performance e de controle. 
+ 
+O problema mais óbvio é a perda de  50%  da potência, no qual reduz 
+entre  80% a  90% a performance de subida. O outro problema  é causado pela 
+potência do motor operante que torna o voo assimétrico.  
+ 
+O cuidado com esses 2 fatores é crucial para a segurança de um OEI 
+(One Engine Inoperative – Um motor Inoperante).  A redundância de todos os 
+instrumentos e sistemas só são vantagens quando usado  por  um  piloto  com  
+um  bom  treinamento  e proficiência. 
+11.1- VOO ASSIMÉTRICO (MONOMOTOR) 
+ 
+Objetivo; 
+ 
+Identificar o motor inoperante e realizar os devidos Checklists de 
+reacionamento ou embandeiramento e corte como descrito no manual de 
+operações da aeronave PA34-200 Seneca I, bem como operar a aeronave na 
+condição de voo monomotor de maneira coordenada e o mais segura possível. 
+Termos e Definições 
+ 
+Os piloto que voam em aeronaves monomotoras já estão 
+acostumados  com  várias  velocidades  importantes  para  o  voo.  Para o  voo 
+
+===== PAGE 125 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+125 
+multimotor  tem-se  outras  velocidades  importantes, é  importante  observar  
+a – sigla (Single Engine “SE” Voo monomotor).  
+Abaixo, segue algumas siglas importantes a serem observadas: 
+V1 – Velocidade de decisão. Velocidade em que se abortar o decolagem 
+teremos pista suficiente para a parada total da aeronave. 
+VR - Velocidade de  rotação.  Velocidade no  qual  vai  se aplicar  pressão no 
+manche para trás e fazer “rodar” a aeronave. 
+VLOF - Velocidade de saída do solo. Velocidade  na qual a aeronave  sai do 
+chão. (Alguns fabricantes se referem VR = VLOF). 
+Vx - Velocidade de melhor ângulo de subida. Velocidade no qual o avião vai 
+ganhar a maior altitude numa dada distância. 
+Vy - Velocidade de melhor razão de subida. Velocidade no qual o avião vai 
+ganhar a maior altitude numa dado tempo. 
+Vxse - Velocidade de melhor ângulo de subida monomotor. 
+Vyse - Velocidade  de  melhor  razão  de  subida  monomotor.  Essa velocidade 
+é marcada com uma linha azul no velocímetro. Acima do teto máximo de  
+operação monomotor essa  velocidade indica a menor razão de descida 
+monomotora. 
+Vsse - Velocidade  de  segurança em operação  monomotora em  voo  de 
+treinamento. 
+VMC- Velocidade mínima de controle com o motor crítico  inoperante. É 
+marcada  com  uma  linha  radial  vermelha  no  velocímetro também chamada 
+de Red Line.  Nesta velocidade,  o  voo  de  teste  prevê  a  perda  do  motor  e  
+usar  máxima deflexão do leme para controlar, rolagem de até 5º para o lado 
+do motor bom  e  manter  o  voo  nivelado.  Não  é  necessário  comprovar  
+razão  de subida nessa velocidade. 
+
+===== PAGE 126 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+126 
+ 
+Esta velocidade é obtida durante os voos de ensaio da aeronave, ao 
+nível do mar e na condição de CG traseiro máximo possível.  
+ 
+Portanto a VMC poderá variar conforme a altitude e a condição do CG. 
+lembre-se que com o aumento da altitude, a VMC diminui e sob condições de 
+peso e altitude a VMC e velocidade de perda (VS) são os mesmos. Neste caso, 
+a VMC demonstrada não pode ser realizada de forma segura.  
+ 
+Para efeitos práticos, jamais tentaremos insistir em manter o voo 
+nivelado em velocidades próximas a VMC, pois poderemos perder o controle 
+da aeronave. Próxima a VMC, o ângulo de ataque será tão alto, e o arrasto tão 
+grande, que, na prática, não haverá ganho de altitude (“embarrigamento”). É 
+aconselhável então, ceder o nariz e utilizar a tração do motor remanescente 
+para estabelecer uma trajetória de descida mais conveniente, inclusive para 
+pouso forçado se necessário.  
+VMCA:  É a mínima velocidade na qual é possível recuperar o controle da 
+aeronave após a falha do motor crítico e manter o voo retilíneo com 
+derrapagem nula, com ângulo de inclinação máximo de 5 graus para o lado do 
+motor operante, em potência máxima de decolagem. Em outras palavras, é a 
+
+===== PAGE 127 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+127 
+velocidade abaixo da qual um avião bimotor não pode ser controlado em voo, 
+enquanto um motor opera com potência de decolagem e o outro em 
+molinete. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11.2- IDENTIFICAÇÃO DO MOTOR INOPERANTE  
+ 
+Quando em uma aeronave multimotor, um dos motores se torne 
+inoperante, ocorre um desequilíbrio de tração, gerando uma tendência de 
+guinada para o lado do motor ruim. Se não for corrigido, esse desequilíbrio, 
+somado à perda de potência, irá acarretar em excesso de arrasto. 
+ 
+
+===== PAGE 128 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+128 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Faz-se necessário então, minimizar os efeitos da guinada para 
+manter a trajetória da aeronave da seguinte maneira: 
+• Aplicar pedal do lado do motor bom; é possível sentir de imediato nos pés o 
+efeito da guinada, sendo o lado do motor bom aquele que nos oferece 
+resistência ao pé, e no lado do motor ruim o pedal estará como se estivesse 
+“morto” (“dead foot, dead engine”). De início, poderemos calçar o pedal até 
+centralizar a bolinha do Turn Coordinator. 
+• Inclinar o manche até 5º para o lado do motor bom, de modo a manter 
+uma trajetória reta. 
+• 
+Deve-se ajustar:  
+Mistura Rica  
+ 
+ 
+ 
+Passo todo a frente (Mínimo) 
+  
+ 
+ 
+ 
+Potência toda a frente ( Full Power) 
+ 
+
+===== PAGE 129 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+129 
+ 
+Em seguida, poderemos aliviar um pouco mais o pedal para o lado do 
+motor bom e buscar “meia bolinha espirrada”. O resultado  será  a  ausência  
+da derrapagem e  a máxima performance possível.  O ajuste de potência pode 
+ser alterado de acordo com a necessidade de performance para manter o voo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Com o motor em pane já identificado e aeronave controlada, deve-se 
+“limpar a aeronave”, através de recolhimento do trem de pouso e flaps, 
+visando diminuir ao máximo o arrasto provocado por estes elementos.  
+ 
+Nesta situação, a velocidade mínima a ser  mantida  é  a Vyse (blue 
+line = 105 MPH - 91 Kt)  com  o  máximo  de  potência  possível  e  o  mínimo  
+de  arrasto. 
+11.3- EMBANDEIRAMENTO 
+ 
+Uma aeronave voando bimotor, ao perder um dos seus motores, 
+perde o equivalente a 50% de sua tração total, porém, em termos de 
+performance aerodinâmica,  tal perda chega à ordem de 80%. 
+ 
+Traduzindo-se essa situação em valores, um Seneca que subisse com 
+uma razão de 1000ft/min com os dois motores, ao perder um de seus motores 
+poderia ter sua razão reduzida para 200ft/min ou menos. 
+
+===== PAGE 130 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+130 
+ 
+Um fator crítico a salientar é que a hélice do motor inoperante gera 
+arrasto suficiente pra prejudicar o voo e a navegabilidade de aeronave, 
+devendo ser EMBANDEIRADA.  
+ 
+Caso a rotação da hélice caia abaixo de 800 RPM, não mais será 
+possível embandeirar a hélice devido ao acionamento de um pino batente que 
+atua por força centrifuga evitando o embandeiramento, sempre que o corte 
+do motor é feito no solo   
+ 
+Portanto, a decisão de tentar reascender o motor ou partir logo para 
+o embandeiramento da hélice deve variar com a situação,  sobretudo em 
+falhas a baixa altura, e deve ser tomada de forma consciente, rápida e segura. 
+Entretanto, já existiram acidentes onde a tripulação, na pressa de 
+embandeirar a hélice do motor ruim, embandeirou a do motor bom.  
+ 
+Recomenda-se fazer um cross-check com os instrumentos e identificar 
+claramente o motor em pane. Para treinamento recomenda-se anunciar em 
+voz alta: “Motor em pane é o Esquerdo... Embandeirando pela manete 
+esquerda”.  
+ 
+ 
+ 
+
+===== PAGE 131 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+131 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11.4- MOTOR CRÍTICO  
+ 
+Motor crítico só existirá para aeronaves cujas hélices giram na mesma 
+direção. 
+ 
+Uma definição simples de motor crítico é aquele cuja falha acarretará 
+em maior efeito negativo para a manutenção do voo com o motor 
+remanescente. 
+ 
+Em termos de forças, o motor crítico é aquele que traz melhor efeito 
+sobre as superfícies aerodinâmicas, sobretudo para o leme. Ao falhar, ficamos 
+com um motor que tende a soprar “para fora” do centro da fuselagem. Com 
+menos fluxo de ar no leme,  teremos menos resposta de comando no pedal. 
+
+===== PAGE 132 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+132 
+ 
+Tecnicamente explicando, aviões multimotores estão sujeitos ao 
+Fator-P da mesma forma que monomotores. A pá da hélice que desce de cada 
+motor produzirá mais tração do que a pá da hélice que sobe, quando a 
+aeronave estiver operando com potência e em ângulos de ataque positivo. A 
+pá da hélice que desce do motor direito está a uma maior  distância do centro 
+de gravidade, produzindo maior momento que a pá da hélice que desce do 
+motor esquerdo. Como resultado, a falha do motor esquerdo resultará a 
+maior  tração assimétrica quando o avião estiver equipado com dois motores 
+rotativos no sentido horário. 
+ 
+Podemos verificar esse efeito na figura abaixo: 
+ 
+ 
+Para corrigir a guinada provocada pelo motor crítico, alguns 
+multimotores (como o Seneca I) são fabricados com o motor direito contra-
+rotativo. Com esse projeto, o grau de tração assimétrica é o mesmo que o do 
+motor esquerdo inoperante. Nenhum motor é mais crítico que o outro. 
+
+===== PAGE 133 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+133 
+11.5- TETO DE SERVIÇO MONOMOTOR 
+ 
+É a máxima altitude ensaiada na qual uma aeronave consegue subir, 
+mantendo uma razão de 50ft/min em ar calmo com uma hélice 
+embandeirada. É calculada para que se saiba se a mesma irá conseguir manter 
+altitude mínima de segurança em voo em rota, ou livrar-se de obstáculos. 
+Durante a falha de um dos motores teremos um (DRIFTDOWN) de altitude e 
+velocidade que é a diferença de performance da aeronave voando bimotor. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 134 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+134 
+11.6- CURVAS MONOMOTOR 
+ 
+Deve-se evitar curvas à baixa altura (abaixo de 400 pés AGL), próximo 
+a VMCA e, sobretudo, para o lado do motor ruim, com vistas a não perder 
+performance de subida.  (Raise the death engine). 
+ 
+A Blue Line para voo monomotor é uma velocidade bastante segura 
+para curvarmos, independente do lado requerido. Devem-se executar as 
+curvas de maneira suave e coordenada, evitando-se passar da curva padrão. 
+ 
+Devem-se evitar curvas com inclinação acima de 30° voando 
+monomotor. 
+ 
+11.7- TRÁFEGO VISUAL MONOMOTOR 
+ 
+A extensão do trem de pouso deverá ser baixado normalmente no 
+traves da cabeceira e a aplicação de flaps se darão na curta final. O piloto deve 
+fazer o circuito de modo que ao atingir a curta final, possa reduzir 
+gradativamente o motor e assim, eliminar a potência assimétrica. 
+ 
+
+===== PAGE 135 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+135 
+11.8- PROCEDIMENTO IFR MONOMOTOR  
+ 
+Deve-se continuar a navegação conforme o procedimento publicado. 
+Caso esteja IMC, buscar cumprir cada fase do procedimento como estivese 
+bimotor. 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 136 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+136 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 137 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+137 
+12- PROCEDIMENTOS DE EMERGÊNCIA 
+ 
+Esta seção apresenta os procedimentos recomendados para enfrentar 
+em condições satisfatórias os vários tipos de emergência e situações críticas. 
+São apresentados também todos os procedimentos de emergência conforme 
+os requisitos de homologação aplicáveis, assim como aqueles necessários à 
+operação da aeronave, em função de suas características operacionais e de 
+projeto.  
+ 
+Os pilotos devem estar familiarizados com os procedimentos aqui 
+descritos para tomar a providência adequada, caso ocorra uma situação de 
+emergência. A maioria dos procedimentos básicos de emergência faz parte do 
+treinamento dos pilotos. Os procedimentos aqui descritos servem como fonte 
+de estudo para treinamento na VoeFloripa.  
+ 
+Executar as ações conforme estabelecido neste Standard Operating 
+Procedures  (SOP) o AFM (Airplane Flight Manual) da aeronave PA34-200 
+Seneca I seção II C , e seguindo os conceitos estabelecidos na seção 9 e 11 
+deste manual. 
+EMERGENCY CHECKLIST conforme seção C do AFM; 
+12.1- IDENTIFICAÇÃO DO MOTOR EM PANE 
+Pé morto/ Motor morto (dead foot, dead engine) 
+        
+ 
+
+===== PAGE 138 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+138 
+12.2- CORTE DO MOTOR  - (Embandeiramento) 
+ 
+ 
+Antes do embandeiramento e se as circunstâncias permitirem pode-
+se tentar restaurar a potência. Para isto, proceda como a seguir: 
+ 
+Circunstâncias;   
+- Flap e trem de pouso recolhidos 
+ 
+ 
+- Potência parcial 
+ 
+ 
+- Motor afetado está mantendo acima de 800 rpm 
+ 
+Memory Itens; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caso negativo o restabelecimento da potência efetuar o 
+embandeiramento e corte do motor e solicitar o “FEATHERING PROCEDURE 
+emergency checklist” 
+ 
+ 
+① MIXTURE – AS REQUIRED (Rich) 
+② FUEL BOOST PUMP ON (Motor inop.)  
+③ FUEL SELECTOR EM CROSSFEED (Motor inop.)  
+④ MAGNETOS (SELECT LEFT OR RIGHT)  
+⑤ ALTERNATE AIR (Motor inop.) 
+
+===== PAGE 139 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+139 
+             
+ 
+
+===== PAGE 140 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+140 
+12.3- PARTIDA DO MOTOR EM VOO  
+ 
+Procedimento de desmbandeiramento 
+ 
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 141 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+141 
+12.4- CONTROLE DE COMBUSTÍVEL - OPERAÇÃO MONOMOTOR  
+         
+ 
+NOTA: Use a alimentação cruzada somente em voo nivelado. Não utilize a 
+alimentação cruzada quando o tanque do lado do motor remanescente estiver 
+cheio, pois poderá haver perda de combustível através do suspiro do tanque. 
+ADVERTÊNCIA:  
+- Se a operação normal do motor e o fluxo de "'combustível não forem 
+restabelecidos imediatamente, a bomba auxiliar de combustível deverá ser 
+desligada. A falta de indicação de fluxo, quando o interruptor da bomba 
+auxiliar estiver ligada, pode significar um vazamento no sistema ou falta de 
+combustível 
+.  
+
+===== PAGE 142 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+142 
+- Não ligue os interruptores das bombas auxiliares de combustível, a não ser 
+que haja necessidade de eliminar vapor ou ocorra falha da bomba de 
+combustível do motor. As bombas auxiliares de combustível não entram em 
+operação automaticamente. 
+12.5- FALHA DO MOTOR NA DECOLAGEM 
+        
+ 
+ 
+ 
+ 
+
+===== PAGE 143 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+143 
+FALHA DO MOTOR NA DECOLAGEM (ABAIXO DA V1/VR)  
+ 
+Se a falha do motor ocorrer durante a decolagem, antes de ter sido 
+alcançada a velocidade de decisão:  
+ 
+- RTO (REJECT TAKEOFF) 
+- RTO  Falha do motor até a V1/VR  105 mph 
+ 
+Call Out: 
+“REJECT” 
+Ações; 
+ 
+- BRAKES 
+ 
+- POWER OFF 
+ 
+- DIRCTIONAL CONTROL 
+ 
+- ATC / EMERGENCY CHECKLIST / AFTER LANDING  
+                                               ↓ 
+     “ENGINE FAILURE DURING TAKE OFF   emergency checklist” 
+ 
+ 
+Se a falha do motor ocorrer na decolagem durante a corrida no solo 
+ou após a saída do solo, com o trem ainda abaixado, tendo o avião atingido 
+ou ultrapassado a V1/VR:  
+ 
+Se houver pista suficiente, baixar o nariz, verifique o trem de pouso 
+embaixo e reduza gradativamente ambas as manetes de potência em "MíN", 
+pouse se já tiver saído do solo, pare em frente.  
+
+===== PAGE 144 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+144 
+- RTO Falha do motor após a V1/VR com pista em frente 
+Call Out: 
+“REJECT” 
+Ações; 
+ 
+- LOWER THE NOSE TO MANTAIN SPEED 
+ 
+- CHEK LANDING GEAR DOWN 
+ 
+- REDUCE POWER SMOOTHLY 
+ 
+- FLARE & TOUCH DOWN 
+ 
+- BRAKES 
+ 
+- POWER OFF 
+ 
+- DIRCTIONAL CONTROL 
+ 
+- ATC / EMERGENCY CHECKLIST / AFTER LANDING  
+ 
+ 
+ 
+        ↓ 
+      “ENGINE FAILURE DURING TAKE OFF   emergency checklist” 
+ 
+ 
+ 
+ 
+
+===== PAGE 145 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+145 
+12.6- FALHA DO MOTOR NA DECOLAGEM (APÓS A V1/VR OU 
+ACIMA)  
+         
+ 
+ 
+ATENÇÃO: Certas combinações de peso do avião, configuração, condições 
+atmosféricas e velocidade, poderão acarretar uma razão negativa.  
+ERROS COMUNS 
+• Perder altitude antes de a aeronave reduzir a velocidade até a Blue Line. 
+• Tentar manter a proa e/ou asas niveladas somente pelo aileron, ao invés 
+de utilizar maior aplicação de leme. 
+• Concentrar o foco na velocidade e ações do Checklist, deixando variar a 
+proa. 
+• Deixar de navegar a aeronave devido à execução das ações do Checklist. 
+ 
+Saiba se a mesma irá conseguir manter altitude mínima de segurança 
+em voo em rota, ou livrar-se de obstáculos. 
+
+===== PAGE 146 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+146 
+ 
+Experientes pilotos de multimotor costumam determinar a decisão 
+sobre a rejeição da decolagem em caso de uma falha de motor, considerando 
+variáveis como comprimento da pista e gradiente, distância de aceleração e 
+parada, altura de obstáculo na área, peso de decolagem, desempenho 
+monomotor, altitude, densidade e seu próprio nível de proficiência. Com uma 
+consciência de variáveis, formule um plano adequado para a decolagem e 
+condições para uma ação imediata a ser tomada se um motor falhar durante 
+a decolagem.  
+Definição para decolagem sem pista em frente; 
+ 
+- Pista molhada 
+ 
+- Comprimento da pista menor que 1500 m 
+ 
+- Vento de cauda acima de 5 kt  
+ 
+- Pavimento saibro (terra) ou grama 
+ 
+ 
+Na figura abaixo a área de decisão começa na V1 e continua até que 
+seja atingido Vxse. 
+ 
+Embora a aeronave passe por esta área em poucos segundos, as 
+ações nesta fase do voo são críticas se uma falha de motor ocorrer. 
+ 
+
+===== PAGE 147 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+147 
+ 
+
+===== PAGE 148 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+148 
+- Falha após a V1/VR sem pouso em frente 
+Call Out: 
+“GO” 
+Ações;  
+ 
+- Rotation 
+ 
+- Use Rudder to maintain dirctional control 
+ 
+- MANETES TODAS A FRENTE 
+ 
+- “FLAP´S e LANDING GEAR UP” 
+ 
+- Identifica, PÉ MORTO MOTOR MORTO (Dead Foot Dead Engine) 
+ 
+- Mantain speed above VMCA  / VMC  RED LINE 
+ 
+- REDUZ, EMBANDEIRA E CORTA 
+ 
+- Mantem o voo acima da VMCA buscando a Vyse BUE LINE 
+ 
+- LEVE BANK Máx 5ᵒ para o lado do motor bom 
+ 
+- Meia Bolinha deslocada para o lado do motor bom 
+ 
+- VMC circuito de trafego ou balão /  IMC – SID ou contingencia  
+ 
+- ATC  “PAN PAN PAN PAN PAN PAN”... (Urgência) ou “MAYDAY 
+ 
+MAYDAY MAYDAY”... (Socorro) 
+ 
+- 1000’ AGL, EMERGENCY CHECKLIST  
+                                                         ↓ 
+ 
+
+===== PAGE 149 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+149 
+ 
+“FEATHERING PROCEDURE   emergency checklist”      →     SINGLE ENGINE LANDING 
+ Se as condições permitirem   
+ 
+ 
+                              ↓ 
+                       ↓                                                                      SINGLE ENGINE GO-AROUND 
+“UNFEATHERING PROCEDURE   emergency checklist” 
+ 
+ 
+12.7- POUSO MONOMOTOR 
+         
+ 
+ 
+ 
+Recomenda-se aproximar para pouso monomotor com 25⁰ de flap 
+máximo, para não coprometer a arremetida caso necessário. Evite arremeter 
+monomotor.  
+ 
+Esteja pronto para a mudança de forças no leme quando você reduzir 
+a potência do motor bom para o pouso. 
+ 
+
+===== PAGE 150 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+150 
+12.8- ARREMETIDA MONOMOTOR  
+        
+ 
+ 
+A melhor situação no caso de aproximação monomotora é escolher 
+uma pista adequada e, no caso de IFR, a que estiver com os melhores mínimos 
+e possuir melhor precisão (ILS, por exemplo), de modo a se evitar ao máximo 
+a arremetida monomotor.  
+ 
+Em condições de temperatura, altitude e peso adequados, a aeronave 
+multimotora poderá conseguir arremetida monomotora com pequena razão 
+ascensional, sendo o ideal que seja iniciada na configuração lisa. Neste caso 
+avança-se a manete do motor bom toda à frente, calçando o pedal de acordo 
+para compensar o maior diferencial de tração, e busca-se a velocidade de Vyse 
+(Blue Line) ou Vxse de modo a produzir razão positiva no climb. 
+ 
+O melhor desempenho de subida monomotora é obtido na Vyse com 
+potência máxima disponível e arrasto mínimo. Após flaps e trem de pouso 
+recolhidos e a hélice do motor em pane ter sido embandeirada, o elemento 
+chave no melhor desempenho de subida é minimizar a glissada lateral. 
+ 
+ 
+Realizar o procedimento de arremetida conforme sessões 10.12 e pag. 
+113 desse manual, “Atento a assimitria de potência”. 
+
+===== PAGE 151 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+151 
+12.9- BAIXAMENTO DO TREM DE POUSO EM EMERGÊNCIA 
+          
+ 
+ 
+12.10- ALARMES DO TREM DE POUSO   
+         
+ 
+ 
+A luz vermelha acesa indica Trem de Pouso em Trânsito (Não travado). 
+Repita a operação de abaixamento ou recolhimento do trem de pouso, se a 
+indicação de falha continuar. A luz vermelha também acende quando a buzina 
+de alarme soa em regime de baixa potência, se o trem de pouso não estiver 
+abaixado e travado.  
+Mantenha o comando de baixamento do trem de pouso em emergência 
+puxado para o pouso.  
+
+===== PAGE 152 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+152 
+12.11- POUSO COM TREM DE POUSO RECOLHIDO 
+       
+ 
+ 
+12.12- FALHA NO SISTEMA ELÉTRICO 
+ 
+O Sistema Elétrico é composto por uma bateria de 12 volts com 35 
+Amperes/h e dois alternadores com capacidade de 60 amperes cada. 
+ 
+Não deve se efetuar decolagens com marcação de 50 amperes ou 
+acima nos amperímetros. 
+ 
+Dois reguladores de voltagem controlam a corrente elétrica no 
+sistema, mantendo está sempre em constantes 14 volts, prevenindo danos 
+aos equipamentos. Um mal funcionamento dos reguladores de voltagem será 
+anunciado através de um luz vermelha no painel – Overvoltage light.   
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 153 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+153 
+a)- DUAS LUZES DE SUBREVOLTAGEM ILUMINADAS 
+       
+   
+ 
+b)- UMA LUZ DE SUBREVOLTAGEM ILUMINADA 
+       
+ 
+ 
+ 
+
+===== PAGE 154 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+154 
+c)- BATERIA DESCARREGADA 
+ 
+Se a bateria ficar descarregada devido à condição enfraquecida ou 
+acionamento excessivo do starter, pode ser necessário executar o 
+procedimento a seguir para recuperala. 
+ 
+        
+ 
+ 
+ 
+ 
+
+===== PAGE 155 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+155 
+d)- FALHA DE UM ALTERNADOR 
+ 
+A falha de um alternador pode ser gerada devido a carga ecessiva, 
+falha do regulador de voltagem ou por pane no proprio componente. 
+ 
+Atento ao erro causado na bússola magnética podendo exceder a 
+10⁰ caso os dois alternadores fiquem inoperantes. 
+        
+ 
+ 
+12.13- FALHA NO SISTEMA A VÁCUO 
+ 
+Use o indicador de curva elétrico para monitorar o desempenho do 
+giro direcional e do indicador de atitude.  
+        
+ 
+ 
+
+===== PAGE 156 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+156 
+12.14- FOGO NO MOTOR  
+a)- FOGO NO MOTOR EM VOO 
+        
+ 
+ 
+b)- FOGO NO MOTOR NO SOLO 
+        
+ 
+ 
+12.15- RECUPERAÇÃO DE PARAFUSO - SPINS 
+        
+ 
+
+===== PAGE 157 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+157 
+12.16- FALHA DO MOTOR SOB FORMAÇÃO DE GELO  
+        
+ 
+ 
+12.17- FALHA DO ALTERNADOR SOB FORMAÇÃO DE GELO  
+        
+ 
+ 
+
+===== PAGE 158 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+158 
+12.18- FALHA DO MOTOR COM PORTA REMOVIDA  
+        
+ 
+ 
+12.19- DISPARO DE HÉLICE  
+        
+ 
+ 
+ 
+
+===== PAGE 159 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+159 
+12.20- VOO SOB CONDIÇÕES DE GELO (Special Operation) 
+        
+ 
+ 
+ 
+A aeronave PT-FLM Seneca I da VoeFloripa não está equipada para 
+voo sob condições de gelo, caso entre em região de formação de gelo inicie 
+uma descida imediatamente para niveis insentos de formação de gelo. 
+Atento a MEA, MOCA, MORA e MSA do setor sobrevoado 
+ 
+ 
+
+===== PAGE 160 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+160 
+ 
+MEA 
+- Minimum Enroute IFR Altitude (Altitude Mínima IFR em 
+ 
+ 
+Rota) 
+ 
+MOCA - Minimum Obstruction Clearance Altitude (Altitude Mínima 
+ 
+ 
+para livrar obstáculos) 
+ 
+MORA - Minimum Off-Route Altitude (Altitude Mínima fora de 
+ 
+ 
+Aerovia) 
+ 
+MSA 
+- Minimum Safe Altitude (Altitude Mínima de Segurança)  
+ 
+12.21- DESCIDA DE EMERGÊNCIA  
+ 
+1. Manete de potência Mín  
+ 
+2. Manetes de hélice MÁX RPM  
+ 
+3. Manetes de mistura conforme necessário para operação suave  
+ 
+4. Velocidade 150 MPH  
+ 
+5. Seletora do trem de pouso EMBAIXO  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 161 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+161 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 162 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+162 
+13- ANEXOS 
+ 
+13.1- REGRAS DE OPERAÇÃO 
+1. Teto, visibilidade e mínimos requeridos (para voos IFR):  
+ 
+✦ 1000FT e VIS maior que 4000M; 
+✦ Sem ocorrência em METAR ou TAF (para horário previsto) de TCU, TS, 
+GS e WS.  
+✦ Sem ocorrência de fenômenos significativos previstos nos setores da 
+missão. 
+✦ Voo IMC: autorizado somente em condição caracterizada como 
+“stratus". 
+ 
+2. Aeródromos autorizados para operação: 
+ 
+✦ SBFL, SBNF, SBJV, SBJA e SBPA (Não efetuar TGL com pista molhada); 
+✦ Regras operação SDEN:  
+• 
+Proibido TGL no Costa Esmeralda (SDEN) em treinamento 
+com alunos; 
+• 
+Em missões de translado (SDEN) caso perceba que o aluno 
+esteja seguro e com as condições meteorológicas favoráveis, 
+é permitido o mesmo executar o pouso. 
+ 
+3. Limites de Vento para Pouso e Decolagem:  
+ 
+✦ Componente de través máxima 13KT (Operação do instrutor nesta 
+condição); 
+✦ Componente de cauda máximo 5KT; 
+ 
+ 
+
+===== PAGE 163 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+163 
+ 
+4. Cheques com INSPACS e Examinadores Autônomos:  
+ 
+✦ Os mesmos ocuparão o assento traseiro da aeronave como 
+observador; 
+✦ O voo de cheque será feito dentro dos padrões de voo VFL; 
+✦ Compulsório o cumprimento de todas exigências deste documento; 
+ 
+5. Presença de terceiros nos voos de instrução: 
+ 
+Nas aeronaves PR-FLM e PR-MGX, é autorizada a presença de um aluno ou 
+instrutor observador, desde que – quando for aluno – o mesmo esteja em 
+fase equivalente (ou fase imediatamente anterior) a missão de instrução 
+que está programada. Coordenação com Escala de voo deverá ser feita 
+previamente; 
+ 
+6. Tempo de missão máximo proposto: 
+ 
+Três horas e trinta minutos de voo (03:30) – exceções poderão ser 
+coordenadas diretamente com o responsável pela escala de voos; 
+ 
+7. Voo noturno: 
+ 
+Proibida operação noturna - programar decolagem diurna o regresso da 
+aeronave com luz visível. 
+ 
+8. Movimentação da aeronave em solo: 
+ 
+Nunca utilizar qualquer tipo de trator ou push-back (convencional ou 
+elétrico) conectado ao trem de pouso de nariz, devido as restrições e 
+fragilidades deste modelo de Seneca. 
+ 
+
+===== PAGE 164 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+164 
+Se caso houver algum reboque inadvertido sem prévia autorização, 
+informar de imediato a manutenção para efetuar inspeção no sistema de 
+trem de pouso antes do próximo voo. 
+Caso haja algum dano, existe o perigo eminente do recolhimento 
+involuntário do trem de pouso de nariz durante o taxi. (Fonte: Piper SB 
+1123B) 
+ 
+➡ Essas novas regras serão acompanhadas pela área de segurança 
+operacional, Flight Standards e escala.  
+➡ Deverão ser cumpridas rigorosamente. 
+➡ O padrão de voo será monitorado pela tecnologia Smart Flight ® 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 165 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+165 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Intencionalmente em Branco 
+ 
+ 
+
+===== PAGE 166 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+166 
+14- CURRENT TRACK 
+ 
+ 
+No G5 E-HSI do nosso Seneca contamos com uma ferramenta de 
+correção de vento, o Current Track, que é indicado com uma linha tracejada 
+na cor branca e na ponta um diamante na cor magenta, como mostrado na 
+imagem abaixo. 
+  
+No entanto, há uma dificuldade na leitura dele para os pilotos que não 
+estão habituados com o equipamento.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 167 =====
+                             STANDARD OPERATION PROCEDURES                   REV. 13  
+    
+                      
+167 
+O Current Track indica o rumo da aeronave, já que a proa não está 
+coincidente devido a ação do vento. No exemplo da imagem acima, o avião 
+está se deslocando para a direita. Se o piloto desejasse se manter voando reto, 
+deveria iniciar uma curva para a esquerda com o intuito de colocar o Current 
+Track na magnética 030 graus. 
+ 
+Outro exemplo, vamos imaginar que estamos estabilizados no 
+procedimento ILS da pista 14 de Florianópolis, mas devido ao vento vindo de 
+esquerda tivemos que corrigi-lo para nos mantermos estabilizados na final. 
+Como resultado nosso Current Track se encontra no 141 graus (nosso curso 
+de aproximação final) esse seria nosso rumo, que é para onde nossa aeronave 
+está realmente se deslocando. Porém, o nariz da nossa aeronave (proa) está 
+apontando, por exemplo, para as pontes, com o objetivo de corrigir a ação do 
+vento sobre o avião.  
+ 
+Na imagem abaixo podemos visualizar o Current Track juntamente 
+com o CDI, similar ao segundo exemplo que utilizamos. Na imagem, nossa 
+proa é 020 graus, mas estamos nos deslocando aproximadamente para 030 
+graus.  
+ 

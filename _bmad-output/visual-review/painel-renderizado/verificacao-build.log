@@ -1,0 +1,30 @@
+
+> my-app@0.0.0 verify
+> npm run build && node scripts/verify-build.mjs --dist
+
+
+> my-app@0.0.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 2809 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.94 kB │ gzip:   0.52 kB
+dist/assets/index-iP0rvXEa.css         123.64 kB │ gzip:  20.88 kB
+dist/assets/HeroCanvas-BelENeUn.js       4.43 kB │ gzip:   2.11 kB
+dist/assets/ModelCanvas-CFPKL0ye.js     55.16 kB │ gzip:  17.29 kB
+dist/assets/glb-BQT0zdKa.js            980.38 kB │ gzip: 265.68 kB
+dist/assets/index-C77c8ETY.js        1,199.46 kB │ gzip: 353.34 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.66s
+Baseline GLB (não inclui proxies antigos): {"bytes":1255252,"triangles":436242,"materials":11,"primitives":148}
+Ativo Blender validado: {"triangles":576102,"materials":21,"primitives":272,"nodes":119,"components":68,"bytes":20070308,"negativeCases":39}
+Runtime PASS: GLTFLoader real, 68 IDs, 251 meshes com extras herdados, 272 materiais independentes/round-trip, bounds cacheados; pixels de textura limitados ao ensaio CDP.
+Foco validado: âncora tardia, cancelamento, explosão e seleção/deep-link sem duplicação (ensaio isolado, não navegador).
+Smoke verification passed: 8 páginas, componentes gráficos originais, dados JSON, deep-links e fallback WebGL.

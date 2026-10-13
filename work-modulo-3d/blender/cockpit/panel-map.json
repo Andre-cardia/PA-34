@@ -1,0 +1,816 @@
+{
+  "width": 1600,
+  "height": 700,
+  "instruments": [
+    {
+      "id": "bussola_magnetica",
+      "zone": "GLARESHIELD",
+      "tag": "BÚSSOLA",
+      "shape": {
+        "kind": "rect",
+        "x": 742,
+        "y": 75,
+        "w": 116,
+        "h": 34
+      },
+      "label": {
+        "x": 866,
+        "y": 96,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "termometro_oat",
+      "zone": "GLARESHIELD",
+      "tag": "OAT",
+      "shape": {
+        "kind": "circle",
+        "cx": 110,
+        "cy": 130,
+        "r": 19
+      },
+      "label": {
+        "x": 137,
+        "y": 133,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "relogio",
+      "zone": "PAINEL ESQ",
+      "tag": "RELÓGIO",
+      "shape": {
+        "kind": "circle",
+        "cx": 170,
+        "cy": 310,
+        "r": 14
+      },
+      "label": {
+        "x": 170,
+        "y": 288,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "adf_indicador",
+      "zone": "PAINEL ESQ",
+      "tag": "ADF",
+      "shape": {
+        "kind": "circle",
+        "cx": 640,
+        "cy": 310,
+        "r": 46
+      },
+      "label": {
+        "x": 640,
+        "y": 256,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "aviso_estol",
+      "zone": "PAINEL ESQ",
+      "tag": "STALL",
+      "shape": {
+        "kind": "circle",
+        "cx": 195,
+        "cy": 145,
+        "r": 15
+      },
+      "label": {
+        "x": 195,
+        "y": 122,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "chave_master",
+      "zone": "PAINEL ESQ · INTERRUPTORES",
+      "tag": "MASTER",
+      "shape": {
+        "kind": "rect",
+        "x": 68,
+        "y": 192,
+        "w": 84,
+        "h": 56
+      },
+      "label": {
+        "x": 158,
+        "y": 223,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "chaves_alternadores",
+      "zone": "PAINEL ESQ · INTERRUPTORES",
+      "tag": "ALT L–R",
+      "shape": {
+        "kind": "rect",
+        "x": 68,
+        "y": 256,
+        "w": 84,
+        "h": 56
+      },
+      "label": {
+        "x": 158,
+        "y": 287,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "chaves_magnetos_partida",
+      "zone": "PAINEL ESQ · INTERRUPTORES",
+      "tag": "MAG/START",
+      "shape": {
+        "kind": "rect",
+        "x": 68,
+        "y": 320,
+        "w": 84,
+        "h": 64
+      },
+      "label": {
+        "x": 158,
+        "y": 355,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "bombas_combustivel_eletricas",
+      "zone": "PAINEL ESQ · INTERRUPTORES",
+      "tag": "FUEL PUMPS",
+      "shape": {
+        "kind": "rect",
+        "x": 68,
+        "y": 392,
+        "w": 84,
+        "h": 56
+      },
+      "label": {
+        "x": 158,
+        "y": 423,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "pitot_heat_luzes",
+      "zone": "PAINEL ESQ · INTERRUPTORES",
+      "tag": "PITOT/LUZES",
+      "shape": {
+        "kind": "rect",
+        "x": 68,
+        "y": 456,
+        "w": 84,
+        "h": 64
+      },
+      "label": {
+        "x": 158,
+        "y": 491,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "freio_estacionamento",
+      "zone": "PAINEL ESQ · INTERRUPTORES",
+      "tag": "FREIO EST.",
+      "shape": {
+        "kind": "rect",
+        "x": 68,
+        "y": 528,
+        "w": 84,
+        "h": 76
+      },
+      "label": {
+        "x": 158,
+        "y": 569,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "velocimetro",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "ASI",
+      "shape": {
+        "kind": "circle",
+        "cx": 244,
+        "cy": 310,
+        "r": 58
+      },
+      "label": {
+        "x": 244,
+        "y": 244,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "horizonte_artificial",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "AI",
+      "shape": {
+        "kind": "circle",
+        "cx": 380,
+        "cy": 310,
+        "r": 58
+      },
+      "label": {
+        "x": 380,
+        "y": 244,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "altimetro",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "ALT",
+      "shape": {
+        "kind": "circle",
+        "cx": 516,
+        "cy": 310,
+        "r": 58
+      },
+      "label": {
+        "x": 516,
+        "y": 244,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "coordenador_curva",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "TC",
+      "shape": {
+        "kind": "circle",
+        "cx": 244,
+        "cy": 446,
+        "r": 58
+      },
+      "label": {
+        "x": 244,
+        "y": 519,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "giro_direcional",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "DG",
+      "shape": {
+        "kind": "circle",
+        "cx": 380,
+        "cy": 446,
+        "r": 58
+      },
+      "label": {
+        "x": 380,
+        "y": 519,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "variometro",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "VSI",
+      "shape": {
+        "kind": "circle",
+        "cx": 516,
+        "cy": 446,
+        "r": 58
+      },
+      "label": {
+        "x": 516,
+        "y": 519,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "indicador_vor_1",
+      "zone": "PAINEL ESQ",
+      "tag": "OBS 1",
+      "shape": {
+        "kind": "circle",
+        "cx": 230,
+        "cy": 586,
+        "r": 54
+      },
+      "label": {
+        "x": 230,
+        "y": 648,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "indicador_vor_2_gs",
+      "zone": "PAINEL ESQ",
+      "tag": "OBS 2/GS",
+      "shape": {
+        "kind": "circle",
+        "cx": 362,
+        "cy": 586,
+        "r": 54
+      },
+      "label": {
+        "x": 362,
+        "y": 648,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "avisos_eletricos_vacuo",
+      "zone": "PAINEL ESQ",
+      "tag": "OV/VAC",
+      "shape": {
+        "kind": "rect",
+        "x": 440,
+        "y": 536,
+        "w": 140,
+        "h": 72
+      },
+      "label": {
+        "x": 510,
+        "y": 621,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "luzes_marker",
+      "zone": "CENTRO · AUX",
+      "tag": "MARKER",
+      "shape": {
+        "kind": "rect",
+        "x": 596,
+        "y": 380,
+        "w": 84,
+        "h": 46
+      },
+      "label": {
+        "x": 638,
+        "y": 371,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "piloto_automatico",
+      "zone": "PAINEL ESQ",
+      "tag": "AP",
+      "shape": {
+        "kind": "rect",
+        "x": 596,
+        "y": 620,
+        "w": 140,
+        "h": 50
+      },
+      "label": {
+        "x": 666,
+        "y": 612,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "painel_audio",
+      "zone": "CENTRO · RÁDIOS",
+      "tag": "ÁUDIO",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 140,
+        "w": 274,
+        "h": 36
+      },
+      "label": {
+        "x": 968,
+        "y": 150,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "navcom_1",
+      "zone": "CENTRO · RÁDIOS",
+      "tag": "GNS 530W",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 180,
+        "w": 274,
+        "h": 115
+      },
+      "label": {
+        "x": 968,
+        "y": 190,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "navcom_2",
+      "zone": "CENTRO · RÁDIOS",
+      "tag": "NAV/COM 2",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 299,
+        "w": 274,
+        "h": 38
+      },
+      "label": {
+        "x": 968,
+        "y": 309,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "adf_receptor",
+      "zone": "CENTRO · RÁDIOS",
+      "tag": "ADF REC",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 341,
+        "w": 274,
+        "h": 34
+      },
+      "label": {
+        "x": 968,
+        "y": 351,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "dme",
+      "zone": "CENTRO · RÁDIOS",
+      "tag": "DME",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 379,
+        "w": 274,
+        "h": 30
+      },
+      "label": {
+        "x": 968,
+        "y": 389,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "transponder",
+      "zone": "CENTRO · RÁDIOS",
+      "tag": "XPDR",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 413,
+        "w": 274,
+        "h": 30
+      },
+      "label": {
+        "x": 968,
+        "y": 423,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "pressao_admissao",
+      "zone": "CENTRO · MOTOR",
+      "tag": "MP",
+      "shape": {
+        "kind": "circle",
+        "cx": 632,
+        "cy": 496,
+        "r": 42
+      },
+      "label": {
+        "x": 632,
+        "y": 446,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "tacometro_duplo",
+      "zone": "CENTRO · MOTOR",
+      "tag": "RPM L",
+      "shape": {
+        "kind": "circle",
+        "cx": 720,
+        "cy": 496,
+        "r": 34
+      },
+      "label": {
+        "x": 720,
+        "y": 454,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "tacometro_direito",
+      "zone": "CENTRO · MOTOR",
+      "tag": "RPM R",
+      "shape": {
+        "kind": "circle",
+        "cx": 800,
+        "cy": 496,
+        "r": 34
+      },
+      "label": {
+        "x": 800,
+        "y": 454,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "fluxo_combustivel_pressao",
+      "zone": "CENTRO · MOTOR",
+      "tag": "FF/PSI",
+      "shape": {
+        "kind": "circle",
+        "cx": 888,
+        "cy": 496,
+        "r": 42
+      },
+      "label": {
+        "x": 888,
+        "y": 446,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "egt",
+      "zone": "CENTRO · MOTOR",
+      "tag": "EGT",
+      "shape": {
+        "kind": "circle",
+        "cx": 622,
+        "cy": 592,
+        "r": 27
+      },
+      "label": {
+        "x": 622,
+        "y": 628,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "pressao_oleo",
+      "zone": "CENTRO · MOTOR",
+      "tag": "OIL P",
+      "shape": {
+        "kind": "circle",
+        "cx": 686,
+        "cy": 592,
+        "r": 27
+      },
+      "label": {
+        "x": 686,
+        "y": 628,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "temperatura_oleo",
+      "zone": "CENTRO · MOTOR",
+      "tag": "OIL T",
+      "shape": {
+        "kind": "circle",
+        "cx": 750,
+        "cy": 592,
+        "r": 27
+      },
+      "label": {
+        "x": 750,
+        "y": 628,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "cht",
+      "zone": "CENTRO · MOTOR",
+      "tag": "CHT",
+      "shape": {
+        "kind": "circle",
+        "cx": 814,
+        "cy": 592,
+        "r": 27
+      },
+      "label": {
+        "x": 814,
+        "y": 628,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "quantidade_combustivel",
+      "zone": "CENTRO · MOTOR",
+      "tag": "FUEL QTY",
+      "shape": {
+        "kind": "circle",
+        "cx": 878,
+        "cy": 592,
+        "r": 27
+      },
+      "label": {
+        "x": 878,
+        "y": 628,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "instrumentos_copiloto",
+      "zone": "PAINEL DIR · COPILOTO",
+      "tag": "COPILOTO",
+      "shape": {
+        "kind": "rect",
+        "x": 996,
+        "y": 136,
+        "w": 336,
+        "h": 232
+      },
+      "label": {
+        "x": 1164,
+        "y": 126,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "relogio_copiloto_acendedor",
+      "zone": "PAINEL DIR · COPILOTO",
+      "tag": "RELÓGIO/12V",
+      "shape": {
+        "kind": "rect",
+        "x": 1346,
+        "y": 136,
+        "w": 188,
+        "h": 94
+      },
+      "label": {
+        "x": 1440,
+        "y": 126,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "disjuntores",
+      "zone": "PAINEL DIR",
+      "tag": "DISJUNTORES",
+      "shape": {
+        "kind": "rect",
+        "x": 1346,
+        "y": 244,
+        "w": 188,
+        "h": 124
+      },
+      "label": {
+        "x": 1440,
+        "y": 237,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "seletor_trem",
+      "zone": "PAINEL DIR · TREM DE POUSO",
+      "tag": "GEAR SEL",
+      "shape": {
+        "kind": "rect",
+        "x": 1000,
+        "y": 384,
+        "w": 112,
+        "h": 150
+      },
+      "label": {
+        "x": 1056,
+        "y": 375,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "luzes_trem_verdes",
+      "zone": "PAINEL DIR · TREM DE POUSO",
+      "tag": "3 GREEN",
+      "shape": {
+        "kind": "rect",
+        "x": 1124,
+        "y": 384,
+        "w": 140,
+        "h": 70
+      },
+      "label": {
+        "x": 1194,
+        "y": 375,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "luz_trem_vermelha",
+      "zone": "PAINEL DIR · TREM DE POUSO",
+      "tag": "GEAR WARN",
+      "shape": {
+        "kind": "rect",
+        "x": 1124,
+        "y": 464,
+        "w": 140,
+        "h": 70
+      },
+      "label": {
+        "x": 1194,
+        "y": 458,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "extensao_emergencia_trem",
+      "zone": "PAINEL DIR · TREM DE POUSO",
+      "tag": "EMERG GEAR",
+      "shape": {
+        "kind": "rect",
+        "x": 1000,
+        "y": 544,
+        "w": 264,
+        "h": 60
+      },
+      "label": {
+        "x": 1132,
+        "y": 618,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "painel_anunciador",
+      "zone": "PAINEL DIR · TREM DE POUSO",
+      "tag": "CAUTION",
+      "shape": {
+        "kind": "rect",
+        "x": 1000,
+        "y": 610,
+        "w": 264,
+        "h": 60
+      },
+      "label": {
+        "x": 1132,
+        "y": 601,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "amperimetros",
+      "zone": "PAINEL DIR",
+      "tag": "AMP L–R",
+      "shape": {
+        "kind": "circle",
+        "cx": 1322,
+        "cy": 422,
+        "r": 36
+      },
+      "label": {
+        "x": 1322,
+        "y": 378,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "indicador_vacuo",
+      "zone": "PAINEL DIR",
+      "tag": "SUCÇÃO",
+      "shape": {
+        "kind": "circle",
+        "cx": 1422,
+        "cy": 422,
+        "r": 36
+      },
+      "label": {
+        "x": 1422,
+        "y": 378,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "estatica_alternada",
+      "zone": "PAINEL DIR",
+      "tag": "EST. ALT",
+      "shape": {
+        "kind": "rect",
+        "x": 1280,
+        "y": 474,
+        "w": 116,
+        "h": 84
+      },
+      "label": {
+        "x": 1338,
+        "y": 468,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "aquecimento_desembacador",
+      "zone": "PAINEL DIR",
+      "tag": "AQUEC/DESEMB",
+      "shape": {
+        "kind": "rect",
+        "x": 1408,
+        "y": 474,
+        "w": 126,
+        "h": 84
+      },
+      "label": {
+        "x": 1471,
+        "y": 468,
+        "anchor": "middle"
+      }
+    }
+  ]
+}

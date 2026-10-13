@@ -1,0 +1,5119 @@
+{
+  "origin": "http://127.0.0.1:3000",
+  "date": "2026-09-26T03:39:26.270Z",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Ambas imagens decodificadas por HTTP e raster visível, sem fallback ou canvas WebGL",
+      "ok": true,
+      "data": {
+        "images": [
+          {
+            "src": "http://127.0.0.1:3000/cockpit-render/painel-dia.webp",
+            "width": 3200,
+            "height": 1910,
+            "status": 200,
+            "bytes": 444456,
+            "visibility": "visible"
+          },
+          {
+            "src": "http://127.0.0.1:3000/cockpit-render/painel-noite.webp",
+            "width": 3200,
+            "height": 1910,
+            "status": 200,
+            "bytes": 381970,
+            "visibility": "visible"
+          }
+        ],
+        "fallbacks": 0,
+        "canvases": 0
+      }
+    },
+    {
+      "name": "56 IDs canônicos únicos, tabuláveis e rotulados",
+      "ok": true,
+      "data": [
+        {
+          "id": "bussola_magnetica",
+          "tab": "0",
+          "label": "Bússola magnética — VOO"
+        },
+        {
+          "id": "termometro_oat",
+          "tab": "0",
+          "label": "Termômetro de temperatura externa (OAT) — VOO"
+        },
+        {
+          "id": "relogio",
+          "tab": "0",
+          "label": "Relógio — VOO"
+        },
+        {
+          "id": "adf_indicador",
+          "tab": "0",
+          "label": "Indicador ADF (aguinha de rumo) — NAVEGAÇÃO"
+        },
+        {
+          "id": "aviso_estol",
+          "tab": "0",
+          "label": "Luz e buzina de aviso de estol — AVISO"
+        },
+        {
+          "id": "chave_master",
+          "tab": "0",
+          "label": "Chave master (bateria) — CONTROLE"
+        },
+        {
+          "id": "chaves_alternadores",
+          "tab": "0",
+          "label": "Chaves dos alternadores (2) — CONTROLE"
+        },
+        {
+          "id": "chaves_magnetos_partida",
+          "tab": "0",
+          "label": "Chaves de magnetos e partida (2) — CONTROLE"
+        },
+        {
+          "id": "bombas_combustivel_eletricas",
+          "tab": "0",
+          "label": "Interruptores das bombas elétricas de combustível (2) — CONTROLE"
+        },
+        {
+          "id": "pitot_heat_luzes",
+          "tab": "0",
+          "label": "Interruptores de pitot heat e luzes externas — CONTROLE"
+        },
+        {
+          "id": "freio_estacionamento",
+          "tab": "0",
+          "label": "Freio de estacionamento e freios de pedal (toe brakes) — CONTROLE"
+        },
+        {
+          "id": "velocimetro",
+          "tab": "0",
+          "label": "Velocímetro (ASI) — VOO"
+        },
+        {
+          "id": "horizonte_artificial",
+          "tab": "0",
+          "label": "Horizonte artificial — VOO"
+        },
+        {
+          "id": "altimetro",
+          "tab": "0",
+          "label": "Altímetro — VOO"
+        },
+        {
+          "id": "coordenador_curva",
+          "tab": "0",
+          "label": "Coordenador de curva (turn and bank) — VOO"
+        },
+        {
+          "id": "giro_direcional",
+          "tab": "0",
+          "label": "Giro direcional (HDG) — VOO"
+        },
+        {
+          "id": "variometro",
+          "tab": "0",
+          "label": "Variômetro (VSI) — VOO"
+        },
+        {
+          "id": "indicador_vor_1",
+          "tab": "0",
+          "label": "Indicador VOR/LOC nº 1 (OBS) — NAVEGAÇÃO"
+        },
+        {
+          "id": "indicador_vor_2_gs",
+          "tab": "0",
+          "label": "Indicador VOR/LOC nº 2 com glide slope — NAVEGAÇÃO"
+        },
+        {
+          "id": "avisos_eletricos_vacuo",
+          "tab": "0",
+          "label": "Avisos de sobretensão e falha de vácuo — AVISO"
+        },
+        {
+          "id": "luzes_marker",
+          "tab": "0",
+          "label": "Luzes de marker beacon (O/M/I) — AVIONICS"
+        },
+        {
+          "id": "piloto_automatico",
+          "tab": "0",
+          "label": "Piloto automático AltiMatic IIIB-1 (opcional) — AVIONICS"
+        },
+        {
+          "id": "painel_audio",
+          "tab": "0",
+          "label": "Painel de controle de áudio — AVIONICS"
+        },
+        {
+          "id": "navcom_1",
+          "tab": "0",
+          "label": "NAV/COM nº 1 — AVIONICS"
+        },
+        {
+          "id": "navcom_2",
+          "tab": "0",
+          "label": "NAV/COM nº 2 — AVIONICS"
+        },
+        {
+          "id": "adf_receptor",
+          "tab": "0",
+          "label": "Receptor ADF — AVIONICS"
+        },
+        {
+          "id": "dme",
+          "tab": "0",
+          "label": "DME (controle e indicador) — AVIONICS"
+        },
+        {
+          "id": "transponder",
+          "tab": "0",
+          "label": "Transponder — AVIONICS"
+        },
+        {
+          "id": "pressao_admissao",
+          "tab": "0",
+          "label": "Indicador de pressão de admissão (manifold pressure, duplo) — MOTOR"
+        },
+        {
+          "id": "tacometro_duplo",
+          "tab": "0",
+          "label": "Tacômetro duplo (RPM) — MOTOR"
+        },
+        {
+          "id": "fluxo_combustivel_pressao",
+          "tab": "0",
+          "label": "Indicador de fluxo e pressão de combustível (duplo) — MOTOR"
+        },
+        {
+          "id": "egt",
+          "tab": "0",
+          "label": "Indicador de temperatura dos gases de escape (EGT) — MOTOR"
+        },
+        {
+          "id": "pressao_oleo",
+          "tab": "0",
+          "label": "Indicadores de pressão de óleo (2) — MOTOR"
+        },
+        {
+          "id": "temperatura_oleo",
+          "tab": "0",
+          "label": "Indicadores de temperatura de óleo (2) — MOTOR"
+        },
+        {
+          "id": "cht",
+          "tab": "0",
+          "label": "Indicadores de temperatura de cabeçote - CHT (2) — MOTOR"
+        },
+        {
+          "id": "quantidade_combustivel",
+          "tab": "0",
+          "label": "Indicadores de quantidade de combustível (2) — MOTOR"
+        },
+        {
+          "id": "instrumentos_copiloto",
+          "tab": "0",
+          "label": "Segundo jogo de instrumentos de voo (copiloto, opcional) — VOO"
+        },
+        {
+          "id": "relogio_copiloto_acendedor",
+          "tab": "0",
+          "label": "Relógio do copiloto e acendedor de cigarros — CONTROLE"
+        },
+        {
+          "id": "disjuntores",
+          "tab": "0",
+          "label": "Painel de disjuntores — CONTROLE"
+        },
+        {
+          "id": "seletor_trem",
+          "tab": "0",
+          "label": "Seletor do trem de pouso — CONTROLE"
+        },
+        {
+          "id": "luzes_trem_verdes",
+          "tab": "0",
+          "label": "Luzes verdes de trem baixado e travado (3) — AVISO"
+        },
+        {
+          "id": "luz_trem_vermelha",
+          "tab": "0",
+          "label": "Luz vermelha de aviso do trem — AVISO"
+        },
+        {
+          "id": "extensao_emergencia_trem",
+          "tab": "0",
+          "label": "Comando de extensão de emergência do trem (queda livre) — CONTROLE"
+        },
+        {
+          "id": "amperimetros",
+          "tab": "0",
+          "label": "Amperímetros (2, esquerdo e direito) — MOTOR"
+        },
+        {
+          "id": "indicador_vacuo",
+          "tab": "0",
+          "label": "Indicador de sucção (vácuo) dos giros — MOTOR"
+        },
+        {
+          "id": "estatica_alternada",
+          "tab": "0",
+          "label": "Válvula de fonte estática alternada — CONTROLE"
+        },
+        {
+          "id": "aquecimento_desembacador",
+          "tab": "0",
+          "label": "Controles de aquecimento e desembaçador — CONTROLE"
+        },
+        {
+          "id": "seletoras_combustivel",
+          "tab": "0",
+          "label": "Seletoras de combustível (2) — CONTROLE"
+        },
+        {
+          "id": "flaps_alavanca",
+          "tab": "0",
+          "label": "Alavanca de flaps — CONTROLE"
+        },
+        {
+          "id": "manetes_potencia",
+          "tab": "0",
+          "label": "Manetes de potência (throttles, 2) — QUADRANTE"
+        },
+        {
+          "id": "manetes_helice",
+          "tab": "0",
+          "label": "Manetes de hélice / RPM (2) — QUADRANTE"
+        },
+        {
+          "id": "manetes_mistura",
+          "tab": "0",
+          "label": "Manetes de mistura (2) — QUADRANTE"
+        },
+        {
+          "id": "compensadores",
+          "tab": "0",
+          "label": "Compensadores (trim) — profundor, leme e aileron — CONTROLE"
+        },
+        {
+          "id": "cowl_flaps",
+          "tab": "0",
+          "label": "Comandos dos cowl flaps (2) — CONTROLE"
+        },
+        {
+          "id": "ar_alternativo",
+          "tab": "0",
+          "label": "Comando de ar alternativo de admissão (2) — CONTROLE"
+        },
+        {
+          "id": "jacks_audio",
+          "tab": "0",
+          "label": "Tomadas de microfone e fone (piloto e copiloto) — AVIONICS"
+        }
+      ]
+    },
+    {
+      "name": "56 centros compartilham a transformação exata da imagem",
+      "ok": true,
+      "data": [
+        {
+          "id": "bussola_magnetica",
+          "error": 0
+        },
+        {
+          "id": "termometro_oat",
+          "error": 0
+        },
+        {
+          "id": "relogio",
+          "error": 0
+        },
+        {
+          "id": "adf_indicador",
+          "error": 0
+        },
+        {
+          "id": "aviso_estol",
+          "error": 0
+        },
+        {
+          "id": "chave_master",
+          "error": 0
+        },
+        {
+          "id": "chaves_alternadores",
+          "error": 0
+        },
+        {
+          "id": "chaves_magnetos_partida",
+          "error": 0
+        },
+        {
+          "id": "bombas_combustivel_eletricas",
+          "error": 0
+        },
+        {
+          "id": "pitot_heat_luzes",
+          "error": 0
+        },
+        {
+          "id": "freio_estacionamento",
+          "error": 0
+        },
+        {
+          "id": "velocimetro",
+          "error": 0
+        },
+        {
+          "id": "horizonte_artificial",
+          "error": 0
+        },
+        {
+          "id": "altimetro",
+          "error": 0
+        },
+        {
+          "id": "coordenador_curva",
+          "error": 0
+        },
+        {
+          "id": "giro_direcional",
+          "error": 0
+        },
+        {
+          "id": "variometro",
+          "error": 0
+        },
+        {
+          "id": "indicador_vor_1",
+          "error": 0
+        },
+        {
+          "id": "indicador_vor_2_gs",
+          "error": 0
+        },
+        {
+          "id": "avisos_eletricos_vacuo",
+          "error": 0
+        },
+        {
+          "id": "luzes_marker",
+          "error": 0
+        },
+        {
+          "id": "piloto_automatico",
+          "error": 0
+        },
+        {
+          "id": "painel_audio",
+          "error": 0
+        },
+        {
+          "id": "navcom_1",
+          "error": 0
+        },
+        {
+          "id": "navcom_2",
+          "error": 0
+        },
+        {
+          "id": "adf_receptor",
+          "error": 0
+        },
+        {
+          "id": "dme",
+          "error": 0
+        },
+        {
+          "id": "transponder",
+          "error": 0
+        },
+        {
+          "id": "pressao_admissao",
+          "error": 0
+        },
+        {
+          "id": "tacometro_duplo",
+          "error": 0
+        },
+        {
+          "id": "fluxo_combustivel_pressao",
+          "error": 0
+        },
+        {
+          "id": "egt",
+          "error": 0
+        },
+        {
+          "id": "pressao_oleo",
+          "error": 0
+        },
+        {
+          "id": "temperatura_oleo",
+          "error": 0
+        },
+        {
+          "id": "cht",
+          "error": 0
+        },
+        {
+          "id": "quantidade_combustivel",
+          "error": 0
+        },
+        {
+          "id": "instrumentos_copiloto",
+          "error": 0
+        },
+        {
+          "id": "relogio_copiloto_acendedor",
+          "error": 0
+        },
+        {
+          "id": "disjuntores",
+          "error": 0
+        },
+        {
+          "id": "seletor_trem",
+          "error": 0
+        },
+        {
+          "id": "luzes_trem_verdes",
+          "error": 0
+        },
+        {
+          "id": "luz_trem_vermelha",
+          "error": 0
+        },
+        {
+          "id": "extensao_emergencia_trem",
+          "error": 0
+        },
+        {
+          "id": "amperimetros",
+          "error": 0
+        },
+        {
+          "id": "indicador_vacuo",
+          "error": 0
+        },
+        {
+          "id": "estatica_alternada",
+          "error": 0
+        },
+        {
+          "id": "aquecimento_desembacador",
+          "error": 0
+        },
+        {
+          "id": "seletoras_combustivel",
+          "error": 0
+        },
+        {
+          "id": "flaps_alavanca",
+          "error": 0
+        },
+        {
+          "id": "manetes_potencia",
+          "error": 0
+        },
+        {
+          "id": "manetes_helice",
+          "error": 0
+        },
+        {
+          "id": "manetes_mistura",
+          "error": 0
+        },
+        {
+          "id": "compensadores",
+          "error": 0
+        },
+        {
+          "id": "cowl_flaps",
+          "error": 0
+        },
+        {
+          "id": "ar_alternativo",
+          "error": 0
+        },
+        {
+          "id": "jacks_audio",
+          "error": 0
+        }
+      ]
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico inicial",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "Vista inicial sem rótulos permanentes",
+      "ok": true
+    },
+    {
+      "name": "56 rótulos sob controle explícito",
+      "ok": true
+    },
+    {
+      "name": "Clique real distingue altimetro",
+      "ok": true
+    },
+    {
+      "name": "Clique real distingue navcom_1",
+      "ok": true
+    },
+    {
+      "name": "Clique real distingue navcom_2",
+      "ok": true
+    },
+    {
+      "name": "Clique real distingue pressao_oleo",
+      "ok": true
+    },
+    {
+      "name": "Clique real distingue temperatura_oleo",
+      "ok": true
+    },
+    {
+      "name": "Teclado seleciona giro_direcional",
+      "ok": true
+    },
+    {
+      "name": "Teclado seleciona variometro",
+      "ok": true
+    },
+    {
+      "name": "Busca preservada",
+      "ok": true
+    },
+    {
+      "name": "Miniatura vetorial e deep-link velocimetro",
+      "ok": true,
+      "data": {
+        "contained": true,
+        "svg": 19
+      }
+    },
+    {
+      "name": "Miniatura vetorial e deep-link navcom_1",
+      "ok": true,
+      "data": {
+        "contained": true,
+        "svg": 9
+      }
+    },
+    {
+      "name": "Miniatura vetorial e deep-link manetes_mistura",
+      "ok": true,
+      "data": {
+        "contained": true,
+        "svg": 10
+      }
+    },
+    {
+      "name": "Link reativo sem remontagem",
+      "ok": true
+    },
+    {
+      "name": "Filtro atenua somente 46 formas não-motor, não imagem inteira",
+      "ok": true,
+      "data": {
+        "count": 46,
+        "rects": 46
+      }
+    },
+    {
+      "name": "Filtro: IDs, formas e estilos exatos em ambos modos",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "ids": [
+            "bussola_magnetica",
+            "termometro_oat",
+            "relogio",
+            "adf_indicador",
+            "aviso_estol",
+            "chave_master",
+            "chaves_alternadores",
+            "chaves_magnetos_partida",
+            "bombas_combustivel_eletricas",
+            "pitot_heat_luzes",
+            "freio_estacionamento",
+            "velocimetro",
+            "horizonte_artificial",
+            "altimetro",
+            "coordenador_curva",
+            "giro_direcional",
+            "variometro",
+            "indicador_vor_1",
+            "indicador_vor_2_gs",
+            "avisos_eletricos_vacuo",
+            "luzes_marker",
+            "piloto_automatico",
+            "painel_audio",
+            "navcom_1",
+            "navcom_2",
+            "adf_receptor",
+            "dme",
+            "transponder",
+            "instrumentos_copiloto",
+            "relogio_copiloto_acendedor",
+            "disjuntores",
+            "seletor_trem",
+            "luzes_trem_verdes",
+            "luz_trem_vermelha",
+            "extensao_emergencia_trem",
+            "estatica_alternada",
+            "aquecimento_desembacador",
+            "seletoras_combustivel",
+            "flaps_alavanca",
+            "manetes_potencia",
+            "manetes_helice",
+            "manetes_mistura",
+            "compensadores",
+            "cowl_flaps",
+            "ar_alternativo",
+            "jacks_audio"
+          ],
+          "details": [
+            {
+              "id": "bussola_magnetica",
+              "geometry": {
+                "x": "742",
+                "y": "75",
+                "width": "116",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "termometro_oat",
+              "geometry": {
+                "cx": "110",
+                "cy": "130",
+                "r": "19"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio",
+              "geometry": {
+                "cx": "250",
+                "cy": "170",
+                "r": "34"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_indicador",
+              "geometry": {
+                "cx": "378",
+                "cy": "170",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aviso_estol",
+              "geometry": {
+                "x": "474",
+                "y": "132",
+                "width": "128",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chave_master",
+              "geometry": {
+                "x": "68",
+                "y": "192",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_alternadores",
+              "geometry": {
+                "x": "68",
+                "y": "256",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_magnetos_partida",
+              "geometry": {
+                "x": "68",
+                "y": "320",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "bombas_combustivel_eletricas",
+              "geometry": {
+                "x": "68",
+                "y": "392",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "pitot_heat_luzes",
+              "geometry": {
+                "x": "68",
+                "y": "456",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "freio_estacionamento",
+              "geometry": {
+                "x": "68",
+                "y": "528",
+                "width": "84",
+                "height": "76",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "velocimetro",
+              "geometry": {
+                "cx": "244",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "horizonte_artificial",
+              "geometry": {
+                "cx": "380",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "altimetro",
+              "geometry": {
+                "cx": "516",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "coordenador_curva",
+              "geometry": {
+                "cx": "244",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "giro_direcional",
+              "geometry": {
+                "cx": "380",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "variometro",
+              "geometry": {
+                "cx": "516",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_1",
+              "geometry": {
+                "cx": "274",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_2_gs",
+              "geometry": {
+                "cx": "386",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "avisos_eletricos_vacuo",
+              "geometry": {
+                "x": "440",
+                "y": "536",
+                "width": "140",
+                "height": "72",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_marker",
+              "geometry": {
+                "x": "596",
+                "y": "258",
+                "width": "84",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "piloto_automatico",
+              "geometry": {
+                "x": "596",
+                "y": "314",
+                "width": "84",
+                "height": "110",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "painel_audio",
+              "geometry": {
+                "x": "700",
+                "y": "140",
+                "width": "274",
+                "height": "40",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_1",
+              "geometry": {
+                "x": "700",
+                "y": "188",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_2",
+              "geometry": {
+                "x": "700",
+                "y": "242",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_receptor",
+              "geometry": {
+                "x": "700",
+                "y": "296",
+                "width": "274",
+                "height": "42",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "dme",
+              "geometry": {
+                "x": "700",
+                "y": "346",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "transponder",
+              "geometry": {
+                "x": "700",
+                "y": "388",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "instrumentos_copiloto",
+              "geometry": {
+                "x": "996",
+                "y": "136",
+                "width": "336",
+                "height": "232",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio_copiloto_acendedor",
+              "geometry": {
+                "x": "1346",
+                "y": "136",
+                "width": "188",
+                "height": "94",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "disjuntores",
+              "geometry": {
+                "x": "1346",
+                "y": "244",
+                "width": "188",
+                "height": "124",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletor_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "384",
+                "width": "112",
+                "height": "150",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_trem_verdes",
+              "geometry": {
+                "x": "1124",
+                "y": "384",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luz_trem_vermelha",
+              "geometry": {
+                "x": "1124",
+                "y": "464",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "extensao_emergencia_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "544",
+                "width": "264",
+                "height": "60",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "estatica_alternada",
+              "geometry": {
+                "x": "1280",
+                "y": "474",
+                "width": "116",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aquecimento_desembacador",
+              "geometry": {
+                "x": "1408",
+                "y": "474",
+                "width": "126",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletoras_combustivel",
+              "geometry": {
+                "x": "68",
+                "y": "674",
+                "width": "210",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "flaps_alavanca",
+              "geometry": {
+                "x": "292",
+                "y": "674",
+                "width": "140",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_potencia",
+              "geometry": {
+                "x": "582",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_helice",
+              "geometry": {
+                "x": "718",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_mistura",
+              "geometry": {
+                "x": "854",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "compensadores",
+              "geometry": {
+                "x": "1036",
+                "y": "674",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "cowl_flaps",
+              "geometry": {
+                "x": "1036",
+                "y": "802",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "ar_alternativo",
+              "geometry": {
+                "x": "1306",
+                "y": "674",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "jacks_audio",
+              "geometry": {
+                "x": "1306",
+                "y": "802",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            }
+          ],
+          "imageFilter": "none",
+          "ok": true
+        },
+        {
+          "mode": "noite",
+          "ids": [
+            "bussola_magnetica",
+            "termometro_oat",
+            "relogio",
+            "adf_indicador",
+            "aviso_estol",
+            "chave_master",
+            "chaves_alternadores",
+            "chaves_magnetos_partida",
+            "bombas_combustivel_eletricas",
+            "pitot_heat_luzes",
+            "freio_estacionamento",
+            "velocimetro",
+            "horizonte_artificial",
+            "altimetro",
+            "coordenador_curva",
+            "giro_direcional",
+            "variometro",
+            "indicador_vor_1",
+            "indicador_vor_2_gs",
+            "avisos_eletricos_vacuo",
+            "luzes_marker",
+            "piloto_automatico",
+            "painel_audio",
+            "navcom_1",
+            "navcom_2",
+            "adf_receptor",
+            "dme",
+            "transponder",
+            "instrumentos_copiloto",
+            "relogio_copiloto_acendedor",
+            "disjuntores",
+            "seletor_trem",
+            "luzes_trem_verdes",
+            "luz_trem_vermelha",
+            "extensao_emergencia_trem",
+            "estatica_alternada",
+            "aquecimento_desembacador",
+            "seletoras_combustivel",
+            "flaps_alavanca",
+            "manetes_potencia",
+            "manetes_helice",
+            "manetes_mistura",
+            "compensadores",
+            "cowl_flaps",
+            "ar_alternativo",
+            "jacks_audio"
+          ],
+          "details": [
+            {
+              "id": "bussola_magnetica",
+              "geometry": {
+                "x": "742",
+                "y": "75",
+                "width": "116",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "termometro_oat",
+              "geometry": {
+                "cx": "110",
+                "cy": "130",
+                "r": "19"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio",
+              "geometry": {
+                "cx": "250",
+                "cy": "170",
+                "r": "34"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_indicador",
+              "geometry": {
+                "cx": "378",
+                "cy": "170",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aviso_estol",
+              "geometry": {
+                "x": "474",
+                "y": "132",
+                "width": "128",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chave_master",
+              "geometry": {
+                "x": "68",
+                "y": "192",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_alternadores",
+              "geometry": {
+                "x": "68",
+                "y": "256",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_magnetos_partida",
+              "geometry": {
+                "x": "68",
+                "y": "320",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "bombas_combustivel_eletricas",
+              "geometry": {
+                "x": "68",
+                "y": "392",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "pitot_heat_luzes",
+              "geometry": {
+                "x": "68",
+                "y": "456",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "freio_estacionamento",
+              "geometry": {
+                "x": "68",
+                "y": "528",
+                "width": "84",
+                "height": "76",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "velocimetro",
+              "geometry": {
+                "cx": "244",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "horizonte_artificial",
+              "geometry": {
+                "cx": "380",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "altimetro",
+              "geometry": {
+                "cx": "516",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "coordenador_curva",
+              "geometry": {
+                "cx": "244",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "giro_direcional",
+              "geometry": {
+                "cx": "380",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "variometro",
+              "geometry": {
+                "cx": "516",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_1",
+              "geometry": {
+                "cx": "274",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_2_gs",
+              "geometry": {
+                "cx": "386",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "avisos_eletricos_vacuo",
+              "geometry": {
+                "x": "440",
+                "y": "536",
+                "width": "140",
+                "height": "72",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_marker",
+              "geometry": {
+                "x": "596",
+                "y": "258",
+                "width": "84",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "piloto_automatico",
+              "geometry": {
+                "x": "596",
+                "y": "314",
+                "width": "84",
+                "height": "110",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "painel_audio",
+              "geometry": {
+                "x": "700",
+                "y": "140",
+                "width": "274",
+                "height": "40",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_1",
+              "geometry": {
+                "x": "700",
+                "y": "188",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_2",
+              "geometry": {
+                "x": "700",
+                "y": "242",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_receptor",
+              "geometry": {
+                "x": "700",
+                "y": "296",
+                "width": "274",
+                "height": "42",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "dme",
+              "geometry": {
+                "x": "700",
+                "y": "346",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "transponder",
+              "geometry": {
+                "x": "700",
+                "y": "388",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "instrumentos_copiloto",
+              "geometry": {
+                "x": "996",
+                "y": "136",
+                "width": "336",
+                "height": "232",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio_copiloto_acendedor",
+              "geometry": {
+                "x": "1346",
+                "y": "136",
+                "width": "188",
+                "height": "94",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "disjuntores",
+              "geometry": {
+                "x": "1346",
+                "y": "244",
+                "width": "188",
+                "height": "124",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletor_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "384",
+                "width": "112",
+                "height": "150",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_trem_verdes",
+              "geometry": {
+                "x": "1124",
+                "y": "384",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luz_trem_vermelha",
+              "geometry": {
+                "x": "1124",
+                "y": "464",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "extensao_emergencia_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "544",
+                "width": "264",
+                "height": "60",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "estatica_alternada",
+              "geometry": {
+                "x": "1280",
+                "y": "474",
+                "width": "116",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aquecimento_desembacador",
+              "geometry": {
+                "x": "1408",
+                "y": "474",
+                "width": "126",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletoras_combustivel",
+              "geometry": {
+                "x": "68",
+                "y": "674",
+                "width": "210",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "flaps_alavanca",
+              "geometry": {
+                "x": "292",
+                "y": "674",
+                "width": "140",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_potencia",
+              "geometry": {
+                "x": "582",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_helice",
+              "geometry": {
+                "x": "718",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_mistura",
+              "geometry": {
+                "x": "854",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "compensadores",
+              "geometry": {
+                "x": "1036",
+                "y": "674",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "cowl_flaps",
+              "geometry": {
+                "x": "1036",
+                "y": "802",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "ar_alternativo",
+              "geometry": {
+                "x": "1306",
+                "y": "674",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "jacks_audio",
+              "geometry": {
+                "x": "1306",
+                "y": "802",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            }
+          ],
+          "imageFilter": "none",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "Filtro: IDs, formas e estilos exatos em ambos modos",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "ids": [
+            "bussola_magnetica",
+            "termometro_oat",
+            "relogio",
+            "adf_indicador",
+            "aviso_estol",
+            "chave_master",
+            "chaves_alternadores",
+            "chaves_magnetos_partida",
+            "bombas_combustivel_eletricas",
+            "pitot_heat_luzes",
+            "freio_estacionamento",
+            "velocimetro",
+            "horizonte_artificial",
+            "altimetro",
+            "coordenador_curva",
+            "giro_direcional",
+            "variometro",
+            "indicador_vor_1",
+            "indicador_vor_2_gs",
+            "avisos_eletricos_vacuo",
+            "luzes_marker",
+            "piloto_automatico",
+            "painel_audio",
+            "navcom_1",
+            "navcom_2",
+            "adf_receptor",
+            "dme",
+            "transponder",
+            "instrumentos_copiloto",
+            "relogio_copiloto_acendedor",
+            "disjuntores",
+            "seletor_trem",
+            "luzes_trem_verdes",
+            "luz_trem_vermelha",
+            "extensao_emergencia_trem",
+            "estatica_alternada",
+            "aquecimento_desembacador",
+            "seletoras_combustivel",
+            "flaps_alavanca",
+            "manetes_potencia",
+            "manetes_helice",
+            "manetes_mistura",
+            "compensadores",
+            "cowl_flaps",
+            "ar_alternativo",
+            "jacks_audio"
+          ],
+          "details": [
+            {
+              "id": "bussola_magnetica",
+              "geometry": {
+                "x": "742",
+                "y": "75",
+                "width": "116",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "termometro_oat",
+              "geometry": {
+                "cx": "110",
+                "cy": "130",
+                "r": "19"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio",
+              "geometry": {
+                "cx": "250",
+                "cy": "170",
+                "r": "34"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_indicador",
+              "geometry": {
+                "cx": "378",
+                "cy": "170",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aviso_estol",
+              "geometry": {
+                "x": "474",
+                "y": "132",
+                "width": "128",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chave_master",
+              "geometry": {
+                "x": "68",
+                "y": "192",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_alternadores",
+              "geometry": {
+                "x": "68",
+                "y": "256",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_magnetos_partida",
+              "geometry": {
+                "x": "68",
+                "y": "320",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "bombas_combustivel_eletricas",
+              "geometry": {
+                "x": "68",
+                "y": "392",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "pitot_heat_luzes",
+              "geometry": {
+                "x": "68",
+                "y": "456",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "freio_estacionamento",
+              "geometry": {
+                "x": "68",
+                "y": "528",
+                "width": "84",
+                "height": "76",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "velocimetro",
+              "geometry": {
+                "cx": "244",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "horizonte_artificial",
+              "geometry": {
+                "cx": "380",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "altimetro",
+              "geometry": {
+                "cx": "516",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "coordenador_curva",
+              "geometry": {
+                "cx": "244",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "giro_direcional",
+              "geometry": {
+                "cx": "380",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "variometro",
+              "geometry": {
+                "cx": "516",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_1",
+              "geometry": {
+                "cx": "274",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_2_gs",
+              "geometry": {
+                "cx": "386",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "avisos_eletricos_vacuo",
+              "geometry": {
+                "x": "440",
+                "y": "536",
+                "width": "140",
+                "height": "72",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_marker",
+              "geometry": {
+                "x": "596",
+                "y": "258",
+                "width": "84",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "piloto_automatico",
+              "geometry": {
+                "x": "596",
+                "y": "314",
+                "width": "84",
+                "height": "110",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "painel_audio",
+              "geometry": {
+                "x": "700",
+                "y": "140",
+                "width": "274",
+                "height": "40",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_1",
+              "geometry": {
+                "x": "700",
+                "y": "188",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_2",
+              "geometry": {
+                "x": "700",
+                "y": "242",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_receptor",
+              "geometry": {
+                "x": "700",
+                "y": "296",
+                "width": "274",
+                "height": "42",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "dme",
+              "geometry": {
+                "x": "700",
+                "y": "346",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "transponder",
+              "geometry": {
+                "x": "700",
+                "y": "388",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "instrumentos_copiloto",
+              "geometry": {
+                "x": "996",
+                "y": "136",
+                "width": "336",
+                "height": "232",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio_copiloto_acendedor",
+              "geometry": {
+                "x": "1346",
+                "y": "136",
+                "width": "188",
+                "height": "94",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "disjuntores",
+              "geometry": {
+                "x": "1346",
+                "y": "244",
+                "width": "188",
+                "height": "124",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletor_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "384",
+                "width": "112",
+                "height": "150",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_trem_verdes",
+              "geometry": {
+                "x": "1124",
+                "y": "384",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luz_trem_vermelha",
+              "geometry": {
+                "x": "1124",
+                "y": "464",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "extensao_emergencia_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "544",
+                "width": "264",
+                "height": "60",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "estatica_alternada",
+              "geometry": {
+                "x": "1280",
+                "y": "474",
+                "width": "116",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aquecimento_desembacador",
+              "geometry": {
+                "x": "1408",
+                "y": "474",
+                "width": "126",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletoras_combustivel",
+              "geometry": {
+                "x": "68",
+                "y": "674",
+                "width": "210",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "flaps_alavanca",
+              "geometry": {
+                "x": "292",
+                "y": "674",
+                "width": "140",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_potencia",
+              "geometry": {
+                "x": "582",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_helice",
+              "geometry": {
+                "x": "718",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_mistura",
+              "geometry": {
+                "x": "854",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "compensadores",
+              "geometry": {
+                "x": "1036",
+                "y": "674",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "cowl_flaps",
+              "geometry": {
+                "x": "1036",
+                "y": "802",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "ar_alternativo",
+              "geometry": {
+                "x": "1306",
+                "y": "674",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "jacks_audio",
+              "geometry": {
+                "x": "1306",
+                "y": "802",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            }
+          ],
+          "imageFilter": "none",
+          "ok": true
+        },
+        {
+          "mode": "noite",
+          "ids": [
+            "bussola_magnetica",
+            "termometro_oat",
+            "relogio",
+            "adf_indicador",
+            "aviso_estol",
+            "chave_master",
+            "chaves_alternadores",
+            "chaves_magnetos_partida",
+            "bombas_combustivel_eletricas",
+            "pitot_heat_luzes",
+            "freio_estacionamento",
+            "velocimetro",
+            "horizonte_artificial",
+            "altimetro",
+            "coordenador_curva",
+            "giro_direcional",
+            "variometro",
+            "indicador_vor_1",
+            "indicador_vor_2_gs",
+            "avisos_eletricos_vacuo",
+            "luzes_marker",
+            "piloto_automatico",
+            "painel_audio",
+            "navcom_1",
+            "navcom_2",
+            "adf_receptor",
+            "dme",
+            "transponder",
+            "instrumentos_copiloto",
+            "relogio_copiloto_acendedor",
+            "disjuntores",
+            "seletor_trem",
+            "luzes_trem_verdes",
+            "luz_trem_vermelha",
+            "extensao_emergencia_trem",
+            "estatica_alternada",
+            "aquecimento_desembacador",
+            "seletoras_combustivel",
+            "flaps_alavanca",
+            "manetes_potencia",
+            "manetes_helice",
+            "manetes_mistura",
+            "compensadores",
+            "cowl_flaps",
+            "ar_alternativo",
+            "jacks_audio"
+          ],
+          "details": [
+            {
+              "id": "bussola_magnetica",
+              "geometry": {
+                "x": "742",
+                "y": "75",
+                "width": "116",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "termometro_oat",
+              "geometry": {
+                "cx": "110",
+                "cy": "130",
+                "r": "19"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio",
+              "geometry": {
+                "cx": "250",
+                "cy": "170",
+                "r": "34"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_indicador",
+              "geometry": {
+                "cx": "378",
+                "cy": "170",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aviso_estol",
+              "geometry": {
+                "x": "474",
+                "y": "132",
+                "width": "128",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chave_master",
+              "geometry": {
+                "x": "68",
+                "y": "192",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_alternadores",
+              "geometry": {
+                "x": "68",
+                "y": "256",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_magnetos_partida",
+              "geometry": {
+                "x": "68",
+                "y": "320",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "bombas_combustivel_eletricas",
+              "geometry": {
+                "x": "68",
+                "y": "392",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "pitot_heat_luzes",
+              "geometry": {
+                "x": "68",
+                "y": "456",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "freio_estacionamento",
+              "geometry": {
+                "x": "68",
+                "y": "528",
+                "width": "84",
+                "height": "76",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "velocimetro",
+              "geometry": {
+                "cx": "244",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "horizonte_artificial",
+              "geometry": {
+                "cx": "380",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "altimetro",
+              "geometry": {
+                "cx": "516",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "coordenador_curva",
+              "geometry": {
+                "cx": "244",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "giro_direcional",
+              "geometry": {
+                "cx": "380",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "variometro",
+              "geometry": {
+                "cx": "516",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_1",
+              "geometry": {
+                "cx": "274",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_2_gs",
+              "geometry": {
+                "cx": "386",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "avisos_eletricos_vacuo",
+              "geometry": {
+                "x": "440",
+                "y": "536",
+                "width": "140",
+                "height": "72",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_marker",
+              "geometry": {
+                "x": "596",
+                "y": "258",
+                "width": "84",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "piloto_automatico",
+              "geometry": {
+                "x": "596",
+                "y": "314",
+                "width": "84",
+                "height": "110",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "painel_audio",
+              "geometry": {
+                "x": "700",
+                "y": "140",
+                "width": "274",
+                "height": "40",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_1",
+              "geometry": {
+                "x": "700",
+                "y": "188",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_2",
+              "geometry": {
+                "x": "700",
+                "y": "242",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_receptor",
+              "geometry": {
+                "x": "700",
+                "y": "296",
+                "width": "274",
+                "height": "42",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "dme",
+              "geometry": {
+                "x": "700",
+                "y": "346",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "transponder",
+              "geometry": {
+                "x": "700",
+                "y": "388",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "instrumentos_copiloto",
+              "geometry": {
+                "x": "996",
+                "y": "136",
+                "width": "336",
+                "height": "232",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio_copiloto_acendedor",
+              "geometry": {
+                "x": "1346",
+                "y": "136",
+                "width": "188",
+                "height": "94",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "disjuntores",
+              "geometry": {
+                "x": "1346",
+                "y": "244",
+                "width": "188",
+                "height": "124",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletor_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "384",
+                "width": "112",
+                "height": "150",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_trem_verdes",
+              "geometry": {
+                "x": "1124",
+                "y": "384",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luz_trem_vermelha",
+              "geometry": {
+                "x": "1124",
+                "y": "464",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "extensao_emergencia_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "544",
+                "width": "264",
+                "height": "60",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "estatica_alternada",
+              "geometry": {
+                "x": "1280",
+                "y": "474",
+                "width": "116",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aquecimento_desembacador",
+              "geometry": {
+                "x": "1408",
+                "y": "474",
+                "width": "126",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletoras_combustivel",
+              "geometry": {
+                "x": "68",
+                "y": "674",
+                "width": "210",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "flaps_alavanca",
+              "geometry": {
+                "x": "292",
+                "y": "674",
+                "width": "140",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_potencia",
+              "geometry": {
+                "x": "582",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_helice",
+              "geometry": {
+                "x": "718",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_mistura",
+              "geometry": {
+                "x": "854",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "compensadores",
+              "geometry": {
+                "x": "1036",
+                "y": "674",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "cowl_flaps",
+              "geometry": {
+                "x": "1036",
+                "y": "802",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "ar_alternativo",
+              "geometry": {
+                "x": "1306",
+                "y": "674",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "jacks_audio",
+              "geometry": {
+                "x": "1306",
+                "y": "802",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            }
+          ],
+          "imageFilter": "none",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "Selecionado fora da categoria não fica atenuado",
+      "ok": true
+    },
+    {
+      "name": "Filtro: IDs, formas e estilos exatos em ambos modos com seleção isenta",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "ids": [
+            "bussola_magnetica",
+            "termometro_oat",
+            "relogio",
+            "adf_indicador",
+            "aviso_estol",
+            "chave_master",
+            "chaves_alternadores",
+            "chaves_magnetos_partida",
+            "bombas_combustivel_eletricas",
+            "pitot_heat_luzes",
+            "freio_estacionamento",
+            "horizonte_artificial",
+            "altimetro",
+            "coordenador_curva",
+            "giro_direcional",
+            "variometro",
+            "indicador_vor_1",
+            "indicador_vor_2_gs",
+            "avisos_eletricos_vacuo",
+            "luzes_marker",
+            "piloto_automatico",
+            "painel_audio",
+            "navcom_1",
+            "navcom_2",
+            "adf_receptor",
+            "dme",
+            "transponder",
+            "instrumentos_copiloto",
+            "relogio_copiloto_acendedor",
+            "disjuntores",
+            "seletor_trem",
+            "luzes_trem_verdes",
+            "luz_trem_vermelha",
+            "extensao_emergencia_trem",
+            "estatica_alternada",
+            "aquecimento_desembacador",
+            "seletoras_combustivel",
+            "flaps_alavanca",
+            "manetes_potencia",
+            "manetes_helice",
+            "manetes_mistura",
+            "compensadores",
+            "cowl_flaps",
+            "ar_alternativo",
+            "jacks_audio"
+          ],
+          "details": [
+            {
+              "id": "bussola_magnetica",
+              "geometry": {
+                "x": "742",
+                "y": "75",
+                "width": "116",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "termometro_oat",
+              "geometry": {
+                "cx": "110",
+                "cy": "130",
+                "r": "19"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio",
+              "geometry": {
+                "cx": "250",
+                "cy": "170",
+                "r": "34"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_indicador",
+              "geometry": {
+                "cx": "378",
+                "cy": "170",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aviso_estol",
+              "geometry": {
+                "x": "474",
+                "y": "132",
+                "width": "128",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chave_master",
+              "geometry": {
+                "x": "68",
+                "y": "192",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_alternadores",
+              "geometry": {
+                "x": "68",
+                "y": "256",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_magnetos_partida",
+              "geometry": {
+                "x": "68",
+                "y": "320",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "bombas_combustivel_eletricas",
+              "geometry": {
+                "x": "68",
+                "y": "392",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "pitot_heat_luzes",
+              "geometry": {
+                "x": "68",
+                "y": "456",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "freio_estacionamento",
+              "geometry": {
+                "x": "68",
+                "y": "528",
+                "width": "84",
+                "height": "76",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "horizonte_artificial",
+              "geometry": {
+                "cx": "380",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "altimetro",
+              "geometry": {
+                "cx": "516",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "coordenador_curva",
+              "geometry": {
+                "cx": "244",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "giro_direcional",
+              "geometry": {
+                "cx": "380",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "variometro",
+              "geometry": {
+                "cx": "516",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_1",
+              "geometry": {
+                "cx": "274",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_2_gs",
+              "geometry": {
+                "cx": "386",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "avisos_eletricos_vacuo",
+              "geometry": {
+                "x": "440",
+                "y": "536",
+                "width": "140",
+                "height": "72",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_marker",
+              "geometry": {
+                "x": "596",
+                "y": "258",
+                "width": "84",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "piloto_automatico",
+              "geometry": {
+                "x": "596",
+                "y": "314",
+                "width": "84",
+                "height": "110",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "painel_audio",
+              "geometry": {
+                "x": "700",
+                "y": "140",
+                "width": "274",
+                "height": "40",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_1",
+              "geometry": {
+                "x": "700",
+                "y": "188",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_2",
+              "geometry": {
+                "x": "700",
+                "y": "242",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_receptor",
+              "geometry": {
+                "x": "700",
+                "y": "296",
+                "width": "274",
+                "height": "42",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "dme",
+              "geometry": {
+                "x": "700",
+                "y": "346",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "transponder",
+              "geometry": {
+                "x": "700",
+                "y": "388",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "instrumentos_copiloto",
+              "geometry": {
+                "x": "996",
+                "y": "136",
+                "width": "336",
+                "height": "232",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio_copiloto_acendedor",
+              "geometry": {
+                "x": "1346",
+                "y": "136",
+                "width": "188",
+                "height": "94",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "disjuntores",
+              "geometry": {
+                "x": "1346",
+                "y": "244",
+                "width": "188",
+                "height": "124",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletor_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "384",
+                "width": "112",
+                "height": "150",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_trem_verdes",
+              "geometry": {
+                "x": "1124",
+                "y": "384",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luz_trem_vermelha",
+              "geometry": {
+                "x": "1124",
+                "y": "464",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "extensao_emergencia_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "544",
+                "width": "264",
+                "height": "60",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "estatica_alternada",
+              "geometry": {
+                "x": "1280",
+                "y": "474",
+                "width": "116",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aquecimento_desembacador",
+              "geometry": {
+                "x": "1408",
+                "y": "474",
+                "width": "126",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletoras_combustivel",
+              "geometry": {
+                "x": "68",
+                "y": "674",
+                "width": "210",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "flaps_alavanca",
+              "geometry": {
+                "x": "292",
+                "y": "674",
+                "width": "140",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_potencia",
+              "geometry": {
+                "x": "582",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_helice",
+              "geometry": {
+                "x": "718",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_mistura",
+              "geometry": {
+                "x": "854",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "compensadores",
+              "geometry": {
+                "x": "1036",
+                "y": "674",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "cowl_flaps",
+              "geometry": {
+                "x": "1036",
+                "y": "802",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "ar_alternativo",
+              "geometry": {
+                "x": "1306",
+                "y": "674",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "jacks_audio",
+              "geometry": {
+                "x": "1306",
+                "y": "802",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            }
+          ],
+          "imageFilter": "none",
+          "ok": true
+        },
+        {
+          "mode": "noite",
+          "ids": [
+            "bussola_magnetica",
+            "termometro_oat",
+            "relogio",
+            "adf_indicador",
+            "aviso_estol",
+            "chave_master",
+            "chaves_alternadores",
+            "chaves_magnetos_partida",
+            "bombas_combustivel_eletricas",
+            "pitot_heat_luzes",
+            "freio_estacionamento",
+            "horizonte_artificial",
+            "altimetro",
+            "coordenador_curva",
+            "giro_direcional",
+            "variometro",
+            "indicador_vor_1",
+            "indicador_vor_2_gs",
+            "avisos_eletricos_vacuo",
+            "luzes_marker",
+            "piloto_automatico",
+            "painel_audio",
+            "navcom_1",
+            "navcom_2",
+            "adf_receptor",
+            "dme",
+            "transponder",
+            "instrumentos_copiloto",
+            "relogio_copiloto_acendedor",
+            "disjuntores",
+            "seletor_trem",
+            "luzes_trem_verdes",
+            "luz_trem_vermelha",
+            "extensao_emergencia_trem",
+            "estatica_alternada",
+            "aquecimento_desembacador",
+            "seletoras_combustivel",
+            "flaps_alavanca",
+            "manetes_potencia",
+            "manetes_helice",
+            "manetes_mistura",
+            "compensadores",
+            "cowl_flaps",
+            "ar_alternativo",
+            "jacks_audio"
+          ],
+          "details": [
+            {
+              "id": "bussola_magnetica",
+              "geometry": {
+                "x": "742",
+                "y": "75",
+                "width": "116",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "termometro_oat",
+              "geometry": {
+                "cx": "110",
+                "cy": "130",
+                "r": "19"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio",
+              "geometry": {
+                "cx": "250",
+                "cy": "170",
+                "r": "34"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_indicador",
+              "geometry": {
+                "cx": "378",
+                "cy": "170",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aviso_estol",
+              "geometry": {
+                "x": "474",
+                "y": "132",
+                "width": "128",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chave_master",
+              "geometry": {
+                "x": "68",
+                "y": "192",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_alternadores",
+              "geometry": {
+                "x": "68",
+                "y": "256",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "chaves_magnetos_partida",
+              "geometry": {
+                "x": "68",
+                "y": "320",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "bombas_combustivel_eletricas",
+              "geometry": {
+                "x": "68",
+                "y": "392",
+                "width": "84",
+                "height": "56",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "pitot_heat_luzes",
+              "geometry": {
+                "x": "68",
+                "y": "456",
+                "width": "84",
+                "height": "64",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "freio_estacionamento",
+              "geometry": {
+                "x": "68",
+                "y": "528",
+                "width": "84",
+                "height": "76",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "horizonte_artificial",
+              "geometry": {
+                "cx": "380",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "altimetro",
+              "geometry": {
+                "cx": "516",
+                "cy": "310",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "coordenador_curva",
+              "geometry": {
+                "cx": "244",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "giro_direcional",
+              "geometry": {
+                "cx": "380",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "variometro",
+              "geometry": {
+                "cx": "516",
+                "cy": "446",
+                "r": "58"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_1",
+              "geometry": {
+                "cx": "274",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "indicador_vor_2_gs",
+              "geometry": {
+                "cx": "386",
+                "cy": "570",
+                "r": "38"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "avisos_eletricos_vacuo",
+              "geometry": {
+                "x": "440",
+                "y": "536",
+                "width": "140",
+                "height": "72",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_marker",
+              "geometry": {
+                "x": "596",
+                "y": "258",
+                "width": "84",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "piloto_automatico",
+              "geometry": {
+                "x": "596",
+                "y": "314",
+                "width": "84",
+                "height": "110",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "painel_audio",
+              "geometry": {
+                "x": "700",
+                "y": "140",
+                "width": "274",
+                "height": "40",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_1",
+              "geometry": {
+                "x": "700",
+                "y": "188",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "navcom_2",
+              "geometry": {
+                "x": "700",
+                "y": "242",
+                "width": "274",
+                "height": "46",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "adf_receptor",
+              "geometry": {
+                "x": "700",
+                "y": "296",
+                "width": "274",
+                "height": "42",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "dme",
+              "geometry": {
+                "x": "700",
+                "y": "346",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "transponder",
+              "geometry": {
+                "x": "700",
+                "y": "388",
+                "width": "274",
+                "height": "34",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "instrumentos_copiloto",
+              "geometry": {
+                "x": "996",
+                "y": "136",
+                "width": "336",
+                "height": "232",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "relogio_copiloto_acendedor",
+              "geometry": {
+                "x": "1346",
+                "y": "136",
+                "width": "188",
+                "height": "94",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "disjuntores",
+              "geometry": {
+                "x": "1346",
+                "y": "244",
+                "width": "188",
+                "height": "124",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletor_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "384",
+                "width": "112",
+                "height": "150",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luzes_trem_verdes",
+              "geometry": {
+                "x": "1124",
+                "y": "384",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "luz_trem_vermelha",
+              "geometry": {
+                "x": "1124",
+                "y": "464",
+                "width": "140",
+                "height": "70",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "extensao_emergencia_trem",
+              "geometry": {
+                "x": "1000",
+                "y": "544",
+                "width": "264",
+                "height": "60",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "estatica_alternada",
+              "geometry": {
+                "x": "1280",
+                "y": "474",
+                "width": "116",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "aquecimento_desembacador",
+              "geometry": {
+                "x": "1408",
+                "y": "474",
+                "width": "126",
+                "height": "84",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "seletoras_combustivel",
+              "geometry": {
+                "x": "68",
+                "y": "674",
+                "width": "210",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "flaps_alavanca",
+              "geometry": {
+                "x": "292",
+                "y": "674",
+                "width": "140",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_potencia",
+              "geometry": {
+                "x": "582",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_helice",
+              "geometry": {
+                "x": "718",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "manetes_mistura",
+              "geometry": {
+                "x": "854",
+                "y": "674",
+                "width": "124",
+                "height": "244",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "compensadores",
+              "geometry": {
+                "x": "1036",
+                "y": "674",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "cowl_flaps",
+              "geometry": {
+                "x": "1036",
+                "y": "802",
+                "width": "246",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "ar_alternativo",
+              "geometry": {
+                "x": "1306",
+                "y": "674",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            },
+            {
+              "id": "jacks_audio",
+              "geometry": {
+                "x": "1306",
+                "y": "802",
+                "width": "212",
+                "height": "116",
+                "rx": "3"
+              },
+              "fill": "rgb(5, 8, 13)",
+              "fillOpacity": "0.65",
+              "opacity": "1",
+              "ok": true
+            }
+          ],
+          "imageFilter": "none",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "Tour 1 máscara delimitada em velocimetro",
+      "ok": true
+    },
+    {
+      "name": "Tour 2 máscara delimitada em horizonte_artificial",
+      "ok": true
+    },
+    {
+      "name": "Tour 3 máscara delimitada em altimetro",
+      "ok": true
+    },
+    {
+      "name": "Tour 4 máscara delimitada em giro_direcional",
+      "ok": true
+    },
+    {
+      "name": "Tour 5 máscara delimitada em variometro",
+      "ok": true
+    },
+    {
+      "name": "Tour 6 máscara delimitada em pressao_admissao",
+      "ok": true
+    },
+    {
+      "name": "Tour 7 máscara delimitada em quantidade_combustivel",
+      "ok": true
+    },
+    {
+      "name": "Tour 8 máscara delimitada em luzes_trem_verdes",
+      "ok": true
+    },
+    {
+      "name": "1440 reset permite alcançar todos os comandos",
+      "ok": true
+    },
+    {
+      "name": "1440 zoom aumenta sem separar imagem e hotspot",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico zoom 1440",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "1440 navegação 3D → cockpit sem canvas residual",
+      "ok": true
+    },
+    {
+      "name": "768 reset permite alcançar todos os comandos",
+      "ok": true
+    },
+    {
+      "name": "768 zoom aumenta sem separar imagem e hotspot",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico zoom 768",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "768 navegação 3D → cockpit sem canvas residual",
+      "ok": true
+    },
+    {
+      "name": "390 reset permite alcançar todos os comandos",
+      "ok": true
+    },
+    {
+      "name": "390 zoom aumenta sem separar imagem e hotspot",
+      "ok": true
+    },
+    {
+      "name": "Pan mobile altera transformação compartilhada",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico zoom 390",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "390 navegação 3D → cockpit sem canvas residual",
+      "ok": true
+    },
+    {
+      "name": "Resize sem recarga 768",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico resize sem recarga 768",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "Pinch começa fora dos hotspots 768",
+      "ok": true,
+      "data": {
+        "x": 384,
+        "y": 259.8,
+        "scale": 0.4787500202655792,
+        "clear": true
+      }
+    },
+    {
+      "name": "Pinch touch real aumenta zoom 768",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico pinch 768",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "Resize sem recarga 390",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico resize sem recarga 390",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "Pinch começa fora dos hotspots 390",
+      "ok": true,
+      "data": {
+        "x": 195,
+        "y": 259.8,
+        "scale": 0.24250000715255737,
+        "clear": true
+      }
+    },
+    {
+      "name": "Pinch touch real aumenta zoom 390",
+      "ok": true
+    },
+    {
+      "name": "Mapeamento intrínseco/canônico pinch 390",
+      "ok": true,
+      "data": [
+        {
+          "mode": "dia",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        },
+        {
+          "mode": "noite",
+          "x": 0,
+          "y": 0,
+          "w": 1600,
+          "h": 955,
+          "align": 6,
+          "meet": 1,
+          "intrinsic": [
+            3200,
+            1910
+          ],
+          "maxError": 0
+        }
+      ]
+    },
+    {
+      "name": "Movimento reduzido remove crossfade raster",
+      "ok": true
+    },
+    {
+      "name": "Dia e teclado/mouse seguem funcionais com movimento reduzido",
+      "ok": true
+    },
+    {
+      "name": "Carregamento mantém os dois fallbacks e hotspots utilizáveis",
+      "ok": true
+    },
+    {
+      "name": "Clique real durante carregamento pendente",
+      "ok": true
+    },
+    {
+      "name": "Conclusão do carregamento troca fallback por raster sem perder seleção",
+      "ok": true
+    },
+    {
+      "name": "Falha dia conserva arte vetorial visível e outra imagem pronta",
+      "ok": true,
+      "data": {
+        "opacity": "1",
+        "fallback": true,
+        "art": 188,
+        "image": "hidden",
+        "other": "ready"
+      }
+    },
+    {
+      "name": "Interação real durante falha dia",
+      "ok": true
+    },
+    {
+      "name": "Falha noite conserva arte vetorial visível e outra imagem pronta",
+      "ok": true,
+      "data": {
+        "opacity": "1",
+        "fallback": true,
+        "art": 188,
+        "image": "hidden",
+        "other": "ready"
+      }
+    },
+    {
+      "name": "Interação real durante falha noite",
+      "ok": true
+    },
+    {
+      "name": "Nenhuma exceção JavaScript inesperada",
+      "ok": true,
+      "data": []
+    }
+  ],
+  "errors": []
+}

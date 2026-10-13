@@ -1,0 +1,34 @@
+[
+  {
+    "point": [
+      110,
+      116
+    ],
+    "firstHit": "termometro_oat \u2022 veda\u00e7\u00e3o",
+    "depth": 25.365853309631348
+  },
+  {
+    "point": [
+      103,
+      118
+    ],
+    "firstHit": "termometro_oat \u2022 veda\u00e7\u00e3o",
+    "depth": 25.338196754455566
+  },
+  {
+    "point": [
+      117,
+      118
+    ],
+    "firstHit": "termometro_oat \u2022 veda\u00e7\u00e3o",
+    "depth": 25.337624549865723
+  },
+  {
+    "point": [
+      110,
+      130
+    ],
+    "firstHit": "termometro_oat \u2022 vidro",
+    "depth": 25.0
+  }
+]

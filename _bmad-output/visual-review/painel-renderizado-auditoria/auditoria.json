@@ -1,0 +1,140 @@
+{
+  "status": "aprovado",
+  "results": [
+    {
+      "label": "Renders carregados e fallback desmontado",
+      "data": [
+        {
+          "mode": "dia",
+          "state": "ready",
+          "opacity": 0,
+          "fallback": false,
+          "visibility": "visible"
+        },
+        {
+          "mode": "noite",
+          "state": "ready",
+          "opacity": 1,
+          "fallback": false,
+          "visibility": "visible"
+        }
+      ]
+    },
+    {
+      "label": "Mesma transformação para imagem e 56 hotspots; sem canvas",
+      "data": {
+        "error": 1.1368683772161603e-13,
+        "images": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1600,
+            "h": 955
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1600,
+            "h": 955
+          }
+        ],
+        "canvas": 0
+      }
+    },
+    {
+      "label": "Retorno SPA com cache, rodada 1"
+    },
+    {
+      "label": "Retorno SPA com cache, rodada 2"
+    },
+    {
+      "label": "Resize sem recarga e pinch touch em 768",
+      "data": {
+        "before": {
+          "scale": 0.4787500202655792,
+          "width": 768
+        },
+        "after": {
+          "scale": 0.8891071677207947,
+          "aligned": true
+        }
+      }
+    },
+    {
+      "label": "Resize sem recarga e pinch touch em 390",
+      "data": {
+        "before": {
+          "scale": 0.3880000114440918,
+          "width": 390
+        },
+        "after": {
+          "scale": 0.7205713987350464,
+          "aligned": true
+        }
+      }
+    },
+    {
+      "label": "Ambas imagens pendentes mantêm arte vetorial"
+    },
+    {
+      "label": "Hotspot atingível durante loading",
+      "data": {
+        "x": 745.2198486328125,
+        "y": 293.33506774902344,
+        "id": "navcom_1"
+      }
+    },
+    {
+      "label": "Raster substitui fallback sem perder seleção"
+    },
+    {
+      "label": "Falha isolada dia",
+      "data": [
+        {
+          "mode": "dia",
+          "state": "error",
+          "opacity": 1,
+          "fallback": true,
+          "visibility": "hidden"
+        },
+        {
+          "mode": "noite",
+          "state": "ready",
+          "opacity": 0,
+          "fallback": false,
+          "visibility": "visible"
+        }
+      ]
+    },
+    {
+      "label": "Falha isolada noite",
+      "data": [
+        {
+          "mode": "dia",
+          "state": "ready",
+          "opacity": 0,
+          "fallback": false,
+          "visibility": "visible"
+        },
+        {
+          "mode": "noite",
+          "state": "error",
+          "opacity": 1,
+          "fallback": true,
+          "visibility": "hidden"
+        }
+      ]
+    },
+    {
+      "label": "Transição de iluminação respeita movimento reduzido",
+      "data": [
+        "1e-05s",
+        "1e-05s"
+      ]
+    },
+    {
+      "label": "Nenhuma exceção de execução",
+      "data": []
+    }
+  ]
+}

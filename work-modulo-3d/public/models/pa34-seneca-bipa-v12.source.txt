@@ -1,0 +1,4 @@
+Fonte do modelo: arquivo Blender fornecido pelo usuário, PA-34_Seneca_Bipa_v12.blend
+Exportação: Blender 5.2.0 LTS, glTF 2.0 Binary (GLB), Draco nível 6
+Coleção exportada: PA-34 • Seneca bipá • revisão 08
+Uso: modelo técnico 3D da aplicação work-modulo-3d em /modelo-3d

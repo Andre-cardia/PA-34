@@ -1,0 +1,628 @@
+
+> my-app@0.0.0 verify
+> npm run build && node scripts/verify-build.mjs --dist
+
+
+> my-app@0.0.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 2808 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.94 kB │ gzip:   0.52 kB
+dist/assets/index-iP0rvXEa.css         123.64 kB │ gzip:  20.88 kB
+dist/assets/HeroCanvas-D1Wlcy1e.js       4.43 kB │ gzip:   2.11 kB
+dist/assets/ModelCanvas-Cn4U6ZcH.js     55.16 kB │ gzip:  17.29 kB
+dist/assets/glb-DpV-4Sx4.js            980.38 kB │ gzip: 265.68 kB
+dist/assets/index-CF0CDHKj.js        1,191.84 kB │ gzip: 351.12 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.74s
+Baseline GLB (não inclui proxies antigos): {"bytes":1255252,"triangles":436242,"materials":11,"primitives":148}
+Ativo Blender validado: {"triangles":576102,"materials":21,"primitives":272,"nodes":119,"components":68,"bytes":20070308,"negativeCases":39}
+Runtime PASS: GLTFLoader real, 68 IDs, 251 meshes com extras herdados, 272 materiais independentes/round-trip, bounds cacheados; pixels de textura limitados ao ensaio CDP.
+Foco validado: âncora tardia, cancelamento, explosão e seleção/deep-link sem duplicação (ensaio isolado, não navegador).
+Smoke verification passed: 8 páginas, componentes gráficos originais, dados JSON, deep-links e fallback WebGL.
+Autotestes layer-diff: {"negativeCases":11,"positiveCases":4}
+Comparação geométrica/material: {"beforeNodes":119,"afterNodes":119,"changed":[{"name":"aquecimento_ventilacao__dir","componentId":"aquecimento_ventilacao","layerId":"avionics_cabine"},{"name":"aquecimento_ventilacao__esq","componentId":"aquecimento_ventilacao","layerId":"avionics_cabine"},{"name":"iluminacao_interna__centro","componentId":"iluminacao_interna","layerId":"avionics_cabine"}]}
+00:00.401  blend            | Read blend: "/Users/andrecardia/Github/PA-34/work-modulo-3d/blender/pa34-camadas.blend"
+BlenderMCP addon registered
+CONTAINMENT {"status": "completa_nos_objetos_auditados", "objects": [{"component": "alternadores", "object": "alternadores__dir", "vertices": 1936, "covered": 1936, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "alternadores", "object": "alternadores__esq", "vertices": 1936, "covered": 1936, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "aquecimento_ventilacao", "object": "aquecimento_ventilacao__dir", "vertices": 1056, "covered": 1056, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "aquecimento_ventilacao", "object": "aquecimento_ventilacao__esq", "vertices": 1056, "covered": 1056, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "assentos", "object": "assentos__dir", "vertices": 2016, "covered": 2016, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "assentos", "object": "assentos__esq", "vertices": 2016, "covered": 2016, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "bateria", "object": "bateria__centro", "vertices": 112, "covered": 112, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "bateria", "object": "bateria__dir", "vertices": 224, "covered": 224, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "bateria", "object": "bateria__esq", "vertices": 224, "covered": 224, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "bombas_vacuo", "object": "bombas_vacuo__dir", "vertices": 848, "covered": 848, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "bombas_vacuo", "object": "bombas_vacuo__esq", "vertices": 848, "covered": 848, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "estrutura_empenagem", "object": "estrutura_empenagem__centro", "vertices": 1024, "covered": 1024, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "estrutura_empenagem", "object": "estrutura_empenagem__dir", "vertices": 960, "covered": 960, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "estrutura_empenagem", "object": "estrutura_empenagem__esq", "vertices": 960, "covered": 960, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "governadores_magnetos", "object": "governadores_magnetos__dir", "vertices": 1296, "covered": 1296, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "governadores_magnetos", "object": "governadores_magnetos__esq", "vertices": 1296, "covered": 1296, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "iluminacao_interna", "object": "iluminacao_interna__centro", "vertices": 1056, "covered": 1056, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "linhas_crossfeed", "object": "linhas_crossfeed__centro", "vertices": 488, "covered": 488, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "linhas_crossfeed", "object": "linhas_crossfeed__dir", "vertices": 1008, "covered": 1008, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "linhas_crossfeed", "object": "linhas_crossfeed__esq", "vertices": 1008, "covered": 1008, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "longarina_principal", "object": "longarina_principal__dir", "vertices": 2328, "covered": 2328, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "longarina_principal", "object": "longarina_principal__esq", "vertices": 2328, "covered": 2328, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "longarina_traseira", "object": "longarina_traseira__dir", "vertices": 728, "covered": 728, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "longarina_traseira", "object": "longarina_traseira__esq", "vertices": 728, "covered": 728, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "radiador_oleo", "object": "radiador_oleo__dir", "vertices": 720, "covered": 720, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "radiador_oleo", "object": "radiador_oleo__esq", "vertices": 720, "covered": 720, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "reguladores_ov", "object": "reguladores_ov__dir", "vertices": 392, "covered": 392, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "reguladores_ov", "object": "reguladores_ov__esq", "vertices": 392, "covered": 392, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "reguladores_vacuo", "object": "reguladores_vacuo__dir", "vertices": 432, "covered": 432, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "reguladores_vacuo", "object": "reguladores_vacuo__esq", "vertices": 432, "covered": 432, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "reles_partida_master", "object": "reles_partida_master__dir", "vertices": 432, "covered": 432, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "reles_partida_master", "object": "reles_partida_master__esq", "vertices": 432, "covered": 432, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "semimonocoque_caixilhos", "object": "semimonocoque_caixilhos__centro", "vertices": 5504, "covered": 5504, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "semimonocoque_caixilhos", "object": "semimonocoque_caixilhos__dir", "vertices": 1792, "covered": 1792, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "semimonocoque_caixilhos", "object": "semimonocoque_caixilhos__esq", "vertices": 1792, "covered": 1792, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "sistema_injecao", "object": "sistema_injecao__dir", "vertices": 880, "covered": 880, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "sistema_injecao", "object": "sistema_injecao__esq", "vertices": 880, "covered": 880, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "tanque_auxiliar_dir", "object": "tanque_auxiliar_dir__dir", "vertices": 3070, "covered": 3070, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "tanque_auxiliar_esq", "object": "tanque_auxiliar_esq__esq", "vertices": 3070, "covered": 3070, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "tanque_principal_dir", "object": "tanque_principal_dir__dir", "vertices": 660, "covered": 660, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "tanque_principal_esq", "object": "tanque_principal_esq__esq", "vertices": 660, "covered": 660, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "valvula_retencao_filtros", "object": "valvula_retencao_filtros__dir", "vertices": 432, "covered": 432, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}, {"component": "valvula_retencao_filtros", "object": "valvula_retencao_filtros__esq", "vertices": 432, "covered": 432, "misses": 0, "coverage": 1.0, "outside25mm": 0, "missingExamples": [], "outsideExamples": []}]}
+NEGATIVE_PASS objeto ausente
+NEGATIVE_PASS objeto fora da casca
+NEGATIVE_PASS conjunto vazio
+Verificação dos vértices MEDIDOS concluída; ver misses/cobertura. Não certifica regiões não medidas nem instalações.
+BlenderMCP addon unregistered
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:31:22)
+
+Blender quit
+{
+  "cases": [
+    {
+      "name": "foco com GLB atrasado 5,5 segundos",
+      "passed": true,
+      "position": [
+        3.8372603632552185,
+        0.23921665072876613,
+        -2.951516983072593
+      ],
+      "frame": 2664,
+      "radius": 2.5000000000000075,
+      "target": [
+        1.8436212556723566,
+        -0.19638802204870565,
+        -1.5073384353262695
+      ],
+      "componentCenter": [
+        1.8436212556723566,
+        -0.19638802204870565,
+        -1.5073384353262695
+      ],
+      "focusDistance": 0
+    },
+    {
+      "name": "parâmetros e isolamento ao limpar seleção",
+      "passed": true,
+      "query": "?force3d=1&nointro=1",
+      "dialog": false,
+      "restoredMaterials": 272
+    },
+    {
+      "name": "preset durante GLB bloqueado cancela foco antigo",
+      "passed": true,
+      "intercepted": true,
+      "before": {
+        "position": [
+          11.5,
+          0.9999999999999996,
+          7.041719095097281e-16
+        ],
+        "frame": 372,
+        "radius": 11.543396380615196,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusDistance": null
+      },
+      "samples": [
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 480,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 576,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 672,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 768,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 864,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        },
+        {
+          "position": [
+            11.5,
+            0.9999999999999996,
+            7.041719095097281e-16
+          ],
+          "frame": 906,
+          "radius": 11.543396380615196,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "componentCenter": [
+            1.8436212556723566,
+            -0.19638802204870565,
+            -1.5073384353262695
+          ],
+          "focusDistance": 2.3894720647421193
+        }
+      ]
+    },
+    {
+      "name": "preset real sem seleção",
+      "passed": true,
+      "frontal": {
+        "position": [
+          14.483224544917535,
+          1.3777909454125223,
+          8.874264752984747e-16
+        ],
+        "frame": 1506,
+        "radius": 14.547464084664675,
+        "target": [
+          -0.009549631544374382,
+          0.11754971267670489,
+          0
+        ],
+        "componentCenter": [
+          1.8436212556723566,
+          -0.19638802204870565,
+          -1.5073384353262695
+        ],
+        "focusDistance": 2.4093294496859525
+      }
+    },
+    {
+      "name": "labels desligados/religados em canvas parado",
+      "passed": true,
+      "reenabled": true
+    },
+    {
+      "name": "gesto de zoom durante ajuste automático",
+      "passed": true,
+      "before": 14.915475627090407,
+      "after": 14.169701845735887
+    },
+    {
+      "name": "todas camadas ocultas não mantém render ocioso",
+      "passed": true,
+      "idleFrames": 0
+    }
+  ],
+  "errors": []
+}
+{
+  "components": 68,
+  "layers": [
+    {
+      "id": "exterior",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 23,
+        "dimmed": 249,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "estrutura",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 24,
+        "dimmed": 248,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "motores",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 36,
+        "dimmed": 236,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "combustivel",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 39,
+        "dimmed": 233,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "eletrico",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 33,
+        "dimmed": 239,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "vacuo_pitot",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 31,
+        "dimmed": 241,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "trem_pouso",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 33,
+        "dimmed": 239,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "controles_voo",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 24,
+        "dimmed": 248,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "avionics_cabine",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 29,
+        "dimmed": 243,
+        "meshCount": 272
+      },
+      "restored": true
+    }
+  ],
+  "invalidQuery": {
+    "canvas": true,
+    "dialog": false
+  },
+  "errors": []
+}
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "canvas": true,
+      "overflow": false,
+      "clippedComponents": []
+    },
+    {
+      "width": 768,
+      "canvas": true,
+      "overflow": false,
+      "clippedComponents": []
+    },
+    {
+      "width": 390,
+      "canvas": true,
+      "overflow": false,
+      "clippedComponents": []
+    }
+  ],
+  "layers": [
+    {
+      "label": "CARENAGEM & EXTERIOR",
+      "before": "Remover camada CARENAGEM & EXTERIOR",
+      "after": "Adicionar camada CARENAGEM & EXTERIOR",
+      "beforeVisible": 272,
+      "afterVisible": 249
+    },
+    {
+      "label": "ESTRUTURA PRIMÁRIA",
+      "before": "Remover camada ESTRUTURA PRIMÁRIA",
+      "after": "Adicionar camada ESTRUTURA PRIMÁRIA",
+      "beforeVisible": 272,
+      "afterVisible": 248
+    },
+    {
+      "label": "MOTORES & HÉLICES",
+      "before": "Remover camada MOTORES & HÉLICES",
+      "after": "Adicionar camada MOTORES & HÉLICES",
+      "beforeVisible": 272,
+      "afterVisible": 236
+    },
+    {
+      "label": "COMBUSTÍVEL",
+      "before": "Remover camada COMBUSTÍVEL",
+      "after": "Adicionar camada COMBUSTÍVEL",
+      "beforeVisible": 272,
+      "afterVisible": 233
+    },
+    {
+      "label": "SISTEMA ELÉTRICO",
+      "before": "Remover camada SISTEMA ELÉTRICO",
+      "after": "Adicionar camada SISTEMA ELÉTRICO",
+      "beforeVisible": 272,
+      "afterVisible": 239
+    },
+    {
+      "label": "VÁCUO & PITOT-ESTÁTICO",
+      "before": "Remover camada VÁCUO & PITOT-ESTÁTICO",
+      "after": "Adicionar camada VÁCUO & PITOT-ESTÁTICO",
+      "beforeVisible": 272,
+      "afterVisible": 241
+    },
+    {
+      "label": "TREM DE POUSO",
+      "before": "Remover camada TREM DE POUSO",
+      "after": "Adicionar camada TREM DE POUSO",
+      "beforeVisible": 272,
+      "afterVisible": 239
+    },
+    {
+      "label": "CONTROLES DE VOO",
+      "before": "Remover camada CONTROLES DE VOO",
+      "after": "Adicionar camada CONTROLES DE VOO",
+      "beforeVisible": 272,
+      "afterVisible": 248
+    },
+    {
+      "label": "CABINE & AVIÔNICOS",
+      "before": "Remover camada CABINE & AVIÔNICOS",
+      "after": "Adicionar camada CABINE & AVIÔNICOS",
+      "beforeVisible": 272,
+      "afterVisible": 243
+    }
+  ],
+  "exceptions": 1,
+  "consoleErrors": 2,
+  "requests": "635 requisições registradas no relatório",
+  "autoRotateControl": true,
+  "scene": {
+    "components": 68,
+    "layers": 9,
+    "meshes": 272,
+    "materials": 272,
+    "drawCalls": 276,
+    "triangles": 588876
+  },
+  "explosion": {
+    "moved": 272,
+    "clipped": [],
+    "restored": true
+  },
+  "xray": {
+    "exteriorReduced": 23,
+    "restored": true
+  },
+  "reducedMotion": {
+    "canvas": false,
+    "text": true
+  },
+  "noWebGL": {
+    "canvas": false,
+    "text": true
+  },
+  "assetFailure": {
+    "canvas": false,
+    "message": true,
+    "componentControls": 105,
+    "lastComponent": {
+      "id": "iluminacao_interna",
+      "selected": true,
+      "x": 190,
+      "y": 500.453125,
+      "reachable": true,
+      "scrolled": true
+    }
+  },
+  "unexpectedExceptions": [],
+  "remoteDecoders": []
+}

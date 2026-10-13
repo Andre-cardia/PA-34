@@ -1,0 +1,452 @@
+{
+  "aeronave": "Piper PA-34-200 Seneca I",
+  "referencia": "Piper Seneca Information Manual PA-34-200 (P/N 761 506, emitido 10/03/1972), painel padrão de fábrica; instrumentos originais graduados em MPH",
+  "observacoes": [
+    "Layout clássico: seis instrumentos de voo (six-pack) à esquerda, instrumentos de motor ao centro/inferior, aviónicos na coluna central, segundo jogo de instrumentos de voo opcional à direita (copiloto).",
+    "Correção em relação a fontes secundárias: o motor ESQUERDO é o Lycoming IO-360-C1E6 (rotação horária vista da cabine) e o DIREITO é o LIO-360-C1E6 (rotação anti-horária) — contra-rotativos.",
+    "O sistema elétrico do Seneca I é de 12 V (barramento regulado em 14,0 V) com 2 alternadores de 60 A — diferente dos Seneca II+ que usam 28 V."
+  ],
+  "instrumentos": [
+    {
+      "id": "velocimetro",
+      "nome": "Velocímetro (ASI)",
+      "nome_en": "Airspeed Indicator",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica a velocidade indicada (IAS) pela diferença entre pressão total do tubo de pitot (mastro sob a asa esquerda) e pressão estática (2 tomadas laterais na fuselagem traseira). No Seneca I original a escala é em MPH.",
+      "operacao": "Marcações do PA-34-200 (MPH, CAS): arco branco 69-125 (faixa de flaps), arco verde 76-190 (operação normal), arco amarelo 190-217 (cautela, ar liso), linha vermelha 217 (Vne), radial vermelho em 80 (Vmc, velocidade mínima de controle mono-motor) e linha azul em 105 (Vyse, melhor razão de subida mono-motor). Limites operacionais: Vfe 125, extensão do trem até 150, retração até 125. Em aproximação: 95 MPH na final (90 leve)."
+    },
+    {
+      "id": "horizonte_artificial",
+      "nome": "Horizonte artificial",
+      "nome_en": "Attitude Gyro (Attitude Indicator)",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica atitude de arfagem (pitch) e rolamento (bank) em relação ao horizonte; instrumento giroscópico acionado a vácuo (sucção das bombas dos motores).",
+      "operacao": "Requer sucção de vácuo de 5,0 ± 0,1 inHg (a 2000 RPM) fornecida por 2 bombas (uma por motor). Sucção abaixo de 4,5 inHg indica fluxo insuficiente e leituras possivelmente incorretas. Segundo horizonte (copiloto) era opcional de fábrica."
+    },
+    {
+      "id": "altimetro",
+      "nome": "Altímetro",
+      "nome_en": "Altimeter",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica altitude pela pressão estática; ajuste barométrico (QNH/QNE) na janela Kollsman. Conectado às tomadas estáticas laterais da fuselagem (2 unidades, uma de cada lado, interligadas para compensar derrapagens).",
+      "operacao": "Fonte estática alternada disponível por válvula abaixo do painel, à direita do quadrante de potência: usa pressão da cabine; leituras podem variar ligeiramente conforme ventilação, janela de tempestade (abrir somente abaixo de 150 MPH) e velocidade."
+    },
+    {
+      "id": "giro_direcional",
+      "nome": "Giro direcional (HDG)",
+      "nome_en": "Directional Gyro (Heading Indicator)",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica proa magnética de forma estável (sem as oscilações da bússola); giroscópio acionado a vácuo. Possui botão de ajuste (cage) para alinhar com a bússola magnética.",
+      "operacao": "Acionado pelo sistema de vácuo (5,0 ± 0,1 inHg). Sofre deriva (precessão) — realinhar com a bússola a cada ~15 min em voo reto e nivelado. Falha de uma bomba de vácuo é sinalizada por botões vermelhos no mostrador do indicador de sucção."
+    },
+    {
+      "id": "coordenador_curva",
+      "nome": "Coordenador de curva (turn and bank)",
+      "nome_en": "Turn and Bank Indicator / Turn Coordinator",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica razão de curva (curva padrão de 2 minutos) e coordenação pela bolinha (escorregamento/ derrapagem). No painel padrão do Seneca I figura como turn and bank indicator; é acionado eletricamente (independente do vácuo).",
+      "operacao": "Instrumento elétrico — serve de backup parcial caso falhe o sistema de vácuo (que alimenta horizonte e giro direcional). Manter a bolinha centrada com o leme; essencial no voo mono-motor (5° de inclinação para o motor bom, conforme técnica)."
+    },
+    {
+      "id": "variometro",
+      "nome": "Variômetro (VSI)",
+      "nome_en": "Vertical Speed Indicator",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica razão de subida/descida em pés por minuto, pela variação da pressão estática.",
+      "operacao": "Valores de referência do PA-34-200: razão de subida bimotor 1360 ft/min (4200 lb, nível do mar) e mono-motor 190 ft/min; teto de serviço mono-motor apenas 3650 ft — gerenciar expectativas em caso de falha de motor."
+    },
+    {
+      "id": "bussola_magnetica",
+      "nome": "Bússola magnética",
+      "nome_en": "Magnetic Compass",
+      "categoria": "voo",
+      "posicao_sugerida": "centro",
+      "descricao": "Bússola de leitura direta montada no topo do painel/arco do para-brisa; referência primária de proa e para calibrar o giro direcional. Possui cartão de desvios (compensation card).",
+      "operacao": "Leitura precisa apenas em voo reto e nivelado e velocidade constante (erros de aceleração e de curva no hemisfério norte). Usar para ajustar o giro direcional periodicamente."
+    },
+    {
+      "id": "relogio",
+      "nome": "Relógio",
+      "nome_en": "Clock",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Relógio de painel (no Seneca I há também um segundo relógio no lado do copiloto na configuração padrão com duplo instrumento). Usado para tempos de perna, combustível e procedimentos.",
+      "operacao": "Essencial para gerenciamento de combustível: consumo total típico 20,6 gal/h (75%) ou 18,3 gal/h (65%) somando os dois motores; planejar trocas/crossfeed e reservas."
+    },
+    {
+      "id": "termometro_oat",
+      "nome": "Termômetro de temperatura externa (OAT)",
+      "nome_en": "Outside Air Temperature Gauge",
+      "categoria": "voo",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indica a temperatura do ar externo, usada para cálculos de performance, velocidade verdadeira (TAS) e avaliação de risco de gelo.",
+      "operacao": "Usar com a tabela de ajuste de potência do POH (potência em função de altitude pressão e temperatura). Em proximidade de 0 °C com umidade visível, considerar aquecimento de pitot e procedimentos de gelo (hélice, para-brisa, boots se equipado)."
+    },
+    {
+      "id": "pressao_admissao",
+      "nome": "Indicador de pressão de admissão (manifold pressure, duplo)",
+      "nome_en": "Manifold Pressure Gauge (dual)",
+      "categoria": "motor",
+      "posicao_sugerida": "centro",
+      "descricao": "Indica a pressão absoluta no coletor de admissão de cada motor, em polegadas de mercúrio (inHg) — um ponteiro por motor. Com a hélice de velocidade constante, MP + RPM definem a potência.",
+      "operacao": "Decolagem: aceleração total (~29 inHg ao nível do mar). Ajustes típicos (tabela Lycoming IO-360-C, 200 HP): 75% ≈ 2400 RPM e ~25,5 inHg ao nível do mar (aceleração total acima de ~5-6 mil ft); 65% ≈ 2400 RPM e ~22,9 inHg; 55% ≈ 2100-2400 RPM e ~20-22 inHg. Aviso de trem: buzina soa se MP < 14 inHg com trem recolhido. Reduzir sempre MP antes do RPM; ao aumentar, RPM antes do MP."
+    },
+    {
+      "id": "tacometro_duplo",
+      "nome": "Tacômetro (RPM) — motor esquerdo",
+      "nome_en": "Tachometer (left engine)",
+      "categoria": "motor",
+      "posicao_sugerida": "centro",
+      "descricao": "Indica a rotação do motor/hélice esquerdo em RPM — mostrador redondo dedicado, uma agulha (confirmado por foto de referência: dois instrumentos físicos separados, não um único mostrador com duas agulhas).",
+      "operacao": "Marcações PA-34-200 com hélices sem amortecedor (HC-C2YK-2E/LE): arco verde 500-2200 e 2400-2700 RPM; arco vermelho 2200-2400 RPM (evitar operação contínua — ressonância); linha vermelha 2700 RPM (máximo). Com hélices com amortecedor (2CG/2CLG): verde contínuo 500-2700. Máxima potência: 2700 RPM / 200 HP. Trava de embandeiramento impede feather abaixo de 800 RPM."
+    },
+    {
+      "id": "tacometro_direito",
+      "nome": "Tacômetro (RPM) — motor direito",
+      "nome_en": "Tachometer (right engine)",
+      "categoria": "motor",
+      "posicao_sugerida": "centro",
+      "descricao": "Indica a rotação do motor/hélice direito em RPM — mostrador redondo dedicado, uma agulha, mesma escala e limites do tacômetro esquerdo.",
+      "operacao": "Marcações PA-34-200 com hélices sem amortecedor (HC-C2YK-2E/LE): arco verde 500-2200 e 2400-2700 RPM; arco vermelho 2200-2400 RPM (evitar operação contínua — ressonância); linha vermelha 2700 RPM (máximo). Com hélices com amortecedor (2CG/2CLG): verde contínuo 500-2700. Máxima potência: 2700 RPM / 200 HP. Trava de embandeiramento impede feather abaixo de 800 RPM."
+    },
+    {
+      "id": "fluxo_combustivel_pressao",
+      "nome": "Indicador de fluxo e pressão de combustível (duplo)",
+      "nome_en": "Fuel Flow and Fuel Pressure Gauge (dual)",
+      "categoria": "motor",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Mostra o fluxo de combustível (GPH) e a pressão de combustível (PSI) de cada motor, no sistema de injeção Bendix RSA-5. O fluxo é a referência primária para o leaning (empobrecimento da mistura).",
+      "operacao": "Pressão de combustível: arco verde 14-35 PSI, linhas vermelhas em 14 e 35 PSI. Fluxo: linha vermelha máxima 19,2 GPH (por motor, plena potência ao nível do mar). Consumos totais típicos (2 motores): 20,6 GPH a 75%, 18,3 GPH a 65%. Queda de pressão com bomba do motor saudável pode exigir bomba elétrica."
+    },
+    {
+      "id": "egt",
+      "nome": "Indicador de temperatura dos gases de escape (EGT)",
+      "nome_en": "Exhaust Gas Temperature Gauge (EGT)",
+      "categoria": "motor",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Indica a temperatura dos gases de escape (sonda no escapamento) de cada motor; referência precisa para o ajuste da mistura (leaning).",
+      "operacao": "Empobrecer até o pico de EGT e enriquecer ~75-100 °F para melhor potência (ou operar no pico/empobrecido conforme manual Lycoming e CHT). Usado junto com o fluxo de combustível e CHT; evitar CHT acima de 475 °F."
+    },
+    {
+      "id": "pressao_oleo",
+      "nome": "Indicadores de pressão de óleo (2)",
+      "nome_en": "Oil Pressure Gauges",
+      "categoria": "motor",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Um por motor, integrados aos conjuntos de instrumentos de motor e combustível esquerdo/direito. Indicam a pressão do óleo lubrificante em PSI.",
+      "operacao": "Arco verde 60-90 PSI (normal); arco amarelo 25-60 PSI (cautela); linha vermelha mínima 25 PSI e máxima 90 PSI. Na partida a frio, pressão pode subir acima do verde temporariamente; se não cair no verde em ~30 s, desligar e investigar. Pressão de óleo também move a hélice para passo fino (alta RPM)."
+    },
+    {
+      "id": "temperatura_oleo",
+      "nome": "Indicadores de temperatura de óleo (2)",
+      "nome_en": "Oil Temperature Gauges",
+      "categoria": "motor",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Um por motor, nos conjuntos de instrumentos esquerdo/direito. Monitoram a temperatura do óleo em °F.",
+      "operacao": "Arco verde 75-245 °F; linha vermelha 245 °F. Não aplicar alta potência com óleo frio (aguardar no mínimo faixa verde). Temperatura alta: verificar cowl flaps, mistura (enriquecer) e reduzir potência/ aumentar velocidade."
+    },
+    {
+      "id": "cht",
+      "nome": "Indicadores de temperatura de cabeçote - CHT (2)",
+      "nome_en": "Cylinder Head Temperature Gauges",
+      "categoria": "motor",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Um por motor, nos conjuntos esquerdo/direito. Monitoram a temperatura do cabeçote de cilindro mais quente.",
+      "operacao": "Arco verde 200-475 °F; linha vermelha 475 °F. Manter abaixo de 475 °F sempre (monitorar na subida; o POH recomenda verificar CHT em subida e ajustar cowl flaps/mistura). Subida em cruzeiro a 120 MPH melhora refrigeração."
+    },
+    {
+      "id": "quantidade_combustivel",
+      "nome": "Indicadores de quantidade de combustível (2)",
+      "nome_en": "Fuel Quantity Gauges",
+      "categoria": "motor",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Um indicador por asa (integrados aos clusters esquerdo/direito). Cada um lê o TOTAL dos dois tanques interligados daquela asa (24,5 + 24,5 gal), somando os sensores de cada tanque.",
+      "operacao": "Capacidade total 98 gal (49 por asa), utilizável 93 gal (46,5 por asa); não utilizável 2,5 gal por lado. Como os dois tanques de cada asa são interligados e abastecidos por uma única boca (tanque externo), não há seleção main/aux — a seletora é por LADO (ON/OFF/CROSSFEED)."
+    },
+    {
+      "id": "amperimetros",
+      "nome": "Amperímetros (2, esquerdo e direito)",
+      "nome_en": "Ammeters (loadmeters)",
+      "categoria": "motor",
+      "posicao_sugerida": "direita",
+      "descricao": "Um amperímetro (tipo loadmeter) para cada alternador de 60 A, mostrando a corrente produzida. Leitura zero = alternador fora de linha.",
+      "operacao": "Sistema 12 V (barramento 14,0 V). Indicação próxima de 60 A = alternador sobrecarregado: desligar equipamentos desnecessários. Em mono-motor, cuidado para não sobrecarregar o único alternador. Com tudo desligado (exceto master), leituras altas somadas indicam bateria descarregada."
+    },
+    {
+      "id": "indicador_vacuo",
+      "nome": "Indicador de sucção (vácuo) dos giros",
+      "nome_en": "Gyro Suction / Vacuum Gauge",
+      "categoria": "motor",
+      "posicao_sugerida": "direita",
+      "descricao": "Indica a sucção do sistema de vácuo (inHg) que alimenta horizonte artificial e giro direcional. Mostrador possui dois botões vermelhos de falha (um por lado/bomba).",
+      "operacao": "Normal: 5,0 ± 0,1 inHg a 2000 RPM; abaixo de 4,5 inHg = fluxo insuficiente e possíveis leituras erradas dos giros. Se uma bomba falhar (ou vazar mangueira), válvula de retenção fecha automaticamente e a outra bomba assume — um botão vermelho aparece. Uma bomba supre dois jogos de giros até 12.500 ft; acima disso, manter RPM alto."
+    },
+    {
+      "id": "indicador_vor_1",
+      "nome": "Indicador VOR/LOC nº 1 (OBS)",
+      "nome_en": "Omni (VOR/LOC) Indicator No. 1",
+      "categoria": "navegacao",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Indicador de desvio de curso (CDI) acoplado ao NAV 1, com seletor de proa (OBS) e bandeiras TO/FROM e de falha (NAV flag).",
+      "operacao": "Sintonizar o VOR no NAV 1, identificar o código morse e centrar a agulha com o OBS. Sensibilidade típica: deflexão total = 10° (VOR) ou ~2,5° (LOC)."
+    },
+    {
+      "id": "indicador_vor_2_gs",
+      "nome": "Indicador VOR/LOC nº 2 com glide slope",
+      "nome_en": "Omni and Glide Slope Indicator No. 2",
+      "categoria": "navegacao",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Segundo indicador de navegação, com agulha horizontal adicional de glide slope para aproximações ILS (acoplado ao NAV 2).",
+      "operacao": "Usado para ILS: localizador na vertical, rampa de planeio na horizontal. Combinar com luzes de marker beacon e DME quando disponíveis."
+    },
+    {
+      "id": "adf_indicador",
+      "nome": "Indicador ADF (aguinha de rumo)",
+      "nome_en": "ADF Indicator",
+      "categoria": "navegacao",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Agulha apontadora para estações NDB, acoplada ao receptor ADF; no painel padrão do Seneca I o indicador fica no alto à esquerda e o receptor na coluna central.",
+      "operacao": "Sintonizar o NDB, identificar o morse e ler o rumo relativo na agulha (RB). Homing/tracking para o NDB; checar identificação contínua em aproximação."
+    },
+    {
+      "id": "luzes_marker",
+      "nome": "Luzes de marker beacon (O/M/I)",
+      "nome_en": "Marker Beacon Receiver Lights",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Três luzes (azul = outer, âmbar = middle, branca = inner/airway marker) do receptor de marker beacon, usadas em aproximações ILS da época.",
+      "operacao": "Acendem com tom audível ao sobre voar os fan markers da aproximação. Usadas com o ILS para identificar pontos fixos da final."
+    },
+    {
+      "id": "navcom_1",
+      "nome": "NAV/COM nº 1",
+      "nome_en": "Communications and Navigation Transceiver No. 1",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro",
+      "descricao": "Primeiro rádio transceptor VHF de comunicações + receptor de navegação VOR/LOC (da época: King KX170B ou Narco Mark 12), na coluna central de rádios.",
+      "operacao": "COM: 118,00-135,975 MHz; NAV: 108,00-117,95 MHz acoplado ao indicador nº 1. Sempre identificar estações de navegação pelo código morse antes de usar."
+    },
+    {
+      "id": "navcom_2",
+      "nome": "NAV/COM nº 2",
+      "nome_en": "Communications and Navigation Transceiver No. 2",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro",
+      "descricao": "Segundo rádio NAV/COM, redundância de comunicação e navegação (VOR/LOC + glide slope), abaixo do nº 1 na coluna central.",
+      "operacao": "Backup do COM 1 e receptor do ILS (com glide slope no indicador nº 2). Recomendado cruzar frequências: COM 1 ativo / COM 2 em standby na escuta de emergência 121,5 quando aplicável."
+    },
+    {
+      "id": "adf_receptor",
+      "nome": "Receptor ADF",
+      "nome_en": "ADF Receiver",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro",
+      "descricao": "Receptor de radiogoniometria automática (da época: King KR 85/86 ou Narco), com modos ANT/ADF e seletor de frequência, alimentando o indicador ADF.",
+      "operacao": "Faixa 200-1600 kHz (NDBs e broadcast). Usar modo ANT para sintonia/identificação fina e ADF para apontamento da agulha."
+    },
+    {
+      "id": "dme",
+      "nome": "DME (controle e indicador)",
+      "nome_en": "DME Control and Indicator",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro",
+      "descricao": "Equipamento de medida de distância (da época: King KN 64/KN 65), indica distância inclinada em milhas náuticas, velocidade de solo e tempo até a estação.",
+      "operacao": "Acoplado (remote) aos canais VOR ou seletor próprio. Distância é slant range: diretamente sobre a estação lê aproximadamente a altitude em NM (6000 ft ≈ 1 NM)."
+    },
+    {
+      "id": "transponder",
+      "nome": "Transponder",
+      "nome_en": "Transponder",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro",
+      "descricao": "Transponder ATC (da época: King KT 76 ou Narco), modos A e C (código 4096 + altitude), com teclas de código e luz de resposta.",
+      "operacao": "Modos: OFF/SBY/ON/ALT. Códigos padrão: 1200 (VFR EUA), 7500 sequestro, 7600 falha de rádio, 7700 emergência. ALT reporta altitude ao radar do controle."
+    },
+    {
+      "id": "painel_audio",
+      "nome": "Painel de controle de áudio",
+      "nome_en": "Audio Control Panel",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro",
+      "descricao": "Seleciona quais receptores são ouvidos nos fones/alto-falante e por qual transceptor se transmite (da época: King KMA 20/24).",
+      "operacao": "Selecionar o COM de transmissão e habilitar o áudio de navegação para identificar morse dos VOR/NDB. Falha do painel pode ser contornada por chave de emergência/bypass conforme o modelo."
+    },
+    {
+      "id": "piloto_automatico",
+      "nome": "Piloto automático AltiMatic IIIB-1 (opcional)",
+      "nome_en": "AltiMatic IIIB-1 Autopilot",
+      "categoria": "avionics",
+      "posicao_sugerida": "centro-esq",
+      "descricao": "Piloto automático Piper/Bendix opcional de fábrica com acoplagem de navegação (omni-coupler) e compensação elétrica de arfagem; unidade de controle no painel inferior.",
+      "operacao": "Modos de proa, acoplamento a VOR/LOC e (conforme variante) captura de altitude. Verificar no pré-voo: disjuntor armado, compensação elétrica e desengate (override manual). Suplemento do AFM aplicável."
+    },
+    {
+      "id": "seletor_trem",
+      "nome": "Seletor do trem de pouso",
+      "nome_en": "Landing Gear Selector Switch",
+      "categoria": "controle",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Chave seletora com manípulo em formato de roda, à esquerda do quadrante de potência; aciona a bomba hidráulica elétrica reversível para subir (UP) ou baixar (DOWN) o trem.",
+      "operacao": "Puxar o manípulo antes de mover (trava). Retração/extensão normais levam 6-7 segundos. Retrair antes de exceder 125 MPH; estender até no máximo 150 MPH. Não inverter o sentido em trânsito (prejudica a bomba elétrica). Interruptor de segurança (squat switch) na perna principal esquerda impede retração em solo (oleo estendido > 8 pol. libera o circuito na decolagem)."
+    },
+    {
+      "id": "luzes_trem_verdes",
+      "nome": "Luzes verdes de trem baixado e travado (3)",
+      "nome_en": "Landing Gear Down Lights (3 green)",
+      "categoria": "aviso",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Três luzes verdes quadradas (nariz, principal esquerda, principal direita) que indicam trem baixado e travado. Um espelho convexo na nacele esquerda permite confirmar visualmente o trem dianteiro.",
+      "operacao": "Checar 3 verdes na perna do vento e novamente na final. As luzes são esmaecidas automaticamente quando as luzes de navegação estão ligadas — se não vê as verdes de dia, verifique se as nav lights estão acesas. Lâmpadas podem ser testadas puxando/girando as lentes."
+    },
+    {
+      "id": "luz_trem_vermelha",
+      "nome": "Luz vermelha de aviso do trem",
+      "nome_en": "Gear Warning Light (red) / Gear Up Light",
+      "categoria": "aviso",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Luz vermelha que acende quando o trem não está nem totalmente recolhido nem totalmente baixado/travado (em trânsito ou condição insegura), e com o trem recolhido (gear up light no painel padrão).",
+      "operacao": "Buzina de aviso de trem soa quando: (1) trem recolhido e MP < 14 inHg em um ou ambos os motores; (2) seletor em UP com a aeronave em solo. Testar a buzina na aproximação reduzindo potência — nunca voar com a buzina inoperante (risco de pouso com trem recolhido)."
+    },
+    {
+      "id": "extensao_emergencia_trem",
+      "nome": "Comando de extensão de emergência do trem (queda livre)",
+      "nome_en": "Landing Gear Free-Fall / Emergency Extension Control",
+      "categoria": "controle",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Manípulo protegido por tampa/guarda próximo ao centro do painel; ao ser puxado, alivia a pressão hidráulica que mantém o trem recolhido, permitindo que gravidade, molas e carga aerodinâmica baixem e travem o trem.",
+      "operacao": "Procedimento (POH): verificar disjuntores, master ON, alternadores OK, luzes de navegação OFF (de dia); reduzir potência, velocidade ≤ 100 MPH; seletor em GEAR DOWN LOCKED; puxar o comando de emergência; conferir 3 luzes verdes (+ espelho do trem dianteiro). Deixar o comando estendido até inspeção em macacos após o pouso."
+    },
+    {
+      "id": "painel_anunciador",
+      "nome": "Painel anunciador (Caution Lights)",
+      "nome_en": "Annunciator Panel (Caution Lights)",
+      "categoria": "aviso",
+      "posicao_sugerida": "centro-dir",
+      "descricao": "Grade de 6 luzes retroiluminadas que consolida visualmente avisos já presentes em outros pontos do painel: falha/sobretensão de cada alternador, trem em trânsito/inseguro, falha de vácuo de cada bomba, e porta mal fechada. Não substitui os indicadores dedicados (avisos_eletricos_vacuo, luz_trem_vermelha) — é a apresentação consolidada desses mesmos sinais, citada no SOP como \"Caution Lights\" próximas ao trem de pouso.",
+      "operacao": "L ALT / R ALT: alternador correspondente fora de linha (mesmo sinal de avisos_eletricos_vacuo). GEAR: trem em trânsito ou condição insegura (mesmo sinal de luz_trem_vermelha). L VAC / R VAC: falha de vácuo/bomba daquele lado (mesmo sinal dos botões vermelhos do indicador de sucção). DOOR: porta da cabine mal fechada/destravada."
+    },
+    {
+      "id": "freio_estacionamento",
+      "nome": "Freio de estacionamento e freios de pedal (toe brakes)",
+      "nome_en": "Parking Brake and Toe Brakes",
+      "categoria": "controle",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Freios de disco simples/duplo pistão nas rodas principais, acionados por pedais de ponta (toe brakes) no lado esquerdo (direito opcional) e por manete hidráulico abaixo e atrás do lado esquerdo do painel. Reservatório hidráulico de freios independente do do trem.",
+      "operacao": "Estacionar: puxar o manete e pressionar o botão à esquerda dele; liberar puxando novamente sem tocar o botão. Não estacionar com freios quentes. Direção em solo: nariz esterçável por pedais de leme (arco de 42°)."
+    },
+    {
+      "id": "chave_master",
+      "nome": "Chave master (bateria)",
+      "nome_en": "Master Switch",
+      "categoria": "controle",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Chave principal no painel de interruptores à esquerda do piloto; conecta a bateria de 12 V / 35 Ah (no nariz) ao barramento elétrico.",
+      "operacao": "Com master OFF, o aviso de estol fica inoperante. Master deve estar OFF ao conectar/desconectar GPU (12-14 V) para evitar faíscas, mas ON para partida com fonte externa. Chave de teste/luz do painel permite inspeção noturna antes de ligar o master."
+    },
+    {
+      "id": "chaves_alternadores",
+      "nome": "Chaves dos alternadores (2)",
+      "nome_en": "Alternator Switches",
+      "categoria": "controle",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Chaves no painel esquerdo que conectam cada alternador de 60 A (um por motor) ao barramento. Relés de sobretensão tiram o alternador de linha acima de 14,0 V e acendem luz vermelha de aviso.",
+      "operacao": "Verificar após partida: ambos amperímetros indicando carga. Luz vermelha de sobretensão = relé de OV atuou (alternador fora de linha) — pode ser religado após investigar/resetar. Em falha dupla, bateria alimenta apenas o essencial (desligar cargas)."
+    },
+    {
+      "id": "chaves_magnetos_partida",
+      "nome": "Chaves de magnetos e partida (2)",
+      "nome_en": "Magneto and Starter Switches",
+      "categoria": "controle",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Chaves de magnetos (esquerdo/direito, OFF/L/R/BOTH) e interruptores de partida (starter) para cada motor, no painel de interruptores à esquerda.",
+      "operacao": "Checagem de magnetos no run-up (queda típica pequena e balanceada entre L e R). Tratar toda hélice como viva: magnetos OFF e mistura cortada antes de manusear. Após partida, verificar amperímetro do respectivo alternador."
+    },
+    {
+      "id": "bombas_combustivel_eletricas",
+      "nome": "Interruptores das bombas elétricas de combustível (2)",
+      "nome_en": "Electric Fuel Pump Switches",
+      "categoria": "controle",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Interruptores no painel esquerdo para as bombas elétricas auxiliares (uma por motor, na face traseira do firewall), backup das bombas mecânicas acionadas pelo motor.",
+      "operacao": "Ligar para partida (conforme procedimento), decolagem, pouso e troca de tanque/crossfeed — garantem pressão se a bomba do motor falhar nessas fases. Acima de 500 ft AGL podem ser desligadas uma de cada vez, monitorando a pressão de combustível no verde (14-35 PSI)."
+    },
+    {
+      "id": "pitot_heat_luzes",
+      "nome": "Interruptores de pitot heat e luzes externas",
+      "nome_en": "Pitot Heat and Exterior Light Switches",
+      "categoria": "controle",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Interruptores de aquecimento do tubo de pitot (e dos transmissores de aviso de estol, quando equipado) e das luzes de navegação, pouso, strobes e luzes de painel, no painel esquerdo.",
+      "operacao": "Pitot heat: ligar imediatamente ao entrar em condições de gelo (também aquece os detectores de estol). Cuidado no teste em solo — aquece rápido (queimadura). Lembrar: com nav lights ON, as luzes do trem ficam esmaecidas."
+    },
+    {
+      "id": "estatica_alternada",
+      "nome": "Válvula de fonte estática alternada",
+      "nome_en": "Alternate Static Source Valve",
+      "categoria": "controle",
+      "posicao_sugerida": "direita",
+      "descricao": "Válvula abaixo do painel, à direita do quadrante de potência; seleciona a pressão da cabine como fonte estática para altímetro, VSI e velocímetro.",
+      "operacao": "Usar se as tomadas estáticas obstruírem (leituras anômalas). Com fonte alternada os instrumentos podem ler ligeiramente diferente (efeito da pressurização da cabine, ventilação e janela). Também serve para drenar umidade do sistema estático."
+    },
+    {
+      "id": "disjuntores",
+      "nome": "Painel de disjuntores",
+      "nome_en": "Circuit Breaker Panel",
+      "categoria": "controle",
+      "posicao_sugerida": "direita",
+      "descricao": "Disjuntores no canto inferior direito do painel protegendo cada circuito elétrico (rádios, luzes, bomba do trem, instrumentos, etc.). Não podem ser desarmados manualmente pelo piloto.",
+      "operacao": "Se um disjuntor desarmar (surto ou defeito), aguardar alguns minutos e rearmar uma vez pressionando. Desarmes repetidos indicam defeito — não insistir. Verificar todos armados no pré-voo."
+    },
+    {
+      "id": "aquecimento_desembacador",
+      "nome": "Controles de aquecimento e desembaçador",
+      "nome_en": "Heat and Defrost Controls",
+      "categoria": "controle",
+      "posicao_sugerida": "direita",
+      "descricao": "Controles no painel inferior direito para o aquecimento de cabine e desembaçamento do para-brisa; calor proveniente de trocador no coletor de escapamento (ou aquecedor de combustão Janitrol opcional) com controle de temperatura e ar fresco.",
+      "operacao": "Aquecedor de combustão (se instalado): alavanca de admissão de ar fora de CLOSED + chave em HEATER acende o queimador; chaves de segurança impedem operação sem fluxo de ar. Atenção a vazamentos do escapamento (risco de CO) — detector de monóxido recomendado."
+    },
+    {
+      "id": "aviso_estol",
+      "nome": "Luz e buzina de aviso de estol",
+      "nome_en": "Stall Warning Light and Horn",
+      "categoria": "aviso",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Luz vermelha de aviso de estol no painel (lado esquerdo) + buzina, acionadas por dois detectores de sustentação (lift detectors) no bordo de ataque da asa esquerda, fora da nacele.",
+      "operacao": "O detector interno dispara com flaps em 25°/40°, o externo nas demais posições. Som diferente da buzina de trem. Sistema INOPERANTE com master OFF. Velocidades de estol (CAS, peso máx.): 76 MPH limpo / 69 MPH com 40° de flaps."
+    },
+    {
+      "id": "avisos_eletricos_vacuo",
+      "nome": "Avisos de sobretensão e falha de vácuo",
+      "nome_en": "Overvoltage Lights and Vacuum Malfunction Buttons",
+      "categoria": "aviso",
+      "posicao_sugerida": "esquerda",
+      "descricao": "Luzes vermelhas de sobretensão no painel de interruptores esquerdo (relé de OV tirou o alternador de linha acima de 14 V) e botões vermelhos no mostrador do indicador de sucção sinalizando perda de vácuo de cada lado/bomba.",
+      "operacao": "Luz OV acesa = alternador correspondente fora de linha (verificar amperímetro zero; reduzir carga; procedimento de reset conforme AFM). Botão vermelho de vácuo = aquela bomba/lado sem sucção; a válvula de retenção isola e a outra bomba assume os giros."
+    },
+    {
+      "id": "relogio_copiloto_acendedor",
+      "nome": "Relógio do copiloto e acendedor de cigarros",
+      "nome_en": "Copilot Clock and Cigar Lighter",
+      "categoria": "controle",
+      "posicao_sugerida": "direita",
+      "descricao": "Segundo relógio no painel do copiloto e acendedor/tomada 12 V (itens do painel padrão de época).",
+      "operacao": "O acendedor pode servir de tomada para acessórios de época; cuidado com consumo elétrico adicional no sistema de 12 V (monitorar amperímetros)."
+    },
+    {
+      "id": "instrumentos_copiloto",
+      "nome": "Segundo jogo de instrumentos de voo (copiloto, opcional)",
+      "nome_en": "Copilot Flight Instruments (dual option)",
+      "categoria": "voo",
+      "posicao_sugerida": "direita",
+      "descricao": "Jogo duplicado opcional de fábrica no lado direito: velocímetro, horizonte, altímetro, giro direcional, turn and bank e variômetro do copiloto.",
+      "operacao": "Com o segundo jogo de giros instalado, um segundo filtro de vácuo é adicionado; uma única bomba de vácuo supre os dois jogos até 12.500 ft (acima, manter RPM mais alto para sucção adequada)."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "status": "aprovado",
+  "origem": "http://127.0.0.1:3000",
+  "evidencias": [
+    {
+      "nome": "22 fontes 3D aprovadas intactas",
+      "dados": []
+    },
+    {
+      "nome": "Servidor entrega o GLB aprovado",
+      "dados": "11776870db30eca87b4fefc1060315b245c3df1ccff37975c11aaa643e15c71a"
+    },
+    {
+      "nome": "Home carrega canvas e solicita modelo aprovado",
+      "dados": "/"
+    },
+    {
+      "nome": "Link interno /modelo-3d encontrado",
+      "dados": true
+    },
+    {
+      "nome": "Link interno /cockpit encontrado",
+      "dados": true
+    },
+    {
+      "nome": "Navegação 3D → cockpit novo sem recarregar",
+      "dados": true
+    },
+    {
+      "nome": "Troca reativa de deep-link e foco sem reload",
+      "dados": true
+    },
+    {
+      "nome": "Resize preserva seleção e palco acessível",
+      "dados": {
+        "transform": "translate(-451.1143588628464 59.88294979050363) scale(0.8495053627108297)",
+        "visivel": true,
+        "titulo": "NAV/COM nº 1"
+      }
+    },
+    {
+      "nome": "Remover query fecha seleção sem reload",
+      "dados": true
+    },
+    {
+      "nome": "Link interno /modelo-3d encontrado",
+      "dados": true
+    },
+    {
+      "nome": "Retorno ao 3D preserva controles e não deixa drawer",
+      "dados": true
+    }
+  ]
+}

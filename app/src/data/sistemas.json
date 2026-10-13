@@ -1,0 +1,335 @@
+[
+  {
+    "id": "combustivel",
+    "nome": "Sistema de Combustível",
+    "secao_sop": "8.1",
+    "resumo": "O PA34-200 possui 2 tanques em cada asa, interconectados, com 24,5 galões cada, totalizando 49 galões (185,2 l) por asa. Combustível utilizável total de 93 galões (351,5 l) e não utilizável de 5 galões (18,9 l).",
+    "funcionamento": "O abastecimento é realizado por um único bocal próximo à ponta da asa. A bomba de combustível primária é operada pelo próprio motor; as bombas elétricas servem como back-up em caso de falha das bombas principais e devem ser utilizadas durante decolagem e pouso para garantir pressão de combustível nesses momentos críticos do voo. O sistema de CROSSFEED, exclusivo de aeronaves multimotoras, permite alimentar o motor esquerdo com combustível do tanque direito e vice-versa. O teste de crossfeed em solo não consiste apenas em colocar a alavanca em crossfeed: para um teste completo, coloca-se a seletora em OFF e, quando o motor começar a falhar, passa-se para X FEED, certificando-se de que o sistema funciona perfeitamente. Nos checklists da VoeFloripa, o crossfeed é checado apenas no primeiro voo do dia: seletoras em OFF por até 60 s até o motor apagar e, então, X FEED para reacender o motor (a seletora pode ser checada individualmente), evitando movimentos diretos de X FEED para ON para não danificar os pontos de parada.",
+    "componentes": [
+      {
+        "nome": "Tanques de asa (inboard e outboard)",
+        "funcao": "Armazenar o combustível da aeronave.",
+        "detalhes": "2 tanques em cada asa, interconectados, com capacidade de 24,5 galões cada; total de 49 galões (185,2 l) por asa. Utilizável total 93 galões (351,5 l); não utilizável 5 galões (18,9 l). Verificação visual antes de cada voo com pipeta graduada (fuelstick)."
+      },
+      {
+        "nome": "Bocal de abastecimento",
+        "funcao": "Ponto único de abastecimento dos tanques.",
+        "detalhes": "Localizado próximo à ponta da asa."
+      },
+      {
+        "nome": "Bomba de combustível do motor (engine fuel pump)",
+        "funcao": "Bomba primária de alimentação de combustível.",
+        "detalhes": "Operada pelo próprio motor."
+      },
+      {
+        "nome": "Bomba de combustível elétrica (electric fuel pump)",
+        "funcao": "Back-up em caso de falha da bomba principal.",
+        "detalhes": "Deve ser utilizada durante decolagem e pouso para garantir pressão de combustível. Não entra em operação automaticamente; não ligar salvo necessidade de eliminar vapor ou falha da bomba do motor."
+      },
+      {
+        "nome": "Válvula seletora de combustível (fuel selector valve) e comando (fuel selector control)",
+        "funcao": "Selecionar a fonte de alimentação de cada motor (ON, OFF, X FEED).",
+        "detalhes": "NUNCA operar o avião com ambas as seletoras em X FEED. NÃO efetuar decolagens com a seletora em X FEED. Em operação monomotor, usar alimentação cruzada somente em voo nivelado e não utilizá-la quando o tanque do lado do motor remanescente estiver cheio (risco de perda de combustível pelo suspiro)."
+      },
+      {
+        "nome": "Filtro de combustível (filter / fuel strainer)",
+        "funcao": "Filtrar o combustível antes do motor.",
+        "detalhes": "Drenado na inspeção pré-voo (fuel strainer drain knob), após drenar as asas."
+      },
+      {
+        "nome": "Drenos (drains) e drenos de ponto baixo (low point drains)",
+        "funcao": "Drenagem de água/sujeira dos tanques e do sistema.",
+        "detalhes": "Verificar coloração azul do combustível e contaminação por água ou sujeira; em dúvida, drenar até certificar-se da ausência de resíduos."
+      },
+      {
+        "nome": "Suspiro do tanque (vent)",
+        "funcao": "Ventilação dos tanques.",
+        "detalhes": "WARNING: o entupimento do suspiro do tanque pode levar a baixa pressão no sistema de alimentação, causando falha do motor."
+      },
+      {
+        "nome": "Indicador de fluxo de combustível (fuel flow gauge)",
+        "funcao": "Indicar o consumo/fluxo de combustível do motor.",
+        "detalhes": "Checado no antes da decolagem; na partida, confirma a indicação de fuel flow ao acionar a bomba."
+      },
+      {
+        "nome": "Indicadores de pressão de combustível (fuel pressure gauges)",
+        "funcao": "Monitorar a pressão de alimentação.",
+        "detalhes": "Faixa verde 14–35 PSI; linhas vermelhas em 14 PSI (mínima) e 35 PSI (máxima)."
+      },
+      {
+        "nome": "Divisor de fluxo (flow divider), injetor de combustível (fuel injector) e bicos injetores (fuel nozzles)",
+        "funcao": "Distribuir e injetar o combustível nos cilindros (motor injetado).",
+        "detalhes": "Componentes mostrados no esquema do sistema de combustível (Fuel Schematic, pág. 43 do SOP). Inclui o fuel flow vent."
+      }
+    ],
+    "notas_limitacoes": [
+      "Combustível: AVGAS 100/130 LL Azul.",
+      "NUNCA operar o avião com ambas as seletoras em X FEED.",
+      "NÃO efetuar decolagens com a seletora em X FEED.",
+      "Bombas elétricas devem ser usadas em decolagem e pouso.",
+      "Crossfeed: usar somente em voo nivelado; não usar com o tanque do motor remanescente cheio (perda pelo suspiro).",
+      "Se a operação normal do motor e o fluxo de combustível não forem restabelecidos imediatamente, a bomba auxiliar deve ser desligada: a falta de indicação de fluxo com a bomba auxiliar ligada pode significar vazamento no sistema ou falta de combustível.",
+      "Os tanques devem ser verificados visualmente antes de cada voo, utilizando-se a pipeta graduada (fuelstick)."
+    ]
+  },
+  {
+    "id": "eletrico",
+    "nome": "Sistema Elétrico",
+    "secao_sop": "8.2",
+    "resumo": "Sistema capaz de prover energia suficiente para voo IFR noturno, com dois alternadores de 60 A cada (um em cada motor) e bateria de 12 V / 35 A·h.",
+    "funcionamento": "Dois alternadores, com capacidade de 60 ampères cada e instalados um em cada motor, suprem o sistema; amperímetros demonstram o funcionamento de cada alternador. Durante o voo deve-se observar a quantidade de carga exigida dos alternadores — não se deve efetuar decolagem com marcação de 50 ampères ou acima. Uma bateria de 35 ampères-hora, 12 volts, provê corrente para o acionamento e a manutenção do sistema elétrico enquanto os alternadores não estiverem operando; é recarregada pelos alternadores e fica localizada no nariz do avião, acessível pelo bagageiro do nariz. Dois reguladores de voltagem controlam a corrente elétrica, mantendo-a sempre em constantes 14 volts, prevenindo danos aos equipamentos; o mau funcionamento dos reguladores é anunciado por uma luz vermelha no painel (Overvoltage light). Um conjunto de circuit breakers protege os equipamentos elétricos; não podem ser desativados manualmente e estão localizados no lado direito do painel. A maior parte dos switches elétricos está concentrada em um console na lateral esquerda da cabine, facilitando a operação do sistema.",
+    "componentes": [
+      {
+        "nome": "Alternadores (2)",
+        "funcao": "Gerar energia elétrica em voo e recarregar a bateria.",
+        "detalhes": "Capacidade de 60 ampères cada, um instalado em cada motor. Monitorados pelos amperímetros; não decolar com marcação de 50 A ou acima."
+      },
+      {
+        "nome": "Amperímetros",
+        "funcao": "Demonstrar o funcionamento de cada alternador.",
+        "detalhes": "Após a partida, observar indicação positiva (carga) com a luz de alerta (ALT) apagada."
+      },
+      {
+        "nome": "Bateria",
+        "funcao": "Prover corrente para acionamento e manutenção do sistema elétrico sem os alternadores.",
+        "detalhes": "12 volts, 35 ampères-hora; recarregada pelos alternadores; localizada no nariz do avião, acessível pelo bagageiro do nariz."
+      },
+      {
+        "nome": "Reguladores de voltagem (2)",
+        "funcao": "Controlar a corrente elétrica do sistema.",
+        "detalhes": "Mantêm a tensão sempre em constantes 14 volts, prevenindo danos aos equipamentos."
+      },
+      {
+        "nome": "Overvoltage light",
+        "funcao": "Anunciar mau funcionamento dos reguladores de voltagem.",
+        "detalhes": "Luz vermelha no painel."
+      },
+      {
+        "nome": "Circuit breakers",
+        "funcao": "Proteger os equipamentos elétricos.",
+        "detalhes": "Não podem ser desativados manualmente; localizados no lado direito do painel."
+      },
+      {
+        "nome": "Console de switches elétricos",
+        "funcao": "Concentrar os comandos elétricos.",
+        "detalhes": "Lateral esquerda da cabine, facilitando a operação do sistema."
+      }
+    ],
+    "notas_limitacoes": [
+      "Não efetuar decolagens com marcação de 50 ampères ou acima nos amperímetros.",
+      "Mau funcionamento dos reguladores de voltagem é anunciado pela luz vermelha Overvoltage no painel.",
+      "Circuit breakers não podem ser desativados manualmente.",
+      "Procedimentos de falha elétrica (luzes de sobrevoltagem, bateria descarregada, falha de alternador) constam na seção 12.12 do SOP.",
+      "Atento ao erro na bússola magnética, que pode exceder 10° caso os dois alternadores fiquem inoperantes."
+    ]
+  },
+  {
+    "id": "vacuo",
+    "nome": "Sistema de Vácuo",
+    "secao_sop": "8.3",
+    "resumo": "Duas bombas de vácuo (uma em cada motor), com filtros e reguladores de pressão, operam o giro direcional e o horizonte artificial.",
+    "funcionamento": "O giro direcional e o horizonte artificial são operados através do ar sugado da cabine, que passa por filtros, pelos instrumentos e pela bomba de vácuo dos motores. Os reguladores mantêm a pressão em 5,0 pol. Hg a 2000 RPM. Uma indicação menor que 4,5 pol. Hg indica baixo fluxo de ar e os instrumentos podem dar indicações incorretas. Uma única bomba de vácuo é capaz de operar instrumentos duplos de giro direcional e horizonte artificial até 12.000 ft; acima desta altitude são necessárias altas RPMs para manter pressão adequada. A pressão é monitorada pelo instrumento de Suction, instalado no lado direito do painel, que indica a falha de uma bomba individualmente através de um pino laranja, caso ocorra.",
+    "componentes": [
+      {
+        "nome": "Bombas de vácuo (2)",
+        "funcao": "Gerar a sucção que opera os instrumentos giroscópicos.",
+        "detalhes": "Montadas uma em cada motor. Uma única bomba opera instrumentos duplos de giro direcional e horizonte artificial até 12.000 ft."
+      },
+      {
+        "nome": "Filtros",
+        "funcao": "Filtrar o ar sugado da cabine.",
+        "detalhes": "O ar passa pelos filtros antes de chegar aos instrumentos e às bombas."
+      },
+      {
+        "nome": "Reguladores de pressão",
+        "funcao": "Manter a pressão do sistema.",
+        "detalhes": "Mantêm a pressão em 5,0 pol. Hg a 2000 RPM."
+      },
+      {
+        "nome": "Giro direcional e horizonte artificial",
+        "funcao": "Instrumentos giroscópicos de atitude e proa.",
+        "detalhes": "Operados pelo ar sugado da cabine."
+      },
+      {
+        "nome": "Instrumento de Suction (vacuômetro)",
+        "funcao": "Monitorar a pressão do sistema de vácuo.",
+        "detalhes": "Instalado no lado direito do painel; indica a falha de uma bomba individualmente por meio de um pino laranja. Mínimo 4,5 pol. Hg (faixa verde)."
+      }
+    ],
+    "notas_limitacoes": [
+      "Indicação menor que 4,5 pol. Hg: baixo fluxo de ar — os instrumentos podem dar indicações incorretas.",
+      "Acima de 12.000 ft com uma única bomba, são necessárias altas RPMs para manter pressão adequada.",
+      "Suction deve estar na faixa verde (mín. 4,5 pol. Hg) no check antes da decolagem.",
+      "Na falha do sistema a vácuo (12.13), usar o indicador de curva elétrico para monitorar o desempenho do giro direcional e do indicador de atitude."
+    ]
+  },
+  {
+    "id": "sincronizador-helices",
+    "nome": "Sincronizador de Hélices e Hélice de Velocidade Constante",
+    "secao_sop": "8.4",
+    "resumo": "Sistema que elimina a ressonância (ruído) quando as duas hélices não estão exatamente na mesma RPM. O Seneca I da VoeFloripa NÃO possui sincronizador.",
+    "funcionamento": "Para acionar o sistema, primeiro ajusta-se a RPM dos dois motores o mais próximo possível; então liga-se o sistema, que faz o ajuste fino para reduzir o ruído causado pelas hélices não sincronizadas. Hélices de passo fixo são projetadas para máxima eficiência em uma determinada velocidade e RPM, perdendo eficiência fora dessa faixa; para melhor eficiência em várias velocidades e RPMs, criou-se a hélice de velocidade constante, que permite a mudança do passo em voo. O responsável pela mudança do passo é o governador: através de óleo ou sistema de contrapesos (ou ambos), ele muda o passo conforme o piloto comanda pela manete do passo — manete à frente diminui o passo (aumenta as RPMs), manete para trás aumenta o passo (diminui as RPMs). A hélice é uma asa em rotação que gera tração: passo pequeno equivale a pequeno ângulo de ataque (pouco arrasto, pouca tração); aumentando o passo aumentam-se tração e arrasto (diminuindo as RPMs). Em altitude, com ar menos denso, aumenta-se o passo para captar mais moléculas de ar, mantendo a eficiência com menor RPM. Na decolagem, a maior eficiência ocorre com o menor passo e a maior RPM possível. Uma aeronave com hélice de velocidade constante pode desenvolver potência máxima (linha vermelha do tacômetro) sem estar em movimento; tão breve seja aplicada potência máxima, a RPM deve atingir cerca de 40 RPM a menos que a máxima permitida (linha vermelha).",
+    "componentes": [
+      {
+        "nome": "Sincronizador de hélices",
+        "funcao": "Sincronizar a RPM das duas hélices, reduzindo o ruído de ressonância.",
+        "detalhes": "Acionado após ajustar manualmente a RPM dos dois motores o mais próximo possível; faz o ajuste fino. NÃO instalado no Seneca I da VoeFloripa."
+      },
+      {
+        "nome": "Governador da hélice",
+        "funcao": "Mudar o passo da hélice, mantendo a RPM selecionada.",
+        "detalhes": "Atua através de óleo ou sistema de contrapesos (ou ambos), conforme comando da manete do passo. Check em solo: a 2000 RPM, recuar a manete de PROPELLER até visualizar queda de 200 RPM; após, aplicar cerca de 1 pol. de THROTTLE e verificar o governador mantendo a RPM estável."
+      },
+      {
+        "nome": "Manete do passo (propeller)",
+        "funcao": "Comandar o passo da hélice.",
+        "detalhes": "À frente: diminui o passo (aumenta RPM / FULL FORWARD). Para trás: aumenta o passo (diminui RPM)."
+      },
+      {
+        "nome": "Hélices Hartzell de velocidade constante",
+        "funcao": "Prover tração com passo variável.",
+        "detalhes": "Modelos HC-C2YK-2E e HC-C2YK-2CG, 2 pás, diâmetro máx. 76 pol. / mín. 74 pol."
+      }
+    ],
+    "notas_limitacoes": [
+      "O Seneca I da VoeFloripa não possui sincronizador de hélices.",
+      "Com potência máxima aplicada, a RPM deve atingir cerca de 40 RPM a menos que a máxima permitida (linha vermelha).",
+      "Teste de embandeiramento em solo: 1500 RPM, aplicar manete de PROPELLER na faixa de embandeiramento e visualizar queda máxima de 500 RPM.",
+      "Abaixo de 800 RPM não é possível embandeirar a hélice (pino batente atuado por força centrífuga)."
+    ]
+  },
+  {
+    "id": "trem-de-pouso",
+    "nome": "Trem de Pouso Retrátil",
+    "secao_sop": "8.5",
+    "resumo": "Sistema retrátil que aumenta o desempenho de subida e a velocidade de cruzeiro pela diminuição do arrasto. No PA34-200: VLE 150 MPH, VLO UP 125 MPH, VLO DOWN 150 MPH.",
+    "funcionamento": "O sistema pode ser hidráulico, elétrico ou uma combinação de ambos. Os sistemas de alerta no painel indicam se o trem está em trânsito, em cima ou baixado e travado; o sistema possui alternativa para baixar o trem por gravidade ou acumuladores de pressão pneumática (consultar o Manual da Aeronave). Controle e indicadores: ao lado da manete de potência há três luzes que ficam verdes quando o trem está baixado e travado; se o trem está em trânsito ou em cima e travado, as luzes ficam apagadas. Uma luz vermelha próxima às Caution Lights, quando acesa, indica trem em trânsito; se permanecer vermelha por mais que o tempo normal de recolhimento (6 a 10 segundos), indica que uma das pernas não foi recolhida ou abaixada normalmente. Dispositivos de segurança: aviso sonoro quando a aeronave não está com o trem baixado e travado e atinge certa condição (velocidade, posição do flap ou manetes reduzidas — por exemplo, manetes reduzidas sem trem baixado e travado); microswitches que percebem o peso da aeronave e não permitem o recolhimento inadvertido no solo. Inspeção pré-voo: verificar na cabine o trem em GEAR DOWN; ligar a bateria e verificar as três luzes; inspecionar externamente cada componente — trem, roda e áreas adjacentes limpas e livres de barro; portas de recolhimento sem danos; amortecedores propriamente inflados e pistões limpos; mecanismos de travamento/destravamento; linhas hidráulicas sem vazamentos. Uso em voo: recolher após a saída do solo, somente após indicação de climb positivo; o recolhimento deve ser planejado (tamanho da pista, gradiente de subida e obstáculos) e a retração prematura evitada. No pouso, usar SEMPRE o checklist: na perna do vento executar todo o Landing Checklist para assegurar trem baixado e verificar as luzes.",
+    "componentes": [
+      {
+        "nome": "Seletora do trem de pouso (gear lever)",
+        "funcao": "Comandar o recolhimento e o baixamento do trem.",
+        "detalhes": "Na inspeção pré-voo deve estar em DOWN; na descida de emergência, seletora EMBAIXO."
+      },
+      {
+        "nome": "Três luzes verdes de indicação",
+        "funcao": "Indicar trem baixado e travado.",
+        "detalhes": "Ao lado da manete de potência; verdes = baixado e travado; apagadas = em trânsito ou em cima e travado."
+      },
+      {
+        "nome": "Luz vermelha de trem em trânsito",
+        "funcao": "Indicar trem de pouso em trânsito (não travado).",
+        "detalhes": "Próxima às Caution Lights; acesa por mais de 6 a 10 segundos indica que uma perna não recolheu ou não baixou normalmente. Também acende quando a buzina de alarme soa em baixa potência com o trem não baixado e travado."
+      },
+      {
+        "nome": "Aviso sonoro (buzina) de trem de pouso",
+        "funcao": "Alertar configuração inadequada do trem.",
+        "detalhes": "Soa quando a aeronave não está com o trem baixado e travado e atinge certa condição de velocidade, posição de flap ou manetes reduzidas."
+      },
+      {
+        "nome": "Microswitches de peso (squat switches)",
+        "funcao": "Impedir recolhimento inadvertido no solo.",
+        "detalhes": "Percebem o peso da aeronave no trem e bloqueiam o recolhimento quando no solo."
+      },
+      {
+        "nome": "Sistema de baixamento de emergência",
+        "funcao": "Baixar o trem de forma alternativa.",
+        "detalhes": "Por gravidade ou acumuladores de pressão pneumática (consultar o Manual da Aeronave). Em emergência, manter o comando de baixamento de emergência puxado para o pouso."
+      },
+      {
+        "nome": "Amortecedores e pistões",
+        "funcao": "Absorver impactos de pouso e taxi.",
+        "detalhes": "Devem estar propriamente inflados e com os pistões limpos; verificar vazamentos de óleo do amortecedor e shimmy damper (trem do nariz)."
+      },
+      {
+        "nome": "Linhas hidráulicas",
+        "funcao": "Conduzir o fluido do sistema de recolhimento/baixamento.",
+        "detalhes": "Inspecionar quanto a vazamentos; nível de fluido hidráulico verificado no bagageiro do nariz."
+      }
+    ],
+    "notas_limitacoes": [
+      "PA34-200: VLE 150 MPH; VLO UP 125 MPH; VLO DOWN 150 MPH.",
+      "Como o trem de nariz recolhe para frente, a velocidade não deve estar acima de 125 MPH para não sobrecarregar o sistema hidráulico.",
+      "Só iniciar o recolhimento após indicação de climb positivo.",
+      "Principais erros que causam acidentes com trem retrátil: esquecer de baixar o trem; recolher inadvertidamente; baixar sem verificar as indicações; não saber operar o trem de emergência; recolher muito cedo após a decolagem; baixar muito tarde no pouso.",
+      "Reboque com trator ou push-back no trem de nariz é proibido (fragilidade do modelo — Piper SB 1123B); reboque inadvertido exige inspeção do sistema antes do próximo voo, sob risco de recolhimento involuntário do trem de nariz durante o taxi."
+    ]
+  },
+  {
+    "id": "bagageiro-nariz",
+    "nome": "Bagageiro do Nariz",
+    "secao_sop": "8.6",
+    "resumo": "Compartimento de bagagem no nariz, comum em aeronaves multimotoras; sua porta exige verificação rigorosa de fechamento e travamento.",
+    "funcionamento": "Muitos pilotos, por negligência, não verificam se a porta está devidamente fechada e trancada, podendo ocorrer abertura em voo — principalmente na decolagem — quando a porta pode quebrar-se e desprender da aeronave. É item importantíssimo da inspeção pré-voo: verificar o mecanismo de fechamento e travamento da porta e, após, trancar com a chave. O compartimento também dá acesso à bateria e ao nível de fluido hidráulico do trem de pouso.",
+    "componentes": [
+      {
+        "nome": "Porta do bagageiro do nariz (forward door)",
+        "funcao": "Acesso ao compartimento de bagagem dianteiro.",
+        "detalhes": "Item de checklist LOCKED na inspeção pré-voo; certificar que está realmente travada e trancada com a chave."
+      },
+      {
+        "nome": "Compartimento do bagageiro do nariz",
+        "funcao": "Transporte de bagagem (máx. 45 kgf / 100 libras).",
+        "detalhes": "Dá acesso à bateria (12 V, 35 A·h) e ao nível de fluido hidráulico do trem de pouso."
+      }
+    ],
+    "notas_limitacoes": [
+      "Peso máximo no bagageiro do nariz: 45 kgf (100 libras).",
+      "Verificar mecanismo de fechamento e travamento e trancar com a chave — a abertura em voo pode arrancar a porta da aeronave."
+    ]
+  },
+  {
+    "id": "hvac",
+    "nome": "Sistema de Aquecimento, Ventilação e Desembaciamento",
+    "secao_sop": "8.7",
+    "resumo": "Sistema padrão muff-heater (permutador de calor no coletor de escapamento de cada motor) com controles no painel; sistema opcional Janitrol (aquecedor a combustão) NÃO instalado no Seneca I da VoeFloripa.",
+    "funcionamento": "a) Standard muff-heater system: projetado para oferecer máximo conforto, com vários controles de temperatura e de ar externo no painel e tomadas de ar individuais controladas pelos ocupantes. O ar da cabine e o calor do desembaçador vêm de um permutador de calor montado no coletor de escapamento de cada motor: o ar entra por um orifício no bordo de ataque da asa e é conduzido pelo ducto de aquecimento, onde é aquecido pelo coletor de escapamento. Uma válvula na lateral, em frente à parede de fogo do motor, envia parte do ar diretamente às saídas do para-brisa quando selecionado DEFROST no painel, e o restante à caixa de controle de temperatura de ar externo, que regula a temperatura do ar introduzido na cabine. O ar externo é tomado por entradas no bordo de ataque de cada asa, forçado para dentro da caixa de controle de temperatura, misturado ao ar aquecido do permutador (conforme selecionado) e levado à cabine. Os controles de calor da cabine e do desembaçador ficam no lado direito do painel. O desembaçador tem um ventilador para uso em solo, energizado quando a alavanca DEFROST vai a 'full on' ou 'hi'; em voo, o ventilador pode ser desligado recuando a alavanca cerca de uma polegada antes de 'full on'/'hi'. Com os controles em OFF, o ar aquecido do permutador é despejado para fora do avião. Para desembaçamento máximo, a posição HEAT para a cabine não deve ser selecionada. Há saídas de ar junto aos pés de cada ocupante e no teto da cabine, reguláveis individualmente; o sistema de teto incorpora um ventilador para ar fresco em solo, controlado por interruptor de três posições (OFF/LOW/MED/HIGH) no painel superior. b) JANITROL (opcional, não instalado na aeronave da VoeFloripa): aquecedor a combustão instalado na cauda do avião, atrás do bagageiro traseiro, que fornece ar adicional para aquecimento da cabine e desembaciamento do para-brisa, complementando o muff-heater. Operação por interruptor de três posições (FAN/HEAT/OFF) no pedestal entre as poltronas, com duas alavancas (direita: entrada de ar; esquerda: temperatura). Em HEAT, inicia o fluxo de combustível e acende o aquecedor; em solo, põe em movimento o ventilador cilíndrico (FAN). Aquecimento percebido em poucos segundos; ao atingir a temperatura selecionada, a ignição opera ciclicamente. Dois interruptores de segurança (acionados pela válvula de admissão, atrás do aquecedor) impedem a operação com a entrada de ar FECHADO; um microinterruptor no recolhimento do trem desliga o FAN em voo (circulação apenas por pressão de impacto). Em solo sem necessidade de ar quente, interruptor em FAN conduz ar por ducto sob o piso para ventilação e desembaciamento. Um termostato na extremidade dianteira externa da camisa do ducto de suspiro desativa o aquecedor em caso de mau funcionamento, acendendo a luz de superaquecimento no pedestal; rearme por botão vermelho acessível pelo painel de acesso da caverna (fechamento traseiro do bagageiro). Ao desligar em solo, manter 2 minutos em FAN com entrada de ar aberta; em voo, manter a entrada de ar aberta por no mínimo 15 segundos após desligar. O aquecedor consome combustível do tanque DIREITO (~1/2 US gal/h), por bomba elétrica própria; se a seletora do motor direito for fechada, o aquecedor fica inoperante — consumo a considerar no planejamento do voo.",
+    "componentes": [
+      {
+        "nome": "Permutador de calor (muff-heater)",
+        "funcao": "Aquecer o ar da cabine e do desembaçador.",
+        "detalhes": "Montado no coletor de escapamento de cada motor; o ar entra por orifício no bordo de ataque da asa e é aquecido no ducto pelo coletor."
+      },
+      {
+        "nome": "Válvula de distribuição (DEFROST)",
+        "funcao": "Direcionar ar quente ao para-brisa ou à caixa de controle de temperatura.",
+        "detalhes": "Localizada na lateral em frente à parede de fogo do motor; acionada pela seleção DEFROST no painel."
+      },
+      {
+        "nome": "Caixa de controle de temperatura de ar externo",
+        "funcao": "Regular a temperatura do ar introduzido na cabine.",
+        "detalhes": "Mistura o ar externo (entradas no bordo de ataque das asas) com o ar aquecido do permutador."
+      },
+      {
+        "nome": "Controles de calor e desembaçador (painel)",
+        "funcao": "Comandar cabine HEAT e DEFROST.",
+        "detalhes": "Lado direito do painel de instrumentos. Com controles em OFF, o ar aquecido é despejado fora do avião; para desembaçamento máximo, não selecionar HEAT da cabine."
+      },
+      {
+        "nome": "Ventilador do desembaçador",
+        "funcao": "Desembaciar o para-brisa em operação no solo.",
+        "detalhes": "Energizado com a alavanca DEFROST em 'full on'/'hi'; em voo, desligar recuando ~1 polegada antes dessa posição."
+      },
+      {
+        "nome": "Saídas de ar individuais e ventilador de teto",
+        "funcao": "Ventilação/aquecimento individual dos ocupantes.",
+        "detalhes": "Saídas junto aos pés e no teto da cabine, reguláveis individualmente; ventilador de teto com interruptor OFF/LOW/MED/HIGH no painel superior."
+      },
+      {
+        "nome": "Aquecedor a combustão Janitrol (opcional — não instalado)",
+        "funcao": "Aquecimento adicional da cabine e desembaciamento.",
+        "detalhes": "Instalado na cauda, atrás do bagageiro traseiro; interruptor FAN/HEAT/OFF e duas alavancas no pedestal; consome ~1/2 US gal/h do tanque direito. O Seneca I da VoeFloripa não possui este equipamento."
+      },
+      {
+        "nome": "Termostato de segurança e luz de superaquecimento (Janitrol)",
+        "funcao": "Desativar o aquecedor em caso de mau funcionamento.",
+        "detalhes": "Na camisa do ducto de suspiro; acende a luz no pedestal; rearme por botão vermelho no painel de acesso da caverna."
+      }
+    ],
+    "notas_limitacoes": [
+      "O Seneca I da VoeFloripa não possui o aquecedor Janitrol.",
+      "Para desembaçamento máximo, a posição HEAT da cabine não deve ser selecionada.",
+      "Janitrol: ao desligar em solo, 2 minutos em FAN com entrada de ar aberta; em voo, entrada de ar aberta por no mínimo 15 s após desligar.",
+      "Janitrol inoperante se a seletora do motor direito for fechada (usa combustível do tanque direito, ~1/2 US gal/h — considerar no planejamento)."
+    ]
+  }
+]

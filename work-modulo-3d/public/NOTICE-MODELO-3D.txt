@@ -1,0 +1,48 @@
+MODELO 3D DA AERONAVE — ATRIBUIÇÃO
+
+O arquivo /models/seneca-pa34.glb é derivado do modelo "SenecaII"
+(Piper PA34-200T Seneca II) do projeto FlightGear (repositório fgaddon),
+distribuído sob a licença GNU General Public License v2 (GPL-2.0).
+
+- Fonte: https://sourceforge.net/p/flightgear/fgaddon/HEAD/tree/Aircraft/SenecaII/
+- Licença: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+- Modificações: conversão do formato AC3D (.ac) para glTF binário (.glb),
+  com preservação dos nomes dos nós; remapeamento dos nós para as camadas
+  do sistema interativo deste site. Nenhuma alteração de geometria.
+
+O PA34-200T Seneca II compartilha a mesma célula do PA34-200 Seneca I
+(objeto deste manual técnico).
+
+EXPORTAÇÃO ANTERIOR BIPA V12 (PRESERVADA, NÃO MAIS ATIVA)
+
+O arquivo /models/pa34-seneca-bipa-v12.glb foi exportado do arquivo Blender
+PA-34_Seneca_Bipa_v12.blend fornecido para este projeto, usando a coleção
+"PA-34 • Seneca bipá • revisão 08". A exportação foi feita no Blender 5.2.0
+LTS para glTF 2.0 Binary (GLB), com compressão Draco nível 6.
+
+- Fonte: arquivo Blender fornecido pelo usuário, PA-34_Seneca_Bipa_v12.blend
+- Direitos/licença: arquivo fornecido pelo usuário; preservar a origem e não
+  redistribuir o modelo fora deste projeto sem autorização.
+
+MODELO ATIVO — PA34-CAMADAS.GLB
+
+/models/pa34-camadas.glb e pa34-camadas.manifest.json são produzidos por
+blender/build_layers.py a partir da mesma fonte Bipa v12 fornecida pelo usuário.
+O arquivo editável derivado está em blender/pa34-camadas.blend. O original não
+é sobrescrito. O manifesto registra SHA-256 da fonte e da exportação.
+
+Modificações: nove coleções, 68 IDs do catálogo Seneca I; separação de faces de
+vidros e superfícies de controle, materiais PBR preservados; anatomia interna
+esquemática produzida no Blender; pivôs geométricos e metadados explícitos.
+Exportação glTF 2.0 sem Draco/Meshopt, imagens compactadas e embarcadas.
+Não confundir a licença do antigo recurso FlightGear acima com uma autorização
+de redistribuição da fonte Bipa: a cadeia de direitos desta fonte não foi
+certificada. Não redistribuir externamente sem esclarecer seus direitos.
+
+LIMITES DE FIDELIDADE
+Aeronave-alvo dos dados: PA34-200 Seneca I. A geometria é visualização didática,
+não desenho de manutenção, instalação exata ou reprodução certificada.
+Dimensões/posições dos interiores são ilustrativas e contidas na pele fornecida;
+não substituem documentação aprovada. Separação visual não equivale a uma
+montagem mecanicamente desmontável. Dados técnicos e IDs não foram alterados.
+

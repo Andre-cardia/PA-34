@@ -1,0 +1,14 @@
+MODELO 3D DA AERONAVE — ATRIBUIÇÃO
+
+O arquivo /models/seneca-pa34.glb é derivado do modelo "SenecaII"
+(Piper PA34-200T Seneca II) do projeto FlightGear (repositório fgaddon),
+distribuído sob a licença GNU General Public License v2 (GPL-2.0).
+
+- Fonte: https://sourceforge.net/p/flightgear/fgaddon/HEAD/tree/Aircraft/SenecaII/
+- Licença: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+- Modificações: conversão do formato AC3D (.ac) para glTF binário (.glb),
+  com preservação dos nomes dos nós; remapeamento dos nós para as camadas
+  do sistema interativo deste site. Nenhuma alteração de geometria.
+
+O PA34-200T Seneca II compartilha a mesma célula do PA34-200 Seneca I
+(objeto deste manual técnico).

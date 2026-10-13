@@ -1,0 +1,303 @@
+[
+  {
+    "id": "12.1",
+    "titulo": "Identificação do Motor em Pane",
+    "secao_sop": "12.1",
+    "situacao": "Falha de um motor em voo, exigindo a correta identificação do motor inoperante antes de qualquer ação.",
+    "passos": [
+      "Identificar o motor em pane pela técnica \"Pé morto / Motor morto\" (dead foot, dead engine): o pedal do lado do motor bom oferece resistência ao pé; o pedal do lado do motor ruim estará \"morto\"."
+    ],
+    "notas_criticas": [
+      "A guinada gerada pela falha é para o lado do motor ruim; aplicar pedal do lado do motor bom e inclinar o manche até 5° para o lado do motor bom.",
+      "Cross-check com os instrumentos e anúncio em voz alta do motor em pane antes do embandeiramento (ver 11.3) — já ocorreram acidentes por embandeiramento do motor bom."
+    ]
+  },
+  {
+    "id": "12.2",
+    "titulo": "Corte do Motor (Embandeiramento)",
+    "secao_sop": "12.2",
+    "situacao": "Motor em pane identificado; antes do embandeiramento, se as circunstâncias permitirem, pode-se tentar restaurar a potência.",
+    "passos": [
+      "Verificar as circunstâncias que permitem a tentativa de restabelecimento: flap e trem de pouso recolhidos; potência parcial; motor afetado mantendo acima de 800 RPM.",
+      "Executar os MEMORY ITEMS: ① MIXTURE – AS REQUIRED (Rich); ② FUEL BOOST PUMP ON (motor inop.); ③ FUEL SELECTOR EM CROSSFEED (motor inop.); ④ MAGNETOS (SELECT LEFT OR RIGHT); ⑤ ALTERNATE AIR (motor inop.).",
+      "Caso negativo o restabelecimento da potência, efetuar o embandeiramento e o corte do motor e solicitar o \"FEATHERING PROCEDURE emergency checklist\"."
+    ],
+    "notas_criticas": [
+      "Abaixo de 800 RPM não é mais possível embandeirar a hélice (pino batente atuado por força centrífuga).",
+      "A decisão entre tentar reacender o motor ou embandeirar logo deve variar com a situação, sobretudo em falhas a baixa altura — consciente, rápida e segura.",
+      "Anunciar em voz alta: \"Motor em pane é o Esquerdo... Embandeirando pela manete esquerda\" (cross-check com instrumentos)."
+    ]
+  },
+  {
+    "id": "12.3",
+    "titulo": "Partida do Motor em Voo",
+    "secao_sop": "12.3",
+    "situacao": "Necessidade de reacender em voo um motor previamente cortado/embandeirado.",
+    "passos": [
+      "Executar o procedimento de desembandeiramento (UNFEATHERING PROCEDURE) conforme o emergency checklist da seção C do AFM (procedimento apresentado em formato de checklist/figura na página 140 do SOP)."
+    ],
+    "notas_criticas": [
+      "O SOP apresenta este procedimento em formato de cartão/figura; executar as ações conforme o SOP e o AFM PA34-200, seção II C."
+    ]
+  },
+  {
+    "id": "12.4",
+    "titulo": "Controle de Combustível — Operação Monomotor",
+    "secao_sop": "12.4",
+    "situacao": "Gerenciamento da alimentação de combustível com um motor inoperante.",
+    "passos": [
+      "Usar a alimentação cruzada (crossfeed) somente em voo nivelado.",
+      "Não utilizar a alimentação cruzada quando o tanque do lado do motor remanescente estiver cheio, pois poderá haver perda de combustível através do suspiro do tanque.",
+      "Se a operação normal do motor e o fluxo de combustível não forem restabelecidos imediatamente, desligar a bomba auxiliar de combustível.",
+      "Não ligar os interruptores das bombas auxiliares de combustível, a não ser que haja necessidade de eliminar vapor ou ocorra falha da bomba de combustível do motor."
+    ],
+    "notas_criticas": [
+      "ADVERTÊNCIA: a falta de indicação de fluxo, quando o interruptor da bomba auxiliar estiver ligada, pode significar vazamento no sistema ou falta de combustível.",
+      "As bombas auxiliares de combustível não entram em operação automaticamente."
+    ]
+  },
+  {
+    "id": "12.5",
+    "titulo": "Falha do Motor na Decolagem (abaixo da V1/VR ou com pista em frente)",
+    "secao_sop": "12.5",
+    "situacao": "Falha do motor durante a decolagem antes de atingida a velocidade de decisão (V1/VR 105 mph), ou após a saída do solo com o trem ainda abaixado e pista suficiente em frente.",
+    "passos": [
+      "Falha até a V1/VR — RTO (Reject Takeoff). Callout: \"REJECT\". Ações: BRAKES; POWER OFF; DIRECTIONAL CONTROL; ATC / EMERGENCY CHECKLIST / AFTER LANDING — \"ENGINE FAILURE DURING TAKE OFF emergency checklist\".",
+      "Falha após a V1/VR com pista em frente (trem ainda abaixado): baixar o nariz, verificar o trem de pouso embaixo e reduzir gradativamente ambas as manetes de potência em \"MÍN\"; pousar se já tiver saído do solo e parar em frente.",
+      "Callout: \"REJECT\". Ações: LOWER THE NOSE TO MAINTAIN SPEED; CHECK LANDING GEAR DOWN; REDUCE POWER SMOOTHLY; FLARE & TOUCH DOWN; BRAKES; POWER OFF; DIRECTIONAL CONTROL; ATC / EMERGENCY CHECKLIST / AFTER LANDING — \"ENGINE FAILURE DURING TAKE OFF emergency checklist\"."
+    ],
+    "notas_criticas": [
+      "A V1/VR deve ser reportada 5 mph antes de atingi-la, de forma que as ações de rejeição sejam iniciadas na V1/VR."
+    ]
+  },
+  {
+    "id": "12.6",
+    "titulo": "Falha do Motor na Decolagem (após a V1/VR ou acima, sem pouso em frente)",
+    "secao_sop": "12.6",
+    "situacao": "Falha do motor após a V1/VR sem possibilidade de pouso em frente — continuar a decolagem em voo monomotor.",
+    "passos": [
+      "Callout: \"GO\".",
+      "Rotation (rotação).",
+      "Use rudder to maintain directional control.",
+      "MANETES TODAS À FRENTE.",
+      "\"FLAP'S e LANDING GEAR UP\".",
+      "Identificar: PÉ MORTO, MOTOR MORTO (dead foot, dead engine).",
+      "Manter velocidade acima da VMCA / VMC RED LINE.",
+      "REDUZ, EMBANDEIRA E CORTA.",
+      "Manter o voo acima da VMCA buscando a Vyse BLUE LINE.",
+      "Leve bank máx. 5° para o lado do motor bom.",
+      "Meia bolinha deslocada para o lado do motor bom.",
+      "VMC: circuito de tráfego ou balão / IMC: SID ou contingência.",
+      "ATC: \"PAN PAN, PAN PAN, PAN PAN\" (urgência) ou \"MAYDAY, MAYDAY, MAYDAY\" (socorro).",
+      "Aos 1000 ft AGL: EMERGENCY CHECKLIST — \"FEATHERING PROCEDURE emergency checklist\" → SINGLE ENGINE LANDING; se as condições permitirem → \"UNFEATHERING PROCEDURE emergency checklist\"; alternativa → SINGLE ENGINE GO-AROUND."
+    ],
+    "notas_criticas": [
+      "ATENÇÃO: certas combinações de peso do avião, configuração, condições atmosféricas e velocidade poderão acarretar razão negativa.",
+      "ERROS COMUNS: perder altitude antes de a aeronave reduzir a velocidade até a Blue Line; tentar manter a proa e/ou asas niveladas somente pelo aileron, em vez de maior aplicação de leme; concentrar o foco na velocidade e ações do checklist, deixando variar a proa; deixar de navegar a aeronave devido à execução das ações do checklist.",
+      "A decisão sobre rejeição da decolagem em caso de falha de motor deve considerar: comprimento da pista e gradiente, distância de aceleração e parada, altura de obstáculo na área, peso de decolagem, desempenho monomotor, altitude, densidade e o próprio nível de proficiência.",
+      "Definição para decolagem sem pista em frente: pista molhada; comprimento de pista menor que 1500 m; vento de cauda acima de 5 kt; pavimento saibro (terra) ou grama.",
+      "A área de decisão começa na V1 e continua até ser atingida a Vxse; embora a aeronave a atravesse em poucos segundos, as ações nesta fase são críticas se ocorrer falha de motor."
+    ]
+  },
+  {
+    "id": "12.7",
+    "titulo": "Pouso Monomotor",
+    "secao_sop": "12.7",
+    "situacao": "Aproximação e pouso com um motor inoperante (single engine landing).",
+    "passos": [
+      "Aproximar para pouso monomotor com no máximo 25° de flap, para não comprometer a arremetida, caso necessária.",
+      "Estar pronto para a mudança de forças no leme ao reduzir a potência do motor bom para o pouso."
+    ],
+    "notas_criticas": [
+      "Evite arremeter monomotor."
+    ]
+  },
+  {
+    "id": "12.8",
+    "titulo": "Arremetida Monomotor",
+    "secao_sop": "12.8",
+    "situacao": "Necessidade de arremeter durante uma aproximação monomotora (single engine go-around).",
+    "passos": [
+      "Escolher pista adequada e, no caso de IFR, a que estiver com os melhores mínimos e melhor precisão (ILS, por exemplo), de modo a evitar ao máximo a arremetida monomotor.",
+      "Iniciar a arremetida na configuração lisa: avançar a manete do motor bom toda à frente, calçando o pedal de acordo para compensar o maior diferencial de tração.",
+      "Buscar a velocidade de Vyse (Blue Line) ou Vxse, de modo a produzir razão positiva no climb.",
+      "Realizar o procedimento de arremetida conforme seções 10.12 e pág. 113 deste manual — atento à assimetria de potência."
+    ],
+    "notas_criticas": [
+      "Em condições de temperatura, altitude e peso adequados, a aeronave multimotora poderá conseguir arremetida monomotora com pequena razão ascensional.",
+      "O melhor desempenho de subida monomotora é obtido na Vyse com potência máxima disponível e arrasto mínimo; após flaps e trem recolhidos e a hélice do motor em pane embandeirada, o elemento-chave é minimizar a glissada lateral."
+    ]
+  },
+  {
+    "id": "12.9",
+    "titulo": "Baixamento do Trem de Pouso em Emergência",
+    "secao_sop": "12.9",
+    "situacao": "Falha do sistema normal de baixamento do trem de pouso.",
+    "passos": [
+      "Executar o procedimento de baixamento de emergência do trem de pouso conforme o emergency checklist da seção C do AFM (procedimento apresentado em formato de checklist/figura na página 151 do SOP).",
+      "Manter o comando de baixamento do trem de pouso em emergência puxado para o pouso."
+    ],
+    "notas_criticas": [
+      "O sistema possui alternativa para baixar o trem por gravidade ou acumuladores de pressão pneumática (ver Manual da Aeronave)."
+    ]
+  },
+  {
+    "id": "12.10",
+    "titulo": "Alarmes do Trem de Pouso",
+    "secao_sop": "12.10",
+    "situacao": "Luz vermelha de trem de pouso acesa ou buzina de alarme soando.",
+    "passos": [
+      "Luz vermelha acesa indica trem de pouso em trânsito (não travado): repetir a operação de abaixamento ou recolhimento do trem de pouso se a indicação de falha continuar.",
+      "A luz vermelha também acende quando a buzina de alarme soa em regime de baixa potência, se o trem de pouso não estiver abaixado e travado.",
+      "Manter o comando de baixamento do trem de pouso em emergência puxado para o pouso."
+    ],
+    "notas_criticas": [
+      "Se a luz permanecer vermelha por mais que o tempo normal de recolhimento (6 a 10 segundos), indica que uma das pernas não foi recolhida ou abaixada normalmente (ver 8.5)."
+    ]
+  },
+  {
+    "id": "12.11",
+    "titulo": "Pouso com Trem de Pouso Recolhido",
+    "secao_sop": "12.11",
+    "situacao": "Pouso inevitável com o trem de pouso recolhido.",
+    "passos": [
+      "Executar o procedimento conforme o emergency checklist da seção C do AFM (procedimento apresentado em formato de checklist/figura na página 152 do SOP)."
+    ],
+    "notas_criticas": [
+      "O SOP apresenta este procedimento em formato de cartão/figura; executar as ações conforme o SOP e o AFM PA34-200, seção II C."
+    ]
+  },
+  {
+    "id": "12.12",
+    "titulo": "Falha no Sistema Elétrico",
+    "secao_sop": "12.12",
+    "situacao": "Falhas do sistema elétrico: luzes de sobrevoltagem iluminadas, bateria descarregada ou falha de alternador. Sistema: bateria 12 V / 35 A·h e dois alternadores de 60 A cada; reguladores mantêm 14 V; mau funcionamento dos reguladores anunciado pela luz vermelha Overvoltage.",
+    "passos": [
+      "a) DUAS LUZES DE SOBREVOLTAGEM ILUMINADAS: executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 153 do SOP).",
+      "b) UMA LUZ DE SOBREVOLTAGEM ILUMINADA: executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 153 do SOP).",
+      "c) BATERIA DESCARREGADA: se a bateria ficar descarregada devido à condição enfraquecida ou acionamento excessivo do starter, executar o procedimento de recuperação conforme o emergency checklist (seção C do AFM; cartão/figura na página 154 do SOP).",
+      "d) FALHA DE UM ALTERNADOR: executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 155 do SOP)."
+    ],
+    "notas_criticas": [
+      "Não se deve efetuar decolagens com marcação de 50 ampères ou acima nos amperímetros.",
+      "A falha de um alternador pode ser gerada por carga excessiva, falha do regulador de voltagem ou pane no próprio componente.",
+      "Atento ao erro causado na bússola magnética, podendo exceder 10° caso os dois alternadores fiquem inoperantes."
+    ]
+  },
+  {
+    "id": "12.13",
+    "titulo": "Falha no Sistema a Vácuo",
+    "secao_sop": "12.13",
+    "situacao": "Falha de uma ou ambas as bombas de vácuo (instrumentos giroscópicos comprometidos).",
+    "passos": [
+      "Usar o indicador de curva elétrico para monitorar o desempenho do giro direcional e do indicador de atitude.",
+      "Executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 155 do SOP)."
+    ],
+    "notas_criticas": [
+      "O instrumento de Suction indica a falha de uma bomba individualmente através de um pino laranja; indicação menor que 4,5 pol. Hg = baixo fluxo de ar e possíveis indicações incorretas (ver 8.3)."
+    ]
+  },
+  {
+    "id": "12.14",
+    "titulo": "Fogo no Motor",
+    "secao_sop": "12.14",
+    "situacao": "Fogo no motor em voo ou no solo.",
+    "passos": [
+      "a) FOGO NO MOTOR EM VOO: executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 156 do SOP).",
+      "b) FOGO NO MOTOR NO SOLO: executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 156 do SOP)."
+    ],
+    "notas_criticas": [
+      "Em caso de fogo, a comunicação com o ATC é \"MAYDAY, MAYDAY, MAYDAY\" (socorro) — conforme ICA 100-12, Anexo A, item 15.207.7."
+    ]
+  },
+  {
+    "id": "12.15",
+    "titulo": "Recuperação de Parafuso (Spins)",
+    "secao_sop": "12.15",
+    "situacao": "Entrada inadvertida em parafuso.",
+    "passos": [
+      "Executar o procedimento de recuperação conforme o emergency checklist da seção C do AFM (procedimento apresentado em formato de checklist/figura na página 156 do SOP)."
+    ],
+    "notas_criticas": [
+      "O SOP apresenta este procedimento em formato de cartão/figura; executar as ações conforme o SOP e o AFM PA34-200, seção II C."
+    ]
+  },
+  {
+    "id": "12.16",
+    "titulo": "Falha do Motor sob Formação de Gelo",
+    "secao_sop": "12.16",
+    "situacao": "Falha de motor ocorrendo em condição de formação de gelo.",
+    "passos": [
+      "Executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 157 do SOP)."
+    ],
+    "notas_criticas": [
+      "A aeronave PT-FLM Seneca I da VoeFloripa não está equipada para voo sob condições de gelo (ver 12.20)."
+    ]
+  },
+  {
+    "id": "12.17",
+    "titulo": "Falha do Alternador sob Formação de Gelo",
+    "secao_sop": "12.17",
+    "situacao": "Falha de alternador ocorrendo em condição de formação de gelo.",
+    "passos": [
+      "Executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 157 do SOP)."
+    ],
+    "notas_criticas": [
+      "A aeronave PT-FLM Seneca I da VoeFloripa não está equipada para voo sob condições de gelo (ver 12.20)."
+    ]
+  },
+  {
+    "id": "12.18",
+    "titulo": "Falha do Motor com Porta Removida",
+    "secao_sop": "12.18",
+    "situacao": "Falha de motor em operação com porta removida (operação especial).",
+    "passos": [
+      "Executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 158 do SOP)."
+    ],
+    "notas_criticas": [
+      "O SOP apresenta este procedimento em formato de cartão/figura; executar as ações conforme o SOP e o AFM PA34-200, seção II C."
+    ]
+  },
+  {
+    "id": "12.19",
+    "titulo": "Disparo de Hélice",
+    "secao_sop": "12.19",
+    "situacao": "Hélice em disparo (overspeed) / perda de controle de RPM da hélice.",
+    "passos": [
+      "Executar o emergency checklist correspondente (seção C do AFM; cartão/figura na página 158 do SOP)."
+    ],
+    "notas_criticas": [
+      "O SOP apresenta este procedimento em formato de cartão/figura; executar as ações conforme o SOP e o AFM PA34-200, seção II C."
+    ]
+  },
+  {
+    "id": "12.20",
+    "titulo": "Voo sob Condições de Gelo (Special Operation)",
+    "secao_sop": "12.20",
+    "situacao": "Ingresso inadvertido em região de formação de gelo.",
+    "passos": [
+      "Iniciar imediatamente uma descida para níveis isentos de formação de gelo.",
+      "Atento à MEA, MOCA, MORA e MSA do setor sobrevoado."
+    ],
+    "notas_criticas": [
+      "A aeronave PT-FLM Seneca I da VoeFloripa NÃO está equipada para voo sob condições de gelo.",
+      "MEA — Minimum Enroute IFR Altitude (altitude mínima IFR em rota); MOCA — Minimum Obstruction Clearance Altitude (altitude mínima para livrar obstáculos); MORA — Minimum Off-Route Altitude (altitude mínima fora de aerovia); MSA — Minimum Safe Altitude (altitude mínima de segurança)."
+    ]
+  },
+  {
+    "id": "12.21",
+    "titulo": "Descida de Emergência",
+    "secao_sop": "12.21",
+    "situacao": "Necessidade de descer rapidamente, mantendo a aeronave dentro dos limites operacionais.",
+    "passos": [
+      "Manete de potência MÍN.",
+      "Manetes de hélice MÁX RPM.",
+      "Manetes de mistura conforme necessário para operação suave.",
+      "Velocidade 150 MPH.",
+      "Seletora do trem de pouso EMBAIXO."
+    ],
+    "notas_criticas": [
+      "150 MPH corresponde à VLE (velocidade máxima com o trem de pouso baixado)."
+    ]
+  }
+]

@@ -1,0 +1,3468 @@
+{
+  "components": [
+    {
+      "id": "fuselagem_externa",
+      "layer": "exterior",
+      "meshes": 1,
+      "highlighted": 1,
+      "materials": [
+        {
+          "type": "MeshPhysicalMaterial",
+          "opacity": 0.4421431382786561,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        9.098897052483103,
+        4.452463941787344,
+        7.448608814515447
+      ],
+      "focusDistance": 0.009345817405084061,
+      "componentCenter": [
+        0.0016949223565405624,
+        -0.13152571384616424,
+        0
+      ],
+      "target": [
+        0.0015744963250885315,
+        -0.12218067235133283,
+        0
+      ]
+    },
+    {
+      "id": "asa_externa_esq_dir",
+      "layer": "exterior",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9836467137379115,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9836467137379115,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9836467137379115,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9836467137379115,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9836467137379115,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9836467137379115,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        18.05392627612918,
+        -5.953321884347244,
+        0.12320622808350846
+      ],
+      "focusDistance": 0.009784870090059168,
+      "componentCenter": [
+        0.6654444011601057,
+        -0.24358133770748214,
+        0
+      ],
+      "target": [
+        0.6558133529716194,
+        -0.2418531613650946,
+        0
+      ]
+    },
+    {
+      "id": "empenagem_externa",
+      "layer": "exterior",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshPhysicalMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        -7.048867997786422,
+        2.270859857064902,
+        -0.0036685129297099445
+      ],
+      "focusDistance": 0.008271745650326536,
+      "componentCenter": [
+        -2.4994570722872065,
+        0.6120833392849632,
+        -3.0531133177191805e-16
+      ],
+      "target": [
+        -2.491472486914992,
+        0.6099227438722329,
+        -3.0453908313384306e-16
+      ]
+    },
+    {
+      "id": "naceles_carenagens",
+      "layer": "exterior",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        9.597618048952722,
+        -0.5396763989596154,
+        0.007359458072091628
+      ],
+      "focusDistance": 0.008618901498747354,
+      "componentCenter": [
+        1.1524413700202851,
+        -0.13109946006859147,
+        2.220446049250313e-16
+      ],
+      "target": [
+        1.143995341384338,
+        -0.12938188523008498,
+        2.2082406539441006e-16
+      ]
+    },
+    {
+      "id": "para_brisa_janelas",
+      "layer": "exterior",
+      "meshes": 1,
+      "highlighted": 1,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.550000011920929,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.037230523567926,
+        2.191195011083869,
+        2.6547147390147092
+      ],
+      "focusDistance": 0.008946312518320091,
+      "componentCenter": [
+        0.5961127480547443,
+        0.16775202487226815,
+        1.1102230246251565e-16
+      ],
+      "target": [
+        0.6039793061511967,
+        0.16349130059222006,
+        1.1259793177292246e-16
+      ]
+    },
+    {
+      "id": "portas_bagageiros",
+      "layer": "exterior",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.63324827847875,
+        -0.6952081185748266,
+        0.11948924539140181
+      ],
+      "focusDistance": 0.009968061521940252,
+      "componentCenter": [
+        0.9860485530157848,
+        -0.14740265306913675,
+        0.006809496063407194
+      ],
+      "target": [
+        0.978314255853403,
+        -0.1411158401495748,
+        0.006672087098675146
+      ]
+    },
+    {
+      "id": "pontas_asa_nariz_fibra",
+      "layer": "exterior",
+      "meshes": 5,
+      "highlighted": 5,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshPhysicalMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        21.192424847573022,
+        -1.2424373193135105,
+        0.018506508652184516
+      ],
+      "focusDistance": 0.009840191995395544,
+      "componentCenter": [
+        1.7399670239666456,
+        -0.14660584430922377,
+        0
+      ],
+      "target": [
+        1.7301273831305366,
+        -0.1465480301143721,
+        0.00008662702520802461
+      ]
+    },
+    {
+      "id": "longarina_principal",
+      "layer": "estrutura",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8020918491687259,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8020918491687259,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8020918491687259,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8020918491687259,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        17.58396472592667,
+        -4.638122046396046,
+        0.11441377991226517
+      ],
+      "focusDistance": 0.00943793411228765,
+      "componentCenter": [
+        0.6883907955991722,
+        -0.20516654834155146,
+        0
+      ],
+      "target": [
+        0.6793460244692816,
+        -0.20247086373170162,
+        0
+      ]
+    },
+    {
+      "id": "caixao_central_asa",
+      "layer": "estrutura",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9919021140126152,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9919021140126152,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9919021140126152,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        2.979440916835277,
+        -1.3177580783504002,
+        0.005953308823866985
+      ],
+      "focusDistance": 0.008364443937650989,
+      "componentCenter": [
+        0.6330030835614832,
+        -0.4590844834198699,
+        5.551115123125783e-17
+      ],
+      "target": [
+        0.6345606891847345,
+        -0.4508663457288524,
+        5.3728893835133187e-17
+      ]
+    },
+    {
+      "id": "longarina_traseira",
+      "layer": "estrutura",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        13.082917897793125,
+        6.004454902014118,
+        10.17124716752202
+      ],
+      "focusDistance": 0.008530589701931515,
+      "componentCenter": [
+        0.3323265552005377,
+        -0.22327351451946453,
+        0
+      ],
+      "target": [
+        0.3391260252393537,
+        -0.22842503544574871,
+        1.2156176280598196e-18
+      ]
+    },
+    {
+      "id": "semimonocoque_caixilhos",
+      "layer": "estrutura",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        6.735964133240997,
+        3.5536142207881585,
+        5.644308293095391
+      ],
+      "focusDistance": 0.009433186353084369,
+      "componentCenter": [
+        -0.31630383699698583,
+        -0.16632050598357323,
+        -5.551115123125783e-17
+      ],
+      "target": [
+        -0.3069127145953014,
+        -0.16721035136823165,
+        -5.4698359412477653e-17
+      ]
+    },
+    {
+      "id": "bercos_motor",
+      "layer": "estrutura",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.170991464013802,
+        -0.5414189637060887,
+        0.037755039233270726
+      ],
+      "focusDistance": 0.009326545283145223,
+      "componentCenter": [
+        1.3462596418212176,
+        -0.1834567933160739,
+        -4.716240042945685e-8
+      ],
+      "target": [
+        1.3369335536462588,
+        -0.18336445550447267,
+        -4.6896572380858765e-8
+      ]
+    },
+    {
+      "id": "estrutura_empenagem",
+      "layer": "estrutura",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        -9.74395511516251,
+        2.161885156283962,
+        -0.005847213841641187
+      ],
+      "focusDistance": 0.008592549284884317,
+      "componentCenter": [
+        -2.9632455180852006,
+        0.49003803509949206,
+        -4.440892098500626e-16
+      ],
+      "target": [
+        -2.9547563701237767,
+        0.48870902415062173,
+        -9.262618480245829e-11
+      ]
+    },
+    {
+      "id": "motor_esquerdo",
+      "layer": "motores",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.939181182397422,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.939181182397422,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.7686280544192874,
+        0.24889227237236441,
+        -3.0277889957114645
+      ],
+      "focusDistance": 0.007958387716031268,
+      "componentCenter": [
+        1.8436212556723566,
+        -0.19638802204870565,
+        -1.5073384353262695
+      ],
+      "target": [
+        1.8374808814153591,
+        -0.19573393111150245,
+        -1.5023180863275893
+      ]
+    },
+    {
+      "id": "motor_direito",
+      "layer": "motores",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.752978151466709,
+        0.2403427859124789,
+        3.0523204089665823
+      ],
+      "focusDistance": 0.008585933692636286,
+      "componentCenter": [
+        1.8436212556723561,
+        -0.19638802204870565,
+        1.5073384353262695
+      ],
+      "target": [
+        1.843608040614139,
+        -0.19638661434138152,
+        1.4987525119190324
+      ]
+    },
+    {
+      "id": "helice_esquerda",
+      "layer": "motores",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        5.096417885373626,
+        0.2692504790937834,
+        -3.1216613004481752
+      ],
+      "focusDistance": 0.008651805265078225,
+      "componentCenter": [
+        2.446517749119723,
+        -0.13467036123797915,
+        -1.5073385296510706
+      ],
+      "target": [
+        2.444817444244971,
+        -0.1348444124130453,
+        -1.4988572323525327
+      ]
+    },
+    {
+      "id": "helice_direita",
+      "layer": "motores",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        5.097382675937965,
+        0.2693324867462013,
+        3.1240314616624874
+      ],
+      "focusDistance": 0.009476310716113,
+      "componentCenter": [
+        2.446517749119723,
+        -0.13467036123797915,
+        1.507338529651071
+      ],
+      "target": [
+        2.4465131842371846,
+        -0.13467082852074808,
+        1.4978622200459657
+      ]
+    },
+    {
+      "id": "sistema_injecao",
+      "layer": "motores",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.680105689811468,
+        0.6370784289873257,
+        0.021736331041970813
+      ],
+      "focusDistance": 0.008373449581399038,
+      "componentCenter": [
+        1.7209908547437376,
+        0.017595194447308116,
+        2.220446049250313e-16
+      ],
+      "target": [
+        1.7246231401210372,
+        0.016832884512581858,
+        0.007506000559119874
+      ]
+    },
+    {
+      "id": "escapamento_crossover",
+      "layer": "motores",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.718631633918415,
+        -1.2179127164006118,
+        0.006812413678023385
+      ],
+      "focusDistance": 0.008563215388047355,
+      "componentCenter": [
+        1.5723106790848547,
+        -0.3265979159758438,
+        2.220446049250313e-16
+      ],
+      "target": [
+        1.5757702366594772,
+        -0.31876598423968106,
+        0.00014479105652390103
+      ]
+    },
+    {
+      "id": "admissao_ar_alternativo",
+      "layer": "motores",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.19924032391874,
+        -0.7818463891801315,
+        0.005865979756071577
+      ],
+      "focusDistance": 0.009261643121037541,
+      "componentCenter": [
+        1.9043034188132015,
+        -0.30691490027236756,
+        2.220446049250313e-16
+      ],
+      "target": [
+        1.8950490071034833,
+        -0.30728080349642883,
+        0.000003469742698201757
+      ]
+    },
+    {
+      "id": "radiador_oleo",
+      "layer": "motores",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.60154167811846,
+        0.07735174872970765,
+        0.005788265643632812
+      ],
+      "focusDistance": 0.008515616298527191,
+      "componentCenter": [
+        1.0923258159615115,
+        -0.0667095304715124,
+        4.716240087354606e-8
+      ],
+      "target": [
+        1.1004843250167338,
+        -0.06914970483797422,
+        7.649160548806797e-8
+      ]
+    },
+    {
+      "id": "cowl_flaps_comp",
+      "layer": "motores",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.869245955905426,
+        -1.5768675812081747,
+        0.006198807789270941
+      ],
+      "focusDistance": 0.008744121850463886,
+      "componentCenter": [
+        1.1868806755623793,
+        -0.3286394112339657,
+        2.220446049250313e-16
+      ],
+      "target": [
+        1.1840862559069256,
+        -0.3203538282294349,
+        2.296131674487222e-9
+      ]
+    },
+    {
+      "id": "governadores_magnetos",
+      "layer": "motores",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.645882958059612,
+        0.28299916093459077,
+        -0.07406996672102101
+      ],
+      "focusDistance": 0.008050456434114783,
+      "componentCenter": [
+        1.6814142903800375,
+        -0.04664343816830896,
+        -0.015825202069398747
+      ],
+      "target": [
+        1.6743730239478976,
+        -0.050539606760333367,
+        -0.015600956374409137
+      ]
+    },
+    {
+      "id": "tanque_principal_esq",
+      "layer": "combustivel",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9253248878004382,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9253248878004382,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        1.632831860540522,
+        0.12600058937841763,
+        -4.399808939476872
+      ],
+      "focusDistance": 0.00938006494032328,
+      "componentCenter": [
+        0.7555709471467673,
+        -0.24331479939989709,
+        -2.0968226022867116
+      ],
+      "target": [
+        0.7524098542815572,
+        -0.2422968398300016,
+        -2.088050095889093
+      ]
+    },
+    {
+      "id": "tanque_auxiliar_esq",
+      "layer": "combustivel",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9989857525929251,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9989857525929251,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9989857525929251,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        1.749809720429823,
+        0.3470360485083517,
+        -6.973952834466148
+      ],
+      "focusDistance": 0.008430503195239452,
+      "componentCenter": [
+        0.7557444340377611,
+        -0.08691531780560457,
+        -3.0265457604139883
+      ],
+      "target": [
+        0.7557215721677524,
+        -0.08829749546588583,
+        -3.0182293641767193
+      ]
+    },
+    {
+      "id": "tanque_principal_dir",
+      "layer": "combustivel",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        1.5967684795595032,
+        0.11226771061588736,
+        4.415021048580973
+      ],
+      "focusDistance": 0.009066531625198921,
+      "componentCenter": [
+        0.7555690842319389,
+        -0.24331156877544877,
+        2.0968226022867116
+      ],
+      "target": [
+        0.7555693604400509,
+        -0.24303662752680677,
+        2.0877602404011855
+      ]
+    },
+    {
+      "id": "tanque_auxiliar_dir",
+      "layer": "combustivel",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        1.7425830555075823,
+        0.346921770131409,
+        6.975700133527534
+      ],
+      "focusDistance": 0.008481587445950135,
+      "componentCenter": [
+        0.7557444340377605,
+        -0.08691531780560457,
+        3.0265457604139883
+      ],
+      "target": [
+        0.755742871214705,
+        -0.0883089979769077,
+        3.0181794602316496
+      ]
+    },
+    {
+      "id": "bombas_mecanicas",
+      "layer": "combustivel",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.40191311905587,
+        -0.9355182621033369,
+        -0.06746199297805659
+      ],
+      "focusDistance": 0.008674705193237821,
+      "componentCenter": [
+        1.266006072798165,
+        -0.25415196448352106,
+        -0.01582506058219657
+      ],
+      "target": [
+        1.264570031620272,
+        -0.2536846311820722,
+        -0.007282818750549591
+      ]
+    },
+    {
+      "id": "bombas_eletricas",
+      "layer": "combustivel",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.056739541005763,
+        -1.1500644642263873,
+        -0.11082118293917093
+      ],
+      "focusDistance": 0.007950355443386285,
+      "componentCenter": [
+        0.9495045781798241,
+        -0.22978579313362807,
+        -0.01582506058219657
+      ],
+      "target": [
+        0.9574299594739586,
+        -0.2303882945703453,
+        -0.015642098735027817
+      ]
+    },
+    {
+      "id": "seletoras_valvulas",
+      "layer": "combustivel",
+      "meshes": 8,
+      "highlighted": 8,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        2.138300918618685,
+        1.0232640682923904,
+        1.2017082939690125
+      ],
+      "focusDistance": 0.008084606052884585,
+      "componentCenter": [
+        0.4742479962774225,
+        -0.4020647695634813,
+        -0.01582508121574709
+      ],
+      "target": [
+        0.481863531212543,
+        -0.39935101264775996,
+        -0.01582261450303323
+      ]
+    },
+    {
+      "id": "gascolators_drenos",
+      "layer": "combustivel",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        13.25476401532152,
+        -4.029427662887553,
+        0.03193369468860228
+      ],
+      "focusDistance": 0.008915697161915988,
+      "componentCenter": [
+        0.9851109644897669,
+        -0.341939214128108,
+        -1.4148720217654898e-7
+      ],
+      "target": [
+        0.9762575466673935,
+        -0.34295385470738193,
+        -0.0002779062084486434
+      ]
+    },
+    {
+      "id": "linhas_crossfeed",
+      "layer": "combustivel",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        12.828533528597497,
+        -5.254137181980853,
+        0.01213063842715937
+      ],
+      "focusDistance": 0.00936099241775907,
+      "componentCenter": [
+        0.7456482138504147,
+        -0.3408307503290356,
+        0
+      ],
+      "target": [
+        0.755008863578555,
+        -0.34091027943008656,
+        -0.000009530713263769362
+      ]
+    },
+    {
+      "id": "sensores_quantidade",
+      "layer": "combustivel",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        13.561686432615225,
+        -2.879546490647016,
+        0.8192996746767881
+      ],
+      "focusDistance": 0.009342694522935475,
+      "componentCenter": [
+        0.6968483994411199,
+        -0.16925275750381263,
+        0.043530046927607646
+      ],
+      "target": [
+        0.6997005619478467,
+        -0.17787635578955185,
+        0.04134265976701949
+      ]
+    },
+    {
+      "id": "bateria",
+      "layer": "eletrico",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9267373577751363,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9267373577751363,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9267373577751363,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9267373577751363,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9267373577751363,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9267373577751363,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.42972125928717,
+        0.003411664374803336,
+        0.0347565005197988
+      ],
+      "focusDistance": 0.008106732554723693,
+      "componentCenter": [
+        1.9506157879892072,
+        -0.25691907685769155,
+        5.895300303482287e-9
+      ],
+      "target": [
+        1.942578471328533,
+        -0.2558604675766696,
+        5.871009310022371e-9
+      ]
+    },
+    {
+      "id": "alternadores",
+      "layer": "eletrico",
+      "meshes": 8,
+      "highlighted": 8,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9975525398261712,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.952035186065193,
+        -0.8712600024390045,
+        -0.07253136286835227
+      ],
+      "focusDistance": 0.009639076380625389,
+      "componentCenter": [
+        1.5718414131978387,
+        -0.282196803088413,
+        -0.015825084163396785
+      ],
+      "target": [
+        1.5814483884744919,
+        -0.2815248874111278,
+        -0.01541722533007028
+      ]
+    },
+    {
+      "id": "reguladores_ov",
+      "layer": "eletrico",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.047033933841499,
+        0.4117213563088957,
+        -0.002413381848081624
+      ],
+      "focusDistance": 0.008563126697196782,
+      "componentCenter": [
+        1.6072342481573887,
+        -0.11884530065578236,
+        1.942890293094024e-16
+      ],
+      "target": [
+        1.6058245339088792,
+        -0.1272536538287675,
+        -0.0007996508539007737
+      ]
+    },
+    {
+      "id": "reles_partida_master",
+      "layer": "eletrico",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.253837870170741,
+        0.2660132803410461,
+        -0.033096915405877454
+      ],
+      "focusDistance": 0.009408352425406689,
+      "componentCenter": [
+        1.8198836647990613,
+        -0.27610700525976584,
+        -0.015825081215746925
+      ],
+      "target": [
+        1.8121967877480627,
+        -0.27070955408380015,
+        -0.015280528769646437
+      ]
+    },
+    {
+      "id": "barramento_disjuntores",
+      "layer": "eletrico",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.6909248395178005,
+        0.2565594868903232,
+        0.7985482459432383
+      ],
+      "focusDistance": 0.009740662983150199,
+      "componentCenter": [
+        1.285787398525911,
+        -0.22962081905596154,
+        0.2848513734539474
+      ],
+      "target": [
+        1.2942332432040429,
+        -0.23029173695788613,
+        0.28004532599339726
+      ]
+    },
+    {
+      "id": "amperimetros_comp",
+      "layer": "eletrico",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.627207675566056,
+        0.5772552103606449,
+        0.7327573057987231
+      ],
+      "focusDistance": 0.009898808471855803,
+      "componentCenter": [
+        1.2681431898237165,
+        -0.09510770978248706,
+        0.25320120512715305
+      ],
+      "target": [
+        1.2699022614013449,
+        -0.10465285964234841,
+        0.2551459905909133
+      ]
+    },
+    {
+      "id": "motor_bomba_trem",
+      "layer": "eletrico",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.468107445402676,
+        0.06774450216441474,
+        -0.020542801779715764
+      ],
+      "focusDistance": 0.00958071547932665,
+      "componentCenter": [
+        2.0176971107261243,
+        -0.386882523659945,
+        -0.015825076794271822
+      ],
+      "target": [
+        2.0092114635133917,
+        -0.38366428884806514,
+        -0.01275475675029314
+      ]
+    },
+    {
+      "id": "bombas_vacuo",
+      "layer": "vacuo_pitot",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8831115464440835,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8831115464440835,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8831115464440835,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8831115464440835,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8831115464440835,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8831115464440835,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.510825131463381,
+        -0.7341151146229968,
+        -0.041128972562470764
+      ],
+      "focusDistance": 0.008259278648599766,
+      "componentCenter": [
+        1.209694449330663,
+        -0.21025612597604448,
+        -0.01582506058219668
+      ],
+      "target": [
+        1.2015578442191117,
+        -0.20884190846822817,
+        -0.015718618605137968
+      ]
+    },
+    {
+      "id": "reguladores_vacuo",
+      "layer": "vacuo_pitot",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9856604695350544,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9856604695350544,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9856604695350544,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9856604695350544,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9856604695350544,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9856604695350544,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.4388415874227345,
+        -0.41586869251305303,
+        -0.08606983576618649
+      ],
+      "focusDistance": 0.006943622220834123,
+      "componentCenter": [
+        1.2027057361445763,
+        -0.14950642627738975,
+        -0.01582506058219657
+      ],
+      "target": [
+        1.202812230652478,
+        -0.15644922564682512,
+        -0.015815820386528137
+      ]
+    },
+    {
+      "id": "valvula_retencao_filtros",
+      "layer": "vacuo_pitot",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.8242800644871155,
+        0.6132387675605578,
+        -0.040296434413915616
+      ],
+      "focusDistance": 0.008789580295785988,
+      "componentCenter": [
+        1.4242567729449347,
+        -0.05455596845940725,
+        -0.015825069425146804
+      ],
+      "target": [
+        1.4162572833305247,
+        -0.05819806779975514,
+        -0.01582478648809032
+      ]
+    },
+    {
+      "id": "tubo_pitot",
+      "layer": "vacuo_pitot",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.9268813900916086,
+        -0.24879811370092425,
+        -4.7222375001062105
+      ],
+      "focusDistance": 0.00991722835574223,
+      "componentCenter": [
+        1.1462203663928767,
+        -0.23510474510395052,
+        -1.3895401053242935
+      ],
+      "target": [
+        1.1481258685640359,
+        -0.23385803381167286,
+        -1.3798878418234688
+      ]
+    },
+    {
+      "id": "tomadas_estaticas",
+      "layer": "vacuo_pitot",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.7992552309840852,
+        1.949387977087635,
+        2.887778487287699
+      ],
+      "focusDistance": 0.008586750308301389,
+      "componentCenter": [
+        0.14726101185926543,
+        -0.2337268041901992,
+        -1.4738251730150864e-9
+      ],
+      "target": [
+        0.15229819409355816,
+        -0.23372841195183014,
+        -0.006954070312335636
+      ]
+    },
+    {
+      "id": "estatica_alternada_comp",
+      "layer": "vacuo_pitot",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.677476252822182,
+        0.11876927434243428,
+        0.29800275777629065
+      ],
+      "focusDistance": 0.008582815520933165,
+      "componentCenter": [
+        1.2264433270178714,
+        -0.2761069934691657,
+        0.08703790984098388
+      ],
+      "target": [
+        1.2178990295409267,
+        -0.27577012170972454,
+        0.08629884265219924
+      ]
+    },
+    {
+      "id": "indicador_succao_comp",
+      "layer": "vacuo_pitot",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.664832685388557,
+        0.5739970734117633,
+        0.27817825914051153
+      ],
+      "focusDistance": 0.00958642869264991,
+      "componentCenter": [
+        1.2681431898237165,
+        -0.09510770978248706,
+        0.09495045192268248
+      ],
+      "target": [
+        1.2656432878933759,
+        -0.10435214515509247,
+        0.09451396588663748
+      ]
+    },
+    {
+      "id": "bomba_hidraulica_trem",
+      "layer": "trem_pouso",
+      "meshes": 5,
+      "highlighted": 5,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8940047548383314,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8940047548383314,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8940047548383314,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8940047548383314,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8940047548383314,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        7.0791547264226695,
+        -1.1782278380893314,
+        0.05314141192033869
+      ],
+      "focusDistance": 0.008620514790089035,
+      "componentCenter": [
+        1.3150645199176267,
+        -0.3253597555748324,
+        -0.0000016271028242531571
+      ],
+      "target": [
+        1.3066963168130397,
+        -0.3232893807183352,
+        -0.0000016167490152200835
+      ]
+    },
+    {
+      "id": "perna_dianteira",
+      "layer": "trem_pouso",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9985629473631387,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9985629473631387,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9985629473631387,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9985629473631387,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.788546710738828,
+        -0.6606674332866067,
+        0.0028421560266068888
+      ],
+      "focusDistance": 0.009632504626148636,
+      "componentCenter": [
+        2.2978010226002934,
+        -0.6992440084195897,
+        2.7755575615628914e-16
+      ],
+      "target": [
+        2.288795555593439,
+        -0.6958254254732481,
+        -1.474568805646827e-8
+      ]
+    },
+    {
+      "id": "pernas_principais",
+      "layer": "trem_pouso",
+      "meshes": 8,
+      "highlighted": 8,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.3354740781898515,
+        -4.7048256879535035,
+        0.0032714559349743023
+      ],
+      "focusDistance": 0.00959695211830981,
+      "componentCenter": [
+        0.609265421944587,
+        -0.7421717561183926,
+        0
+      ],
+      "target": [
+        0.618858811142003,
+        -0.7419102725280232,
+        -7.11112305676689e-11
+      ]
+    },
+    {
+      "id": "freios",
+      "layer": "trem_pouso",
+      "meshes": 8,
+      "highlighted": 8,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        5.278371445755752,
+        -3.504022217135501,
+        0.004017465629598556
+      ],
+      "focusDistance": 0.009743348163661918,
+      "componentCenter": [
+        0.9211259948463424,
+        -0.6964996283225591,
+        1.1102230246251565e-16
+      ],
+      "target": [
+        0.9114899616922503,
+        -0.6979417442997161,
+        -1.922421709025048e-12
+      ]
+    },
+    {
+      "id": "portas_pocos",
+      "layer": "trem_pouso",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        4.951358768449479,
+        -3.9647881190567373,
+        0.003967998675890271
+      ],
+      "focusDistance": 0.007988953608803584,
+      "componentCenter": [
+        0.6201436183168243,
+        -0.5679320824657753,
+        0
+      ],
+      "target": [
+        0.6274469249651183,
+        -0.5711701516071928,
+        -4.094725584587418e-14
+      ]
+    },
+    {
+      "id": "sistema_emergencia",
+      "layer": "trem_pouso",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.687425915522044,
+        0.18161567700840553,
+        0.002314291298924615
+      ],
+      "focusDistance": 0.008938639333742754,
+      "componentCenter": [
+        1.2273161144053204,
+        -0.21379575847376475,
+        1.457167719820518e-16
+      ],
+      "target": [
+        1.219630489509624,
+        -0.21835979649961246,
+        -3.0047409267611673e-16
+      ]
+    },
+    {
+      "id": "indicacao_aviso_trem",
+      "layer": "trem_pouso",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.581279914977374,
+        0.8604396626968781,
+        0.7100587385160722
+      ],
+      "focusDistance": 0.00797377018689764,
+      "componentCenter": [
+        1.2788639581024002,
+        0.007755278326593729,
+        0.2611137589994518
+      ],
+      "target": [
+        1.2775418858710896,
+        0.002617285890298554,
+        0.2551610982722451
+      ]
+    },
+    {
+      "id": "squat_switch",
+      "layer": "trem_pouso",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        1.8126247811868499,
+        -0.682443930307172,
+        -3.5898625194871183
+      ],
+      "focusDistance": 0.009281483129329523,
+      "componentCenter": [
+        0.6787820224043137,
+        -0.6401228264172825,
+        -1.3688690609072458
+      ],
+      "target": [
+        0.6817910815302266,
+        -0.636889936900463,
+        -1.3607057332996566
+      ]
+    },
+    {
+      "id": "ailerons",
+      "layer": "controles_voo",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.508522011384497,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.508522011384497,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.508522011384497,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.508522011384497,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        13.497224158494486,
+        6.401094437022928,
+        10.79094822706636
+      ],
+      "focusDistance": 0.009767191265619472,
+      "componentCenter": [
+        0.17307392522258835,
+        -0.10892610453948269,
+        0
+      ],
+      "target": [
+        0.1648076088582548,
+        -0.10372360139350147,
+        0
+      ]
+    },
+    {
+      "id": "flaps_superficies",
+      "layer": "controles_voo",
+      "meshes": 4,
+      "highlighted": 4,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.974771277145188,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.974771277145188,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.974771277145188,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.974771277145188,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        8.13523972344706,
+        3.7993004903437257,
+        6.385554776056559
+      ],
+      "focusDistance": 0.008063126538583761,
+      "componentCenter": [
+        0.17307391932728827,
+        -0.34328369037090894,
+        0
+      ],
+      "target": [
+        0.17286869933673688,
+        -0.335223175850564,
+        0
+      ]
+    },
+    {
+      "id": "stabilator_tab",
+      "layer": "controles_voo",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        -9.558542699693305,
+        -0.08756941941748969,
+        0.01225145110243774
+      ],
+      "focusDistance": 0.00908510421051523,
+      "componentCenter": [
+        -3.050398050245798,
+        -0.20588322818266636,
+        -3.3306690738754696e-16
+      ],
+      "target": [
+        -3.0413203849260144,
+        -0.2062508024716443,
+        -3.321289019385623e-16
+      ]
+    },
+    {
+      "id": "leme_tab",
+      "layer": "controles_voo",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshPhysicalMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        -6.189502549389351,
+        1.692647351393684,
+        -0.002642801916574235
+      ],
+      "focusDistance": 0.009989058148941264,
+      "componentCenter": [
+        -3.1058989520451794,
+        0.5887969982616147,
+        -3.8163916471489756e-16
+      ],
+      "target": [
+        -3.105106902719876,
+        0.578839391090752,
+        -3.810207673964242e-16
+      ]
+    },
+    {
+      "id": "cabos_polias",
+      "layer": "controles_voo",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        -18.076807625150664,
+        -5.2149415068384295,
+        -0.01509730071325605
+      ],
+      "focusDistance": 0.009726563039409587,
+      "componentCenter": [
+        -0.7915883537788552,
+        -0.2529890340069344,
+        0
+      ],
+      "target": [
+        -0.8007394592016226,
+        -0.24969308223225606,
+        -1.507410367044231e-18
+      ]
+    },
+    {
+      "id": "compensadores_comp",
+      "layer": "controles_voo",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        1.9773569093055787,
+        1.243747006382902,
+        1.3302062044242304
+      ],
+      "focusDistance": 0.009432267582576159,
+      "componentCenter": [
+        0.5143149405454042,
+        -0.27709609512735345,
+        6.245004513516506e-17
+      ],
+      "target": [
+        0.5048846466566901,
+        -0.2769031471504297,
+        6.19926221988511e-17
+      ]
+    },
+    {
+      "id": "painel_instrumentos",
+      "layer": "avionics_cabine",
+      "meshes": 1,
+      "highlighted": 1,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.8993114535245447,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.7527728411360246,
+        0.7111085816326368,
+        0.06243760023878539
+      ],
+      "focusDistance": 0.008110928425456422,
+      "componentCenter": [
+        1.3688690609072458,
+        -0.01598231254670157,
+        1.6653345369377348e-16
+      ],
+      "target": [
+        1.360758685260868,
+        -0.01588761937103314,
+        1.6554676409305302e-16
+      ]
+    },
+    {
+      "id": "seis_pack_piloto",
+      "layer": "avionics_cabine",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9949840037576743,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9949840037576743,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9949840037576743,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9949840037576743,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9949840037576743,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 0.9949840037576743,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.590268833246997,
+        0.9392822486629261,
+        -0.558492653400261
+      ],
+      "focusDistance": 0.009387430214824202,
+      "componentCenter": [
+        1.2839682504059133,
+        0.035449228670239696,
+        -0.21363853009046027
+      ],
+      "target": [
+        1.2871354518427434,
+        0.03338362188990624,
+        -0.20504632724568428
+      ]
+    },
+    {
+      "id": "radios_coluna",
+      "layer": "avionics_cabine",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.6609312529803244,
+        0.8055615655010493,
+        0.1581969738631977
+      ],
+      "focusDistance": 0.009078997439332789,
+      "componentCenter": [
+        1.3045797287108707,
+        -0.023894937162601382,
+        0.06725657821793776
+      ],
+      "target": [
+        1.3039982628263724,
+        -0.022028641777325206,
+        0.05839051745435889
+      ]
+    },
+    {
+      "id": "assentos",
+      "layer": "avionics_cabine",
+      "meshes": 8,
+      "highlighted": 8,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        3.1281182276440327,
+        1.7942031993340988,
+        2.5217539120826995
+      ],
+      "focusDistance": 0.009739198694951183,
+      "componentCenter": [
+        -0.04351901092584265,
+        -0.17514598244632085,
+        0
+      ],
+      "target": [
+        -0.033851226670305934,
+        -0.17404960479435996,
+        0.0004288296309910636
+      ]
+    },
+    {
+      "id": "aquecimento_ventilacao",
+      "layer": "avionics_cabine",
+      "meshes": 6,
+      "highlighted": 6,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        2.734389375255385,
+        2.0113330755743752,
+        2.18687216978719
+      ],
+      "focusDistance": 0.009607013637028363,
+      "componentCenter": [
+        0.00661070654443513,
+        0.24216174798635093,
+        -1.4738250231349781e-8
+      ],
+      "target": [
+        0.005646303517093894,
+        0.23260326643937973,
+        0.000008252009302452568
+      ]
+    },
+    {
+      "id": "antenas",
+      "layer": "avionics_cabine",
+      "meshes": 2,
+      "highlighted": 2,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        -4.900949481312391,
+        -0.24926599299636432,
+        0.015973798328535627
+      ],
+      "focusDistance": 0.007955242231540975,
+      "componentCenter": [
+        -0.8052424583129942,
+        -0.13280801235893558,
+        -9.8879238130678e-17
+      ],
+      "target": [
+        -0.7979942665410448,
+        -0.12952935485995382,
+        6.251227105887893e-8
+      ]
+    },
+    {
+      "id": "iluminacao_interna",
+      "layer": "avionics_cabine",
+      "meshes": 3,
+      "highlighted": 3,
+      "materials": [
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        },
+        {
+          "type": "MeshStandardMaterial",
+          "opacity": 1,
+          "emissiveIntensity": 1.55,
+          "base": 1
+        }
+      ],
+      "camera": [
+        2.5078662877179525,
+        1.9908568364421664,
+        2.0440511848414866
+      ],
+      "focusDistance": 0.00924913067299287,
+      "componentCenter": [
+        0.007137369073109134,
+        0.303537198417561,
+        0
+      ],
+      "target": [
+        -0.0010085933437633532,
+        0.2991565917804617,
+        5.340576946118814e-10
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "id": "exterior",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 23,
+        "dimmed": 249,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "estrutura",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 24,
+        "dimmed": 248,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "motores",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 36,
+        "dimmed": 236,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "combustivel",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 39,
+        "dimmed": 233,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "eletrico",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 33,
+        "dimmed": 239,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "vacuo_pitot",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 31,
+        "dimmed": 241,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "trem_pouso",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 33,
+        "dimmed": 239,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "controles_voo",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 24,
+        "dimmed": 248,
+        "meshCount": 272
+      },
+      "restored": true
+    },
+    {
+      "id": "avionics_cabine",
+      "deepLink": true,
+      "navigation": true,
+      "isolationControl": true,
+      "isolatedGeometry": {
+        "target": 29,
+        "dimmed": 243,
+        "meshCount": 272
+      },
+      "restored": true
+    }
+  ],
+  "pointerRegressions": [
+    {
+      "name": "initial",
+      "component": "fuselagem_externa",
+      "title": "Fuselagem (revestimento externo)",
+      "hover": true,
+      "focusDistance": 0.009659225779240999,
+      "componentCenter": [
+        0.0016949223565405624,
+        -0.13152571384616424,
+        0
+      ],
+      "target": [
+        0.0012592986048735877,
+        -0.12187631621722711,
+        0
+      ]
+    },
+    {
+      "name": "hide/show",
+      "component": "fuselagem_externa",
+      "title": "Fuselagem (revestimento externo)",
+      "hover": true,
+      "focusDistance": 0.007971811277487804,
+      "componentCenter": [
+        0.0016949223565405624,
+        -0.13152571384616424,
+        0
+      ],
+      "target": [
+        0.0013353997182206593,
+        -0.12356201379427773,
+        0
+      ]
+    },
+    {
+      "name": "xray on/off",
+      "component": "fuselagem_externa",
+      "title": "Fuselagem (revestimento externo)",
+      "hover": true,
+      "focusDistance": 0.008802464822676525,
+      "componentCenter": [
+        0.0016949223565405624,
+        -0.13152571384616424,
+        0
+      ],
+      "target": [
+        0.0012979378737663916,
+        -0.12273220542944602,
+        0
+      ]
+    },
+    {
+      "name": "isolate/restore",
+      "component": "para_brisa_janelas",
+      "title": "Para-brisa, janelas e janela de tempestade",
+      "hover": true,
+      "focusDistance": 0.008158528908303273,
+      "componentCenter": [
+        0.5961127480547443,
+        0.16775202487226815,
+        1.1102230246251565e-16
+      ],
+      "target": [
+        0.5879821020031059,
+        0.1670780896152919,
+        1.0953189613125542e-16
+      ]
+    }
+  ],
+  "errors": [],
+  "invalidQuery": {
+    "canvas": true,
+    "dialog": false
+  },
+  "explosionFocus": {
+    "component": "motor_direito",
+    "movedAfterSelection": true,
+    "focusDistance": 2.237726045655905e-16,
+    "componentCenter": [
+      4.143621255672356,
+      0.20361197795129438,
+      1.5073384353262695
+    ],
+    "target": [
+      4.143621255672356,
+      0.20361197795129435,
+      1.5073384353262698
+    ]
+  }
+}

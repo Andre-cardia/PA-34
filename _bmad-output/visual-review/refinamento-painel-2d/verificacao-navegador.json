@@ -1,0 +1,356 @@
+{
+  "origem": "http://127.0.0.1:3000/cockpit",
+  "executadoEm": "2026-09-25T13:05:53.701Z",
+  "status": "aprovado",
+  "evidencias": [
+    {
+      "nome": "56 hotspots únicos, tabuláveis, rotulados e sem interseções",
+      "ok": true,
+      "dados": {
+        "executadoEm": "2026-09-25T13:05:53.701Z",
+        "total": 56,
+        "unicos": 56,
+        "ids": [
+          "bussola_magnetica",
+          "termometro_oat",
+          "relogio",
+          "adf_indicador",
+          "aviso_estol",
+          "chave_master",
+          "chaves_alternadores",
+          "chaves_magnetos_partida",
+          "bombas_combustivel_eletricas",
+          "pitot_heat_luzes",
+          "freio_estacionamento",
+          "velocimetro",
+          "horizonte_artificial",
+          "altimetro",
+          "coordenador_curva",
+          "giro_direcional",
+          "variometro",
+          "indicador_vor_1",
+          "indicador_vor_2_gs",
+          "avisos_eletricos_vacuo",
+          "luzes_marker",
+          "piloto_automatico",
+          "painel_audio",
+          "navcom_1",
+          "navcom_2",
+          "adf_receptor",
+          "dme",
+          "transponder",
+          "pressao_admissao",
+          "tacometro_duplo",
+          "fluxo_combustivel_pressao",
+          "egt",
+          "pressao_oleo",
+          "temperatura_oleo",
+          "cht",
+          "quantidade_combustivel",
+          "instrumentos_copiloto",
+          "relogio_copiloto_acendedor",
+          "disjuntores",
+          "seletor_trem",
+          "luzes_trem_verdes",
+          "luz_trem_vermelha",
+          "extensao_emergencia_trem",
+          "amperimetros",
+          "indicador_vacuo",
+          "estatica_alternada",
+          "aquecimento_desembacador",
+          "seletoras_combustivel",
+          "flaps_alavanca",
+          "manetes_potencia",
+          "manetes_helice",
+          "manetes_mistura",
+          "compensadores",
+          "cowl_flaps",
+          "ar_alternativo",
+          "jacks_audio"
+        ],
+        "geometriasInvalidas": [],
+        "intersecoesHotspotsExpandidos": [],
+        "resultado": "aprovado",
+        "conjuntoIDsEsperado": true,
+        "tabulaveis": 56,
+        "rotulados": 56
+      }
+    },
+    {
+      "nome": "Contratos visuais preservam concha curva, superfícies bege e manetes distintas",
+      "ok": true,
+      "dados": {
+        "conchaCurva": true,
+        "faixaBege": "url(#ck-tan-day)",
+        "pedestalBege": "url(#ck-tan-day)",
+        "manetes": {
+          "throttle": "#151615",
+          "prop": "#3F7DCB",
+          "mixture": "#C83E36"
+        }
+      }
+    },
+    {
+      "nome": "Vista inicial limpa sem callouts em massa",
+      "ok": true,
+      "dados": {
+        "total": 0,
+        "ativo": "false"
+      }
+    },
+    {
+      "nome": "Rótulos globais continuam sob controle do toggle em zoom alto",
+      "ok": true,
+      "dados": {
+        "zoom": "ZOOM 246%",
+        "total": 0
+      }
+    },
+    {
+      "nome": "Alternância para modo diurno disponível",
+      "ok": true,
+      "dados": true
+    },
+    {
+      "nome": "Modo diurno ativado",
+      "ok": true,
+      "dados": {
+        "pressionado": "false",
+        "titulo": "Modo noite (backlight)"
+      }
+    },
+    {
+      "nome": "Clique real no hotspot do altímetro despachado",
+      "ok": true,
+      "dados": {
+        "x": 464.8460693359375,
+        "y": 399.5130920410156,
+        "largura": 114.6395263671875,
+        "altura": 114.63958740234375
+      }
+    },
+    {
+      "nome": "Clique abre a ficha correta",
+      "ok": true,
+      "dados": {
+        "url": "?i=altimetro",
+        "dialogo": "Altímetro"
+      }
+    },
+    {
+      "nome": "Seleção apresenta somente seu rótulo contextual",
+      "ok": true,
+      "dados": {
+        "total": 1,
+        "id": "altimetro"
+      }
+    },
+    {
+      "nome": "Hotspot navcom_1 possui centro clicável real",
+      "ok": true,
+      "dados": {
+        "x": 753.2419128417969,
+        "y": 310.56858825683594,
+        "largura": 260.54449462890625,
+        "altura": 48.515167236328125
+      }
+    },
+    {
+      "nome": "Hotspot navcom_2 possui centro clicável real",
+      "ok": true,
+      "dados": {
+        "x": 753.2419128417969,
+        "y": 359.0837707519531,
+        "largura": 260.54449462890625,
+        "altura": 48.51519775390625
+      }
+    },
+    {
+      "nome": "Hotspot pressao_oleo possui centro clicável real",
+      "ok": true,
+      "dados": {
+        "x": 617.5790710449219,
+        "y": 652.8701782226562,
+        "largura": 55.70257568359375,
+        "altura": 55.70263671875
+      }
+    },
+    {
+      "nome": "Hotspot temperatura_oleo possui centro clicável real",
+      "ok": true,
+      "dados": {
+        "x": 675.0785522460938,
+        "y": 652.8701782226562,
+        "largura": 55.70263671875,
+        "altura": 55.70263671875
+      }
+    },
+    {
+      "nome": "Cliques reais distinguem controles adjacentes",
+      "ok": true,
+      "dados": [
+        {
+          "id": "navcom_1",
+          "url": "?i=navcom_1"
+        },
+        {
+          "id": "navcom_2",
+          "url": "?i=navcom_2"
+        },
+        {
+          "id": "pressao_oleo",
+          "url": "?i=pressao_oleo"
+        },
+        {
+          "id": "temperatura_oleo",
+          "url": "?i=temperatura_oleo"
+        }
+      ]
+    },
+    {
+      "nome": "Enter seleciona o giro direcional",
+      "ok": true,
+      "dados": "?i=giro_direcional"
+    },
+    {
+      "nome": "Espaço seleciona o variômetro",
+      "ok": true,
+      "dados": "?i=variometro"
+    },
+    {
+      "nome": "Campo de busca localizado e preenchido",
+      "ok": true,
+      "dados": true
+    },
+    {
+      "nome": "Busca seleciona o velocímetro",
+      "ok": true,
+      "dados": "?i=velocimetro"
+    },
+    {
+      "nome": "Link direto e miniatura circular corretos",
+      "ok": true,
+      "dados": {
+        "url": "?i=velocimetro",
+        "titulo": "Velocímetro (ASI)",
+        "viewBox": [
+          178,
+          244,
+          132,
+          132
+        ],
+        "bbox": [
+          186,
+          252,
+          116,
+          116
+        ],
+        "contida": true
+      }
+    },
+    {
+      "nome": "Miniatura de navcom_1 contida no viewBox",
+      "ok": true,
+      "dados": {
+        "titulo": "NAV/COM nº 1",
+        "contida": true
+      }
+    },
+    {
+      "nome": "Miniatura de manetes_mistura contida no viewBox",
+      "ok": true,
+      "dados": {
+        "titulo": "Manetes de mistura (2)",
+        "contida": true
+      }
+    },
+    {
+      "nome": "Filtro MOTOR acionado",
+      "ok": true,
+      "dados": true
+    },
+    {
+      "nome": "Filtro mantém 10 instrumentos de motor alinhados",
+      "ok": true,
+      "dados": {
+        "pressionado": "true",
+        "destacados": 10
+      }
+    },
+    {
+      "nome": "Tour guiado iniciado",
+      "ok": true,
+      "dados": true
+    },
+    {
+      "nome": "Tour e spotlight seguem o velocímetro reposicionado",
+      "ok": true,
+      "dados": {
+        "dialogo": "Tour guiado — parada 1 de 8",
+        "alvo": [
+          "244",
+          "310"
+        ]
+      }
+    },
+    {
+      "nome": "Zoom e reset restauram o enquadramento integral",
+      "ok": true,
+      "dados": {
+        "zoomAntes": "ZOOM 100%",
+        "zoomDepois": "ZOOM 135%",
+        "zoomReset": "ZOOM 100%"
+      }
+    },
+    {
+      "nome": "Painel íntegro em 768 px",
+      "ok": true,
+      "dados": {
+        "largura": 768,
+        "hotspots": 56,
+        "zoom": "ZOOM 100%"
+      }
+    },
+    {
+      "nome": "Enquadramento mobile inicia com o six-pack centralizado a 160%",
+      "ok": true,
+      "dados": {
+        "largura": 390,
+        "transform": "translate(46.56 243.73) scale(0.388)",
+        "palco": {
+          "left": 1,
+          "top": 174,
+          "width": 388,
+          "height": 858
+        },
+        "centroSixPack": {
+          "x": 195,
+          "y": 564.3940124511719
+        },
+        "centroPalco": {
+          "x": 195,
+          "y": 603
+        },
+        "desvioCentro": 38.605987548828125,
+        "zoom": "ZOOM 160%"
+      }
+    },
+    {
+      "nome": "Pan permanece funcional em 390 px",
+      "ok": true,
+      "dados": {
+        "antes": "translate(46.56 243.73) scale(0.388)",
+        "depois": "translate(80 243.73) scale(0.388)"
+      }
+    },
+    {
+      "nome": "Movimento reduzido neutraliza repetição dos pulsos",
+      "ok": true,
+      "dados": {
+        "ativo": true,
+        "duracao": "1e-05s",
+        "iteracoes": "1"
+      }
+    }
+  ]
+}

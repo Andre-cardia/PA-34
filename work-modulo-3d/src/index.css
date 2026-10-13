@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 94%;
+    --card: 213 43% 7%;
+    --card-foreground: 210 40% 94%;
+    --popover: 213 43% 7%;
+    --popover-foreground: 210 40% 94%;
+    --primary: 190 100% 62%;
+    --primary-foreground: 222 47% 4%;
+    --secondary: 214 40% 11%;
+    --secondary-foreground: 210 40% 94%;
+    --muted: 214 40% 11%;
+    --muted-foreground: 213 20% 65%;
+    --accent: 214 40% 14%;
+    --accent-foreground: 210 40% 94%;
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 35% 18%;
+    --input: 210 35% 18%;
+    --ring: 190 100% 62%;
+    --radius: 0.25rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    @apply bg-abyss text-ink font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+    overflow-x: clip;
+  }
+
+  /* Grain overlay global (design.md §10 grain-noise.png) */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    background-image: url("/grain-noise.png");
+    background-repeat: repeat;
+    background-size: 512px 512px;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+  }
+
+  /* Focus ring cyan 2px offset 2px (design.md §2) */
+  :focus-visible {
+    outline: 2px solid #3fe0ff;
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+
+  ::selection {
+    background: rgba(63, 224, 255, 0.22);
+    color: #e8f0f7;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05080d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e2c3d;
+    border: 2px solid #05080d;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1b4b5c;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Grid blueprint: linhas cyan a ~5% sobre o fundo; célula 64px (design.md §2) */
+  .blueprint-grid {
+    background-image:
+      linear-gradient(to right, rgba(63, 224, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(63, 224, 255, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  @media (max-width: 768px) {
+    .blueprint-grid {
+      background-size: 40px 40px;
+    }
+  }
+  .blueprint-grid-dense {
+    background-image:
+      linear-gradient(to right, rgba(63, 224, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(63, 224, 255, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  /* Barras horizontais mantêm toque/teclado sem poluir o HUD com scrollbar nativa. */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Dotted leader para SpecTable / DataRow (design.md §7.6) */
+  .dot-leader {
+    flex: 1 1 auto;
+    margin: 0 0.6rem;
+    border-bottom: 1px dotted #1e2c3d;
+    transform: translateY(-4px);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 18px rgba(63, 224, 255, 0.45);
+  }
+}

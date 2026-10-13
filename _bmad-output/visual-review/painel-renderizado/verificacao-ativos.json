@@ -1,0 +1,126 @@
+{
+  "status": "falhou",
+  "checks": [
+    {
+      "name": "Mapa exportado idêntico à fonte TypeScript atual",
+      "ok": true
+    },
+    {
+      "name": "49 corpos reais: centros e extensões projetados",
+      "ok": true,
+      "data": {
+        "maxError": 0.00005872189170977628,
+        "maxBoundsError": 0.00008392333984375
+      }
+    },
+    {
+      "name": "Exatamente imagens dia/noite, sem duplicatas",
+      "ok": true
+    },
+    {
+      "name": "painel-dia.webp assinatura, dimensões reais e integridade",
+      "ok": true,
+      "data": {
+        "width": 3200,
+        "height": 1400,
+        "bytes": 377370,
+        "sha256": "3d0a26218f6983e90f2e0ea06027885a02115c65e4b932bcf9daef93e2e8b0bf"
+      }
+    },
+    {
+      "name": "painel-noite.webp assinatura, dimensões reais e integridade",
+      "ok": true,
+      "data": {
+        "width": 3200,
+        "height": 1400,
+        "bytes": 315018,
+        "sha256": "bfaadc689dc63e31e439d348cf6de8971ff40c6ed39a0f9f59f2a97eb114a373"
+      }
+    },
+    {
+      "name": "Proveniência de geração presente",
+      "ok": true
+    },
+    {
+      "name": "Proveniência completa atlases",
+      "ok": true
+    },
+    {
+      "name": "Proveniência completa masters",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint export-map.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint convert-images.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint chrome-cdp.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint build_panel.py",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint panel-map.json",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint ../../src/components/cockpit/panel-data.ts",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint ../../src/components/cockpit/artwork.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/serigrafia-dia.svg",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/serigrafia-noite.svg",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/serigrafia-dia.png",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/serigrafia-noite.png",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/painel-dia.png",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/painel-noite.png",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/BottomBar.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/ComponentDrawer.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/GuideCard.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/LayerRail.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx",
+      "ok": false
+    }
+  ],
+  "error": "Error: Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx\n    at check (file:///Users/andrecardia/Github/PA-34/work-modulo-3d/blender/cockpit/verify-assets.mjs:13:102)\n    at file:///Users/andrecardia/Github/PA-34/work-modulo-3d/blender/cockpit/verify-assets.mjs:50:57"
+}

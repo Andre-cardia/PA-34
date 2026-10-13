@@ -1,0 +1,1197 @@
+{
+ "source": "FlightGear fgaddon — Aircraft/SenecaII (GPL-2.0, Piper PA34-200T Seneca II)",
+ "file": "/seneca-pa34.glb",
+ "axes": {
+  "x": "comprimento (nariz -X)",
+  "y": "altura (up)",
+  "z": "envergadura"
+ },
+ "real_dimensions_m": {
+  "span": 11.86,
+  "length": 8.72,
+  "height": 3.02
+ },
+ "model_extents": {
+  "x": 8.58,
+  "y": 3.1,
+  "z": 11.71
+ },
+ "nodes": {
+  "AVGAS.L": {
+   "layer": "combustivel",
+   "center": [
+    -1.153,
+    1.305,
+    4.773
+   ]
+  },
+  "AVGAS.R": {
+   "layer": "combustivel",
+   "center": [
+    -1.153,
+    1.305,
+    -4.773
+   ]
+  },
+  "AltAirLabel": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.77,
+    1.239,
+    0.0
+   ]
+  },
+  "AlternateAirControl.L": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.782,
+    1.221,
+    0.03
+   ]
+  },
+  "AlternateAirControl.R": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.782,
+    1.221,
+    -0.031
+   ]
+  },
+  "BaggageDoorFrame": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.824,
+    1.205,
+    0.518
+   ]
+  },
+  "BaggageDoorWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.825,
+    1.392,
+    0.542
+   ]
+  },
+  "Beacon": {
+   "layer": "avionics_cabine",
+   "center": [
+    3.755,
+    3.047,
+    -0.0
+   ]
+  },
+  "Cabin": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.593,
+    1.314,
+    0.0
+   ]
+  },
+  "CenterConsole": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.205,
+    0.935,
+    0.02
+   ]
+  },
+  "Chart1": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.39,
+    0.958,
+    -0.305
+   ]
+  },
+  "Chart2": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.418,
+    0.959,
+    -0.318
+   ]
+  },
+  "Chassis": {
+   "layer": "exterior",
+   "center": [
+    -1.839,
+    1.23,
+    0.0
+   ]
+  },
+  "Compass.Chassis": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.961,
+    1.692,
+    0.0
+   ]
+  },
+  "Compass.Ring": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.955,
+    1.674,
+    0.0
+   ]
+  },
+  "Cowl.Chassis": {
+   "layer": "motores",
+   "center": [
+    -2.002,
+    1.042,
+    0.0
+   ]
+  },
+  "CowlFlapsControl.L": {
+   "layer": "motores",
+   "center": [
+    -1.878,
+    0.982,
+    0.031
+   ]
+  },
+  "CowlFlapsControl.R": {
+   "layer": "motores",
+   "center": [
+    -1.878,
+    0.982,
+    -0.03
+   ]
+  },
+  "Dashboard": {
+   "layer": "avionics_cabine",
+   "center": [
+    -2.058,
+    1.187,
+    0.0
+   ]
+  },
+  "Dashboard-p1": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.91,
+    1.556,
+    0.0
+   ]
+  },
+  "DeviationTable": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.927,
+    1.689,
+    0.0
+   ]
+  },
+  "DoorLockHandleFront": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.143,
+    1.915,
+    -0.504
+   ]
+  },
+  "DoorLockHandleFront.002": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.37,
+    1.777,
+    0.446
+   ]
+  },
+  "ElevatorTrimControl": {
+   "layer": "controles_voo",
+   "center": [
+    -1.451,
+    0.985,
+    -0.007
+   ]
+  },
+  "ElevatorTrimIndicator": {
+   "layer": "controles_voo",
+   "center": [
+    -1.451,
+    1.02,
+    0.013
+   ]
+  },
+  "Fin": {
+   "layer": "exterior",
+   "center": [
+    3.0,
+    2.251,
+    0.0
+   ]
+  },
+  "FlapControl": {
+   "layer": "controles_voo",
+   "center": [
+    -1.623,
+    0.908,
+    -0.05
+   ]
+  },
+  "FlapControlChassis": {
+   "layer": "controles_voo",
+   "center": [
+    -1.429,
+    0.916,
+    -0.049
+   ]
+  },
+  "FrictionLock": {
+   "layer": "controles_voo",
+   "center": [
+    -1.849,
+    1.24,
+    -0.058
+   ]
+  },
+  "FuelSelectorControl.L": {
+   "layer": "combustivel",
+   "center": [
+    -1.272,
+    0.96,
+    0.028
+   ]
+  },
+  "FuelSelectorControl.R": {
+   "layer": "combustivel",
+   "center": [
+    -1.272,
+    0.96,
+    0.008
+   ]
+  },
+  "Fuselage.002": {
+   "layer": "exterior",
+   "center": [
+    -0.108,
+    1.312,
+    0.0
+   ]
+  },
+  "GearEmergencyKnob": {
+   "layer": "trem_pouso",
+   "center": [
+    -1.906,
+    1.222,
+    0.089
+   ]
+  },
+  "GearEmergencySecure": {
+   "layer": "trem_pouso",
+   "center": [
+    -1.905,
+    1.222,
+    0.089
+   ]
+  },
+  "GearLeft.Axle": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.201,
+    1.498
+   ]
+  },
+  "GearLeft.Cylinder": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.707,
+    1.525
+   ]
+  },
+  "GearLeft.Piston": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.449,
+    1.488
+   ]
+  },
+  "GearLeft.Wheel": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.201,
+    1.525
+   ]
+  },
+  "GearLever": {
+   "layer": "trem_pouso",
+   "center": [
+    -1.884,
+    1.262,
+    0.067
+   ]
+  },
+  "GearLeverNut": {
+   "layer": "trem_pouso",
+   "center": [
+    -1.911,
+    1.249,
+    0.067
+   ]
+  },
+  "GearRight.Axle": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.201,
+    -1.487
+   ]
+  },
+  "GearRight.Cylinder": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.707,
+    -1.515
+   ]
+  },
+  "GearRight.Piston": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.449,
+    -1.508
+   ]
+  },
+  "GearRight.Wheel": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.827,
+    0.201,
+    -1.515
+   ]
+  },
+  "GearSpeedPlacard": {
+   "layer": "trem_pouso",
+   "center": [
+    -1.909,
+    1.382,
+    0.27
+   ]
+  },
+  "InstrumentCover": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.904,
+    1.406,
+    0.0
+   ]
+  },
+  "Label": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.873,
+    0.949,
+    0.0
+   ]
+  },
+  "Label.FuelOff": {
+   "layer": "combustivel",
+   "center": [
+    -1.271,
+    0.965,
+    0.049
+   ]
+  },
+  "Label.FuelOn": {
+   "layer": "combustivel",
+   "center": [
+    -1.304,
+    0.965,
+    0.049
+   ]
+  },
+  "Label.FuelX": {
+   "layer": "combustivel",
+   "center": [
+    -1.243,
+    0.965,
+    0.049
+   ]
+  },
+  "LandingLight": {
+   "layer": "motores",
+   "center": [
+    -2.957,
+    0.809,
+    -0.06
+   ]
+  },
+  "LeftAileron": {
+   "layer": "controles_voo",
+   "center": [
+    -0.072,
+    1.137,
+    4.593
+   ]
+  },
+  "LeftCenterWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.526,
+    1.553,
+    0.62
+   ]
+  },
+  "LeftCowlFlap": {
+   "layer": "motores",
+   "center": [
+    -0.96,
+    0.883,
+    1.867
+   ]
+  },
+  "LeftEngineNacelle": {
+   "layer": "motores",
+   "center": [
+    -1.407,
+    1.162,
+    1.842
+   ]
+  },
+  "LeftExhaust": {
+   "layer": "motores",
+   "center": [
+    -0.714,
+    0.777,
+    1.852
+   ]
+  },
+  "LeftFlap": {
+   "layer": "controles_voo",
+   "center": [
+    -0.09,
+    0.87,
+    2.161
+   ]
+  },
+  "LeftMainGearCover": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.842,
+    0.565,
+    1.606
+   ]
+  },
+  "LeftNosegearCover": {
+   "layer": "trem_pouso",
+   "center": [
+    -3.179,
+    0.788,
+    0.125
+   ]
+  },
+  "LeftPaxWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.161,
+    1.498,
+    0.593
+   ]
+  },
+  "LeftPositionLight": {
+   "layer": "exterior",
+   "center": [
+    -1.055,
+    1.353,
+    5.841
+   ]
+  },
+  "LeftPropeller.1": {
+   "layer": "motores",
+   "center": [
+    -2.763,
+    1.31,
+    1.359
+   ]
+  },
+  "LeftPropeller.2": {
+   "layer": "motores",
+   "center": [
+    -2.763,
+    1.319,
+    2.324
+   ]
+  },
+  "LeftSpinner": {
+   "layer": "motores",
+   "center": [
+    -2.931,
+    1.315,
+    1.842
+   ]
+  },
+  "LeftWing": {
+   "layer": "exterior",
+   "center": [
+    -0.92,
+    1.034,
+    3.203
+   ]
+  },
+  "MixtureControl.L": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.829,
+    1.287,
+    -0.026
+   ]
+  },
+  "MixtureControl.R": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.829,
+    1.287,
+    -0.046
+   ]
+  },
+  "NLG_B_Axle01": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.874,
+    0.404,
+    0.0
+   ]
+  },
+  "NLG_C_Arm": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.817,
+    0.446,
+    0.0
+   ]
+  },
+  "NLG_C_Axle02": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.752,
+    0.495,
+    0.0
+   ]
+  },
+  "NLG_Cylinder": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.856,
+    0.773,
+    -0.0
+   ]
+  },
+  "NLG_D_Arm": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.799,
+    0.561,
+    -0.0
+   ]
+  },
+  "NLG_D_Axle01": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.839,
+    0.62,
+    -0.0
+   ]
+  },
+  "NLG_Piston_0": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.951,
+    0.181,
+    0.0
+   ]
+  },
+  "NLG_Piston_1": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.902,
+    0.47,
+    0.0
+   ]
+  },
+  "NLG_Wheel": {
+   "layer": "trem_pouso",
+   "center": [
+    -2.951,
+    0.181,
+    -0.0
+   ]
+  },
+  "NosegearBox": {
+   "layer": "trem_pouso",
+   "center": [
+    -3.185,
+    0.991,
+    -0.003
+   ]
+  },
+  "Overhead.Body": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.278,
+    1.798,
+    0.0
+   ]
+  },
+  "Overhead.CockpitLight": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.155,
+    1.928,
+    0.0
+   ]
+  },
+  "Overhead.CockpitLightSwitch": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.203,
+    1.935,
+    0.0
+   ]
+  },
+  "PanelLightsDimmer": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.914,
+    1.268,
+    -0.166
+   ]
+  },
+  "ParkingBrakeControl": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.954,
+    1.127,
+    0.124
+   ]
+  },
+  "PaxDoorFrame": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.156,
+    1.269,
+    0.551
+   ]
+  },
+  "PilotWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.263,
+    1.591,
+    0.614
+   ]
+  },
+  "PropellerControl.L": {
+   "layer": "motores",
+   "center": [
+    -1.813,
+    1.302,
+    0.009
+   ]
+  },
+  "PropellerControl.R": {
+   "layer": "motores",
+   "center": [
+    -1.813,
+    1.302,
+    -0.009
+   ]
+  },
+  "RPMPlacard": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.909,
+    1.231,
+    0.147
+   ]
+  },
+  "RadioLightsDimmer": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.914,
+    1.307,
+    -0.166
+   ]
+  },
+  "RightAileron": {
+   "layer": "controles_voo",
+   "center": [
+    -0.072,
+    1.137,
+    -4.593
+   ]
+  },
+  "RightBaggageWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.825,
+    1.392,
+    -0.542
+   ]
+  },
+  "RightCenterWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.526,
+    1.553,
+    -0.62
+   ]
+  },
+  "RightCowlFlap": {
+   "layer": "motores",
+   "center": [
+    -0.96,
+    0.883,
+    -1.867
+   ]
+  },
+  "RightDoor": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.286,
+    1.391,
+    -0.591
+   ]
+  },
+  "RightEngineNacelle": {
+   "layer": "motores",
+   "center": [
+    -1.407,
+    1.162,
+    -1.842
+   ]
+  },
+  "RightExaust": {
+   "layer": "motores",
+   "center": [
+    -0.714,
+    0.777,
+    -1.852
+   ]
+  },
+  "RightFlap": {
+   "layer": "controles_voo",
+   "center": [
+    -0.09,
+    0.87,
+    -2.161
+   ]
+  },
+  "RightFrontWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.263,
+    1.591,
+    -0.614
+   ]
+  },
+  "RightMainGearCover": {
+   "layer": "trem_pouso",
+   "center": [
+    -0.842,
+    0.565,
+    -1.606
+   ]
+  },
+  "RightNosegearCover": {
+   "layer": "trem_pouso",
+   "center": [
+    -3.179,
+    0.788,
+    -0.125
+   ]
+  },
+  "RightPaxWindow": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.161,
+    1.498,
+    -0.593
+   ]
+  },
+  "RightPositionLight": {
+   "layer": "exterior",
+   "center": [
+    -1.055,
+    1.353,
+    -5.841
+   ]
+  },
+  "RightPropeller.1": {
+   "layer": "motores",
+   "center": [
+    -2.763,
+    1.31,
+    -1.359
+   ]
+  },
+  "RightPropeller.2": {
+   "layer": "motores",
+   "center": [
+    -2.763,
+    1.319,
+    -2.324
+   ]
+  },
+  "RightSpinner": {
+   "layer": "motores",
+   "center": [
+    -2.933,
+    1.315,
+    -1.842
+   ]
+  },
+  "RightWing": {
+   "layer": "exterior",
+   "center": [
+    -0.92,
+    1.034,
+    -3.203
+   ]
+  },
+  "Rudder": {
+   "layer": "controles_voo",
+   "center": [
+    3.977,
+    2.232,
+    0.0
+   ]
+  },
+  "RudderTrimControl": {
+   "layer": "controles_voo",
+   "center": [
+    -1.367,
+    0.948,
+    0.014
+   ]
+  },
+  "RudderTrimIndicator": {
+   "layer": "controles_voo",
+   "center": [
+    -1.366,
+    0.994,
+    0.013
+   ]
+  },
+  "Seat-": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.563,
+    1.228,
+    -0.01
+   ]
+  },
+  "Seat-12": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.262,
+    1.28,
+    -0.01
+   ]
+  },
+  "Seat-56": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.431,
+    1.214,
+    -0.01
+   ]
+  },
+  "Stabilizer": {
+   "layer": "controles_voo",
+   "center": [
+    3.785,
+    1.272,
+    0.0
+   ]
+  },
+  "Step": {
+   "layer": "controles_voo",
+   "center": [
+    0.19,
+    0.589,
+    -0.648
+   ]
+  },
+  "TankCover.L": {
+   "layer": "combustivel",
+   "center": [
+    -1.066,
+    1.301,
+    4.773
+   ]
+  },
+  "TankCover.R": {
+   "layer": "combustivel",
+   "center": [
+    -1.066,
+    1.301,
+    -4.773
+   ]
+  },
+  "TaxiLandingLightChassis": {
+   "layer": "motores",
+   "center": [
+    -2.931,
+    0.809,
+    0.0
+   ]
+  },
+  "TaxiLight": {
+   "layer": "motores",
+   "center": [
+    -2.957,
+    0.809,
+    0.06
+   ]
+  },
+  "ThrottleControl.L": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.799,
+    1.317,
+    0.055
+   ]
+  },
+  "ThrottleControl.R": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.799,
+    1.317,
+    0.034
+   ]
+  },
+  "TrimwheelElevatorChassis": {
+   "layer": "controles_voo",
+   "center": [
+    -1.423,
+    0.943,
+    0.012
+   ]
+  },
+  "TrimwheelRudderChassis": {
+   "layer": "controles_voo",
+   "center": [
+    -1.344,
+    0.961,
+    0.014
+   ]
+  },
+  "VHFAntenna1": {
+   "layer": "avionics_cabine",
+   "center": [
+    0.523,
+    1.96,
+    0.0
+   ]
+  },
+  "VHFAntenna2": {
+   "layer": "avionics_cabine",
+   "center": [
+    1.368,
+    1.864,
+    -0.0
+   ]
+  },
+  "WindScreen": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.777,
+    1.692,
+    0.0
+   ]
+  },
+  "WindshieldDeice": {
+   "layer": "motores",
+   "center": [
+    -2.057,
+    1.685,
+    0.355
+   ]
+  },
+  "box": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.751,
+    1.356,
+    0.357
+   ]
+  },
+  "box.002": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.765,
+    1.464,
+    0.357
+   ]
+  },
+  "box.003": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.758,
+    1.359,
+    0.357
+   ]
+  },
+  "box.004": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.751,
+    1.356,
+    -0.357
+   ]
+  },
+  "box.005": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.765,
+    1.464,
+    -0.357
+   ]
+  },
+  "box.006": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.758,
+    1.359,
+    -0.357
+   ]
+  },
+  "box.007": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.507,
+    0.789,
+    -0.0
+   ]
+  },
+  "cylinder": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.05,
+    1.679,
+    -0.361
+   ]
+  },
+  "cylinder.002": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.97,
+    1.798,
+    -0.33
+   ]
+  },
+  "cylinder.003": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.999,
+    1.779,
+    -0.334
+   ]
+  },
+  "cylinder.004": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.042,
+    1.718,
+    -0.349
+   ]
+  },
+  "cylinder.005": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.954,
+    1.805,
+    -0.36
+   ]
+  },
+  "cylinder.006": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.96,
+    1.766,
+    -0.36
+   ]
+  },
+  "cylinder.007": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.025,
+    1.705,
+    -0.36
+   ]
+  },
+  "cylinder.008": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.908,
+    1.69,
+    -0.36
+   ]
+  },
+  "cylinder.009": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.921,
+    1.662,
+    -0.36
+   ]
+  },
+  "cylinder.010": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.019,
+    1.676,
+    -0.36
+   ]
+  },
+  "cylinder.011": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.897,
+    1.359,
+    0.357
+   ]
+  },
+  "cylinder.012": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.751,
+    1.408,
+    0.357
+   ]
+  },
+  "cylinder.013": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.897,
+    1.359,
+    -0.357
+   ]
+  },
+  "cylinder.014": {
+   "layer": "avionics_cabine",
+   "center": [
+    -1.751,
+    1.408,
+    -0.357
+   ]
+  },
+  "cylinder.015": {
+   "layer": "avionics_cabine",
+   "center": [
+    -0.485,
+    1.896,
+    -0.0
+   ]
+  }
+ }
+}

@@ -1,0 +1,2253 @@
+--- a/work-modulo-3d/src/components/cockpit/CockpitPanel.tsx
++++ b/work-modulo-3d/src/components/cockpit/CockpitPanel.tsx
+@@ -1,4 +1,4 @@
+-// CockpitPanel — palco SVG do painel (cockpit.md §1–3): chapas dia/noite com
++// CockpitPanel — palco SVG do painel (cockpit.md §1–3): renders Blender dia/noite com
+ // crossfade, 56 hotspots (pulse cyan, aria-label, teclado), rótulos com leader
+ // lines, spotlight do tour, scanline, cursor crosshair customizado + tooltip.
+ 
+@@ -10,7 +10,8 @@
+ import { CornerScrews } from '@/components/assets/PanelScrews'
+ import { PANEL_MAP, PANEL_ORDER, SUGGESTED, catMeta, instrumentById } from './panel-data'
+ import type { HotspotShape, PanelEntry } from './panel-data'
+-import { ArtDefs, PanelPlates, renderArt } from './artwork'
++import { ArtDefs } from './artwork'
++import RenderedPanel from './RenderedPanel'
+ import type { usePanZoom } from './usePanZoom'
+ 
+ type PanZoom = ReturnType<typeof usePanZoom>
+@@ -366,7 +367,7 @@
+         background: 'radial-gradient(ellipse at 50% 46%, #17191a 0%, #0d1011 58%, #070909 100%)',
+       }}
+       role="group"
+-      aria-label="Painel vetorial interativo do PA-34-200 Seneca I — 56 instrumentos"
++      aria-label="Painel renderizado interativo do PA-34-200 Seneca I — 56 instrumentos"
+       {...pz.handlers}
+       onMouseMove={(e) => {
+         if (!finePointer.current) return
+@@ -388,62 +389,7 @@
+         <style>{`@keyframes ckSelPulse{0%,100%{opacity:1}50%{opacity:.45}}`}</style>
+         <ArtDefs />
+         <g transform={`translate(${view.x} ${view.y}) scale(${view.k * base || 0.0001})`}>
+-          {/* camada DIA */}
+-          <g style={{ opacity: night ? 0 : 1, transition: 'opacity 0.6s' }}>
+-            <PanelPlates night={false} />
+-            {PANEL_ORDER.map((id) => {
+-              const dim = filterCat !== null && catOf[id] !== filterCat
+-              const match = filterCat !== null && catOf[id] === filterCat
+-              return (
+-                <g
+-                  key={id}
+-                  opacity={dim && selectedId !== id ? 0.35 : 1}
+-                  style={{
+-                    transition: 'opacity 0.35s',
+-                    filter:
+-                      selectedId === id
+-                        ? 'drop-shadow(0 0 10px rgba(63,224,255,0.55))'
+-                        : match
+-                          ? `drop-shadow(0 0 7px ${catMeta(filterCat).color}55)`
+-                          : undefined,
+-                  }}
+-                >
+-                  {renderArt(id, { night: false, sweep: false })}
+-                </g>
+-              )
+-            })}
+-          </g>
+-          {/* camada NOITE (backlight + bloom leve) */}
+-          <g
+-            style={{
+-              opacity: night ? 1 : 0,
+-              transition: 'opacity 0.6s',
+-              filter: 'drop-shadow(0 0 3px rgba(255,190,90,0.12))',
+-            }}
+-          >
+-            <PanelPlates night={true} />
+-            {PANEL_ORDER.map((id) => {
+-              const dim = filterCat !== null && catOf[id] !== filterCat
+-              const match = filterCat !== null && catOf[id] === filterCat
+-              return (
+-                <g
+-                  key={id}
+-                  opacity={dim && selectedId !== id ? 0.35 : 1}
+-                  style={{
+-                    transition: 'opacity 0.35s',
+-                    filter:
+-                      selectedId === id
+-                        ? 'drop-shadow(0 0 10px rgba(63,224,255,0.55))'
+-                        : match
+-                          ? `drop-shadow(0 0 7px ${catMeta(filterCat).color}55)`
+-                          : undefined,
+-                  }}
+-                >
+-                  {renderArt(id, { night: true, sweep: false })}
+-                </g>
+-              )
+-            })}
+-          </g>
++          <RenderedPanel night={night} filterCat={filterCat} selectedId={selectedId} />
+           {/* rótulos */}
+           {(showAllLabels || hoveredId || selectedId) && (
+             <LabelsLayer night={night} showAll={showAllLabels} activeId={hoveredId ?? selectedId} />
+--- /dev/null
++++ b/work-modulo-3d/src/components/cockpit/RenderedPanel.tsx
+@@ -0,0 +1,87 @@
++// Fundo Blender e fallback compartilham as coordenadas/transformação dos hotspots.
++// Esta camada é estritamente decorativa: nenhum handler de seleção é duplicado.
++import { useEffect, useState } from 'react'
++import { PanelPlates, renderArt } from './artwork'
++import { PANEL_MAP, PANEL_ORDER, VB_W, VB_H, catMeta, instrumentById } from './panel-data'
++
++interface Props {
++  night: boolean
++  filterCat: string | null
++  selectedId: string | null
++}
++
++type LoadState = 'loading' | 'ready' | 'error'
++
++function Illumination({ night, active, filterCat, selectedId }: Props & { active: boolean }) {
++  const [state, setState] = useState<LoadState>('loading')
++  const mode = night ? 'noite' : 'dia'
++  const src = `${import.meta.env.BASE_URL}cockpit-render/painel-${mode}.webp`
++  useEffect(() => {
++    // SVG <image> pode não repetir load ao voltar pela SPA com o recurso em cache.
++    // decode() cobre também esse caminho, sem deixar o fallback preso em loading.
++    let active = true
++    const image = new Image()
++    image.src = src
++    image.decode().then(
++      () => { if (active) setState('ready') },
++      () => { if (active) setState('error') },
++    )
++    return () => { active = false }
++  }, [src])
++  return (
++    <g
++      data-rendered-panel={mode}
++      data-image-state={state}
++      className="ck-render-illumination"
++      style={{ opacity: active ? 1 : 0 }}
++    >
++      {/* Sempre utilizável enquanto carrega ou se ESTE arquivo falhar. */}
++      {state !== 'ready' && (
++        <g data-vector-fallback={mode}>
++          <PanelPlates night={night} />
++          {PANEL_ORDER.map(id => {
++            const dim = filterCat !== null && instrumentById[id]?.categoria !== filterCat
++            const match = filterCat !== null && !dim
++            return (
++              <g key={id} opacity={dim && selectedId !== id ? 0.35 : 1}
++                style={{ filter: selectedId === id
++                  ? 'drop-shadow(0 0 10px rgba(63,224,255,0.55))'
++                  : match ? `drop-shadow(0 0 7px ${catMeta(filterCat).color}55)` : undefined }}>
++                {renderArt(id, { night, sweep: false })}
++              </g>
++            )
++          })}
++        </g>
++      )}
++      <image
++        href={src}
++        x={0} y={0} width={VB_W} height={VB_H}
++        preserveAspectRatio="xMidYMid meet"
++        visibility={state === 'ready' ? 'visible' : 'hidden'}
++        onLoad={() => setState('ready')}
++        onError={() => setState('error')}
++      />
++      {/* Atenuação por forma, não um filtro que escurece a imagem inteira. */}
++      {state === 'ready' && filterCat !== null && (
++        <g data-category-dimming={mode} fill="#05080D" fillOpacity={0.65}>
++          {PANEL_ORDER.filter(id => instrumentById[id]?.categoria !== filterCat && id !== selectedId).map(id => {
++            const s = PANEL_MAP[id].shape
++            return s.kind === 'circle'
++              ? <circle key={id} data-dimmed-instrument={id} cx={s.cx} cy={s.cy} r={s.r} />
++              : <rect key={id} data-dimmed-instrument={id} x={s.x} y={s.y} width={s.w} height={s.h} rx={3} />
++          })}
++        </g>
++      )}
++    </g>
++  )
++}
++
++export default function RenderedPanel(props: Props) {
++  return (
++    <g aria-hidden="true" pointerEvents="none" data-panel-art="blender-with-vector-fallback">
++      <style>{`.ck-render-illumination{transition:opacity .6s}@media(prefers-reduced-motion:reduce){.ck-render-illumination{transition:none}}`}</style>
++      <Illumination {...props} night={false} active={!props.night} />
++      <Illumination {...props} night={true} active={props.night} />
++    </g>
++  )
++}
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/README.md
+@@ -0,0 +1,54 @@
++# Painel pré-renderizado independente — Seneca I
++
++Aplicação-alvo: **somente `work-modulo-3d/`**. Material didático, não certificado e sem simulação operacional. Nenhum arquivo do avião é aberto/importado pelo gerador. Não executar `../build_layers.py` para este painel.
++
++## Reprodução
++
++Na raiz do projeto, com dependências locais instaladas, Node, Chrome e Blender:
++
++```sh
++node work-modulo-3d/blender/cockpit/export-map.mjs
++node work-modulo-3d/blender/cockpit/convert-images.mjs atlas
++/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 \
++  --python work-modulo-3d/blender/cockpit/build_panel.py
++node work-modulo-3d/blender/cockpit/convert-images.mjs render
++node work-modulo-3d/blender/cockpit/verify-assets.mjs
++npm --prefix work-modulo-3d run verify
++```
++
++`CHROME_PATH` permite outro executável. O conversor usa um perfil temporário dedicado, encerrado ao terminar. Blender testado: 5.2.0 LTS; Chrome local para rasterização e WebP. A reprodução funcional é determinística quanto ao mapa/câmera; bytes de render podem variar entre versões de Blender/Chrome/dispositivo.
++
++## Fontes e resultados
++
++- `export-map.mjs` importa via Vite o **mesmo `panel-data.ts`** usado pelo cockpit, exportando ordem/IDs/formas/rótulos para `panel-map.json`. Não existe segunda lista manual de coordenadas.
++- A serigrafia e mostradores vêm de `artwork.tsx`, preservando valores, agulhas, escalas e arcos. O atlas **não contém a chapa do painel**. Tipografia das escalas genéricas é recomposta no conversor (tamanho e distância radial, legenda central) para separar inscrições preexistentes sobrepostas. Não modifica conteúdo técnico ou miniaturas do aplicativo. Fontes usam o fallback monospace local; não há download de fonte pelo gerador.
++- `build_panel.py` inicia uma cena vazia. Chapa curva extrudada, microtextura, borda acolchoada, pedestal, caixas, aros, vedações, vidro refletivo e fixadores são geometria real. Rockers, controles de motor, botões de sintonia, disjuntores e comandos selecionados têm volumes próprios, alinhados às representações existentes; não são controles adicionais.
++- `painel-seneca-i.blend` é a cena editável exclusiva com texturas embarcadas, câmera e luzes diurnas. O script aplica a segunda iluminação para o master noturno; não sobrescreve cenas do avião.
++- `masters/`: SVGs intermediários, PNGs de serigrafia e masters finais 3200×1910, fora de `public/`.
++- `../../public/cockpit-render/`: somente dois WebPs otimizados e `manifest.json` com dimensões, pesos, SHA-256 e origem/fontes. Não se publica `.blend` nem masters no aplicativo.
++- `projection-check.json`: centros e extensões dos **56 corpos reais**, medidos nos vértices avaliados com modificadores e transformação, confrontados com o mapa (erro inferior a 0,001). `oat-clearance.json` registra quatro raios que atingem o OAT à frente da borda acolchoada.
++- `masters/text-bounds-*.json`: caixas tipográficas medidas por `getBBox()` dentro dos retângulos imprimíveis; títulos longos são ajustados sem remover/renomear texto.
++- `masters/*-provenance.json`: fingerprints encadeados exportação → atlas → render. A conversão recusa fontes, atlas ou masters divergentes; não pode atribuir hashes atuais a PNGs antigos.
++
++## Calibração e integração
++
++Coordenadas SVG 1600×955; unidade Blender = 0,01 unidade canônica; X cresce à direita, Y é invertido e Z determina espessura. Câmera ortográfica frontal com largura 16; nenhuma perspectiva pode deslocar controles elevados. Mesma câmera/proporção em ambas as imagens.
++
++`RenderedPanel.tsx` insere as imagens no mesmo `<g transform>` dos hotspots. Filtros escurecem apenas formas canônicas não correspondentes; seleção fora da categoria fica isenta. Máscara do tour, feedback, foco, handlers, pan/zoom e miniaturas continuam vetoriais. Cada imagem tem estado independente e fallback correspondente durante carregamento/falha. `Image.decode()` também cobre o retorno SPA com cache (o evento `load` de SVG sozinho não é confiável nesse caminho). A nova camada não cria canvas/WebGL nem captura eventos.
++
++## Ensaios
++
++Com a aplicação servida em `http://127.0.0.1:4175`:
++
++```sh
++node _bmad-output/visual-review/painel-renderizado/verificar-painel.mjs
++node work-modulo-3d/blender/cockpit/test-pipeline.mjs
++```
++
++Os negativos de `test-pipeline.mjs` trabalham exclusivamente em cópias temporárias: arquivos/JSON/assinatura/dimensões/par WebP inválidos, proveniência obsoleta/incompleta e ciclo de vida CDP (Chrome ausente, término precoce, deadline e desconexão). `verify-assets.mjs` registra `falhou` e sai com código não zero em qualquer exceção. `chrome-cdp.mjs` garante prazo e limpeza compartilhados pelo conversor e pelo navegador.
++
++`PA34_URL` muda a origem. Saída isolada em `_bmad-output/visual-review/painel-renderizado/`; baselines anteriores permanecem intactos. O teste exercita decodificação HTTP, 56 IDs, calibração DOM, cliques adjacentes, busca/teclado, miniaturas, deep-links reativos, categorias, oito paradas do tour, 1440/768/390, resize/zoom/pan, retorno SPA de 3D, movimento reduzido, respostas de imagem atrasadas e bloqueio independente dia/noite. `verify-assets.mjs` compara os 22 hashes históricos, o GLB e a fonte Blender aprovada; `PA34_APPROVED_BLEND` permite informar a localização dessa fonte em outra máquina.
++
++## Limites
++
++As agulhas da imagem principal são estáticas; a animação das miniaturas é preservada. Inscrições muito pequenas exigem zoom, especialmente em celular. Rádios/mostradores são a representação didática existente, não reprodução certificada de um número de série. Dois WebPs de 3200×1910 consomem aproximadamente 49 MB se ambos forem decodificados em RGBA, apesar do download inferior a 1 MB somado; não há certificação de desempenho em aparelhos físicos de baixo custo. O build mantém o aviso preexistente de chunks JavaScript grandes.
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/build_panel.py
+@@ -0,0 +1,343 @@
++"""Painel didático independente. Nunca abre/importa/salva o avião.
++Blender --background --python-exit-code 1 --python .../build_panel.py
++"""
++import bpy
++import json
++import math
++import hashlib
++from pathlib import Path
++from mathutils import Vector
++from bpy_extras.object_utils import world_to_camera_view
++
++HERE = Path(__file__).resolve().parent
++def fingerprint(file):
++    data = (HERE / file).read_bytes()
++    return {'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}
++
++provenance = json.loads((HERE / 'masters/atlas-provenance.json').read_text())
++def verify_inputs():
++    for file, expected in {**provenance['sources'], **provenance['atlases']}.items():
++        assert fingerprint(file) == expected, f'Atlas/fonte obsoleto: {file}'
++verify_inputs()
++MAP = json.loads((HERE / 'panel-map.json').read_text())
++W, H = MAP['width'], MAP['height']
++S = 0.01
++bpy.ops.wm.read_factory_settings(use_empty=True)
++scene = bpy.context.scene
++scene.render.engine = 'CYCLES'
++scene.cycles.samples = 32
++scene.cycles.use_denoising = True
++scene.render.resolution_x = W * 2
++scene.render.resolution_y = H * 2
++scene.render.resolution_percentage = 100
++scene.render.image_settings.file_format = 'PNG'
++scene.render.film_transparent = True
++scene.view_settings.view_transform = 'AgX'
++scene.world = bpy.data.worlds.new('Ambiente exclusivo do painel')
++scene.world.use_nodes = True
++scene.world.node_tree.nodes['Background'].inputs[0].default_value = (.22, .25, .30, 1)
++scene.world.node_tree.nodes['Background'].inputs[1].default_value = .35
++
++def mat(name, color, metal=0, rough=.4, grain=False):
++    m = bpy.data.materials.new(name)
++    m.diffuse_color = (*color, 1)
++    m.use_nodes = True
++    n = m.node_tree.nodes
++    p = n.get('Principled BSDF')
++    p.inputs['Base Color'].default_value = (*color, 1)
++    p.inputs['Metallic'].default_value = metal
++    p.inputs['Roughness'].default_value = rough
++    if grain:
++        noise = n.new('ShaderNodeTexNoise')
++        noise.inputs['Scale'].default_value = 320
++        bump = n.new('ShaderNodeBump')
++        bump.inputs['Strength'].default_value = .24
++        bump.inputs['Distance'].default_value = .003
++        m.node_tree.links.new(noise.outputs['Fac'], bump.inputs['Height'])
++        m.node_tree.links.new(bump.outputs['Normal'], p.inputs['Normal'])
++    return m
++
++plate = mat('Chapa grafite pintada • microtextura', (.055, .06, .055), .45, .42, True)
++tan = mat('Acabamento bege acetinado', (.40, .30, .18), .12, .44, True)
++metal = mat('Alumínio escovado', (.26, .28, .29), .85, .28)
++black = mat('Borracha e baquelite', (.009, .012, .011), .05, .3, True)
++bezel = mat('Aros pretos anodizados', (.03, .035, .032), .7, .24)
++blue = mat('Manetes hélice azuis', (.025, .13, .42), .15, .26)
++red = mat('Manetes mistura vermelhas', (.42, .025, .02), .1, .28)
++
++# O vidro usa reflexão real muito discreta, sem apagar os números.
++glass = bpy.data.materials.new('Vidro • reflexo frontal sutil')
++glass.use_nodes = True
++n = glass.node_tree.nodes
++n.clear()
++out = n.new('ShaderNodeOutputMaterial')
++transparent = n.new('ShaderNodeBsdfTransparent')
++glossy = n.new('ShaderNodeBsdfGlossy')
++glossy.inputs['Color'].default_value = (.55, .65, .72, 1)
++glossy.inputs['Roughness'].default_value = .12
++mix = n.new('ShaderNodeMixShader')
++mix.inputs[0].default_value = .055
++glass.node_tree.links.new(transparent.outputs[0], mix.inputs[1])
++glass.node_tree.links.new(glossy.outputs[0], mix.inputs[2])
++glass.node_tree.links.new(mix.outputs[0], out.inputs[0])
++
++def finish(o, name, material, smooth=False):
++    o.name = name
++    o.data.materials.append(material)
++    if smooth:
++        for p in o.data.polygons:
++            p.use_smooth = True
++    return o
++
++def cube(name, x, y, w, h, z, depth, material, bevel_width=2):
++    bpy.ops.mesh.primitive_cube_add(size=1, location=(x*S, -y*S, z*S))
++    o = bpy.context.object
++    o.dimensions = (w*S, h*S, depth*S)
++    bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
++    if bevel_width:
++        b = o.modifiers.new('Bordas usinadas', 'BEVEL')
++        b.width = bevel_width*S
++        b.segments = 3
++        o.modifiers.new('Normais de chapa', 'WEIGHTED_NORMAL')
++    return finish(o, name, material)
++
++def cylinder(name, x, y, r, z, depth, material):
++    bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=r*S, depth=depth*S, location=(x*S, -y*S, z*S))
++    o = bpy.context.object
++    b = o.modifiers.new('Borda arredondada', 'BEVEL')
++    b.width = min(1.2, depth/3)*S
++    b.segments = 3
++    o.modifiers.new('Normais', 'WEIGHTED_NORMAL')
++    return finish(o, name, material)
++
++def ring(name, x, y, r, z, tube, material):
++    bpy.ops.mesh.primitive_torus_add(major_radius=(r-tube)*S, minor_radius=tube*S, major_segments=72, minor_segments=12, location=(x*S, -y*S, z*S))
++    return finish(bpy.context.object, name, material, True)
++
++def polygon(name, points, z, depth, material):
++    mesh = bpy.data.meshes.new(name)
++    mesh.from_pydata([(x*S, -y*S, z*S) for x,y in points], [], [list(reversed(range(len(points))))])
++    mesh.update()
++    o = bpy.data.objects.new(name, mesh)
++    scene.collection.objects.link(o)
++    mod = o.modifiers.new('Espessura real', 'SOLIDIFY')
++    mod.thickness = depth*S
++    mod = o.modifiers.new('Acabamento de borda', 'BEVEL')
++    mod.width = 3*S
++    mod.segments = 3
++    o.modifiers.new('Normais', 'WEIGHTED_NORMAL')
++    return finish(o, name, material)
++
++def tube(name, points, radius, material):
++    c = bpy.data.curves.new(name, 'CURVE')
++    c.dimensions = '3D'
++    c.bevel_depth = radius*S
++    c.bevel_resolution = 4
++    line = c.splines.new('POLY')
++    line.points.add(len(points)-1)
++    for p, (x,y,z) in zip(line.points, points):
++        p.co = (x*S, -y*S, z*S, 1)
++    o = bpy.data.objects.new(name, c)
++    scene.collection.objects.link(o)
++    o.data.materials.append(material)
++    return o
++
++def screw(x, y, z=4, r=3):
++    cylinder('Fixador de fenda', x, y, r, z, 1.5, metal)
++    cube('Fenda do fixador', x, y, r*1.35, .6, z+1, .25, black, .1)
++
++# Contorno próprio construído em volume, com arco acolchoado.
++upper = [(52,188),(86,126),(200,74),(430,34),(800,21),(1170,34),(1400,74),(1514,126),(1548,188)]
++# Suaviza o perfil por curva quadrática de Bézier correspondente ao desenho.
++def bez(a,b,c,count=18):
++    return [((1-t)**2*a[0]+2*(1-t)*t*b[0]+t*t*c[0], (1-t)**2*a[1]+2*(1-t)*t*b[1]+t*t*c[1]) for t in [i/count for i in range(count)]]
++upper = (bez((52,188),(52,150),(86,126)) + bez((86,126),(200,50),(430,34)) + bez((430,34),(800,8),(1170,34)) + bez((1170,34),(1400,50),(1514,126)) + bez((1514,126),(1548,150),(1548,188)) + [(1548,188)])
++polygon('Chapa frontal curva', upper + [(1548,638),(52,638)], 0, 14, plate)
++tube('Borda acolchoada do glareshield', [(x,y,4) for x,y in upper], 10, black)
++polygon('Faixa inferior bege', [(52,616),(1548,616),(1548,696),(52,696)], 2, 16, tan)
++polygon('Console esquerdo', [(52,660),(450,660),(468,930),(52,930)], 1, 20, tan)
++polygon('Console direito', [(1026,660),(1548,660),(1548,930),(1008,930)], 1, 20, tan)
++polygon('Pedestal saliente', [(552,618),(1006,618),(1058,930),(508,930)], 4, 28, tan)
++for x,y,w,h in [(376,375,400,290),(751,532,342,198)]:
++    cube('Subchapa rebitada', x,y,w,h,1,3,plate,9)
++    for sx in [-1,1]:
++        for sy in [-1,1]: screw(x+sx*(w/2-8),y+sy*(h/2-8),3)
++
++# Atlas só fornece impressão/agulhas; cada instrumento tem corpo próprio.
++textures = {}
++for light in ['dia','noite']:
++    image = bpy.data.images.load(str(HERE / f'masters/serigrafia-{light}.png'))
++    image.pack()
++    m = mat('Serigrafia ' + light, (.06,.06,.06), 0, .6)
++    p = m.node_tree.nodes.get('Principled BSDF')
++    tex = m.node_tree.nodes.new('ShaderNodeTexImage')
++    tex.image = image
++    m.node_tree.links.new(tex.outputs['Color'], p.inputs['Base Color'])
++    m.node_tree.links.new(tex.outputs['Color'], p.inputs['Emission Color'])
++    p.inputs['Emission Strength'].default_value = .28 if light == 'dia' else .85
++    textures[light] = m
++
++faces = []
++def decal(name, points, z):
++    mesh = bpy.data.meshes.new(name)
++    mesh.from_pydata([(x*S,-y*S,z*S) for x,y in points], [], [list(reversed(range(len(points))))])
++    mesh.update()
++    uv = mesh.uv_layers.new(name='Coordenadas canônicas 1600x955')
++    for loop in mesh.loops:
++        x,y = points[loop.vertex_index]
++        uv.data[loop.index].uv = (x/W, 1-y/H)
++    o = bpy.data.objects.new(name, mesh)
++    scene.collection.objects.link(o)
++    finish(o,name,textures['dia'])
++    faces.append(o)
++    return o
++
++def gauge(id, x,y,r,z=5):
++    body = cylinder(id+' • corpo',x,y,r,z,6,bezel)
++    ring(id+' • aro usinado',x,y,r,z+5,2.1,metal)
++    ring(id+' • vedação',x,y,r-3,z+4,1.5,black)
++    radius = r-4.5
++    pts = [(x+radius*math.cos(a*math.tau/96),y+radius*math.sin(a*math.tau/96)) for a in range(96)]
++    decal(id+' • mostrador impresso',pts,z+3.2)
++    o = decal(id+' • vidro',pts,z+5)
++    faces.remove(o)
++    o.data.materials[0] = glass
++    # Parafusos internos à área; nunca invadem um vizinho.
++    for a in [45,135,225,315]:
++        angle = math.radians(a)
++        screw(x+(r-1)*math.cos(angle),y+(r-1)*math.sin(angle),z+7,1.5)
++    return body
++
++bodies = {}
++for e in MAP['instruments']:
++    s = e['shape']; id = e['id']
++    if s['kind'] == 'circle':
++        # OAT montado à frente da borda (topo acolchoado z=14), sem mover XY.
++        bodies[id] = gauge(id,s['cx'],s['cy'],s['r'],20 if id == 'termometro_oat' else 5)
++        continue
++    x,y,w,h = s['x'],s['y'],s['w'],s['h']
++    bodies[id] = cube(id+' • caixa',x+w/2,y+h/2,w,h,5,10,bezel,3)
++    decal(id+' • impressão',[(x+2,y+2),(x+w-2,y+2),(x+w-2,y+h-2),(x+2,y+h-2)],10.1)
++    for sx in [x+4,x+w-4]:
++        for sy in [y+4,y+h-4]: screw(sx,sy,11,1.7)
++    if id in ['manetes_potencia','manetes_helice','manetes_mistura']:
++        positions = {'manetes_potencia':[.25,.4], 'manetes_helice':[.34,.5], 'manetes_mistura':[.22,.38]}[id]
++        material = {'manetes_potencia':black,'manetes_helice':blue,'manetes_mistura':red}[id]
++        for f,p in zip([.34,.66], positions):
++            kx,ky = x+w*f, y+42+(h-90)*p
++            tube(id+' • haste',[(kx,y+h-49,12),(kx,ky+8,20)],2.5,metal)
++            if id == 'manetes_potencia':
++                bpy.ops.mesh.primitive_uv_sphere_add(segments=24, ring_count=12, radius=12.5*S,location=(kx*S,-ky*S,25*S))
++                finish(bpy.context.object,id+' • pomo esférico',material,True)
++            else:
++                cube(id+' • pomo',kx,ky,28,20,25,17,material,7 if id=='manetes_helice' else 4)
++    elif id in ['chave_master','chaves_alternadores','bombas_combustivel_eletricas','pitot_heat_luzes']:
++        count = 1 if id == 'chave_master' else 3 if id == 'pitot_heat_luzes' else 2
++        gap = (w-24-count*16)/max(1,count-1)
++        for i in range(count):
++            kx,kh = x+20+i*(16+gap), min(26,h-38)
++            cube(id+' • interruptor',kx,y+10+kh/2,16,kh,14,7,black,2)
++            cube(id+' • tecla',kx,y+14,12,7,18,3,metal,1)
++    elif id == 'instrumentos_copiloto':
++        for kx in [x+56,x+w/2,x+w-56]:
++            for ky in [y+46,y+142]: gauge(id,kx,ky,27,13)
++    elif id == 'relogio_copiloto_acendedor':
++        gauge(id,x+40,y+h/2+2,24,13)
++        cylinder(id+' • tomada',x+w-52,y+h/2+2,11,14,7,black)
++        ring(id+' • aro tomada',x+w-52,y+h/2+2,12,17,1,metal)
++    elif id in ['navcom_1','navcom_2','adf_receptor']:
++        knobs = [x+w-36,x+w-15] if id != 'adf_receptor' else [x+w-34]
++        for kx in knobs:
++            ky=y+h/2+2
++            cylinder(id+' • botão de sintonia',kx,ky,min(7,h*.15),15,9,black)
++            cube(id+' • marca no botão',kx,ky-2,1,4,20,1,metal,.2)
++    elif id == 'disjuntores':
++        for i in range(12):
++            kx,ky=x+22+(i%4)*40,y+26+(i//4)*24
++            ring(id+' • flange',kx,ky,6,12,1,metal)
++            cylinder(id+' • botão',kx,ky,4,15,7,black)
++    elif id == 'seletoras_combustivel':
++        for kx in [x+58,x+152]:
++            cube(id+' • haste',kx,y+75,8,34,14,7,red,2)
++            cylinder(id+' • manípulo',kx,y+56,10,19,12,red)
++    elif id == 'flaps_alavanca':
++        cube(id+' • haste',x+w/2-14,y+49,8,30,14,8,metal,2)
++        cylinder(id+' • manípulo',x+w/2-14,y+32,9,20,12,black)
++    elif id == 'chaves_magnetos_partida':
++        for kx in [x+26,x+58]:
++            cylinder(id+' • chave rotativa',kx,y+26,11,14,8,black)
++            cube(id+' • ponteiro',kx-4,y+26,8,1.5,19,1,metal,.2)
++    elif id == 'compensadores':
++        for kx in [x+66,x+158]:
++            ring(id+' • roda estriada',kx,y+52,24,16,4,black)
++            cylinder(id+' • eixo',kx,y+52,6,17,6,metal)
++    elif id == 'seletor_trem':
++        tube(id+' • haste',[(x+w/2,y+h*.74,12),(x+w/2,y+h*.43,27)],3,metal)
++        cube(id+' • punho',x+w/2,y+h*.43,30,19,27,17,black,7)
++
++for x,y in [(624,126),(976,126),(624,618),(976,618),(72,620),(1528,620)]: screw(x,y,4)
++
++# Câmera ortográfica: 1 unidade canônica = .01 unidade Blender.
++bpy.ops.object.camera_add(location=(W*S/2,-H*S/2,30))
++camera = bpy.context.object
++camera.name = 'Câmera frontal calibrada • não mover'
++camera.data.type = 'ORTHO'
++camera.data.ortho_scale = W*S
++scene.camera = camera
++
++def area(name, pos, energy, color, size):
++    data = bpy.data.lights.new(name,'AREA')
++    data.energy = energy
++    data.color = color
++    data.shape = 'DISK'
++    data.size = size
++    o = bpy.data.objects.new(name,data)
++    scene.collection.objects.link(o)
++    o.location = pos
++    o.rotation_euler = (Vector((8,-4.5,0))-o.location).to_track_quat('-Z','Y').to_euler()
++    return o
++key = area('Janela superior esquerda',(1,3,10),2100,(1,.92,.79),7)
++fill = area('Preenchimento direito',(17,-3,8),1100,(.66,.78,1),9)
++rim = area('Luz rasante',(8,0,2.5),350,(1,.77,.47),5)
++
++# Mede vértices avaliados dos corpos reais, incluindo modificadores e matrix_world.
++bpy.context.view_layer.update()
++depsgraph = bpy.context.evaluated_depsgraph_get()
++projection = []
++for e in MAP['instruments']:
++    s=e['shape']; body=bodies[e['id']].evaluated_get(depsgraph)
++    mesh=body.to_mesh()
++    points=[world_to_camera_view(scene,camera,body.matrix_world @ v.co) for v in mesh.vertices]
++    body.to_mesh_clear()
++    bounds=[min(p.x*W for p in points),min((1-p.y)*H for p in points),max(p.x*W for p in points),max((1-p.y)*H for p in points)]
++    expected=[s['cx']-s['r'],s['cy']-s['r'],s['cx']+s['r'],s['cy']+s['r']] if s['kind']=='circle' else [s['x'],s['y'],s['x']+s['w'],s['y']+s['h']]
++    center=[(expected[0]+expected[2])/2,(expected[1]+expected[3])/2]
++    actual=[(bounds[0]+bounds[2])/2,(bounds[1]+bounds[3])/2]
++    error=math.dist(center,actual); bounds_error=max(abs(a-b) for a,b in zip(bounds,expected))
++    assert error < .001 and bounds_error < .001, (e['id'],error,bounds_error)
++    projection.append({'id':e['id'],'object':body.name,'center':center,'projected':actual,'error':error,'bounds':bounds,'expectedBounds':expected,'boundsError':bounds_error})
++assert len(bodies)==56
++(HERE/'projection-check.json').write_text(json.dumps(projection,indent=2)+'\n')
++# Raios reais comprovam que a porção superior do OAT não está atrás da borda.
++oat_checks=[]
++for x,y in [(110,116),(103,118),(117,118),(110,130)]:
++    hit,loc,normal,index,obj,matrix=scene.ray_cast(depsgraph,Vector((x*S,-y*S,30)),Vector((0,0,-1)))
++    assert hit and obj.name.startswith('termometro_oat'), (x,y,obj.name if obj else None)
++    oat_checks.append({'point':[x,y],'firstHit':obj.name,'depth':loc.z/S})
++(HERE/'oat-clearance.json').write_text(json.dumps(oat_checks,indent=2)+'\n')
++for light in ['dia','noite']:
++    night = light == 'noite'
++    for o in faces: o.data.materials[0]=textures[light]
++    key.data.energy = 2100 if not night else 160
++    fill.data.energy = 1100 if not night else 120
++    rim.data.energy = 350 if not night else 500
++    rim.data.color = (1,.77,.47) if not night else (1,.24,.045)
++    scene.world.node_tree.nodes['Background'].inputs[1].default_value = .35 if not night else .055
++    scene.render.filepath = str(HERE / f'masters/painel-{light}.png')
++    if not night:
++        bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'painel-seneca-i.blend'))
++    bpy.ops.render.render(write_still=True)
++verify_inputs()
++provenance['masters']={f'masters/painel-{light}.png':fingerprint(f'masters/painel-{light}.png') for light in ['dia','noite']}
++(HERE/'masters/render-provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
++print('Painel independente renderizado; 56 corpos medidos; nenhuma fonte do avião aberta.')
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/chrome-cdp.mjs
+@@ -0,0 +1,69 @@
++// Chrome dedicado: deadlines e cleanup comuns ao conversor e aos ensaios.
++import { spawn } from 'node:child_process'
++import { mkdtemp, rm } from 'node:fs/promises'
++import { tmpdir } from 'node:os'
++import { join } from 'node:path'
++export async function openChrome({ prefix = 'pa34-cdp-', port = 9500 + process.pid % 300, timeout = 15000 } = {}) {
++  const profile = await mkdtemp(join(tmpdir(), prefix))
++  const browser = spawn(process.env.CHROME_PATH ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', ['--headless=new','--no-sandbox','--disable-gpu','--no-first-run',`--remote-debugging-port=${port}`,`--user-data-dir=${profile}`,'about:blank'], { stdio:'ignore' })
++  let socket, failure, seq = 0, closed = false
++  const pending = new Map(), listeners = new Set()
++  const sleep = ms => new Promise(r => setTimeout(r, ms))
++  const rejectAll = error => { for (const p of pending.values()) { clearTimeout(p.timer); p.reject(error) } pending.clear() }
++  browser.on('error', error => { failure = error; rejectAll(error) })
++  browser.on('exit', (code, signal) => { failure ??= new Error(`Chrome encerrou: ${code ?? signal}`); rejectAll(failure) })
++  const alive = () => browser.pid && browser.exitCode === null && browser.signalCode === null && !failure
++  async function waitExit(ms) {
++    if (!alive()) return
++    await new Promise(resolve => {
++      const done = () => { clearTimeout(timer); browser.off('exit', done); browser.off('error', done); resolve() }
++      const timer = setTimeout(done, ms)
++      browser.once('exit', done); browser.once('error', done)
++      if (!alive()) done()
++    })
++  }
++  async function close() {
++    if (closed) return
++    closed = true; rejectAll(new Error('CDP encerrado'))
++    if (socket && socket.readyState < WebSocket.CLOSING) socket.close()
++    if (alive()) { browser.kill('SIGTERM'); await waitExit(2000) }
++    if (alive()) { browser.kill('SIGKILL'); await waitExit(2000) }
++    await rm(profile, { recursive:true, force:true, maxRetries:5, retryDelay:100 })
++    if (alive()) throw new Error('Chrome não encerrou após SIGKILL')
++  }
++  try {
++    let target
++    const deadline = Date.now() + timeout
++    while (!target && Date.now() < deadline) {
++      if (failure) throw failure
++      try { target = (await (await fetch(`http://127.0.0.1:${port}/json/list`, { signal: AbortSignal.timeout(500) })).json()).find(t => t.type === 'page') } catch { /* startup */ }
++      if (!target) await sleep(50)
++    }
++    if (failure) throw failure
++    if (!target) throw new Error('Prazo de inicialização do Chrome excedido')
++    socket = new WebSocket(target.webSocketDebuggerUrl)
++    await new Promise((resolve, reject) => {
++      const finish = error => { clearTimeout(timer); socket.removeEventListener('open', opened); socket.removeEventListener('error', failed); socket.removeEventListener('close', failed); error ? reject(error) : resolve() }
++      const opened = () => finish(), failed = () => finish(new Error('Handshake CDP interrompido'))
++      const timer = setTimeout(() => finish(new Error('Prazo do handshake CDP excedido')), timeout)
++      socket.addEventListener('open', opened); socket.addEventListener('error', failed); socket.addEventListener('close', failed)
++    })
++    socket.addEventListener('close', () => rejectAll(new Error('CDP desconectado')))
++    socket.addEventListener('error', () => rejectAll(new Error('Erro no socket CDP')))
++    socket.addEventListener('message', event => {
++      const m = JSON.parse(event.data), p = pending.get(m.id)
++      if (p) { clearTimeout(p.timer); pending.delete(m.id); m.error ? p.reject(new Error(m.error.message)) : p.resolve(m.result) }
++      for (const listener of listeners) listener(m)
++    })
++    function send(method, params = {}) {
++      return new Promise((resolve, reject) => {
++        if (closed || failure || socket.readyState !== WebSocket.OPEN) { reject(failure ?? new Error('CDP indisponível')); return }
++        const id = ++seq
++        const timer = setTimeout(() => { pending.delete(id); reject(new Error(`Prazo CDP excedido: ${method}`)) }, timeout)
++        pending.set(id, { resolve, reject, timer })
++        try { socket.send(JSON.stringify({ id, method, params })) } catch (error) { clearTimeout(timer); pending.delete(id); reject(error) }
++      })
++    }
++    return { send, close, browser, profile, onEvent(listener) { listeners.add(listener); return () => listeners.delete(listener) } }
++  } catch (error) { await close(); throw error }
++}
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/convert-images.mjs
+@@ -0,0 +1,112 @@
++// Conversão local via Chrome: SVG da serigrafia → PNG, masters Blender → WebP.
++import { openChrome } from './chrome-cdp.mjs'
++import { readFile, writeFile, mkdir } from 'node:fs/promises'
++import { dirname, resolve } from 'node:path'
++import { fileURLToPath } from 'node:url'
++import { createHash } from 'node:crypto'
++const here = dirname(fileURLToPath(import.meta.url))
++const digest = async path => { const bytes = await readFile(path); return { bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') } }
++const sourceFiles = ['export-map.mjs', 'convert-images.mjs', 'chrome-cdp.mjs', 'build_panel.py', 'panel-map.json', '../../src/components/cockpit/panel-data.ts', '../../src/components/cockpit/artwork.tsx', 'masters/serigrafia-dia.svg', 'masters/serigrafia-noite.svg']
++const fingerprints = async files => Object.fromEntries(await Promise.all(files.map(async f => [f, await digest(resolve(here, f))])))
++const mode = process.argv[2] ?? 'atlas'
++if (!['atlas', 'render'].includes(mode)) throw new Error('Modo inválido')
++let provenance
++if (mode === 'atlas') {
++  const exported = JSON.parse(await readFile(resolve(here,'masters/export-provenance.json'),'utf8'))
++  for (const [file, expected] of Object.entries(exported)) if ((await digest(resolve(here,file))).sha256 !== expected.sha256) throw new Error(`Exportação obsoleta: ${file}`)
++}
++if (mode === 'render') {
++  provenance = JSON.parse(await readFile(resolve(here, 'masters/render-provenance.json'), 'utf8'))
++  for (const [group, prefix] of [['atlases','serigrafia'],['masters','painel']]) {
++    const keys=Object.keys(provenance[group] ?? {})
++    if(keys.length!==2||!['dia','noite'].every(light=>keys.includes(`masters/${prefix}-${light}.png`))) throw new Error(`Proveniência incompleta: ${group}`)
++  }
++  for (const [file, expected] of Object.entries({...provenance.sources, ...provenance.atlases, ...provenance.masters})) {
++    if ((await digest(resolve(here, file))).sha256 !== expected.sha256) throw new Error(`Render obsoleto: ${file}`)
++  }
++  if (sourceFiles.some(file => !provenance.sources[file])) throw new Error('Proveniência incompleta')
++}
++const chrome = await openChrome({ prefix:'pa34-atlas-' })
++try {
++  const { send } = chrome
++  const out = resolve(here, '../../public/cockpit-render')
++  await mkdir(out, { recursive: true })
++  for (const light of ['dia', 'noite']) {
++    const input = resolve(here, `masters/${mode === 'atlas' ? 'serigrafia-' : 'painel-'}${light}.${mode === 'atlas' ? 'svg' : 'png'}`)
++    const mime = mode === 'atlas' ? 'image/svg+xml' : 'image/png'
++    const data = `data:${mime};base64,${(await readFile(input)).toString('base64')}`
++    const canonical = JSON.parse(await readFile(resolve(here, 'panel-map.json'), 'utf8'))
++    const response = await send('Runtime.evaluate', { expression: `(async () => {
++      const im = new Image(); let src = ${JSON.stringify(data)}; const bounds=[];
++      if (${mode === 'atlas'}) {
++        const xml = new DOMParser().parseFromString(await (await fetch(src)).text(), 'image/svg+xml');
++        const svg=document.importNode(xml.documentElement,true);svg.style.position='absolute';svg.style.left='-10000px';document.body.appendChild(svg);
++        // Composição tipográfica para impressão pequena: sem mudar um único valor,
++        // ângulo de escala, arco, ponteiro ou posição/raio canônico do instrumento.
++        for (const entry of ${JSON.stringify(canonical.instruments)}) {
++          const s=entry.shape;
++          const g=svg.querySelector('[data-decal-instrument="'+entry.id+'"]');
++          if(s.kind==='rect') {
++            const left=s.x+3,top=s.y+3,right=s.x+s.w-3,bottom=s.y+s.h-3;
++            for(const text of g.querySelectorAll('text')) {
++              const original=text.textContent;let b=text.getBBox();
++              for(let attempt=0;attempt<8&&(b.width>right-left||b.height>bottom-top);attempt++) {
++                const factor=Math.min((right-left)/b.width,(bottom-top)/b.height)*.99;
++                text.setAttribute('font-size',parseFloat(getComputedStyle(text).fontSize)*factor);
++                const spacing=parseFloat(getComputedStyle(text).letterSpacing);if(Number.isFinite(spacing))text.setAttribute('letter-spacing',spacing*factor);
++                b=text.getBBox();
++              }
++              const dx=b.x<left?left-b.x:b.x+b.width>right?right-b.x-b.width:0;
++              const dy=b.y<top?top-b.y:b.y+b.height>bottom?bottom-b.y-b.height:0;
++              text.setAttribute('x',Number(text.getAttribute('x'))+dx);text.setAttribute('y',Number(text.getAttribute('y'))+dy);
++              b=text.getBBox();const ok=b.x>=left-.01&&b.y>=top-.01&&b.x+b.width<=right+.01&&b.y+b.height<=bottom+.01&&text.textContent===original;
++              bounds.push({id:entry.id,text:original,bounds:[b.x,b.y,b.width,b.height],printable:[left,top,right,bottom],ok});
++              if(!ok)throw new Error('Impressão fora do decal: '+entry.id+' '+original);
++            }
++            continue;
++          }
++          for(const t of g.querySelectorAll('text[dominant-baseline="central"]')) {
++            const font=Number(t.getAttribute('font-size'))*.7;
++            t.setAttribute('font-size',font);
++            const x=Number(t.getAttribute('x')),y=Number(t.getAttribute('y'));
++            // Reserva espaço real de glifo dentro da vedação/vidro, inclusive ADF.
++            const limit=s.r-7-font*Math.max(1,.6*t.textContent.trim().length)/2;
++            const factor=Math.min(1.08,limit/Math.max(1,Math.hypot(x-s.cx,y-s.cy)));
++            t.setAttribute('x',s.cx+(x-s.cx)*factor);t.setAttribute('y',s.cy+(y-s.cy)*factor);
++          }
++          const title=g.querySelector('text[letter-spacing="0.5"]');
++          const generic=[...g.querySelectorAll('text[dominant-baseline="central"]')].some(t=>t.parentElement.children.length===2);
++          if(title && generic) {
++            title.setAttribute('y',s.cy+s.r*.20);
++            title.setAttribute('font-size',Math.max(3.4,s.r*.092));
++            title.setAttribute('letter-spacing','0');
++            const sub=title.nextElementSibling;
++            if(sub?.tagName==='text') {sub.setAttribute('y',s.cy+s.r*.34);sub.setAttribute('font-size',Math.max(2.9,s.r*.075));}
++          } else if(title && Number(title.getAttribute('y'))>s.cy+s.r*.68) {
++            // Legendas especiais antes impressas sobre o aro ficam dentro do vidro.
++            title.setAttribute('y',s.cy+s.r*.64);
++            title.setAttribute('font-size',Math.max(3.4,s.r*.092));
++            title.setAttribute('letter-spacing','0');
++          }
++        }
++        svg.removeAttribute('style');src=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml'}));svg.remove();
++      }
++      im.src=src; await im.decode(); const c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight; c.getContext('2d').drawImage(im, 0, 0); if(src.startsWith('blob:'))URL.revokeObjectURL(src);return {data:c.toDataURL('${mode === 'atlas' ? 'image/png' : 'image/webp'}', .93),bounds}
++    })()`, awaitPromise: true, returnByValue: true })
++    if (response.exceptionDetails) throw new Error(JSON.stringify(response.exceptionDetails))
++    const dest = mode === 'atlas' ? resolve(here, `masters/serigrafia-${light}.png`) : resolve(out, `painel-${light}.webp`)
++    await writeFile(dest, Buffer.from(response.result.value.data.split(',')[1], 'base64'))
++    if (mode === 'atlas') await writeFile(resolve(here, `masters/text-bounds-${light}.json`), JSON.stringify(response.result.value.bounds, null, 2)+'\n')
++    console.log(dest)
++  }
++  if (mode === 'atlas') await writeFile(resolve(here,'masters/atlas-provenance.json'), JSON.stringify({sources:await fingerprints(sourceFiles),atlases:await fingerprints(['masters/serigrafia-dia.png','masters/serigrafia-noite.png'])},null,2)+'\n')
++  if (mode === 'render') {
++    const canonical = JSON.parse(await readFile(resolve(here, 'panel-map.json'), 'utf8'))
++    const images = []
++    for (const light of ['dia', 'noite']) images.push({ file: `painel-${light}.webp`, width: canonical.width * 2, height: canonical.height * 2, ...await digest(resolve(out, `painel-${light}.webp`)) })
++    const sources = provenance.sources
++    await writeFile(resolve(out, 'manifest.json'), JSON.stringify({ origem: 'Cena procedural independente do painel PA-34-200 Seneca I, criada no Blender; impressão derivada do artwork local, sem importar geometria do avião. Material didático não certificado.', camera: { projection: 'orthographic', width: canonical.width, height: canonical.height, sameCameraForBothImages: true }, masters: 'work-modulo-3d/blender/cockpit/masters/', generation: provenance, images, sources }, null, 2) + '\n')
++  }
++} finally {
++  await chrome.close()
++}
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/export-map.mjs
+@@ -0,0 +1,27 @@
++// Exporta o mapa canônico e somente a serigrafia existente; nunca a chapa SVG.
++import { createServer } from 'vite'
++import { mkdir, readFile, writeFile } from 'node:fs/promises'
++import { createHash } from 'node:crypto'
++import { dirname, resolve } from 'node:path'
++import { fileURLToPath } from 'node:url'
++import React from 'react'
++import { renderToStaticMarkup } from 'react-dom/server'
++const here = dirname(fileURLToPath(import.meta.url))
++const root = resolve(here, '../..')
++const server = await createServer({ root, server: { middlewareMode: true }, appType: 'custom' })
++try {
++  const { PANEL_MAP, PANEL_ORDER, VB_W, VB_H } = await server.ssrLoadModule('/src/components/cockpit/panel-data.ts')
++  const { ArtDefs, renderArt } = await server.ssrLoadModule('/src/components/cockpit/artwork.tsx')
++  await mkdir(resolve(here, 'masters'), { recursive: true })
++  await writeFile(resolve(here, 'panel-map.json'), JSON.stringify({ width: VB_W, height: VB_H, instruments: PANEL_ORDER.map(id => PANEL_MAP[id]) }, null, 2) + '\n')
++  for (const night of [false, true]) {
++    const svg = React.createElement('svg', { xmlns: 'http://www.w3.org/2000/svg', width: VB_W * 2, height: VB_H * 2, viewBox: `0 0 ${VB_W} ${VB_H}` },
++      React.createElement(ArtDefs), ...PANEL_ORDER.map(id => React.createElement('g', { key: id, 'data-decal-instrument': id }, renderArt(id, { night, sweep: false }))))
++    await writeFile(resolve(here, `masters/serigrafia-${night ? 'noite' : 'dia'}.svg`), renderToStaticMarkup(svg))
++  }
++  const fingerprints = {}
++  for (const file of ['export-map.mjs','../../src/components/cockpit/panel-data.ts','../../src/components/cockpit/artwork.tsx','panel-map.json','masters/serigrafia-dia.svg','masters/serigrafia-noite.svg']) {
++    const bytes=await readFile(resolve(here,file));fingerprints[file]={bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')}
++  }
++  await writeFile(resolve(here,'masters/export-provenance.json'),JSON.stringify(fingerprints,null,2)+'\n')
++} finally { await server.close() }
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/panel-map.json
+@@ -0,0 +1,937 @@
++{
++  "width": 1600,
++  "height": 955,
++  "instruments": [
++    {
++      "id": "bussola_magnetica",
++      "zone": "GLARESHIELD",
++      "tag": "BÚSSOLA",
++      "shape": {
++        "kind": "rect",
++        "x": 742,
++        "y": 75,
++        "w": 116,
++        "h": 34
++      },
++      "label": {
++        "x": 866,
++        "y": 96,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "termometro_oat",
++      "zone": "GLARESHIELD",
++      "tag": "OAT",
++      "shape": {
++        "kind": "circle",
++        "cx": 110,
++        "cy": 130,
++        "r": 19
++      },
++      "label": {
++        "x": 137,
++        "y": 133,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "relogio",
++      "zone": "PAINEL ESQ",
++      "tag": "RELÓGIO",
++      "shape": {
++        "kind": "circle",
++        "cx": 250,
++        "cy": 170,
++        "r": 34
++      },
++      "label": {
++        "x": 250,
++        "y": 128,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "adf_indicador",
++      "zone": "PAINEL ESQ",
++      "tag": "ADF",
++      "shape": {
++        "kind": "circle",
++        "cx": 378,
++        "cy": 170,
++        "r": 38
++      },
++      "label": {
++        "x": 378,
++        "y": 122,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "aviso_estol",
++      "zone": "PAINEL ESQ",
++      "tag": "STALL",
++      "shape": {
++        "kind": "rect",
++        "x": 474,
++        "y": 132,
++        "w": 128,
++        "h": 64
++      },
++      "label": {
++        "x": 538,
++        "y": 123,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "chave_master",
++      "zone": "PAINEL ESQ · INTERRUPTORES",
++      "tag": "MASTER",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 192,
++        "w": 84,
++        "h": 56
++      },
++      "label": {
++        "x": 158,
++        "y": 223,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "chaves_alternadores",
++      "zone": "PAINEL ESQ · INTERRUPTORES",
++      "tag": "ALT L–R",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 256,
++        "w": 84,
++        "h": 56
++      },
++      "label": {
++        "x": 158,
++        "y": 287,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "chaves_magnetos_partida",
++      "zone": "PAINEL ESQ · INTERRUPTORES",
++      "tag": "MAG/START",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 320,
++        "w": 84,
++        "h": 64
++      },
++      "label": {
++        "x": 158,
++        "y": 355,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "bombas_combustivel_eletricas",
++      "zone": "PAINEL ESQ · INTERRUPTORES",
++      "tag": "FUEL PUMPS",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 392,
++        "w": 84,
++        "h": 56
++      },
++      "label": {
++        "x": 158,
++        "y": 423,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "pitot_heat_luzes",
++      "zone": "PAINEL ESQ · INTERRUPTORES",
++      "tag": "PITOT/LUZES",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 456,
++        "w": 84,
++        "h": 64
++      },
++      "label": {
++        "x": 158,
++        "y": 491,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "freio_estacionamento",
++      "zone": "PAINEL ESQ · INTERRUPTORES",
++      "tag": "FREIO EST.",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 528,
++        "w": 84,
++        "h": 76
++      },
++      "label": {
++        "x": 158,
++        "y": 569,
++        "anchor": "start"
++      }
++    },
++    {
++      "id": "velocimetro",
++      "zone": "PAINEL ESQ · SIX-PACK",
++      "tag": "ASI",
++      "shape": {
++        "kind": "circle",
++        "cx": 244,
++        "cy": 310,
++        "r": 58
++      },
++      "label": {
++        "x": 244,
++        "y": 244,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "horizonte_artificial",
++      "zone": "PAINEL ESQ · SIX-PACK",
++      "tag": "AI",
++      "shape": {
++        "kind": "circle",
++        "cx": 380,
++        "cy": 310,
++        "r": 58
++      },
++      "label": {
++        "x": 380,
++        "y": 244,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "altimetro",
++      "zone": "PAINEL ESQ · SIX-PACK",
++      "tag": "ALT",
++      "shape": {
++        "kind": "circle",
++        "cx": 516,
++        "cy": 310,
++        "r": 58
++      },
++      "label": {
++        "x": 516,
++        "y": 244,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "coordenador_curva",
++      "zone": "PAINEL ESQ · SIX-PACK",
++      "tag": "TC",
++      "shape": {
++        "kind": "circle",
++        "cx": 244,
++        "cy": 446,
++        "r": 58
++      },
++      "label": {
++        "x": 244,
++        "y": 519,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "giro_direcional",
++      "zone": "PAINEL ESQ · SIX-PACK",
++      "tag": "DG",
++      "shape": {
++        "kind": "circle",
++        "cx": 380,
++        "cy": 446,
++        "r": 58
++      },
++      "label": {
++        "x": 380,
++        "y": 519,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "variometro",
++      "zone": "PAINEL ESQ · SIX-PACK",
++      "tag": "VSI",
++      "shape": {
++        "kind": "circle",
++        "cx": 516,
++        "cy": 446,
++        "r": 58
++      },
++      "label": {
++        "x": 516,
++        "y": 519,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "indicador_vor_1",
++      "zone": "PAINEL ESQ",
++      "tag": "OBS 1",
++      "shape": {
++        "kind": "circle",
++        "cx": 274,
++        "cy": 570,
++        "r": 38
++      },
++      "label": {
++        "x": 274,
++        "y": 619,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "indicador_vor_2_gs",
++      "zone": "PAINEL ESQ",
++      "tag": "OBS 2/GS",
++      "shape": {
++        "kind": "circle",
++        "cx": 386,
++        "cy": 570,
++        "r": 38
++      },
++      "label": {
++        "x": 386,
++        "y": 619,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "avisos_eletricos_vacuo",
++      "zone": "PAINEL ESQ",
++      "tag": "OV/VAC",
++      "shape": {
++        "kind": "rect",
++        "x": 440,
++        "y": 536,
++        "w": 140,
++        "h": 72
++      },
++      "label": {
++        "x": 510,
++        "y": 621,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "luzes_marker",
++      "zone": "CENTRO · AUX",
++      "tag": "MARKER",
++      "shape": {
++        "kind": "rect",
++        "x": 596,
++        "y": 258,
++        "w": 84,
++        "h": 46
++      },
++      "label": {
++        "x": 638,
++        "y": 249,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "piloto_automatico",
++      "zone": "CENTRO · AUX",
++      "tag": "AP",
++      "shape": {
++        "kind": "rect",
++        "x": 596,
++        "y": 314,
++        "w": 84,
++        "h": 110
++      },
++      "label": {
++        "x": 638,
++        "y": 307,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "painel_audio",
++      "zone": "CENTRO · RÁDIOS",
++      "tag": "ÁUDIO",
++      "shape": {
++        "kind": "rect",
++        "x": 700,
++        "y": 140,
++        "w": 274,
++        "h": 40
++      },
++      "label": {
++        "x": 968,
++        "y": 150,
++        "anchor": "end"
++      }
++    },
++    {
++      "id": "navcom_1",
++      "zone": "CENTRO · RÁDIOS",
++      "tag": "NAV/COM 1",
++      "shape": {
++        "kind": "rect",
++        "x": 700,
++        "y": 188,
++        "w": 274,
++        "h": 46
++      },
++      "label": {
++        "x": 968,
++        "y": 198,
++        "anchor": "end"
++      }
++    },
++    {
++      "id": "navcom_2",
++      "zone": "CENTRO · RÁDIOS",
++      "tag": "NAV/COM 2",
++      "shape": {
++        "kind": "rect",
++        "x": 700,
++        "y": 242,
++        "w": 274,
++        "h": 46
++      },
++      "label": {
++        "x": 968,
++        "y": 252,
++        "anchor": "end"
++      }
++    },
++    {
++      "id": "adf_receptor",
++      "zone": "CENTRO · RÁDIOS",
++      "tag": "ADF REC",
++      "shape": {
++        "kind": "rect",
++        "x": 700,
++        "y": 296,
++        "w": 274,
++        "h": 42
++      },
++      "label": {
++        "x": 968,
++        "y": 306,
++        "anchor": "end"
++      }
++    },
++    {
++      "id": "dme",
++      "zone": "CENTRO · RÁDIOS",
++      "tag": "DME",
++      "shape": {
++        "kind": "rect",
++        "x": 700,
++        "y": 346,
++        "w": 274,
++        "h": 34
++      },
++      "label": {
++        "x": 968,
++        "y": 356,
++        "anchor": "end"
++      }
++    },
++    {
++      "id": "transponder",
++      "zone": "CENTRO · RÁDIOS",
++      "tag": "XPDR",
++      "shape": {
++        "kind": "rect",
++        "x": 700,
++        "y": 388,
++        "w": 274,
++        "h": 34
++      },
++      "label": {
++        "x": 968,
++        "y": 398,
++        "anchor": "end"
++      }
++    },
++    {
++      "id": "pressao_admissao",
++      "zone": "CENTRO · MOTOR",
++      "tag": "MP",
++      "shape": {
++        "kind": "circle",
++        "cx": 638,
++        "cy": 496,
++        "r": 48
++      },
++      "label": {
++        "x": 638,
++        "y": 440,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "tacometro_duplo",
++      "zone": "CENTRO · MOTOR",
++      "tag": "RPM",
++      "shape": {
++        "kind": "circle",
++        "cx": 760,
++        "cy": 496,
++        "r": 48
++      },
++      "label": {
++        "x": 760,
++        "y": 440,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "fluxo_combustivel_pressao",
++      "zone": "CENTRO · MOTOR",
++      "tag": "FF/PSI",
++      "shape": {
++        "kind": "circle",
++        "cx": 882,
++        "cy": 496,
++        "r": 48
++      },
++      "label": {
++        "x": 882,
++        "y": 440,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "egt",
++      "zone": "CENTRO · MOTOR",
++      "tag": "EGT",
++      "shape": {
++        "kind": "circle",
++        "cx": 622,
++        "cy": 592,
++        "r": 27
++      },
++      "label": {
++        "x": 622,
++        "y": 628,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "pressao_oleo",
++      "zone": "CENTRO · MOTOR",
++      "tag": "OIL P",
++      "shape": {
++        "kind": "circle",
++        "cx": 686,
++        "cy": 592,
++        "r": 27
++      },
++      "label": {
++        "x": 686,
++        "y": 628,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "temperatura_oleo",
++      "zone": "CENTRO · MOTOR",
++      "tag": "OIL T",
++      "shape": {
++        "kind": "circle",
++        "cx": 750,
++        "cy": 592,
++        "r": 27
++      },
++      "label": {
++        "x": 750,
++        "y": 628,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "cht",
++      "zone": "CENTRO · MOTOR",
++      "tag": "CHT",
++      "shape": {
++        "kind": "circle",
++        "cx": 814,
++        "cy": 592,
++        "r": 27
++      },
++      "label": {
++        "x": 814,
++        "y": 628,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "quantidade_combustivel",
++      "zone": "CENTRO · MOTOR",
++      "tag": "FUEL QTY",
++      "shape": {
++        "kind": "circle",
++        "cx": 878,
++        "cy": 592,
++        "r": 27
++      },
++      "label": {
++        "x": 878,
++        "y": 628,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "instrumentos_copiloto",
++      "zone": "PAINEL DIR · COPILOTO",
++      "tag": "COPILOTO",
++      "shape": {
++        "kind": "rect",
++        "x": 1000,
++        "y": 140,
++        "w": 268,
++        "h": 220
++      },
++      "label": {
++        "x": 1134,
++        "y": 130,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "relogio_copiloto_acendedor",
++      "zone": "PAINEL DIR · COPILOTO",
++      "tag": "RELÓGIO/12V",
++      "shape": {
++        "kind": "rect",
++        "x": 1288,
++        "y": 140,
++        "w": 246,
++        "h": 90
++      },
++      "label": {
++        "x": 1411,
++        "y": 130,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "disjuntores",
++      "zone": "PAINEL DIR",
++      "tag": "DISJUNTORES",
++      "shape": {
++        "kind": "rect",
++        "x": 1288,
++        "y": 242,
++        "w": 246,
++        "h": 118
++      },
++      "label": {
++        "x": 1411,
++        "y": 235,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "seletor_trem",
++      "zone": "PAINEL DIR · TREM DE POUSO",
++      "tag": "GEAR SEL",
++      "shape": {
++        "kind": "rect",
++        "x": 1000,
++        "y": 384,
++        "w": 112,
++        "h": 150
++      },
++      "label": {
++        "x": 1056,
++        "y": 375,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "luzes_trem_verdes",
++      "zone": "PAINEL DIR · TREM DE POUSO",
++      "tag": "3 GREEN",
++      "shape": {
++        "kind": "rect",
++        "x": 1124,
++        "y": 384,
++        "w": 140,
++        "h": 70
++      },
++      "label": {
++        "x": 1194,
++        "y": 375,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "luz_trem_vermelha",
++      "zone": "PAINEL DIR · TREM DE POUSO",
++      "tag": "GEAR WARN",
++      "shape": {
++        "kind": "rect",
++        "x": 1124,
++        "y": 464,
++        "w": 140,
++        "h": 70
++      },
++      "label": {
++        "x": 1194,
++        "y": 458,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "extensao_emergencia_trem",
++      "zone": "PAINEL DIR · TREM DE POUSO",
++      "tag": "EMERG GEAR",
++      "shape": {
++        "kind": "rect",
++        "x": 1000,
++        "y": 544,
++        "w": 264,
++        "h": 60
++      },
++      "label": {
++        "x": 1132,
++        "y": 618,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "amperimetros",
++      "zone": "PAINEL DIR",
++      "tag": "AMP L–R",
++      "shape": {
++        "kind": "circle",
++        "cx": 1322,
++        "cy": 422,
++        "r": 36
++      },
++      "label": {
++        "x": 1322,
++        "y": 378,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "indicador_vacuo",
++      "zone": "PAINEL DIR",
++      "tag": "SUCÇÃO",
++      "shape": {
++        "kind": "circle",
++        "cx": 1422,
++        "cy": 422,
++        "r": 36
++      },
++      "label": {
++        "x": 1422,
++        "y": 378,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "estatica_alternada",
++      "zone": "PAINEL DIR",
++      "tag": "EST. ALT",
++      "shape": {
++        "kind": "rect",
++        "x": 1280,
++        "y": 474,
++        "w": 116,
++        "h": 84
++      },
++      "label": {
++        "x": 1338,
++        "y": 468,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "aquecimento_desembacador",
++      "zone": "PAINEL DIR",
++      "tag": "AQUEC/DESEMB",
++      "shape": {
++        "kind": "rect",
++        "x": 1408,
++        "y": 474,
++        "w": 126,
++        "h": 84
++      },
++      "label": {
++        "x": 1471,
++        "y": 468,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "seletoras_combustivel",
++      "zone": "PEDESTAL · CONSOLE",
++      "tag": "FUEL SEL",
++      "shape": {
++        "kind": "rect",
++        "x": 68,
++        "y": 674,
++        "w": 210,
++        "h": 244
++      },
++      "label": {
++        "x": 173,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "flaps_alavanca",
++      "zone": "PEDESTAL · CONSOLE",
++      "tag": "FLAPS",
++      "shape": {
++        "kind": "rect",
++        "x": 292,
++        "y": 674,
++        "w": 140,
++        "h": 244
++      },
++      "label": {
++        "x": 362,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "manetes_potencia",
++      "zone": "PEDESTAL · QUADRANTE",
++      "tag": "THROTTLE",
++      "shape": {
++        "kind": "rect",
++        "x": 582,
++        "y": 674,
++        "w": 124,
++        "h": 244
++      },
++      "label": {
++        "x": 644,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "manetes_helice",
++      "zone": "PEDESTAL · QUADRANTE",
++      "tag": "PROP",
++      "shape": {
++        "kind": "rect",
++        "x": 718,
++        "y": 674,
++        "w": 124,
++        "h": 244
++      },
++      "label": {
++        "x": 780,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "manetes_mistura",
++      "zone": "PEDESTAL · QUADRANTE",
++      "tag": "MIXTURE",
++      "shape": {
++        "kind": "rect",
++        "x": 854,
++        "y": 674,
++        "w": 124,
++        "h": 244
++      },
++      "label": {
++        "x": 916,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "compensadores",
++      "zone": "PEDESTAL · CONSOLE",
++      "tag": "TRIM",
++      "shape": {
++        "kind": "rect",
++        "x": 1036,
++        "y": 674,
++        "w": 246,
++        "h": 116
++      },
++      "label": {
++        "x": 1159,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "cowl_flaps",
++      "zone": "PEDESTAL · CONSOLE",
++      "tag": "COWL FLAPS",
++      "shape": {
++        "kind": "rect",
++        "x": 1036,
++        "y": 802,
++        "w": 246,
++        "h": 116
++      },
++      "label": {
++        "x": 1159,
++        "y": 796,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "ar_alternativo",
++      "zone": "PEDESTAL · CONSOLE",
++      "tag": "AR ALT",
++      "shape": {
++        "kind": "rect",
++        "x": 1306,
++        "y": 674,
++        "w": 212,
++        "h": 116
++      },
++      "label": {
++        "x": 1412,
++        "y": 665,
++        "anchor": "middle"
++      }
++    },
++    {
++      "id": "jacks_audio",
++      "zone": "PEDESTAL · CONSOLE",
++      "tag": "JACKS ÁUDIO",
++      "shape": {
++        "kind": "rect",
++        "x": 1306,
++        "y": 802,
++        "w": 212,
++        "h": 116
++      },
++      "label": {
++        "x": 1412,
++        "y": 796,
++        "anchor": "middle"
++      }
++    }
++  ]
++}
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/test-pipeline.mjs
+@@ -0,0 +1,71 @@
++// Negativos isolados: nunca altera os ativos finais.
++import assert from 'node:assert/strict'
++import { spawnSync } from 'node:child_process'
++import { mkdtemp, readFile, writeFile, mkdir, rm, readdir, copyFile } from 'node:fs/promises'
++import { tmpdir } from 'node:os'
++import { dirname, resolve, join } from 'node:path'
++import { fileURLToPath } from 'node:url'
++import { createHash } from 'node:crypto'
++import { openChrome } from './chrome-cdp.mjs'
++const here=dirname(fileURLToPath(import.meta.url)),project=resolve(here,'../../..'),temp=await mkdtemp(join(tmpdir(),'pa34-negative-'))
++const results=[]
++const sha=b=>createHash('sha256').update(b).digest('hex')
++const run=(file,args=[],env={})=>spawnSync(process.execPath,[file,...args],{cwd:project,env:{...process.env,...env},encoding:'utf8',timeout:10000})
++const record=(name,data={})=>results.push({name,ok:true,...data})
++try {
++  for(const path of ['/definitely/not/a/chrome','/usr/bin/true'])for(const [file,args] of [[resolve(here,'convert-images.mjs'),['atlas']],[resolve(project,'_bmad-output/visual-review/painel-renderizado/verificar-painel.mjs'),[]]]) {
++    const before=(await readdir(tmpdir())).filter(n=>/^pa34-(atlas|render-test)-/.test(n)),start=Date.now()
++    const r=run(file,args,{CHROME_PATH:path,REVIEW_OUTPUT:resolve(temp,'browser-report')})
++    assert.notEqual(r.status,0);assert.equal(r.error,undefined);assert.ok(Date.now()-start<8000)
++    const after=(await readdir(tmpdir())).filter(n=>/^pa34-(atlas|render-test)-/.test(n));assert.deepEqual(after.sort(),before.sort())
++    record('CLI Chrome indisponível/encerra cedo: '+path+' '+file.split('/').pop(),{ms:Date.now()-start})
++  }
++  for(const mode of ['deadline','terminate']) {
++    const browser=await openChrome({prefix:'pa34-negative-cdp-',timeout:2000})
++    try {
++      const pending=browser.send('Runtime.evaluate',{expression:'new Promise(()=>{})',awaitPromise:true}).then(()=>null,e=>e)
++      if(mode==='terminate')browser.browser.kill('SIGTERM')
++      const error=await pending;assert.ok(error instanceof Error);record('CDP '+mode+' rejeita comando pendente',{error:error.message})
++    } finally {await browser.close()}
++    assert.ok(browser.browser.exitCode!==null||browser.browser.signalCode!==null)
++    await assert.rejects(readFile(resolve(browser.profile,'Local State')))
++  }
++  const original=JSON.parse(await readFile(resolve(here,'../../public/cockpit-render/manifest.json'),'utf8'))
++  const day=await readFile(resolve(here,'../../public/cockpit-render/painel-dia.webp')),night=await readFile(resolve(here,'../../public/cockpit-render/painel-noite.webp'))
++  const cases=['manifest-ausente','json-invalido','imagem-ausente','par-duplicado','terceira-imagem','assinatura','dimensao-real','dimensao-manifest','hash','truncado','proveniencia-incompleta']
++  for(const name of cases) {
++    const dir=resolve(temp,name);await mkdir(dir);const manifest=structuredClone(original);let bytes=Buffer.from(day)
++    if(name==='proveniencia-incompleta')manifest.generation.masters={}
++    if(name==='par-duplicado')manifest.images[1]=manifest.images[0]
++    if(name==='terceira-imagem')manifest.images.push(manifest.images[0])
++    if(name==='assinatura')bytes.write('NOPE',0)
++    if(name==='dimensao-real') {for(let p=12;p<bytes.length;){const tag=bytes.toString('ascii',p,p+4),n=bytes.readUInt32LE(p+4);if(tag==='VP8X')bytes.writeUIntLE(1599,p+12,3);if(tag==='VP8 ')bytes.writeUInt16LE(1600,p+14);p+=8+n+n%2}}
++    if(name==='truncado')bytes=bytes.subarray(0,bytes.length-3)
++    if(['assinatura','dimensao-real','truncado'].includes(name)){manifest.images[0].sha256=sha(bytes);manifest.images[0].bytes=bytes.length}
++    if(name==='dimensao-manifest')manifest.images[0].width=1500
++    if(name==='hash')manifest.images[0].sha256='0'.repeat(64)
++    if(name!=='imagem-ausente')await writeFile(resolve(dir,'painel-dia.webp'),bytes)
++    await writeFile(resolve(dir,'painel-noite.webp'),night)
++    if(name!=='manifest-ausente')await writeFile(resolve(dir,'manifest.json'),name==='json-invalido'?'{broken':JSON.stringify(manifest))
++    const r=run(resolve(here,'verify-assets.mjs'),[],{COCKPIT_ASSET_DIR:dir,COCKPIT_REPORT_DIR:dir})
++    assert.notEqual(r.status,0);assert.equal(r.error,undefined)
++    const report=JSON.parse(await readFile(resolve(dir,'verificacao-ativos.json'),'utf8'));assert.equal(report.status,'falhou');assert.ok(report.error)
++    record('Verificador falha fechado: '+name)
++  }
++  const provenance=JSON.parse(await readFile(resolve(here,'masters/render-provenance.json'),'utf8'))
++  const fixture=resolve(temp,'fixture/app/blender/cockpit')
++  for(const f of [...Object.keys(provenance.sources),...Object.keys(provenance.atlases),...Object.keys(provenance.masters),'masters/render-provenance.json']) {
++    const dst=resolve(fixture,f);await mkdir(dirname(dst),{recursive:true});await copyFile(resolve(here,f),dst)
++  }
++  for(const target of ['build_panel.py','masters/serigrafia-dia.png','masters/painel-dia.png','../../src/components/cockpit/artwork.tsx']) {
++    const dst=resolve(fixture,target),before=await readFile(dst);await writeFile(dst,Buffer.concat([before,Buffer.from('\nchanged')]))
++    const r=run(resolve(fixture,'convert-images.mjs'),['render']);assert.notEqual(r.status,0);assert.match(r.stderr,/Render obsoleto/)
++    await writeFile(dst,before);record('Conversor recusa proveniência obsoleta: '+target)
++  }
++  const incomplete=structuredClone(provenance);incomplete.masters={}
++  await writeFile(resolve(fixture,'masters/render-provenance.json'),JSON.stringify(incomplete))
++  const incompleteRun=run(resolve(fixture,'convert-images.mjs'),['render']);assert.notEqual(incompleteRun.status,0);assert.match(incompleteRun.stderr,/Proveniência incompleta/)
++  record('Conversor recusa grupo masters sem fingerprints')
++  console.log(JSON.stringify({status:'aprovado',results},null,2))
++  await writeFile(resolve(project,'_bmad-output/visual-review/painel-renderizado/negativos-pipeline.json'),JSON.stringify({status:'aprovado',results},null,2)+'\n')
++} finally {await rm(temp,{recursive:true,force:true,maxRetries:5,retryDelay:100})}
+--- /dev/null
++++ b/work-modulo-3d/blender/cockpit/verify-assets.mjs
+@@ -0,0 +1,62 @@
++// Audita mapa, corpos projetados, WebPs reais e proveniência; falha fechada.
++import { createServer } from 'vite'
++import { readFile, writeFile, mkdir } from 'node:fs/promises'
++import { createHash } from 'node:crypto'
++import { dirname, resolve } from 'node:path'
++import { fileURLToPath } from 'node:url'
++const here = dirname(fileURLToPath(import.meta.url)), root = resolve(here, '../..'), project = resolve(root, '..')
++const out = resolve(process.env.COCKPIT_REPORT_DIR ?? resolve(project, '_bmad-output/visual-review/painel-renderizado'))
++const assets = resolve(process.env.COCKPIT_ASSET_DIR ?? resolve(root, 'public/cockpit-render'))
++const readJSON = async path => JSON.parse(await readFile(path, 'utf8'))
++const hash = async path => createHash('sha256').update(await readFile(path)).digest('hex')
++const report = { status: 'em-verificacao', checks: [] }
++function check(name, ok, data) { report.checks.push({ name, ok: Boolean(ok), data }); if (!ok) throw new Error(name) }
++function dimensions(b) {
++  if (b.length < 20 || b.toString('ascii',0,4)!=='RIFF' || b.toString('ascii',8,12)!=='WEBP' || b.readUInt32LE(4)+8!==b.length) throw new Error('Assinatura/tamanho RIFF WEBP inválido')
++  let canvas, image, count=0
++  for(let p=12;p<b.length;) {
++    if(p+8>b.length)throw new Error('Chunk WebP truncado')
++    const tag=b.toString('ascii',p,p+4),n=b.readUInt32LE(p+4),start=p+8,end=start+n
++    if(end>b.length)throw new Error('Payload WebP truncado')
++    if(tag==='VP8X') {if(n!==10)throw new Error('VP8X inválido');canvas=[b.readUIntLE(start+4,3)+1,b.readUIntLE(start+7,3)+1]}
++    if(tag==='VP8 ') {if(n<10||b.toString('hex',start+3,start+6)!=='9d012a')throw new Error('VP8 inválido');image=[b.readUInt16LE(start+6)&16383,b.readUInt16LE(start+8)&16383];count++}
++    if(tag==='VP8L') {if(n<5||b[start]!==47)throw new Error('VP8L inválido');const bits=b.readUInt32LE(start+1);image=[(bits&16383)+1,((bits>>>14)&16383)+1];count++}
++    p=end+(n%2)
++    if(p>b.length)throw new Error('Padding WebP truncado')
++  }
++  if(count!==1||!image||canvas&&canvas.some((v,i)=>v!==image[i]))throw new Error('Dimensões/bitstream WebP inconsistentes')
++  return image
++}
++let server
++try {
++  server = await createServer({ root, server: { middlewareMode: true }, appType: 'custom' })
++  const { PANEL_MAP, PANEL_ORDER, VB_W, VB_H } = await server.ssrLoadModule('/src/components/cockpit/panel-data.ts')
++  const exported = await readJSON(resolve(here,'panel-map.json'))
++  check('Mapa exportado idêntico à fonte TypeScript atual',JSON.stringify(exported)===JSON.stringify({width:VB_W,height:VB_H,instruments:PANEL_ORDER.map(id=>PANEL_MAP[id])}))
++  const projection = await readJSON(resolve(here,'projection-check.json'))
++  check('56 corpos reais: centros e extensões projetados',projection.length===56&&PANEL_ORDER.every(id=>projection.some(p=>p.id===id&&p.object&&p.error<.001&&p.boundsError<.001&&p.bounds?.length===4)),{maxError:Math.max(...projection.map(p=>p.error)),maxBoundsError:Math.max(...projection.map(p=>p.boundsError))})
++  const manifest=await readJSON(resolve(assets,'manifest.json'))
++  check('Exatamente imagens dia/noite, sem duplicatas',Array.isArray(manifest.images)&&manifest.images.length===2&&['painel-dia.webp','painel-noite.webp'].every(file=>manifest.images.filter(i=>i.file===file).length===1))
++  for(const image of manifest.images) {
++    const path=resolve(assets,image.file),bytes=await readFile(path),[width,height]=dimensions(bytes)
++    check(image.file+' assinatura, dimensões reais e integridade',width===VB_W*2&&height===VB_H*2&&image.width===width&&image.height===height&&await hash(path)===image.sha256&&bytes.length===image.bytes&&bytes.length<1000000,{width,height,bytes:bytes.length,sha256:image.sha256})
++  }
++  check('Proveniência de geração presente',manifest.generation?.masters&&manifest.generation?.atlases&&manifest.generation?.sources)
++  for(const [group,prefix] of [['atlases','serigrafia'],['masters','painel']]) {
++    const keys=Object.keys(manifest.generation[group]);check('Proveniência completa '+group,keys.length===2&&['dia','noite'].every(light=>keys.includes(`masters/${prefix}-${light}.png`)))
++  }
++  for(const [source,expected] of Object.entries({...manifest.sources,...manifest.generation.sources,...manifest.generation.atlases,...manifest.generation.masters})) check('Fingerprint '+source,await hash(resolve(here,source))===expected.sha256)
++  const baseline=await readJSON(resolve(project,'_bmad-output/verificacao-final-retomada/fontes-sha256.json'))
++  for(const [file,expected] of Object.entries(baseline))check('Fonte 3D aprovada intacta: '+file,await hash(resolve(project,file))===expected.sha256)
++  const approved=await readJSON(resolve(root,'public/models/pa34-camadas.manifest.json'))
++  check('GLB aprovado intacto',await hash(resolve(root,'public/models/pa34-camadas.glb'))===approved.sha256)
++  check('Fonte Blender aprovada intacta',await hash(process.env.PA34_APPROVED_BLEND??'/Users/andrecardia/Documents/Codex/2026-09-04/cr/outputs/PA-34_Seneca_Bipa_v12.blend')===approved.source.sha256)
++  report.status='aprovado'
++} catch(error) {report.status='falhou';report.error=error.stack??String(error)}
++finally {
++  try {await server?.close()}catch(error){report.status='falhou';report.error=error.stack??String(error)}
++  await mkdir(out,{recursive:true})
++  await writeFile(resolve(out,'verificacao-ativos.json'),JSON.stringify(report,null,2)+'\n')
++}
++console.log(JSON.stringify(report,null,2))
++if(report.status!=='aprovado')process.exitCode=1
+--- /dev/null
++++ b/work-modulo-3d/public/cockpit-render/manifest.json
+@@ -0,0 +1,124 @@
++{
++  "origem": "Cena procedural independente do painel PA-34-200 Seneca I, criada no Blender; impressão derivada do artwork local, sem importar geometria do avião. Material didático não certificado.",
++  "camera": {
++    "projection": "orthographic",
++    "width": 1600,
++    "height": 955,
++    "sameCameraForBothImages": true
++  },
++  "masters": "work-modulo-3d/blender/cockpit/masters/",
++  "generation": {
++    "sources": {
++      "export-map.mjs": {
++        "bytes": 2028,
++        "sha256": "8b33bafd159af5ff868a3d2dd08a7a9fe6f96de3f83d639b30efc8b2249a4e37"
++      },
++      "convert-images.mjs": {
++        "bytes": 8742,
++        "sha256": "8150dcb6822ff083b85d61153347e752aa846dbfe6d650758de433f453359a05"
++      },
++      "chrome-cdp.mjs": {
++        "bytes": 4461,
++        "sha256": "b5e603e49d31d84bc677d32d18701339e2c184d40e8599ae1ead24736445a988"
++      },
++      "build_panel.py": {
++        "bytes": 16355,
++        "sha256": "49f7e8e4383d729e91d2f7365e8aac842a402a3852931e23de5c1b08dfbf2a44"
++      },
++      "panel-map.json": {
++        "bytes": 17201,
++        "sha256": "0a4c2d909ec68ec4201fb42ee11702a145999179fe096a44f11e46b1368e0281"
++      },
++      "../../src/components/cockpit/panel-data.ts": {
++        "bytes": 21158,
++        "sha256": "877a4e30983bb76d6eeeededb5021084f86bb632050e11b8e350f4eb9f23a0cf"
++      },
++      "../../src/components/cockpit/artwork.tsx": {
++        "bytes": 71375,
++        "sha256": "21464675c3325df8fe9f09dc771e19ae7283ec9ad01ce60a8cf9a04e60d4ab63"
++      },
++      "masters/serigrafia-dia.svg": {
++        "bytes": 181963,
++        "sha256": "4abd2970ac36e7f9f67e9ff7afe08e4ba250ecb878e26b3798d20db3278b9074"
++      },
++      "masters/serigrafia-noite.svg": {
++        "bytes": 182571,
++        "sha256": "f5cbe5ba306bc438308bebd965c93eb723253e3768160ee43c4f5413bb02e10c"
++      }
++    },
++    "atlases": {
++      "masters/serigrafia-dia.png": {
++        "bytes": 911854,
++        "sha256": "32645784128d56bd146ac3c14a9a1f2c6ed618e7b9fcd65651272774b190878e"
++      },
++      "masters/serigrafia-noite.png": {
++        "bytes": 1005099,
++        "sha256": "82cdc861c41e9dde93b271b239666e234aac960ff835a045cab4f6541f274f4b"
++      }
++    },
++    "masters": {
++      "masters/painel-dia.png": {
++        "bytes": 7144297,
++        "sha256": "596c69d27957284b07a48b70036a27fba0fcabc3cdee8b301af6bbc98334cd25"
++      },
++      "masters/painel-noite.png": {
++        "bytes": 6852598,
++        "sha256": "58a16b09f02dd7b4e77a517d371983783732391acbc8198576d8213de30f4c96"
++      }
++    }
++  },
++  "images": [
++    {
++      "file": "painel-dia.webp",
++      "width": 3200,
++      "height": 1910,
++      "bytes": 420598,
++      "sha256": "94435d6ef3b8d79a9ace390a5aa7bd41c3c580a3e6749904ea59508761d7f102"
++    },
++    {
++      "file": "painel-noite.webp",
++      "width": 3200,
++      "height": 1910,
++      "bytes": 355668,
++      "sha256": "b2279f3104529036e7fbe888451119a56f990cb2996449013501b802f2ce38de"
++    }
++  ],
++  "sources": {
++    "export-map.mjs": {
++      "bytes": 2028,
++      "sha256": "8b33bafd159af5ff868a3d2dd08a7a9fe6f96de3f83d639b30efc8b2249a4e37"
++    },
++    "convert-images.mjs": {
++      "bytes": 8742,
++      "sha256": "8150dcb6822ff083b85d61153347e752aa846dbfe6d650758de433f453359a05"
++    },
++    "chrome-cdp.mjs": {
++      "bytes": 4461,
++      "sha256": "b5e603e49d31d84bc677d32d18701339e2c184d40e8599ae1ead24736445a988"
++    },
++    "build_panel.py": {
++      "bytes": 16355,
++      "sha256": "49f7e8e4383d729e91d2f7365e8aac842a402a3852931e23de5c1b08dfbf2a44"
++    },
++    "panel-map.json": {
++      "bytes": 17201,
++      "sha256": "0a4c2d909ec68ec4201fb42ee11702a145999179fe096a44f11e46b1368e0281"
++    },
++    "../../src/components/cockpit/panel-data.ts": {
++      "bytes": 21158,
++      "sha256": "877a4e30983bb76d6eeeededb5021084f86bb632050e11b8e350f4eb9f23a0cf"
++    },
++    "../../src/components/cockpit/artwork.tsx": {
++      "bytes": 71375,
++      "sha256": "21464675c3325df8fe9f09dc771e19ae7283ec9ad01ce60a8cf9a04e60d4ab63"
++    },
++    "masters/serigrafia-dia.svg": {
++      "bytes": 181963,
++      "sha256": "4abd2970ac36e7f9f67e9ff7afe08e4ba250ecb878e26b3798d20db3278b9074"
++    },
++    "masters/serigrafia-noite.svg": {
++      "bytes": 182571,
++      "sha256": "f5cbe5ba306bc438308bebd965c93eb723253e3768160ee43c4f5413bb02e10c"
++    }
++  }
++}
+--- /dev/null
++++ b/_bmad-output/visual-review/painel-renderizado/README.md
+@@ -0,0 +1,45 @@
++# Verificação — painel pré-renderizado
++
++Escopo exclusivo: `work-modulo-3d/`. Spec: `../../implementation-artifacts/spec-painel-renderizado-interativo.md`.
++
++## Entrega
++
++- Cena própria `../../../work-modulo-3d/blender/cockpit/painel-seneca-i.blend`, gerada do zero sem abrir/importar o avião. Chapa, vidro, aros, acabamento, caixas, fixadores e controles modelados em volume; a impressão reaproveita o conteúdo vetorial local.
++- Dois WebPs 3200×1910: **420.598 bytes diurno**, **355.668 bytes noturno** (776.266 bytes no total). Masters PNG fora de `public/`. Origem e SHA-256 em `../../../work-modulo-3d/public/cockpit-render/manifest.json`.
++- `RenderedPanel.tsx` substitui somente a arte do palco; os 56 hotspots, handlers, rótulos, máscara do tour, miniaturas e transformação pan/zoom foram conservados. Sem canvas/WebGL adicional.
++- Fallback individual por imagem durante carregamento/falha. Reentrada SPA com recurso cacheado coberta por `Image.decode()`; evento SVG `load` sozinho deixou o fallback preso durante um ensaio e foi corrigido.
++
++## Evidências reproduzíveis
++
++- `verificacao-ativos.json`: comparação exata do mapa com TypeScript, projeção dos vértices avaliados de 56 corpos reais (erro máximo dos centros **0,0000588**, das extensões **0,0000840** unidade canônica), hashes dos arquivos gerados, 22 fontes 3D históricas, fonte Blender aprovada e GLB. Todos aprovados.
++- `verificacao-navegador.json`: **64 verificações aprovadas, zero exceções JavaScript** na execução completa de `verificar-painel.mjs`, incluindo as etapas finais de carregamento e falha; `status: passed`, todos os `ok: true`.
++- `negativos-pipeline.json`: 22 negativos controlados aprovados, em cópias temporárias, sem danificar ativos: Chrome ausente/encerramento precoce nos dois CLIs, deadline/desconexão CDP, arquivos/JSON/par de imagens/assinatura/dimensões/hashes inválidos e recusa de fontes/atlas/masters obsoletos. Reproduzir com `node work-modulo-3d/blender/cockpit/test-pipeline.mjs`.
++- Build/contratos da implementação anterior (não reexecutado nesta correção focada): `npm --prefix work-modulo-3d run verify` aprovado, incluindo TypeScript/Vite, 39 casos negativos do GLB, runtime/material, foco e smoke. Log final em `verificacao-build.log`. Build não é apresentado como teste de interação.
++- Lint do novo `RenderedPanel.tsx` aprovado. Lint de `CockpitPanel.tsx` acusa duas expressões preexistentes (`ref={pz.ref}`, `{...pz.handlers}`) pela regra `react-hooks/refs`; não houve alteração dessas expressões nem desativação da regra.
++
++## Matriz coberta pelo ensaio de navegador
++
++| Linha da spec | Cobertura |
++|---|---|
++| Abertura | HTTP 200, decodificação real 3200×1910, raster visível, fallback desmontado, 56 IDs; x/y/width/height/aspect-fit e mapeamento intrínseco→canônico→tela verificados nas duas imagens antes/depois de zoom/resize/pinch, além de CTM. |
++| Falha/carregamento | Respostas de imagem pausadas com CDP Fetch; clique real durante a espera; retomada sem perder seleção. Bloqueio independente do WebP dia e noite, fallback visível e outra imagem pronta. |
++| Inspeção | Cliques reais em altímetro, NAV/COM vizinhos e instrumentos de óleo; Enter/Espaço, busca, deep-links e mudança reativa de query; miniaturas vetoriais contidas. |
++| Categorias/tour | IDs exatos, geometria e fill/opacidade computados de cada forma não-motor nos dois modos (não só contagem46); seleção isenta, oito paradas com máscaras alinhadas. |
++| Dia/noite | Duas iluminações com mesma dimensão/câmera e alternância; movimento reduzido limita transição a no máximo 0,001 s. |
++| Tela estreita | 1440/768/390; reset/zoom/arrasto e ida/volta3D com cache. Resize sem recarga comprovado por sentinela e pinch touch real de dois contatos fora dos hotspots em768/390. |
++
++## Inspeção visual
++
++Baseline anterior preservado: `../refinamento-painel-2d/depois-1440-dia.png`. O novo master evidencia sombra de contato das caixas, espessura das molduras, aros especulares, chapa com microtextura, vidro e pomos tridimensionais; não é uma captura do SVG como fundo principal. O atlas SVG não contém a chapa.
++
++Comparar `1440-dia.png` / `1440-noite.png` com esse baseline. Capturas `*-inicial.png` preservam pulsos sugeridos preexistentes. As capturas desktop limpas são feitas após selecionar, fechar e recentrar, sem modificar a interface para esconder recursos. Filtro/tour e falhas possuem capturas próprias.
++
++Na inspeção do atlas, tipografia das escalas foi recomposta para reduzir colisões preexistentes (ASI e instrumentos pequenos de motor), preservando valores/ângulos/arcos. Coordenadas periféricas ficam limitadas pela margem útil do vidro, inclusive ADF. Legendas de instrumentos especiais foram mantidas fora do horizonte. Isso não altera `artwork.tsx`, miniaturas ou conteúdo técnico.
++
++## Limites e riscos
++
++- Material didático, não certificado; nenhuma promessa de operação real. Mostradores principais estáticos, miniaturas animadas conservadas.
++- Inscrições pequenas exigem zoom em telas estreitas. Não foram ensaiados aparelhos físicos de baixo custo, Safari ou Firefox.
++- Imagens somam menos de 0,8 MB de download, mas duas superfícies RGBA decodificadas podem ocupar cerca de **49 MB**. Não é orçamento de desempenho certificado.
++- Persistem avisos preexistentes de chunks JavaScript >500 kB e os dois diagnósticos de lint acima.
++- O gerador usa APIs Blender 5.2 com aviso de depreciação de `use_nodes` para Blender 6; reprodução nessa versão futura requer nova verificação.
+--- /dev/null
++++ b/_bmad-output/visual-review/painel-renderizado/verificar-painel.mjs
+@@ -0,0 +1,195 @@
++// Ensaios reais CDP do painel pré-renderizado. Não modifica baselines anteriores.
++import { openChrome } from '../../../work-modulo-3d/blender/cockpit/chrome-cdp.mjs'
++import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
++import { resolve, join } from 'node:path'
++const origin = process.env.PA34_URL ?? 'http://127.0.0.1:4175'
++const output = resolve(process.env.REVIEW_OUTPUT ?? '_bmad-output/visual-review/painel-renderizado')
++const map = JSON.parse(readFileSync('work-modulo-3d/blender/cockpit/panel-map.json', 'utf8'))
++const catalog = JSON.parse(readFileSync('work-modulo-3d/src/data/cockpit_instruments.json','utf8')).instrumentos
++mkdirSync(output, { recursive: true })
++const report = { origin, date: new Date().toISOString(), status: 'running', checks: [], errors: [] }
++let chrome
++const pausedImages = []
++const sleep = ms => new Promise(r => setTimeout(r, ms))
++const send = (method, params = {}) => chrome ? chrome.send(method, params) : Promise.reject(new Error('Chrome indisponível'))
++async function evaluate(expression) {
++  const r = await send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true })
++  if (r.exceptionDetails) throw new Error(r.exceptionDetails.exception?.description ?? r.exceptionDetails.text)
++  return r.result.value
++}
++async function until(expression) {
++  for (let i = 0; i < 160; i++) {
++    try { if (await evaluate(`Boolean(${expression})`)) return }
++    catch(error) { if (!/context|navigation/i.test(error.message ?? '')) throw error }
++    await sleep(50)
++  }
++  throw new Error(`Timeout: ${expression}`)
++}
++function check(name, ok, data) { report.checks.push({ name, ok: Boolean(ok), data }); if (!ok) throw new Error(name + ': ' + JSON.stringify(data)) }
++async function nav(path = '/cockpit', ready = true) {
++  await send('Page.navigate', { url: origin + path })
++  await until(`document.readyState === 'complete' && document.querySelectorAll('[data-hotspot]').length === 56`)
++  if (ready) await until(`document.querySelectorAll('[data-rendered-panel][data-image-state="ready"]').length === 2`)
++  await sleep(800)
++}
++async function capture(name) { const r = await send('Page.captureScreenshot', { format: 'png' }); writeFileSync(join(output, name + '.png'), Buffer.from(r.data, 'base64')) }
++async function click(selector) { await evaluate(`document.querySelector(${JSON.stringify(selector)}).click()`); await sleep(100) }
++async function key(key, code, vk) { for (const type of ['keyDown', 'keyUp']) await send('Input.dispatchKeyEvent', { type, key, code, windowsVirtualKeyCode: vk }) }
++async function realClick(id) {
++  await until(`(()=>{const e=document.querySelector('[data-hotspot="${id}"]')?.firstElementChild;if(!e)return false;const r=e.getBoundingClientRect();return r.width>3&&document.elementFromPoint(r.x+r.width/2,r.y+r.height/2)?.closest('[data-hotspot]')?.getAttribute('data-hotspot')==='${id}'})()`)
++  const p = await evaluate(`(() => {const el=document.querySelector('[data-hotspot="${id}"]').firstElementChild; const r=el.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}})()`)
++  for (const type of ['mousePressed','mouseReleased']) await send('Input.dispatchMouseEvent',{type,...p,button:'left',buttons:type==='mousePressed'?1:0,clickCount:1})
++  await until(`new URLSearchParams(location.search).get('i') === '${id}' && document.querySelector('[role="dialog"][aria-labelledby]')`)
++}
++async function assertMapping(label) {
++  const data=await evaluate(`(async()=>{const map=${JSON.stringify(map)},result=[];for(const image of document.querySelectorAll('[data-rendered-panel] image')){
++    const im=new Image();im.src=image.getAttribute('href');await im.decode();const x=image.x.baseVal.value,y=image.y.baseVal.value,w=image.width.baseVal.value,h=image.height.baseVal.value;
++    const scale=Math.min(w/im.naturalWidth,h/im.naturalHeight),ox=x+(w-im.naturalWidth*scale)/2,oy=y+(h-im.naturalHeight*scale)/2;
++    const errors=map.instruments.map(e=>{const s=e.shape,cx=s.kind==='circle'?s.cx:s.x+s.w/2,cy=s.kind==='circle'?s.cy:s.y+s.h/2;
++      const raster=new DOMPoint(ox+cx*im.naturalWidth/map.width*scale,oy+cy*im.naturalHeight/map.height*scale).matrixTransform(image.getScreenCTM());
++      const hotspot=new DOMPoint(cx,cy).matrixTransform(document.querySelector('[data-hotspot="'+e.id+'"]').getScreenCTM());return Math.hypot(raster.x-hotspot.x,raster.y-hotspot.y)});
++    result.push({mode:image.parentElement.dataset.renderedPanel,x,y,w,h,align:image.preserveAspectRatio.baseVal.align,meet:image.preserveAspectRatio.baseVal.meetOrSlice,intrinsic:[im.naturalWidth,im.naturalHeight],maxError:Math.max(...errors)});
++  }return result})()`)
++  check('Mapeamento intrínseco/canônico '+label,data.length===2&&data.every(i=>i.x===0&&i.y===0&&i.w===1600&&i.h===955&&i.align===6&&i.meet===1&&i.intrinsic[0]===3200&&i.intrinsic[1]===1910&&i.maxError<.001),data)
++}
++async function assertFilter(selected=null) {
++  const expected=map.instruments.filter(e=>catalog.find(i=>i.id===e.id).categoria!=='motor'&&e.id!==selected)
++  const data=await evaluate(`(()=>{const expected=${JSON.stringify(expected)};return ['dia','noite'].map(mode=>{const g=document.querySelector('[data-category-dimming="'+mode+'"]'),nodes=[...g.children],ids=nodes.map(n=>n.dataset.dimmedInstrument);
++    const details=expected.map(e=>{const n=nodes.find(n=>n.dataset.dimmedInstrument===e.id);if(!n)return{id:e.id,ok:false};const s=e.shape,style=getComputedStyle(n),attrs=s.kind==='circle'?{cx:s.cx,cy:s.cy,r:s.r}:{x:s.x,y:s.y,width:s.w,height:s.h,rx:3};
++      return{id:e.id,geometry:Object.fromEntries(Object.keys(attrs).map(a=>[a,n.getAttribute(a)])),fill:style.fill,fillOpacity:style.fillOpacity,opacity:style.opacity,ok:n.tagName.toLowerCase()===s.kind&&Object.entries(attrs).every(([k,v])=>Number(n.getAttribute(k))===v)&&style.fill==='rgb(5, 8, 13)'&&Number(style.fillOpacity)===.65&&Number(style.opacity)===1};});
++    const image=document.querySelector('[data-rendered-panel="'+mode+'"] image');return{mode,ids,details,imageFilter:getComputedStyle(image).filter,ok:ids.length===expected.length&&new Set(ids).size===ids.length&&details.every(d=>d.ok)&&getComputedStyle(image).filter==='none'};
++  })})()`)
++  check('Filtro: IDs, formas e estilos exatos em ambos modos'+(selected?' com seleção isenta':''),data.every(d=>d.ok),data)
++}
++try {
++  chrome = await openChrome({ prefix:'pa34-render-test-', port:9900+process.pid%200 })
++  chrome.onEvent(m => {
++    if(m.method==='Runtime.exceptionThrown') report.errors.push(m.params.exceptionDetails.text)
++    if(m.method==='Fetch.requestPaused') pausedImages.push(m.params.requestId)
++  })
++  await send('Page.enable'); await send('Runtime.enable'); await send('Network.enable')
++  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1100,deviceScaleFactor:1,mobile:false})
++  await nav()
++  const raster = await evaluate(`(async()=>{const results=[];for(const el of document.querySelectorAll('[data-rendered-panel] image')){const im=new Image(); im.src=el.getAttribute('href');await im.decode();const res=await fetch(im.src);results.push({src:im.src,width:im.naturalWidth,height:im.naturalHeight,status:res.status,bytes:(await res.arrayBuffer()).byteLength,visibility:getComputedStyle(el).visibility})}return {images:results,fallbacks:document.querySelectorAll('[data-vector-fallback]').length,canvases:document.querySelectorAll('canvas').length}})()`)
++  check('Ambas imagens decodificadas por HTTP e raster visível, sem fallback ou canvas WebGL',raster.images.length===2&&raster.images.every(i=>i.width===3200&&i.height===1910&&i.status===200&&i.visibility==='visible')&&raster.fallbacks===0&&raster.canvases===0,raster)
++  const ids=await evaluate(`[...document.querySelectorAll('[data-hotspot]')].map(e=>({id:e.dataset.hotspot,tab:e.getAttribute('tabindex'),label:e.getAttribute('aria-label')}))`)
++  check('56 IDs canônicos únicos, tabuláveis e rotulados', ids.length===56&&new Set(ids.map(i=>i.id)).size===56&&map.instruments.every(e=>ids.some(i=>i.id===e.id&&i.tab==='0'&&i.label)), ids)
++  const centers=await evaluate(`(()=>{const map=${JSON.stringify(map)};const image=document.querySelector('[data-rendered-panel] image');const im=image.getScreenCTM();return map.instruments.map(e=>{const s=e.shape,x=s.kind==='circle'?s.cx:s.x+s.w/2,y=s.kind==='circle'?s.cy:s.y+s.h/2;const a=new DOMPoint(x,y).matrixTransform(im);const hit=document.querySelector('[data-hotspot="'+e.id+'"]');const b=new DOMPoint(x,y).matrixTransform(hit.getScreenCTM());return {id:e.id,error:Math.hypot(a.x-b.x,a.y-b.y)}})})()`)
++  check('56 centros compartilham a transformação exata da imagem',centers.every(c=>c.error<.001),centers)
++  await assertMapping('inicial')
++  check('Vista inicial sem rótulos permanentes',await evaluate(`document.querySelectorAll('[data-cockpit-label]').length===0`))
++  await capture('1440-noite-inicial')
++  await realClick('altimetro');await click('button[aria-label="Fechar painel"]');await sleep(350)
++  await click('button[aria-label="Recentrar o painel"]');await sleep(600)
++  await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:2,y:2})
++  await capture('1440-noite')
++  await click('button[title="Modo dia"]');await sleep(700);await capture('1440-dia')
++  await click('button[title^="Mostrar/esconder rótulos"]')
++  check('56 rótulos sob controle explícito',await evaluate(`document.querySelectorAll('[data-cockpit-label]').length===56`))
++  await capture('1440-rotulos')
++  for(const id of ['altimetro','navcom_1','navcom_2','pressao_oleo','temperatura_oleo']) {await nav();await realClick(id);check('Clique real distingue '+id,true)}
++  for(const [id,k,c,v] of [['giro_direcional','Enter','Enter',13],['variometro',' ','Space',32]]) {await nav();await evaluate(`document.querySelector('[data-hotspot="${id}"]').focus()`);await key(k,c,v);await until(`location.search==='?i=${id}'`);check('Teclado seleciona '+id,true)}
++  await nav()
++  await evaluate(`(()=>{const input=document.querySelector('input[aria-label="Buscar instrumento no painel"]');Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input,'velocimetro');input.dispatchEvent(new Event('input',{bubbles:true}));input.focus()})()`)
++  await until(`document.querySelector('[role=listbox] [role=option]')`);await key('Enter','Enter',13);await until(`location.search==='?i=velocimetro'`);check('Busca preservada',true)
++  for(const id of ['velocimetro','navcom_1','manetes_mistura']) {
++    await nav('/cockpit?i='+id)
++    const mini=await evaluate(`(()=>{const s=document.querySelector('[role=dialog] svg.h-44');const v=s.viewBox.baseVal,b=[...s.children].find(e=>e.tagName.toLowerCase()==='g').getBBox();return {contained:b.x>=v.x-.5&&b.y>=v.y-.5&&b.x+b.width<=v.x+v.width+.5&&b.y+b.height<=v.y+v.height+.5,svg:s.querySelectorAll('path,circle,rect').length}})()`)
++    check('Miniatura vetorial e deep-link '+id,mini.contained&&mini.svg>0,mini)
++  }
++  await evaluate(`history.pushState({},'', '/cockpit?i=altimetro');dispatchEvent(new PopStateEvent('popstate'))`)
++  await until(`document.querySelector('[data-cockpit-label="altimetro"]')`);check('Link reativo sem remontagem',true)
++  await nav()
++  await evaluate(`[...document.querySelectorAll('[aria-label="Filtrar por categoria"] button')].find(b=>b.textContent.replace(/\s/g,'')==='MOTOR10').click()`)
++  const dim=await evaluate(`({count:document.querySelectorAll('[data-category-dimming="noite"] [data-dimmed-instrument]').length,rects:document.querySelector('[data-category-dimming="noite"]').children.length})`)
++  check('Filtro atenua somente 46 formas não-motor, não imagem inteira',dim.count===46&&dim.rects===46,dim)
++  await assertFilter()
++  await click('button[title="Modo dia"]');await sleep(650);await assertFilter()
++  await click('button[title^="Modo noite"]');await sleep(650)
++  await capture('1440-filtro-motor')
++  await evaluate(`history.pushState({},'', '/cockpit?i=velocimetro');dispatchEvent(new PopStateEvent('popstate'))`)
++  await until(`document.querySelector('[data-cockpit-label="velocimetro"]')`)
++  check('Selecionado fora da categoria não fica atenuado',await evaluate(`document.querySelector('[data-category-dimming="noite"] [data-dimmed-instrument="velocimetro"]')===null`))
++  await assertFilter('velocimetro')
++  await nav(); await click('button[title^="Tour guiado"]')
++  const stops=['velocimetro','horizonte_artificial','altimetro','giro_direcional','variometro','pressao_admissao','quantidade_combustivel','luzes_trem_verdes']
++  for(let i=0;i<stops.length;i++) {
++    await until(`document.querySelector('[aria-label="Tour guiado — parada ${i+1} de 8"]')`)
++    const e=map.instruments.find(e=>e.id===stops[i]),s=e.shape
++    check('Tour '+(i+1)+' máscara delimitada em '+e.id,await evaluate(s.kind==='circle'?`document.querySelector('#ck-spot circle')?.getAttribute('cx')==='${s.cx}'&&document.querySelector('#ck-spot circle')?.getAttribute('cy')==='${s.cy}'`:`document.querySelector('#ck-spot rect[fill="black"]')?.getAttribute('x')==='${s.x-20}'`))
++    if(i===0){await sleep(950);await capture('1440-tour')}
++    await evaluate(`[...document.querySelectorAll('[aria-label="Tour guiado — parada ${i+1} de 8"] button')].find(b=>/Próximo|Concluir/.test(b.textContent)).click()`)
++  }
++  await sleep(800)
++  for(const width of [1440,768,390]) {
++    await send('Emulation.setDeviceMetricsOverride',{width,height:1100,deviceScaleFactor:1,mobile:false});await nav();await capture(width+'-noite-inicial')
++    await click('button[aria-label="Recentrar o painel"]');await sleep(600)
++    check(width+' reset permite alcançar todos os comandos',await evaluate(`(()=>{const stage=document.querySelector('[aria-label^="Painel renderizado"]').getBoundingClientRect();return [...document.querySelectorAll('[data-hotspot]')].every(e=>{const r=e.firstElementChild.getBoundingClientRect();return r.left>=stage.left-1&&r.right<=stage.right+1&&r.top>=stage.top-1&&r.bottom<=stage.bottom+1})})()`))
++    await click('button[aria-label="Aproximar (zoom +)"]');await sleep(250)
++    check(width+' zoom aumenta sem separar imagem e hotspot',await evaluate(`(()=>{const im=document.querySelector('[data-rendered-panel] image').getScreenCTM(),h=document.querySelector('[data-hotspot]').getScreenCTM();return Math.abs(im.a-h.a)<.0001&&[...document.querySelectorAll('div')].some(e=>e.textContent==='ZOOM 135%')})()`))
++    if(width===390){await click('button[aria-label="Aproximar (zoom +)"]');await sleep(250);const pan=await evaluate(`(()=>{const s=document.querySelector('[aria-label^="Painel renderizado"]'),r=s.getBoundingClientRect();return {x:r.x+r.width*.5,y:r.y+r.height*.1,before:s.querySelector('svg > g[transform]').getAttribute('transform')}})()`);await send('Input.dispatchMouseEvent',{type:'mousePressed',x:pan.x,y:pan.y,button:'left',buttons:1,clickCount:1});await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:pan.x+35,y:pan.y+20,button:'left',buttons:1});await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:pan.x+35,y:pan.y+20,button:'left',buttons:0});await sleep(150);check('Pan mobile altera transformação compartilhada',await evaluate(`document.querySelector('[aria-label^="Painel renderizado"] svg > g[transform]').getAttribute('transform')!==${JSON.stringify(pan.before)}`))}
++    await assertMapping('zoom '+width)
++    // Navega de/para 3D pelo roteador; conserva a aplicação-alvo, sem canvas no retorno.
++    await evaluate(`history.pushState({},'', '/modelo-3d');dispatchEvent(new PopStateEvent('popstate'))`)
++    await until(`location.pathname==='/modelo-3d'&&document.querySelectorAll('[data-hotspot]').length===0`)
++    await sleep(1600)
++    await evaluate(`history.pushState({},'', '/cockpit');dispatchEvent(new PopStateEvent('popstate'))`)
++    await until(`document.querySelectorAll('[data-rendered-panel][data-image-state="ready"]').length===2`)
++    check(width+' navegação 3D → cockpit sem canvas residual',await evaluate(`document.querySelectorAll('canvas').length===0`))
++  }
++  // Resize sem Page.navigate e pinch CDP de dois contatos em área arrastável.
++  await evaluate('window.__resizeSentinel=performance.now()')
++  const sentinel=await evaluate('window.__resizeSentinel')
++  for(const width of [768,390]) {
++    await send('Emulation.setDeviceMetricsOverride',{width,height:1100,deviceScaleFactor:1,mobile:true})
++    await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:2})
++    await sleep(350);await click('button[aria-label="Recentrar o painel"]');await sleep(550)
++    check('Resize sem recarga '+width,await evaluate(`innerWidth===${width}&&window.__resizeSentinel===${sentinel}`))
++    await assertMapping('resize sem recarga '+width)
++    const p=await evaluate(`(()=>{const e=document.querySelector('[aria-label^="Painel renderizado"]'),r=e.getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height*.1,scale:e.querySelector('image').getScreenCTM().a,clear:[-35,35].every(dx=>!document.elementFromPoint(r.x+r.width/2+dx,r.y+r.height*.1)?.closest('[data-hotspot]'))}})()`)
++    check('Pinch começa fora dos hotspots '+width,p.clear,p)
++    await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{id:1,x:p.x-35,y:p.y},{id:2,x:p.x+35,y:p.y}]})
++    await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:1,x:p.x-65,y:p.y},{id:2,x:p.x+65,y:p.y}]})
++    await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]})
++    await until(`document.querySelector('[data-rendered-panel] image').getScreenCTM().a>${p.scale}`)
++    check('Pinch touch real aumenta zoom '+width,true)
++    await assertMapping('pinch '+width)
++  }
++  await send('Emulation.setTouchEmulationEnabled',{enabled:false})
++  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1100,deviceScaleFactor:1,mobile:false})
++  await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]})
++  await nav()
++  check('Movimento reduzido remove crossfade raster',await evaluate(`parseFloat(getComputedStyle(document.querySelector('.ck-render-illumination')).transitionDuration)<=.001`))
++  await click('button[title="Modo dia"]');await realClick('navcom_2');check('Dia e teclado/mouse seguem funcionais com movimento reduzido',true)
++  // Carregamento controlado: segura ambas respostas sem bloquear a aplicação.
++  await send('Network.setCacheDisabled',{cacheDisabled:true})
++  await send('Fetch.enable',{patterns:[{urlPattern:'*cockpit-render/*.webp*',requestStage:'Request'}]})
++  await send('Page.navigate',{url:origin+'/cockpit'})
++  await until(`document.querySelectorAll('[data-hotspot]').length===56&&document.querySelectorAll('[data-image-state="loading"]').length===2`)
++  check('Carregamento mantém os dois fallbacks e hotspots utilizáveis',await evaluate(`document.querySelectorAll('[data-vector-fallback]').length===2&&document.querySelectorAll('[data-hotspot]').length===56`))
++  await realClick('navcom_1');check('Clique real durante carregamento pendente',true)
++  await capture('carregando-fallback')
++  for(const requestId of pausedImages.splice(0))await send('Fetch.continueRequest',{requestId})
++  await send('Fetch.disable')
++  await until(`document.querySelectorAll('[data-image-state="ready"]').length===2`)
++  check('Conclusão do carregamento troca fallback por raster sem perder seleção',await evaluate(`document.querySelectorAll('[data-vector-fallback]').length===0&&location.search==='?i=navcom_1'`))
++  // Falha individual dos dois recursos: limpa cache antes de cada navegação.
++  for(const mode of ['dia','noite']) {
++    await send('Network.setCacheDisabled',{cacheDisabled:true})
++    await send('Network.setBlockedURLs',{urls:[`*cockpit-render/painel-${mode}.webp*`]})
++    await nav('/cockpit',false)
++    await until(`document.querySelector('[data-rendered-panel="${mode}"]').dataset.imageState==='error'`)
++    if(mode==='dia')await click('button[title="Modo dia"]')
++    const fallback=await evaluate(`(()=>{const g=document.querySelector('[data-rendered-panel="${mode}"]');return {opacity:getComputedStyle(g).opacity,fallback:!!g.querySelector('[data-vector-fallback]'),art:g.querySelectorAll('[data-vector-fallback] path').length,image:g.querySelector('image').getAttribute('visibility'),other:document.querySelector('[data-rendered-panel="${mode==='dia'?'noite':'dia'}"]').dataset.imageState}})()`)
++    check('Falha '+mode+' conserva arte vetorial visível e outra imagem pronta',fallback.opacity==='1'&&fallback.fallback&&fallback.art>20&&fallback.image==='hidden'&&fallback.other==='ready',fallback)
++    await capture('fallback-'+mode);await realClick('altimetro');check('Interação real durante falha '+mode,true)
++  }
++  await send('Network.setBlockedURLs',{urls:[]})
++  check('Nenhuma exceção JavaScript inesperada',report.errors.length===0,report.errors)
++  report.status='passed'
++} catch(error) {report.status='failed';report.error=error.stack ?? JSON.stringify(error);process.exitCode=1;try{report.failurePage=await evaluate(`({url:location.href,hotspots:document.querySelectorAll('[data-hotspot]').length,states:[...document.querySelectorAll('[data-rendered-panel]')].map(e=>e.dataset.imageState),text:document.body.innerText.slice(0,1800)})`);await capture('falha-ensaio')}catch{/* mantém erro original */}}
++finally {
++  try {await chrome?.close()}catch(error){report.status='failed';report.shutdownError=String(error);process.exitCode=1}
++  writeFileSync(join(output,'verificacao-navegador.json'),JSON.stringify(report,null,2)+'\n')
++}
++console.log(JSON.stringify(report,null,2))

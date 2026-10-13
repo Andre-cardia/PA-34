@@ -1,0 +1,70 @@
+{
+  "scope": "Geometria e renders entregáveis; integridade reconferida após conclusão da revisão e dos testes de interação",
+  "files": [
+    {
+      "path": "work-modulo-3d/blender/pa34-camadas.blend",
+      "bytes": 10758613,
+      "sha256": "ddf051b749bd51657fa324980dab068ed5d784c039be9cdcfa870c926652d8d3"
+    },
+    {
+      "path": "work-modulo-3d/public/models/pa34-camadas.glb",
+      "bytes": 19936824,
+      "sha256": "742c93c966c6218b73c397083360343a33414813a96b2085c1801f3ca50a689c"
+    },
+    {
+      "path": "work-modulo-3d/public/models/pa34-camadas.manifest.json",
+      "bytes": 28111,
+      "sha256": "74cc9cabad8ed78d3b9344115478be38ec024f94ae2743af00d858bdba0a239a"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/montado.png",
+      "bytes": 986757,
+      "sha256": "e8d9b6c8f254f4d6b4152be1973e54ea0e254f1a0416eb7a791e098438b9bf00"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/exterior.png",
+      "bytes": 994600,
+      "sha256": "2c9e8f367063050ff35523ace1e7f2e1d333d6e8e31c7b75bd882e81cd5bc687"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/estrutura.png",
+      "bytes": 1040121,
+      "sha256": "bec923b7e1575554410fe79c008a3a6b79a9b81c8a9af43e1deebc9d256873f1"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/motores.png",
+      "bytes": 991018,
+      "sha256": "a5739f22a9d912b67ec004cfc5c3526bd42637320a6918e1d4189e6fb5935e78"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/combustivel.png",
+      "bytes": 915987,
+      "sha256": "79b1e088b0dd5ff6f47fc5d0052075792e6a2b6184c977ad5a9de272e31fd436"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/eletrico.png",
+      "bytes": 960163,
+      "sha256": "b5c3a52fe743c45a7f216431cabe1fe8588549b0c7375cbeeb2162dd8e1a13fd"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/vacuo_pitot.png",
+      "bytes": 939099,
+      "sha256": "4922b86aeb98450b5502bd7c966823cc265a9714c936e7939a28ca12ae3d2b8f"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/trem_pouso.png",
+      "bytes": 950450,
+      "sha256": "86939ef8eb8bc5af678017ad63b405ab725a436df4e2fb062c9127ab8cd4c3e9"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/controles_voo.png",
+      "bytes": 898922,
+      "sha256": "1579f419ac99eb734a2e013a8debd4797e22841888aea9f85bc75708e90b6007"
+    },
+    {
+      "path": "work-modulo-3d/blender/renders/avionics_cabine.png",
+      "bytes": 1025185,
+      "sha256": "86b11cd4e7489bacb411e6990086a55f0902c46f4f83c7edb7a80b83153830d7"
+    }
+  ]
+}

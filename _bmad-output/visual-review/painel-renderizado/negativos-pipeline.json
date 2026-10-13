@@ -1,0 +1,99 @@
+{
+  "status": "aprovado",
+  "results": [
+    {
+      "name": "CLI Chrome indisponível/encerra cedo: /definitely/not/a/chrome convert-images.mjs",
+      "ok": true,
+      "ms": 120
+    },
+    {
+      "name": "CLI Chrome indisponível/encerra cedo: /definitely/not/a/chrome verificar-painel.mjs",
+      "ok": true,
+      "ms": 122
+    },
+    {
+      "name": "CLI Chrome indisponível/encerra cedo: /usr/bin/true convert-images.mjs",
+      "ok": true,
+      "ms": 123
+    },
+    {
+      "name": "CLI Chrome indisponível/encerra cedo: /usr/bin/true verificar-painel.mjs",
+      "ok": true,
+      "ms": 124
+    },
+    {
+      "name": "CDP deadline rejeita comando pendente",
+      "ok": true,
+      "error": "Prazo CDP excedido: Runtime.evaluate"
+    },
+    {
+      "name": "CDP terminate rejeita comando pendente",
+      "ok": true,
+      "error": "Erro no socket CDP"
+    },
+    {
+      "name": "Verificador falha fechado: manifest-ausente",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: json-invalido",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: imagem-ausente",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: par-duplicado",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: terceira-imagem",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: assinatura",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: dimensao-real",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: dimensao-manifest",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: hash",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: truncado",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: proveniencia-incompleta",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa proveniência obsoleta: build_panel.py",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa proveniência obsoleta: masters/serigrafia-dia.png",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa proveniência obsoleta: masters/painel-dia.png",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa proveniência obsoleta: ../../src/components/cockpit/artwork.tsx",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa grupo masters sem fingerprints",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,1460 @@
+{
+  "schemaVersion": 1,
+  "asset": "pa34-camadas.glb",
+  "sha256": "abaa85a09dc28c6a9d78b74580ec30afa8cdd68bc5ad3a494e45879041bf47a0",
+  "source": {
+    "file": "PA-34_Seneca_Bipa_v12.blend",
+    "sha256": "0bc98466f988430cc6317c9ac483c950513f673cb1d204cd2d2cf9479be91cea"
+  },
+  "coordinates": "glTF Y-up; wrapper: rotation Y=pi, scale=4.7/5.93994, translation Y=-1.1",
+  "disclaimer": "Representação didática. Anatomia interna esquemática, sem cotas de instalação certificadas.",
+  "layers": [
+    "exterior",
+    "estrutura",
+    "motores",
+    "combustivel",
+    "eletrico",
+    "vacuo_pitot",
+    "trem_pouso",
+    "controles_voo",
+    "avionics_cabine"
+  ],
+  "nodes": [
+    {
+      "node": 0,
+      "name": "admissao_ar_alternativo__dir",
+      "componentId": "admissao_ar_alternativo",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 1,
+      "name": "admissao_ar_alternativo__esq",
+      "componentId": "admissao_ar_alternativo",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 2,
+      "name": "ailerons__dir",
+      "componentId": "ailerons",
+      "layerId": "controles_voo",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 3,
+      "name": "ailerons__esq",
+      "componentId": "ailerons",
+      "layerId": "controles_voo",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 4,
+      "name": "alternadores__dir",
+      "componentId": "alternadores",
+      "layerId": "eletrico",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 5,
+      "name": "alternadores__esq",
+      "componentId": "alternadores",
+      "layerId": "eletrico",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 6,
+      "name": "amperimetros_comp__dir",
+      "componentId": "amperimetros_comp",
+      "layerId": "eletrico",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 7,
+      "name": "antenas__centro",
+      "componentId": "antenas",
+      "layerId": "avionics_cabine",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 8,
+      "name": "aquecimento_ventilacao__dir",
+      "componentId": "aquecimento_ventilacao",
+      "layerId": "avionics_cabine",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 9,
+      "name": "aquecimento_ventilacao__esq",
+      "componentId": "aquecimento_ventilacao",
+      "layerId": "avionics_cabine",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 10,
+      "name": "asa_externa_esq_dir__dir",
+      "componentId": "asa_externa_esq_dir",
+      "layerId": "exterior",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 11,
+      "name": "asa_externa_esq_dir__esq",
+      "componentId": "asa_externa_esq_dir",
+      "layerId": "exterior",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 12,
+      "name": "assentos__dir",
+      "componentId": "assentos",
+      "layerId": "avionics_cabine",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 13,
+      "name": "assentos__esq",
+      "componentId": "assentos",
+      "layerId": "avionics_cabine",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 14,
+      "name": "barramento_disjuntores__dir",
+      "componentId": "barramento_disjuntores",
+      "layerId": "eletrico",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 15,
+      "name": "bateria__centro",
+      "componentId": "bateria",
+      "layerId": "eletrico",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 16,
+      "name": "bateria__dir",
+      "componentId": "bateria",
+      "layerId": "eletrico",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 17,
+      "name": "bateria__esq",
+      "componentId": "bateria",
+      "layerId": "eletrico",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 18,
+      "name": "bercos_motor__dir",
+      "componentId": "bercos_motor",
+      "layerId": "estrutura",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 19,
+      "name": "bercos_motor__esq",
+      "componentId": "bercos_motor",
+      "layerId": "estrutura",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 20,
+      "name": "bomba_hidraulica_trem__centro",
+      "componentId": "bomba_hidraulica_trem",
+      "layerId": "trem_pouso",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 21,
+      "name": "bomba_hidraulica_trem__dir",
+      "componentId": "bomba_hidraulica_trem",
+      "layerId": "trem_pouso",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 22,
+      "name": "bombas_eletricas__dir",
+      "componentId": "bombas_eletricas",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 23,
+      "name": "bombas_eletricas__esq",
+      "componentId": "bombas_eletricas",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 24,
+      "name": "bombas_mecanicas__dir",
+      "componentId": "bombas_mecanicas",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 25,
+      "name": "bombas_mecanicas__esq",
+      "componentId": "bombas_mecanicas",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 26,
+      "name": "bombas_vacuo__dir",
+      "componentId": "bombas_vacuo",
+      "layerId": "vacuo_pitot",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 27,
+      "name": "bombas_vacuo__esq",
+      "componentId": "bombas_vacuo",
+      "layerId": "vacuo_pitot",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 28,
+      "name": "cabos_polias__dir",
+      "componentId": "cabos_polias",
+      "layerId": "controles_voo",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 29,
+      "name": "cabos_polias__esq",
+      "componentId": "cabos_polias",
+      "layerId": "controles_voo",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 30,
+      "name": "caixao_central_asa__centro",
+      "componentId": "caixao_central_asa",
+      "layerId": "estrutura",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 31,
+      "name": "caixao_central_asa__dir",
+      "componentId": "caixao_central_asa",
+      "layerId": "estrutura",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 32,
+      "name": "caixao_central_asa__esq",
+      "componentId": "caixao_central_asa",
+      "layerId": "estrutura",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 33,
+      "name": "compensadores_comp__centro",
+      "componentId": "compensadores_comp",
+      "layerId": "controles_voo",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 34,
+      "name": "cowl_flaps_comp__dir",
+      "componentId": "cowl_flaps_comp",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 35,
+      "name": "cowl_flaps_comp__esq",
+      "componentId": "cowl_flaps_comp",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 36,
+      "name": "empenagem_externa__centro",
+      "componentId": "empenagem_externa",
+      "layerId": "exterior",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 37,
+      "name": "escapamento_crossover__dir",
+      "componentId": "escapamento_crossover",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 38,
+      "name": "escapamento_crossover__esq",
+      "componentId": "escapamento_crossover",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 39,
+      "name": "estatica_alternada_comp__centro",
+      "componentId": "estatica_alternada_comp",
+      "layerId": "vacuo_pitot",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 40,
+      "name": "estatica_alternada_comp__dir",
+      "componentId": "estatica_alternada_comp",
+      "layerId": "vacuo_pitot",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 41,
+      "name": "estrutura_empenagem__centro",
+      "componentId": "estrutura_empenagem",
+      "layerId": "estrutura",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 42,
+      "name": "estrutura_empenagem__dir",
+      "componentId": "estrutura_empenagem",
+      "layerId": "estrutura",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 43,
+      "name": "estrutura_empenagem__esq",
+      "componentId": "estrutura_empenagem",
+      "layerId": "estrutura",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 44,
+      "name": "flaps_superficies__dir",
+      "componentId": "flaps_superficies",
+      "layerId": "controles_voo",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 45,
+      "name": "flaps_superficies__esq",
+      "componentId": "flaps_superficies",
+      "layerId": "controles_voo",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 46,
+      "name": "freios__dir",
+      "componentId": "freios",
+      "layerId": "trem_pouso",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 47,
+      "name": "freios__esq",
+      "componentId": "freios",
+      "layerId": "trem_pouso",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 48,
+      "name": "fuselagem_externa__centro",
+      "componentId": "fuselagem_externa",
+      "layerId": "exterior",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 49,
+      "name": "gascolators_drenos__dir",
+      "componentId": "gascolators_drenos",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 50,
+      "name": "gascolators_drenos__esq",
+      "componentId": "gascolators_drenos",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 51,
+      "name": "governadores_magnetos__dir",
+      "componentId": "governadores_magnetos",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 52,
+      "name": "governadores_magnetos__esq",
+      "componentId": "governadores_magnetos",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 53,
+      "name": "helice_direita__dir",
+      "componentId": "helice_direita",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 54,
+      "name": "helice_esquerda__esq",
+      "componentId": "helice_esquerda",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 55,
+      "name": "iluminacao_interna__centro",
+      "componentId": "iluminacao_interna",
+      "layerId": "avionics_cabine",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 56,
+      "name": "indicacao_aviso_trem__dir",
+      "componentId": "indicacao_aviso_trem",
+      "layerId": "trem_pouso",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 57,
+      "name": "indicador_succao_comp__dir",
+      "componentId": "indicador_succao_comp",
+      "layerId": "vacuo_pitot",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 58,
+      "name": "leme_tab__centro",
+      "componentId": "leme_tab",
+      "layerId": "controles_voo",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 59,
+      "name": "linhas_crossfeed__centro",
+      "componentId": "linhas_crossfeed",
+      "layerId": "combustivel",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 60,
+      "name": "linhas_crossfeed__dir",
+      "componentId": "linhas_crossfeed",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 61,
+      "name": "linhas_crossfeed__esq",
+      "componentId": "linhas_crossfeed",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 62,
+      "name": "longarina_principal__dir",
+      "componentId": "longarina_principal",
+      "layerId": "estrutura",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 63,
+      "name": "longarina_principal__esq",
+      "componentId": "longarina_principal",
+      "layerId": "estrutura",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 64,
+      "name": "longarina_traseira__dir",
+      "componentId": "longarina_traseira",
+      "layerId": "estrutura",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 65,
+      "name": "longarina_traseira__esq",
+      "componentId": "longarina_traseira",
+      "layerId": "estrutura",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 66,
+      "name": "motor_bomba_trem__centro",
+      "componentId": "motor_bomba_trem",
+      "layerId": "eletrico",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 67,
+      "name": "motor_bomba_trem__esq",
+      "componentId": "motor_bomba_trem",
+      "layerId": "eletrico",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 68,
+      "name": "motor_direito__dir",
+      "componentId": "motor_direito",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 69,
+      "name": "motor_esquerdo__esq",
+      "componentId": "motor_esquerdo",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 70,
+      "name": "naceles_carenagens__dir",
+      "componentId": "naceles_carenagens",
+      "layerId": "exterior",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 71,
+      "name": "naceles_carenagens__esq",
+      "componentId": "naceles_carenagens",
+      "layerId": "exterior",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 72,
+      "name": "painel_instrumentos__centro",
+      "componentId": "painel_instrumentos",
+      "layerId": "avionics_cabine",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 73,
+      "name": "para_brisa_janelas__centro",
+      "componentId": "para_brisa_janelas",
+      "layerId": "exterior",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 74,
+      "name": "perna_dianteira__centro",
+      "componentId": "perna_dianteira",
+      "layerId": "trem_pouso",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 75,
+      "name": "pernas_principais__dir",
+      "componentId": "pernas_principais",
+      "layerId": "trem_pouso",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 76,
+      "name": "pernas_principais__esq",
+      "componentId": "pernas_principais",
+      "layerId": "trem_pouso",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 77,
+      "name": "pontas_asa_nariz_fibra__centro",
+      "componentId": "pontas_asa_nariz_fibra",
+      "layerId": "exterior",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 78,
+      "name": "pontas_asa_nariz_fibra__dir",
+      "componentId": "pontas_asa_nariz_fibra",
+      "layerId": "exterior",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 79,
+      "name": "pontas_asa_nariz_fibra__esq",
+      "componentId": "pontas_asa_nariz_fibra",
+      "layerId": "exterior",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 80,
+      "name": "portas_bagageiros__dir",
+      "componentId": "portas_bagageiros",
+      "layerId": "exterior",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 81,
+      "name": "portas_bagageiros__esq",
+      "componentId": "portas_bagageiros",
+      "layerId": "exterior",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 82,
+      "name": "portas_pocos__dir",
+      "componentId": "portas_pocos",
+      "layerId": "trem_pouso",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 83,
+      "name": "portas_pocos__esq",
+      "componentId": "portas_pocos",
+      "layerId": "trem_pouso",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 84,
+      "name": "radiador_oleo__dir",
+      "componentId": "radiador_oleo",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 85,
+      "name": "radiador_oleo__esq",
+      "componentId": "radiador_oleo",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 86,
+      "name": "radios_coluna__centro",
+      "componentId": "radios_coluna",
+      "layerId": "avionics_cabine",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 87,
+      "name": "radios_coluna__dir",
+      "componentId": "radios_coluna",
+      "layerId": "avionics_cabine",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 88,
+      "name": "reguladores_ov__dir",
+      "componentId": "reguladores_ov",
+      "layerId": "eletrico",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 89,
+      "name": "reguladores_ov__esq",
+      "componentId": "reguladores_ov",
+      "layerId": "eletrico",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 90,
+      "name": "reguladores_vacuo__dir",
+      "componentId": "reguladores_vacuo",
+      "layerId": "vacuo_pitot",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 91,
+      "name": "reguladores_vacuo__esq",
+      "componentId": "reguladores_vacuo",
+      "layerId": "vacuo_pitot",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 92,
+      "name": "reles_partida_master__dir",
+      "componentId": "reles_partida_master",
+      "layerId": "eletrico",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 93,
+      "name": "reles_partida_master__esq",
+      "componentId": "reles_partida_master",
+      "layerId": "eletrico",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 94,
+      "name": "seis_pack_piloto__centro",
+      "componentId": "seis_pack_piloto",
+      "layerId": "avionics_cabine",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 95,
+      "name": "seis_pack_piloto__esq",
+      "componentId": "seis_pack_piloto",
+      "layerId": "avionics_cabine",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 96,
+      "name": "seletoras_valvulas__centro",
+      "componentId": "seletoras_valvulas",
+      "layerId": "combustivel",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 97,
+      "name": "seletoras_valvulas__dir",
+      "componentId": "seletoras_valvulas",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 98,
+      "name": "seletoras_valvulas__esq",
+      "componentId": "seletoras_valvulas",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 99,
+      "name": "semimonocoque_caixilhos__centro",
+      "componentId": "semimonocoque_caixilhos",
+      "layerId": "estrutura",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 100,
+      "name": "semimonocoque_caixilhos__dir",
+      "componentId": "semimonocoque_caixilhos",
+      "layerId": "estrutura",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 101,
+      "name": "semimonocoque_caixilhos__esq",
+      "componentId": "semimonocoque_caixilhos",
+      "layerId": "estrutura",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 102,
+      "name": "sensores_quantidade__dir",
+      "componentId": "sensores_quantidade",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 103,
+      "name": "sensores_quantidade__esq",
+      "componentId": "sensores_quantidade",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 104,
+      "name": "sistema_emergencia__centro",
+      "componentId": "sistema_emergencia",
+      "layerId": "trem_pouso",
+      "side": "centro",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 105,
+      "name": "sistema_injecao__dir",
+      "componentId": "sistema_injecao",
+      "layerId": "motores",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 106,
+      "name": "sistema_injecao__esq",
+      "componentId": "sistema_injecao",
+      "layerId": "motores",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 107,
+      "name": "squat_switch__esq",
+      "componentId": "squat_switch",
+      "layerId": "trem_pouso",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 108,
+      "name": "stabilator_tab__dir",
+      "componentId": "stabilator_tab",
+      "layerId": "controles_voo",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 109,
+      "name": "stabilator_tab__esq",
+      "componentId": "stabilator_tab",
+      "layerId": "controles_voo",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 110,
+      "name": "tanque_auxiliar_dir__dir",
+      "componentId": "tanque_auxiliar_dir",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 111,
+      "name": "tanque_auxiliar_esq__esq",
+      "componentId": "tanque_auxiliar_esq",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 112,
+      "name": "tanque_principal_dir__dir",
+      "componentId": "tanque_principal_dir",
+      "layerId": "combustivel",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 113,
+      "name": "tanque_principal_esq__esq",
+      "componentId": "tanque_principal_esq",
+      "layerId": "combustivel",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 114,
+      "name": "tomadas_estaticas__dir",
+      "componentId": "tomadas_estaticas",
+      "layerId": "vacuo_pitot",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 115,
+      "name": "tomadas_estaticas__esq",
+      "componentId": "tomadas_estaticas",
+      "layerId": "vacuo_pitot",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 116,
+      "name": "tubo_pitot__esq",
+      "componentId": "tubo_pitot",
+      "layerId": "vacuo_pitot",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 117,
+      "name": "valvula_retencao_filtros__dir",
+      "componentId": "valvula_retencao_filtros",
+      "layerId": "vacuo_pitot",
+      "side": "dir",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 118,
+      "name": "valvula_retencao_filtros__esq",
+      "componentId": "valvula_retencao_filtros",
+      "layerId": "vacuo_pitot",
+      "side": "esq",
+      "anchor": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "metrics": {
+    "bytes": 22260432,
+    "triangles": 615750,
+    "materials": 21,
+    "primitives": 272,
+    "nodes": 119,
+    "components": 68
+  }
+}
