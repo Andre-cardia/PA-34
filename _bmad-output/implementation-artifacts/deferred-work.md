@@ -43,20 +43,32 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-camadas-completas-blender.md`
   summary: Corrigir gestão de foco, trap e retorno de foco do painel modal de camadas em dispositivos móveis.
   evidence: A implementação preexistente do painel em Modelo3D.tsx declara aria-modal sem o tratamento de foco já disponível no Drawer; a troca de geometria não criou esse painel. Revisão independente B7 identificou o impacto no uso por teclado e leitor de tela.
+  decision: Resolvido em 2026-10-15 — hook `src/hooks/useDialogFocus.ts` (foco inicial, trap de Tab/Shift+Tab, retorno ao botão CAMADAS) usado pelo sheet e pelo Drawer; Esc fecha o sheet antes de desfazer o isolamento. Ver `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md` e `work-modulo-3d/tests/e2e/painel-camadas.spec.ts`.
 
 - source_spec: `_bmad-output/implementation-artifacts/spec-camadas-completas-blender.md`
   summary: Corrigir controles aninhados e propagação de Enter/Espaço no LayerRail preexistente.
   evidence: H5 da retomada: botão filho dentro de div role=button aciona também o handler de teclado do pai; painel não foi introduzido pela migração Blender.
+  decision: Resolvido em 2026-10-15 — a linha virou `li` sem foco (clique e duplo-clique do mouse mantidos) com dois botões reais, isolar e olho, ambos com `aria-pressed`; Enter/Espaço no olho alterna uma única vez. Ver `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md` e `work-modulo-3d/tests/e2e/painel-camadas.spec.ts`.
 
 - source_spec: `_bmad-output/implementation-artifacts/spec-camadas-completas-blender.md`
   summary: Ajustar o rótulo preexistente ISOLAR COMPONENTE para indicar isolamento da camada.
   evidence: H6 da retomada: ComponentDrawer passa apenas camadaId ao callback; SenecaTechModel reduz as outras camadas, não os componentes irmãos.
+  decision: Resolvido em 2026-10-15 — botão renomeado para `ISOLAR CAMADA` / `SAIR DO ISOLADO (ESC)` (decisão do usuário); roteiros CDP atualizados. Ver `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md` e `work-modulo-3d/tests/e2e/painel-camadas.spec.ts`.
 
 - source_spec: `_bmad-output/implementation-artifacts/spec-camadas-completas-blender.md`
   summary: Ocultar ou desabilitar isolamento do drawer no modo estático preexistente.
   evidence: H7 da retomada: ramo staticReason passa callback vazio à ação visível, que não produz efeito sem canvas.
+  decision: Resolvido em 2026-10-15 — `onIsolate` tornou-se opcional e o ramo estático não o passa; o botão é ocultado (decisão do usuário). Ver `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md` e `work-modulo-3d/tests/e2e/painel-camadas.spec.ts`.
 
 - source_spec: `_bmad-output/implementation-artifacts/spec-restabelecer-site-3d-aprovado.md`
   summary: Atualizar o mapa histórico e as instruções do projeto para refletir a aplicação atualmente integrada em work-modulo-3d.
   evidence: docs/project-map.md ainda descreve modelo procedural e cockpit provisório, embora a aplicação tenha GLB aprovado e painel completo; execução correta e verificação de identidade foram documentadas em _bmad-output/visual-review/restabelecimento-3d/README.md nesta correção.
   decision: Resolvido em 2026-10-05 — AGENTS.md e docs/project-map.md atualizados via bmad-project-context refresh, aprovados pelo usuário.
+
+- source_spec: `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md`
+  summary: Bloquear atalhos globais 1–9/E/X/R do módulo 3D enquanto a ficha ou o sheet de camadas estiver aberto (ou tornar o fundo `inert`).
+  evidence: Revisão do painel: com o foco preso num diálogo `aria-modal`, digitar "3" ainda alterna uma camada atrás dele; comportamento anterior a esta mudança.
+
+- source_spec: `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md`
+  summary: Devolver o foco a um alvo útil (canvas ou rail) quando a ficha foi aberta por clique no canvas WebGL.
+  evidence: O elemento ativo nesse caso é `body`, então fechar a ficha leva o leitor de tela ao topo; o Drawer original já se comportava assim.

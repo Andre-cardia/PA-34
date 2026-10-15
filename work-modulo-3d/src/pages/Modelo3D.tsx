@@ -17,6 +17,7 @@ import StaticFallback from '@/components/modelo3d/StaticFallback'
 import ModelErrorBoundary from '@/components/modelo3d/ModelErrorBoundary'
 import { camadas3d } from '@/data'
 import { DEFAULT_VIEW, VIEW_PRESETS, isLayerId } from '@/components/modelo3d/config'
+import { useDialogFocus } from '@/hooks/useDialogFocus'
 import type { LayerId } from '@/components/modelo3d/config'
 import { LAYER_ORDER } from '@/components/modelo3d/config'
 
@@ -75,6 +76,11 @@ export default function Modelo3D() {
   const [focusRequest, setFocusRequest] = useState<FocusRequest | null>(null)
   const [activeView, setActiveView] = useState<string | null>(null)
   const [railOpen, setRailOpen] = useState(false) // bottom-sheet mobile
+  const railButtonRef = useRef<HTMLButtonElement>(null)
+  const sheetRef = useRef<HTMLDivElement>(null)
+  const sheetCloseRef = useRef<HTMLButtonElement>(null)
+  // Sheet modal: foco inicial no ✕, trap de Tab e retorno ao botão CAMADAS.
+  useDialogFocus(railOpen, sheetRef, sheetCloseRef, railButtonRef)
   const [introDone, setIntroDone] = useState(false)
 
   const staticReason = useMemo(detectStaticReason, [])
@@ -188,6 +194,11 @@ export default function Modelo3D() {
     const onKey = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey || e.altKey) return
       const t = e.target as HTMLElement
+      // Esc fecha o sheet mesmo com foco na busca do ÍNDICE (o Drawer da ficha trata o próprio Esc).
+      if (e.key === 'Escape' && railOpen && !selected) {
+        setRailOpen(false)
+        return
+      }
       if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
       if (e.key >= '1' && e.key <= '9') {
         const id = LAYER_ORDER[Number(e.key) - 1]
@@ -199,9 +210,10 @@ export default function Modelo3D() {
       } else if (e.key === 'r' || e.key === 'R') {
         resetCamera()
       } else if (e.key === 'Escape') {
+        // A camada mais alta fecha primeiro: ficha → sheet → isolamento.
         if (selected) clearSelection()
-        else if (isolate) setIsolate(null)
         else if (railOpen) setRailOpen(false)
+        else if (isolate) setIsolate(null)
       }
     }
     window.addEventListener('keydown', onKey)
@@ -233,7 +245,6 @@ export default function Modelo3D() {
           isolated={false}
           onClose={clearSelection}
           onNavigate={selectComponent}
-          onIsolate={() => undefined}
         />
       </div>
     )
@@ -257,7 +268,8 @@ export default function Modelo3D() {
       {/* corpo: rail + canvas */}
       <div className="flex min-h-0 flex-1">
         {/* rail esquerdo (desktop) */}
-        <div className="hidden w-[280px] shrink-0 lg:block">
+        {/* 320px: os nomes das 9 camadas cabem numa linha ao lado dos botões isolar/olho */}
+        <div className="hidden w-[320px] shrink-0 lg:block">
           <LayerRail
             visible={visible}
             isolate={isolate}
@@ -310,7 +322,7 @@ export default function Modelo3D() {
               />
             </Suspense>
           </ModelErrorBoundary>
-          {!selected && <GuideCard onSelectComponent={selectComponent} />}
+          {!selected && <GuideCard />}
 
           {/* overlay de entrada: readout mono da montagem (§7) */}
           <AnimatePresence>
@@ -340,9 +352,11 @@ export default function Modelo3D() {
 
           {/* botão CAMADAS (mobile — abre bottom-sheet) */}
           <button
+            ref={railButtonRef}
             type="button"
+            aria-expanded={railOpen}
             onClick={() => setRailOpen(true)}
-            className="absolute bottom-4 right-4 flex items-center gap-2 border border-cyan-dim bg-panel/95 px-3 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-cyan backdrop-blur-sm lg:hidden"
+            className="absolute bottom-4 right-4 flex items-center gap-2 border border-cyan-dim bg-panel/95 px-3 py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-cyan backdrop-blur-sm lg:hidden"
             aria-label="Abrir painel de camadas"
           >
             <Layers className="h-4 w-4" aria-hidden="true" />
@@ -381,7 +395,7 @@ export default function Modelo3D() {
         {railOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-[70] bg-abyss/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[70] bg-abyss/30 lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -389,7 +403,9 @@ export default function Modelo3D() {
               aria-hidden="true"
             />
             <motion.div
-              className="fixed inset-x-0 bottom-0 z-[75] flex h-[72dvh] flex-col border-t border-cyan-dim bg-panel lg:hidden"
+              ref={sheetRef}
+              tabIndex={-1}
+              className="fixed inset-x-0 bottom-0 z-[75] flex h-[50dvh] min-h-[min(340px,60dvh)] flex-col border-t border-cyan-dim bg-panel focus:outline-none lg:hidden"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
@@ -398,13 +414,14 @@ export default function Modelo3D() {
               aria-modal="true"
               aria-label="Painel de camadas"
             >
-              <div className="flex items-center justify-between border-b border-hairline px-4 py-2">
-                <span className="mx-auto h-1 w-10 bg-hairline" aria-hidden="true" />
+              <div className="relative flex h-10 shrink-0 items-center justify-center border-b border-hairline px-4">
+                <span className="h-1 w-10 bg-hairline" aria-hidden="true" />
                 <button
+                  ref={sheetCloseRef}
                   type="button"
                   onClick={() => setRailOpen(false)}
                   aria-label="Fechar painel de camadas"
-                  className="absolute right-3 top-2.5 text-muted hover:text-ink"
+                  className="absolute right-2 top-1 flex h-8 w-8 items-center justify-center border border-hairline text-muted hover:border-cyan-dim hover:text-ink"
                 >
                   <X className="h-4 w-4" aria-hidden="true" />
                 </button>

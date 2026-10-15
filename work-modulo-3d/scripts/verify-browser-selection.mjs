@@ -53,17 +53,17 @@ try{
     const initiallyIsolated=await evaluate("document.body.innerText.includes('SAIR DO ISOLADO')")
     if(initiallyIsolated){
       await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('SAIR DO ISOLADO')).click()")
-      await waitFor("document.body.innerText.includes('ISOLAR COMPONENTE')")
+      await waitFor("document.body.innerText.includes('ISOLAR CAMADA')")
     }
     await settle()
     const beforeIsolation=await isolationSnapshot()
-    const isolated=await evaluate("(()=>{const b=[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('ISOLAR COMPONENTE'));if(!b)return false;b.click();return true})()")
+    const isolated=await evaluate("(()=>{const b=[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('ISOLAR CAMADA'));if(!b)return false;b.click();return true})()")
     if(!isolated)throw new Error('Isolamento ausente '+layer.id)
     await waitFor("document.body.innerText.includes('SAIR DO ISOLADO')")
     await settle()
     const isolatedGeometry=assertIsolation(beforeIsolation,await isolationSnapshot(),layer.id)
     await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('SAIR DO ISOLADO')).click()")
-    await waitFor("document.body.innerText.includes('ISOLAR COMPONENTE')")
+    await waitFor("document.body.innerText.includes('ISOLAR CAMADA')")
     await settle()
     const restoredGeometry=await isolationSnapshot(),originals=new Map(beforeIsolation.map(row=>[row.id,row]))
     if(restoredGeometry.length!==beforeIsolation.length)throw new Error('Retorno do isolamento alterou quantidade de malhas')
@@ -105,7 +105,7 @@ try{
   await waitFor("document.querySelector('#drawer-title')&&document.querySelector('canvas')")
   await focusConverged('motor_esquerdo')
   await waitFor("document.body.innerText.includes('SAIR DO ISOLADO')")
-  await clickText('SAIR DO ISOLADO (ESC)');await settle();await closeSelection()
+  await clickText('SAIR DO ISOLADO');await settle();await closeSelection()
   await pointerRegression('isolate/restore','exterior');await closeSelection()
   // Select a moving engine through its real drawer control as explosion begins.
   // A projected pointer coordinate is unsuitable here: the mesh moves before mouse dispatch.

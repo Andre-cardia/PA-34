@@ -15,6 +15,20 @@ test.describe('Deep-links do cockpit (?i=)', () => {
     await expect(page).not.toHaveURL(/[?&]i=/)
   })
 
+  test('[P1] Esc fecha a ficha do instrumento e devolve o foco ao gatilho @mobile', async ({ page }) => {
+    const inst = instrumento('velocimetro')
+    await page.goto('/cockpit')
+    const trigger = page.locator(`[data-hotspot="${inst.id}"]`).first()
+    await trigger.focus()
+    await page.keyboard.press('Enter')
+    const ficha = page.getByRole('dialog', { name: inst.nome })
+    await expect(ficha).toBeVisible()
+    await expect(ficha.getByRole('button', { name: 'Fechar painel' })).toBeFocused()
+    await page.keyboard.press('Escape')
+    await expect(ficha).toBeHidden()
+    await expect(trigger).toBeFocused()
+  })
+
   test('[P1] ?i= inválido não abre ficha', async ({ page }) => {
     await page.goto('/cockpit?i=nao_existe')
     await expect(page.getByRole('group', { name: /Painel renderizado interativo/ })).toBeVisible()

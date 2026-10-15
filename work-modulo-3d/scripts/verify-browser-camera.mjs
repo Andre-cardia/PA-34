@@ -35,7 +35,7 @@ try{
   if(!await evaluate("document.body.innerText.includes('SAIR DO ISOLADO')"))throw new Error('Pré-condição de isolamento ausente')
   await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('SAIR DO ISOLADO')).click()")
   await settle(300);const baseline=await materials()
-  await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('ISOLAR COMPONENTE')).click()")
+  await evaluate("[...document.querySelectorAll('[role=dialog] button')].find(b=>b.textContent.includes('ISOLAR CAMADA')).click()")
   await settle(300);const isolated=await materials()
   if(!isolated.some((row,i)=>row.layer!=='motores'&&row.opacity.some((v,j)=>v<baseline[i].opacity[j]*.1)))throw new Error('Isolamento não reduziu opacidades reais')
   const closed=await evaluate("(()=>{const b=document.querySelector('button[aria-label=\"Fechar painel\"]');if(!b)return false;b.click();return true})()")

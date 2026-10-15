@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { useDialogFocus } from '@/hooks/useDialogFocus'
 
 interface Props {
   open: boolean
@@ -12,43 +13,29 @@ interface Props {
   title?: string
   chip?: string // categoria com chip, ex.: "VOO" / "MOTORES"
   children?: React.ReactNode
+  /** blur (padrão, cockpit): desfoca o fundo; dim: só escurece, mantendo o conteúdo legível. */
+  backdrop?: 'blur' | 'dim'
+  /** inline (padrão, cockpit): chip e título na mesma linha; stacked: chip acima do título em largura total. */
+  header?: 'inline' | 'stacked'
 }
 
-export default function Drawer({ open, onClose, title, chip, children }: Props) {
+export default function Drawer({ open, onClose, title, chip, children, backdrop = 'blur', header = 'inline' }: Props) {
   const drawerRef = useRef<HTMLElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
   const titleId = 'drawer-title'
 
+  useDialogFocus(open, drawerRef, closeRef)
+
+  // Esc fecha a ficha; o trap de Tab e o retorno de foco ficam no hook.
   useEffect(() => {
     if (!open) return
-    const previous = document.activeElement as HTMLElement | null
-    const drawer = drawerRef.current
-    const selector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-    const focusables = drawer ? Array.from(drawer.querySelectorAll<HTMLElement>(selector)) : []
-    const first = focusables[0]
-    const last = focusables[focusables.length - 1]
-    const frame = requestAnimationFrame(() => closeRef.current?.focus())
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        event.preventDefault()
-        onClose()
-        return
-      }
-      if (event.key !== 'Tab' || focusables.length === 0) return
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault()
-        last?.focus()
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault()
-        first?.focus()
-      }
+      if (event.key !== 'Escape') return
+      event.preventDefault()
+      onClose()
     }
     document.addEventListener('keydown', onKey)
-    return () => {
-      cancelAnimationFrame(frame)
-      document.removeEventListener('keydown', onKey)
-      if (previous && document.contains(previous)) previous.focus()
-    }
+    return () => document.removeEventListener('keydown', onKey)
   }, [open, onClose])
 
   useEffect(() => {
@@ -61,6 +48,21 @@ export default function Drawer({ open, onClose, title, chip, children }: Props) 
     }
   }, [open])
 
+  const closeButton = (
+    <button
+      ref={closeRef}
+      type="button"
+      onClick={onClose}
+      className={cn(
+        'flex h-8 w-8 items-center justify-center border border-hairline text-muted transition-colors hover:border-cyan-dim hover:text-cyan',
+        header === 'stacked' && 'shrink-0',
+      )}
+      aria-label="Fechar painel"
+    >
+      <X className="h-4 w-4" />
+    </button>
+  )
+
   return (
     <AnimatePresence>
       {open && (
@@ -70,7 +72,7 @@ export default function Drawer({ open, onClose, title, chip, children }: Props) 
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[80] bg-abyss/60 backdrop-blur-sm"
+            className={cn('fixed inset-0 z-[80]', backdrop === 'blur' ? 'bg-abyss/60 backdrop-blur-sm' : 'bg-abyss/25')}
             onClick={onClose}
             aria-hidden="true"
           />
@@ -88,28 +90,41 @@ export default function Drawer({ open, onClose, title, chip, children }: Props) 
               'fixed z-[90] border-hairline bg-raised shadow-2xl shadow-black/60',
               'md:inset-y-0 md:right-0 md:w-[420px] md:border-l',
               'max-md:inset-x-0 max-md:bottom-0 max-md:max-h-[82dvh] max-md:border-t',
+              header === 'stacked' && 'flex flex-col',
             )}
           >
-            <div className="flex items-center justify-between border-b border-hairline px-6 py-4">
-              <div className="flex items-center gap-3">
-                {chip && (
-                  <span className="border border-cyan-dim bg-cyan/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.22em] text-cyan">
-                    {chip}
-                  </span>
-                )}
-                <h3 id={titleId} className="font-display text-lg font-semibold text-ink">{title}</h3>
+            {header === 'stacked' ? (
+              <div className="flex shrink-0 items-start gap-3 border-b border-hairline px-6 py-4">
+                <div className="min-w-0 flex-1">
+                  {chip && (
+                    <span className="mb-2 inline-block border border-cyan-dim bg-cyan/10 px-2 py-0.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cyan">
+                      {chip}
+                    </span>
+                  )}
+                  <h3 id={titleId} className="font-display text-xl font-semibold leading-snug text-ink">{title}</h3>
+                </div>
+                {closeButton}
               </div>
-              <button
-                ref={closeRef}
-                type="button"
-                onClick={onClose}
-                className="flex h-8 w-8 items-center justify-center border border-hairline text-muted transition-colors hover:border-cyan-dim hover:text-cyan"
-                aria-label="Fechar painel"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            </div>
-            <div className="max-h-[calc(100dvh-65px)] overflow-y-auto px-6 py-5 max-md:max-h-[calc(82dvh-65px)]">
+            ) : (
+              <div className="flex items-center justify-between border-b border-hairline px-6 py-4">
+                <div className="flex items-center gap-3">
+                  {chip && (
+                    <span className="border border-cyan-dim bg-cyan/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.22em] text-cyan">
+                      {chip}
+                    </span>
+                  )}
+                  <h3 id={titleId} className="font-display text-lg font-semibold text-ink">{title}</h3>
+                </div>
+                {closeButton}
+              </div>
+            )}
+            {/* inline: altura do cabeçalho fixa (65px), como antes; stacked: cabeçalho variável, corpo ocupa o resto */}
+            <div
+              className={cn(
+                'overflow-y-auto px-6 py-5',
+                header === 'stacked' ? 'min-h-0 flex-1' : 'max-h-[calc(100dvh-65px)] max-md:max-h-[calc(82dvh-65px)]',
+              )}
+            >
               {children}
             </div>
           </motion.aside>

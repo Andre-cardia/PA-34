@@ -1,11 +1,11 @@
 // ComponentDrawer — ficha operacional do componente clicado (Drawer compartilhado):
-// chips camada + SOP, LOCALIZAÇÃO / FUNÇÃO / OPERAÇÃO (dados), ações
-// ISOLAR / VER NO SISTEMA / VER NO COCKPIT 2D e navegação ‹ ANTERIOR / PRÓXIMO ›.
+// chip curto da camada no cabeçalho, chips SOP + índice, LOCALIZAÇÃO / FUNÇÃO /
+// OPERAÇÃO (dados), ações ISOLAR CAMADA / VER NO SISTEMA / VER NO COCKPIT 2D e
+// navegação ‹ ANTERIOR / PRÓXIMO ›. Sem onIsolate (modo estático) não há isolar.
 
 import { Link } from 'react-router'
 import { ArrowLeft, ArrowRight, BookOpenText, Crosshair, Gauge } from 'lucide-react'
 import Drawer from '@/components/ui-custom/Drawer'
-import { DataRow } from '@/components/ui-custom/SpecTable'
 import { camadas3d } from '@/data'
 import { COCKPIT_LINKS, LAYERS } from './config'
 import type { LayerId } from './config'
@@ -16,7 +16,8 @@ interface FichaProps {
   isolated: boolean
   onClose: () => void
   onNavigate: (camada: LayerId, compId: string) => void
-  onIsolate: (camada: LayerId | null) => void
+  /** Ausente no modo estático: sem canvas, isolar não tem efeito e o botão é ocultado. */
+  onIsolate?: (camada: LayerId | null) => void
 }
 
 export default function ComponentDrawer({ camadaId, compId, isolated, onClose, onNavigate, onIsolate }: FichaProps) {
@@ -35,36 +36,40 @@ export default function ComponentDrawer({ camadaId, compId, isolated, onClose, o
       open={!!comp}
       onClose={onClose}
       title={comp?.nome}
-      chip={camada && meta ? `FICHA OPERACIONAL // ${camada.nome}` : undefined}
+      chip={meta?.short}
+      backdrop="dim"
+      header="stacked"
     >
       {comp && camada && meta && (
         <div>
-          {/* chips: camada (cor-chave) + âncora SOP + índice na camada */}
-          <div className="mb-5 flex flex-wrap gap-1.5">
-            <span
-              className="border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em]"
-              style={{ borderColor: meta.color, color: meta.color }}
-            >
-              {meta.short}
-            </span>
+          {/* chips: cor-chave da camada + âncora SOP + índice na camada (camada já está no cabeçalho) */}
+          <div className="mb-5 flex flex-wrap items-center gap-1.5">
+            <span className="h-2.5 w-2.5 shrink-0" style={{ backgroundColor: meta.color }} aria-hidden="true" />
+            <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">FICHA OPERACIONAL</span>
             {meta.sopChip && (
-              <span className="border border-hairline px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
+              <span className="ml-1 border border-hairline px-2 py-0.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
                 {meta.sopChip}
               </span>
             )}
-            <span className="border border-hairline px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-faint">
-              {String(idx + 1).padStart(2, '0')}/{String(camada.componentes.length).padStart(2, '0')}
+            <span className="border border-hairline px-2 py-0.5 font-mono text-[11px] uppercase tracking-[0.12em] text-faint">
+              <span aria-hidden="true">
+                {String(idx + 1).padStart(2, '0')}/{String(camada.componentes.length).padStart(2, '0')}
+              </span>
+              <span className="sr-only">
+                Componente {idx + 1} de {camada.componentes.length} na camada
+              </span>
             </span>
           </div>
 
-          {/* localização */}
-          <div className="mb-5">
-            <DataRow label="LOCALIZAÇÃO" value={comp.localizacao} />
-          </div>
+          {/* localização: rótulo acima e valor em texto corrido que quebra linha (sem corte nem rolagem) */}
+          <section className="mb-5 border-y border-hairline py-3" aria-label="Localização">
+            <h4 className="mb-1 font-mono text-[11px] uppercase tracking-[0.16em] text-faint">LOCALIZAÇÃO</h4>
+            <p className="break-words text-[13px] leading-relaxed text-ink">{comp.localizacao}</p>
+          </section>
 
           {/* função */}
           <section className="mb-5" aria-label="Função">
-            <h4 className="mb-2 border-l-2 pl-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan" style={{ borderColor: meta.color }}>
+            <h4 className="mb-2 border-l-2 pl-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan" style={{ borderColor: meta.color }}>
               FUNÇÃO
             </h4>
             <p className="text-[13px] leading-relaxed text-muted">{comp.funcao}</p>
@@ -72,7 +77,7 @@ export default function ComponentDrawer({ camadaId, compId, isolated, onClose, o
 
           {/* operação */}
           <section className="mb-5" aria-label="Operação">
-            <h4 className="mb-2 border-l-2 pl-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan" style={{ borderColor: meta.color }}>
+            <h4 className="mb-2 border-l-2 pl-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan" style={{ borderColor: meta.color }}>
               OPERAÇÃO
             </h4>
             <p className="text-[13px] leading-relaxed text-muted">{comp.detalhes_operacionais}</p>
@@ -80,24 +85,28 @@ export default function ComponentDrawer({ camadaId, compId, isolated, onClose, o
 
           {/* contexto da camada */}
           <section className="mb-6 border border-hairline bg-raised p-3" aria-label="Sobre a camada">
-            <p className="mb-1 font-mono text-[9px] uppercase tracking-[0.2em] text-faint">SOBRE A CAMADA</p>
-            <p className="text-[12px] leading-relaxed text-muted">{camada.descricao}</p>
+            <p className="mb-1 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">SOBRE A CAMADA</p>
+            <p className="mb-1.5 text-[13px] font-medium leading-snug text-ink">{camada.nome}</p>
+            <p className="text-[13px] leading-relaxed text-muted">{camada.descricao}</p>
           </section>
 
           {/* ações */}
           <div className="mb-6 flex flex-col gap-2">
-            <button
-              type="button"
-              onClick={() => onIsolate(isolated ? null : (camadaId as LayerId))}
-              className="flex items-center justify-center gap-2 border border-cyan-dim bg-cyan/10 px-3 py-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cyan transition-colors hover:bg-cyan/20"
-            >
-              <Crosshair className="h-4 w-4" aria-hidden="true" />
-              {isolated ? 'SAIR DO ISOLADO (ESC)' : 'ISOLAR COMPONENTE'}
-            </button>
+            {onIsolate && (
+              <button
+                type="button"
+                aria-pressed={isolated}
+                onClick={() => onIsolate(isolated ? null : (camadaId as LayerId))}
+                className="flex items-center justify-center gap-2 border border-cyan-dim bg-cyan/10 px-3 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-cyan transition-colors hover:bg-cyan/20"
+              >
+                <Crosshair className="h-4 w-4" aria-hidden="true" />
+                {isolated ? 'SAIR DO ISOLADO' : 'ISOLAR CAMADA'}
+              </button>
+            )}
             {meta.sopHref && (
               <Link
                 to={meta.sopHref}
-                className="flex items-center justify-center gap-2 border border-hairline px-3 py-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-muted transition-colors hover:border-cyan-dim hover:text-cyan"
+                className="flex items-center justify-center gap-2 border border-hairline px-3 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-muted transition-colors hover:border-cyan-dim hover:text-cyan"
               >
                 <BookOpenText className="h-4 w-4" aria-hidden="true" />
                 VER NO SISTEMA ({meta.sopChip})
@@ -106,7 +115,7 @@ export default function ComponentDrawer({ camadaId, compId, isolated, onClose, o
             {cockpit && (
               <Link
                 to={`/cockpit?i=${cockpit}`}
-                className="flex items-center justify-center gap-2 border border-hairline px-3 py-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-muted transition-colors hover:border-cyan-dim hover:text-cyan"
+                className="flex items-center justify-center gap-2 border border-hairline px-3 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-muted transition-colors hover:border-cyan-dim hover:text-cyan"
               >
                 <Gauge className="h-4 w-4" aria-hidden="true" />
                 VER NO COCKPIT 2D
@@ -120,7 +129,7 @@ export default function ComponentDrawer({ camadaId, compId, isolated, onClose, o
               type="button"
               disabled={!prev}
               onClick={() => prev && onNavigate(camadaId as LayerId, prev.id)}
-              className="flex items-center gap-1.5 border border-hairline px-2 py-2 text-left font-mono text-[10px] uppercase tracking-[0.1em] text-muted transition-colors enabled:hover:border-cyan-dim enabled:hover:text-ink disabled:opacity-30"
+              className="flex items-center gap-1.5 border border-hairline px-2 py-2 text-left font-mono text-[11px] uppercase tracking-[0.08em] text-muted transition-colors enabled:hover:border-cyan-dim enabled:hover:text-ink disabled:opacity-30"
             >
               <ArrowLeft className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
               <span className="truncate">{prev ? prev.nome : '—'}</span>
@@ -129,7 +138,7 @@ export default function ComponentDrawer({ camadaId, compId, isolated, onClose, o
               type="button"
               disabled={!next}
               onClick={() => next && onNavigate(camadaId as LayerId, next.id)}
-              className="flex items-center justify-end gap-1.5 border border-hairline px-2 py-2 text-right font-mono text-[10px] uppercase tracking-[0.1em] text-muted transition-colors enabled:hover:border-cyan-dim enabled:hover:text-ink disabled:opacity-30"
+              className="flex items-center justify-end gap-1.5 border border-hairline px-2 py-2 text-right font-mono text-[11px] uppercase tracking-[0.08em] text-muted transition-colors enabled:hover:border-cyan-dim enabled:hover:text-ink disabled:opacity-30"
             >
               <span className="truncate">{next ? next.nome : '—'}</span>
               <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />

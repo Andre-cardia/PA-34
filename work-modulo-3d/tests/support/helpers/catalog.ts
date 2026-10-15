@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 const read = <T>(file: string): T =>
   JSON.parse(readFileSync(new URL(`../../../src/data/${file}`, import.meta.url), 'utf8')) as T
 
-type Componente = { id: string; nome: string }
+type Componente = { id: string; nome: string; localizacao: string }
 type Camada = { id: string; nome: string; componentes: Componente[] }
 type Instrumento = { id: string; nome: string }
 
