@@ -177,13 +177,13 @@ function Envelope() {
       <svg viewBox={`0 0 ${EW} ${EH}`} className="mt-4 w-full" role="img" aria-label={`Envelope de fator de carga: limite +${G_MAX} g entre VA ${VA} e VNE ${VNE} MPH`}>
         {/* eixos */}
         <motion.g initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : undefined} transition={{ duration: 0.5 }}>
-          <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={EH - PAD.b} stroke="#54687E" strokeWidth="1" />
-          <line x1={PAD.l} y1={EH - PAD.b} x2={EW - PAD.r} y2={EH - PAD.b} stroke="#54687E" strokeWidth="1" />
+          <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={EH - PAD.b} stroke="rgb(var(--c-faint))" strokeWidth="1" />
+          <line x1={PAD.l} y1={EH - PAD.b} x2={EW - PAD.r} y2={EH - PAD.b} stroke="rgb(var(--c-faint))" strokeWidth="1" />
           {/* grid + labels X */}
           {[0, 60, 120, 180, 240].map((mph) => (
             <g key={mph}>
-              <line x1={ex(mph)} y1={PAD.t} x2={ex(mph)} y2={EH - PAD.b} stroke="#1E2C3D" strokeWidth="1" strokeDasharray="2 5" />
-              <text x={ex(mph)} y={EH - PAD.b + 16} textAnchor="middle" fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace">
+              <line x1={ex(mph)} y1={PAD.t} x2={ex(mph)} y2={EH - PAD.b} stroke="rgb(var(--c-hairline))" strokeWidth="1" strokeDasharray="2 5" />
+              <text x={ex(mph)} y={EH - PAD.b + 16} textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace">
                 {mph}
               </text>
             </g>
@@ -191,16 +191,16 @@ function Envelope() {
           {/* grid + labels Y */}
           {[0, 1, 2, 3, 4].map((g) => (
             <g key={g}>
-              <line x1={PAD.l} y1={ey(g)} x2={EW - PAD.r} y2={ey(g)} stroke="#1E2C3D" strokeWidth="1" strokeDasharray="2 5" />
-              <text x={PAD.l - 8} y={ey(g) + 3.5} textAnchor="end" fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace">
+              <line x1={PAD.l} y1={ey(g)} x2={EW - PAD.r} y2={ey(g)} stroke="rgb(var(--c-hairline))" strokeWidth="1" strokeDasharray="2 5" />
+              <text x={PAD.l - 8} y={ey(g) + 3.5} textAnchor="end" fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace">
                 {g}
               </text>
             </g>
           ))}
-          <text x={EW - PAD.r} y={EH - PAD.b + 30} textAnchor="end" fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
+          <text x={EW - PAD.r} y={EH - PAD.b + 30} textAnchor="end" fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
             MPH
           </text>
-          <text x={PAD.l - 34} y={PAD.t - 6} fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
+          <text x={PAD.l - 34} y={PAD.t - 6} fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
             G
           </text>
         </motion.g>
@@ -209,7 +209,7 @@ function Envelope() {
         <motion.path
           d={curve}
           fill="none"
-          stroke="#3FE0FF"
+          stroke="rgb(var(--c-cyan))"
           strokeWidth="1.8"
           initial={{ pathLength: 0 }}
           animate={inView ? { pathLength: 1 } : undefined}
@@ -221,7 +221,7 @@ function Envelope() {
           y1={ey(G_MAX)}
           x2={ex(VNE)}
           y2={ey(G_MAX)}
-          stroke="#FFB020"
+          stroke="rgb(var(--c-amber))"
           strokeWidth="1"
           strokeDasharray="4 4"
           initial={{ opacity: 0 }}
@@ -232,7 +232,7 @@ function Envelope() {
           x={ex((VA + VNE) / 2)}
           y={ey(G_MAX) - 8}
           textAnchor="middle"
-          fill="#FFB020"
+          fill="rgb(var(--c-amber))"
           fontSize="10.5"
           fontFamily="'IBM Plex Mono', monospace"
           initial={{ opacity: 0 }}
@@ -253,8 +253,8 @@ function Envelope() {
             tabIndex={0}
             aria-label={pt.def}
           >
-            <circle cx={ex(pt.mph)} cy={ey(pt.g)} r="5" fill="#0A1018" stroke={pt.cat === 'critica' ? '#FF4D4D' : pt.cat === 'cautela' ? '#FFB020' : '#3DDC97'} strokeWidth="2" />
-            <text x={ex(pt.mph)} y={ey(pt.g) + 20} textAnchor="middle" fill="#E8F0F7" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
+            <circle cx={ex(pt.mph)} cy={ey(pt.g)} r="5" fill="rgb(var(--c-panel))" stroke={pt.cat === 'critica' ? 'rgb(var(--c-red))' : pt.cat === 'cautela' ? 'rgb(var(--c-amber))' : 'rgb(var(--c-green))'} strokeWidth="2" />
+            <text x={ex(pt.mph)} y={ey(pt.g) + 20} textAnchor="middle" fill="rgb(var(--c-ink))" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
               {pt.code}
             </text>
           </motion.g>

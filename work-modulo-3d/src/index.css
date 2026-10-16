@@ -26,6 +26,75 @@
     --radius: 0.25rem;
   }
 
+  /* Paleta PA-34 em canais RGB (tailwind.config.js usa rgb(var(--c-*) / α)).
+     Tema escuro: original (design.md §2). Tema claro: papel técnico.
+     .theme-dark força o escuro num trecho (painel 2D do cockpit). */
+  :root,
+  .theme-dark {
+    --c-abyss: 5 8 13;
+    --c-panel: 10 16 24;
+    --c-raised: 16 25 38;
+    --c-overlay: 22 34 47;
+    --c-hairline: 30 44 61;
+    --c-ink: 232 240 247;
+    --c-muted: 147 166 187;
+    --c-faint: 84 104 126;
+    --c-dim: 42 59 77;
+    --c-cyan: 63 224 255;
+    --c-cyan-dim: 27 75 92;
+    --c-cyan-hi: 155 234 255;
+    --c-green: 61 220 151;
+    --c-amber: 255 176 32;
+    --c-red: 255 77 77;
+    --c-blue: 91 157 255;
+    --c-paper: 233 228 216;
+    --sop-filter: invert(0.92) hue-rotate(180deg);
+    color-scheme: dark;
+  }
+
+  :root.theme-light {
+    --c-abyss: 211 220 231;
+    --c-panel: 232 237 243;
+    --c-raised: 221 228 237;
+    --c-overlay: 203 214 226;
+    --c-hairline: 171 186 204;
+    --c-ink: 11 23 37;
+    --c-muted: 52 72 96;
+    --c-faint: 88 106 129;
+    --c-dim: 150 167 188;
+    --c-cyan: 0 108 146;
+    --c-cyan-dim: 128 186 207;
+    --c-cyan-hi: 0 72 102;
+    --c-green: 14 124 80;
+    --c-amber: 160 98 0;
+    --c-red: 190 36 42;
+    --c-blue: 30 86 196;
+    --c-paper: 233 228 216;
+    --sop-filter: none;
+    --background: 213 28% 87%;
+    --foreground: 210 46% 10%;
+    --card: 213 30% 93%;
+    --card-foreground: 210 46% 10%;
+    --popover: 213 30% 93%;
+    --popover-foreground: 210 46% 10%;
+    --primary: 196 100% 29%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 210 46% 10%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 212 21% 36%;
+    --accent: 210 30% 91%;
+    --accent-foreground: 210 46% 10%;
+    --border: 213 22% 74%;
+    --input: 213 22% 74%;
+    --ring: 196 100% 29%;
+    color-scheme: light;
+  }
+
+  :root.theme-light .theme-dark {
+    color-scheme: dark;
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: clip;
@@ -59,17 +128,26 @@
     opacity: 0.05;
     mix-blend-mode: overlay;
   }
+  :root.theme-light body::after {
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+  }
+  /* Blueprint mais visível sobre papel claro */
+  :root.theme-light .blueprint-grid,
+  :root.theme-light .blueprint-grid-dense {
+    --grid-a: 0.12;
+  }
 
   /* Focus ring cyan 2px offset 2px (design.md §2) */
   :focus-visible {
-    outline: 2px solid #3fe0ff;
+    outline: 2px solid rgb(var(--c-cyan));
     outline-offset: 2px;
     border-radius: 1px;
   }
 
   ::selection {
-    background: rgba(63, 224, 255, 0.22);
-    color: #e8f0f7;
+    background: rgb(var(--c-cyan) / 0.22);
+    color: rgb(var(--c-ink));
   }
 
   /* Scrollbar */
@@ -78,15 +156,15 @@
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #05080d;
+    background: rgb(var(--c-abyss));
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e2c3d;
-    border: 2px solid #05080d;
+    background: rgb(var(--c-hairline));
+    border: 2px solid rgb(var(--c-abyss));
     border-radius: 6px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #1b4b5c;
+    background: rgb(var(--c-cyan-dim));
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -108,8 +186,8 @@
   /* Grid blueprint: linhas cyan a ~5% sobre o fundo; célula 64px (design.md §2) */
   .blueprint-grid {
     background-image:
-      linear-gradient(to right, rgba(63, 224, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(63, 224, 255, 0.05) 1px, transparent 1px);
+      linear-gradient(to right, rgb(var(--c-cyan) / var(--grid-a, 0.05)) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--c-cyan) / var(--grid-a, 0.05)) 1px, transparent 1px);
     background-size: 64px 64px;
   }
   @media (max-width: 768px) {
@@ -119,8 +197,8 @@
   }
   .blueprint-grid-dense {
     background-image:
-      linear-gradient(to right, rgba(63, 224, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(63, 224, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgb(var(--c-cyan) / var(--grid-a, 0.04)) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--c-cyan) / var(--grid-a, 0.04)) 1px, transparent 1px);
     background-size: 32px 32px;
   }
   /* Barras horizontais mantêm toque/teclado sem poluir o HUD com scrollbar nativa. */
@@ -136,10 +214,10 @@
   .dot-leader {
     flex: 1 1 auto;
     margin: 0 0.6rem;
-    border-bottom: 1px dotted #1e2c3d;
+    border-bottom: 1px dotted rgb(var(--c-hairline));
     transform: translateY(-4px);
   }
   .text-glow-cyan {
-    text-shadow: 0 0 18px rgba(63, 224, 255, 0.45);
+    text-shadow: 0 0 18px rgb(var(--c-cyan) / 0.45);
   }
 }

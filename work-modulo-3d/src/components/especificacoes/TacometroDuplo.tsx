@@ -55,15 +55,15 @@ function Tachometer({ label, delay }: { label: string; delay: number }) {
       <p className="text-center font-mono text-[11px] uppercase tracking-[0.22em] text-faint">{label}</p>
       <svg viewBox="0 0 300 220" className="mt-2 w-full" role="img" aria-label={`Tacômetro ${label}: arco verde ${VERDE[0]} a ${VERDE[1]} RPM, cautela ${CAUTELA[0]} a ${CAUTELA[1]} RPM, linha vermelha ${REDLINE} RPM`}>
         {/* aro externo */}
-        <circle cx={CX} cy={CY} r={R_ARC + 16} fill="none" stroke="#1E2C3D" strokeWidth="1" />
+        <circle cx={CX} cy={CY} r={R_ARC + 16} fill="none" stroke="rgb(var(--c-hairline))" strokeWidth="1" />
         {/* arcos de operação */}
-        <path d={arcPath(CX, CY, R_ARC, angle(VERDE[0]), angle(VERDE[1]))} stroke="#3DDC97" strokeWidth="9" fill="none" />
-        <path d={arcPath(CX, CY, R_ARC, angle(CAUTELA[0]), angle(CAUTELA[1]))} stroke="#FF4D4D" strokeWidth="9" fill="none" opacity="0.85" />
+        <path d={arcPath(CX, CY, R_ARC, angle(VERDE[0]), angle(VERDE[1]))} stroke="rgb(var(--c-green))" strokeWidth="9" fill="none" />
+        <path d={arcPath(CX, CY, R_ARC, angle(CAUTELA[0]), angle(CAUTELA[1]))} stroke="rgb(var(--c-red))" strokeWidth="9" fill="none" opacity="0.85" />
         {/* ticks */}
         {MINORS.map((v) => {
           const p1 = polarToXY(CX, CY, R_TICK - 6, angle(v))
           const p2 = polarToXY(CX, CY, R_TICK + 2, angle(v))
-          return <line key={v} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#54687E" strokeWidth="1" />
+          return <line key={v} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-faint))" strokeWidth="1" />
         })}
         {MAJORS.map((v) => {
           const p1 = polarToXY(CX, CY, R_TICK - 11, angle(v))
@@ -71,8 +71,8 @@ function Tachometer({ label, delay }: { label: string; delay: number }) {
           const pt = polarToXY(CX, CY, R_TICK - 24, angle(v))
           return (
             <g key={v}>
-              <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#93A6BB" strokeWidth="1.6" />
-              <text x={pt.x} y={pt.y + 3.5} textAnchor="middle" fill="#93A6BB" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
+              <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-muted))" strokeWidth="1.6" />
+              <text x={pt.x} y={pt.y + 3.5} textAnchor="middle" fill="rgb(var(--c-muted))" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
                 {v}
               </text>
             </g>
@@ -82,18 +82,18 @@ function Tachometer({ label, delay }: { label: string; delay: number }) {
         {(() => {
           const p1 = polarToXY(CX, CY, R_TICK - 13, angle(REDLINE))
           const p2 = polarToXY(CX, CY, R_TICK + 4, angle(REDLINE))
-          return <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#FF4D4D" strokeWidth="3.5" />
+          return <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-red))" strokeWidth="3.5" />
         })()}
         {/* agulha */}
-        <motion.line x1={tx} y1={ty} x2={nx} y2={ny} stroke="#E8F0F7" strokeWidth="2.6" strokeLinecap="round" />
-        <circle cx={CX} cy={CY} r="9" fill="#0A1018" stroke="#3FE0FF" strokeWidth="1.4" />
-        <circle cx={CX} cy={CY} r="2.4" fill="#3FE0FF" />
+        <motion.line x1={tx} y1={ty} x2={nx} y2={ny} stroke="rgb(var(--c-ink))" strokeWidth="2.6" strokeLinecap="round" />
+        <circle cx={CX} cy={CY} r="9" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-cyan))" strokeWidth="1.4" />
+        <circle cx={CX} cy={CY} r="2.4" fill="rgb(var(--c-cyan))" />
         {/* leitura digital */}
-        <rect x={CX - 44} y={CY + 44} width="88" height="26" fill="#05080D" stroke="#1E2C3D" />
-        <motion.text x={CX} y={CY + 62} textAnchor="middle" fill="#3FE0FF" fontSize="15" fontFamily="'IBM Plex Mono', monospace">
+        <rect x={CX - 44} y={CY + 44} width="88" height="26" fill="rgb(var(--c-abyss))" stroke="rgb(var(--c-hairline))" />
+        <motion.text x={CX} y={CY + 62} textAnchor="middle" fill="rgb(var(--c-cyan))" fontSize="15" fontFamily="'IBM Plex Mono', monospace">
           {readout}
         </motion.text>
-        <text x={CX + 56} y={CY + 62} fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace">
+        <text x={CX + 56} y={CY + 62} fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace">
           RPM
         </text>
       </svg>

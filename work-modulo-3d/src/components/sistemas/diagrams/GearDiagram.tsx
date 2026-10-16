@@ -15,8 +15,8 @@ import { focusComponent, EASE_MECH, componentDomId } from '../utils'
 import { cn } from '@/lib/utils'
 import { TV, TV_EXTRAS } from '@/components/assets/PA34ThreeViewData'
 
-const FAINT = '#54687E'
-const DIM = '#2A3B4D'
+const FAINT = 'rgb(var(--c-faint))'
+const DIM = 'rgb(var(--c-dim))'
 const PROFILE_GROUPS = ['corpo', 'tanques', 'helice'] as const
 
 type GearState = 'down' | 'transit-up' | 'up' | 'transit-down'
@@ -38,7 +38,7 @@ function ProfileAircraft({ color }: { color: string }) {
           key={`sil-${group}`}
           d={profile.sil[group]}
           pathLength={1}
-          fill="#0A1018"
+          fill="rgb(var(--c-panel))"
           fillOpacity={0.96}
           stroke={color}
           strokeWidth={1.5}
@@ -73,7 +73,7 @@ function ProfileAircraft({ color }: { color: string }) {
         strokeOpacity={0.65}
         strokeWidth={1}
       />
-      <circle cx={TV_EXTRAS.hubPerfil.cx} cy={TV_EXTRAS.hubPerfil.cy} r={TV_EXTRAS.hubPerfil.r} fill="#0A1018" stroke={color} strokeWidth={1.3} />
+      <circle cx={TV_EXTRAS.hubPerfil.cx} cy={TV_EXTRAS.hubPerfil.cy} r={TV_EXTRAS.hubPerfil.r} fill="rgb(var(--c-panel))" stroke={color} strokeWidth={1.3} />
     </g>
   )
 }
@@ -124,14 +124,14 @@ function GearLeg({
         {/* braço */}
         <line x1={pivotX} y1={pivotY + 20} x2={pivotX - 16} y2={pivotY + 58} stroke={color} strokeOpacity={0.45} strokeWidth={2} />
         {/* roda */}
-        <circle cx={pivotX} cy={pivotY + 74} r={15} fill="#0A1018" stroke={color} strokeWidth={2} />
+        <circle cx={pivotX} cy={pivotY + 74} r={15} fill="rgb(var(--c-panel))" stroke={color} strokeWidth={2} />
         <circle cx={pivotX} cy={pivotY + 74} r={5} fill={DIM} />
       </motion.g>
       {squat && (
         <g>
-          <rect x={pivotX + 7} y={pivotY + 30} width={9} height={9} fill="#FFB020" />
-          <line x1={pivotX + 16} y1={pivotY + 34} x2={pivotX + 44} y2={pivotY + 34} stroke="#FFB020" strokeWidth={1} strokeDasharray="3 3" />
-          <text x={pivotX + 48} y={pivotY + 38} fill="#FFB020" fontSize={8.5} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.1em">
+          <rect x={pivotX + 7} y={pivotY + 30} width={9} height={9} fill="rgb(var(--c-amber))" />
+          <line x1={pivotX + 16} y1={pivotY + 34} x2={pivotX + 44} y2={pivotY + 34} stroke="rgb(var(--c-amber))" strokeWidth={1} strokeDasharray="3 3" />
+          <text x={pivotX + 48} y={pivotY + 38} fill="rgb(var(--c-amber))" fontSize={8.5} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.1em">
             SQUAT SWITCH
           </text>
         </g>
@@ -214,13 +214,13 @@ export default function GearDiagram({ sistema, meta }: { sistema: Sistema; meta:
                     key={`${downCount}-${i}`}
                     className={cn(
                       'h-3 w-3',
-                      state === 'down' ? 'animate-annunciator-blink bg-green [box-shadow:0_0_8px_rgba(61,220,151,0.8)]' : 'bg-overlay',
+                      state === 'down' ? 'animate-annunciator-blink bg-green [box-shadow:0_0_8px_rgb(var(--c-green) / 0.8)]' : 'bg-overlay',
                     )}
                   />
                 ))}
               </span>
               <span
-                className={cn('h-3 w-3', transit ? 'bg-red [box-shadow:0_0_8px_rgba(255,77,77,0.8)]' : 'bg-overlay')}
+                className={cn('h-3 w-3', transit ? 'bg-red [box-shadow:0_0_8px_rgb(var(--c-red) / 0.8)]' : 'bg-overlay')}
                 aria-label={transit ? 'Luz vermelha: trem em trânsito' : 'Luz vermelha apagada'}
               />
             </div>
@@ -252,7 +252,7 @@ export default function GearDiagram({ sistema, meta }: { sistema: Sistema; meta:
               y={204}
               width={56}
               height={4}
-              fill="#0A1018"
+              fill="rgb(var(--c-panel))"
               stroke={c}
               strokeOpacity={0.58}
               strokeWidth={0.8}

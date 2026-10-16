@@ -12,8 +12,8 @@ import { DiagramShell, DrawPath, SopImage } from '../shared'
 import { focusComponent, EASE_OUT, componentDomId } from '../utils'
 import { cn } from '@/lib/utils'
 
-const FAINT = '#54687E'
-const DIM = '#2A3B4D'
+const FAINT = 'rgb(var(--c-faint))'
+const DIM = 'rgb(var(--c-dim))'
 
 type DoorState = 'locked' | 'unlocked' | 'open'
 
@@ -105,13 +105,13 @@ export default function BaggageDiagram({ sistema, meta }: { sistema: Sistema; me
             animate={{ opacity: door === 'open' ? 1 : 0 }}
             transition={{ duration: 0.35 }}
           >
-            <rect x={238} y={148} width={156} height={124} fill="#05080D" stroke={DIM} strokeWidth={1} />
+            <rect x={238} y={148} width={156} height={124} fill="rgb(var(--c-abyss))" stroke={DIM} strokeWidth={1} />
             {/* bagagem + bateria no compartimento */}
             <g onClick={fc(1)} style={{ cursor: 'pointer' }} role="button" aria-label="Compartimento do bagageiro — ver na lista">
-              <rect x={252} y={206} width={58} height={46} fill="#101926" stroke={FAINT} strokeWidth={1.2} />
+              <rect x={252} y={206} width={58} height={46} fill="rgb(var(--c-raised))" stroke={FAINT} strokeWidth={1.2} />
               <rect x={262} y={198} width={38} height={8} fill="none" stroke={FAINT} strokeWidth={1.2} />
-              <rect x={322} y={186} width={56} height={40} fill="#101926" stroke="#5B9DFF" strokeWidth={1.2} />
-              <text x={350} y={210} textAnchor="middle" fill="#5B9DFF" fontSize={9} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.06em">
+              <rect x={322} y={186} width={56} height={40} fill="rgb(var(--c-raised))" stroke="rgb(var(--c-blue))" strokeWidth={1.2} />
+              <text x={350} y={210} textAnchor="middle" fill="rgb(var(--c-blue))" fontSize={9} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.06em">
                 BATERIA
               </text>
               <text x={350} y={222} textAnchor="middle" fill={FAINT} fontSize={8} fontFamily="'IBM Plex Mono', monospace">
@@ -147,8 +147,8 @@ export default function BaggageDiagram({ sistema, meta }: { sistema: Sistema; me
                 width={156}
                 height={124}
                 rx={6}
-                fill="#101926"
-                stroke={door === 'locked' ? c : door === 'unlocked' ? '#FFB020' : '#FF4D4D'}
+                fill="rgb(var(--c-raised))"
+                stroke={door === 'locked' ? c : door === 'unlocked' ? 'rgb(var(--c-amber))' : 'rgb(var(--c-red))'}
                 strokeWidth={1.5}
               />
               <text x={316} y={176} textAnchor="middle" fill={FAINT} fontSize={9} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">
@@ -163,10 +163,10 @@ export default function BaggageDiagram({ sistema, meta }: { sistema: Sistema; me
               cx={368}
               cy={238}
               r={13}
-              fill="#0A1018"
+              fill="rgb(var(--c-panel))"
               initial={false}
               animate={{
-                stroke: door === 'locked' ? '#3DDC97' : door === 'unlocked' ? '#FFB020' : '#FF4D4D',
+                stroke: door === 'locked' ? 'rgb(var(--c-green))' : door === 'unlocked' ? 'rgb(var(--c-amber))' : 'rgb(var(--c-red))',
               }}
               strokeWidth={2}
             />
@@ -175,7 +175,7 @@ export default function BaggageDiagram({ sistema, meta }: { sistema: Sistema; me
               y1={238}
               x2={368}
               y2={228}
-              stroke={door === 'locked' ? '#3DDC97' : '#FFB020'}
+              stroke={door === 'locked' ? 'rgb(var(--c-green))' : 'rgb(var(--c-amber))'}
               strokeWidth={2.5}
               strokeLinecap="round"
               initial={false}

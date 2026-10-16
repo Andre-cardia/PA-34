@@ -9,8 +9,8 @@ import type { SystemMeta } from '../config'
 import { DiagramShell, DiagramNode, DrawPath, FlowPath, SopImage } from '../shared'
 import { focusComponent, componentDomId } from '../utils'
 
-const DIM = '#2A3B4D'
-const FAINT = '#54687E'
+const DIM = 'rgb(var(--c-dim))'
+const FAINT = 'rgb(var(--c-faint))'
 
 // OVERVOLTAGE LIGHT — pulsa âmbar ao entrar no viewport (loop isolado)
 function OvervoltageLight({ onClick }: { onClick: () => void }) {
@@ -22,7 +22,7 @@ function OvervoltageLight({ onClick }: { onClick: () => void }) {
         width={176}
         height={40}
         fill="#1a1408"
-        stroke="#FFB020"
+        stroke="rgb(var(--c-amber))"
         strokeWidth={1.5}
         initial={{ opacity: 0.35 }}
         whileInView={{ opacity: [0.35, 1, 0.35] }}
@@ -30,7 +30,7 @@ function OvervoltageLight({ onClick }: { onClick: () => void }) {
         transition={{ repeat: Infinity, duration: 1.6 }}
         style={{ filter: 'drop-shadow(0 0 8px #FFB02077)' }}
       />
-      <text x={380} y={156} textAnchor="middle" fill="#FFB020" fontSize={11} fontWeight={700} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">
+      <text x={380} y={156} textAnchor="middle" fill="rgb(var(--c-amber))" fontSize={11} fontWeight={700} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">
         OVERVOLTAGE LIGHT
       </text>
     </g>
@@ -40,8 +40,8 @@ function OvervoltageLight({ onClick }: { onClick: () => void }) {
 function Ammeter({ cx, cy, onClick }: { cx: number; cy: number; onClick: () => void }) {
   return (
     <g onClick={onClick} style={{ cursor: 'pointer' }} role="button" aria-label="Amperímetro — ver na lista">
-      <circle cx={cx} cy={cy} r={17} fill="#0A1018" stroke="#5B9DFF" strokeWidth={1.5} />
-      <line x1={cx} y1={cy} x2={cx + 9} y2={cy - 9} stroke="#5B9DFF" strokeWidth={1.5} />
+      <circle cx={cx} cy={cy} r={17} fill="rgb(var(--c-panel))" stroke="rgb(var(--c-blue))" strokeWidth={1.5} />
+      <line x1={cx} y1={cy} x2={cx + 9} y2={cy - 9} stroke="rgb(var(--c-blue))" strokeWidth={1.5} />
       <text x={cx} y={cy + 28} textAnchor="middle" fill={FAINT} fontSize={8} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.12em">
         AMP
       </text>
@@ -81,7 +81,7 @@ export default function ElectricalDiagram({ sistema, meta }: { sistema: Sistema;
           <DrawPath d="M615 174 V300" color={DIM} width={2.5} duration={0.9} delay={0.35} />
           <DrawPath d="M120 330 V300 H700" color={c} width={3} duration={1.2} delay={0.55} opacity={0.9} />
           <DrawPath d="M280 300 V380 M415 300 V380 M565 300 V380 M665 300 V340" color={DIM} width={2} duration={0.9} delay={0.8} />
-          <DrawPath d="M210 152 H292 M550 152 H468" color="#FFB020" width={1.2} dashed duration={0.8} delay={0.9} opacity={0.7} />
+          <DrawPath d="M210 152 H292 M550 152 H468" color="rgb(var(--c-amber))" width={1.2} dashed duration={0.8} delay={0.9} opacity={0.7} />
 
           {/* fluxos */}
           <FlowPath d="M145 94 V130" color={c} />
@@ -103,8 +103,8 @@ export default function ElectricalDiagram({ sistema, meta }: { sistema: Sistema;
 
           {/* bateria */}
           <g onClick={fc(2)} style={{ cursor: 'pointer' }} role="button" aria-label="Bateria — ver na lista">
-            <rect x={60} y={330} width={120} height={60} fill="#101926" stroke={c} strokeWidth={1.5} style={{ filter: `drop-shadow(0 0 6px ${c}44)` }} />
-            <text x={120} y={356} textAnchor="middle" fill="#E8F0F7" fontSize={11} fontWeight={600} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
+            <rect x={60} y={330} width={120} height={60} fill="rgb(var(--c-raised))" stroke={c} strokeWidth={1.5} style={{ filter: `drop-shadow(0 0 6px ${c}44)` }} />
+            <text x={120} y={356} textAnchor="middle" fill="rgb(var(--c-ink))" fontSize={11} fontWeight={600} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
               BATERIA
             </text>
             <text x={120} y={372} textAnchor="middle" fill={FAINT} fontSize={8.5} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.06em">

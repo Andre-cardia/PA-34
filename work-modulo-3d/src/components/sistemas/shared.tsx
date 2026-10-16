@@ -128,8 +128,8 @@ export function DiagramNode({ x, y, w, h, label, sub, color, delay = 0, active =
         y={y}
         width={w}
         height={h}
-        fill="#101926"
-        stroke={active ? color : '#1E2C3D'}
+        fill="rgb(var(--c-raised))"
+        stroke={active ? color : 'rgb(var(--c-hairline))'}
         strokeWidth={1.5}
         style={active ? { filter: `drop-shadow(0 0 6px ${color}55)` } : undefined}
       />
@@ -138,7 +138,7 @@ export function DiagramNode({ x, y, w, h, label, sub, color, delay = 0, active =
         y={sub ? y + h / 2 - 4 : y + h / 2}
         textAnchor="middle"
         dominantBaseline="central"
-        fill={active ? '#E8F0F7' : '#54687E'}
+        fill={active ? 'rgb(var(--c-ink))' : 'rgb(var(--c-faint))'}
         fontSize={11}
         fontFamily="'IBM Plex Mono', ui-monospace, monospace"
         fontWeight={600}
@@ -152,7 +152,7 @@ export function DiagramNode({ x, y, w, h, label, sub, color, delay = 0, active =
           y={y + h / 2 + 12}
           textAnchor="middle"
           dominantBaseline="central"
-          fill="#54687E"
+          fill="rgb(var(--c-faint))"
           fontSize={9}
           fontFamily="'IBM Plex Mono', ui-monospace, monospace"
           letterSpacing="0.1em"
@@ -219,7 +219,8 @@ export function DiagramShell({ title, right, children, footer, className }: Diag
 // Filtro escuro (invert + hue-rotate) integra a página clara ao tema (sistemas.md).
 // ---------------------------------------------------------------------------
 
-const SOP_FILTER = 'invert(0.92) hue-rotate(180deg)'
+// Só no tema escuro (no claro o esquema original aparece como no papel).
+const SOP_FILTER = 'var(--sop-filter, none)'
 
 interface SopImageProps {
   src: string

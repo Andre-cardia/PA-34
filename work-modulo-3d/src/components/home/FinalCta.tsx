@@ -14,7 +14,7 @@ export default function FinalCta() {
     <section className="blueprint-grid relative overflow-hidden bg-panel py-[88px] md:py-[140px]">
       {/* watermark */}
       <PA34SilhouetteTop className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 text-cyan opacity-[0.08]" aria-hidden="true" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#0A1018_90%)]" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgb(var(--c-panel))_90%)]" aria-hidden="true" />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 text-center">
         <p className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-cyan">{'// CLEARED FOR TAKEOFF'}</p>
@@ -41,7 +41,7 @@ export default function FinalCta() {
           className="mt-10"
         >
           <motion.div
-            animate={{ boxShadow: ['0 0 0px rgba(63,224,255,0)', '0 0 28px rgba(63,224,255,0.22)', '0 0 0px rgba(63,224,255,0)'] }}
+            animate={{ boxShadow: ['0 0 0px rgb(var(--c-cyan) / 0)', '0 0 28px rgb(var(--c-cyan) / 0.22)', '0 0 0px rgb(var(--c-cyan) / 0)'] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
             <Link

@@ -8,6 +8,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ChevronDown, Menu, X, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useSearch } from '@/components/ui-custom/SearchContext'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const PRIMARY = [
   { to: '/modelo-3d', label: 'MODELO 3D' },
@@ -40,8 +41,8 @@ const ALL_LINKS = [
 function Annunciator() {
   const reducedMotion = !!useReducedMotion()
   return (
-    <span className="hidden items-center gap-2 border border-hairline px-2.5 py-1.5 lg:flex" aria-label="Indicador visual simulado do trem de pouso: três verdes">
-      <span className="font-mono text-[10px] font-medium tracking-[0.22em] text-green">3 GREEN · SIM</span>
+    <span className="hidden items-center gap-2 border border-hairline px-2.5 py-1.5 min-[1400px]:flex" aria-label="Indicador visual simulado do trem de pouso: três verdes">
+      <span className="whitespace-nowrap font-mono text-[10px] font-medium tracking-[0.22em] text-green">3 GREEN · SIM</span>
       <span className="flex gap-1" aria-hidden="true">
         {[0, 1, 2].map((i) => (
           <motion.span
@@ -49,7 +50,7 @@ function Annunciator() {
             initial={reducedMotion ? { opacity: 1 } : { opacity: 0.15 }}
             animate={reducedMotion ? { opacity: 1 } : { opacity: [0.15, 1, 0.15, 1, 0.15, 1] }}
             transition={reducedMotion ? undefined : { duration: 0.9, delay: 0.4 + i * 0.12, times: [0, 0.2, 0.4, 0.6, 0.8, 1] }}
-            className="h-2 w-2 bg-green [box-shadow:0_0_8px_rgba(61,220,151,0.7)]"
+            className="h-2 w-2 bg-green [box-shadow:0_0_8px_rgb(var(--c-green) / 0.7)]"
           />
         ))}
       </span>
@@ -167,14 +168,14 @@ export default function Navbar() {
           </Link>
 
           {/* links desktop */}
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Navegação principal">
+          <nav className="hidden items-center gap-0 lg:flex" aria-label="Navegação principal">
             {PRIMARY.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
                   cn(
-                    'relative px-3 py-2 font-mono text-xs tracking-[0.12em] transition-colors duration-300',
+                    'relative whitespace-nowrap px-2 py-2 font-mono text-[11px] tracking-[0.06em] transition-colors duration-300 xl:px-2.5 xl:text-xs xl:tracking-[0.1em] 2xl:px-3 2xl:tracking-[0.12em]',
                     isActive ? 'text-cyan' : 'text-muted hover:text-ink',
                   )
                 }
@@ -185,7 +186,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className="absolute inset-x-3 -bottom-[1px] h-0.5 bg-cyan"
+                        className="absolute inset-x-2 -bottom-[1px] xl:inset-x-2.5 2xl:inset-x-3 h-0.5 bg-cyan"
                         transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                       />
                     )}
@@ -200,7 +201,7 @@ export default function Navbar() {
                 onClick={() => setMoreOpen((v) => !v)}
                 onMouseEnter={() => setMoreOpen(true)}
                 className={cn(
-                  'flex items-center gap-1 px-3 py-2 font-mono text-xs tracking-[0.12em] transition-colors',
+                  'flex items-center gap-1 whitespace-nowrap px-2 py-2 font-mono text-[11px] tracking-[0.06em] transition-colors xl:px-2.5 xl:text-xs xl:tracking-[0.1em] 2xl:px-3 2xl:tracking-[0.12em]',
                   moreActive ? 'text-cyan' : 'text-muted hover:text-ink',
                 )}
                 aria-expanded={moreOpen}
@@ -215,7 +216,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 6 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute right-0 top-full mt-1 w-52 border border-hairline bg-raised py-1 shadow-xl shadow-black/50"
+                    className="absolute right-0 top-full mt-1 w-52 border border-hairline bg-raised py-1 shadow-xl shadow-black/20"
                   >
                     {MORE.map((l) => (
                       <NavLink
@@ -238,8 +239,9 @@ export default function Navbar() {
           </nav>
 
           {/* direita */}
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-2 xl:gap-3">
             <Annunciator />
+            <ThemeToggle />
             <button
               type="button"
               onClick={search.open}
@@ -328,6 +330,7 @@ export default function Navbar() {
               >
                 <Search className="h-4 w-4" /> Busca rápida ⌘K
               </motion.button>
+              <ThemeToggle withLabel className="mt-3 h-auto w-full py-3" />
             </nav>
             <div className="border-t border-hairline px-6 py-4 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
               SOP VOEFLORIPA REV.13 — MATERIAL DE ESTUDO

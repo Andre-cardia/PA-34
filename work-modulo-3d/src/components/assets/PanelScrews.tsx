@@ -8,15 +8,15 @@ type Variant = 'slot-h' | 'slot-v' | 'phillips' | 'slot-diag'
 function ScrewHead({ variant, size = 10, style }: { variant: Variant; size?: number; style?: CSSProperties }) {
   return (
     <svg width={size} height={size} viewBox="0 0 12 12" fill="none" style={style} aria-hidden="true">
-      <circle cx="6" cy="6" r="5" stroke="#54687E" strokeWidth="1" />
-      <circle cx="6" cy="6" r="5" stroke="#0A1018" strokeWidth="0.5" transform="translate(0.4 0.4)" opacity={0.6} />
-      {variant === 'slot-h' && <path d="M 2.5 6 L 9.5 6" stroke="#54687E" strokeWidth="1.1" />}
-      {variant === 'slot-v' && <path d="M 6 2.5 L 6 9.5" stroke="#54687E" strokeWidth="1.1" />}
-      {variant === 'slot-diag' && <path d="M 3.5 3.5 L 8.5 8.5" stroke="#54687E" strokeWidth="1.1" />}
+      <circle cx="6" cy="6" r="5" stroke="rgb(var(--c-faint))" strokeWidth="1" />
+      <circle cx="6" cy="6" r="5" stroke="rgb(var(--c-panel))" strokeWidth="0.5" transform="translate(0.4 0.4)" opacity={0.6} />
+      {variant === 'slot-h' && <path d="M 2.5 6 L 9.5 6" stroke="rgb(var(--c-faint))" strokeWidth="1.1" />}
+      {variant === 'slot-v' && <path d="M 6 2.5 L 6 9.5" stroke="rgb(var(--c-faint))" strokeWidth="1.1" />}
+      {variant === 'slot-diag' && <path d="M 3.5 3.5 L 8.5 8.5" stroke="rgb(var(--c-faint))" strokeWidth="1.1" />}
       {variant === 'phillips' && (
         <>
-          <path d="M 2.8 6 L 9.2 6" stroke="#54687E" strokeWidth="1.1" />
-          <path d="M 6 2.8 L 6 9.2" stroke="#54687E" strokeWidth="1.1" />
+          <path d="M 2.8 6 L 9.2 6" stroke="rgb(var(--c-faint))" strokeWidth="1.1" />
+          <path d="M 6 2.8 L 6 9.2" stroke="rgb(var(--c-faint))" strokeWidth="1.1" />
         </>
       )}
     </svg>

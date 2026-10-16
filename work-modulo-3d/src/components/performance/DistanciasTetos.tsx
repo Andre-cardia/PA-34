@@ -31,7 +31,7 @@ function Sparkline({ d, delay = 0.3 }: { d: string; delay?: number }) {
       <motion.path
         d={d}
         fill="none"
-        stroke="#3FE0FF"
+        stroke="rgb(var(--c-cyan))"
         strokeWidth="1.5"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}

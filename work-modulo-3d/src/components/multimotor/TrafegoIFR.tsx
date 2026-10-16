@@ -13,12 +13,12 @@ export default function TrafegoIFR() {
           <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.18em] text-faint">Circuito de tráfego monomotor — mais largo, mais raso</p>
           <svg viewBox="0 0 640 360" className="w-full" role="img" aria-label="Circuito de tráfego visual monomotor">
             {/* pista */}
-            <rect x="230" y="150" width="180" height="26" fill="#101926" stroke="#54687E" strokeWidth="1.5" />
+            <rect x="230" y="150" width="180" height="26" fill="rgb(var(--c-raised))" stroke="rgb(var(--c-faint))" strokeWidth="1.5" />
             <line x1="240" y1="163" x2="400" y2="163" stroke="#E9E4D8" strokeWidth="1.5" strokeDasharray="10 8" strokeOpacity="0.5" />
             {/* circuito */}
             <motion.path
               d="M 410 163 L 520 163 L 560 80 L 520 60 L 140 60 L 90 163 L 226 163"
-              fill="none" stroke="#3FE0FF" strokeWidth="2.5"
+              fill="none" stroke="rgb(var(--c-cyan))" strokeWidth="2.5"
               initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
               transition={{ duration: 2.2, ease: MECH }}
             />
@@ -30,16 +30,16 @@ export default function TrafegoIFR() {
               { x: 108, y: 120, t: 'BASE' },
               { x: 150, y: 185, t: 'FINAL' },
             ].map((l) => (
-              <text key={l.t} x={l.x} y={l.y} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="1.5" fill="#93A6BB">
+              <text key={l.t} x={l.x} y={l.y} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="1.5" fill="rgb(var(--c-muted))">
                 {l.t}
               </text>
             ))}
             {/* marcações do SOP */}
             <g>
-              <circle cx="520" cy="60" r="5" fill="#3DDC97" />
-              <text x="534" y="56" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="#3DDC97">TREM BAIXADO (TRAVESS DA CABECEIRA)</text>
-              <circle cx="140" cy="60" r="5" fill="#FFB020" />
-              <text x="128" y="82" textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="#FFB020">FLAPS NA CURTA FINAL</text>
+              <circle cx="520" cy="60" r="5" fill="rgb(var(--c-green))" />
+              <text x="534" y="56" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="rgb(var(--c-green))">TREM BAIXADO (TRAVESS DA CABECEIRA)</text>
+              <circle cx="140" cy="60" r="5" fill="rgb(var(--c-amber))" />
+              <text x="128" y="82" textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="rgb(var(--c-amber))">FLAPS NA CURTA FINAL</text>
             </g>
           </svg>
         </div>

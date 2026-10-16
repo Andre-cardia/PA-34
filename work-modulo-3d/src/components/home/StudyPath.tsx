@@ -76,7 +76,7 @@ export default function StudyPath() {
               y1="0.5"
               x2="100"
               y2="0.5"
-              stroke="#3FE0FF"
+              stroke="rgb(var(--c-cyan))"
               strokeWidth="1.5"
               strokeDasharray="4 5"
               vectorEffect="non-scaling-stroke"

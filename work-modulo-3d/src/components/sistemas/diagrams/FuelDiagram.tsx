@@ -16,9 +16,9 @@ type SelPos = 'ON' | 'OFF' | 'XFEED'
 const SEL_ORDER: SelPos[] = ['ON', 'OFF', 'XFEED']
 const SEL_LABEL: Record<SelPos, string> = { ON: 'ON', OFF: 'OFF', XFEED: 'X FEED' }
 
-const DIM = '#2A3B4D'
-const TXT = '#93A6BB'
-const FAINT = '#54687E'
+const DIM = 'rgb(var(--c-dim))'
+const TXT = 'rgb(var(--c-muted))'
+const FAINT = 'rgb(var(--c-faint))'
 
 interface SelectorProps {
   x: number
@@ -45,8 +45,8 @@ function Selector({ x, y, pos, color, label, onCycle, onSet, danger }: SelectorP
         y={y}
         width={110}
         height={68}
-        fill="#0A1018"
-        stroke={danger ? '#FF4D4D' : color}
+        fill="rgb(var(--c-panel))"
+        stroke={danger ? 'rgb(var(--c-red))' : color}
         strokeWidth={danger ? 2 : 1.5}
         style={{ cursor: 'pointer', filter: danger ? 'drop-shadow(0 0 8px #FF4D4D88)' : `drop-shadow(0 0 6px ${color}44)` }}
         onClick={onCycle}
@@ -69,13 +69,13 @@ function Selector({ x, y, pos, color, label, onCycle, onSet, danger }: SelectorP
             role="button"
             aria-label={`${label}: selecionar ${SEL_LABEL[p]}`}
           >
-            <rect x={x + 8} y={y + 8 + i * 19} width={94} height={17} fill={active ? '#16222F' : 'transparent'} />
+            <rect x={x + 8} y={y + 8 + i * 19} width={94} height={17} fill={active ? 'rgb(var(--c-overlay))' : 'transparent'} />
             <rect
               x={x + 13}
               y={y + 13.5 + i * 19}
               width={7}
               height={7}
-              fill={active ? (danger ? '#FF4D4D' : color) : 'transparent'}
+              fill={active ? (danger ? 'rgb(var(--c-red))' : color) : 'transparent'}
               stroke={active ? 'none' : FAINT}
               strokeWidth={1}
             />
@@ -83,7 +83,7 @@ function Selector({ x, y, pos, color, label, onCycle, onSet, danger }: SelectorP
               x={x + 28}
               y={y + 17 + i * 19}
               dominantBaseline="central"
-              fill={active ? '#E8F0F7' : FAINT}
+              fill={active ? 'rgb(var(--c-ink))' : FAINT}
               fontSize={10}
               fontFamily="'IBM Plex Mono', monospace"
               fontWeight={active ? 600 : 400}
@@ -106,18 +106,18 @@ function EngineBlock({ x, fed, label, color, onClick }: { x: number; fed: boolea
         y={430}
         width={130}
         height={58}
-        fill="#101926"
-        stroke={fed ? color : '#1E2C3D'}
+        fill="rgb(var(--c-raised))"
+        stroke={fed ? color : 'rgb(var(--c-hairline))'}
         strokeWidth={1.5}
         style={fed ? { filter: `drop-shadow(0 0 8px ${color}66)` } : undefined}
       />
-      <text x={x + 65} y={452} textAnchor="middle" fill={fed ? '#E8F0F7' : FAINT} fontSize={11} fontWeight={600} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
+      <text x={x + 65} y={452} textAnchor="middle" fill={fed ? 'rgb(var(--c-ink))' : FAINT} fontSize={11} fontWeight={600} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
         {label}
       </text>
       <text x={x + 65} y={468} textAnchor="middle" fill={FAINT} fontSize={8} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
         DIVISOR DE FLUXO + BICOS
       </text>
-      <circle cx={x + 14} cy={444} r={3.5} fill={fed ? color : '#1E2C3D'} />
+      <circle cx={x + 14} cy={444} r={3.5} fill={fed ? color : 'rgb(var(--c-hairline))'} />
       <text x={x + 22} y={447} fill={fed ? color : FAINT} fontSize={8} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
         {fed ? 'ALIMENTADO' : 'SEM FLUXO'}
       </text>
@@ -213,7 +213,7 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
           {/* tubulações base (draw-on) */}
           <DrawPath d="M89 96 V132 H231 M231 96 V132 M160 132 V210" color={DIM} width={2.5} duration={1.1} delay={0.15} />
           <DrawPath d="M529 96 V132 H671 M671 96 V132 M600 132 V210" color={DIM} width={2.5} duration={1.1} delay={0.15} />
-          <DrawPath d="M210 244 H550" color={bothX ? '#FF4D4D' : DIM} width={2.5} duration={0.9} delay={0.5} />
+          <DrawPath d="M210 244 H550" color={bothX ? 'rgb(var(--c-red))' : DIM} width={2.5} duration={0.9} delay={0.5} />
           <DrawPath d="M160 278 V430" color={DIM} width={2.5} duration={1} delay={0.6} />
           <DrawPath d="M600 278 V430" color={DIM} width={2.5} duration={1} delay={0.6} />
           <text x={384} y={238} fill={FAINT} fontSize={8} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">LINHA DE CROSSFEED</text>
@@ -223,8 +223,8 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
           <FlowPath d="M231 96 V132 H160" color={c} active={tankLActive} />
           <FlowPath d="M671 96 V132 H600 V210" color={c} active={tankRActive} />
           <FlowPath d="M529 96 V132 H600" color={c} active={tankRActive} />
-          <FlowPath d="M210 244 H550" color={bothX ? '#FF4D4D' : '#FFB020'} active={crossLR} width={2.5} />
-          <FlowPath d="M550 244 H210" color={bothX ? '#FF4D4D' : '#FFB020'} active={crossRL} width={2.5} />
+          <FlowPath d="M210 244 H550" color={bothX ? 'rgb(var(--c-red))' : 'rgb(var(--c-amber))'} active={crossLR} width={2.5} />
+          <FlowPath d="M550 244 H210" color={bothX ? 'rgb(var(--c-red))' : 'rgb(var(--c-amber))'} active={crossRL} width={2.5} />
           <FlowPath d="M160 278 V430" color={c} active={fedL} />
           <FlowPath d="M600 278 V430" color={c} active={fedR} />
 
@@ -237,7 +237,7 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
           {/* bocais de abastecimento */}
           {[89, 671].map((bx) => (
             <g key={bx} onClick={() => focusComponent(componentDomId(sistema.id, 1))} style={{ cursor: 'pointer' }} role="button" aria-label="Bocal de abastecimento — ver na lista">
-              <circle cx={bx} cy={36} r={5} fill="#0A1018" stroke={c} strokeWidth={1.5} />
+              <circle cx={bx} cy={36} r={5} fill="rgb(var(--c-panel))" stroke={c} strokeWidth={1.5} />
               <text x={bx} y={24} textAnchor="middle" fill={FAINT} fontSize={8} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.1em">BOCAL</text>
             </g>
           ))}
@@ -247,7 +247,7 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
           <Selector x={545} y={210} pos={selR} color={c} label="SELETORA DIR" danger={bothX} onCycle={cycle(selR, setSelR)} onSet={setSelR} />
           {/* tag clicável → ficha da válvula seletora */}
           <g style={{ cursor: 'pointer' }} onClick={() => focusComponent(componentDomId(sistema.id, 4))} role="button" aria-label="Válvula seletora de combustível — ver na lista">
-            <rect x={298} y={252} width={164} height={18} fill="#0A1018" stroke={FAINT} strokeWidth={1} strokeDasharray="3 3" />
+            <rect x={298} y={252} width={164} height={18} fill="rgb(var(--c-panel))" stroke={FAINT} strokeWidth={1} strokeDasharray="3 3" />
             <text x={380} y={264} textAnchor="middle" fill={TXT} fontSize={8.5} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.08em">
               VÁLVULAS SELETORAS → FICHA
             </text>
@@ -266,8 +266,8 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
           {/* aviso: ambas em X FEED */}
           {bothX && (
             <motion.g animate={{ opacity: [1, 0.25, 1] }} transition={{ repeat: Infinity, duration: 0.9 }}>
-              <rect x={300} y={206} width={160} height={24} fill="#FF4D4D" />
-              <text x={380} y={222} textAnchor="middle" fill="#05080D" fontSize={10} fontWeight={700} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.12em">
+              <rect x={300} y={206} width={160} height={24} fill="rgb(var(--c-red))" />
+              <text x={380} y={222} textAnchor="middle" fill="rgb(var(--c-abyss))" fontSize={10} fontWeight={700} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.12em">
                 CONFIG. PROIBIDA
               </text>
             </motion.g>
@@ -277,7 +277,7 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
           <g fontFamily="'IBM Plex Mono', monospace" fontSize={9} letterSpacing="0.12em">
             <line x1={300} y1={512} x2={324} y2={512} stroke={c} strokeWidth={2} strokeDasharray="2 6" />
             <text x={330} y={515} fill={TXT}>FLUXO ATIVO</text>
-            <line x1={440} y1={512} x2={464} y2={512} stroke="#FFB020" strokeWidth={2} strokeDasharray="2 6" />
+            <line x1={440} y1={512} x2={464} y2={512} stroke="rgb(var(--c-amber))" strokeWidth={2} strokeDasharray="2 6" />
             <text x={470} y={515} fill={TXT}>CROSSFEED</text>
             <line x1={580} y1={512} x2={604} y2={512} stroke={DIM} strokeWidth={2.5} />
             <text x={610} y={515} fill={TXT}>LINHA</text>

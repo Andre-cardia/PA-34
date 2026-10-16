@@ -14,7 +14,7 @@ function Helice({ feathered }: { feathered: boolean }) {
           key={y}
           d={feathered ? `M -110 ${y} L 110 ${y}` : `M -110 ${y} Q -40 ${y + 22} 0 ${y} T 110 ${y - 14}`}
           fill="none"
-          stroke={feathered ? '#3DDC97' : '#FF4D4D'}
+          stroke={feathered ? 'rgb(var(--c-green))' : 'rgb(var(--c-red))'}
           strokeWidth="1.6"
           strokeOpacity={feathered ? 0.7 : 0.55}
           strokeDasharray="6 5"
@@ -32,23 +32,23 @@ function Helice({ feathered }: { feathered: boolean }) {
       >
         <motion.rect
           x="-7" y="-92" width="14" height="92" rx="6"
-          fill="#16222F" stroke="#93A6BB" strokeWidth="1.5"
+          fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-muted))" strokeWidth="1.5"
           initial={false}
           animate={{ width: feathered ? 5 : 14, x: feathered ? -2.5 : -7 }}
           transition={{ duration: 0.8, ease: MECH }}
         />
         <motion.rect
           x="-7" y="0" width="14" height="92" rx="6"
-          fill="#16222F" stroke="#93A6BB" strokeWidth="1.5"
+          fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-muted))" strokeWidth="1.5"
           initial={false}
           animate={{ width: feathered ? 5 : 14, x: feathered ? -2.5 : -7 }}
           transition={{ duration: 0.8, ease: MECH }}
         />
       </motion.g>
-      <circle r="12" fill="#101926" stroke="#54687E" strokeWidth="1.5" />
-      <circle r="4" fill="#54687E" />
+      <circle r="12" fill="rgb(var(--c-raised))" stroke="rgb(var(--c-faint))" strokeWidth="1.5" />
+      <circle r="4" fill="rgb(var(--c-faint))" />
       {/* etiqueta */}
-      <text x="0" y="112" textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2" fill={feathered ? '#3DDC97' : '#FF4D4D'}>
+      <text x="0" y="112" textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2" fill={feathered ? 'rgb(var(--c-green))' : 'rgb(var(--c-red))'}>
         {feathered ? 'EMBANDEIRADA — ARRASTO MÍNIMO' : 'MOLINETE — ARRASTO CRÍTICO'}
       </text>
     </svg>
@@ -100,8 +100,8 @@ export default function Embandeiramento() {
           <strong className="text-ink">embandeirada</strong>.
         </p>
         <div className="space-y-5 border border-hairline bg-raised/50 p-6">
-          <Barra label="Subida bimotor" value={1000} max={1000} color="#3FE0FF" />
-          <Barra label="Subida monomotor (ou menos)" value={200} max={1000} color="#5B9DFF" />
+          <Barra label="Subida bimotor" value={1000} max={1000} color="rgb(var(--c-cyan))" />
+          <Barra label="Subida monomotor (ou menos)" value={200} max={1000} color="rgb(var(--c-blue))" />
         </div>
         <div className="flex flex-wrap gap-3">
           <span className="inline-flex items-center gap-2 border border-amber/50 bg-amber/10 px-3 py-1.5 font-mono text-xs tracking-[0.1em] text-amber">

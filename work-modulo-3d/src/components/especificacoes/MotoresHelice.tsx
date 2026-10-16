@@ -30,11 +30,11 @@ const Propeller = memo(function Propeller({ reverse, spinning }: { reverse?: boo
             animation: spinning ? `prop-spin 3s linear infinite ${reverse ? 'reverse' : 'normal'}` : 'none',
           }}
         >
-          <ellipse cx="40" cy="19" rx="6" ry="17" fill="#16222F" stroke="#3FE0FF" strokeWidth="1.2" />
-          <ellipse cx="40" cy="61" rx="6" ry="17" fill="#16222F" stroke="#3FE0FF" strokeWidth="1.2" />
+          <ellipse cx="40" cy="19" rx="6" ry="17" fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-cyan))" strokeWidth="1.2" />
+          <ellipse cx="40" cy="61" rx="6" ry="17" fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-cyan))" strokeWidth="1.2" />
         </g>
-        <circle cx="40" cy="40" r="8" fill="#0A1018" stroke="#93A6BB" strokeWidth="1.4" />
-        <circle cx="40" cy="40" r="2.2" fill="#54687E" />
+        <circle cx="40" cy="40" r="8" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-muted))" strokeWidth="1.4" />
+        <circle cx="40" cy="40" r="2.2" fill="rgb(var(--c-faint))" />
       </svg>
       {/* disco da hélice */}
       <span className="pointer-events-none absolute inset-0 rounded-full border border-dashed border-cyan-dim/60" />

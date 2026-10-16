@@ -12,10 +12,10 @@ import { DiagramShell, DiagramNode, DrawPath, FlowPath } from '../shared'
 import { focusComponent, componentDomId } from '../utils'
 import { cn } from '@/lib/utils'
 
-const DIM = '#2A3B4D'
-const FAINT = '#54687E'
-const COLD = '#3FE0FF'
-const HOT = '#FFB020'
+const DIM = 'rgb(var(--c-dim))'
+const FAINT = 'rgb(var(--c-faint))'
+const COLD = 'rgb(var(--c-cyan))'
+const HOT = 'rgb(var(--c-amber))'
 
 export default function HvacDiagram({ sistema }: { sistema: Sistema; meta: SystemMeta }) {
   const [heat, setHeat] = useState(true)
@@ -99,7 +99,7 @@ export default function HvacDiagram({ sistema }: { sistema: Sistema; meta: Syste
 
         {/* ventiladores */}
         <g onClick={fc(4)} style={{ cursor: 'pointer' }} role="button" aria-label="Ventilador do desembaçador — ver na lista">
-          <circle cx={700} cy={128} r={14} fill="#0A1018" stroke={defrost ? COLD : FAINT} strokeWidth={1.5} />
+          <circle cx={700} cy={128} r={14} fill="rgb(var(--c-panel))" stroke={defrost ? COLD : FAINT} strokeWidth={1.5} />
           <motion.g
             animate={defrost ? { rotate: 360 } : { rotate: 0 }}
             transition={defrost ? { repeat: Infinity, duration: 1.1, ease: 'linear' } : { duration: 0.3 }}

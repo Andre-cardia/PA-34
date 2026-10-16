@@ -52,19 +52,19 @@ function VaChart() {
   const y = (mph: number) => PAD.t + (1 - (mph - 125) / (155 - 125)) * (H - PAD.t - PAD.b)
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="mt-4 w-full max-w-[520px]" role="img" aria-label={`VA varia com o peso: ${vas[0]} MPH a 2.743 lb e ${vas[1]} MPH a 4.200 lb`}>
-      <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={H - PAD.b} stroke="#54687E" strokeWidth="1" />
-      <line x1={PAD.l} y1={H - PAD.b} x2={W - PAD.r} y2={H - PAD.b} stroke="#54687E" strokeWidth="1" />
+      <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={H - PAD.b} stroke="rgb(var(--c-faint))" strokeWidth="1" />
+      <line x1={PAD.l} y1={H - PAD.b} x2={W - PAD.r} y2={H - PAD.b} stroke="rgb(var(--c-faint))" strokeWidth="1" />
       {[130, 140, 150].map((mph) => (
         <g key={mph}>
-          <line x1={PAD.l} y1={y(mph)} x2={W - PAD.r} y2={y(mph)} stroke="#1E2C3D" strokeDasharray="2 5" />
-          <text x={PAD.l - 8} y={y(mph) + 3.5} textAnchor="end" fill="#54687E" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace">
+          <line x1={PAD.l} y1={y(mph)} x2={W - PAD.r} y2={y(mph)} stroke="rgb(var(--c-hairline))" strokeDasharray="2 5" />
+          <text x={PAD.l - 8} y={y(mph) + 3.5} textAnchor="end" fill="rgb(var(--c-faint))" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace">
             {mph}
           </text>
         </g>
       ))}
       <motion.path
         d={`M ${x(pesos[0])} ${y(vas[0])} L ${x(pesos[1])} ${y(vas[1])}`}
-        stroke="#3FE0FF"
+        stroke="rgb(var(--c-cyan))"
         strokeWidth="1.8"
         fill="none"
         initial={{ pathLength: 0 }}
@@ -73,11 +73,11 @@ function VaChart() {
       />
       {pesos.map((lb, i) => (
         <motion.g key={lb} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 + i * 0.25 }}>
-          <circle cx={x(lb)} cy={y(vas[i])} r="4.5" fill="#0A1018" stroke="#3FE0FF" strokeWidth="2" />
-          <text x={x(lb)} y={y(vas[i]) - 12} textAnchor="middle" fill="#E8F0F7" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
+          <circle cx={x(lb)} cy={y(vas[i])} r="4.5" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-cyan))" strokeWidth="2" />
+          <text x={x(lb)} y={y(vas[i]) - 12} textAnchor="middle" fill="rgb(var(--c-ink))" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
             {vas[i]} MPH
           </text>
-          <text x={x(lb)} y={H - PAD.b + 16} textAnchor="middle" fill="#54687E" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace">
+          <text x={x(lb)} y={H - PAD.b + 16} textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace">
             {lb.toLocaleString('pt-BR')} lb
           </text>
         </motion.g>
@@ -235,7 +235,7 @@ export default function VelocidadesDetalhe() {
                     label={r.label}
                     mph={numOf(r.value)}
                     max={160}
-                    color={r.label.includes('Monomotor') ? '#5B9DFF' : r.label.includes('Ângulo') ? '#FFB020' : '#3DDC97'}
+                    color={r.label.includes('Monomotor') ? 'rgb(var(--c-blue))' : r.label.includes('Ângulo') ? 'rgb(var(--c-amber))' : 'rgb(var(--c-green))'}
                     delay={i * 0.12}
                   />
                 ))}
@@ -296,7 +296,7 @@ export default function VelocidadesDetalhe() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <div>
                 {SEC.estol.tables[0]?.rows.map((r, i) => (
-                  <SpeedBar key={r.label} label={r.label} mph={numOf(r.value)} max={120} color={i === 0 ? '#3DDC97' : '#E8F0F7'} delay={i * 0.12} />
+                  <SpeedBar key={r.label} label={r.label} mph={numOf(r.value)} max={120} color={i === 0 ? 'rgb(var(--c-green))' : 'rgb(var(--c-ink))'} delay={i * 0.12} />
                 ))}
                 <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
                   Limpo (verde) × configuração de pouso (branco)

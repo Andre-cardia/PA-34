@@ -136,7 +136,7 @@ export default function PhaseChecklist({ fase }: Props) {
                       className={cn(
                         'mt-0.5 inline-flex h-4 w-4 shrink-0 translate-y-[2px] items-center justify-center border font-mono text-[10px] transition-colors duration-150',
                         isOn
-                          ? 'border-green bg-green/15 text-green [box-shadow:0_0_10px_rgba(61,220,151,0.35)]'
+                          ? 'border-green bg-green/15 text-green [box-shadow:0_0_10px_rgb(var(--c-green) / 0.35)]'
                           : 'border-hairline text-transparent group-hover:border-cyan-dim',
                       )}
                       aria-hidden="true"
@@ -208,7 +208,7 @@ export default function PhaseChecklist({ fase }: Props) {
               className="pointer-events-none absolute inset-0 flex items-center justify-center"
               aria-hidden="true"
             >
-              <span className="border-2 border-green px-6 py-2 font-mono text-lg font-semibold uppercase tracking-[0.3em] text-green [text-shadow:0_0_18px_rgba(61,220,151,0.4)]">
+              <span className="border-2 border-green px-6 py-2 font-mono text-lg font-semibold uppercase tracking-[0.3em] text-green [text-shadow:0_0_18px_rgb(var(--c-green) / 0.4)]">
                 Fase completa ✓
               </span>
             </motion.div>

@@ -8,8 +8,8 @@ import type { SystemMeta } from '../config'
 import { DiagramShell, DiagramNode, DrawPath, FlowPath } from '../shared'
 import { focusComponent, EASE_MECH, componentDomId } from '../utils'
 
-const DIM = '#2A3B4D'
-const FAINT = '#54687E'
+const DIM = 'rgb(var(--c-dim))'
+const FAINT = 'rgb(var(--c-faint))'
 const GAUGE_C = '#A78BFA'
 
 // ---- gauge de sucção: escala 0–10 inHg, semicírculo -------------------------
@@ -33,10 +33,10 @@ function SuctionGauge({ onClick }: { onClick: () => void }) {
   return (
     <g onClick={onClick} style={{ cursor: 'pointer' }} role="button" aria-label="Instrumento de Suction — ver na lista">
       {/* fundo */}
-      <path d={arcPath(0, 10, GR)} fill="none" stroke="#101926" strokeWidth={10} />
+      <path d={arcPath(0, 10, GR)} fill="none" stroke="rgb(var(--c-raised))" strokeWidth={10} />
       <path d={arcPath(0, 10, GR)} fill="none" stroke={DIM} strokeWidth={1.5} />
       {/* faixa verde 4,5–5,5 */}
-      <path d={arcPath(4.5, 5.5, GR)} fill="none" stroke="#3DDC97" strokeWidth={6} style={{ filter: 'drop-shadow(0 0 5px #3DDC9766)' }} />
+      <path d={arcPath(4.5, 5.5, GR)} fill="none" stroke="rgb(var(--c-green))" strokeWidth={6} style={{ filter: 'drop-shadow(0 0 5px #3DDC9766)' }} />
       {/* ticks */}
       {[0, 2, 4, 6, 8, 10].map((v) => {
         const [x0, y0] = polar(v, GR - 4)
@@ -59,10 +59,10 @@ function SuctionGauge({ onClick }: { onClick: () => void }) {
         transition={{ duration: 1.4, delay: 0.5, ease: EASE_MECH }}
         style={{ transformOrigin: '50% 100%' }}
       >
-        <line x1={GX} y1={GY} x2={nx} y2={ny} stroke="#E8F0F7" strokeWidth={2} />
+        <line x1={GX} y1={GY} x2={nx} y2={ny} stroke="rgb(var(--c-ink))" strokeWidth={2} />
       </motion.g>
-      <circle cx={GX} cy={GY} r={4} fill="#101926" stroke="#E8F0F7" strokeWidth={1.5} />
-      <text x={GX} y={GY + 24} textAnchor="middle" fill="#E8F0F7" fontSize={10} fontWeight={600} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">
+      <circle cx={GX} cy={GY} r={4} fill="rgb(var(--c-raised))" stroke="rgb(var(--c-ink))" strokeWidth={1.5} />
+      <text x={GX} y={GY + 24} textAnchor="middle" fill="rgb(var(--c-ink))" fontSize={10} fontWeight={600} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">
         SUCTION
       </text>
       <text x={GX} y={GY + 38} textAnchor="middle" fill={GAUGE_C} fontSize={8.5} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.1em">
@@ -122,14 +122,14 @@ export default function VacuumDiagram({ sistema, meta }: { sistema: Sistema; met
 
         {/* nota: redundância (texto do funcionamento JSON) */}
         <g>
-          <rect x={360} y={300} width={370} height={58} fill="#0A1018" stroke="#1E2C3D" />
+          <rect x={360} y={300} width={370} height={58} fill="rgb(var(--c-panel))" stroke="rgb(var(--c-hairline))" />
           <text x={378} y={324} fill={GAUGE_C} fontSize={9} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.14em">
             REDUNDÂNCIA
           </text>
-          <text x={378} y={342} fill="#93A6BB" fontSize={10} fontFamily="'IBM Plex Mono', monospace">
+          <text x={378} y={342} fill="rgb(var(--c-muted))" fontSize={10} fontFamily="'IBM Plex Mono', monospace">
             1 bomba supre giros duplos até 12.000 ft;
           </text>
-          <text x={378} y={356} fill="#93A6BB" fontSize={10} fontFamily="'IBM Plex Mono', monospace">
+          <text x={378} y={356} fill="rgb(var(--c-muted))" fontSize={10} fontFamily="'IBM Plex Mono', monospace">
             acima disso, manter RPM elevada.
           </text>
           {/* pino laranja */}

@@ -124,7 +124,7 @@ export default function FluxoDecisao({ onSelect }: Props) {
           <div ref={runwayRef} className="relative h-14" aria-hidden="true">
             <span className="absolute inset-x-0 top-1/2 border-t-2 border-dashed border-faint/40" />
             <motion.div style={{ x: planeX }} className="absolute left-0 top-1/2 -translate-y-1/2">
-              <Plane className="h-6 w-6 rotate-45 text-cyan [filter:drop-shadow(0_0_8px_rgba(63,224,255,0.5))]" strokeWidth={1.75} />
+              <Plane className="h-6 w-6 rotate-45 text-cyan [filter:drop-shadow(0_0_8px_rgb(var(--c-cyan) / 0.5))]" strokeWidth={1.75} />
             </motion.div>
             <span className="absolute right-0 top-1/2 -translate-y-1/2 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
               V1/VR 105
@@ -139,7 +139,7 @@ export default function FluxoDecisao({ onSelect }: Props) {
             transition={{ duration: 0.6, ease: EASE }}
             className={cn(
               'relative mx-auto mt-6 max-w-xl border p-6 text-center transition-all duration-700',
-              lit ? 'border-red/70 bg-red/[0.07] [box-shadow:0_0_40px_rgba(255,77,77,0.15)]' : 'border-hairline bg-raised',
+              lit ? 'border-red/70 bg-red/[0.07] [box-shadow:0_0_40px_rgb(var(--c-red) / 0.15)]' : 'border-hairline bg-raised',
             )}
           >
             <motion.span

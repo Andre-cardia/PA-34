@@ -32,10 +32,10 @@ export default function ResumoProgresso() {
           {/* donut */}
           <div className="relative">
             <svg viewBox="0 0 140 140" className="h-44 w-44 -rotate-90" role="img" aria-label={`Progresso total: ${stats.totalDone} de ${stats.totalItens} itens`}>
-              <circle cx="70" cy="70" r={R} fill="none" stroke="#1E2C3D" strokeWidth="8" />
+              <circle cx="70" cy="70" r={R} fill="none" stroke="rgb(var(--c-hairline))" strokeWidth="8" />
               <motion.circle
                 cx="70" cy="70" r={R} fill="none"
-                stroke={allDone ? '#3DDC97' : '#3FE0FF'}
+                stroke={allDone ? 'rgb(var(--c-green))' : 'rgb(var(--c-cyan))'}
                 strokeWidth="8"
                 strokeDasharray={CIRC}
                 initial={{ strokeDashoffset: CIRC }}

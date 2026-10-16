@@ -74,16 +74,16 @@ export default function SafetyWindow() {
       <svg viewBox="0 0 640 220" className="mt-6 w-full" role="img" aria-label="Safety window da decolagem">
         {/* janela de segurança */}
         <motion.rect
-          x="370" y="30" width="240" height="130" fill="#3DDC97" fillOpacity="0.08" stroke="#3DDC97" strokeOpacity="0.4" strokeDasharray="5 4"
+          x="370" y="30" width="240" height="130" fill="rgb(var(--c-green))" fillOpacity="0.08" stroke="rgb(var(--c-green))" strokeOpacity="0.4" strokeDasharray="5 4"
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
         />
-        <text x="490" y="46" textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="#3DDC97" letterSpacing="2">SAFETY WINDOW</text>
+        <text x="490" y="46" textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10" fill="rgb(var(--c-green))" letterSpacing="2">SAFETY WINDOW</text>
         {/* pista */}
-        <rect x="20" y="160" width="340" height="14" fill="#101926" stroke="#54687E" />
+        <rect x="20" y="160" width="340" height="14" fill="rgb(var(--c-raised))" stroke="rgb(var(--c-faint))" />
         {/* trajetória */}
         <motion.path
           d="M 30 160 L 360 160 Q 420 158 460 110 L 620 50"
-          fill="none" stroke="#3FE0FF" strokeWidth="2.5"
+          fill="none" stroke="rgb(var(--c-cyan))" strokeWidth="2.5"
           initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.8, ease: [0.7, 0, 0.2, 1] }}
         />
         {/* ticks dos callouts */}
@@ -91,12 +91,12 @@ export default function SafetyWindow() {
           <g key={i}>
             <motion.line
               x1={TICKS_X[i]} y1={s.tick >= 5 ? 120 : 190} x2={TICKS_X[i]} y2={s.tick >= 5 ? 100 : 176}
-              stroke={step >= i ? '#3FE0FF' : '#1E2C3D'} strokeWidth="2"
+              stroke={step >= i ? 'rgb(var(--c-cyan))' : 'rgb(var(--c-hairline))'} strokeWidth="2"
             />
             <motion.circle
               cx={TICKS_X[i]} cy={s.tick >= 5 ? 96 : 196} r={step === i ? 6 : 4}
-              fill={step >= i ? '#3FE0FF' : '#101926'}
-              stroke={step >= i ? '#3FE0FF' : '#54687E'}
+              fill={step >= i ? 'rgb(var(--c-cyan))' : 'rgb(var(--c-raised))'}
+              stroke={step >= i ? 'rgb(var(--c-cyan))' : 'rgb(var(--c-faint))'}
               animate={step === i ? { scale: [1, 1.35, 1] } : {}}
               transition={{ duration: 0.5 }}
             />

@@ -40,7 +40,7 @@ export default function HeroSection() {
             loading="eager"
           />
           <div className="blueprint-grid absolute inset-0" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#05080D_92%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgb(var(--c-abyss))_92%)]" />
         </div>
 
         {/* canvas 3D — centro-direita */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
               <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.25 }}>
                 <Link
                   to="/modelo-3d"
-                  className="group inline-flex items-center gap-2.5 bg-cyan px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-abyss transition-shadow duration-300 hover:shadow-[0_0_32px_rgba(63,224,255,0.35)]"
+                  className="group inline-flex items-center gap-2.5 bg-cyan px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-abyss transition-shadow duration-300 hover:shadow-[0_0_32px_rgb(var(--c-cyan) / 0.35)]"
                 >
                   Explorar modelo 3D
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

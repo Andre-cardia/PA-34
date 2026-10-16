@@ -37,16 +37,16 @@ interface Tick {
 }
 
 const TICKS: Tick[] = [
-  { code: 'VS0', mph: v.estol_power_off_trem_e_flap_estendidos_mph, anchor: 'estol', color: '#FF4D4D', activeSpeed: v.estol_power_off_trem_e_flap_estendidos_mph },
-  { code: 'VS', mph: v.estol_power_off_trem_e_flap_recolhidos_mph, anchor: 'estol', color: '#FF4D4D', activeSpeed: v.estol_power_off_trem_e_flap_recolhidos_mph },
-  { code: 'VMC', mph: v.VMC_velocidade_minima_de_controle_mph, anchor: 'vmc', color: '#FF4D4D', activeSpeed: v.VMC_velocidade_minima_de_controle_mph },
-  { code: 'VX', mph: v.melhor_angulo_de_subida_VX_mph, anchor: 'subida', color: '#3DDC97', activeSpeed: v.melhor_angulo_de_subida_VX_mph },
-  { code: 'VY', mph: v.melhor_razao_de_subida_VY_mph, anchor: 'subida', color: '#3DDC97', activeSpeed: v.melhor_razao_de_subida_VY_mph },
-  { code: 'VYSE', mph: v.velocidade_de_subida_monomotor_VYSE_mph, anchor: 'subida', color: '#5B9DFF', below: true, activeSpeed: v.velocidade_de_subida_monomotor_VYSE_mph },
-  { code: 'VFE', mph: v.velocidade_maxima_com_flap_10_mph, anchor: 'trem-flap', color: '#FFB020', activeSpeed: v.velocidade_maxima_com_flap_10_mph },
-  { code: 'VLE', mph: v.VLE_trem_baixado_e_VLO_down_mph, anchor: 'trem-flap', color: '#FFB020', activeSpeed: v.VLE_trem_baixado_e_VLO_down_mph },
-  { code: 'VNO', mph: v.velocidade_maxima_de_cruzeiro_mph, anchor: 'glossario', color: '#FFB020', activeSpeed: v.velocidade_maxima_de_cruzeiro_mph },
-  { code: 'VNE', mph: v.VNE_velocidade_nunca_exceder_mph, anchor: 'glossario', color: '#FF4D4D', activeSpeed: v.VNE_velocidade_nunca_exceder_mph },
+  { code: 'VS0', mph: v.estol_power_off_trem_e_flap_estendidos_mph, anchor: 'estol', color: 'rgb(var(--c-red))', activeSpeed: v.estol_power_off_trem_e_flap_estendidos_mph },
+  { code: 'VS', mph: v.estol_power_off_trem_e_flap_recolhidos_mph, anchor: 'estol', color: 'rgb(var(--c-red))', activeSpeed: v.estol_power_off_trem_e_flap_recolhidos_mph },
+  { code: 'VMC', mph: v.VMC_velocidade_minima_de_controle_mph, anchor: 'vmc', color: 'rgb(var(--c-red))', activeSpeed: v.VMC_velocidade_minima_de_controle_mph },
+  { code: 'VX', mph: v.melhor_angulo_de_subida_VX_mph, anchor: 'subida', color: 'rgb(var(--c-green))', activeSpeed: v.melhor_angulo_de_subida_VX_mph },
+  { code: 'VY', mph: v.melhor_razao_de_subida_VY_mph, anchor: 'subida', color: 'rgb(var(--c-green))', activeSpeed: v.melhor_razao_de_subida_VY_mph },
+  { code: 'VYSE', mph: v.velocidade_de_subida_monomotor_VYSE_mph, anchor: 'subida', color: 'rgb(var(--c-blue))', below: true, activeSpeed: v.velocidade_de_subida_monomotor_VYSE_mph },
+  { code: 'VFE', mph: v.velocidade_maxima_com_flap_10_mph, anchor: 'trem-flap', color: 'rgb(var(--c-amber))', activeSpeed: v.velocidade_maxima_com_flap_10_mph },
+  { code: 'VLE', mph: v.VLE_trem_baixado_e_VLO_down_mph, anchor: 'trem-flap', color: 'rgb(var(--c-amber))', activeSpeed: v.VLE_trem_baixado_e_VLO_down_mph },
+  { code: 'VNO', mph: v.velocidade_maxima_de_cruzeiro_mph, anchor: 'glossario', color: 'rgb(var(--c-amber))', activeSpeed: v.velocidade_maxima_de_cruzeiro_mph },
+  { code: 'VNE', mph: v.VNE_velocidade_nunca_exceder_mph, anchor: 'glossario', color: 'rgb(var(--c-red))', activeSpeed: v.VNE_velocidade_nunca_exceder_mph },
 ]
 
 const VA_RANGE: [number, number] = [
@@ -70,11 +70,11 @@ const SECTION_SPEEDS: { id: string; mph: number | null }[] = [
 function Bands() {
   return (
     <>
-      <rect x={pct(BRANCO[0])} y={34} width={pct(BRANCO[1]) - pct(BRANCO[0])} height={16} fill="#E8F0F7" opacity={0.85} />
-      <rect x={pct(VERDE[0])} y={34} width={pct(VERDE[1]) - pct(VERDE[0])} height={16} fill="#3DDC97" opacity={0.85} />
-      <rect x={pct(AMARELO[0])} y={34} width={pct(AMARELO[1]) - pct(AMARELO[0])} height={16} fill="#FFB020" opacity={0.85} />
-      <rect x={pct(VNE)} y={34} width={pct(V_MAX) - pct(VNE)} height={16} fill="#FF4D4D" opacity={0.35} />
-      <rect x={pct(VNE)} y={30} width={3} height={24} fill="#FF4D4D" />
+      <rect x={pct(BRANCO[0])} y={34} width={pct(BRANCO[1]) - pct(BRANCO[0])} height={16} fill="rgb(var(--c-ink))" opacity={0.85} />
+      <rect x={pct(VERDE[0])} y={34} width={pct(VERDE[1]) - pct(VERDE[0])} height={16} fill="rgb(var(--c-green))" opacity={0.85} />
+      <rect x={pct(AMARELO[0])} y={34} width={pct(AMARELO[1]) - pct(AMARELO[0])} height={16} fill="rgb(var(--c-amber))" opacity={0.85} />
+      <rect x={pct(VNE)} y={34} width={pct(V_MAX) - pct(VNE)} height={16} fill="rgb(var(--c-red))" opacity={0.35} />
+      <rect x={pct(VNE)} y={30} width={3} height={24} fill="rgb(var(--c-red))" />
     </>
   )
 }
@@ -126,12 +126,12 @@ export default function ReguaVelocidades() {
               aria-label="Régua de velocidades de 40 a 230 MPH com os arcos do velocímetro e as V-speeds"
             >
               {/* trilho base */}
-              <rect x={0} y={34} width={W} height={16} fill="#0A1018" stroke="#1E2C3D" />
+              <rect x={0} y={34} width={W} height={16} fill="rgb(var(--c-panel))" stroke="rgb(var(--c-hairline))" />
               <Bands />
               {/* faixa VA */}
               <g>
-                <rect x={pct(VA_RANGE[0])} y={14} width={pct(VA_RANGE[1]) - pct(VA_RANGE[0])} height={5} fill="#3FE0FF" opacity={0.5} />
-                <text x={(pct(VA_RANGE[0]) + pct(VA_RANGE[1])) / 2} y={10} textAnchor="middle" fill="#3FE0FF" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
+                <rect x={pct(VA_RANGE[0])} y={14} width={pct(VA_RANGE[1]) - pct(VA_RANGE[0])} height={5} fill="rgb(var(--c-cyan))" opacity={0.5} />
+                <text x={(pct(VA_RANGE[0]) + pct(VA_RANGE[1])) / 2} y={10} textAnchor="middle" fill="rgb(var(--c-cyan))" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
                   VA {VA_RANGE[0]}–{VA_RANGE[1]}
                 </text>
               </g>
@@ -178,13 +178,13 @@ export default function ReguaVelocidades() {
               {/* escala */}
               {[40, 60, 80, 100, 120, 140, 160, 180, 200, 220].map((mph) => (
                 <g key={mph}>
-                  <line x1={pct(mph)} y1={50} x2={pct(mph)} y2={56} stroke="#54687E" strokeWidth="1" />
-                  <text x={pct(mph)} y={68} textAnchor="middle" fill="#54687E" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace">
+                  <line x1={pct(mph)} y1={50} x2={pct(mph)} y2={56} stroke="rgb(var(--c-faint))" strokeWidth="1" />
+                  <text x={pct(mph)} y={68} textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace">
                     {mph}
                   </text>
                 </g>
               ))}
-              <text x={W - 4} y={92} textAnchor="end" fill="#54687E" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
+              <text x={W - 4} y={92} textAnchor="end" fill="rgb(var(--c-faint))" fontSize="9.5" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
                 MPH
               </text>
               {/* marcador cyan */}
@@ -194,8 +194,8 @@ export default function ReguaVelocidades() {
                   animate={{ x: pct(activeMph) }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <polygon points="0,26 -5,18 5,18" fill="#3FE0FF" />
-                  <line x1={0} y1={26} x2={0} y2={50} stroke="#3FE0FF" strokeWidth="1.4" opacity={0.7} />
+                  <polygon points="0,26 -5,18 5,18" fill="rgb(var(--c-cyan))" />
+                  <line x1={0} y1={26} x2={0} y2={50} stroke="rgb(var(--c-cyan))" strokeWidth="1.4" opacity={0.7} />
                 </motion.g>
               )}
             </svg>
@@ -206,7 +206,7 @@ export default function ReguaVelocidades() {
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <rect x={0} y={2} width={W} height={16} fill="#0A1018" />
+              <rect x={0} y={2} width={W} height={16} fill="rgb(var(--c-panel))" />
               <g transform="translate(0 -32)">
                 <Bands />
               </g>

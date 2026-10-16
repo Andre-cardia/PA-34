@@ -33,28 +33,28 @@ function ClimbProfile() {
   return (
     <svg viewBox="0 0 640 230" className="mt-6 w-full max-w-2xl" role="img" aria-label="Perfil de subida padronizado">
       {/* solo */}
-      <line x1="0" y1="200" x2="640" y2="200" stroke="#1E2C3D" strokeWidth="1.5" />
+      <line x1="0" y1="200" x2="640" y2="200" stroke="rgb(var(--c-hairline))" strokeWidth="1.5" />
       {/* pista */}
-      <rect x="36" y="196" width="120" height="4" fill="#16222F" stroke="#54687E" strokeWidth="1" />
+      <rect x="36" y="196" width="120" height="4" fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-faint))" strokeWidth="1" />
       {/* trajetória de subida */}
-      <motion.path d="M 156 196 L 330 84" stroke="#3FE0FF" strokeWidth="1.5" fill="none" strokeDasharray="5 4" {...draw} />
-      <motion.path d="M 330 84 L 620 84" stroke="#3DDC97" strokeWidth="1.5" fill="none" {...draw} transition={{ ...draw.transition, delay: 0.9 }} />
+      <motion.path d="M 156 196 L 330 84" stroke="rgb(var(--c-cyan))" strokeWidth="1.5" fill="none" strokeDasharray="5 4" {...draw} />
+      <motion.path d="M 330 84 L 620 84" stroke="rgb(var(--c-green))" strokeWidth="1.5" fill="none" {...draw} transition={{ ...draw.transition, delay: 0.9 }} />
       {/* marcos */}
       {[
         { x: 330, label: 'MSA', y: 64 },
         { x: 500, label: 'TA', y: 64 },
       ].map((m) => (
         <g key={m.label}>
-          <circle cx={m.x} cy={84} r="3.5" fill="#0A1018" stroke="#FFB020" strokeWidth="1.5" />
-          <text x={m.x} y={m.y} textAnchor="middle" fill="#FFB020" fontSize="11" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
+          <circle cx={m.x} cy={84} r="3.5" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-amber))" strokeWidth="1.5" />
+          <text x={m.x} y={m.y} textAnchor="middle" fill="rgb(var(--c-amber))" fontSize="11" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
             {m.label}
           </text>
         </g>
       ))}
-      <text x="52" y="182" fill="#54687E" fontSize="11" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1.5">
+      <text x="52" y="182" fill="rgb(var(--c-faint))" fontSize="11" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1.5">
         25" MP / 2500 RPM
       </text>
-      <text x="200" y="130" fill="#3FE0FF" fontSize="11" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1.5" transform="rotate(-27 200 130)">
+      <text x="200" y="130" fill="rgb(var(--c-cyan))" fontSize="11" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1.5" transform="rotate(-27 200 130)">
         VI 120 MPH / 500 FT/MIN
       </text>
     </svg>
@@ -65,14 +65,14 @@ function CircuitProfile() {
   return (
     <svg viewBox="0 0 640 230" className="mt-6 w-full max-w-2xl" role="img" aria-label="Perfil esquemático de circuito de tráfego">
       <motion.rect
-        x="90" y="50" width="460" height="130" fill="none" stroke="#3FE0FF" strokeWidth="1.5" strokeDasharray="6 5"
+        x="90" y="50" width="460" height="130" fill="none" stroke="rgb(var(--c-cyan))" strokeWidth="1.5" strokeDasharray="6 5"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 1.6, ease: EASE }}
       />
       {/* pista */}
-      <rect x="90" y="176" width="200" height="7" fill="#16222F" stroke="#54687E" strokeWidth="1" />
+      <rect x="90" y="176" width="200" height="7" fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-faint))" strokeWidth="1" />
       {[
         { x: 320, y: 40, t: 'PERNA DO VENTO' },
         { x: 566, y: 122, t: 'BASE' },
@@ -80,7 +80,7 @@ function CircuitProfile() {
         { x: 66, y: 122, t: 'SUBIDA' },
         { x: 400, y: 168, t: 'FINAL' },
       ].map((l) => (
-        <text key={l.t} x={l.x} y={l.y} textAnchor="middle" fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1.5">
+        <text key={l.t} x={l.x} y={l.y} textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1.5">
           {l.t}
         </text>
       ))}

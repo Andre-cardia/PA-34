@@ -11,14 +11,14 @@ import { DiagramShell, DiagramNode, DrawPath } from '../shared'
 import { focusComponent, componentDomId } from '../utils'
 import { cn } from '@/lib/utils'
 
-const FAINT = '#54687E'
-const DIM = '#2A3B4D'
+const FAINT = 'rgb(var(--c-faint))'
+const DIM = 'rgb(var(--c-dim))'
 
 function Propeller({ cx, cy, period, color, label, onClick }: { cx: number; cy: number; period: number; color: string; label: string; onClick: () => void }) {
   return (
     <g onClick={onClick} style={{ cursor: 'pointer' }} role="button" aria-label={`${label} — ver hélices na lista`}>
       {/* nacele */}
-      <rect x={cx - 52} y={cy - 34} width={104} height={68} rx={34} fill="#0A1018" stroke="#1E2C3D" strokeWidth={1.5} />
+      <rect x={cx - 52} y={cy - 34} width={104} height={68} rx={34} fill="rgb(var(--c-panel))" stroke="rgb(var(--c-hairline))" strokeWidth={1.5} />
       {/* disco da hélice */}
       <circle cx={cx} cy={cy} r={128} fill={color} opacity={0.04} />
       <circle cx={cx} cy={cy} r={128} fill="none" stroke={DIM} strokeWidth={1} strokeDasharray="3 7" opacity={0.6} />
@@ -46,7 +46,7 @@ function Propeller({ cx, cy, period, color, label, onClick }: { cx: number; cy: 
         </g>
       </g>
       {/* spinner */}
-      <path d={`M ${cx} ${cy - 16} L ${cx + 11} ${cy + 10} L ${cx - 11} ${cy + 10} Z`} fill="#101926" stroke={color} strokeWidth={1.5} />
+      <path d={`M ${cx} ${cy - 16} L ${cx + 11} ${cy + 10} L ${cx - 11} ${cy + 10} Z`} fill="rgb(var(--c-raised))" stroke={color} strokeWidth={1.5} />
       <text x={cx} y={cy + 158} textAnchor="middle" fill={FAINT} fontSize={10} fontFamily="'IBM Plex Mono', monospace" letterSpacing="0.18em">
         {label}
       </text>
@@ -106,7 +106,7 @@ export default function PropSyncDiagram({ sistema, meta }: { sistema: Sistema; m
         <Propeller cx={555} cy={180} period={sync ? 1 : 1.17} color={c} label="HÉLICE DIR — ROTAÇÃO OPOSTA" onClick={fc(3)} />
 
         {/* comparador de fase */}
-        <text x={380} y={182} textAnchor="middle" fill={sync ? '#3DDC97' : '#FFB020'} fontSize={22} fontWeight={700} fontFamily="'IBM Plex Mono', monospace">
+        <text x={380} y={182} textAnchor="middle" fill={sync ? 'rgb(var(--c-green))' : 'rgb(var(--c-amber))'} fontSize={22} fontWeight={700} fontFamily="'IBM Plex Mono', monospace">
           {sync ? '=' : '≠'}
         </text>
 

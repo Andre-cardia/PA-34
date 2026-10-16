@@ -52,14 +52,14 @@ export default function MiniGauge({ label, value, max, unit, decimals = 0, ticks
         <path
           d={`M ${polar(START, R).x} ${polar(START, R).y} A ${R} ${R} 0 1 1 ${polar(END, R).x} ${polar(END, R).y}`}
           fill="none"
-          stroke="#1E2C3D"
+          stroke="rgb(var(--c-hairline))"
           strokeWidth="2"
         />
         {/* arco ativo */}
         <path
           d={`M ${polar(START, R).x} ${polar(START, R).y} A ${R} ${R} 0 1 1 ${polar(needleOn ? needleAngle : START, R).x} ${polar(needleOn ? needleAngle : START, R).y}`}
           fill="none"
-          stroke="#3FE0FF"
+          stroke="rgb(var(--c-cyan))"
           strokeWidth="2"
           style={{ transition: 'all 1.2s cubic-bezier(0.7, 0, 0.2, 1)' }}
         />
@@ -68,7 +68,7 @@ export default function MiniGauge({ label, value, max, unit, decimals = 0, ticks
           const a = START + (i / ticks) * (END - START)
           const p1 = polar(a, R - 3)
           const p2 = polar(a, R - 7)
-          return <line key={i} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#54687E" strokeWidth="1" />
+          return <line key={i} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-faint))" strokeWidth="1" />
         })}
         {/* linha azul / vermelha */}
         {blueLineAt !== undefined &&
@@ -76,14 +76,14 @@ export default function MiniGauge({ label, value, max, unit, decimals = 0, ticks
             const a = START + (blueLineAt / max) * (END - START)
             const p1 = polar(a, R - 2)
             const p2 = polar(a, R - 10)
-            return <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#5B9DFF" strokeWidth="2.5" />
+            return <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-blue))" strokeWidth="2.5" />
           })()}
         {redLineAt !== undefined &&
           (() => {
             const a = START + (redLineAt / max) * (END - START)
             const p1 = polar(a, R - 2)
             const p2 = polar(a, R - 10)
-            return <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#FF4D4D" strokeWidth="2.5" />
+            return <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-red))" strokeWidth="2.5" />
           })()}
         {/* agulha */}
         <line
@@ -91,11 +91,11 @@ export default function MiniGauge({ label, value, max, unit, decimals = 0, ticks
           y1="50"
           x2={tip.x}
           y2={tip.y}
-          stroke="#E8F0F7"
+          stroke="rgb(var(--c-ink))"
           strokeWidth="1.8"
           style={{ transition: 'all 1.2s cubic-bezier(0.7, 0, 0.2, 1)' }}
         />
-        <circle cx="50" cy="50" r="3" fill="#0A1018" stroke="#54687E" strokeWidth="1" />
+        <circle cx="50" cy="50" r="3" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-faint))" strokeWidth="1" />
       </svg>
       <div>
         <p className="font-mono text-lg font-medium leading-none text-ink">

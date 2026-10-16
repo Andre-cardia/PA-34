@@ -196,8 +196,8 @@ export default function Cockpit() {
         }}
       />
 
-      {/* palco */}
-      <div className="mx-auto max-w-[1600px] border-x border-hairline">
+      {/* palco — sempre escuro, mesmo no tema claro (theme-dark) */}
+      <div className="theme-dark mx-auto max-w-[1600px] border-x border-hairline bg-abyss text-ink">
         <div className="relative h-[78dvh] min-h-[540px]">
           <CockpitPanel
             pz={pz}

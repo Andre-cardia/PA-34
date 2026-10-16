@@ -31,14 +31,14 @@ function LayerStack({ active }: { active: boolean }) {
               style={{
                 transform: `translateZ(${z}px)`,
                 transitionTimingFunction: 'cubic-bezier(0.7, 0, 0.2, 1)',
-                borderColor: active ? 'rgba(63, 224, 255, 0.55)' : '#1E2C3D',
-                backgroundColor: i === camadas3d.length - 1 ? 'rgba(63, 224, 255, 0.06)' : 'rgba(16, 25, 38, 0.72)',
+                borderColor: active ? 'rgb(var(--c-cyan) / 0.55)' : 'rgb(var(--c-hairline))',
+                backgroundColor: i === camadas3d.length - 1 ? 'rgb(var(--c-cyan) / 0.06)' : 'rgb(var(--c-raised) / 0.72)',
               }}
             >
               <span
                 className="absolute -left-2 top-1/2 -translate-y-1/2 font-mono text-[9px] uppercase tracking-[0.18em]"
                 style={{
-                  color: active ? '#3FE0FF' : '#54687E',
+                  color: active ? 'rgb(var(--c-cyan))' : 'rgb(var(--c-faint))',
                   transform: `translateY(-50%) rotateZ(42deg) rotateX(-58deg)`,
                   transformOrigin: 'right center',
                   whiteSpace: 'nowrap',
@@ -69,7 +69,7 @@ function SixPack() {
         {instruments.map((n, i) => (
           <div key={n} className="relative">
             <svg viewBox="0 0 80 80" className="h-20 w-20 md:h-24 md:w-24">
-              <circle cx="40" cy="40" r="36" fill="#0A1018" stroke="#1E2C3D" strokeWidth="2" />
+              <circle cx="40" cy="40" r="36" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-hairline))" strokeWidth="2" />
               {Array.from({ length: 12 }).map((_, t) => {
                 const a = (t / 12) * Math.PI * 2
                 return (
@@ -79,14 +79,14 @@ function SixPack() {
                     y1={40 + 30 * Math.sin(a)}
                     x2={40 + 34 * Math.cos(a)}
                     y2={40 + 34 * Math.sin(a)}
-                    stroke="#54687E"
+                    stroke="rgb(var(--c-faint))"
                     strokeWidth="1"
                   />
                 )
               })}
-              <line x1="40" y1="40" x2={40 + 20 * Math.cos(i)} y2={40 + 20 * Math.sin(i)} stroke="#E8F0F7" strokeWidth="1.6" />
-              <circle cx="40" cy="40" r="2.5" fill="#16222F" stroke="#54687E" strokeWidth="1" />
-              <text x="40" y="62" textAnchor="middle" fill="#54687E" fontSize="9" fontFamily="'IBM Plex Mono', monospace">
+              <line x1="40" y1="40" x2={40 + 20 * Math.cos(i)} y2={40 + 20 * Math.sin(i)} stroke="rgb(var(--c-ink))" strokeWidth="1.6" />
+              <circle cx="40" cy="40" r="2.5" fill="rgb(var(--c-overlay))" stroke="rgb(var(--c-faint))" strokeWidth="1" />
+              <text x="40" y="62" textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="9" fontFamily="'IBM Plex Mono', monospace">
                 {n}
               </text>
             </svg>

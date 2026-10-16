@@ -65,11 +65,11 @@ function TankDiagram() {
     >
       <svg viewBox="0 0 320 150" className="w-full" role="img" aria-label="Quatro tanques, dois por asa; nível utilizável 93 de 98 galões">
         {/* fuselagem */}
-        <rect x="146" y="10" width="28" height="118" fill="none" stroke="#1E2C3D" strokeWidth="1.2" />
-        <line x1="160" y1="10" x2="160" y2="128" stroke="#1E2C3D" strokeWidth="1" strokeDasharray="3 4" />
+        <rect x="146" y="10" width="28" height="118" fill="none" stroke="rgb(var(--c-hairline))" strokeWidth="1.2" />
+        <line x1="160" y1="10" x2="160" y2="128" stroke="rgb(var(--c-hairline))" strokeWidth="1" strokeDasharray="3 4" />
         {/* asas */}
-        <line x1="8" y1="70" x2="146" y2="70" stroke="#1B4B5C" strokeWidth="1" strokeDasharray="2 5" />
-        <line x1="174" y1="70" x2="312" y2="70" stroke="#1B4B5C" strokeWidth="1" strokeDasharray="2 5" />
+        <line x1="8" y1="70" x2="146" y2="70" stroke="rgb(var(--c-cyan-dim))" strokeWidth="1" strokeDasharray="2 5" />
+        <line x1="174" y1="70" x2="312" y2="70" stroke="rgb(var(--c-cyan-dim))" strokeWidth="1" strokeDasharray="2 5" />
         {TANKS.map((t, i) => {
           const fillH = TH * NIVEL
           return (
@@ -79,10 +79,10 @@ function TankDiagram() {
                 y={TY}
                 width={TW}
                 height={TH}
-                fill="#0A1018"
-                stroke="#3FE0FF"
+                fill="rgb(var(--c-panel))"
+                stroke="rgb(var(--c-cyan))"
                 strokeWidth="1.2"
-                className="transition-[filter] duration-300 group-hover/tanks:[filter:drop-shadow(0_0_6px_rgba(63,224,255,0.5))]"
+                className="transition-[filter] duration-300 group-hover/tanks:[filter:drop-shadow(0_0_6px_rgb(var(--c-cyan) / 0.5))]"
               />
               {/* nível */}
               <clipPath id={`tank-${t.id}`}>
@@ -91,7 +91,7 @@ function TankDiagram() {
               <motion.rect
                 x={t.x + 2}
                 width={TW - 4}
-                fill="#1B4B5C"
+                fill="rgb(var(--c-cyan-dim))"
                 clipPath={`url(#tank-${t.id})`}
                 initial={{ y: TY + TH - 2, height: 0 }}
                 animate={inView ? { y: TY + TH - fillH, height: fillH } : undefined}
@@ -101,24 +101,24 @@ function TankDiagram() {
               <motion.line
                 x1={t.x + 2}
                 x2={t.x + TW - 2}
-                stroke="#3FE0FF"
+                stroke="rgb(var(--c-cyan))"
                 strokeWidth="1.4"
                 initial={{ y1: TY + TH - 2, y2: TY + TH - 2, opacity: 0 }}
                 animate={inView ? { y1: TY + TH - fillH, y2: TY + TH - fillH, opacity: 1 } : undefined}
                 transition={{ duration: 1.3, delay: 0.25 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
               />
-              <text x={t.x + TW / 2} y={TY + TH + 14} textAnchor="middle" fill="#54687E" fontSize="9" fontFamily="'IBM Plex Mono', monospace">
+              <text x={t.x + TW / 2} y={TY + TH + 14} textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="9" fontFamily="'IBM Plex Mono', monospace">
                 {t.id}
               </text>
             </g>
           )
         })}
         {/* linha do 100% */}
-        <line x1="14" y1={TY} x2="306" y2={TY} stroke="#54687E" strokeWidth="1" strokeDasharray="2 4" />
-        <text x="312" y={TY - 6} fill="#54687E" fontSize="8.5" fontFamily="'IBM Plex Mono', monospace" textAnchor="end">
+        <line x1="14" y1={TY} x2="306" y2={TY} stroke="rgb(var(--c-faint))" strokeWidth="1" strokeDasharray="2 4" />
+        <text x="312" y={TY - 6} fill="rgb(var(--c-faint))" fontSize="8.5" fontFamily="'IBM Plex Mono', monospace" textAnchor="end">
           {GAL_TOTAL} GAL
         </text>
-        <text x="160" y="146" textAnchor="middle" fill="#93A6BB" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
+        <text x="160" y="146" textAnchor="middle" fill="rgb(var(--c-muted))" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="2">
           {`UTILIZÁVEL ${GAL_UTIL} GAL · 2 TANQUES POR ASA`}
         </text>
       </svg>

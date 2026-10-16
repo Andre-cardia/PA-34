@@ -143,9 +143,9 @@ export default function VelocimetroASI() {
     activeBand === b ? `drop-shadow(0 0 7px ${color})` : 'none'
 
   const arcs = [
-    { id: 'branco', d: arcPath(CX, CY, R_ARC, angle(BRANCO[0]), angle(BRANCO[1])), stroke: '#E8F0F7', w: 11, delay: 0 },
-    { id: 'verde', d: arcPath(CX, CY, R_ARC, angle(VERDE[0]), angle(VERDE[1])), stroke: '#3DDC97', w: 11, delay: 0.18 },
-    { id: 'amarelo', d: arcPath(CX, CY, R_ARC, angle(AMARELO[0]), angle(AMARELO[1])), stroke: '#FFB020', w: 11, delay: 0.36 },
+    { id: 'branco', d: arcPath(CX, CY, R_ARC, angle(BRANCO[0]), angle(BRANCO[1])), stroke: 'rgb(var(--c-ink))', w: 11, delay: 0 },
+    { id: 'verde', d: arcPath(CX, CY, R_ARC, angle(VERDE[0]), angle(VERDE[1])), stroke: 'rgb(var(--c-green))', w: 11, delay: 0.18 },
+    { id: 'amarelo', d: arcPath(CX, CY, R_ARC, angle(AMARELO[0]), angle(AMARELO[1])), stroke: 'rgb(var(--c-amber))', w: 11, delay: 0.36 },
   ]
 
   return (
@@ -165,7 +165,7 @@ export default function VelocimetroASI() {
 
           <svg viewBox="0 0 560 470" className="mx-auto w-full max-w-[620px]" role="img" aria-label={`Velocímetro: arco branco ${marcas.arco_branco_operacao_com_flap}, verde ${marcas.arco_verde_operacao_normal}, amarelo ${marcas.arco_amarelo_operacao_em_ar_calmo}, linha vermelha ${VNE}, radial VMC ${VMC}, linha azul VYSE ${VYSE}`}>
             {/* aro */}
-            <circle cx={CX} cy={CY} r={R_ARC + 22} fill="#0A1018" stroke="#1E2C3D" strokeWidth="1.4" />
+            <circle cx={CX} cy={CY} r={R_ARC + 22} fill="rgb(var(--c-panel))" stroke="rgb(var(--c-hairline))" strokeWidth="1.4" />
             {/* arcos (draw-on sequencial) */}
             {arcs.map((a) => (
               <motion.path
@@ -187,7 +187,7 @@ export default function VelocimetroASI() {
             {MINORS.map((mph) => {
               const p1 = polarToXY(CX, CY, R_ARC - 8, angle(mph))
               const p2 = polarToXY(CX, CY, R_ARC + 3, angle(mph))
-              return <line key={mph} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#54687E" strokeWidth="1" />
+              return <line key={mph} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-faint))" strokeWidth="1" />
             })}
             {MAJORS.map((mph) => {
               const p1 = polarToXY(CX, CY, R_ARC - 16, angle(mph))
@@ -195,8 +195,8 @@ export default function VelocimetroASI() {
               const pt = polarToXY(CX, CY, R_ARC - 34, angle(mph))
               return (
                 <g key={mph}>
-                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#93A6BB" strokeWidth="1.8" />
-                  <text x={pt.x} y={pt.y + 4} textAnchor="middle" fill="#93A6BB" fontSize="13" fontFamily="'IBM Plex Mono', monospace">
+                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-muted))" strokeWidth="1.8" />
+                  <text x={pt.x} y={pt.y + 4} textAnchor="middle" fill="rgb(var(--c-muted))" fontSize="13" fontFamily="'IBM Plex Mono', monospace">
                     {mph}
                   </text>
                 </g>
@@ -208,8 +208,8 @@ export default function VelocimetroASI() {
               const p2 = polarToXY(CX, CY, R_ARC + 6, angle(VMC))
               return (
                 <motion.g initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : undefined} transition={{ delay: 0.6, duration: 0.4 }}>
-                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#FF4D4D" strokeWidth="3" />
-                  <text x={polarToXY(CX, CY, R_ARC + 18, angle(VMC)).x} y={polarToXY(CX, CY, R_ARC + 18, angle(VMC)).y + 4} textAnchor="middle" fill="#FF4D4D" fontSize="10.5" fontFamily="'IBM Plex Mono', monospace">
+                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-red))" strokeWidth="3" />
+                  <text x={polarToXY(CX, CY, R_ARC + 18, angle(VMC)).x} y={polarToXY(CX, CY, R_ARC + 18, angle(VMC)).y + 4} textAnchor="middle" fill="rgb(var(--c-red))" fontSize="10.5" fontFamily="'IBM Plex Mono', monospace">
                     VMC
                   </text>
                 </motion.g>
@@ -227,8 +227,8 @@ export default function VelocimetroASI() {
                   transition={{ delay: 0.75, duration: 0.4 }}
                   style={{ filter: selected?.code === 'VYSE' ? 'drop-shadow(0 0 6px #5B9DFF)' : 'none' }}
                 >
-                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#5B9DFF" strokeWidth="3" />
-                  <text x={pt.x} y={pt.y + 4} textAnchor="middle" fill="#5B9DFF" fontSize="10.5" fontFamily="'IBM Plex Mono', monospace">
+                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-blue))" strokeWidth="3" />
+                  <text x={pt.x} y={pt.y + 4} textAnchor="middle" fill="rgb(var(--c-blue))" fontSize="10.5" fontFamily="'IBM Plex Mono', monospace">
                     VYSE
                   </text>
                 </motion.g>
@@ -241,26 +241,26 @@ export default function VelocimetroASI() {
               const pt = polarToXY(CX, CY, R_ARC + 18, angle(VNE))
               return (
                 <motion.g initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : undefined} transition={{ delay: 0.9, duration: 0.4 }}>
-                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#FF4D4D" strokeWidth="4.5" />
-                  <text x={pt.x} y={pt.y + 4} textAnchor="middle" fill="#FF4D4D" fontSize="10.5" fontFamily="'IBM Plex Mono', monospace">
+                  <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="rgb(var(--c-red))" strokeWidth="4.5" />
+                  <text x={pt.x} y={pt.y + 4} textAnchor="middle" fill="rgb(var(--c-red))" fontSize="10.5" fontFamily="'IBM Plex Mono', monospace">
                     VNE
                   </text>
                 </motion.g>
               )
             })()}
             {/* agulha */}
-            <motion.line x1={tx} y1={ty} x2={nx} y2={ny} stroke="#E8F0F7" strokeWidth="3" strokeLinecap="round" />
-            <circle cx={CX} cy={CY} r="11" fill="#0A1018" stroke="#3FE0FF" strokeWidth="1.6" />
-            <circle cx={CX} cy={CY} r="3" fill="#3FE0FF" />
+            <motion.line x1={tx} y1={ty} x2={nx} y2={ny} stroke="rgb(var(--c-ink))" strokeWidth="3" strokeLinecap="round" />
+            <circle cx={CX} cy={CY} r="11" fill="rgb(var(--c-panel))" stroke="rgb(var(--c-cyan))" strokeWidth="1.6" />
+            <circle cx={CX} cy={CY} r="3" fill="rgb(var(--c-cyan))" />
             {/* leitura */}
-            <rect x={CX - 56} y={CY + 74} width="112" height="34" fill="#05080D" stroke="#1E2C3D" />
-            <motion.text x={CX - 8} y={CY + 97} textAnchor="middle" fill="#3FE0FF" fontSize="20" fontFamily="'IBM Plex Mono', monospace">
+            <rect x={CX - 56} y={CY + 74} width="112" height="34" fill="rgb(var(--c-abyss))" stroke="rgb(var(--c-hairline))" />
+            <motion.text x={CX - 8} y={CY + 97} textAnchor="middle" fill="rgb(var(--c-cyan))" fontSize="20" fontFamily="'IBM Plex Mono', monospace">
               {readout}
             </motion.text>
-            <text x={CX + 40} y={CY + 97} fill="#54687E" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
+            <text x={CX + 40} y={CY + 97} fill="rgb(var(--c-faint))" fontSize="11" fontFamily="'IBM Plex Mono', monospace">
               MPH
             </text>
-            <text x={CX} y={CY + 130} textAnchor="middle" fill="#54687E" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="3">
+            <text x={CX} y={CY + 130} textAnchor="middle" fill="rgb(var(--c-faint))" fontSize="10" fontFamily="'IBM Plex Mono', monospace" letterSpacing="3">
               {selected ? `${selected.code} — ${selected.def.toUpperCase().slice(0, 44)}` : 'AIRSPEED'}
             </text>
           </svg>

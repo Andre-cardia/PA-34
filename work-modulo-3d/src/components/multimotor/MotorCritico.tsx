@@ -5,21 +5,21 @@ function DiscoRotacao({ sentido, label }: { sentido: 'horario' | 'anti'; label: 
   return (
     <div className="flex flex-col items-center gap-3">
       <svg viewBox="-70 -70 140 140" className="h-28 w-28">
-        <circle r="52" fill="none" stroke="#1E2C3D" strokeWidth="1.5" />
+        <circle r="52" fill="none" stroke="rgb(var(--c-hairline))" strokeWidth="1.5" />
         <motion.g
           animate={{ rotate: horario ? 360 : -360 }}
           transition={{ duration: 2.4, repeat: Infinity, ease: 'linear' }}
           style={{ originX: '0px', originY: '0px' }}
         >
-          <path d="M 0 -52 A 52 52 0 0 1 45 -26" fill="none" stroke="#3FE0FF" strokeWidth="3" markerEnd="url(#mcArrow)" />
-          <line x1="-30" y1="0" x2="30" y2="0" stroke="#93A6BB" strokeWidth="4" strokeLinecap="round" />
+          <path d="M 0 -52 A 52 52 0 0 1 45 -26" fill="none" stroke="rgb(var(--c-cyan))" strokeWidth="3" markerEnd="url(#mcArrow)" />
+          <line x1="-30" y1="0" x2="30" y2="0" stroke="rgb(var(--c-muted))" strokeWidth="4" strokeLinecap="round" />
         </motion.g>
         <defs>
           <marker id="mcArrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-            <path d="M0,0 L7,3.5 L0,7 Z" fill="#3FE0FF" />
+            <path d="M0,0 L7,3.5 L0,7 Z" fill="rgb(var(--c-cyan))" />
           </marker>
         </defs>
-        <circle r="5" fill="#E8F0F7" />
+        <circle r="5" fill="rgb(var(--c-ink))" />
       </svg>
       <div className="text-center">
         <p className="font-mono text-xs tracking-[0.14em] text-ink">{label}</p>
