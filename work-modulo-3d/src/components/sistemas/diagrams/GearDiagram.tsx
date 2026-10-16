@@ -214,13 +214,13 @@ export default function GearDiagram({ sistema, meta }: { sistema: Sistema; meta:
                     key={`${downCount}-${i}`}
                     className={cn(
                       'h-3 w-3',
-                      state === 'down' ? 'animate-annunciator-blink bg-green [box-shadow:0_0_8px_rgb(var(--c-green) / 0.8)]' : 'bg-overlay',
+                      state === 'down' ? 'animate-annunciator-blink bg-green [box-shadow:0_0_8px_rgb(var(--c-green)_/_0.8)]' : 'bg-overlay',
                     )}
                   />
                 ))}
               </span>
               <span
-                className={cn('h-3 w-3', transit ? 'bg-red [box-shadow:0_0_8px_rgb(var(--c-red) / 0.8)]' : 'bg-overlay')}
+                className={cn('h-3 w-3', transit ? 'bg-red [box-shadow:0_0_8px_rgb(var(--c-red)_/_0.8)]' : 'bg-overlay')}
                 aria-label={transit ? 'Luz vermelha: trem em trânsito' : 'Luz vermelha apagada'}
               />
             </div>

@@ -125,6 +125,9 @@ context:
     - `npm run verify` passou; `tsc` limpo; lint de `tests/` limpo; lint de `src/components/cockpit/` com os mesmos 8 erros pré-existentes do HEAD.
   - **Capturas.** `painel-fiel/` regenerado: `08` com o render novo em 1440 e 390, dia/noite, com e sem manches; `09` com foto × antigo × novo; `10` com foto × render + manches; `11` com a sobreposição. **Falta a aprovação humana da comparação** (Manual checks).
 
+- 2026-10-16, walkthrough: por decisão do usuário, o painel abre no **modo dia** por padrão (`Cockpit.tsx`, `useState(false)`); o modo noite segue no botão da toolbar. O e2e e os roteiros CDP (`verificar-painel.mjs`, `gerar-capturas.mjs`) foram ajustados; `cockpit-painel.spec.ts` passou com 67 testes. As capturas `*-inicial` dos roteiros CDP passam a se chamar `*-dia-inicial` na próxima execução.
+- 2026-10-16, walkthrough (8717f4f..8922020 + modo dia): **aprovado pelo usuário**, incluindo a comparação foto × render (Manual checks). Pendências conhecidas: brilhos `[box-shadow:…rgb(var(--c-*) / α)]` não gerados pelo Tailwind em 12 classes (commit do tema `98e077d`) e os itens de `deferred-work.md`.
+
 ## Spec Change Log
 
 ## Review Triage Log

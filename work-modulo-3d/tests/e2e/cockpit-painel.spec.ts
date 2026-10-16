@@ -110,9 +110,9 @@ test.describe('Fallback vetorial', () => {
       await expect(page.locator(`[data-rendered-panel="${mode}"]`)).toHaveAttribute('data-image-state', 'error')
       await expect(page.locator(`[data-vector-fallback="${mode}"]`)).toHaveCount(1)
     }
-    // modo noite é o padrão: o fallback noturno é o visível
-    await expect(page.locator('[data-vector-fallback="noite"]')).toBeVisible()
-    await expect(page.locator('[data-rendered-panel="noite"] image')).toHaveAttribute('visibility', 'hidden')
+    // modo dia é o padrão: o fallback diurno é o visível
+    await expect(page.locator('[data-vector-fallback="dia"]')).toBeVisible()
+    await expect(page.locator('[data-rendered-panel="dia"] image')).toHaveAttribute('visibility', 'hidden')
     const inst = instrumento('altimetro')
     await page.locator('[data-hotspot="altimetro"]').click()
     await expect(page.getByRole('dialog', { name: inst.nome })).toBeVisible()
@@ -124,8 +124,8 @@ test.describe('Fallback vetorial', () => {
     for (const mode of ['dia', 'noite']) {
       await expect(page.locator(`[data-rendered-panel="${mode}"]`)).toHaveAttribute('data-image-state', 'error')
     }
-    await expect(page.locator('[data-vector-fallback="noite"]')).toBeVisible()
-    await expect(page.locator('[data-rendered-panel="noite"] image')).toHaveAttribute('visibility', 'hidden')
+    await expect(page.locator('[data-vector-fallback="dia"]')).toBeVisible()
+    await expect(page.locator('[data-rendered-panel="dia"] image')).toHaveAttribute('visibility', 'hidden')
   })
 
   test('[P0] WebP dos manches com dimensão ≠ VB×2 é recusado e cai no desenho vetorial', async ({ page }) => {
@@ -136,7 +136,7 @@ test.describe('Fallback vetorial', () => {
       await expect(page.locator(`[data-yokes-layer="${mode}"]`)).toHaveAttribute('data-image-state', 'error')
       await expect(page.locator(`[data-yokes-layer="${mode}"] image`)).toHaveCount(0)
     }
-    await expect(page.locator('[data-yokes-layer="noite"] path').first()).toBeVisible()
+    await expect(page.locator('[data-yokes-layer="dia"] path').first()).toBeVisible()
   })
 })
 

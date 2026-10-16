@@ -101,9 +101,9 @@ export default function LinhaDeVoo() {
                       className={cn(
                         'relative z-10 h-2.5 w-2.5 rounded-full border transition-all duration-300',
                         isComplete
-                          ? 'animate-annunciator-blink border-green bg-green [box-shadow:0_0_10px_rgb(var(--c-green) / 0.6)]'
+                          ? 'animate-annunciator-blink border-green bg-green [box-shadow:0_0_10px_rgb(var(--c-green)_/_0.6)]'
                           : isActive
-                            ? 'border-cyan bg-cyan [box-shadow:0_0_12px_rgb(var(--c-cyan) / 0.7)]'
+                            ? 'border-cyan bg-cyan [box-shadow:0_0_12px_rgb(var(--c-cyan)_/_0.7)]'
                             : 'border-faint/60 bg-panel group-hover:border-cyan-dim group-hover:bg-cyan-dim',
                       )}
                       aria-hidden="true"

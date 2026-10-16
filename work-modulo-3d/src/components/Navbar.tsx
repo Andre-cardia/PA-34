@@ -50,7 +50,7 @@ function Annunciator() {
             initial={reducedMotion ? { opacity: 1 } : { opacity: 0.15 }}
             animate={reducedMotion ? { opacity: 1 } : { opacity: [0.15, 1, 0.15, 1, 0.15, 1] }}
             transition={reducedMotion ? undefined : { duration: 0.9, delay: 0.4 + i * 0.12, times: [0, 0.2, 0.4, 0.6, 0.8, 1] }}
-            className="h-2 w-2 bg-green [box-shadow:0_0_8px_rgb(var(--c-green) / 0.7)]"
+            className="h-2 w-2 bg-green [box-shadow:0_0_8px_rgb(var(--c-green)_/_0.7)]"
           />
         ))}
       </span>

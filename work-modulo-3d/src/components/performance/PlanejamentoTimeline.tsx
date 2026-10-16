@@ -70,7 +70,7 @@ function Node({ idx, title, body, side }: { idx: number; title: string; body: st
           'absolute top-7 z-10 flex h-10 w-10 items-center justify-center rounded-full border bg-panel font-mono text-[12px] transition-colors duration-500',
           'left-0 md:left-auto',
           side === 'left' ? 'md:-right-5' : 'md:-left-5',
-          inView ? 'border-cyan text-cyan [box-shadow:0_0_18px_rgb(var(--c-cyan) / 0.35)]' : 'border-hairline text-faint',
+          inView ? 'border-cyan text-cyan [box-shadow:0_0_18px_rgb(var(--c-cyan)_/_0.35)]' : 'border-hairline text-faint',
         )}
         aria-hidden="true"
       >

@@ -24,7 +24,7 @@ export default function Cockpit() {
   const [filterCat, setFilterCat] = useState<string | null>(null)
   const [labelsOn, setLabelsOn] = useState(false)
   const [yokesOn, setYokesOn] = useState(false) // manches: desligados por padrão
-  const [night, setNight] = useState(true) // modo noturno é o default (design: fundo panel/raised)
+  const [night, setNight] = useState(false) // modo dia é o padrão (decisão 2026-10-16); noite pelo botão da toolbar
   const [tour, setTour] = useState<{ active: boolean; index: number }>({ active: false, index: 0 })
   const [scanlineKey, setScanlineKey] = useState(0)
   const [indexOpen, setIndexOpen] = useState(false)

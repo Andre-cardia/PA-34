@@ -42,7 +42,7 @@ async function openCockpit(width, height, night, { vector = false } = {}) {
   await page.locator('[data-hotspot]').first().waitFor()
   await page.waitForFunction(() => document.querySelectorAll('[data-rendered-panel][data-image-state="loading"]').length === 0)
   if (!vector) await page.waitForFunction(() => document.querySelectorAll('[data-rendered-panel][data-image-state="ready"]').length === 2)
-  if (!night) await page.locator('button[title="Modo dia"]').click()
+  if (night) await page.locator('button[title^="Modo noite"]').click() // padrão: dia
   await page.mouse.move(1, 1)
   await page.waitForTimeout(900)
   return { ctx, page }

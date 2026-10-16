@@ -82,7 +82,7 @@ function TankDiagram() {
                 fill="rgb(var(--c-panel))"
                 stroke="rgb(var(--c-cyan))"
                 strokeWidth="1.2"
-                className="transition-[filter] duration-300 group-hover/tanks:[filter:drop-shadow(0_0_6px_rgb(var(--c-cyan) / 0.5))]"
+                className="transition-[filter] duration-300 group-hover/tanks:[filter:drop-shadow(0_0_6px_rgb(var(--c-cyan)_/_0.5))]"
               />
               {/* nível */}
               <clipPath id={`tank-${t.id}`}>
