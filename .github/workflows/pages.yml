@@ -1,0 +1,60 @@
+# Deploy do site work-modulo-3d/ no GitHub Pages: https://andre-cardia.github.io/PA-34/
+# Build com base '/PA-34/' (PA34_BASE, ver vite.config.ts) e 404.html = index.html
+# para que deep-links do BrowserRouter (/PA-34/cockpit?i=…) funcionem.
+# app/ está congelado e fica fora.
+
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Conferir que o GLB não é ponteiro LFS
+        run: |
+          head -c 4 work-modulo-3d/public/models/pa34-camadas.glb | grep -q glTF \
+            || { echo "::error::pa34-camadas.glb não foi baixado via LFS"; exit 1; }
+
+      - uses: ./.github/actions/setup
+
+      - name: Build
+        env:
+          PA34_BASE: /PA-34/
+        run: npm --prefix work-modulo-3d run build
+
+      - name: Fallback SPA e .nojekyll
+        run: |
+          cp work-modulo-3d/dist/index.html work-modulo-3d/dist/404.html
+          touch work-modulo-3d/dist/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: work-modulo-3d/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

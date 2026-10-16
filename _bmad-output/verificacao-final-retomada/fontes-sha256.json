@@ -1,7 +1,7 @@
 {
   "work-modulo-3d/src/components/modelo3d/BottomBar.tsx": {
-    "sha256": "a5e94a5223cb3eab18d6bcdf1c7fee122df0b86a846c6c9b01637d6ce944e235",
-    "bytes": 5367
+    "sha256": "6e1c0b5d1547ce00f1829bc2fbb0ae599eb1eaace1c389b7d563835e018aeaa1",
+    "bytes": 5412
   },
   "work-modulo-3d/src/components/modelo3d/ComponentDrawer.tsx": {
     "sha256": "0810b7b444c8d6022124085dac94dc87982d5c92b05838ca23e336c2d9186fd7",
@@ -16,8 +16,8 @@
     "bytes": 12706
   },
   "work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx": {
-    "sha256": "96ce66a9d2b047434b1f4290521763e25c834cfbd6f936a5ee402b89d2cbfe84",
-    "bytes": 21474
+    "sha256": "9925d6be4bf84848863e525d1dc33476857024b38487566b5b6081d63fa76d7e",
+    "bytes": 21522
   },
   "work-modulo-3d/src/components/modelo3d/ModelErrorBoundary.tsx": {
     "sha256": "c02b04934755be8351add2091ab7d0037462db3dc0b27ea9d331131819acd1c1",

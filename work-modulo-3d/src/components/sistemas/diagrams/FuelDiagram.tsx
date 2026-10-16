@@ -11,6 +11,7 @@ import type { SystemMeta } from '../config'
 import { DiagramShell, DiagramNode, DrawPath, FlowPath, SopImage } from '../shared'
 import { focusComponent, componentDomId } from '../utils'
 import { cn } from '@/lib/utils'
+import { asset } from '@/lib/asset'
 
 type SelPos = 'ON' | 'OFF' | 'XFEED'
 const SEL_ORDER: SelPos[] = ['ON', 'OFF', 'XFEED']
@@ -286,7 +287,7 @@ export default function FuelDiagram({ sistema, meta }: { sistema: Sistema; meta:
       </DiagramShell>
 
       <SopImage
-        src="/sop-fuel-schematic.png"
+        src={asset('/sop-fuel-schematic.png')}
         alt="Esquema original do sistema de combustível (Fuel Schematic, página 43 do SOP)"
       />
     </div>

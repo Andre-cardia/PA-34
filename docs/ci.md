@@ -36,7 +36,7 @@ actionlint                                                # valida o workflow
 
 - A cena 3D real (9 camadas, 68 IDs, câmera, seleção por clique) continua nos roteiros CDP `scripts/verify-browser-*.mjs`, que exigem Chrome com GPU e servidor dev.
 - Sem notificações (Slack/e-mail): ficam as notificações padrão do GitHub. Para adicionar uma, criar um secret de webhook e um passo `if: failure()` no `report`.
-- Sem deploy.
+- Deploy: `.github/workflows/pages.yml` publica `work-modulo-3d/` em https://andre-cardia.github.io/PA-34/ a cada push em `main` (independente do CI). Build com `PA34_BASE=/PA-34/`; `404.html` é cópia do `index.html` para os deep-links do `BrowserRouter`. Assets de `public/` devem usar `asset()` de `src/lib/asset.ts`, nunca `"/arquivo"` literal. Exige Settings → Pages → Source: GitHub Actions.
 
 ## Ativar
 

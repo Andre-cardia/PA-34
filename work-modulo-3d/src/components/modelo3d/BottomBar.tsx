@@ -5,6 +5,7 @@
 import { Camera, Rotate3d, ScanEye, Tags, Video } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { VIEW_PRESETS } from './config'
+import { asset } from '@/lib/asset'
 
 interface BarProps {
   explodePct: number // 0–100
@@ -89,7 +90,7 @@ export default function BottomBar(props: BarProps) {
 
       {/* crédito e origem do modelo 3D ativo */}
       <a
-        href="/NOTICE-MODELO-3D.txt"
+        href={asset('/NOTICE-MODELO-3D.txt')}
         target="_blank"
         rel="noreferrer"
         title="Origem e limites de fidelidade do modelo 3D"

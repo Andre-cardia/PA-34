@@ -15,6 +15,7 @@ import type { AnchorEntry, LabelInfo } from './SenecaTechModel'
 import { camadas3d } from '@/data'
 import { AUTOROT_IDLE_MS, DEFAULT_VIEW, LAYERS, ZOOM_MAX, ZOOM_MIN } from './config'
 import type { LayerId, ViewPreset } from './config'
+import { asset } from '@/lib/asset'
 
 // ---------------------------------------------------------------------------
 // Tipos
@@ -388,7 +389,7 @@ export default function ModelCanvas(props: CanvasProps) {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.08]"
-        style={{ backgroundImage: 'url(/hangar-ambience.jpg)' }}
+        style={{ backgroundImage: `url(${asset('/hangar-ambience.jpg')})` }}
       />
       <Canvas
         frameloop="demand"

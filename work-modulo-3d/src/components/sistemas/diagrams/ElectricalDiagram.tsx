@@ -8,6 +8,7 @@ import type { Sistema } from '@/data'
 import type { SystemMeta } from '../config'
 import { DiagramShell, DiagramNode, DrawPath, FlowPath, SopImage } from '../shared'
 import { focusComponent, componentDomId } from '../utils'
+import { asset } from '@/lib/asset'
 
 const DIM = 'rgb(var(--c-dim))'
 const FAINT = 'rgb(var(--c-faint))'
@@ -134,7 +135,7 @@ export default function ElectricalDiagram({ sistema, meta }: { sistema: Sistema;
       </DiagramShell>
 
       <SopImage
-        src="/sop-electrical-schematic.png"
+        src={asset('/sop-electrical-schematic.png')}
         alt="Esquema original dos alternadores e do sistema de partida (página 46 do SOP)"
       />
     </div>

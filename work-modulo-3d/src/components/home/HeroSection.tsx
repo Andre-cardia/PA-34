@@ -9,6 +9,7 @@ import { useScramble } from '@/hooks/useScramble'
 import HudBoot from './HudBoot'
 import MiniGauge from './MiniGauge'
 import HeroErrorBoundary from './HeroErrorBoundary'
+import { asset } from '@/lib/asset'
 
 const HeroCanvas = lazy(() => import('./HeroCanvas'))
 
@@ -34,7 +35,7 @@ export default function HeroSection() {
         {/* fundo: hangar 18% + grid + vinheta */}
         <div className="absolute inset-0" aria-hidden="true">
           <img
-            src="/hangar-ambience.jpg"
+            src={asset('/hangar-ambience.jpg')}
             alt=""
             className="h-full w-full object-cover opacity-[0.18] blur-[6px]"
             loading="eager"

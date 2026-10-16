@@ -11,6 +11,7 @@ import type { SystemMeta } from '../config'
 import { DiagramShell, DrawPath, SopImage } from '../shared'
 import { focusComponent, EASE_OUT, componentDomId } from '../utils'
 import { cn } from '@/lib/utils'
+import { asset } from '@/lib/asset'
 
 const FAINT = 'rgb(var(--c-faint))'
 const DIM = 'rgb(var(--c-dim))'
@@ -201,7 +202,7 @@ export default function BaggageDiagram({ sistema, meta }: { sistema: Sistema; me
       </DiagramShell>
 
       <SopImage
-        src="/sop-baggage-key.png"
+        src={asset('/sop-baggage-key.png')}
         alt="Foto original da chave da porta do bagageiro do nariz (página 55 do SOP)"
       />
     </div>

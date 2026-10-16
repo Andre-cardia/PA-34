@@ -141,5 +141,33 @@
     },
     "commits": "c0dfa51",
     "origem": "HEAD"
+  },
+  {
+    "file": "work-modulo-3d/src/components/modelo3d/BottomBar.tsx",
+    "anterior": {
+      "sha256": "a5e94a5223cb3eab18d6bcdf1c7fee122df0b86a846c6c9b01637d6ce944e235",
+      "bytes": 5367
+    },
+    "novo": {
+      "sha256": "6e1c0b5d1547ce00f1829bc2fbb0ae599eb1eaace1c389b7d563835e018aeaa1",
+      "bytes": 5412
+    },
+    "commits": "deploy GitHub Pages (2026-10-16)",
+    "origem": "working tree",
+    "motivo": "URL de asset de public/ via asset() (BASE_URL) para o base /PA-34/; sem mudança visual nem de comportamento"
+  },
+  {
+    "file": "work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx",
+    "anterior": {
+      "sha256": "96ce66a9d2b047434b1f4290521763e25c834cfbd6f936a5ee402b89d2cbfe84",
+      "bytes": 21474
+    },
+    "novo": {
+      "sha256": "9925d6be4bf84848863e525d1dc33476857024b38487566b5b6081d63fa76d7e",
+      "bytes": 21522
+    },
+    "commits": "deploy GitHub Pages (2026-10-16)",
+    "origem": "working tree",
+    "motivo": "URL de asset de public/ via asset() (BASE_URL) para o base /PA-34/; sem mudança visual nem de comportamento"
   }
 ]

@@ -18,6 +18,7 @@
 - source_spec: `/Users/andrecardia/Github/PA-34/_bmad-output/implementation-artifacts/spec-restauracao-graficos-originais-modulo-3d.md`
   summary: Revisar URLs root-absolute para uma eventual implantação em subcaminho.
   evidence: O shell usa `base: './'`, enquanto alguns assets históricos usam URLs iniciadas por `/`; não há requisito ou implantação em subpasta demonstrada nesta restauração, portanto a correção deve ser feita junto da configuração de deploy.
+  decision: Resolvido em 2026-10-16, junto do deploy no GitHub Pages (`/PA-34/`): assets de `public/` passam por `src/lib/asset.ts` (`BASE_URL`), o `BrowserRouter` recebe `basename` e o `vite.config.ts` lê `PA34_BASE`. O CSS (`url("/grain-noise.png")`) é reescrito pelo Vite. `seneca-node-map.json` (`file`) não é consumido em runtime.
 
 - source_spec: `/Users/andrecardia/Github/PA-34/_bmad-output/implementation-artifacts/spec-restauracao-graficos-originais-modulo-3d.md`
   summary: Harmonizar divergências preexistentes de unidades e valores entre JSONs, Markdown e diagramas técnicos.

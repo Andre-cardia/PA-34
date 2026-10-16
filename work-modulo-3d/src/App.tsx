@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router'
 import Layout from '@/components/Layout'
+import { ROUTER_BASENAME } from '@/lib/asset'
 import Home from '@/pages/Home'
 import Modelo3D from '@/pages/Modelo3D'
 import Cockpit from '@/pages/Cockpit'
@@ -13,7 +14,7 @@ import Seguranca from '@/pages/Seguranca'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={ROUTER_BASENAME}>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />

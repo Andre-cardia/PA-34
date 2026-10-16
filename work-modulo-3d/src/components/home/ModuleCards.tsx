@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { camadas3d, counts } from '@/data'
 import { CornerScrews } from '@/components/assets/PanelScrews'
+import { asset } from '@/lib/asset'
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
@@ -64,7 +65,7 @@ function SixPack() {
   const instruments = ['ASI', 'AH', 'ALT', 'TC', 'DG', 'VSI']
   return (
     <div className="relative flex h-full items-center justify-center" aria-hidden="true">
-      <img src="/cockpit-ref.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-[0.15]" loading="lazy" />
+      <img src={asset('/cockpit-ref.jpg')} alt="" className="absolute inset-0 h-full w-full object-cover opacity-[0.15]" loading="lazy" />
       <div className="relative grid grid-cols-3 gap-4">
         {instruments.map((n, i) => (
           <div key={n} className="relative">
