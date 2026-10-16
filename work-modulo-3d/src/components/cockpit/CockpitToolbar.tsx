@@ -4,7 +4,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Info, List, Moon, Play, Search, Sun, Tag, X } from 'lucide-react'
+import { Info, List, Moon, Play, Search, Gamepad2, Sun, Tag, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { CATEGORY_ORDER, REFERENCIA, catMeta } from './panel-data'
 import { searchInstruments } from './search'
@@ -14,6 +14,9 @@ export interface ToolbarProps {
   onFilter: (cat: string | null) => void
   labelsOn: boolean
   onToggleLabels: () => void
+  yokesOn: boolean
+  onToggleYokes: () => void
+  total: number
   night: boolean
   onToggleNight: () => void
   tourActive: boolean
@@ -131,7 +134,7 @@ function SearchBox({ onPick }: { onPick: (id: string) => void }) {
 }
 
 export default function CockpitToolbar(props: ToolbarProps) {
-  const { filterCat, onFilter, labelsOn, onToggleLabels, night, onToggleNight, tourActive, onStartTour, indexOpen, onToggleIndex, counts, onPick } = props
+  const { filterCat, onFilter, labelsOn, onToggleLabels, yokesOn, onToggleYokes, total, night, onToggleNight, tourActive, onStartTour, indexOpen, onToggleIndex, counts, onPick } = props
   const [infoOpen, setInfoOpen] = useState(false)
   const infoRef = useRef<HTMLDivElement>(null)
 
@@ -224,6 +227,20 @@ export default function CockpitToolbar(props: ToolbarProps) {
           </button>
           <button
             type="button"
+            onClick={onToggleYokes}
+            aria-pressed={yokesOn}
+            aria-label="Mostrar manches"
+            title="Mostrar manches (não bloqueiam os cliques nos instrumentos)"
+            className={cn(
+              'flex h-9 items-center gap-1.5 border px-2 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors',
+              yokesOn ? 'border-cyan-dim text-cyan' : 'border-hairline text-faint hover:text-muted',
+            )}
+          >
+            <Gamepad2 className="h-3.5 w-3.5" />
+            <span className="hidden xl:inline">Manches</span>
+          </button>
+          <button
+            type="button"
             onClick={onToggleNight}
             aria-pressed={night}
             title={night ? 'Modo dia' : 'Modo noite (backlight)'}
@@ -255,7 +272,7 @@ export default function CockpitToolbar(props: ToolbarProps) {
             onClick={onToggleIndex}
             aria-pressed={indexOpen}
             aria-expanded={indexOpen}
-            title="Índice A–Z dos 49 instrumentos"
+            title={`Índice A–Z dos ${total} instrumentos`}
             className={cn(
               'flex h-9 items-center gap-1.5 border px-2 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors',
               indexOpen ? 'border-cyan-dim text-cyan' : 'border-hairline text-faint hover:text-muted',

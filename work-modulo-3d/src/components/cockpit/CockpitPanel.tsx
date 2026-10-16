@@ -1,5 +1,5 @@
 // CockpitPanel — palco SVG do painel (cockpit.md §1–3): renders Blender dia/noite com
-// crossfade, 49 hotspots (pulse cyan, aria-label, teclado), rótulos com leader
+// crossfade, 54 hotspots (pulse cyan, aria-label, teclado), rótulos com leader
 // lines, spotlight do tour, scanline, cursor crosshair customizado + tooltip.
 
 import { useMemo, useRef, useState } from 'react'
@@ -8,10 +8,11 @@ import { Maximize, ZoomIn, ZoomOut } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { instrumentosCockpit } from '@/data'
 import { CornerScrews } from '@/components/assets/PanelScrews'
-import { PANEL_MAP, PANEL_ORDER, SUGGESTED, catMeta, instrumentById } from './panel-data'
+import { PANEL_MAP, PANEL_ORDER, SUGGESTED, catMeta, instrumentById, isOverCream } from './panel-data'
 import type { HotspotShape, PanelEntry } from './panel-data'
 import { ArtDefs } from './artwork'
 import RenderedPanel from './RenderedPanel'
+import YokesLayer from './YokesLayer'
 import type { usePanZoom } from './usePanZoom'
 
 type PanZoom = ReturnType<typeof usePanZoom>
@@ -20,6 +21,7 @@ export interface PanelProps {
   pz: PanZoom
   night: boolean
   labelsOn: boolean
+  yokesOn: boolean
   filterCat: string | null
   selectedId: string | null
   suggestedActive: boolean
@@ -249,7 +251,7 @@ function LabelsLayer({ night, showAll, activeId }: { night: boolean; showAll: bo
       {ids.map((id) => {
         const e = PANEL_MAP[id]
         const p = edgePoint(e.shape, e.label.x, e.label.y)
-        const overTan = e.label.y >= 612 && e.label.y <= 700
+        const overTan = isOverCream(e.label.x, e.label.y - 3)
         const color = !night && overTan ? '#15343D' : '#3FE0FF'
         const textOpacity = !night && overTan ? 1 : 0.85
         return (
@@ -331,6 +333,7 @@ export default function CockpitPanel({
   pz,
   night,
   labelsOn,
+  yokesOn,
   filterCat,
   selectedId,
   suggestedActive,
@@ -367,7 +370,7 @@ export default function CockpitPanel({
         background: 'radial-gradient(ellipse at 50% 46%, #17191a 0%, #0d1011 58%, #070909 100%)',
       }}
       role="group"
-      aria-label="Painel renderizado interativo do PA-34-200 Seneca I — 49 instrumentos"
+      aria-label={`Painel renderizado interativo do PA-34-200 Seneca I — ${PANEL_ORDER.length} instrumentos`}
       {...pz.handlers}
       onMouseMove={(e) => {
         if (!finePointer.current) return
@@ -390,6 +393,8 @@ export default function CockpitPanel({
         <ArtDefs />
         <g transform={`translate(${view.x} ${view.y}) scale(${view.k * base || 0.0001})`}>
           <RenderedPanel night={night} filterCat={filterCat} selectedId={selectedId} />
+          {/* manches em W (opcional): sobre a arte, sob tour/foco/seleção, sem capturar clique */}
+          {yokesOn && <YokesLayer night={night} />}
           {/* rótulos */}
           {(showAllLabels || hoveredId || selectedId) && (
             <LabelsLayer night={night} showAll={showAllLabels} activeId={hoveredId ?? selectedId} />

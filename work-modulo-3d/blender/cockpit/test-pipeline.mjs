@@ -31,21 +31,30 @@ try {
     await assert.rejects(readFile(resolve(browser.profile,'Local State')))
   }
   const original=JSON.parse(await readFile(resolve(here,'../../public/cockpit-render/manifest.json'),'utf8'))
-  const day=await readFile(resolve(here,'../../public/cockpit-render/painel-dia.webp')),night=await readFile(resolve(here,'../../public/cockpit-render/painel-noite.webp'))
-  const cases=['manifest-ausente','json-invalido','imagem-ausente','par-duplicado','terceira-imagem','assinatura','dimensao-real','dimensao-manifest','hash','truncado','proveniencia-incompleta']
+  const asset=f=>readFile(resolve(here,'../../public/cockpit-render/'+f))
+  const day=await asset('painel-dia.webp'),night=await asset('painel-noite.webp'),yokeDay=await asset('manches-dia.webp'),yokeNight=await asset('manches-noite.webp')
+  // Dimensões do contrato lidas do manifesto atual (VB×2), não fixadas no teste.
+  const RW=original.images[0].width
+  const cases=['manifest-ausente','json-invalido','imagem-ausente','manches-ausente','par-duplicado','imagem-extra','assinatura','dimensao-real','dimensao-manifest','hash','truncado','proveniencia-incompleta','proveniencia-manches','origem-sem-foto','manches-sem-alfa']
   for(const name of cases) {
-    const dir=resolve(temp,name);await mkdir(dir);const manifest=structuredClone(original);let bytes=Buffer.from(day)
+    const dir=resolve(temp,name);await mkdir(dir);const manifest=structuredClone(original);let bytes=Buffer.from(day),yokeBytes=yokeDay
     if(name==='proveniencia-incompleta')manifest.generation.masters={}
     if(name==='par-duplicado')manifest.images[1]=manifest.images[0]
-    if(name==='terceira-imagem')manifest.images.push(manifest.images[0])
+    if(name==='imagem-extra')manifest.images.push(manifest.images[0])
+    if(name==='manches-ausente')manifest.images=manifest.images.filter(i=>i.file!=='manches-noite.webp')
+    if(name==='proveniencia-manches')delete manifest.generation.masters['masters/manches-dia.png']
+    if(name==='origem-sem-foto')manifest.origem='Cena procedural sem referência'
     if(name==='assinatura')bytes.write('NOPE',0)
-    if(name==='dimensao-real') {for(let p=12;p<bytes.length;){const tag=bytes.toString('ascii',p,p+4),n=bytes.readUInt32LE(p+4);if(tag==='VP8X')bytes.writeUIntLE(1599,p+12,3);if(tag==='VP8 ')bytes.writeUInt16LE(1600,p+14);p+=8+n+n%2}}
+    if(name==='dimensao-real') {for(let p=12;p<bytes.length;){const tag=bytes.toString('ascii',p,p+4),n=bytes.readUInt32LE(p+4);if(tag==='VP8X')bytes.writeUIntLE(RW/2-2,p+12,3);if(tag==='VP8 ')bytes.writeUInt16LE(RW/2,p+14);p+=8+n+n%2}}
+    if(name==='manches-sem-alfa'){yokeBytes=Buffer.from(yokeDay);assert.equal(yokeBytes.toString('ascii',12,16),'VP8X');yokeBytes[20]&=~0x10;const m=manifest.images.find(i=>i.file==='manches-dia.webp');m.sha256=sha(yokeBytes);m.bytes=yokeBytes.length}
     if(name==='truncado')bytes=bytes.subarray(0,bytes.length-3)
     if(['assinatura','dimensao-real','truncado'].includes(name)){manifest.images[0].sha256=sha(bytes);manifest.images[0].bytes=bytes.length}
     if(name==='dimensao-manifest')manifest.images[0].width=1500
     if(name==='hash')manifest.images[0].sha256='0'.repeat(64)
     if(name!=='imagem-ausente')await writeFile(resolve(dir,'painel-dia.webp'),bytes)
     await writeFile(resolve(dir,'painel-noite.webp'),night)
+    await writeFile(resolve(dir,'manches-dia.webp'),yokeBytes)
+    if(name!=='manches-ausente')await writeFile(resolve(dir,'manches-noite.webp'),yokeNight)
     if(name!=='manifest-ausente')await writeFile(resolve(dir,'manifest.json'),name==='json-invalido'?'{broken':JSON.stringify(manifest))
     const r=run(resolve(here,'verify-assets.mjs'),[],{COCKPIT_ASSET_DIR:dir,COCKPIT_REPORT_DIR:dir})
     assert.notEqual(r.status,0);assert.equal(r.error,undefined)
@@ -57,7 +66,7 @@ try {
   for(const f of [...Object.keys(provenance.sources),...Object.keys(provenance.atlases),...Object.keys(provenance.masters),'masters/render-provenance.json']) {
     const dst=resolve(fixture,f);await mkdir(dirname(dst),{recursive:true});await copyFile(resolve(here,f),dst)
   }
-  for(const target of ['build_panel.py','masters/serigrafia-dia.png','masters/painel-dia.png','../../src/components/cockpit/artwork.tsx']) {
+  for(const target of ['build_panel.py','map-source.mjs','masters/serigrafia-dia.png','masters/painel-dia.png','masters/manches-noite.png','../../src/components/cockpit/artwork.tsx']) {
     const dst=resolve(fixture,target),before=await readFile(dst);await writeFile(dst,Buffer.concat([before,Buffer.from('\nchanged')]))
     const r=run(resolve(fixture,'convert-images.mjs'),['render']);assert.notEqual(r.status,0);assert.match(r.stderr,/Render obsoleto/)
     await writeFile(dst,before);record('Conversor recusa proveniência obsoleta: '+target)

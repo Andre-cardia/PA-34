@@ -1,20 +1,69 @@
 {
-  "status": "falhou",
+  "status": "aprovado",
   "checks": [
     {
-      "name": "Mapa exportado idêntico à fonte TypeScript atual",
+      "name": "Mapa exportado (IDs, formas e geometria das chapas/manches) idêntico à fonte TypeScript atual",
       "ok": true
     },
     {
-      "name": "49 corpos reais: centros e extensões projetados",
+      "name": "54 IDs únicos no mapa (49 + 5 do pedestal)",
       "ok": true,
       "data": {
-        "maxError": 0.00005872189170977628,
-        "maxBoundsError": 0.00008392333984375
+        "N": 54
       }
     },
     {
-      "name": "Exatamente imagens dia/noite, sem duplicatas",
+      "name": "54 corpos reais: centros e extensões projetados",
+      "ok": true,
+      "data": {
+        "maxError": 0.00006985298186199184,
+        "maxBoundsError": 0.000087738037109375
+      }
+    },
+    {
+      "name": "54 raios frontais atingem primeiro o próprio corpo (sem oclusão)",
+      "ok": true
+    },
+    {
+      "name": "2 manches medidos no mesmo sistema de coordenadas",
+      "ok": true,
+      "data": [
+        {
+          "yoke": "Manche piloto",
+          "hubBounds": [
+            318.0000305175781,
+            431.9999885559082,
+            401.99999809265137,
+            507.99997329711914
+          ],
+          "expected": [
+            318,
+            432,
+            402,
+            508
+          ],
+          "boundsError": 0.000030517578125
+        },
+        {
+          "yoke": "Manche copiloto",
+          "hubBounds": [
+            1230.0000190734863,
+            399.99996185302734,
+            1314.0000343322754,
+            476.00000381469727
+          ],
+          "expected": [
+            1230,
+            400,
+            1314,
+            476
+          ],
+          "boundsError": 0.00003814697265625
+        }
+      ]
+    },
+    {
+      "name": "Exatamente painel e manches dia/noite, sem duplicatas",
       "ok": true
     },
     {
@@ -22,9 +71,9 @@
       "ok": true,
       "data": {
         "width": 3200,
-        "height": 1400,
-        "bytes": 377370,
-        "sha256": "3d0a26218f6983e90f2e0ea06027885a02115c65e4b932bcf9daef93e2e8b0bf"
+        "height": 1920,
+        "bytes": 368870,
+        "sha256": "c17e615887a19fd9362d130063d7b6ae7cbe83f9574b22b316bd4baa4eaf588f"
       }
     },
     {
@@ -32,10 +81,38 @@
       "ok": true,
       "data": {
         "width": 3200,
-        "height": 1400,
-        "bytes": 315018,
-        "sha256": "bfaadc689dc63e31e439d348cf6de8971ff40c6ed39a0f9f59f2a97eb114a373"
+        "height": 1920,
+        "bytes": 334932,
+        "sha256": "3087a1b0f1b50ca8a97aa9f4370e9141ab44a7be4169ef00996ed3e9e9267721"
       }
+    },
+    {
+      "name": "manches-dia.webp assinatura, dimensões reais e integridade",
+      "ok": true,
+      "data": {
+        "width": 3200,
+        "height": 1920,
+        "bytes": 54960,
+        "sha256": "c66647e594129e9d24a0bdfc656c1f5c1f39bf267cc63b94fd75c4500edde6f2"
+      }
+    },
+    {
+      "name": "manches-dia.webp tem canal alfa",
+      "ok": true
+    },
+    {
+      "name": "manches-noite.webp assinatura, dimensões reais e integridade",
+      "ok": true,
+      "data": {
+        "width": 3200,
+        "height": 1920,
+        "bytes": 47208,
+        "sha256": "5063d5a0a3695ad0ec9330ea5e1cb26dcd9ec2637026547827425b9bb34992ae"
+      }
+    },
+    {
+      "name": "manches-noite.webp tem canal alfa",
+      "ok": true
     },
     {
       "name": "Proveniência de geração presente",
@@ -50,7 +127,15 @@
       "ok": true
     },
     {
+      "name": "Proveniência da foto PR-FLM registrada no manifesto",
+      "ok": true
+    },
+    {
       "name": "Fingerprint export-map.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint map-source.mjs",
       "ok": true
     },
     {
@@ -78,6 +163,10 @@
       "ok": true
     },
     {
+      "name": "Fingerprint ../../src/components/cockpit/panel-geometry.ts",
+      "ok": true
+    },
+    {
       "name": "Fingerprint masters/serigrafia-dia.svg",
       "ok": true
     },
@@ -98,7 +187,15 @@
       "ok": true
     },
     {
+      "name": "Fingerprint masters/manches-dia.png",
+      "ok": true
+    },
+    {
       "name": "Fingerprint masters/painel-noite.png",
+      "ok": true
+    },
+    {
+      "name": "Fingerprint masters/manches-noite.png",
       "ok": true
     },
     {
@@ -119,8 +216,83 @@
     },
     {
       "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx",
-      "ok": false
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/ModelErrorBoundary.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/SenecaTechModel.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/StaticFallback.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/glb.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/glb-runtime.ts",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/config.ts",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/src/pages/Modelo3D.tsx",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/blender/build_layers.py",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/blender/verify_containment.py",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-browser-acceptance.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-browser-camera.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-browser-selection.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-build.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-camera-focus.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-layer-diff.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-model.mjs",
+      "ok": true
+    },
+    {
+      "name": "Fonte 3D aprovada intacta: work-modulo-3d/scripts/verify-runtime.mjs",
+      "ok": true
+    },
+    {
+      "name": "GLB aprovado intacto",
+      "ok": true
+    },
+    {
+      "name": "Fonte Blender aprovada intacta",
+      "ok": true
     }
-  ],
-  "error": "Error: Fonte 3D aprovada intacta: work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx\n    at check (file:///Users/andrecardia/Github/PA-34/work-modulo-3d/blender/cockpit/verify-assets.mjs:13:102)\n    at file:///Users/andrecardia/Github/PA-34/work-modulo-3d/blender/cockpit/verify-assets.mjs:50:57"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "width": 1600,
-  "height": 700,
+  "height": 960,
   "instruments": [
     {
       "id": "bussola_magnetica",
@@ -8,181 +8,97 @@
       "tag": "BÚSSOLA",
       "shape": {
         "kind": "rect",
-        "x": 742,
-        "y": 75,
-        "w": 116,
-        "h": 34
+        "x": 732,
+        "y": 10,
+        "w": 58,
+        "h": 58
       },
       "label": {
-        "x": 866,
-        "y": 96,
+        "x": 796,
+        "y": 42,
         "anchor": "start"
       }
     },
     {
-      "id": "termometro_oat",
-      "zone": "GLARESHIELD",
-      "tag": "OAT",
+      "id": "luz_trem_vermelha",
+      "zone": "TOPO · PLACAS E AVISOS",
+      "tag": "GEAR WARN",
       "shape": {
-        "kind": "circle",
-        "cx": 110,
-        "cy": 130,
-        "r": 19
+        "kind": "rect",
+        "x": 478,
+        "y": 128,
+        "w": 28,
+        "h": 26
       },
       "label": {
-        "x": 137,
-        "y": 133,
-        "anchor": "start"
-      }
-    },
-    {
-      "id": "relogio",
-      "zone": "PAINEL ESQ",
-      "tag": "RELÓGIO",
-      "shape": {
-        "kind": "circle",
-        "cx": 170,
-        "cy": 310,
-        "r": 14
-      },
-      "label": {
-        "x": 170,
-        "y": 288,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "adf_indicador",
-      "zone": "PAINEL ESQ",
-      "tag": "ADF",
-      "shape": {
-        "kind": "circle",
-        "cx": 640,
-        "cy": 310,
-        "r": 46
-      },
-      "label": {
-        "x": 640,
-        "y": 256,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "aviso_estol",
-      "zone": "PAINEL ESQ",
-      "tag": "STALL",
-      "shape": {
-        "kind": "circle",
-        "cx": 195,
-        "cy": 145,
-        "r": 15
-      },
-      "label": {
-        "x": 195,
+        "x": 492,
         "y": 122,
         "anchor": "middle"
       }
     },
     {
-      "id": "chave_master",
-      "zone": "PAINEL ESQ · INTERRUPTORES",
-      "tag": "MASTER",
+      "id": "painel_anunciador",
+      "zone": "TOPO · PLACAS E AVISOS",
+      "tag": "CAUTION",
       "shape": {
         "kind": "rect",
-        "x": 68,
-        "y": 192,
-        "w": 84,
-        "h": 56
+        "x": 568,
+        "y": 109,
+        "w": 97,
+        "h": 45
       },
       "label": {
-        "x": 158,
-        "y": 223,
-        "anchor": "start"
+        "x": 616.5,
+        "y": 103,
+        "anchor": "middle"
       }
     },
     {
-      "id": "chaves_alternadores",
-      "zone": "PAINEL ESQ · INTERRUPTORES",
-      "tag": "ALT L–R",
+      "id": "aviso_estol",
+      "zone": "PAINEL ESQ · AUXILIARES",
+      "tag": "STALL",
       "shape": {
-        "kind": "rect",
-        "x": 68,
-        "y": 256,
-        "w": 84,
-        "h": 56
+        "kind": "circle",
+        "cx": 200,
+        "cy": 171,
+        "r": 9
       },
       "label": {
-        "x": 158,
-        "y": 287,
-        "anchor": "start"
+        "x": 200,
+        "y": 156,
+        "anchor": "middle"
       }
     },
     {
-      "id": "chaves_magnetos_partida",
-      "zone": "PAINEL ESQ · INTERRUPTORES",
-      "tag": "MAG/START",
+      "id": "relogio",
+      "zone": "PAINEL ESQ · AUXILIARES",
+      "tag": "RELÓGIO",
       "shape": {
-        "kind": "rect",
-        "x": 68,
-        "y": 320,
-        "w": 84,
-        "h": 64
+        "kind": "circle",
+        "cx": 186,
+        "cy": 236,
+        "r": 28
       },
       "label": {
-        "x": 158,
-        "y": 355,
-        "anchor": "start"
+        "x": 152,
+        "y": 239,
+        "anchor": "end"
       }
     },
     {
-      "id": "bombas_combustivel_eletricas",
-      "zone": "PAINEL ESQ · INTERRUPTORES",
-      "tag": "FUEL PUMPS",
+      "id": "termometro_oat",
+      "zone": "PAINEL ESQ · AUXILIARES",
+      "tag": "OAT",
       "shape": {
-        "kind": "rect",
-        "x": 68,
-        "y": 392,
-        "w": 84,
-        "h": 56
+        "kind": "circle",
+        "cx": 182,
+        "cy": 331,
+        "r": 37
       },
       "label": {
-        "x": 158,
-        "y": 423,
-        "anchor": "start"
-      }
-    },
-    {
-      "id": "pitot_heat_luzes",
-      "zone": "PAINEL ESQ · INTERRUPTORES",
-      "tag": "PITOT/LUZES",
-      "shape": {
-        "kind": "rect",
-        "x": 68,
-        "y": 456,
-        "w": 84,
-        "h": 64
-      },
-      "label": {
-        "x": 158,
-        "y": 491,
-        "anchor": "start"
-      }
-    },
-    {
-      "id": "freio_estacionamento",
-      "zone": "PAINEL ESQ · INTERRUPTORES",
-      "tag": "FREIO EST.",
-      "shape": {
-        "kind": "rect",
-        "x": 68,
-        "y": 528,
-        "w": 84,
-        "h": 76
-      },
-      "label": {
-        "x": 158,
-        "y": 569,
-        "anchor": "start"
+        "x": 139,
+        "y": 334,
+        "anchor": "end"
       }
     },
     {
@@ -191,13 +107,13 @@
       "tag": "ASI",
       "shape": {
         "kind": "circle",
-        "cx": 244,
-        "cy": 310,
-        "r": 58
+        "cx": 275,
+        "cy": 221,
+        "r": 46
       },
       "label": {
-        "x": 244,
-        "y": 244,
+        "x": 275,
+        "y": 169,
         "anchor": "middle"
       }
     },
@@ -207,13 +123,13 @@
       "tag": "AI",
       "shape": {
         "kind": "circle",
-        "cx": 380,
-        "cy": 310,
-        "r": 58
+        "cx": 384,
+        "cy": 208,
+        "r": 44
       },
       "label": {
-        "x": 380,
-        "y": 244,
+        "x": 384,
+        "y": 158,
         "anchor": "middle"
       }
     },
@@ -223,13 +139,29 @@
       "tag": "ALT",
       "shape": {
         "kind": "circle",
-        "cx": 516,
-        "cy": 310,
-        "r": 58
+        "cx": 500,
+        "cy": 206,
+        "r": 47
       },
       "label": {
-        "x": 516,
-        "y": 244,
+        "x": 500,
+        "y": 153,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "indicador_vor_1",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "OBS 1",
+      "shape": {
+        "kind": "circle",
+        "cx": 606,
+        "cy": 208,
+        "r": 47
+      },
+      "label": {
+        "x": 606,
+        "y": 155,
         "anchor": "middle"
       }
     },
@@ -239,29 +171,30 @@
       "tag": "TC",
       "shape": {
         "kind": "circle",
-        "cx": 244,
-        "cy": 446,
-        "r": 58
+        "cx": 288,
+        "cy": 334,
+        "r": 44
       },
       "label": {
-        "x": 244,
-        "y": 519,
+        "x": 288,
+        "y": 390,
         "anchor": "middle"
       }
     },
     {
       "id": "giro_direcional",
       "zone": "PAINEL ESQ · SIX-PACK",
-      "tag": "DG",
+      "tag": "HSI/DG",
       "shape": {
-        "kind": "circle",
-        "cx": 380,
-        "cy": 446,
-        "r": 58
+        "kind": "rect",
+        "x": 341,
+        "y": 280,
+        "w": 106,
+        "h": 104
       },
       "label": {
-        "x": 380,
-        "y": 519,
+        "x": 394,
+        "y": 396,
         "anchor": "middle"
       }
     },
@@ -271,343 +204,166 @@
       "tag": "VSI",
       "shape": {
         "kind": "circle",
-        "cx": 516,
-        "cy": 446,
-        "r": 58
+        "cx": 501,
+        "cy": 328,
+        "r": 45
       },
       "label": {
-        "x": 516,
-        "y": 519,
+        "x": 501,
+        "y": 385,
         "anchor": "middle"
       }
     },
     {
-      "id": "indicador_vor_1",
-      "zone": "PAINEL ESQ",
-      "tag": "OBS 1",
+      "id": "adf_indicador",
+      "zone": "PAINEL ESQ · SIX-PACK",
+      "tag": "ADF",
       "shape": {
         "kind": "circle",
-        "cx": 230,
-        "cy": 586,
-        "r": 54
+        "cx": 607,
+        "cy": 330,
+        "r": 47
       },
       "label": {
-        "x": 230,
-        "y": 648,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "indicador_vor_2_gs",
-      "zone": "PAINEL ESQ",
-      "tag": "OBS 2/GS",
-      "shape": {
-        "kind": "circle",
-        "cx": 362,
-        "cy": 586,
-        "r": 54
-      },
-      "label": {
-        "x": 362,
-        "y": 648,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "avisos_eletricos_vacuo",
-      "zone": "PAINEL ESQ",
-      "tag": "OV/VAC",
-      "shape": {
-        "kind": "rect",
-        "x": 440,
-        "y": 536,
-        "w": 140,
-        "h": 72
-      },
-      "label": {
-        "x": 510,
-        "y": 621,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "luzes_marker",
-      "zone": "CENTRO · AUX",
-      "tag": "MARKER",
-      "shape": {
-        "kind": "rect",
-        "x": 596,
-        "y": 380,
-        "w": 84,
-        "h": 46
-      },
-      "label": {
-        "x": 638,
-        "y": 371,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "piloto_automatico",
-      "zone": "PAINEL ESQ",
-      "tag": "AP",
-      "shape": {
-        "kind": "rect",
-        "x": 596,
-        "y": 620,
-        "w": 140,
-        "h": 50
-      },
-      "label": {
-        "x": 666,
-        "y": 612,
+        "x": 607,
+        "y": 389,
         "anchor": "middle"
       }
     },
     {
       "id": "painel_audio",
-      "zone": "CENTRO · RÁDIOS",
+      "zone": "CENTRO · STACK DE RÁDIOS",
       "tag": "ÁUDIO",
       "shape": {
         "kind": "rect",
-        "x": 700,
-        "y": 140,
-        "w": 274,
-        "h": 36
+        "x": 696,
+        "y": 117,
+        "w": 200,
+        "h": 43
       },
       "label": {
-        "x": 968,
-        "y": 150,
-        "anchor": "end"
+        "x": 796,
+        "y": 111,
+        "anchor": "middle"
       }
     },
     {
       "id": "navcom_1",
-      "zone": "CENTRO · RÁDIOS",
+      "zone": "CENTRO · STACK DE RÁDIOS",
       "tag": "GNS 530W",
       "shape": {
         "kind": "rect",
-        "x": 700,
-        "y": 180,
-        "w": 274,
-        "h": 115
+        "x": 696,
+        "y": 163,
+        "w": 200,
+        "h": 133
       },
       "label": {
-        "x": 968,
-        "y": 190,
+        "x": 890,
+        "y": 173,
         "anchor": "end"
       }
     },
     {
+      "id": "indicador_vor_2_gs",
+      "zone": "CENTRO · STACK DE RÁDIOS",
+      "tag": "CDI 2/GS",
+      "shape": {
+        "kind": "rect",
+        "x": 696,
+        "y": 299,
+        "w": 98,
+        "h": 16
+      },
+      "label": {
+        "x": 745,
+        "y": 327,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "dme",
+      "zone": "CENTRO · STACK DE RÁDIOS",
+      "tag": "DME",
+      "shape": {
+        "kind": "rect",
+        "x": 798,
+        "y": 299,
+        "w": 98,
+        "h": 16
+      },
+      "label": {
+        "x": 847,
+        "y": 327,
+        "anchor": "middle"
+      }
+    },
+    {
       "id": "navcom_2",
-      "zone": "CENTRO · RÁDIOS",
+      "zone": "CENTRO · STACK DE RÁDIOS",
       "tag": "NAV/COM 2",
       "shape": {
         "kind": "rect",
-        "x": 700,
-        "y": 299,
-        "w": 274,
-        "h": 38
+        "x": 696,
+        "y": 319,
+        "w": 200,
+        "h": 62
       },
       "label": {
-        "x": 968,
-        "y": 309,
+        "x": 890,
+        "y": 329,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "luzes_marker",
+      "zone": "CENTRO · ÁUDIO/XPDR/ADF",
+      "tag": "MARKER",
+      "shape": {
+        "kind": "rect",
+        "x": 910,
+        "y": 110,
+        "w": 215,
+        "h": 44
+      },
+      "label": {
+        "x": 1017.5,
+        "y": 104,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "transponder",
+      "zone": "CENTRO · ÁUDIO/XPDR/ADF",
+      "tag": "XPDR",
+      "shape": {
+        "kind": "rect",
+        "x": 910,
+        "y": 158,
+        "w": 215,
+        "h": 60
+      },
+      "label": {
+        "x": 1119,
+        "y": 168,
         "anchor": "end"
       }
     },
     {
       "id": "adf_receptor",
-      "zone": "CENTRO · RÁDIOS",
+      "zone": "CENTRO · ÁUDIO/XPDR/ADF",
       "tag": "ADF REC",
       "shape": {
         "kind": "rect",
-        "x": 700,
-        "y": 341,
-        "w": 274,
-        "h": 34
+        "x": 910,
+        "y": 222,
+        "w": 215,
+        "h": 58
       },
       "label": {
-        "x": 968,
-        "y": 351,
+        "x": 1119,
+        "y": 232,
         "anchor": "end"
-      }
-    },
-    {
-      "id": "dme",
-      "zone": "CENTRO · RÁDIOS",
-      "tag": "DME",
-      "shape": {
-        "kind": "rect",
-        "x": 700,
-        "y": 379,
-        "w": 274,
-        "h": 30
-      },
-      "label": {
-        "x": 968,
-        "y": 389,
-        "anchor": "end"
-      }
-    },
-    {
-      "id": "transponder",
-      "zone": "CENTRO · RÁDIOS",
-      "tag": "XPDR",
-      "shape": {
-        "kind": "rect",
-        "x": 700,
-        "y": 413,
-        "w": 274,
-        "h": 30
-      },
-      "label": {
-        "x": 968,
-        "y": 423,
-        "anchor": "end"
-      }
-    },
-    {
-      "id": "pressao_admissao",
-      "zone": "CENTRO · MOTOR",
-      "tag": "MP",
-      "shape": {
-        "kind": "circle",
-        "cx": 632,
-        "cy": 496,
-        "r": 42
-      },
-      "label": {
-        "x": 632,
-        "y": 446,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "tacometro_duplo",
-      "zone": "CENTRO · MOTOR",
-      "tag": "RPM L",
-      "shape": {
-        "kind": "circle",
-        "cx": 720,
-        "cy": 496,
-        "r": 34
-      },
-      "label": {
-        "x": 720,
-        "y": 454,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "tacometro_direito",
-      "zone": "CENTRO · MOTOR",
-      "tag": "RPM R",
-      "shape": {
-        "kind": "circle",
-        "cx": 800,
-        "cy": 496,
-        "r": 34
-      },
-      "label": {
-        "x": 800,
-        "y": 454,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "fluxo_combustivel_pressao",
-      "zone": "CENTRO · MOTOR",
-      "tag": "FF/PSI",
-      "shape": {
-        "kind": "circle",
-        "cx": 888,
-        "cy": 496,
-        "r": 42
-      },
-      "label": {
-        "x": 888,
-        "y": 446,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "egt",
-      "zone": "CENTRO · MOTOR",
-      "tag": "EGT",
-      "shape": {
-        "kind": "circle",
-        "cx": 622,
-        "cy": 592,
-        "r": 27
-      },
-      "label": {
-        "x": 622,
-        "y": 628,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "pressao_oleo",
-      "zone": "CENTRO · MOTOR",
-      "tag": "OIL P",
-      "shape": {
-        "kind": "circle",
-        "cx": 686,
-        "cy": 592,
-        "r": 27
-      },
-      "label": {
-        "x": 686,
-        "y": 628,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "temperatura_oleo",
-      "zone": "CENTRO · MOTOR",
-      "tag": "OIL T",
-      "shape": {
-        "kind": "circle",
-        "cx": 750,
-        "cy": 592,
-        "r": 27
-      },
-      "label": {
-        "x": 750,
-        "y": 628,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "cht",
-      "zone": "CENTRO · MOTOR",
-      "tag": "CHT",
-      "shape": {
-        "kind": "circle",
-        "cx": 814,
-        "cy": 592,
-        "r": 27
-      },
-      "label": {
-        "x": 814,
-        "y": 628,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "quantidade_combustivel",
-      "zone": "CENTRO · MOTOR",
-      "tag": "FUEL QTY",
-      "shape": {
-        "kind": "circle",
-        "cx": 878,
-        "cy": 592,
-        "r": 27
-      },
-      "label": {
-        "x": 878,
-        "y": 628,
-        "anchor": "middle"
       }
     },
     {
@@ -616,16 +372,54 @@
       "tag": "COPILOTO",
       "shape": {
         "kind": "rect",
-        "x": 996,
-        "y": 136,
-        "w": 336,
-        "h": 232
+        "x": 1150,
+        "y": 170,
+        "w": 318,
+        "h": 208
       },
       "label": {
-        "x": 1164,
-        "y": 126,
+        "x": 1309,
+        "y": 164,
         "anchor": "middle"
-      }
+      },
+      "parts": [
+        {
+          "kind": "circle",
+          "cx": 1210,
+          "cy": 192,
+          "r": 44
+        },
+        {
+          "kind": "circle",
+          "cx": 1306,
+          "cy": 178,
+          "r": 40
+        },
+        {
+          "kind": "circle",
+          "cx": 1420,
+          "cy": 240,
+          "r": 44
+        },
+        {
+          "kind": "circle",
+          "cx": 1196,
+          "cy": 314,
+          "r": 44
+        },
+        {
+          "kind": "circle",
+          "cx": 1302,
+          "cy": 316,
+          "r": 42
+        },
+        {
+          "kind": "circle",
+          "cx": 1372,
+          "cy": 344,
+          "r": 32
+        }
+      ]
     },
     {
       "id": "relogio_copiloto_acendedor",
@@ -633,184 +427,2934 @@
       "tag": "RELÓGIO/12V",
       "shape": {
         "kind": "rect",
-        "x": 1346,
-        "y": 136,
-        "w": 188,
-        "h": 94
+        "x": 1472,
+        "y": 226,
+        "w": 72,
+        "h": 146
       },
       "label": {
-        "x": 1440,
-        "y": 126,
+        "x": 1508,
+        "y": 220,
         "anchor": "middle"
       }
     },
     {
-      "id": "disjuntores",
-      "zone": "PAINEL DIR",
-      "tag": "DISJUNTORES",
+      "id": "pressao_oleo",
+      "zone": "FAIXA DE ANUNCIADORES",
+      "tag": "OIL P",
       "shape": {
         "kind": "rect",
-        "x": 1346,
-        "y": 244,
-        "w": 188,
-        "h": 124
+        "x": 141,
+        "y": 413,
+        "w": 115,
+        "h": 38
       },
       "label": {
-        "x": 1440,
-        "y": 237,
+        "x": 198.5,
+        "y": 407,
         "anchor": "middle"
       }
     },
     {
-      "id": "seletor_trem",
-      "zone": "PAINEL DIR · TREM DE POUSO",
-      "tag": "GEAR SEL",
+      "id": "temperatura_oleo",
+      "zone": "FAIXA DE ANUNCIADORES",
+      "tag": "OIL T",
       "shape": {
         "kind": "rect",
-        "x": 1000,
-        "y": 384,
-        "w": 112,
-        "h": 150
+        "x": 260,
+        "y": 413,
+        "w": 115,
+        "h": 38
       },
       "label": {
-        "x": 1056,
-        "y": 375,
+        "x": 317.5,
+        "y": 407,
         "anchor": "middle"
       }
     },
     {
-      "id": "luzes_trem_verdes",
-      "zone": "PAINEL DIR · TREM DE POUSO",
-      "tag": "3 GREEN",
+      "id": "fluxo_combustivel_pressao",
+      "zone": "FAIXA DE ANUNCIADORES",
+      "tag": "FF/PSI",
       "shape": {
         "kind": "rect",
-        "x": 1124,
-        "y": 384,
-        "w": 140,
-        "h": 70
+        "x": 462,
+        "y": 413,
+        "w": 122,
+        "h": 38
       },
       "label": {
-        "x": 1194,
-        "y": 375,
+        "x": 523,
+        "y": 407,
         "anchor": "middle"
       }
     },
     {
-      "id": "luz_trem_vermelha",
-      "zone": "PAINEL DIR · TREM DE POUSO",
-      "tag": "GEAR WARN",
+      "id": "cht",
+      "zone": "FAIXA DE ANUNCIADORES",
+      "tag": "CHT",
       "shape": {
         "kind": "rect",
-        "x": 1124,
-        "y": 464,
-        "w": 140,
-        "h": 70
+        "x": 589,
+        "y": 413,
+        "w": 123,
+        "h": 38
       },
       "label": {
-        "x": 1194,
-        "y": 458,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "extensao_emergencia_trem",
-      "zone": "PAINEL DIR · TREM DE POUSO",
-      "tag": "EMERG GEAR",
-      "shape": {
-        "kind": "rect",
-        "x": 1000,
-        "y": 544,
-        "w": 264,
-        "h": 60
-      },
-      "label": {
-        "x": 1132,
-        "y": 618,
-        "anchor": "middle"
-      }
-    },
-    {
-      "id": "painel_anunciador",
-      "zone": "PAINEL DIR · TREM DE POUSO",
-      "tag": "CAUTION",
-      "shape": {
-        "kind": "rect",
-        "x": 1000,
-        "y": 610,
-        "w": 264,
-        "h": 60
-      },
-      "label": {
-        "x": 1132,
-        "y": 601,
+        "x": 650.5,
+        "y": 407,
         "anchor": "middle"
       }
     },
     {
       "id": "amperimetros",
-      "zone": "PAINEL DIR",
+      "zone": "FAIXA DE ANUNCIADORES",
       "tag": "AMP L–R",
       "shape": {
-        "kind": "circle",
-        "cx": 1322,
-        "cy": 422,
-        "r": 36
+        "kind": "rect",
+        "x": 910,
+        "y": 403,
+        "w": 108,
+        "h": 56
       },
       "label": {
-        "x": 1322,
-        "y": 378,
+        "x": 964,
+        "y": 397,
         "anchor": "middle"
       }
     },
     {
       "id": "indicador_vacuo",
-      "zone": "PAINEL DIR",
+      "zone": "FAIXA DE ANUNCIADORES",
       "tag": "SUCÇÃO",
       "shape": {
         "kind": "circle",
-        "cx": 1422,
-        "cy": 422,
-        "r": 36
+        "cx": 1052,
+        "cy": 429,
+        "r": 31
       },
       "label": {
-        "x": 1422,
-        "y": 378,
+        "x": 1052,
+        "y": 392,
         "anchor": "middle"
       }
     },
     {
-      "id": "estatica_alternada",
-      "zone": "PAINEL DIR",
-      "tag": "EST. ALT",
+      "id": "egt",
+      "zone": "FAIXA DE ANUNCIADORES",
+      "tag": "EGT",
       "shape": {
-        "kind": "rect",
-        "x": 1280,
-        "y": 474,
-        "w": 116,
-        "h": 84
+        "kind": "circle",
+        "cx": 1146,
+        "cy": 429,
+        "r": 31
       },
       "label": {
-        "x": 1338,
-        "y": 468,
+        "x": 1146,
+        "y": 392,
         "anchor": "middle"
       }
     },
     {
       "id": "aquecimento_desembacador",
-      "zone": "PAINEL DIR",
+      "zone": "FAIXA DE ANUNCIADORES",
       "tag": "AQUEC/DESEMB",
       "shape": {
         "kind": "rect",
-        "x": 1408,
-        "y": 474,
-        "w": 126,
-        "h": 84
+        "x": 1289,
+        "y": 406,
+        "w": 172,
+        "h": 58
       },
       "label": {
-        "x": 1471,
-        "y": 468,
+        "x": 1375,
+        "y": 400,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "piloto_automatico",
+      "zone": "FAIXA CREME · PILOTO AUTOMÁTICO",
+      "tag": "AP",
+      "shape": {
+        "kind": "rect",
+        "x": 186,
+        "y": 509,
+        "w": 108,
+        "h": 59
+      },
+      "label": {
+        "x": 240,
+        "y": 580,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "avisos_eletricos_vacuo",
+      "zone": "FAIXA CREME · PILOTO AUTOMÁTICO",
+      "tag": "OV/VAC",
+      "shape": {
+        "kind": "rect",
+        "x": 330,
+        "y": 552,
+        "w": 31,
+        "h": 32
+      },
+      "label": {
+        "x": 345.5,
+        "y": 596,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "pressao_admissao",
+      "zone": "FAIXA CREME · MOTOR",
+      "tag": "MP",
+      "shape": {
+        "kind": "circle",
+        "cx": 462,
+        "cy": 539,
+        "r": 44
+      },
+      "label": {
+        "x": 462,
+        "y": 595,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "tacometro_duplo",
+      "zone": "FAIXA CREME · MOTOR",
+      "tag": "RPM L",
+      "shape": {
+        "kind": "circle",
+        "cx": 559,
+        "cy": 536,
+        "r": 44
+      },
+      "label": {
+        "x": 559,
+        "y": 592,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "tacometro_direito",
+      "zone": "FAIXA CREME · MOTOR",
+      "tag": "RPM R",
+      "shape": {
+        "kind": "circle",
+        "cx": 659,
+        "cy": 534,
+        "r": 44
+      },
+      "label": {
+        "x": 659,
+        "y": 590,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "luzes_trem_verdes",
+      "zone": "FAIXA CREME · TREM DE POUSO",
+      "tag": "3 GREEN",
+      "shape": {
+        "kind": "rect",
+        "x": 707,
+        "y": 469,
+        "w": 49,
+        "h": 20
+      },
+      "label": {
+        "x": 731.5,
+        "y": 463,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "seletor_trem",
+      "zone": "FAIXA CREME · TREM DE POUSO",
+      "tag": "GEAR SEL",
+      "shape": {
+        "kind": "rect",
+        "x": 708,
+        "y": 494,
+        "w": 48,
+        "h": 80
+      },
+      "label": {
+        "x": 702,
+        "y": 537,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "extensao_emergencia_trem",
+      "zone": "FAIXA CREME · TREM DE POUSO",
+      "tag": "EMERG GEAR",
+      "shape": {
+        "kind": "rect",
+        "x": 700,
+        "y": 582,
+        "w": 55,
+        "h": 46
+      },
+      "label": {
+        "x": 694,
+        "y": 608,
+        "anchor": "end"
+      }
+    },
+    {
+      "id": "manetes_potencia",
+      "zone": "PEDESTAL · QUADRANTE",
+      "tag": "POTÊNCIA",
+      "shape": {
+        "kind": "rect",
+        "x": 762,
+        "y": 482,
+        "w": 54,
+        "h": 124
+      },
+      "label": {
+        "x": 789,
+        "y": 476,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "manetes_helice",
+      "zone": "PEDESTAL · QUADRANTE",
+      "tag": "HÉLICE",
+      "shape": {
+        "kind": "rect",
+        "x": 820,
+        "y": 482,
+        "w": 54,
+        "h": 124
+      },
+      "label": {
+        "x": 847,
+        "y": 476,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "manetes_mistura",
+      "zone": "PEDESTAL · QUADRANTE",
+      "tag": "MISTURA",
+      "shape": {
+        "kind": "rect",
+        "x": 878,
+        "y": 482,
+        "w": 54,
+        "h": 124
+      },
+      "label": {
+        "x": 905,
+        "y": 476,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "ar_alternativo",
+      "zone": "PEDESTAL · QUADRANTE",
+      "tag": "ALT AIR",
+      "shape": {
+        "kind": "rect",
+        "x": 762,
+        "y": 614,
+        "w": 172,
+        "h": 44
+      },
+      "label": {
+        "x": 848,
+        "y": 670,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "cowl_flaps",
+      "zone": "PEDESTAL · QUADRANTE",
+      "tag": "COWL FLAP",
+      "shape": {
+        "kind": "rect",
+        "x": 746,
+        "y": 712,
+        "w": 160,
+        "h": 110
+      },
+      "label": {
+        "x": 912,
+        "y": 770,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "estatica_alternada",
+      "zone": "FAIXA CREME · DIREITA",
+      "tag": "EST. ALT",
+      "shape": {
+        "kind": "rect",
+        "x": 938,
+        "y": 480,
+        "w": 66,
+        "h": 99
+      },
+      "label": {
+        "x": 971,
+        "y": 591,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "quantidade_combustivel",
+      "zone": "FAIXA CREME · DIREITA",
+      "tag": "FUEL QTY",
+      "shape": {
+        "kind": "circle",
+        "cx": 1055,
+        "cy": 528,
+        "r": 44
+      },
+      "label": {
+        "x": 1055,
+        "y": 584,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "disjuntores",
+      "zone": "FAIXA CREME · DIREITA",
+      "tag": "DISJUNTORES",
+      "shape": {
+        "kind": "rect",
+        "x": 1118,
+        "y": 483,
+        "w": 328,
+        "h": 87
+      },
+      "label": {
+        "x": 1282,
+        "y": 582,
+        "anchor": "middle"
+      }
+    },
+    {
+      "id": "chave_master",
+      "zone": "PAINEL LATERAL ESQ · INTERRUPTORES",
+      "tag": "MASTER",
+      "shape": {
+        "kind": "rect",
+        "x": 13,
+        "y": 464,
+        "w": 78,
+        "h": 51
+      },
+      "label": {
+        "x": 97,
+        "y": 492.5,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "chaves_alternadores",
+      "zone": "PAINEL LATERAL ESQ · INTERRUPTORES",
+      "tag": "ALT L–R",
+      "shape": {
+        "kind": "rect",
+        "x": 13,
+        "y": 522,
+        "w": 78,
+        "h": 51
+      },
+      "label": {
+        "x": 97,
+        "y": 550.5,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "chaves_magnetos_partida",
+      "zone": "PAINEL LATERAL ESQ · INTERRUPTORES",
+      "tag": "MAG/START",
+      "shape": {
+        "kind": "rect",
+        "x": 13,
+        "y": 579,
+        "w": 78,
+        "h": 64
+      },
+      "label": {
+        "x": 97,
+        "y": 614,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "bombas_combustivel_eletricas",
+      "zone": "PAINEL LATERAL ESQ · INTERRUPTORES",
+      "tag": "FUEL PUMPS",
+      "shape": {
+        "kind": "rect",
+        "x": 13,
+        "y": 650,
+        "w": 78,
+        "h": 51
+      },
+      "label": {
+        "x": 97,
+        "y": 678.5,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "pitot_heat_luzes",
+      "zone": "PAINEL LATERAL ESQ · INTERRUPTORES",
+      "tag": "PITOT/LUZES",
+      "shape": {
+        "kind": "rect",
+        "x": 13,
+        "y": 707,
+        "w": 78,
+        "h": 51
+      },
+      "label": {
+        "x": 97,
+        "y": 735.5,
+        "anchor": "start"
+      }
+    },
+    {
+      "id": "freio_estacionamento",
+      "zone": "FAIXA CREME · PILOTO AUTOMÁTICO",
+      "tag": "FREIO EST.",
+      "shape": {
+        "kind": "rect",
+        "x": 140,
+        "y": 604,
+        "w": 82,
+        "h": 46
+      },
+      "label": {
+        "x": 181,
+        "y": 662,
         "anchor": "middle"
       }
     }
-  ]
+  ],
+  "geometry": {
+    "glare": [
+      [
+        12,
+        340
+      ],
+      [
+        12.9,
+        321.9
+      ],
+      [
+        15.6,
+        304.5
+      ],
+      [
+        20,
+        287.6
+      ],
+      [
+        26.2,
+        271.3
+      ],
+      [
+        34.1,
+        255.7
+      ],
+      [
+        43.7,
+        240.8
+      ],
+      [
+        54.9,
+        226.5
+      ],
+      [
+        67.8,
+        213
+      ],
+      [
+        82.3,
+        200.1
+      ],
+      [
+        98.3,
+        188
+      ],
+      [
+        115.9,
+        176.7
+      ],
+      [
+        135,
+        166.2
+      ],
+      [
+        155.6,
+        156.5
+      ],
+      [
+        177.6,
+        147.7
+      ],
+      [
+        201.1,
+        139.7
+      ],
+      [
+        226,
+        132.5
+      ],
+      [
+        252.3,
+        126.3
+      ],
+      [
+        280,
+        121
+      ],
+      [
+        298.2,
+        118.2
+      ],
+      [
+        318.8,
+        115.3
+      ],
+      [
+        341.4,
+        112.5
+      ],
+      [
+        366,
+        109.7
+      ],
+      [
+        392.3,
+        107
+      ],
+      [
+        420.1,
+        104.4
+      ],
+      [
+        449.3,
+        101.8
+      ],
+      [
+        479.6,
+        99.4
+      ],
+      [
+        510.8,
+        97.1
+      ],
+      [
+        542.7,
+        95
+      ],
+      [
+        575.1,
+        93
+      ],
+      [
+        607.9,
+        91.3
+      ],
+      [
+        640.7,
+        89.8
+      ],
+      [
+        673.5,
+        88.5
+      ],
+      [
+        706.1,
+        87.4
+      ],
+      [
+        738.1,
+        86.6
+      ],
+      [
+        769.5,
+        86.2
+      ],
+      [
+        800,
+        86
+      ],
+      [
+        830.5,
+        86.2
+      ],
+      [
+        861.9,
+        86.6
+      ],
+      [
+        893.9,
+        87.4
+      ],
+      [
+        926.5,
+        88.5
+      ],
+      [
+        959.3,
+        89.8
+      ],
+      [
+        992.1,
+        91.3
+      ],
+      [
+        1024.9,
+        93
+      ],
+      [
+        1057.3,
+        95
+      ],
+      [
+        1089.3,
+        97.1
+      ],
+      [
+        1120.4,
+        99.4
+      ],
+      [
+        1150.7,
+        101.8
+      ],
+      [
+        1179.9,
+        104.4
+      ],
+      [
+        1207.7,
+        107
+      ],
+      [
+        1234,
+        109.7
+      ],
+      [
+        1258.6,
+        112.5
+      ],
+      [
+        1281.2,
+        115.3
+      ],
+      [
+        1301.8,
+        118.2
+      ],
+      [
+        1320,
+        121
+      ],
+      [
+        1347.7,
+        126.3
+      ],
+      [
+        1374,
+        132.5
+      ],
+      [
+        1398.9,
+        139.7
+      ],
+      [
+        1422.4,
+        147.7
+      ],
+      [
+        1444.4,
+        156.5
+      ],
+      [
+        1465,
+        166.2
+      ],
+      [
+        1484.1,
+        176.7
+      ],
+      [
+        1501.7,
+        188
+      ],
+      [
+        1517.8,
+        200.1
+      ],
+      [
+        1532.2,
+        213
+      ],
+      [
+        1545.1,
+        226.5
+      ],
+      [
+        1556.3,
+        240.8
+      ],
+      [
+        1565.9,
+        255.7
+      ],
+      [
+        1573.8,
+        271.3
+      ],
+      [
+        1580,
+        287.6
+      ],
+      [
+        1584.4,
+        304.5
+      ],
+      [
+        1587.1,
+        321.9
+      ],
+      [
+        1588,
+        340
+      ]
+    ],
+    "pad": [
+      [
+        26,
+        340.7
+      ],
+      [
+        26.8,
+        323.3
+      ],
+      [
+        29.3,
+        307.3
+      ],
+      [
+        33.3,
+        291.9
+      ],
+      [
+        39,
+        277
+      ],
+      [
+        46.2,
+        262.7
+      ],
+      [
+        55.1,
+        248.9
+      ],
+      [
+        65.5,
+        235.7
+      ],
+      [
+        77.5,
+        223.1
+      ],
+      [
+        91.2,
+        210.9
+      ],
+      [
+        106.3,
+        199.5
+      ],
+      [
+        123,
+        188.7
+      ],
+      [
+        141.3,
+        178.7
+      ],
+      [
+        161.2,
+        169.3
+      ],
+      [
+        182.4,
+        160.8
+      ],
+      [
+        205.3,
+        153.1
+      ],
+      [
+        229.5,
+        146
+      ],
+      [
+        255.2,
+        140
+      ],
+      [
+        282.4,
+        134.8
+      ],
+      [
+        300.2,
+        132.1
+      ],
+      [
+        320.6,
+        129.2
+      ],
+      [
+        343,
+        126.4
+      ],
+      [
+        367.5,
+        123.6
+      ],
+      [
+        393.7,
+        120.9
+      ],
+      [
+        421.4,
+        118.3
+      ],
+      [
+        450.5,
+        115.8
+      ],
+      [
+        480.7,
+        113.4
+      ],
+      [
+        511.8,
+        111.1
+      ],
+      [
+        543.6,
+        109
+      ],
+      [
+        575.9,
+        107
+      ],
+      [
+        608.6,
+        105.3
+      ],
+      [
+        641.3,
+        103.8
+      ],
+      [
+        674,
+        102.5
+      ],
+      [
+        706.5,
+        101.4
+      ],
+      [
+        738.4,
+        100.6
+      ],
+      [
+        769.6,
+        100.2
+      ],
+      [
+        800,
+        100
+      ],
+      [
+        830.4,
+        100.2
+      ],
+      [
+        861.6,
+        100.6
+      ],
+      [
+        893.5,
+        101.4
+      ],
+      [
+        926,
+        102.5
+      ],
+      [
+        958.7,
+        103.8
+      ],
+      [
+        991.4,
+        105.3
+      ],
+      [
+        1024.1,
+        107
+      ],
+      [
+        1056.4,
+        109
+      ],
+      [
+        1088.3,
+        111.1
+      ],
+      [
+        1119.3,
+        113.4
+      ],
+      [
+        1149.5,
+        115.8
+      ],
+      [
+        1178.6,
+        118.3
+      ],
+      [
+        1206.3,
+        120.9
+      ],
+      [
+        1232.5,
+        123.6
+      ],
+      [
+        1257,
+        126.4
+      ],
+      [
+        1279.4,
+        129.2
+      ],
+      [
+        1299.8,
+        132.1
+      ],
+      [
+        1317.6,
+        134.8
+      ],
+      [
+        1344.8,
+        140
+      ],
+      [
+        1370.5,
+        146
+      ],
+      [
+        1394.7,
+        153.1
+      ],
+      [
+        1417.6,
+        160.8
+      ],
+      [
+        1438.8,
+        169.3
+      ],
+      [
+        1458.7,
+        178.7
+      ],
+      [
+        1477,
+        188.7
+      ],
+      [
+        1493.7,
+        199.5
+      ],
+      [
+        1508.9,
+        210.9
+      ],
+      [
+        1522.5,
+        223.1
+      ],
+      [
+        1534.5,
+        235.7
+      ],
+      [
+        1544.9,
+        248.9
+      ],
+      [
+        1553.8,
+        262.7
+      ],
+      [
+        1561,
+        277
+      ],
+      [
+        1566.7,
+        291.9
+      ],
+      [
+        1570.7,
+        307.3
+      ],
+      [
+        1573.2,
+        323.3
+      ],
+      [
+        1574,
+        340.7
+      ]
+    ],
+    "plates": {
+      "painel": [
+        [
+          12,
+          340
+        ],
+        [
+          12.9,
+          321.9
+        ],
+        [
+          15.6,
+          304.5
+        ],
+        [
+          20,
+          287.6
+        ],
+        [
+          26.2,
+          271.3
+        ],
+        [
+          34.1,
+          255.7
+        ],
+        [
+          43.7,
+          240.8
+        ],
+        [
+          54.9,
+          226.5
+        ],
+        [
+          67.8,
+          213
+        ],
+        [
+          82.3,
+          200.1
+        ],
+        [
+          98.3,
+          188
+        ],
+        [
+          115.9,
+          176.7
+        ],
+        [
+          135,
+          166.2
+        ],
+        [
+          155.6,
+          156.5
+        ],
+        [
+          177.6,
+          147.7
+        ],
+        [
+          201.1,
+          139.7
+        ],
+        [
+          226,
+          132.5
+        ],
+        [
+          252.3,
+          126.3
+        ],
+        [
+          280,
+          121
+        ],
+        [
+          298.2,
+          118.2
+        ],
+        [
+          318.8,
+          115.3
+        ],
+        [
+          341.4,
+          112.5
+        ],
+        [
+          366,
+          109.7
+        ],
+        [
+          392.3,
+          107
+        ],
+        [
+          420.1,
+          104.4
+        ],
+        [
+          449.3,
+          101.8
+        ],
+        [
+          479.6,
+          99.4
+        ],
+        [
+          510.8,
+          97.1
+        ],
+        [
+          542.7,
+          95
+        ],
+        [
+          575.1,
+          93
+        ],
+        [
+          607.9,
+          91.3
+        ],
+        [
+          640.7,
+          89.8
+        ],
+        [
+          673.5,
+          88.5
+        ],
+        [
+          706.1,
+          87.4
+        ],
+        [
+          738.1,
+          86.6
+        ],
+        [
+          769.5,
+          86.2
+        ],
+        [
+          800,
+          86
+        ],
+        [
+          830.5,
+          86.2
+        ],
+        [
+          861.9,
+          86.6
+        ],
+        [
+          893.9,
+          87.4
+        ],
+        [
+          926.5,
+          88.5
+        ],
+        [
+          959.3,
+          89.8
+        ],
+        [
+          992.1,
+          91.3
+        ],
+        [
+          1024.9,
+          93
+        ],
+        [
+          1057.3,
+          95
+        ],
+        [
+          1089.3,
+          97.1
+        ],
+        [
+          1120.4,
+          99.4
+        ],
+        [
+          1150.7,
+          101.8
+        ],
+        [
+          1179.9,
+          104.4
+        ],
+        [
+          1207.7,
+          107
+        ],
+        [
+          1234,
+          109.7
+        ],
+        [
+          1258.6,
+          112.5
+        ],
+        [
+          1281.2,
+          115.3
+        ],
+        [
+          1301.8,
+          118.2
+        ],
+        [
+          1320,
+          121
+        ],
+        [
+          1347.7,
+          126.3
+        ],
+        [
+          1374,
+          132.5
+        ],
+        [
+          1398.9,
+          139.7
+        ],
+        [
+          1422.4,
+          147.7
+        ],
+        [
+          1444.4,
+          156.5
+        ],
+        [
+          1465,
+          166.2
+        ],
+        [
+          1484.1,
+          176.7
+        ],
+        [
+          1501.7,
+          188
+        ],
+        [
+          1517.8,
+          200.1
+        ],
+        [
+          1532.2,
+          213
+        ],
+        [
+          1545.1,
+          226.5
+        ],
+        [
+          1556.3,
+          240.8
+        ],
+        [
+          1565.9,
+          255.7
+        ],
+        [
+          1573.8,
+          271.3
+        ],
+        [
+          1580,
+          287.6
+        ],
+        [
+          1584.4,
+          304.5
+        ],
+        [
+          1587.1,
+          321.9
+        ],
+        [
+          1588,
+          340
+        ],
+        [
+          1582,
+          384
+        ],
+        [
+          1576,
+          472
+        ],
+        [
+          24,
+          472
+        ],
+        [
+          18,
+          384
+        ]
+      ],
+      "faixaEscura": [
+        [
+          24,
+          384
+        ],
+        [
+          1576,
+          384
+        ],
+        [
+          1576,
+          472
+        ],
+        [
+          24,
+          472
+        ]
+      ],
+      "sixpack": [
+        [
+          224,
+          154
+        ],
+        [
+          666,
+          154
+        ],
+        [
+          666,
+          392
+        ],
+        [
+          224,
+          392
+        ]
+      ],
+      "copiloto": [
+        [
+          1142,
+          126
+        ],
+        [
+          1470,
+          126
+        ],
+        [
+          1470,
+          382
+        ],
+        [
+          1142,
+          382
+        ]
+      ],
+      "stack": [
+        [
+          686,
+          104
+        ],
+        [
+          1134,
+          104
+        ],
+        [
+          1134,
+          384
+        ],
+        [
+          686,
+          384
+        ]
+      ],
+      "faixaCreme": [
+        [
+          100,
+          472
+        ],
+        [
+          1548,
+          472
+        ],
+        [
+          1548,
+          598
+        ],
+        [
+          100,
+          598
+        ]
+      ],
+      "pedestal": [
+        [
+          748,
+          472
+        ],
+        [
+          944,
+          472
+        ],
+        [
+          944,
+          604
+        ],
+        [
+          922,
+          640
+        ],
+        [
+          920,
+          694
+        ],
+        [
+          906,
+          708
+        ],
+        [
+          904,
+          960
+        ],
+        [
+          742,
+          960
+        ],
+        [
+          740,
+          708
+        ],
+        [
+          734,
+          694
+        ],
+        [
+          734,
+          640
+        ],
+        [
+          742,
+          604
+        ]
+      ],
+      "pedestalDegrau": [
+        [
+          740,
+          708
+        ],
+        [
+          906,
+          708
+        ],
+        [
+          904,
+          724
+        ],
+        [
+          742,
+          724
+        ]
+      ],
+      "paredeEsq": [
+        [
+          0,
+          316
+        ],
+        [
+          12,
+          340
+        ],
+        [
+          18,
+          384
+        ],
+        [
+          24,
+          472
+        ],
+        [
+          100,
+          472
+        ],
+        [
+          100,
+          598
+        ],
+        [
+          152,
+          606
+        ],
+        [
+          118,
+          640
+        ],
+        [
+          0,
+          664
+        ]
+      ],
+      "paredeDir": [
+        [
+          1600,
+          316
+        ],
+        [
+          1588,
+          340
+        ],
+        [
+          1582,
+          384
+        ],
+        [
+          1576,
+          472
+        ],
+        [
+          1548,
+          472
+        ],
+        [
+          1548,
+          598
+        ],
+        [
+          1500,
+          606
+        ],
+        [
+          1530,
+          640
+        ],
+        [
+          1600,
+          664
+        ]
+      ],
+      "consoleLateral": [
+        [
+          2,
+          444
+        ],
+        [
+          100,
+          458
+        ],
+        [
+          106,
+          768
+        ],
+        [
+          2,
+          792
+        ]
+      ]
+    },
+    "trims": [
+      [
+        24,
+        1576,
+        384
+      ],
+      [
+        24,
+        1576,
+        472
+      ]
+    ],
+    "placards": [
+      {
+        "x": 306,
+        "y": 136,
+        "w": 56,
+        "h": 26,
+        "tone": "black"
+      },
+      {
+        "x": 368,
+        "y": 124,
+        "w": 66,
+        "h": 34,
+        "tone": "black"
+      },
+      {
+        "x": 524,
+        "y": 114,
+        "w": 36,
+        "h": 16,
+        "tone": "white"
+      },
+      {
+        "x": 930,
+        "y": 288,
+        "w": 190,
+        "h": 52,
+        "tone": "blackBright"
+      },
+      {
+        "x": 930,
+        "y": 346,
+        "w": 190,
+        "h": 16,
+        "tone": "black"
+      },
+      {
+        "x": 930,
+        "y": 366,
+        "w": 190,
+        "h": 14,
+        "tone": "black"
+      },
+      {
+        "x": 556,
+        "y": 452,
+        "w": 156,
+        "h": 17,
+        "tone": "black"
+      },
+      {
+        "x": 1121,
+        "y": 574,
+        "w": 122,
+        "h": 18,
+        "tone": "black"
+      },
+      {
+        "x": 640,
+        "y": 584,
+        "w": 56,
+        "h": 16,
+        "tone": "black"
+      }
+    ],
+    "horimetro": {
+      "plate": {
+        "x": 728,
+        "y": 392,
+        "w": 166,
+        "h": 74
+      },
+      "cx": 811,
+      "cy": 430,
+      "r": 31
+    },
+    "screws": [
+      [
+        232,
+        162
+      ],
+      [
+        658,
+        162
+      ],
+      [
+        232,
+        384
+      ],
+      [
+        658,
+        384
+      ],
+      [
+        1150,
+        134
+      ],
+      [
+        1440,
+        166
+      ],
+      [
+        1150,
+        374
+      ],
+      [
+        1462,
+        374
+      ],
+      [
+        110,
+        590
+      ],
+      [
+        1540,
+        590
+      ],
+      [
+        754,
+        690
+      ],
+      [
+        930,
+        650
+      ]
+    ],
+    "pedestalBase": {
+      "placa": {
+        "x": 784,
+        "y": 862,
+        "w": 70,
+        "h": 21
+      },
+      "alavanca": {
+        "x": 826,
+        "y": 908,
+        "w": 24,
+        "h": 52
+      },
+      "punho": {
+        "x": 830,
+        "y": 902,
+        "w": 16,
+        "h": 12
+      }
+    },
+    "yokes": [
+      {
+        "hub": {
+          "x": 360,
+          "y": 476
+        },
+        "column": {
+          "x": 351,
+          "y": 498,
+          "w": 18,
+          "h": 64
+        },
+        "arms": [
+          [
+            [
+              320,
+              482
+            ],
+            [
+              310.39,
+              484.69
+            ],
+            [
+              300.37,
+              486.77
+            ],
+            [
+              290.06,
+              488.22
+            ],
+            [
+              279.56,
+              489.03
+            ],
+            [
+              269,
+              489.2
+            ],
+            [
+              258.48,
+              488.71
+            ],
+            [
+              248.11,
+              487.57
+            ],
+            [
+              238,
+              485.75
+            ],
+            [
+              228.27,
+              483.25
+            ],
+            [
+              219.02,
+              480.07
+            ],
+            [
+              210.38,
+              476.18
+            ],
+            [
+              202.44,
+              471.59
+            ],
+            [
+              195.32,
+              466.29
+            ],
+            [
+              189.13,
+              460.26
+            ],
+            [
+              183.99,
+              453.5
+            ],
+            [
+              180,
+              446
+            ],
+            [
+              168,
+              346
+            ],
+            [
+              167.6,
+              342.36
+            ],
+            [
+              167.41,
+              338.94
+            ],
+            [
+              167.41,
+              335.73
+            ],
+            [
+              167.63,
+              332.75
+            ],
+            [
+              168.04,
+              329.98
+            ],
+            [
+              168.66,
+              327.44
+            ],
+            [
+              169.48,
+              325.11
+            ],
+            [
+              170.5,
+              323
+            ],
+            [
+              171.73,
+              321.11
+            ],
+            [
+              173.16,
+              319.44
+            ],
+            [
+              174.79,
+              317.98
+            ],
+            [
+              176.63,
+              316.75
+            ],
+            [
+              178.66,
+              315.73
+            ],
+            [
+              180.91,
+              314.94
+            ],
+            [
+              183.35,
+              314.36
+            ],
+            [
+              186,
+              314
+            ],
+            [
+              200,
+              320
+            ],
+            [
+              194,
+              428
+            ],
+            [
+              198.27,
+              432.57
+            ],
+            [
+              203.52,
+              436.57
+            ],
+            [
+              209.63,
+              440
+            ],
+            [
+              216.5,
+              442.91
+            ],
+            [
+              224.03,
+              445.31
+            ],
+            [
+              232.11,
+              447.23
+            ],
+            [
+              240.63,
+              448.7
+            ],
+            [
+              249.5,
+              449.75
+            ],
+            [
+              258.6,
+              450.4
+            ],
+            [
+              267.83,
+              450.68
+            ],
+            [
+              277.08,
+              450.61
+            ],
+            [
+              286.25,
+              450.22
+            ],
+            [
+              295.23,
+              449.54
+            ],
+            [
+              303.92,
+              448.59
+            ],
+            [
+              312.21,
+              447.4
+            ],
+            [
+              320,
+              446
+            ]
+          ],
+          [
+            [
+              400,
+              482
+            ],
+            [
+              409.57,
+              484.69
+            ],
+            [
+              419.46,
+              486.77
+            ],
+            [
+              429.58,
+              488.22
+            ],
+            [
+              439.81,
+              489.03
+            ],
+            [
+              450.07,
+              489.2
+            ],
+            [
+              460.26,
+              488.71
+            ],
+            [
+              470.27,
+              487.57
+            ],
+            [
+              480,
+              485.75
+            ],
+            [
+              489.36,
+              483.25
+            ],
+            [
+              498.24,
+              480.07
+            ],
+            [
+              506.55,
+              476.18
+            ],
+            [
+              514.19,
+              471.59
+            ],
+            [
+              521.05,
+              466.29
+            ],
+            [
+              527.04,
+              460.26
+            ],
+            [
+              532.06,
+              453.5
+            ],
+            [
+              536,
+              446
+            ],
+            [
+              548,
+              346
+            ],
+            [
+              548.4,
+              342.36
+            ],
+            [
+              548.59,
+              338.94
+            ],
+            [
+              548.59,
+              335.73
+            ],
+            [
+              548.38,
+              332.75
+            ],
+            [
+              547.96,
+              329.98
+            ],
+            [
+              547.34,
+              327.44
+            ],
+            [
+              546.52,
+              325.11
+            ],
+            [
+              545.5,
+              323
+            ],
+            [
+              544.27,
+              321.11
+            ],
+            [
+              542.84,
+              319.44
+            ],
+            [
+              541.21,
+              317.98
+            ],
+            [
+              539.38,
+              316.75
+            ],
+            [
+              537.34,
+              315.73
+            ],
+            [
+              535.09,
+              314.94
+            ],
+            [
+              532.65,
+              314.36
+            ],
+            [
+              530,
+              314
+            ],
+            [
+              516,
+              320
+            ],
+            [
+              522,
+              428
+            ],
+            [
+              517.77,
+              432.57
+            ],
+            [
+              512.66,
+              436.57
+            ],
+            [
+              506.74,
+              440
+            ],
+            [
+              500.13,
+              442.91
+            ],
+            [
+              492.9,
+              445.31
+            ],
+            [
+              485.16,
+              447.23
+            ],
+            [
+              476.99,
+              448.7
+            ],
+            [
+              468.5,
+              449.75
+            ],
+            [
+              459.77,
+              450.4
+            ],
+            [
+              450.91,
+              450.68
+            ],
+            [
+              441.99,
+              450.61
+            ],
+            [
+              433.13,
+              450.22
+            ],
+            [
+              424.4,
+              449.54
+            ],
+            [
+              415.91,
+              448.59
+            ],
+            [
+              407.74,
+              447.4
+            ],
+            [
+              400,
+              446
+            ]
+          ]
+        ],
+        "grips": [
+          [
+            [
+              164,
+              318
+            ],
+            [
+              198,
+              314
+            ],
+            [
+              194,
+              376
+            ],
+            [
+              170,
+              380
+            ]
+          ],
+          [
+            [
+              552,
+              318
+            ],
+            [
+              518,
+              314
+            ],
+            [
+              522,
+              376
+            ],
+            [
+              546,
+              380
+            ]
+          ]
+        ],
+        "hubBox": {
+          "x": 318,
+          "y": 432,
+          "w": 84,
+          "h": 76,
+          "rx": 14
+        },
+        "rings": [
+          {
+            "x": 326,
+            "y": 440,
+            "w": 68,
+            "h": 60,
+            "rx": 10
+          },
+          {
+            "x": 331,
+            "y": 445,
+            "w": 58,
+            "h": 50,
+            "rx": 8
+          },
+          {
+            "x": 336,
+            "y": 450,
+            "w": 48,
+            "h": 40,
+            "rx": 6
+          }
+        ],
+        "logo": {
+          "x": 342,
+          "y": 454,
+          "w": 36,
+          "h": 32,
+          "rx": 4
+        },
+        "star": [
+          [
+            360,
+            456
+          ],
+          [
+            364,
+            470
+          ],
+          [
+            376,
+            470
+          ],
+          [
+            364,
+            474
+          ],
+          [
+            360,
+            486
+          ],
+          [
+            356,
+            474
+          ],
+          [
+            344,
+            470
+          ],
+          [
+            356,
+            470
+          ]
+        ],
+        "bar": {
+          "x": 357.5,
+          "y": 458,
+          "w": 5,
+          "h": 24,
+          "rx": 2
+        }
+      },
+      {
+        "hub": {
+          "x": 1272,
+          "y": 444
+        },
+        "column": {
+          "x": 1263,
+          "y": 466,
+          "w": 18,
+          "h": 64
+        },
+        "arms": [
+          [
+            [
+              1232,
+              450
+            ],
+            [
+              1222.54,
+              452.69
+            ],
+            [
+              1212.97,
+              454.77
+            ],
+            [
+              1203.35,
+              456.22
+            ],
+            [
+              1193.75,
+              457.03
+            ],
+            [
+              1184.25,
+              457.2
+            ],
+            [
+              1174.91,
+              456.71
+            ],
+            [
+              1165.8,
+              455.57
+            ],
+            [
+              1157,
+              453.75
+            ],
+            [
+              1148.57,
+              451.25
+            ],
+            [
+              1140.59,
+              448.07
+            ],
+            [
+              1133.13,
+              444.18
+            ],
+            [
+              1126.25,
+              439.59
+            ],
+            [
+              1120.03,
+              434.29
+            ],
+            [
+              1114.53,
+              428.26
+            ],
+            [
+              1109.83,
+              421.5
+            ],
+            [
+              1106,
+              414
+            ],
+            [
+              1094,
+              314
+            ],
+            [
+              1093.6,
+              310.36
+            ],
+            [
+              1093.41,
+              306.94
+            ],
+            [
+              1093.41,
+              303.73
+            ],
+            [
+              1093.63,
+              300.75
+            ],
+            [
+              1094.04,
+              297.98
+            ],
+            [
+              1094.66,
+              295.44
+            ],
+            [
+              1095.48,
+              293.11
+            ],
+            [
+              1096.5,
+              291
+            ],
+            [
+              1097.73,
+              289.11
+            ],
+            [
+              1099.16,
+              287.44
+            ],
+            [
+              1100.79,
+              285.98
+            ],
+            [
+              1102.63,
+              284.75
+            ],
+            [
+              1104.66,
+              283.73
+            ],
+            [
+              1106.91,
+              282.94
+            ],
+            [
+              1109.35,
+              282.36
+            ],
+            [
+              1112,
+              282
+            ],
+            [
+              1126,
+              288
+            ],
+            [
+              1120,
+              396
+            ],
+            [
+              1124.11,
+              400.57
+            ],
+            [
+              1128.91,
+              404.57
+            ],
+            [
+              1134.33,
+              408
+            ],
+            [
+              1140.31,
+              410.91
+            ],
+            [
+              1146.78,
+              413.31
+            ],
+            [
+              1153.68,
+              415.23
+            ],
+            [
+              1160.94,
+              416.7
+            ],
+            [
+              1168.5,
+              417.75
+            ],
+            [
+              1176.29,
+              418.4
+            ],
+            [
+              1184.26,
+              418.68
+            ],
+            [
+              1192.33,
+              418.61
+            ],
+            [
+              1200.44,
+              418.22
+            ],
+            [
+              1208.52,
+              417.54
+            ],
+            [
+              1216.52,
+              416.59
+            ],
+            [
+              1224.37,
+              415.4
+            ],
+            [
+              1232,
+              414
+            ]
+          ],
+          [
+            [
+              1312,
+              450
+            ],
+            [
+              1321.73,
+              452.69
+            ],
+            [
+              1332.06,
+              454.77
+            ],
+            [
+              1342.87,
+              456.22
+            ],
+            [
+              1354,
+              457.03
+            ],
+            [
+              1365.32,
+              457.2
+            ],
+            [
+              1376.69,
+              456.71
+            ],
+            [
+              1387.96,
+              455.57
+            ],
+            [
+              1399,
+              453.75
+            ],
+            [
+              1409.66,
+              451.25
+            ],
+            [
+              1419.81,
+              448.07
+            ],
+            [
+              1429.3,
+              444.18
+            ],
+            [
+              1438,
+              439.59
+            ],
+            [
+              1445.76,
+              434.29
+            ],
+            [
+              1452.44,
+              428.26
+            ],
+            [
+              1457.9,
+              421.5
+            ],
+            [
+              1462,
+              414
+            ],
+            [
+              1474,
+              314
+            ],
+            [
+              1474.4,
+              310.36
+            ],
+            [
+              1474.59,
+              306.94
+            ],
+            [
+              1474.59,
+              303.73
+            ],
+            [
+              1474.38,
+              300.75
+            ],
+            [
+              1473.96,
+              297.98
+            ],
+            [
+              1473.34,
+              295.44
+            ],
+            [
+              1472.52,
+              293.11
+            ],
+            [
+              1471.5,
+              291
+            ],
+            [
+              1470.27,
+              289.11
+            ],
+            [
+              1468.84,
+              287.44
+            ],
+            [
+              1467.21,
+              285.98
+            ],
+            [
+              1465.38,
+              284.75
+            ],
+            [
+              1463.34,
+              283.73
+            ],
+            [
+              1461.09,
+              282.94
+            ],
+            [
+              1458.65,
+              282.36
+            ],
+            [
+              1456,
+              282
+            ],
+            [
+              1442,
+              288
+            ],
+            [
+              1448,
+              396
+            ],
+            [
+              1443.62,
+              400.57
+            ],
+            [
+              1438.05,
+              404.57
+            ],
+            [
+              1431.45,
+              408
+            ],
+            [
+              1423.94,
+              410.91
+            ],
+            [
+              1415.65,
+              413.31
+            ],
+            [
+              1406.73,
+              415.23
+            ],
+            [
+              1397.3,
+              416.7
+            ],
+            [
+              1387.5,
+              417.75
+            ],
+            [
+              1377.47,
+              418.4
+            ],
+            [
+              1367.34,
+              418.68
+            ],
+            [
+              1357.24,
+              418.61
+            ],
+            [
+              1347.31,
+              418.22
+            ],
+            [
+              1337.69,
+              417.54
+            ],
+            [
+              1328.51,
+              416.59
+            ],
+            [
+              1319.9,
+              415.4
+            ],
+            [
+              1312,
+              414
+            ]
+          ]
+        ],
+        "grips": [
+          [
+            [
+              1090,
+              286
+            ],
+            [
+              1124,
+              282
+            ],
+            [
+              1120,
+              344
+            ],
+            [
+              1096,
+              348
+            ]
+          ],
+          [
+            [
+              1478,
+              286
+            ],
+            [
+              1444,
+              282
+            ],
+            [
+              1448,
+              344
+            ],
+            [
+              1472,
+              348
+            ]
+          ]
+        ],
+        "hubBox": {
+          "x": 1230,
+          "y": 400,
+          "w": 84,
+          "h": 76,
+          "rx": 14
+        },
+        "rings": [
+          {
+            "x": 1238,
+            "y": 408,
+            "w": 68,
+            "h": 60,
+            "rx": 10
+          },
+          {
+            "x": 1243,
+            "y": 413,
+            "w": 58,
+            "h": 50,
+            "rx": 8
+          },
+          {
+            "x": 1248,
+            "y": 418,
+            "w": 48,
+            "h": 40,
+            "rx": 6
+          }
+        ],
+        "logo": {
+          "x": 1254,
+          "y": 422,
+          "w": 36,
+          "h": 32,
+          "rx": 4
+        },
+        "star": [
+          [
+            1272,
+            424
+          ],
+          [
+            1276,
+            438
+          ],
+          [
+            1288,
+            438
+          ],
+          [
+            1276,
+            442
+          ],
+          [
+            1272,
+            454
+          ],
+          [
+            1268,
+            442
+          ],
+          [
+            1256,
+            438
+          ],
+          [
+            1268,
+            438
+          ]
+        ],
+        "bar": {
+          "x": 1269.5,
+          "y": 426,
+          "w": 5,
+          "h": 24,
+          "rx": 2
+        }
+      }
+    ]
+  }
 }

@@ -4,22 +4,22 @@
     {
       "name": "CLI Chrome indisponível/encerra cedo: /definitely/not/a/chrome convert-images.mjs",
       "ok": true,
-      "ms": 120
+      "ms": 125
     },
     {
       "name": "CLI Chrome indisponível/encerra cedo: /definitely/not/a/chrome verificar-painel.mjs",
       "ok": true,
-      "ms": 122
+      "ms": 263
     },
     {
       "name": "CLI Chrome indisponível/encerra cedo: /usr/bin/true convert-images.mjs",
       "ok": true,
-      "ms": 123
+      "ms": 127
     },
     {
       "name": "CLI Chrome indisponível/encerra cedo: /usr/bin/true verificar-painel.mjs",
       "ok": true,
-      "ms": 124
+      "ms": 262
     },
     {
       "name": "CDP deadline rejeita comando pendente",
@@ -29,7 +29,7 @@
     {
       "name": "CDP terminate rejeita comando pendente",
       "ok": true,
-      "error": "Erro no socket CDP"
+      "error": "Chrome encerrou: 0"
     },
     {
       "name": "Verificador falha fechado: manifest-ausente",
@@ -44,11 +44,15 @@
       "ok": true
     },
     {
+      "name": "Verificador falha fechado: manches-ausente",
+      "ok": true
+    },
+    {
       "name": "Verificador falha fechado: par-duplicado",
       "ok": true
     },
     {
-      "name": "Verificador falha fechado: terceira-imagem",
+      "name": "Verificador falha fechado: imagem-extra",
       "ok": true
     },
     {
@@ -76,7 +80,23 @@
       "ok": true
     },
     {
+      "name": "Verificador falha fechado: proveniencia-manches",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: origem-sem-foto",
+      "ok": true
+    },
+    {
+      "name": "Verificador falha fechado: manches-sem-alfa",
+      "ok": true
+    },
+    {
       "name": "Conversor recusa proveniência obsoleta: build_panel.py",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa proveniência obsoleta: map-source.mjs",
       "ok": true
     },
     {
@@ -85,6 +105,10 @@
     },
     {
       "name": "Conversor recusa proveniência obsoleta: masters/painel-dia.png",
+      "ok": true
+    },
+    {
+      "name": "Conversor recusa proveniência obsoleta: masters/manches-noite.png",
       "ok": true
     },
     {

@@ -1,4 +1,5 @@
 // Conversão local via Chrome: SVG da serigrafia → PNG, masters Blender → WebP.
+// render: painel-{dia,noite} e manches-{dia,noite} (camada opcional), todos VB×2.
 import { openChrome } from './chrome-cdp.mjs'
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
@@ -6,20 +7,21 @@ import { fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
 const here = dirname(fileURLToPath(import.meta.url))
 const digest = async path => { const bytes = await readFile(path); return { bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') } }
-const sourceFiles = ['export-map.mjs', 'convert-images.mjs', 'chrome-cdp.mjs', 'build_panel.py', 'panel-map.json', '../../src/components/cockpit/panel-data.ts', '../../src/components/cockpit/artwork.tsx', 'masters/serigrafia-dia.svg', 'masters/serigrafia-noite.svg']
+const sourceFiles = ['export-map.mjs', 'map-source.mjs', 'convert-images.mjs', 'chrome-cdp.mjs', 'build_panel.py', 'panel-map.json', '../../src/components/cockpit/panel-data.ts', '../../src/components/cockpit/artwork.tsx', '../../src/components/cockpit/panel-geometry.ts', 'masters/serigrafia-dia.svg', 'masters/serigrafia-noite.svg']
 const fingerprints = async files => Object.fromEntries(await Promise.all(files.map(async f => [f, await digest(resolve(here, f))])))
 const mode = process.argv[2] ?? 'atlas'
 if (!['atlas', 'render'].includes(mode)) throw new Error('Modo inválido')
 let provenance
+const RENDERS = ['painel', 'manches']
 if (mode === 'atlas') {
   const exported = JSON.parse(await readFile(resolve(here,'masters/export-provenance.json'),'utf8'))
   for (const [file, expected] of Object.entries(exported)) if ((await digest(resolve(here,file))).sha256 !== expected.sha256) throw new Error(`Exportação obsoleta: ${file}`)
 }
 if (mode === 'render') {
   provenance = JSON.parse(await readFile(resolve(here, 'masters/render-provenance.json'), 'utf8'))
-  for (const [group, prefix] of [['atlases','serigrafia'],['masters','painel']]) {
-    const keys=Object.keys(provenance[group] ?? {})
-    if(keys.length!==2||!['dia','noite'].every(light=>keys.includes(`masters/${prefix}-${light}.png`))) throw new Error(`Proveniência incompleta: ${group}`)
+  for (const [group, prefixes] of [['atlases',['serigrafia']],['masters',RENDERS]]) {
+    const keys=Object.keys(provenance[group] ?? {}), want=prefixes.flatMap(prefix=>['dia','noite'].map(light=>`masters/${prefix}-${light}.png`))
+    if(keys.length!==want.length||!want.every(k=>keys.includes(k))) throw new Error(`Proveniência incompleta: ${group}`)
   }
   for (const [file, expected] of Object.entries({...provenance.sources, ...provenance.atlases, ...provenance.masters})) {
     if ((await digest(resolve(here, file))).sha256 !== expected.sha256) throw new Error(`Render obsoleto: ${file}`)
@@ -31,8 +33,9 @@ try {
   const { send } = chrome
   const out = resolve(here, '../../public/cockpit-render')
   await mkdir(out, { recursive: true })
-  for (const light of ['dia', 'noite']) {
-    const input = resolve(here, `masters/${mode === 'atlas' ? 'serigrafia-' : 'painel-'}${light}.${mode === 'atlas' ? 'svg' : 'png'}`)
+  const jobs = mode === 'atlas' ? ['dia', 'noite'].map(light => ({ light, prefix: 'serigrafia' })) : RENDERS.flatMap(prefix => ['dia', 'noite'].map(light => ({ light, prefix })))
+  for (const { light, prefix } of jobs) {
+    const input = resolve(here, `masters/${prefix}-${light}.${mode === 'atlas' ? 'svg' : 'png'}`)
     const mime = mode === 'atlas' ? 'image/svg+xml' : 'image/png'
     const data = `data:${mime};base64,${(await readFile(input)).toString('base64')}`
     const canonical = JSON.parse(await readFile(resolve(here, 'panel-map.json'), 'utf8'))
@@ -94,7 +97,7 @@ try {
       im.src=src; await im.decode(); const c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight; c.getContext('2d').drawImage(im, 0, 0); if(src.startsWith('blob:'))URL.revokeObjectURL(src);return {data:c.toDataURL('${mode === 'atlas' ? 'image/png' : 'image/webp'}', .93),bounds}
     })()`, awaitPromise: true, returnByValue: true })
     if (response.exceptionDetails) throw new Error(JSON.stringify(response.exceptionDetails))
-    const dest = mode === 'atlas' ? resolve(here, `masters/serigrafia-${light}.png`) : resolve(out, `painel-${light}.webp`)
+    const dest = mode === 'atlas' ? resolve(here, `masters/serigrafia-${light}.png`) : resolve(out, `${prefix}-${light}.webp`)
     await writeFile(dest, Buffer.from(response.result.value.data.split(',')[1], 'base64'))
     if (mode === 'atlas') await writeFile(resolve(here, `masters/text-bounds-${light}.json`), JSON.stringify(response.result.value.bounds, null, 2)+'\n')
     console.log(dest)
@@ -103,9 +106,9 @@ try {
   if (mode === 'render') {
     const canonical = JSON.parse(await readFile(resolve(here, 'panel-map.json'), 'utf8'))
     const images = []
-    for (const light of ['dia', 'noite']) images.push({ file: `painel-${light}.webp`, width: canonical.width * 2, height: canonical.height * 2, ...await digest(resolve(out, `painel-${light}.webp`)) })
+    for (const prefix of RENDERS) for (const light of ['dia', 'noite']) images.push({ file: `${prefix}-${light}.webp`, layer: prefix, width: canonical.width * 2, height: canonical.height * 2, ...await digest(resolve(out, `${prefix}-${light}.webp`)) })
     const sources = provenance.sources
-    await writeFile(resolve(out, 'manifest.json'), JSON.stringify({ origem: 'Cena procedural independente do painel PA-34-200 Seneca I, criada no Blender; impressão derivada do artwork local, sem importar geometria do avião. Material didático não certificado.', camera: { projection: 'orthographic', width: canonical.width, height: canonical.height, sameCameraForBothImages: true }, masters: 'work-modulo-3d/blender/cockpit/masters/', generation: provenance, images, sources }, null, 2) + '\n')
+    await writeFile(resolve(out, 'manifest.json'), JSON.stringify({ origem: 'Cena procedural independente do painel PA-34-200 Seneca I, criada no Blender a partir da foto PR-FLM (referencia/painel-real-prflm.png, uso autorizado pelo usuário em 2026-10-15); impressão derivada do artwork local, sem importar geometria do avião. Material didático não certificado.', camera: { projection: 'orthographic', width: canonical.width, height: canonical.height, sameCameraForAllImages: true }, layers: { painel: 'painel completo, opaco onde há chapa', manches: 'manches em W isolados, fundo transparente, sobrepostos sem capturar clique' }, masters: 'work-modulo-3d/blender/cockpit/masters/', generation: provenance, images, sources }, null, 2) + '\n')
   }
 } finally {
   await chrome.close()

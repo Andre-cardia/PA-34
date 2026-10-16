@@ -1,50 +1,58 @@
 {
   "sources": {
     "export-map.mjs": {
-      "bytes": 2028,
-      "sha256": "8b33bafd159af5ff868a3d2dd08a7a9fe6f96de3f83d639b30efc8b2249a4e37"
+      "bytes": 2588,
+      "sha256": "aa365e0c1d862bec65a3da57168bd70e896cf6eb8c2142e36ff7ced6a5f86016"
+    },
+    "map-source.mjs": {
+      "bytes": 1295,
+      "sha256": "9f83eb2cf0ebc232f9a0989c65b907b252e6f91b9f947dc464c0d2caf26b5ac4"
     },
     "convert-images.mjs": {
-      "bytes": 8742,
-      "sha256": "8150dcb6822ff083b85d61153347e752aa846dbfe6d650758de433f453359a05"
+      "bytes": 9438,
+      "sha256": "6b211c08b548030bcc97db36b258837fdde73f5107436b830debaa337b562562"
     },
     "chrome-cdp.mjs": {
       "bytes": 4461,
       "sha256": "b5e603e49d31d84bc677d32d18701339e2c184d40e8599ae1ead24736445a988"
     },
     "build_panel.py": {
-      "bytes": 16676,
-      "sha256": "5f4e9b0b56b577c122d02fa43208d5d536a95814d564a42d98624b8f192f69db"
+      "bytes": 29990,
+      "sha256": "cd705e5771c00c67679254cba86c47fdf64e22253c20a53dd2012a71ed0a6fd6"
     },
     "panel-map.json": {
-      "bytes": 14972,
-      "sha256": "61993a7f56e9f14d072a3bc45dd7c5821437a06473a7a8853007496b07b85b4e"
+      "bytes": 53081,
+      "sha256": "a4576fc24272b5f125246a2c228d850406886a29c7e3ce9ef81658d5171f1c16"
     },
     "../../src/components/cockpit/panel-data.ts": {
-      "bytes": 19663,
-      "sha256": "b0a7f867d044ea94d0f090ee9359aeb493bab9d1bd8e71cfcfde8a79346b6a2c"
+      "bytes": 27447,
+      "sha256": "550ef5f2c63f3f64ecdc0483f6444619abaf8c24bf5fd84109105484c753283d"
     },
     "../../src/components/cockpit/artwork.tsx": {
-      "bytes": 66503,
-      "sha256": "582373a81b9494eb9f21d70695c2a70fb237a1d4128f72decad3063ce77b8058"
+      "bytes": 87493,
+      "sha256": "4e33c48d89c886a18ece43af2148618bcd54d7f8fb8bd1aefe0bae819437ca7e"
+    },
+    "../../src/components/cockpit/panel-geometry.ts": {
+      "bytes": 3840,
+      "sha256": "45e24e54d7d116de1b6fe75260ac974924626be1282ce627a43f9a28e9325ab7"
     },
     "masters/serigrafia-dia.svg": {
-      "bytes": 191357,
-      "sha256": "0b1e637591c38777ba650e42a2aada4a43115910fb273fc1ecffd1c7a89d453e"
+      "bytes": 189352,
+      "sha256": "d7fca8202b9544c434305cf52cd5e689ac4c7b9eb277e32a21060db6fdf04886"
     },
     "masters/serigrafia-noite.svg": {
-      "bytes": 192320,
-      "sha256": "d911b862d7946c04d4fe36e5d9b7f27aa8d9397eda9143313733a293d191068a"
+      "bytes": 189842,
+      "sha256": "32e7da70e375f470f46bcb17456a0b0de059fce01a1ea8ebc4ac0e724f29a11a"
     }
   },
   "atlases": {
     "masters/serigrafia-dia.png": {
-      "bytes": 973440,
-      "sha256": "2a8c9142235e64549c91134f22c044bc985dc34164e2659ad8e07266487d455c"
+      "bytes": 1124114,
+      "sha256": "926cdb4df14e7e03e81bb618f2cf47c0e73b4f8ab596f295933db95434135278"
     },
     "masters/serigrafia-noite.png": {
-      "bytes": 1096345,
-      "sha256": "0b83f35cfb5fe206dc68fe227d906d3354f34418b2c00e16b9ba3b8ca2e311df"
+      "bytes": 1155569,
+      "sha256": "43d68d2ccbd78921641d04b324ea83c054c50b69a4653adec8c6b52fd11133fa"
     }
   }
 }

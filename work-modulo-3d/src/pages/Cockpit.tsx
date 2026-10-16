@@ -1,5 +1,5 @@
 // Cockpit 2D — painel vetorial interativo do PA-34-200 Seneca I.
-// Integra: toolbar (filtros/busca/toggles/tour), palco SVG com 49 hotspots,
+// Integra: toolbar (filtros/busca/toggles/tour), palco SVG com 54 hotspots,
 // drawer de ficha, tour guiado, índice lateral e deep-link ?i=<id> (⌘K global).
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
@@ -13,7 +13,7 @@ import TourOverlay from '@/components/cockpit/TourOverlay'
 import IndexPanel from '@/components/cockpit/IndexPanel'
 import { ArcsSection, ObservationsSection, SixPackSection } from '@/components/cockpit/CockpitSections'
 import { usePanZoom } from '@/components/cockpit/usePanZoom'
-import { PANEL_MAP, TOUR_STOPS, instrumentById, resolveInstrumentId, shapeCenter } from '@/components/cockpit/panel-data'
+import { PANEL_MAP, PANEL_ORDER, TOUR_STOPS, instrumentById, resolveInstrumentId, shapeCenter } from '@/components/cockpit/panel-data'
 
 export default function Cockpit() {
   const pz = usePanZoom()
@@ -23,6 +23,7 @@ export default function Cockpit() {
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [filterCat, setFilterCat] = useState<string | null>(null)
   const [labelsOn, setLabelsOn] = useState(false)
+  const [yokesOn, setYokesOn] = useState(false) // manches: desligados por padrão
   const [night, setNight] = useState(true) // modo noturno é o default (design: fundo panel/raised)
   const [tour, setTour] = useState<{ active: boolean; index: number }>({ active: false, index: 0 })
   const [scanlineKey, setScanlineKey] = useState(0)
@@ -86,8 +87,8 @@ export default function Cockpit() {
       pz.centerOn(c.x, c.y, 1.8, 700, 'exact')
     } else if (isMobile && centeredId.current === null) {
       centeredId.current = '__mobile__'
-      // mobile: começa centralizado no six-pack reposicionado
-      pz.centerOn(380, 378, 1.6, 0, 'exact')
+      // mobile: começa centralizado no six-pack do piloto (centro entre ASI/AI/ALT e TC/HSI/VSI)
+      pz.centerOn(392, 272, 2.6, 0, 'exact')
     } else if (!id) {
       centeredId.current = null
     }
@@ -183,6 +184,9 @@ export default function Cockpit() {
         onFilter={setFilterCat}
         labelsOn={labelsOn}
         onToggleLabels={() => setLabelsOn((v) => !v)}
+        yokesOn={yokesOn}
+        onToggleYokes={() => setYokesOn((v) => !v)}
+        total={PANEL_ORDER.length}
         night={night}
         onToggleNight={() => setNight((v) => !v)}
         tourActive={tour.active}
@@ -203,6 +207,7 @@ export default function Cockpit() {
             pz={pz}
             night={night}
             labelsOn={labelsOn}
+            yokesOn={yokesOn}
             filterCat={filterCat}
             selectedId={selectedId}
             suggestedActive={!interacted}
@@ -237,10 +242,10 @@ export default function Cockpit() {
         {/* barra de status / ajuda */}
         <div className="flex items-center justify-between gap-4 border-t border-hairline bg-panel px-4 py-2">
           <span className="truncate font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
-            Arraste p/ pan · roda p/ zoom · Tab navega os 49 hotspots · Enter abre a ficha
+            Arraste p/ pan · roda p/ zoom · Tab navega os {PANEL_ORDER.length} hotspots · Enter abre a ficha
           </span>
           <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.16em] text-cyan">
-            {selectedNome ?? hoveredNome ?? '49 instrumentos mapeados'}
+            {selectedNome ?? hoveredNome ?? `${PANEL_ORDER.length} instrumentos mapeados`}
           </span>
         </div>
       </div>

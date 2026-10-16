@@ -22,8 +22,10 @@ function Illumination({ night, active, filterCat, selectedId }: Props & { active
     let active = true
     const image = new Image()
     image.src = src
+    // Render de outro layout (dimensões ≠ viewBox×2) desalinharia os hotspots:
+    // falha fechada para o fallback vetorial em vez de esticar a imagem.
     image.decode().then(
-      () => { if (active) setState('ready') },
+      () => { if (active) setState(image.naturalWidth === VB_W * 2 && image.naturalHeight === VB_H * 2 ? 'ready' : 'error') },
       () => { if (active) setState('error') },
     )
     return () => { active = false }
@@ -58,7 +60,6 @@ function Illumination({ night, active, filterCat, selectedId }: Props & { active
         x={0} y={0} width={VB_W} height={VB_H}
         preserveAspectRatio="xMidYMid meet"
         visibility={state === 'ready' ? 'visible' : 'hidden'}
-        onLoad={() => setState('ready')}
         onError={() => setState('error')}
       />
       {/* Atenuação por forma, não um filtro que escurece a imagem inteira. */}

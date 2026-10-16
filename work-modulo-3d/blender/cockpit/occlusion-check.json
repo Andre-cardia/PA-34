@@ -1,0 +1,524 @@
+{
+  "rays": [
+    {
+      "id": "bussola_magnetica",
+      "point": [
+        761.0,
+        39.0
+      ],
+      "firstHit": "bussola_magnetica \u2022 impress\u00e3o",
+      "depth": 6.150054931640625
+    },
+    {
+      "id": "luz_trem_vermelha",
+      "point": [
+        492.0,
+        141.0
+      ],
+      "firstHit": "luz_trem_vermelha \u2022 impress\u00e3o",
+      "depth": 7.150077819824219
+    },
+    {
+      "id": "painel_anunciador",
+      "point": [
+        616.5,
+        131.5
+      ],
+      "firstHit": "painel_anunciador \u2022 impress\u00e3o",
+      "depth": 7.150077819824219
+    },
+    {
+      "id": "aviso_estol",
+      "point": [
+        200,
+        171
+      ],
+      "firstHit": "aviso_estol \u2022 lente impressa",
+      "depth": 4.199981689453125
+    },
+    {
+      "id": "relogio",
+      "point": [
+        186,
+        236
+      ],
+      "firstHit": "relogio \u2022 vidro",
+      "depth": 7.4001312255859375
+    },
+    {
+      "id": "termometro_oat",
+      "point": [
+        182,
+        331
+      ],
+      "firstHit": "termometro_oat \u2022 vidro",
+      "depth": 7.399940490722656
+    },
+    {
+      "id": "velocimetro",
+      "point": [
+        275,
+        221
+      ],
+      "firstHit": "velocimetro \u2022 vidro",
+      "depth": 8.39996337890625
+    },
+    {
+      "id": "horizonte_artificial",
+      "point": [
+        384,
+        208
+      ],
+      "firstHit": "horizonte_artificial \u2022 vidro",
+      "depth": 8.39996337890625
+    },
+    {
+      "id": "altimetro",
+      "point": [
+        500,
+        206
+      ],
+      "firstHit": "altimetro \u2022 vidro",
+      "depth": 8.39996337890625
+    },
+    {
+      "id": "indicador_vor_1",
+      "point": [
+        606,
+        208
+      ],
+      "firstHit": "indicador_vor_1 \u2022 vidro",
+      "depth": 8.39996337890625
+    },
+    {
+      "id": "coordenador_curva",
+      "point": [
+        288,
+        334
+      ],
+      "firstHit": "coordenador_curva \u2022 vidro",
+      "depth": 8.399772644042969
+    },
+    {
+      "id": "giro_direcional",
+      "point": [
+        394.0,
+        332.0
+      ],
+      "firstHit": "giro_direcional \u2022 vidro",
+      "depth": 9.199714660644531
+    },
+    {
+      "id": "variometro",
+      "point": [
+        501,
+        328
+      ],
+      "firstHit": "variometro \u2022 vidro",
+      "depth": 8.399772644042969
+    },
+    {
+      "id": "adf_indicador",
+      "point": [
+        607,
+        330
+      ],
+      "firstHit": "adf_indicador \u2022 vidro",
+      "depth": 8.39996337890625
+    },
+    {
+      "id": "painel_audio",
+      "point": [
+        796.0,
+        138.5
+      ],
+      "firstHit": "painel_audio \u2022 impress\u00e3o",
+      "depth": 7.1498870849609375
+    },
+    {
+      "id": "navcom_1",
+      "point": [
+        796.0,
+        229.5
+      ],
+      "firstHit": "navcom_1 \u2022 vidro da tela",
+      "depth": 8.2000732421875
+    },
+    {
+      "id": "indicador_vor_2_gs",
+      "point": [
+        745.0,
+        307.0
+      ],
+      "firstHit": "indicador_vor_2_gs \u2022 impress\u00e3o",
+      "depth": 5.1502227783203125
+    },
+    {
+      "id": "dme",
+      "point": [
+        847.0,
+        307.0
+      ],
+      "firstHit": "dme \u2022 impress\u00e3o",
+      "depth": 5.1502227783203125
+    },
+    {
+      "id": "navcom_2",
+      "point": [
+        796.0,
+        350.0
+      ],
+      "firstHit": "navcom_2 \u2022 impress\u00e3o",
+      "depth": 7.1502685546875
+    },
+    {
+      "id": "luzes_marker",
+      "point": [
+        1017.5,
+        132.0
+      ],
+      "firstHit": "luzes_marker \u2022 impress\u00e3o",
+      "depth": 7.149696350097656
+    },
+    {
+      "id": "transponder",
+      "point": [
+        1017.5,
+        188.0
+      ],
+      "firstHit": "transponder \u2022 vidro do display",
+      "depth": 7.7999114990234375
+    },
+    {
+      "id": "adf_receptor",
+      "point": [
+        1017.5,
+        251.0
+      ],
+      "firstHit": "adf_receptor \u2022 impress\u00e3o",
+      "depth": 7.1498870849609375
+    },
+    {
+      "id": "instrumentos_copiloto",
+      "point": [
+        1309.0,
+        274.0
+      ],
+      "firstHit": "instrumentos_copiloto \u2022 legenda externa.004",
+      "depth": 2.349853515625
+    },
+    {
+      "id": "relogio_copiloto_acendedor",
+      "point": [
+        1508.0,
+        299.0
+      ],
+      "firstHit": "relogio_copiloto_acendedor \u2022 impress\u00e3o",
+      "depth": 6.150245666503906
+    },
+    {
+      "id": "pressao_oleo",
+      "point": [
+        198.5,
+        432.0
+      ],
+      "firstHit": "pressao_oleo \u2022 impress\u00e3o",
+      "depth": 8.149909973144531
+    },
+    {
+      "id": "temperatura_oleo",
+      "point": [
+        317.5,
+        432.0
+      ],
+      "firstHit": "temperatura_oleo \u2022 impress\u00e3o",
+      "depth": 8.150100708007812
+    },
+    {
+      "id": "fluxo_combustivel_pressao",
+      "point": [
+        523.0,
+        432.0
+      ],
+      "firstHit": "fluxo_combustivel_pressao \u2022 impress\u00e3o",
+      "depth": 8.149909973144531
+    },
+    {
+      "id": "cht",
+      "point": [
+        650.5,
+        432.0
+      ],
+      "firstHit": "cht \u2022 impress\u00e3o",
+      "depth": 8.150100708007812
+    },
+    {
+      "id": "amperimetros",
+      "point": [
+        964.0,
+        431.0
+      ],
+      "firstHit": "amperimetros \u2022 impress\u00e3o",
+      "depth": 8.14971923828125
+    },
+    {
+      "id": "indicador_vacuo",
+      "point": [
+        1052,
+        429
+      ],
+      "firstHit": "indicador_vacuo \u2022 vidro",
+      "depth": 9.399795532226562
+    },
+    {
+      "id": "egt",
+      "point": [
+        1146,
+        429
+      ],
+      "firstHit": "egt \u2022 vidro",
+      "depth": 9.400177001953125
+    },
+    {
+      "id": "aquecimento_desembacador",
+      "point": [
+        1375.0,
+        435.0
+      ],
+      "firstHit": "aquecimento_desembacador \u2022 impress\u00e3o",
+      "depth": 8.150291442871094
+    },
+    {
+      "id": "piloto_automatico",
+      "point": [
+        240.0,
+        538.5
+      ],
+      "firstHit": "piloto_automatico \u2022 seletor",
+      "depth": 22.000449895858765
+    },
+    {
+      "id": "avisos_eletricos_vacuo",
+      "point": [
+        345.5,
+        568.0
+      ],
+      "firstHit": "avisos_eletricos_vacuo \u2022 impress\u00e3o",
+      "depth": 16.150283813476562
+    },
+    {
+      "id": "pressao_admissao",
+      "point": [
+        462,
+        539
+      ],
+      "firstHit": "pressao_admissao \u2022 vidro",
+      "depth": 17.399978637695312
+    },
+    {
+      "id": "tacometro_duplo",
+      "point": [
+        559,
+        536
+      ],
+      "firstHit": "tacometro_duplo \u2022 vidro",
+      "depth": 17.400360107421875
+    },
+    {
+      "id": "tacometro_direito",
+      "point": [
+        659,
+        534
+      ],
+      "firstHit": "tacometro_direito \u2022 vidro",
+      "depth": 17.400360107421875
+    },
+    {
+      "id": "luzes_trem_verdes",
+      "point": [
+        731.5,
+        479.0
+      ],
+      "firstHit": "luzes_trem_verdes \u2022 impress\u00e3o",
+      "depth": 24.15008544921875
+    },
+    {
+      "id": "seletor_trem",
+      "point": [
+        732.0,
+        534.0
+      ],
+      "firstHit": "seletor_trem \u2022 roda",
+      "depth": 33.99992287158966
+    },
+    {
+      "id": "extensao_emergencia_trem",
+      "point": [
+        727.5,
+        605.0
+      ],
+      "firstHit": "extensao_emergencia_trem \u2022 puxador",
+      "depth": 31.000176072120667
+    },
+    {
+      "id": "manetes_potencia",
+      "point": [
+        789.0,
+        544.0
+      ],
+      "firstHit": "manetes_potencia \u2022 impress\u00e3o",
+      "depth": 24.14989471435547
+    },
+    {
+      "id": "manetes_helice",
+      "point": [
+        847.0,
+        544.0
+      ],
+      "firstHit": "manetes_helice \u2022 impress\u00e3o",
+      "depth": 24.14989471435547
+    },
+    {
+      "id": "manetes_mistura",
+      "point": [
+        905.0,
+        544.0
+      ],
+      "firstHit": "manetes_mistura \u2022 impress\u00e3o",
+      "depth": 24.14989471435547
+    },
+    {
+      "id": "ar_alternativo",
+      "point": [
+        848.0,
+        636.0
+      ],
+      "firstHit": "ar_alternativo \u2022 impress\u00e3o",
+      "depth": 24.15027618408203
+    },
+    {
+      "id": "cowl_flaps",
+      "point": [
+        826.0,
+        767.0
+      ],
+      "firstHit": "cowl_flaps \u2022 impress\u00e3o",
+      "depth": 24.15008544921875
+    },
+    {
+      "id": "estatica_alternada",
+      "point": [
+        971.0,
+        529.5
+      ],
+      "firstHit": "estatica_alternada \u2022 impress\u00e3o",
+      "depth": 24.15008544921875
+    },
+    {
+      "id": "quantidade_combustivel",
+      "point": [
+        1055,
+        528
+      ],
+      "firstHit": "quantidade_combustivel \u2022 vidro",
+      "depth": 17.39978790283203
+    },
+    {
+      "id": "disjuntores",
+      "point": [
+        1282.0,
+        526.5
+      ],
+      "firstHit": "disjuntores \u2022 impress\u00e3o",
+      "depth": 16.15009307861328
+    },
+    {
+      "id": "chave_master",
+      "point": [
+        52.0,
+        489.5
+      ],
+      "firstHit": "chave_master \u2022 tecla basculante",
+      "depth": 22.99996167421341
+    },
+    {
+      "id": "chaves_alternadores",
+      "point": [
+        52.0,
+        547.5
+      ],
+      "firstHit": "chaves_alternadores \u2022 impress\u00e3o",
+      "depth": 18.15013885498047
+    },
+    {
+      "id": "chaves_magnetos_partida",
+      "point": [
+        52.0,
+        611.0
+      ],
+      "firstHit": "chaves_magnetos_partida \u2022 impress\u00e3o",
+      "depth": 18.149948120117188
+    },
+    {
+      "id": "bombas_combustivel_eletricas",
+      "point": [
+        52.0,
+        675.5
+      ],
+      "firstHit": "bombas_combustivel_eletricas \u2022 impress\u00e3o",
+      "depth": 18.15013885498047
+    },
+    {
+      "id": "pitot_heat_luzes",
+      "point": [
+        52.0,
+        732.5
+      ],
+      "firstHit": "pitot_heat_luzes \u2022 tecla basculante.001",
+      "depth": 22.99996167421341
+    },
+    {
+      "id": "freio_estacionamento",
+      "point": [
+        181.0,
+        627.0
+      ],
+      "firstHit": "freio_estacionamento \u2022 impress\u00e3o",
+      "depth": 6.150054931640625
+    }
+  ],
+  "yokes": [
+    {
+      "yoke": "Manche piloto",
+      "hubBounds": [
+        318.0000305175781,
+        431.9999885559082,
+        401.99999809265137,
+        507.99997329711914
+      ],
+      "expected": [
+        318,
+        432,
+        402,
+        508
+      ],
+      "boundsError": 3.0517578125e-05
+    },
+    {
+      "yoke": "Manche copiloto",
+      "hubBounds": [
+        1230.0000190734863,
+        399.99996185302734,
+        1314.0000343322754,
+        476.00000381469727
+      ],
+      "expected": [
+        1230,
+        400,
+        1314,
+        476
+      ],
+      "boundsError": 3.814697265625e-05
+    }
+  ]
+}

@@ -72,3 +72,15 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-acessibilidade-painel-camadas.md`
   summary: Devolver o foco a um alvo útil (canvas ou rail) quando a ficha foi aberta por clique no canvas WebGL.
   evidence: O elemento ativo nesse caso é `body`, então fechar a ficha leva o leitor de tela ao topo; o Drawer original já se comportava assim.
+
+- source_spec: `/Users/andrecardia/Github/PA-34/_bmad-output/implementation-artifacts/spec-painel-fiel-prflm.md`
+  summary: Alinhar as fichas `giro_direcional`, `indicador_vor_2_gs`, `dme`, `adf_receptor` e a operação de `navcom_1` aos equipamentos desenhados no painel PR-FLM.
+  evidence: A arte nova mostra HSI/DG quadrado, CDI do GNS e unidades modernas, mas `cockpit_instruments.json` ainda descreve giro a vácuo, NAV 2 separado e King KN 64/KR 85; `navcom_1.operacao` não explica mais a sintonia COM/NAV. Mudar o texto altera dados técnicos de `src/data/` e depende de decisão do usuário.
+
+- source_spec: `/Users/andrecardia/Github/PA-34/_bmad-output/implementation-artifacts/spec-painel-fiel-prflm.md`
+  summary: Fazer `projection-check` medir a união das peças visíveis de cada ID, e não só o corpo construído a partir do próprio hotspot.
+  evidence: Os corpos medidos saem do `x/y/w/h` do hotspot, então o erro abaixo de 0,001 é garantido por construção; botões, alavancas e anéis de legenda nunca são comparados com o hotspot.
+
+- source_spec: `/Users/andrecardia/Github/PA-34/_bmad-output/implementation-artifacts/spec-painel-fiel-prflm.md`
+  summary: Rodar no CI as verificações do pipeline do cockpit que não dependem de Blender (mapa idêntico à fonte e fingerprints do manifesto).
+  evidence: `verify-assets.mjs` só roda manualmente; mudar `panel-data.ts` sem regenerar o render mantém o e2e verde com hotspots desalinhados do raster.

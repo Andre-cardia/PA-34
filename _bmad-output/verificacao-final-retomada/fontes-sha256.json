@@ -4,20 +4,20 @@
     "bytes": 5367
   },
   "work-modulo-3d/src/components/modelo3d/ComponentDrawer.tsx": {
-    "sha256": "a3891474ef38eef098d81e09861f80af19cb0b1e6c2d528ee04e68dfc3d9215d",
-    "bytes": 6836
+    "sha256": "0810b7b444c8d6022124085dac94dc87982d5c92b05838ca23e336c2d9186fd7",
+    "bytes": 7678
   },
   "work-modulo-3d/src/components/modelo3d/GuideCard.tsx": {
-    "sha256": "a9e5f50d4a1c344c9074c48c7547db78cd07d62bf145fdfb7a74ea2734dc9046",
-    "bytes": 2889
+    "sha256": "a257d5d0bf5ba6ea246cde267bb18760f94c4543e0af6523b12d4ffd2b33b441",
+    "bytes": 1667
   },
   "work-modulo-3d/src/components/modelo3d/LayerRail.tsx": {
-    "sha256": "b99940595f7ee0a9384df2c1dbbd1945d25221ae89cc68135c10655ab61e60f3",
-    "bytes": 10869
+    "sha256": "052175433747500b3fd9dff8ada6eb8b7370383f402c019843efedcab6f3e78e",
+    "bytes": 12706
   },
   "work-modulo-3d/src/components/modelo3d/ModelCanvas.tsx": {
-    "sha256": "c852327f112b26389467e9f2f4e036f74522e0b1925417c97df94ec8327bb441",
-    "bytes": 20136
+    "sha256": "96ce66a9d2b047434b1f4290521763e25c834cfbd6f936a5ee402b89d2cbfe84",
+    "bytes": 21474
   },
   "work-modulo-3d/src/components/modelo3d/ModelErrorBoundary.tsx": {
     "sha256": "c02b04934755be8351add2091ab7d0037462db3dc0b27ea9d331131819acd1c1",
@@ -32,24 +32,24 @@
     "bytes": 4880
   },
   "work-modulo-3d/src/components/modelo3d/glb.tsx": {
-    "sha256": "54c98e61e190385f4061d9d56afe493bf5ebdf0dfdaa1c30445c664576b6fb87",
-    "bytes": 2709
+    "sha256": "cf15b327317ebf8a55d86f35d3e22d185b45add1a783120de0dfb0ca150deb5f",
+    "bytes": 2735
   },
   "work-modulo-3d/src/components/modelo3d/glb-runtime.ts": {
     "sha256": "24f30bb4ad7fd8438121a2e52af4c83be86da30e00d4e76a0e42980bd758c9cc",
     "bytes": 3523
   },
   "work-modulo-3d/src/components/modelo3d/config.ts": {
-    "sha256": "056c6027d269bd5d879d93783bb24acb4e193da4bd7c78c21a7147a2af7302e0",
-    "bytes": 6168
+    "sha256": "c62e41043a02e1b0a3065e48ff459e4b2a6c0804d06587ca620dd020adb7e61c",
+    "bytes": 6161
   },
   "work-modulo-3d/src/pages/Modelo3D.tsx": {
-    "sha256": "eba2a54e75d4d94f34983b72214f240bf665742002bb1880bc641ab939517aed",
-    "bytes": 17773
+    "sha256": "7724dc36ae3f0cdab768998a77dd2cc0d7bc90cedd74c47f026cba029788248c",
+    "bytes": 18730
   },
   "work-modulo-3d/blender/build_layers.py": {
-    "sha256": "07dcbcba1c3c4c20f1e16b12266e979dbae21e73640ccd06c4cd3dcff8a35d36",
-    "bytes": 36087
+    "sha256": "160c850cecfd14a747b61182fc276e6d8c9e1d5e3738a4a66c776ceec5f2a15a",
+    "bytes": 37642
   },
   "work-modulo-3d/blender/verify_containment.py": {
     "sha256": "60a4bbbe8e738acbf091bd695a527cc07108ddc66b3fee292e6636200012bf6b",
@@ -60,16 +60,16 @@
     "bytes": 15641
   },
   "work-modulo-3d/scripts/verify-browser-camera.mjs": {
-    "sha256": "26c352d06435d7d0c5e4432e67e9997389b91331e82e8876e261c36f11d46308",
-    "bytes": 11982
+    "sha256": "f7f4be33be3bb845fbf68f2d5620fcd44dbcec43ea6e573e64be6c7e5dbf7a35",
+    "bytes": 11912
   },
   "work-modulo-3d/scripts/verify-browser-selection.mjs": {
-    "sha256": "5f1cf8786addbbce1788dd4cfec7882acb3fc059a2c95eaee50b45b43188b216",
-    "bytes": 16202
+    "sha256": "442e0a98bf74221a08230e8ba4d54a6f13a7bc32722de58b84930d536e4c2970",
+    "bytes": 16184
   },
   "work-modulo-3d/scripts/verify-build.mjs": {
-    "sha256": "9ffa23f5a96c87a2e56a68c3cd549d2ad754e066642fb972a9ec64c956aab174",
-    "bytes": 5840
+    "sha256": "0e57683fd2d90a7510fbdf8526dda0f75c85dfea22d77fdcce6536ad2f88868d",
+    "bytes": 6014
   },
   "work-modulo-3d/scripts/verify-camera-focus.mjs": {
     "sha256": "e6d5963ce3647e2315c51a0fd9c77e053170040d9bcfe16472763b318164a8a9",

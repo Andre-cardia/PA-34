@@ -225,12 +225,12 @@
     },
     {
       "id": "navcom_1",
-      "nome": "NAV/COM nº 1",
-      "nome_en": "Communications and Navigation Transceiver No. 1",
+      "nome": "Garmin GNS 530W (GPS/NAV/COM nº 1)",
+      "nome_en": "Garmin GNS 530W GPS/NAV/COM No. 1",
       "categoria": "avionics",
       "posicao_sugerida": "centro",
-      "descricao": "Primeiro rádio transceptor VHF de comunicações + receptor de navegação VOR/LOC (da época: King KX170B ou Narco Mark 12), na coluna central de rádios.",
-      "operacao": "COM: 118,00-135,975 MHz; NAV: 108,00-117,95 MHz acoplado ao indicador nº 1. Sempre identificar estações de navegação pelo código morse antes de usar."
+      "descricao": "Unidade GPS/NAV/COM retrofit com tela colorida de mapa móvel, no topo da coluna central de rádios, como na aeronave PR-FLM. Ocupa o lugar do primeiro NAV/COM original e alimenta o indicador de navegação nº 1. O Seneca I da VoeFloripa é equipado com GNS com alerta TAWS.",
+      "operacao": "Alertas TAWS do GNS: \"TERRAIN ADVISORY\" (impacto potencial em ~60 segundos); \"TERRAIN AHEAD\" piscando (impacto potencial em ~30 segundos) e \"OBSTACLE AHEAD\" para obstáculo constante no database. Com aviso de \"TERRAIN\" sem contato visual com o solo, arremeter imediatamente e selecionar a pág. TERRAIN no GNS. PDA (Premature Descent Alerting): alerta de descida prematura quando a aeronave está significativamente abaixo do ângulo normal de aproximação; inicia a 15 NM do aeroporto de destino e termina a 0,5 NM do limiar da pista ou abaixo de 125 ft AGL a 1,0 NM do limiar. Sempre identificar estações de navegação pelo código morse antes de usar."
     },
     {
       "id": "navcom_2",
@@ -447,6 +447,51 @@
       "posicao_sugerida": "direita",
       "descricao": "Jogo duplicado opcional de fábrica no lado direito: velocímetro, horizonte, altímetro, giro direcional, turn and bank e variômetro do copiloto.",
       "operacao": "Com o segundo jogo de giros instalado, um segundo filtro de vácuo é adicionado; uma única bomba de vácuo supre os dois jogos até 12.500 ft (acima, manter RPM mais alto para sucção adequada)."
+    },
+    {
+      "id": "manetes_potencia",
+      "nome": "Manetes de potência (throttle, 2)",
+      "nome_en": "Throttle Levers",
+      "categoria": "motor",
+      "posicao_sugerida": "centro",
+      "descricao": "Duas manetes pretas à esquerda do quadrante do pedestal, uma por motor. Com a hélice de velocidade constante, a manete de potência ajusta a pressão de admissão (MP); MP + RPM definem a potência. Ao lado da manete de potência ficam as três luzes verdes de trem baixado e travado.",
+      "operacao": "Partida: manete de potência ¼ do curso (motor afogado: todo o curso à frente). Antes da decolagem: THROTTLE 2000 RPM para os checks. Após a decolagem: THROTTLE & PROPELLER 25 Inches & 2500 RPM. Corte: THROTTLE 1000 RPM. Descida de emergência: manete de potência MÍN. Buzina de aviso de trem com manetes reduzidas sem trem baixado e travado."
+    },
+    {
+      "id": "manetes_helice",
+      "nome": "Manetes de hélice (propeller, 2)",
+      "nome_en": "Propeller Control Levers",
+      "categoria": "motor",
+      "posicao_sugerida": "centro",
+      "descricao": "Duas manetes azuis no centro do quadrante, que comandam o governador de cada hélice de velocidade constante: manete à frente diminui o passo (aumenta as RPM), manete para trás aumenta o passo (diminui as RPM). O curso final para trás é a faixa de embandeiramento.",
+      "operacao": "Partida e pouso: PROPELLER FULL FORWARD. Check em solo do governador: a 2000 RPM, recuar a manete de PROPELLER até queda de 200 RPM; aplicar cerca de 1 pol. de THROTTLE e verificar RPM estável. Embandeiramento em solo: 1500 RPM, manete na faixa de embandeiramento, queda máxima de 500 RPM. Abaixo de 800 RPM não é possível embandeirar. Com pouso garantido, manete de passo toda à frente."
+    },
+    {
+      "id": "manetes_mistura",
+      "nome": "Manetes de mistura (mixture, 2)",
+      "nome_en": "Mixture Control Levers",
+      "categoria": "motor",
+      "posicao_sugerida": "centro",
+      "descricao": "Duas manetes vermelhas à direita do quadrante, uma por motor: controlam a mistura ar/combustível do sistema de injeção, de RICH (toda à frente) a CUT-OFF (toda para trás, corte do motor).",
+      "operacao": "Partida: MIXTURE CUT-OFF; assim que o motor funcionar, levar a manete de mistura toda à frente. Antes da decolagem e no pouso: MIXTURE RICH. Ajuste de mistura recomendado acima de 3000 ft, limitando 1650 °F de EGT: empobrecer até o pico de EGT e enriquecer até o EGT cair 25 °F. Memory item de falha de motor: MIXTURE AS REQUIRED (Rich). Corte: MIXTURE CUT OFF."
+    },
+    {
+      "id": "ar_alternativo",
+      "nome": "Comandos de ar alternativo (ALT AIR, 2)",
+      "nome_en": "Alternate Air Controls",
+      "categoria": "controle",
+      "posicao_sugerida": "centro",
+      "descricao": "Dois puxadores prata sob o quadrante, flanqueando a placa ALT AIR OFF/ON: selecionam a fonte de ar alternativa da admissão de cada motor (ar quente da nacele, após o filtro).",
+      "operacao": "Inspeção pré-voo (cabine): ALTERNATE AIR OFF. Antes da decolagem: ALTERNATE AIR CHECK — pode ocorrer pequena queda de RPM; se a RPM aumentar, é indício de filtro de ar obstruído: não decolar e acionar a manutenção. Falha de motor (memory item ⑤): ALTERNATE AIR no motor inoperante."
+    },
+    {
+      "id": "cowl_flaps",
+      "nome": "Comandos dos cowl flaps (2)",
+      "nome_en": "Cowl Flap Controls",
+      "categoria": "controle",
+      "posicao_sugerida": "centro",
+      "descricao": "Duas bolas pretas na face vertical do pedestal (L e R), com a placa COWL FLAP PULL-CLOSE / PUSH-OPEN: abrem ou fecham as aletas de arrefecimento das naceles de cada motor.",
+      "operacao": "Inspeção pré-voo: COWL FLAPS OPEN (cabine) e CHECK (asas). Cruzeiro, descida e arremetida: COWL FLAPS AS REQUIRED. Após o pouso: COWL FLAPS OPEN. Temperatura de óleo alta: verificar cowl flaps; o POH recomenda verificar CHT em subida e ajustar cowl flaps/mistura."
     }
   ]
 }

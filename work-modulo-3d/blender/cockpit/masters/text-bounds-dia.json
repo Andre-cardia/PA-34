@@ -3,16 +3,16 @@
     "id": "bussola_magnetica",
     "text": "N",
     "bounds": [
-      796.6875,
-      85.5,
-      6.625,
-      12.5
+      757.98828125,
+      36.47999954223633,
+      6.0234375,
+      12
     ],
     "printable": [
-      745,
-      78,
-      855,
-      106
+      735,
+      13,
+      787,
+      65
     ],
     "ok": true
   },
@@ -20,16 +20,16 @@
     "id": "bussola_magnetica",
     "text": "33",
     "bounds": [
-      769.18359375,
-      87,
-      9.6328125,
-      9.5
+      741.78515625,
+      38.97999954223633,
+      8.4296875,
+      8
     ],
     "printable": [
-      745,
-      78,
-      855,
-      106
+      735,
+      13,
+      787,
+      65
     ],
     "ok": true
   },
@@ -37,2158 +37,16 @@
     "id": "bussola_magnetica",
     "text": "3",
     "bounds": [
-      823.58984375,
-      87,
-      4.8203125,
-      9.5
-    ],
-    "printable": [
-      745,
-      78,
-      855,
-      106
-    ],
-    "ok": true
-  },
-  {
-    "id": "chave_master",
-    "text": "BAT",
-    "bounds": [
-      83.03125,
-      227,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      71,
-      195,
-      149,
-      245
-    ],
-    "ok": true
-  },
-  {
-    "id": "chave_master",
-    "text": "CHAVE MASTER",
-    "bounds": [
-      81.71875,
-      235,
-      56.5625,
-      7.5
-    ],
-    "printable": [
-      71,
-      195,
-      149,
-      245
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_alternadores",
-    "text": "L",
-    "bounds": [
-      86.34375,
-      291,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      71,
-      259,
-      149,
-      309
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_alternadores",
-    "text": "R",
-    "bounds": [
-      130.34375,
-      291,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      71,
-      259,
-      149,
-      309
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_alternadores",
-    "text": "ALTERNADORES",
-    "bounds": [
-      81.71875,
-      299,
-      56.5625,
-      7.5
-    ],
-    "printable": [
-      71,
-      259,
-      149,
-      309
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "O",
-    "bounds": [
-      80.8249282836914,
-      355.1672668457031,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "L",
-    "bounds": [
-      76.24285888671875,
-      340.6347961425781,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "R",
-    "bounds": [
-      85.51898956298828,
-      328.5459289550781,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "B",
-    "bounds": [
-      100.7421875,
-      329.2105712890625,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "L",
-    "bounds": [
-      92.34375,
-      363,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "O",
-    "bounds": [
-      112.8249282836914,
-      355.1672668457031,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "L",
-    "bounds": [
-      108.24285888671875,
-      340.6347961425781,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "R",
-    "bounds": [
-      117.51898956298828,
-      328.5459289550781,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "B",
-    "bounds": [
-      132.7421875,
-      329.2105712890625,
-      3.015625,
-      5.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "R",
-    "bounds": [
-      124.34375,
-      363,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "chaves_magnetos_partida",
-    "text": "MAGNETOS / PARTIDA",
-    "bounds": [
-      71.39453125,
-      371.5,
-      77.2109375,
-      7
-    ],
-    "printable": [
-      71,
-      323,
-      149,
-      381
-    ],
-    "ok": true
-  },
-  {
-    "id": "bombas_combustivel_eletricas",
-    "text": "L",
-    "bounds": [
-      86.34375,
-      427,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      71,
-      395,
-      149,
-      445
-    ],
-    "ok": true
-  },
-  {
-    "id": "bombas_combustivel_eletricas",
-    "text": "R",
-    "bounds": [
-      130.34375,
-      427,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      71,
-      395,
-      149,
-      445
-    ],
-    "ok": true
-  },
-  {
-    "id": "bombas_combustivel_eletricas",
-    "text": "BOMBAS ELÉTRICAS",
-    "bounds": [
-      72.29296875,
-      434.972900390625,
-      75.4140625,
-      7.527099609375
-    ],
-    "printable": [
-      71,
-      395,
-      149,
-      445
-    ],
-    "ok": true
-  },
-  {
-    "id": "pitot_heat_luzes",
-    "text": "PHT",
-    "bounds": [
-      83.03125,
-      499,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      71,
-      459,
-      149,
-      517
-    ],
-    "ok": true
-  },
-  {
-    "id": "pitot_heat_luzes",
-    "text": "NAV",
-    "bounds": [
-      105.03125,
-      499,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      71,
-      459,
-      149,
-      517
-    ],
-    "ok": true
-  },
-  {
-    "id": "pitot_heat_luzes",
-    "text": "PNL",
-    "bounds": [
-      127.03125,
-      499,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      71,
-      459,
-      149,
-      517
-    ],
-    "ok": true
-  },
-  {
-    "id": "pitot_heat_luzes",
-    "text": "PITOT HEAT / LUZES",
-    "bounds": [
-      71.39453125,
-      507.5,
-      77.2109375,
-      7
-    ],
-    "printable": [
-      71,
-      459,
-      149,
-      517
-    ],
-    "ok": true
-  },
-  {
-    "id": "freio_estacionamento",
-    "text": "FREIO ESTACIONAMENTO",
-    "bounds": [
-      71.41796875,
-      592,
-      77.1640625,
-      6.5
-    ],
-    "printable": [
-      71,
-      531,
-      149,
-      601
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "SOBRETENSÃO / VÁCUO",
-    "bounds": [
-      450,
-      542.5,
-      95.2734375,
+      773.890625,
+      38.97999954223633,
+      4.21875,
       8
     ],
     "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "ALT",
-    "bounds": [
-      458.578125,
-      563,
-      10.84375,
-      7
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "ALT",
-    "bounds": [
-      486.578125,
-      563,
-      10.84375,
-      7
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "L",
-    "bounds": [
-      462.34375,
-      581,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "R",
-    "bounds": [
-      490.34375,
-      581,
-      3.3125,
-      6.5
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "VAC",
-    "bounds": [
-      527.03125,
-      581,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "VAC",
-    "bounds": [
-      553.03125,
-      581,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "avisos_eletricos_vacuo",
-    "text": "RELÉ OV / BOTÕES VÁCUO",
-    "bounds": [
-      458.15234375,
-      594.972900390625,
-      103.6953125,
-      7.527099609375
-    ],
-    "printable": [
-      443,
-      539,
-      577,
-      605
-    ],
-    "ok": true
-  },
-  {
-    "id": "luzes_marker",
-    "text": "MARKER",
-    "bounds": [
-      606,
-      386.5,
-      30.09375,
-      8
-    ],
-    "printable": [
-      599,
-      383,
-      677,
-      423
-    ],
-    "ok": true
-  },
-  {
-    "id": "luzes_marker",
-    "text": "O",
-    "bounds": [
-      615.19140625,
-      404,
-      3.6171875,
-      7
-    ],
-    "printable": [
-      599,
-      383,
-      677,
-      423
-    ],
-    "ok": true
-  },
-  {
-    "id": "luzes_marker",
-    "text": "M",
-    "bounds": [
-      641.19140625,
-      404,
-      3.6171875,
-      7
-    ],
-    "printable": [
-      599,
-      383,
-      677,
-      423
-    ],
-    "ok": true
-  },
-  {
-    "id": "luzes_marker",
-    "text": "I",
-    "bounds": [
-      667.19140625,
-      404,
-      3.6171875,
-      7
-    ],
-    "printable": [
-      599,
-      383,
-      677,
-      423
-    ],
-    "ok": true
-  },
-  {
-    "id": "piloto_automatico",
-    "text": "ALTIMATIC IIIB",
-    "bounds": [
-      606,
-      626.5,
-      70.203125,
-      8
-    ],
-    "printable": [
-      599,
-      623,
-      733,
-      667
-    ],
-    "ok": true
-  },
-  {
-    "id": "piloto_automatico",
-    "text": "HDG",
-    "bounds": [
-      616.2312622070312,
-      641.5,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      599,
-      623,
-      733,
-      667
-    ],
-    "ok": true
-  },
-  {
-    "id": "piloto_automatico",
-    "text": "NAV",
-    "bounds": [
-      655.4312744140625,
-      641.5,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      599,
-      623,
-      733,
-      667
-    ],
-    "ok": true
-  },
-  {
-    "id": "piloto_automatico",
-    "text": "ALT",
-    "bounds": [
-      694.6312255859375,
-      641.5,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      599,
-      623,
-      733,
-      667
-    ],
-    "ok": true
-  },
-  {
-    "id": "piloto_automatico",
-    "text": "PILOTO AUTOM.",
-    "bounds": [
-      635.36328125,
-      657,
-      61.2734375,
-      7.5
-    ],
-    "printable": [
-      599,
-      623,
-      733,
-      667
-    ],
-    "ok": true
-  },
-  {
-    "id": "painel_audio",
-    "text": "PAINEL DE ÁUDIO",
-    "bounds": [
-      710,
-      146.5,
-      75.21875,
-      8
-    ],
-    "printable": [
-      703,
-      143,
-      971,
-      173
-    ],
-    "ok": true
-  },
-  {
-    "id": "painel_audio",
-    "text": "C1",
-    "bounds": [
-      714.6875,
-      162.5,
-      6.625,
-      6.5
-    ],
-    "printable": [
-      703,
-      143,
-      971,
-      173
-    ],
-    "ok": true
-  },
-  {
-    "id": "painel_audio",
-    "text": "COM 1 TX",
-    "bounds": [
-      866,
-      157.8000030517578,
-      38.53125,
-      9.5
-    ],
-    "printable": [
-      703,
-      143,
-      971,
-      173
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "GPS MAP",
-    "bounds": [
-      709,
-      189.5,
-      19.390625,
-      5.5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "COM",
-    "bounds": [
-      912.1264038085938,
-      193.531494140625,
-      6.8671875,
-      4.5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "118.00",
-    "bounds": [
-      905.4428100585938,
-      206.83949279785156,
-      20.234375,
-      6.5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "121.50",
-    "bounds": [
-      907.9818725585938,
-      218.02000427246094,
-      15.15625,
-      5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "NAV",
-    "bounds": [
-      912.1264038085938,
-      239.80650329589844,
-      6.8671875,
-      4.5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "0200",
-    "bounds": [
-      908.8139038085938,
-      253.114501953125,
-      13.4921875,
-      6.5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_1",
-    "text": "001.0NM",
-    "bounds": [
-      906.7201538085938,
-      264.2950134277344,
-      17.6796875,
-      5
-    ],
-    "printable": [
-      703,
-      183,
-      971,
-      292
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_2",
-    "text": "118.00",
-    "bounds": [
-      712,
-      308.875,
-      27.09375,
-      9
-    ],
-    "printable": [
-      703,
-      302,
-      971,
-      334
-    ],
-    "ok": true
-  },
-  {
-    "id": "navcom_2",
-    "text": "115.50",
-    "bounds": [
-      712,
-      318.375,
-      27.09375,
-      9
-    ],
-    "printable": [
-      703,
-      302,
-      971,
-      334
-    ],
-    "ok": true
-  },
-  {
-    "id": "adf_receptor",
-    "text": "VOR/LOC · GS — integrado ao GNS 530W",
-    "bounds": [
-      793.65234375,
-      356.5,
-      86.6953125,
-      4.5
-    ],
-    "printable": [
-      703,
-      344,
-      971,
-      372
-    ],
-    "ok": true
-  },
-  {
-    "id": "dme",
-    "text": "DME/RNAV — integrado ao GNS 530W",
-    "bounds": [
-      798.46875,
-      392.5,
-      77.0625,
-      4.5
-    ],
-    "printable": [
-      703,
-      382,
-      971,
-      406
-    ],
-    "ok": true
-  },
-  {
-    "id": "transponder",
-    "text": "TRANSPONDER",
-    "bounds": [
-      710,
-      419.5,
-      55.1640625,
-      8
-    ],
-    "printable": [
-      703,
-      416,
-      971,
-      440
-    ],
-    "ok": true
-  },
-  {
-    "id": "transponder",
-    "text": "1200",
-    "bounds": [
-      714,
-      425.8500061035156,
-      26.4921875,
-      12.5
-    ],
-    "printable": [
-      703,
-      416,
-      971,
-      440
-    ],
-    "ok": true
-  },
-  {
-    "id": "transponder",
-    "text": "SBY",
-    "bounds": [
-      812,
-      426,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      703,
-      416,
-      971,
-      440
-    ],
-    "ok": true
-  },
-  {
-    "id": "transponder",
-    "text": "ON",
-    "bounds": [
-      838,
-      426,
-      6.625,
-      6.5
-    ],
-    "printable": [
-      703,
-      416,
-      971,
-      440
-    ],
-    "ok": true
-  },
-  {
-    "id": "transponder",
-    "text": "ALT",
-    "bounds": [
-      864,
-      426,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      703,
-      416,
-      971,
-      440
-    ],
-    "ok": true
-  },
-  {
-    "id": "transponder",
-    "text": "RPLY",
-    "bounds": [
-      898.9765625,
-      432.5,
-      12.046875,
-      5.5
-    ],
-    "printable": [
-      703,
-      416,
-      971,
-      440
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "40",
-    "bounds": [
-      1071.55615234375,
-      211.59913635253906,
-      10.0859375,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "60",
-    "bounds": [
-      1058.833251953125,
-      219.39576721191406,
-      10.0859375,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "80",
-    "bounds": [
-      1043.9573974609375,
-      220.56651306152344,
-      10.0859375,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "100",
-    "bounds": [
-      1027.65185546875,
-      214.85618591308594,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "120",
-    "bounds": [
-      1017.9609375,
-      203.50953674316406,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "140",
-    "bounds": [
-      1014.4774169921875,
-      189,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "160",
-    "bounds": [
-      1017.9609375,
-      174.49046325683594,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "180",
-    "bounds": [
-      1027.65185546875,
-      163.14381408691406,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "200",
-    "bounds": [
-      1041.4378662109375,
-      157.43348693847656,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "220",
-    "bounds": [
-      1056.313720703125,
-      158.60423278808594,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "240",
-    "bounds": [
-      1069.03662109375,
-      166.40086364746094,
-      15.125,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "ASI",
-    "bounds": [
-      1047.15234375,
-      211.25999450683594,
-      13.6953125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "G5",
-    "bounds": [
-      1160.74609375,
-      238.5,
-      6.5078125,
-      6.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "20",
-    "bounds": [
-      1146.719970703125,
-      173.5,
-      5.859375,
-      5.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "20",
-    "bounds": [
-      1146.719970703125,
-      209.5,
-      5.859375,
-      5.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "360",
-    "bounds": [
-      1157.66015625,
-      233.4199981689453,
-      12.6796875,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "LVL",
-    "bounds": [
-      1159.12109375,
-      241,
-      9.7578125,
-      6.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "0",
-    "bounds": [
-      1239.5166015625,
-      189,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "1",
-    "bounds": [
-      1245.620361328125,
-      170.21438598632812,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "2",
-    "bounds": [
-      1261.600341796875,
-      158.60423278808594,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "4",
-    "bounds": [
-      1297.332763671875,
-      170.21438598632812,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "5",
-    "bounds": [
-      1303.4365234375,
-      189,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "6",
-    "bounds": [
-      1297.332763671875,
-      207.78561401367188,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "7",
-    "bounds": [
-      1281.352783203125,
-      219.39576721191406,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "8",
-    "bounds": [
-      1261.600341796875,
-      219.39576721191406,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "9",
-    "bounds": [
-      1245.620361328125,
-      207.78561401367188,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "29.92",
-    "bounds": [
-      1286.653564453125,
-      189.66000366210938,
-      21.1328125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "ALT",
-    "bounds": [
-      1267.15234375,
-      226.3800048828125,
-      13.6953125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "FT ×100",
-    "bounds": [
-      1262.62109375,
-      237.60000610351562,
-      22.7578125,
-      6.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "L",
-    "bounds": [
-      1023.6427001953125,
-      300.29998779296875,
-      4.5546875,
-      9
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "R",
-    "bounds": [
-      1079.8026123046875,
-      300.29998779296875,
-      4.5546875,
-      9
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "2 MIN",
-    "bounds": [
-      1045.05859375,
-      287.2200012207031,
-      17.8828125,
-      7
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "TURN",
-    "bounds": [
-      1044.87109375,
-      357,
-      18.2578125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "G5",
-    "bounds": [
-      1160.74609375,
-      354.5,
-      6.5078125,
-      6.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "N",
-    "bounds": [
-      1161.0703125,
-      268.04998779296875,
-      5.859375,
-      11.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "3",
-    "bounds": [
-      1179.9866943359375,
-      274.6498718261719,
-      4.2265625,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "6",
-    "bounds": [
-      1193.23681640625,
-      287.8999938964844,
-      4.2265625,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "E",
-    "bounds": [
-      1197.270263671875,
-      304.25,
-      5.859375,
-      11.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "12",
-    "bounds": [
-      1191.12353515625,
-      324.1000061035156,
-      8.453125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "15",
-    "bounds": [
-      1177.8734130859375,
-      337.3501281738281,
-      8.453125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "S",
-    "bounds": [
-      1161.0703125,
-      340.45001220703125,
-      5.859375,
-      11.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "21",
-    "bounds": [
-      1141.6734619140625,
-      337.3501281738281,
-      8.453125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "24",
-    "bounds": [
-      1128.42333984375,
-      324.1000061035156,
-      8.453125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "W",
-    "bounds": [
-      1124.870361328125,
-      304.25,
-      5.859375,
-      11.5
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "30",
-    "bounds": [
-      1128.42333984375,
-      287.8999938964844,
-      8.453125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "33",
-    "bounds": [
-      1141.6734619140625,
-      274.6498718261719,
-      8.453125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "035",
-    "bounds": [
-      1157.171875,
-      263.5799865722656,
-      13.65625,
-      9
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "2",
-    "bounds": [
-      1294.07568359375,
-      327.59912109375,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "1",
-    "bounds": [
-      1259.2459716796875,
-      334.5271911621094,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "0",
-    "bounds": [
-      1239.5166015625,
-      305,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "1",
-    "bounds": [
-      1259.2459716796875,
-      275.4728088378906,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "2",
-    "bounds": [
-      1294.07568359375,
-      282.40087890625,
-      5.046875,
-      10
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "instrumentos_copiloto",
-    "text": "VSI",
-    "bounds": [
-      1267.15234375,
-      327.260009765625,
-      13.6953125,
-      8
-    ],
-    "printable": [
-      999,
-      139,
-      1329,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "relogio_copiloto_acendedor",
-    "text": "COPILOTO",
-    "bounds": [
-      1356,
-      142.5,
-      40.1171875,
-      8
-    ],
-    "printable": [
-      1349,
-      139,
-      1531,
-      227
-    ],
-    "ok": true
-  },
-  {
-    "id": "relogio_copiloto_acendedor",
-    "text": "12V",
-    "bounds": [
-      1477.03125,
-      202,
-      9.9375,
-      6.5
-    ],
-    "printable": [
-      1349,
-      139,
-      1531,
-      227
-    ],
-    "ok": true
-  },
-  {
-    "id": "disjuntores",
-    "text": "DISJUNTORES",
-    "bounds": [
-      1356,
-      250.5,
-      55.1640625,
-      8
-    ],
-    "printable": [
-      1349,
-      247,
-      1531,
-      365
-    ],
-    "ok": true
-  },
-  {
-    "id": "seletor_trem",
-    "text": "TREM DE POUSO",
-    "bounds": [
-      1010,
-      390.5,
-      65.1875,
-      8
-    ],
-    "printable": [
-      1003,
-      387,
-      1109,
-      531
-    ],
-    "ok": true
-  },
-  {
-    "id": "seletor_trem",
-    "text": "UP",
-    "bounds": [
-      1078,
-      406,
-      7.828125,
-      7.5
-    ],
-    "printable": [
-      1003,
-      387,
-      1109,
-      531
-    ],
-    "ok": true
-  },
-  {
-    "id": "seletor_trem",
-    "text": "DOWN",
-    "bounds": [
-      1078,
-      506,
-      15.65625,
-      7.5
-    ],
-    "printable": [
-      1003,
-      387,
-      1109,
-      531
-    ],
-    "ok": true
-  },
-  {
-    "id": "luzes_trem_verdes",
-    "text": "TREM BAIXADO",
-    "bounds": [
-      1134,
-      390.5,
-      60.1796875,
-      8
-    ],
-    "printable": [
-      1127,
-      387,
-      1261,
-      451
-    ],
-    "ok": true
-  },
-  {
-    "id": "luzes_trem_verdes",
-    "text": "3 GREEN — N · L · R",
-    "bounds": [
-      1149.22265625,
-      441,
-      89.5546875,
-      7.5
-    ],
-    "printable": [
-      1127,
-      387,
-      1261,
-      451
-    ],
-    "ok": true
-  },
-  {
-    "id": "luz_trem_vermelha",
-    "text": "AVISO DO TREM",
-    "bounds": [
-      1134,
-      470.5,
-      65.1875,
-      8
-    ],
-    "printable": [
-      1127,
-      467,
-      1261,
-      531
-    ],
-    "ok": true
-  },
-  {
-    "id": "luz_trem_vermelha",
-    "text": "EM TRÂNSITO / RECOLHIDO",
-    "bounds": [
-      1139.79296875,
-      520.966552734375,
-      108.4140625,
-      7.533447265625
-    ],
-    "printable": [
-      1127,
-      467,
-      1261,
-      531
-    ],
-    "ok": true
-  },
-  {
-    "id": "extensao_emergencia_trem",
-    "text": "EMERG",
-    "bounds": [
-      1026,
-      571,
-      19.5703125,
-      7.5
-    ],
-    "printable": [
-      1003,
-      547,
-      1261,
-      601
-    ],
-    "ok": true
-  },
-  {
-    "id": "extensao_emergencia_trem",
-    "text": "PUXAR",
-    "bounds": [
-      1218.4296875,
-      571,
-      19.5703125,
-      7.5
-    ],
-    "printable": [
-      1003,
-      547,
-      1261,
-      601
+      735,
+      13,
+      787,
+      65
     ],
     "ok": true
   },
@@ -2196,16 +54,16 @@
     "id": "painel_anunciador",
     "text": "L ALT",
     "bounds": [
-      1034.96875,
-      622,
-      18.0625,
-      7
+      577.8059692382812,
+      118.05000305175781,
+      15.0546875,
+      5.5
     ],
     "printable": [
-      1003,
-      613,
-      1261,
-      667
+      571,
+      112,
+      662,
+      151
     ],
     "ok": true
   },
@@ -2213,16 +71,16 @@
     "id": "painel_anunciador",
     "text": "R ALT",
     "bounds": [
-      1122.96875,
-      622,
-      18.0625,
-      7
+      607.47265625,
+      118.05000305175781,
+      15.0546875,
+      5.5
     ],
     "printable": [
-      1003,
-      613,
-      1261,
-      667
+      571,
+      112,
+      662,
+      151
     ],
     "ok": true
   },
@@ -2230,16 +88,16 @@
     "id": "painel_anunciador",
     "text": "GEAR",
     "bounds": [
-      1212.7734375,
-      622,
-      14.453125,
-      7
+      638.6432495117188,
+      118.05000305175781,
+      12.046875,
+      5.5
     ],
     "printable": [
-      1003,
-      613,
-      1261,
-      667
+      571,
+      112,
+      662,
+      151
     ],
     "ok": true
   },
@@ -2247,16 +105,16 @@
     "id": "painel_anunciador",
     "text": "L VAC",
     "bounds": [
-      1034.96875,
-      652,
-      18.0625,
-      7
+      577.8059692382812,
+      136.5500030517578,
+      15.0546875,
+      5.5
     ],
     "printable": [
-      1003,
-      613,
-      1261,
-      667
+      571,
+      112,
+      662,
+      151
     ],
     "ok": true
   },
@@ -2264,16 +122,16 @@
     "id": "painel_anunciador",
     "text": "R VAC",
     "bounds": [
-      1122.96875,
-      652,
-      18.0625,
-      7
+      607.47265625,
+      136.5500030517578,
+      15.0546875,
+      5.5
     ],
     "printable": [
-      1003,
-      613,
-      1261,
-      667
+      571,
+      112,
+      662,
+      151
     ],
     "ok": true
   },
@@ -2281,135 +139,2141 @@
     "id": "painel_anunciador",
     "text": "DOOR",
     "bounds": [
-      1212.7734375,
-      652,
-      14.453125,
+      638.6432495117188,
+      136.5500030517578,
+      12.046875,
+      5.5
+    ],
+    "printable": [
+      571,
+      112,
+      662,
+      151
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "N",
+    "bounds": [
+      391.41015625,
+      292.6000061035156,
+      5.1796875,
+      10
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "3",
+    "bounds": [
+      409.38751220703125,
+      298.708740234375,
+      3.625,
       7
     ],
     "printable": [
-      1003,
-      613,
-      1261,
-      667
+      344,
+      283,
+      444,
+      381
     ],
     "ok": true
   },
   {
-    "id": "estatica_alternada",
-    "text": "FONTE ESTÁTICA",
+    "id": "giro_direcional",
+    "text": "6",
     "bounds": [
-      1290,
-      480.5,
-      70.203125,
+      421.978759765625,
+      311.29998779296875,
+      3.625,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "E",
+    "bounds": [
+      425.8101501464844,
+      327,
+      5.1796875,
+      10
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "12",
+    "bounds": [
+      420.166259765625,
+      345.70001220703125,
+      7.25,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "15",
+    "bounds": [
+      407.57501220703125,
+      358.291259765625,
+      7.25,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "S",
+    "bounds": [
+      391.41015625,
+      361.3999938964844,
+      5.1796875,
+      10
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "21",
+    "bounds": [
+      373.17498779296875,
+      358.291259765625,
+      7.25,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "24",
+    "bounds": [
+      360.583740234375,
+      345.70001220703125,
+      7.25,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "W",
+    "bounds": [
+      357.0101623535156,
+      327,
+      5.1796875,
+      10
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "30",
+    "bounds": [
+      360.583740234375,
+      311.29998779296875,
+      7.25,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "33",
+    "bounds": [
+      373.17498779296875,
+      298.708740234375,
+      7.25,
+      7
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "giro_direcional",
+    "text": "NAV 1",
+    "bounds": [
+      387.9765625,
+      285.5,
+      12.046875,
+      4.5
+    ],
+    "printable": [
+      344,
+      283,
+      444,
+      381
+    ],
+    "ok": true
+  },
+  {
+    "id": "navcom_1",
+    "text": "118.00 ↔ 121.50",
+    "bounds": [
+      725,
+      173,
+      45.15625,
+      5.5
+    ],
+    "printable": [
+      699,
+      166,
+      893,
+      293
+    ],
+    "ok": true
+  },
+  {
+    "id": "navcom_1",
+    "text": "DIS 12.4NM",
+    "bounds": [
+      836.890625,
+      173,
+      30.109375,
+      5.5
+    ],
+    "printable": [
+      699,
+      166,
+      893,
+      293
+    ],
+    "ok": true
+  },
+  {
+    "id": "navcom_1",
+    "text": "GARMIN",
+    "bounds": [
+      704,
+      167.5,
+      14.453125,
+      4.5
+    ],
+    "printable": [
+      699,
+      166,
+      893,
+      293
+    ],
+    "ok": true
+  },
+  {
+    "id": "indicador_vor_2_gs",
+    "text": "CDI · VLOC/GS",
+    "bounds": [
+      718,
+      304.5,
+      36.0078125,
+      5.5
+    ],
+    "printable": [
+      699,
+      302,
+      791,
+      312
+    ],
+    "ok": true
+  },
+  {
+    "id": "dme",
+    "text": "DME/RNAV",
+    "bounds": [
+      820,
+      304.5,
+      22.15625,
+      5.5
+    ],
+    "printable": [
+      801,
+      302,
+      893,
+      312
+    ],
+    "ok": true
+  },
+  {
+    "id": "navcom_2",
+    "text": "118.00  121.50",
+    "bounds": [
+      708,
+      337.1000061035156,
+      54.7890625,
       8
     ],
     "printable": [
-      1283,
-      477,
-      1393,
-      555
+      699,
+      322,
+      893,
+      378
     ],
     "ok": true
   },
   {
-    "id": "estatica_alternada",
-    "text": "NORM",
+    "id": "navcom_2",
+    "text": "115.50  110.30",
     "bounds": [
-      1307.375,
-      499,
-      13.25,
-      6.5
+      805,
+      337.1000061035156,
+      54.7890625,
+      8
     ],
     "printable": [
-      1283,
-      477,
-      1393,
-      555
+      699,
+      322,
+      893,
+      378
     ],
     "ok": true
   },
   {
-    "id": "estatica_alternada",
+    "id": "luzes_marker",
+    "text": "O",
+    "bounds": [
+      967.19140625,
+      122,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      913,
+      113,
+      1122,
+      151
+    ],
+    "ok": true
+  },
+  {
+    "id": "luzes_marker",
+    "text": "M",
+    "bounds": [
+      997.19140625,
+      122,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      913,
+      113,
+      1122,
+      151
+    ],
+    "ok": true
+  },
+  {
+    "id": "luzes_marker",
+    "text": "I",
+    "bounds": [
+      1027.19140625,
+      122,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      913,
+      113,
+      1122,
+      151
+    ],
+    "ok": true
+  },
+  {
+    "id": "luzes_marker",
+    "text": "RADIO MASTER",
+    "bounds": [
+      1079.3828125,
+      143,
+      33.234375,
+      5.5
+    ],
+    "printable": [
+      913,
+      113,
+      1122,
+      151
+    ],
+    "ok": true
+  },
+  {
+    "id": "transponder",
+    "text": "ALT 1200",
+    "bounds": [
+      926,
+      167.3000030517578,
+      86.6953125,
+      20.5
+    ],
+    "printable": [
+      913,
+      161,
+      1122,
+      215
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "OFF",
+    "bounds": [
+      913,
+      239.5,
+      6.5078125,
+      4.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "ADF",
+    "bounds": [
+      922.2476806640625,
+      231.14584350585938,
+      6.5078125,
+      4.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "ANT",
+    "bounds": [
+      935.2445068359375,
+      231.14584350585938,
+      6.5078125,
+      4.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "BFO",
+    "bounds": [
+      945.2005615234375,
+      239.5,
+      6.5078125,
+      4.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "0",
+    "bounds": [
+      987.46484375,
+      238.16000366210938,
+      4.8203125,
+      9.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "3",
+    "bounds": [
+      1021.21484375,
+      238.16000366210938,
+      4.8203125,
+      9.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "5",
+    "bounds": [
+      1054.96484375,
+      238.16000366210938,
+      4.8203125,
+      9.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "adf_receptor",
+    "text": "0",
+    "bounds": [
+      1088.71484375,
+      238.16000366210938,
+      4.8203125,
+      9.5
+    ],
+    "printable": [
+      913,
+      225,
+      1122,
+      277
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "40",
+    "bounds": [
+      1223.2572021484375,
+      205.36654663085938,
+      8.21875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "60",
+    "bounds": [
+      1213.4801025390625,
+      211.35794067382812,
+      8.21875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "80",
+    "bounds": [
+      1202.048583984375,
+      212.25762939453125,
+      8.21875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "100",
+    "bounds": [
+      1189.40380859375,
+      207.8694610595703,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "120",
+    "bounds": [
+      1181.9566650390625,
+      199.15000915527344,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "140",
+    "bounds": [
+      1179.27978515625,
+      188,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "160",
+    "bounds": [
+      1181.9566650390625,
+      176.84999084472656,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "180",
+    "bounds": [
+      1189.40380859375,
+      173,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "200",
+    "bounds": [
+      1199.997802734375,
+      173,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "220",
+    "bounds": [
+      1211.4293212890625,
+      173,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "240",
+    "bounds": [
+      1221.2064208984375,
+      173,
+      12.3203125,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "AIRSPEED",
+    "bounds": [
+      1193.55078125,
+      205.86000061035156,
+      32.8984375,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "MPH",
+    "bounds": [
+      1205.484375,
+      214.77999877929688,
+      9.03125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "0",
+    "bounds": [
+      1393.38525390625,
+      236,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "1",
+    "bounds": [
+      1398.0758056640625,
+      221.56399536132812,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "2",
+    "bounds": [
+      1410.3558349609375,
+      212.64205932617188,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "4",
+    "bounds": [
+      1437.8148193359375,
+      221.56399536132812,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "5",
+    "bounds": [
+      1442.50537109375,
+      236,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "6",
+    "bounds": [
+      1437.8148193359375,
+      250.43600463867188,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "7",
+    "bounds": [
+      1425.5347900390625,
+      259.3579406738281,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "8",
+    "bounds": [
+      1410.3558349609375,
+      259.3579406738281,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "9",
+    "bounds": [
+      1398.0758056640625,
+      250.43600463867188,
+      4.109375,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "29.92",
+    "bounds": [
+      1430.3106689453125,
+      236.25999450683594,
+      17.21875,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
     "text": "ALT",
     "bounds": [
-      1359.03125,
-      499,
-      9.9375,
-      6.5
+      1413.828125,
+      266.17999267578125,
+      12.34375,
+      7
     ],
     "printable": [
-      1283,
-      477,
-      1393,
-      555
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "FT ×100",
+    "bounds": [
+      1409.4609375,
+      275.1000061035156,
+      21.078125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "L",
+    "bounds": [
+      1171.2645263671875,
+      306.29998779296875,
+      3.7109375,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "R",
+    "bounds": [
+      1217.0245361328125,
+      306.29998779296875,
+      3.7109375,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "2 MIN",
+    "bounds": [
+      1188.71484375,
+      295.4200134277344,
+      14.5703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "TURN",
+    "bounds": [
+      1187.7734375,
+      363.05999755859375,
+      16.453125,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "N",
+    "bounds": [
+      1299.84765625,
+      286.0799865722656,
+      4.3046875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "3",
+    "bounds": [
+      1313.4404296875,
+      290.8026123046875,
+      3.0390625,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "6",
+    "bounds": [
+      1322.9278564453125,
+      300.2900085449219,
+      3.0390625,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "E",
+    "bounds": [
+      1325.7677001953125,
+      312,
+      4.3046875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "12",
+    "bounds": [
+      1321.4122314453125,
+      326.2099914550781,
+      6.0703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "15",
+    "bounds": [
+      1311.9248046875,
+      335.6973876953125,
+      6.0703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "S",
+    "bounds": [
+      1299.84765625,
+      337.9200134277344,
+      4.3046875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "21",
+    "bounds": [
+      1286.0048828125,
+      335.6973876953125,
+      6.0703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "24",
+    "bounds": [
+      1276.5174560546875,
+      326.2099914550781,
+      6.0703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "W",
+    "bounds": [
+      1273.9276123046875,
+      312,
+      4.3046875,
+      8
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "30",
+    "bounds": [
+      1276.5174560546875,
+      300.2900085449219,
+      6.0703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "33",
+    "bounds": [
+      1286.0048828125,
+      290.8026123046875,
+      6.0703125,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "2",
+    "bounds": [
+      1381.27880859375,
+      351.5874328613281,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "1",
+    "bounds": [
+      1364.19091796875,
+      354.9864196777344,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "0",
+    "bounds": [
+      1354.5113525390625,
+      340.5,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "1",
+    "bounds": [
+      1364.19091796875,
+      326.0135803222656,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "2",
+    "bounds": [
+      1381.27880859375,
+      329.4125671386719,
+      3.6171875,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "VERTICAL",
+    "bounds": [
+      1355.55078125,
+      352.5799865722656,
+      32.8984375,
+      7
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "instrumentos_copiloto",
+    "text": "SPEED",
+    "bounds": [
+      1364.47265625,
+      359.3399963378906,
+      15.0546875,
+      5.5
+    ],
+    "printable": [
+      1153,
+      173,
+      1465,
+      375
+    ],
+    "ok": true
+  },
+  {
+    "id": "relogio_copiloto_acendedor",
+    "text": "12V",
+    "bounds": [
+      1503.84375,
+      253.5,
+      8.3125,
+      5.5
+    ],
+    "printable": [
+      1475,
+      229,
+      1541,
+      369
+    ],
+    "ok": true
+  },
+  {
+    "id": "relogio_copiloto_acendedor",
+    "text": "CHRONOMETER",
+    "bounds": [
+      1493.4296875,
+      294.9200134277344,
+      29.140625,
+      5
+    ],
+    "printable": [
+      1475,
+      229,
+      1541,
+      369
+    ],
+    "ok": true
+  },
+  {
+    "id": "relogio_copiloto_acendedor",
+    "text": "12:34",
+    "bounds": [
+      1490.66015625,
+      308.5799865722656,
+      34.6796875,
+      13
+    ],
+    "printable": [
+      1475,
+      229,
+      1541,
+      369
+    ],
+    "ok": true
+  },
+  {
+    "id": "pressao_oleo",
+    "text": "OIL P L",
+    "bounds": [
+      160.4765625,
+      442,
+      18.546875,
+      5
+    ],
+    "printable": [
+      144,
+      416,
+      253,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "pressao_oleo",
+    "text": "OIL P R",
+    "bounds": [
+      217.9765625,
+      442,
+      18.546875,
+      5
+    ],
+    "printable": [
+      144,
+      416,
+      253,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "temperatura_oleo",
+    "text": "OIL T L",
+    "bounds": [
+      279.4765625,
+      442,
+      18.546875,
+      5
+    ],
+    "printable": [
+      263,
+      416,
+      372,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "temperatura_oleo",
+    "text": "OIL T R",
+    "bounds": [
+      336.9765625,
+      442,
+      18.546875,
+      5
+    ],
+    "printable": [
+      263,
+      416,
+      372,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "fluxo_combustivel_pressao",
+    "text": "FUEL PSI",
+    "bounds": [
+      481.90234375,
+      442,
+      21.1953125,
+      5
+    ],
+    "printable": [
+      465,
+      416,
+      581,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "fluxo_combustivel_pressao",
+    "text": "FUEL GPH",
+    "bounds": [
+      542.90234375,
+      442,
+      21.1953125,
+      5
+    ],
+    "printable": [
+      465,
+      416,
+      581,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "cht",
+    "text": "CHT L",
+    "bounds": [
+      613.125,
+      442,
+      13.25,
+      5
+    ],
+    "printable": [
+      592,
+      416,
+      709,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "cht",
+    "text": "CHT R",
+    "bounds": [
+      674.625,
+      442,
+      13.25,
+      5
+    ],
+    "printable": [
+      592,
+      416,
+      709,
+      448
+    ],
+    "ok": true
+  },
+  {
+    "id": "amperimetros",
+    "text": "ALT AMP",
+    "bounds": [
+      926.8828125,
+      432.5,
+      20.234375,
+      5.5
+    ],
+    "printable": [
+      913,
+      406,
+      1015,
+      456
+    ],
+    "ok": true
+  },
+  {
+    "id": "amperimetros",
+    "text": "ALT AMP",
+    "bounds": [
+      980.8828125,
+      432.5,
+      20.234375,
+      5.5
+    ],
+    "printable": [
+      913,
+      406,
+      1015,
+      456
+    ],
+    "ok": true
+  },
+  {
+    "id": "aquecimento_desembacador",
+    "text": "CABIN HEAT",
+    "bounds": [
+      1418.890625,
+      413.5,
+      30.109375,
+      5.5
+    ],
+    "printable": [
+      1292,
+      409,
+      1458,
+      461
+    ],
+    "ok": true
+  },
+  {
+    "id": "aquecimento_desembacador",
+    "text": "DEFROST",
+    "bounds": [
+      1427.921875,
+      437.5,
+      21.078125,
+      5.5
+    ],
+    "printable": [
+      1292,
+      409,
+      1458,
+      461
+    ],
+    "ok": true
+  },
+  {
+    "id": "piloto_automatico",
+    "text": "PIPER AUTOCONTROL III",
+    "bounds": [
+      208.390625,
+      558.5,
+      63.21875,
+      5.5
+    ],
+    "printable": [
+      189,
+      512,
+      291,
+      565
+    ],
+    "ok": true
+  },
+  {
+    "id": "piloto_automatico",
+    "text": "ON/OFF",
+    "bounds": [
+      194.49609375,
+      513.5,
+      13.0078125,
+      4.5
+    ],
+    "printable": [
+      189,
+      512,
+      291,
+      565
+    ],
+    "ok": true
+  },
+  {
+    "id": "piloto_automatico",
+    "text": "HDG",
+    "bounds": [
+      275.74609375,
+      513.5,
+      6.5078125,
+      4.5
+    ],
+    "printable": [
+      189,
+      512,
+      291,
+      565
+    ],
+    "ok": true
+  },
+  {
+    "id": "piloto_automatico",
+    "text": "L · R",
+    "bounds": [
+      234.578125,
+      513.5,
+      10.84375,
+      4.5
+    ],
+    "printable": [
+      189,
+      512,
+      291,
+      565
+    ],
+    "ok": true
+  },
+  {
+    "id": "seletor_trem",
+    "text": "UP",
+    "bounds": [
+      742.9765625,
+      501.5,
+      6.0234375,
+      5.5
+    ],
+    "printable": [
+      711,
+      497,
+      753,
+      571
+    ],
+    "ok": true
+  },
+  {
+    "id": "seletor_trem",
+    "text": "DN",
+    "bounds": [
+      742.9765625,
+      563.5,
+      6.0234375,
+      5.5
+    ],
+    "printable": [
+      711,
+      497,
+      753,
+      571
+    ],
+    "ok": true
+  },
+  {
+    "id": "ar_alternativo",
+    "text": "ALT",
+    "bounds": [
+      842.578125,
+      621.5,
+      10.84375,
+      7
+    ],
+    "printable": [
+      765,
+      617,
+      931,
+      655
+    ],
+    "ok": true
+  },
+  {
+    "id": "ar_alternativo",
+    "text": "AIR",
+    "bounds": [
+      842.578125,
+      629.5,
+      10.84375,
+      7
+    ],
+    "printable": [
+      765,
+      617,
+      931,
+      655
+    ],
+    "ok": true
+  },
+  {
+    "id": "ar_alternativo",
+    "text": "OFF · ON",
+    "bounds": [
+      838.3671875,
+      639.5,
+      19.265625,
+      4.5
+    ],
+    "printable": [
+      765,
+      617,
+      931,
+      655
+    ],
+    "ok": true
+  },
+  {
+    "id": "cowl_flaps",
+    "text": "PULL - CLOSE",
+    "bounds": [
+      812.26953125,
+      769.5,
+      27.4609375,
+      4.5
+    ],
+    "printable": [
+      749,
+      715,
+      903,
+      819
+    ],
+    "ok": true
+  },
+  {
+    "id": "cowl_flaps",
+    "text": "COWL",
+    "bounds": [
+      817.5703125,
+      775.5,
+      16.859375,
+      8
+    ],
+    "printable": [
+      749,
+      715,
+      903,
+      819
+    ],
+    "ok": true
+  },
+  {
+    "id": "cowl_flaps",
+    "text": "FLAP",
+    "bounds": [
+      817.5703125,
+      783.5,
+      16.859375,
+      8
+    ],
+    "printable": [
+      749,
+      715,
+      903,
+      819
+    ],
+    "ok": true
+  },
+  {
+    "id": "cowl_flaps",
+    "text": "L",
+    "bounds": [
+      797.4921875,
+      779.5,
+      3.015625,
+      5.5
+    ],
+    "printable": [
+      749,
+      715,
+      903,
+      819
+    ],
+    "ok": true
+  },
+  {
+    "id": "cowl_flaps",
+    "text": "R",
+    "bounds": [
+      851.4921875,
+      779.5,
+      3.015625,
+      5.5
+    ],
+    "printable": [
+      749,
+      715,
+      903,
+      819
+    ],
+    "ok": true
+  },
+  {
+    "id": "cowl_flaps",
+    "text": "PUSH - OPEN",
+    "bounds": [
+      813.4140625,
+      791,
+      25.171875,
+      4.5
+    ],
+    "printable": [
+      749,
+      715,
+      903,
+      819
     ],
     "ok": true
   },
   {
     "id": "estatica_alternada",
-    "text": "VÁLVULA ESTÁTICA ALT.",
+    "text": "ALTERNATE STATIC",
     "bounds": [
-      1288.5078125,
-      544.972900390625,
-      98.984375,
-      7.527099609375
+      948.84375,
+      484.5,
+      44.3125,
+      5.5
     ],
     "printable": [
-      1283,
-      477,
-      1393,
-      555
+      941,
+      483,
+      1001,
+      576
     ],
     "ok": true
   },
   {
-    "id": "aquecimento_desembacador",
-    "text": "AQUEC./DESEMB.",
+    "id": "estatica_alternada",
+    "text": "SOURCE",
     "bounds": [
-      1418,
-      480.5,
-      70.203125,
-      8
+      962.69140625,
+      494.5,
+      16.6171875,
+      5.5
     ],
     "printable": [
-      1411,
-      477,
-      1531,
-      555
+      941,
+      483,
+      1001,
+      576
     ],
     "ok": true
   },
   {
-    "id": "aquecimento_desembacador",
-    "text": "CALOR",
+    "id": "estatica_alternada",
+    "text": "PULL ON TO OPEN",
     "bounds": [
-      1422,
-      508,
-      16.5625,
-      6.5
+      950.2265625,
+      504.5,
+      41.546875,
+      5.5
     ],
     "printable": [
-      1411,
-      477,
-      1531,
-      555
+      941,
+      483,
+      1001,
+      576
     ],
     "ok": true
   },
   {
-    "id": "aquecimento_desembacador",
-    "text": "DESEMB",
+    "id": "chave_master",
+    "text": "BAT",
     "bounds": [
-      1422,
-      532,
-      19.875,
-      6.5
+      47.484375,
+      504.5,
+      9.03125,
+      5.5
     ],
     "printable": [
-      1411,
-      477,
-      1531,
-      555
+      16,
+      467,
+      88,
+      512
+    ],
+    "ok": true
+  },
+  {
+    "id": "chaves_alternadores",
+    "text": "ALT L",
+    "bounds": [
+      27.97265625,
+      562.5,
+      15.0546875,
+      5.5
+    ],
+    "printable": [
+      16,
+      525,
+      88,
+      570
+    ],
+    "ok": true
+  },
+  {
+    "id": "chaves_alternadores",
+    "text": "ALT R",
+    "bounds": [
+      60.97265625,
+      562.5,
+      15.0546875,
+      5.5
+    ],
+    "printable": [
+      16,
+      525,
+      88,
+      570
+    ],
+    "ok": true
+  },
+  {
+    "id": "chaves_magnetos_partida",
+    "text": "MAG L",
+    "bounds": [
+      27.31265640258789,
+      633.5,
+      15.0546875,
+      5.5
+    ],
+    "printable": [
+      16,
+      582,
+      88,
+      640
+    ],
+    "ok": true
+  },
+  {
+    "id": "chaves_magnetos_partida",
+    "text": "MAG R",
+    "bounds": [
+      61.632659912109375,
+      633.5,
+      15.0546875,
+      5.5
+    ],
+    "printable": [
+      16,
+      582,
+      88,
+      640
+    ],
+    "ok": true
+  },
+  {
+    "id": "bombas_combustivel_eletricas",
+    "text": "PUMP L",
+    "bounds": [
+      26.46875,
+      690.5,
+      18.0625,
+      5.5
+    ],
+    "printable": [
+      16,
+      653,
+      88,
+      698
+    ],
+    "ok": true
+  },
+  {
+    "id": "bombas_combustivel_eletricas",
+    "text": "PUMP R",
+    "bounds": [
+      59.46875,
+      690.5,
+      18.0625,
+      5.5
+    ],
+    "printable": [
+      16,
+      653,
+      88,
+      698
+    ],
+    "ok": true
+  },
+  {
+    "id": "pitot_heat_luzes",
+    "text": "PITOT",
+    "bounds": [
+      22.47265625,
+      747.5,
+      15.0546875,
+      5.5
+    ],
+    "printable": [
+      16,
+      710,
+      88,
+      755
+    ],
+    "ok": true
+  },
+  {
+    "id": "pitot_heat_luzes",
+    "text": "NAV",
+    "bounds": [
+      47.484375,
+      747.5,
+      9.03125,
+      5.5
+    ],
+    "printable": [
+      16,
+      710,
+      88,
+      755
+    ],
+    "ok": true
+  },
+  {
+    "id": "pitot_heat_luzes",
+    "text": "LDG",
+    "bounds": [
+      69.484375,
+      747.5,
+      9.03125,
+      5.5
+    ],
+    "printable": [
+      16,
+      710,
+      88,
+      755
+    ],
+    "ok": true
+  },
+  {
+    "id": "freio_estacionamento",
+    "text": "PARK BRAKE",
+    "bounds": [
+      175.95703125,
+      642,
+      24.0859375,
+      4.5
+    ],
+    "printable": [
+      143,
+      607,
+      219,
+      647
     ],
     "ok": true
   }
